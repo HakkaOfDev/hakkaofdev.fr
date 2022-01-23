@@ -77,8 +77,6 @@ const PortfolioPage = ({ projects, tags }: Props) => {
         </Wrap>
         <SimpleGrid
           boxShadow='lg'
-          overflowY='scroll'
-          h={{ base: 500, md: 375, lg: 400 }}
           columns={{ base: 1, sm: 2, md: 3 }}
           gap={6}
           p={2}
