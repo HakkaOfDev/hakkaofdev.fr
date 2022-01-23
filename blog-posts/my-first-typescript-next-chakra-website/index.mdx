@@ -1,0 +1,122 @@
+---
+title: How I built my first typescript-next-chakra website ?
+description: In this post, we will see with which technologies I have developed my site and the environment in which I could and will work now.
+date: 23 January, 2022
+tags: ['typescript', 'next', 'chakra-ui', 'mdx', 'firstpost']
+---
+
+# At the beginning
+
+Where does this idea come from, why do we have to do it? I asked myself a lot of questions
+and watched a lot of videos in order to realize my projects and it's thanks to them that I
+was able to learn how to start with [Next](https://nextjs.org/) and how to use [Chakra](https://chakra-ui.com/), a beautiful library straight
+out of the future.
+
+# Explanation
+
+First of all I went on Youtube and I found [@devaslife](https://www.youtube.com/c/devaslife) who made his portfolio with Chakra-UI in Javascript,
+so I tried to understand and reproduce it to produce a satisfactory result. So I created a website in javascript (you can find it here: [Flonoa Homepage](https://www.github.com/hakkaofdev/flonoa.fr)). I come from JAVA, I'm used to typed variables, so I was looking for my way in this big world that is web development.
+Then I searched and found a typescript template and went for it [frontend-horse-ui](https://github.com/nikolovlazar/frontend-horse-ui). I directly fell in love with Chakra, its hooks, its content, the way it works, especially its [discord community](https://chakra-ui.com/discord) with which I work and help daily when I can.
+
+Here an example how to render 404 page in Chakra:
+
+```typescript
+import NextLink from 'next/link'; // NextLink import
+import { Box, Button, Divider, Heading, Text } from '@chakra-ui/react'; // Chakra component imports
+
+const NotFoundPage = () => {
+  return (
+    <Layout title='Not Found'>
+      <Section delay={0.3}>
+        <Heading as='h1'>Not Found</Heading>
+        <Text>The page you&apos;re looking for was not found.</Text>
+        <Divider my={6} />
+
+        <Box my={6} align='center'>
+          <NextLink href='/'>
+            <Button colorScheme='pink'>Return to home</Button>
+          </NextLink>
+        </Box>
+      </Section>
+    </Layout>
+  );
+};
+
+export default NotFoundPage;
+```
+
+It's beautiful because you've the control on your components. `<Heading>` component will refer to `<h1>` in HTML and you can customize it as you wish.
+That's not all, Chakra-UI uses [framer-motion](https://www.framer.com/motion/) for these animated components (`Fade`, `ScaleFade`, `Slide`, `SlideFade`, `Collapse`).
+So I also fell in love with motion which is simply amazing especially mixed with Chakra, let's see an example of a `ThemeButton` with `IconButton` chakra-component with `motion()`:
+
+```typescript
+import {
+  IconButton,
+  IconButtonProps,
+  useColorMode,
+  useColorModeValue as mode,
+} from '@chakra-ui/react';
+import { BsMoon } from '@react-icons/all-files/bs/BsMoon';
+import { WiDaySunny } from '@react-icons/all-files/wi/WiDaySunny';
+import { AnimatePresence, motion, Variants } from 'framer-motion';
+
+//declaration of animation variants
+const variants: Variants = {
+  initial: {
+    y: -20,
+    opacity: 0,
+    transition: {
+      type: 'spring',
+      duration: 0.2,
+    },
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      duration: 0.2,
+    },
+  },
+  exit: {
+    y: 20,
+    opacity: 0,
+    transition: {
+      type: 'spring',
+      duration: 0.2,
+    },
+  },
+};
+
+// button component
+const ThemeButton = () => {
+  const { toggleColorMode } = useColorMode(); // hook for change colormode
+  const MotionButton = motion<IconButtonProps>(IconButton); // declaration for the IconButton component with props of a motion
+
+  return (
+    <AnimatePresence exitBeforeEnter initial={false}>
+      <MotionButton
+        variants={variants}
+        initial='initial'
+        animate='animate'
+        exit='exit'
+        aria-label='Toggle theme'
+        colorScheme={mode('purple', 'orange')}
+        icon={mode(<BsMoon />, <WiDaySunny />)}
+        onClick={toggleColorMode}
+      />
+    </AnimatePresence>
+  );
+};
+
+export default ThemeButton;
+```
+So you can see the `MotionButton` have the props of `IconButton` but also the props of a `motion` component.<br/>
+It's beautiful ! Isn't ?
+
+# Conclusion
+
+I was very patient, demanding, and on the lookout for everything related to `Chakra-UI`. I've read all the docs, check the source code and I would like to become a `Collaborator` to Chakra-UI.
+Never give up on your dreams, `perseverance` is the key to success. Never forget that.
+
+> Thanks to discord-chakra community and my friends who have accompanied me in this adventure.
