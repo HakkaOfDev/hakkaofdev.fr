@@ -15,7 +15,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import NextLink from 'next/link';
-import { DARK_BLUE_COLOR, DARK_CARD_COLOR, LIGHT_BLUE_COLOR, LIGHT_CARD_COLOR } from 'src/constants';
+import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from 'src/constants';
 
 type Props = BlogPost & {
   source: MDXRemoteSerializeResult;

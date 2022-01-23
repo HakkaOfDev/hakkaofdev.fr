@@ -76,7 +76,6 @@ const PortfolioPage = ({ projects, tags }: Props) => {
           ))}
         </Wrap>
         <SimpleGrid
-          boxShadow='lg'
           columns={{ base: 1, sm: 2, md: 3 }}
           gap={6}
           p={2}

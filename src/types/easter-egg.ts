@@ -1,4 +1,4 @@
 export type EasterEgg = {
-    title: string
-    description?: string
-}
+  title: string;
+  description?: string;
+};
