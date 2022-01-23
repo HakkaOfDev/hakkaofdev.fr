@@ -1,3 +1,5 @@
+import easterEggs from '@/data/eastereggs';
+import { EasterEgg } from '@/types/easter-egg';
 import {
   Button,
   Divider,
@@ -9,11 +11,11 @@ import {
   Text,
   Tooltip,
   useColorModeValue as mode,
+  useToast,
   VStack,
 } from '@chakra-ui/react';
-import { Fireworks, useFireworks } from 'fireworks-js/dist/react';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
-import { CSSProperties } from 'react';
+import { useState } from 'react';
 import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from 'src/constants';
 import ScrollIDButton from '../scroll-id-button';
 import SocialMedias from '../social-medias';
@@ -88,54 +90,27 @@ const rightVariants: Variants = {
 const MotionStack = motion<StackProps>(VStack);
 
 const AboutHero = () => {
-  const { enabled, options, setEnabled } = useFireworks({
-    initialStart: false,
-    initialOptions: {
-      hue: {
-        min: 219,
-        max: 245,
-      },
-      delay: {
-        min: 2,
-        max: 5,
-      },
-      rocketsPoint: 50,
-      speed: 12,
-      acceleration: 1.2,
-      friction: 0.96,
-      gravity: 1,
-      particles: 150,
-      trace: 3,
-      explosion: 6,
-      autoresize: true,
-      brightness: {
-        min: 50,
-        max: 80,
-        decay: {
-          min: 0.015,
-          max: 0.03,
-        },
-      },
-      boundaries: {
-        visible: false,
-      },
-      sound: {
-        enabled: false,
-      },
-      mouse: {
-        click: true,
-        move: false,
-        max: 1,
-      },
-    },
-  });
+  const toast = useToast();
+  const [index, setIndex] = useState(0);
 
-  const style: CSSProperties = {
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    position: 'fixed',
+  const sendEasterEgg = () => {
+    const { title, description } = easterEggs[index] as EasterEgg;
+
+    toast({
+      title: title,
+      description: description,
+      position: 'bottom-right',
+      variant: 'left-accent',
+      status: 'info',
+      duration: 5000,
+      isClosable: true,
+    });
+
+    if (index + 1 === easterEggs.length) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
+    }
   };
 
   return (
@@ -148,7 +123,6 @@ const AboutHero = () => {
         spacing={4}
         direction={{ base: 'column', md: 'row' }}
       >
-        <Fireworks options={options} style={style} enabled={enabled} />
         <MotionStack
           variants={leftVariants}
           initial='hidden'
@@ -195,12 +169,12 @@ const AboutHero = () => {
             src='/assets/images/avatar-about.png'
             fallback={<Skeleton h={{ base: 480, lg: 600 }} />}
           />
-          <Tooltip label='Toggle fireworks' hasArrow>
+          <Tooltip label='See easter eggs...' hasArrow>
             <Button
               w='75%'
               variant='solid'
               colorScheme='hakka'
-              onClick={() => setEnabled()}
+              onClick={sendEasterEgg}
             >
               Mad Developer
             </Button>
