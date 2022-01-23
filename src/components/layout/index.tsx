@@ -39,17 +39,17 @@ const Layout = ({ children, title, description }: LayoutProps) => {
           handle: '@hakkaofdev',
         }}
         openGraph={{
-          url: 'https://hakkaofdev.fr',
+          url: 'https://www.hakkaofdev.fr',
           title: title + ' | Alexandre Gossard',
           description: description,
           locale: 'en_US',
           images: [
             {
-              url: 'https://hakkaofdev.fr/assets/images/social.jpg',
+              url: 'https://www.hakkaofdev.fr/assets/images/social.png',
               width: 1200,
               height: 630,
               alt: 'Alexandre Gossard',
-              type: 'image/jpeg',
+              type: 'image/png',
             },
           ],
         }}
