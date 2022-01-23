@@ -1,8 +1,8 @@
-import Layout from '@/components/layout'
-import ProjectCard from '@/components/project-card'
-import Scene from '@/components/scene'
-import { Raindrop } from '@/types/raindrop'
-import { getRaindrops } from '@/utils/raindrop-handler'
+import Layout from '@/components/layout';
+import ProjectCard from '@/components/project-card';
+import Scene from '@/components/scene';
+import { Raindrop } from '@/types/raindrop';
+import { getRaindrops } from '@/utils/raindrop-handler';
 import {
   Button,
   SimpleGrid,
@@ -10,30 +10,30 @@ import {
   useBreakpointValue,
   Wrap,
   WrapItem,
-} from '@chakra-ui/react'
-import { GetStaticProps } from 'next'
-import { useState } from 'react'
+} from '@chakra-ui/react';
+import { GetStaticProps } from 'next';
+import { useState } from 'react';
 
 type Props = {
-  projects: Raindrop[]
-  tags: string[]
-}
+  projects: Raindrop[];
+  tags: string[];
+};
 
 const PortfolioPage = ({ projects, tags }: Props) => {
   const [displayedProjects, setDisplayedProjects] =
-    useState<Raindrop[]>(projects)
-  const [selectedTag, setSelectedTag] = useState<string>()
+    useState<Raindrop[]>(projects);
+  const [selectedTag, setSelectedTag] = useState<string>();
 
   const filterProjects = (tag?: string) => {
     if (tag) {
-      setDisplayedProjects(projects.filter(({ tags }) => tags.includes(tag)))
+      setDisplayedProjects(projects.filter(({ tags }) => tags.includes(tag)));
     } else {
-      setDisplayedProjects(projects)
+      setDisplayedProjects(projects);
     }
-    setSelectedTag(tag)
-  }
+    setSelectedTag(tag);
+  };
 
-  const isMobile = useBreakpointValue({ base: true, lg: false })
+  const isMobile = useBreakpointValue({ base: true, lg: false });
 
   return (
     <Layout
@@ -98,23 +98,23 @@ const PortfolioPage = ({ projects, tags }: Props) => {
         </SimpleGrid>
       </Scene>
     </Layout>
-  )
-}
+  );
+};
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const projects = await getRaindrops(
     process.env.RAINDROP_COLLECTION_PROJECTS,
     50,
     0
-  )
-  const tags = Array.from(new Set(projects.flatMap(({ tags }) => tags)))
+  );
+  const tags = Array.from(new Set(projects.flatMap(({ tags }) => tags)));
 
-  const props: Props = { projects, tags }
+  const props: Props = { projects, tags };
 
   return {
     props,
     revalidate: 60 * 60,
-  }
-}
+  };
+};
 
-export default PortfolioPage
+export default PortfolioPage;

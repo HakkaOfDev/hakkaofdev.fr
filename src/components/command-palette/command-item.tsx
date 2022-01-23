@@ -7,6 +7,7 @@ import {
   useColorModeValue as mode,
   useMenuDescendant,
 } from '@chakra-ui/react';
+import { AiOutlineEnter } from '@react-icons/all-files/ai/AiOutlineEnter';
 import { FiExternalLink } from '@react-icons/all-files/fi/FiExternalLink';
 import { useRouter } from 'next/router';
 import { useContext, useEffect, useRef } from 'react';
@@ -57,10 +58,13 @@ const PaletteItem = ({ title, icon, href, isExternal, onClick }: Command) => {
       href={href}
       onClick={activateItem}
     >
-      <HStack>
-        <Icon as={icon} />
-        <Text>{title}</Text>
-        {isExternal && <Icon as={FiExternalLink} display='inline' />}
+      <HStack w='full' justify='space-between'>
+        <HStack spacing={2}>
+          <Icon as={icon} />
+          <Text>{title}</Text>
+          {isExternal && <Icon as={FiExternalLink} display='inline' />}
+        </HStack>
+        {isFocused && <Icon as={AiOutlineEnter} display='inline' />}
       </HStack>
     </ListItem>
   );

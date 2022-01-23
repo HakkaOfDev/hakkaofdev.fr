@@ -54,7 +54,7 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
   language = language.replace('language-', '');
   const theme = useColorModeValue(lightTheme, darkTheme);
   const lineNumberColor = useColorModeValue('blackAlpha.500', 'whiteAlpha.500');
-  const preBackground = useColorModeValue('gray.100', 'gray.800');
+  const preBackground = useColorModeValue('gray.50', 'gray.900');
   const showLineNumbers = !['shell', 'text'].includes(language);
 
   return (
@@ -87,7 +87,7 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
                         textAlign='right'
                         userSelect='none'
                         color={lineNumberColor}
-                        pr={3}
+                        px={3}
                       >
                         {i + 1}
                       </chakra.span>
@@ -116,8 +116,8 @@ const InlineCode = (props: any) => (
     apply='mdx.code'
     color={useColorModeValue('hakka.100', 'hakka.900')}
     bg={useColorModeValue(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
-    px={2}
-    py={1}
+    px={1.5}
+    py={0.5}
     rounded='md'
     {...props}
   />
@@ -126,7 +126,7 @@ const InlineCode = (props: any) => (
 const LinkedHeading = (props: HTMLChakraProps<'h2'>) => {
   const slug = slugify(props.children as string, { lower: true });
   return (
-    <Link href={`#${slug}`} name={slug} role='group'>
+    <Link href={`#${slug}`} name={slug} role='group' fontSize='2xl'>
       <Box
         {...props}
         display='inline'
@@ -183,7 +183,7 @@ const MDXComponents = {
   br: ({ reset, ...props }) => (
     <Box
       as={reset ? 'br' : undefined}
-      height={reset ? undefined : '24px'}
+      height={reset ? undefined : '10px'}
       {...props}
     />
   ),

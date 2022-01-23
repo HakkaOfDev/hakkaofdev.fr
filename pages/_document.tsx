@@ -1,8 +1,7 @@
-import React from 'react'
-import { ColorModeScript } from '@chakra-ui/react'
-import Document, { Head, Html, Main, NextScript } from 'next/document'
-
-import theme from '../src/theme'
+import { ColorModeScript } from '@chakra-ui/react';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import React from 'react';
+import theme from '../src/theme';
 
 class Doc extends Document {
   render() {
@@ -15,8 +14,8 @@ class Doc extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 
-export default Doc
+export default Doc;

@@ -52,7 +52,7 @@ const BlogPostCard = ({ title, description, date, tags, slug }: BlogPost) => {
           {description}
         </Text>
         <Text fontSize='xs' color='hakka.300'>
-          {tags.join(', ')}
+          #{tags.join(', #')}
         </Text>
       </VStack>
     </LinkBox>

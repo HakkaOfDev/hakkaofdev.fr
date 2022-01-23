@@ -1,6 +1,6 @@
-import Layout from '@/components/layout'
-import { Box, Button, Divider, Heading, Text, VStack } from '@chakra-ui/react'
-import NextLink from 'next/link'
+import Layout from '@/components/layout';
+import { Box, Button, Divider, Heading, Text, VStack } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 const NotFound = () => {
   return (
@@ -21,7 +21,7 @@ const NotFound = () => {
         </NextLink>
       </VStack>
     </Layout>
-  )
-}
+  );
+};
 
-export default NotFound
+export default NotFound;

@@ -1,5 +1,5 @@
-import HomeHero from '@/components/home-hero'
-import Layout from '@/components/layout'
+import HomeHero from '@/components/home-hero';
+import Layout from '@/components/layout';
 
 const IndexPage = () => {
   return (
@@ -9,7 +9,7 @@ const IndexPage = () => {
     >
       <HomeHero />
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
