@@ -2,9 +2,9 @@ import { BlogPost } from '@/types/blog-post';
 import {
   Badge,
   Heading,
-  HStack,
   LinkBox,
   LinkOverlay,
+  Stack,
   Text,
   useColorModeValue as mode,
   VStack,
@@ -32,22 +32,24 @@ const BlogPostCard = ({ title, description, date, tags, slug }: BlogPost) => {
           transform: 'scale(1.05, 1.05)',
         }}
       >
-        <HStack justify='space-between'>
-          <Nextlink href={`/blog/${slug}`} passHref>
-            <LinkOverlay>
-              <Heading size='md' isTruncated>
-                {title}
-              </Heading>
-            </LinkOverlay>
-          </Nextlink>
-          <Badge
-            fontSize={{ base: 'xs', lg: 'sm' }}
-            colorScheme='hakka'
-            flexShrink={0}
-          >
-            {date}
-          </Badge>
-        </HStack>
+        <Nextlink href={`/blog/${slug}`} passHref>
+          <LinkOverlay>
+            <Stack
+              direction={{ base: 'column-reverse', md: 'row' }}
+              justify='space-between'
+              w='full'
+            >
+              <Heading size='md'>{title}</Heading>
+              <Badge
+                fontSize={{ base: 'xs', lg: 'sm' }}
+                colorScheme='hakka'
+                flexShrink={0}
+              >
+                {date}
+              </Badge>
+            </Stack>
+          </LinkOverlay>
+        </Nextlink>
         <Text fontSize='sm' color='gray.500'>
           {description}
         </Text>
