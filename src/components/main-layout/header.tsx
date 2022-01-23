@@ -11,7 +11,9 @@ const Header = () => {
         display='inline-block'
         position='fixed'
         w='100%'
-        sx={{ backdropFilter: 'blur(10px)' }}
+        sx={{
+          backdropFilter: 'blur(5px)',
+        }}
       >
         <Box w='100%' left={0} top={0}>
           <HStack w='100%' justify='space-between' p={4}>
