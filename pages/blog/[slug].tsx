@@ -15,7 +15,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import NextLink from 'next/link';
-import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from 'src/constants';
+import { DARK_BLUE_COLOR, DARK_CARD_COLOR, LIGHT_BLUE_COLOR, LIGHT_CARD_COLOR } from 'src/constants';
 
 type Props = BlogPost & {
   source: MDXRemoteSerializeResult;
@@ -26,8 +26,9 @@ const BlogPostPage = ({ title, description, date, tags, source }: Props) => {
     <Layout title={title} description={description}>
       <VStack
         px={{ base: 4, lg: 0 }}
-        py={{ base: 20 }}
-        spacing={6}
+        pt={28}
+        pb={20}
+        spacing={8}
         w='full'
         alignItems='stretch'
         position='relative'
@@ -42,7 +43,14 @@ const BlogPostPage = ({ title, description, date, tags, source }: Props) => {
               Return to blog
             </Button>
           </NextLink>
-          <Heading size='lg'>{title}</Heading>
+          <Heading
+            size='lg'
+            borderBottom='2px solid'
+            pb={2}
+            borderColor={mode('gray.600', 'gray.500')}
+          >
+            {title}
+          </Heading>
           <Text color={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}>
             #{tags.join(', #')}
           </Text>
