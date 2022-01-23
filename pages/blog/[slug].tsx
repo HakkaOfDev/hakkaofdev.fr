@@ -2,11 +2,20 @@ import Layout from '@/components/layout';
 import MDXComponents from '@/components/mdx-components';
 import { BlogPost } from '@/types/blog-post';
 import { getBlogPosts, readBlogPost } from '@/utils/posts-handler';
-import { Heading, Text, VStack } from '@chakra-ui/react';
+import {
+  Button,
+  Heading,
+  Text,
+  useColorModeValue as mode,
+  VStack,
+} from '@chakra-ui/react';
+import { AiOutlineLeftCircle } from '@react-icons/all-files/ai/AiOutlineLeftCircle';
 import matter from 'gray-matter';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
+import NextLink from 'next/link';
+import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from 'src/constants';
 
 type Props = BlogPost & {
   source: MDXRemoteSerializeResult;
@@ -24,8 +33,19 @@ const BlogPostPage = ({ title, description, date, tags, source }: Props) => {
         position='relative'
       >
         <VStack spacing={0.5} alignItems='flex-start'>
+          <NextLink href='/blog' passHref>
+            <Button
+              variant='link'
+              colorScheme='hakka'
+              leftIcon={<AiOutlineLeftCircle />}
+            >
+              Return to blog
+            </Button>
+          </NextLink>
           <Heading size='lg'>{title}</Heading>
-          <Text color='hakka.300'>∑{tags.join(', ')}</Text>
+          <Text color={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}>
+            #{tags.join(', #')}
+          </Text>
           <Text color='gray.500' fontSize='sm'>
             {date}
           </Text>
