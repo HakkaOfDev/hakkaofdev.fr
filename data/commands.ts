@@ -2,8 +2,8 @@ import { Command } from '@/types/command';
 import { BsMoon } from '@react-icons/all-files/bs/BsMoon';
 import { FcCloseUpMode } from '@react-icons/all-files/fc/FcCloseUpMode';
 import { FcEditImage } from '@react-icons/all-files/fc/FcEditImage';
-import { FcFeedback } from '@react-icons/all-files/fc/FcFeedback';
 import { FcHome } from '@react-icons/all-files/fc/FcHome';
+import { FcNews } from '@react-icons/all-files/fc/FcNews';
 import { RiGithubFill } from '@react-icons/all-files/ri/RiGithubFill';
 import { RiInstagramFill } from '@react-icons/all-files/ri/RiInstagramFill';
 import { RiLinkedinFill } from '@react-icons/all-files/ri/RiLinkedinFill';
@@ -27,7 +27,7 @@ const commands: Command[] = [
   },
   {
     title: 'Blog',
-    icon: FcFeedback,
+    icon: FcNews,
     href: '/blog',
     isExternal: false,
   },
