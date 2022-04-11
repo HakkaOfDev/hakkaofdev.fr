@@ -55,7 +55,6 @@ const PaletteItem = ({ title, icon, href, isExternal, onClick }: Command) => {
       cursor='pointer'
       _hover={{ bg: hoverBg }}
       bg={isFocused ? hoverBg : 'transparent'}
-      href={href}
       onClick={activateItem}
     >
       <HStack w='full' justify='space-between'>
