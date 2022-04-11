@@ -126,7 +126,7 @@ const InlineCode = (props: any) => (
 const LinkedHeading = (props: HTMLChakraProps<'h2'>) => {
   const slug = slugify(props.children as string, { lower: true });
   return (
-    <Link href={`#${slug}`} name={slug} role='group' fontSize='2xl'>
+    <Link href={`#${slug}`} role='group' fontSize='2xl'>
       <Box
         {...props}
         display='inline'
