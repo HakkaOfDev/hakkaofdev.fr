@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { getNowPlaying } from '@/utils/spotify';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
   req: NextApiRequest,
@@ -34,6 +34,6 @@ export default async function handler(
     artist,
     isPlaying,
     songUrl,
-    title
+    title,
   });
 }
