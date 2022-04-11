@@ -36,7 +36,6 @@ const SkillCard = ({ title, excerpt, cover, link }: Partial<Raindrop>) => {
           <Image
             alt={`Thumbnail of ${title}`}
             src={cover}
-            layout='fill'
             fallback={<Skeleton w='full' h='full' />}
           />
         </AspectRatio>
