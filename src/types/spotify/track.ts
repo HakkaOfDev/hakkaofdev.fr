@@ -1,8 +1,8 @@
 export type Track = {
-    album: string;
-    albumImageUrl: string;
-    artist: string;
-    isPlaying?: boolean;
-    songUrl: string;
-    title: string;
-}
+  album: string;
+  albumImageUrl: string;
+  artist: string;
+  isPlaying?: boolean;
+  songUrl: string;
+  title: string;
+};

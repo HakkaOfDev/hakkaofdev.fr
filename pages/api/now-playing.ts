@@ -24,7 +24,14 @@ export default async function handler(
   const albumImageUrl = song.item.album.images[0].url;
   const songUrl = song.item.external_urls.spotify;
 
-  const track: Track = { isPlaying, title, artist, album, albumImageUrl, songUrl };
+  const track: Track = {
+    isPlaying,
+    title,
+    artist,
+    album,
+    albumImageUrl,
+    songUrl,
+  };
 
   res.setHeader(
     'Cache-Control',

@@ -15,7 +15,7 @@ export default async function handler(
     album: track.album.name,
     albumImageUrl: track.album.images[0].url,
     songUrl: track.external_urls.spotify,
-    title: track.name
+    title: track.name,
   }));
 
   res.setHeader(
