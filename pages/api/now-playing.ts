@@ -1,4 +1,4 @@
-import { Track } from '@/types/track';
+import { Track } from '@/types/spotify/track';
 import { getNowPlaying } from '@/utils/spotify';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
