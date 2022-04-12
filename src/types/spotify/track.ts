@@ -5,4 +5,5 @@ export type Track = {
   isPlaying?: boolean;
   songUrl: string;
   title: string;
+  playedAt?: Date | string;
 };
