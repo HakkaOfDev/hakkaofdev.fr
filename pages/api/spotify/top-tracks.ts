@@ -10,7 +10,7 @@ export default async function handler(
   const response = await getTopTracks();
   const { items } = await response.json();
 
-  const tracks: Track[] = items.slice(0, 20).map((track) => ({
+  const tracks: Track[] = items.slice(0, 10).map((track) => ({
     artist: track.artists.map((_artist: Artist) => _artist.name).join(', '),
     album: track.album.name,
     albumImageUrl: track.album.images[0].url,
