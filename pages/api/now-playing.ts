@@ -1,3 +1,4 @@
+import { Track } from '@/types/track';
 import { getNowPlaying } from '@/utils/spotify';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -23,17 +24,12 @@ export default async function handler(
   const albumImageUrl = song.item.album.images[0].url;
   const songUrl = song.item.external_urls.spotify;
 
+  const track: Track = { isPlaying, title, artist, album, albumImageUrl, songUrl };
+
   res.setHeader(
     'Cache-Control',
     'public, s-maxage=60, stale-while-revalidate=30'
   );
 
-  return res.status(200).json({
-    album,
-    albumImageUrl,
-    artist,
-    isPlaying,
-    songUrl,
-    title,
-  });
+  return res.status(200).json({ track });
 }
