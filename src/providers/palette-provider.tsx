@@ -53,7 +53,7 @@ const PaletteProvider = ({ children }: PropsWithChildren<{}>) => {
         open,
         close,
         setFocusedIndex,
-        commands,
+        commands: displayedCommands,
         filterCommands,
       }}
     >
