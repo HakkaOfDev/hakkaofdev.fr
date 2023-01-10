@@ -10,9 +10,10 @@ import {
   StackProps,
   Text,
   Tooltip,
+  useBreakpointValue,
   useColorModeValue as mode,
   useToast,
-  VStack,
+  VStack
 } from '@chakra-ui/react';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import { useState } from 'react';
@@ -92,6 +93,7 @@ const MotionStack = motion<StackProps>(VStack);
 const AboutHero = () => {
   const toast = useToast();
   const [index, setIndex] = useState(0);
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   const sendEasterEgg = () => {
     const { title, description } = easterEggs[index] as EasterEgg;
@@ -100,7 +102,7 @@ const AboutHero = () => {
       title: title,
       description: description,
       position: 'bottom-right',
-      variant: 'left-accent',
+      variant: isMobile ? 'solid' : 'left-accent',
       status: 'info',
       duration: 5000,
       isClosable: true,
@@ -114,7 +116,7 @@ const AboutHero = () => {
   };
 
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode='wait'>
       <Stack
         w='100%'
         minH='100vh'
@@ -176,7 +178,7 @@ const AboutHero = () => {
               colorScheme='hakka'
               onClick={sendEasterEgg}
             >
-              Mad Developer
+              Software Enginner
             </Button>
           </Tooltip>
         </MotionStack>
@@ -195,7 +197,7 @@ const AboutHero = () => {
             align={{ base: 'center', md: 'end' }}
           >
             <SummaryTitle number={1} title='Introduction' />
-            <Heading fontSize='3xl'>Web Developer</Heading>
+            <Heading fontSize='3xl'>Enthusiast Developer</Heading>
           </VStack>
           <Text color='gray.500' textAlign={{ base: 'center', md: 'end' }}>
             A passionate <strong>developer</strong> having an experience of

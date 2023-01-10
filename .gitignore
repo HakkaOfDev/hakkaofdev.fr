@@ -42,4 +42,6 @@ yarn-error.log*
 .vscode/*
 .history/
 
+# yarn & npm
 package-lock.json
+yarn.lock

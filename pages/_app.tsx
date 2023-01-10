@@ -14,7 +14,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
       <PaletteProvider>
         <MainLayout>
           <Palette />
-          <AnimatePresence exitBeforeEnter initial={true}>
+          <AnimatePresence mode='wait' initial={true}>
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </MainLayout>

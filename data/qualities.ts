@@ -1,10 +1,7 @@
 import { Extra } from '@/types/extra';
-import { BiDumbbell } from '@react-icons/all-files/bi/BiDumbbell';
-import { GiGears } from '@react-icons/all-files/gi/GiGears';
-import { GiHammerDrop } from '@react-icons/all-files/gi/GiHammerDrop';
-import { GiPalette } from '@react-icons/all-files/gi/GiPalette';
-import { RiLightbulbFlashLine } from '@react-icons/all-files/ri/RiLightbulbFlashLine';
-import { RiTeamLine } from '@react-icons/all-files/ri/RiTeamLine';
+import { BiDumbbell } from 'react-icons/bi';
+import { GiGears, GiHammerDrop, GiPalette } from 'react-icons/gi';
+import { RiLightbulbFlashLine, RiTeamLine } from 'react-icons/ri';
 
 const qualities: Extra[] = [
   {

@@ -2,9 +2,9 @@ import {
   Icon,
   Link,
   LinkProps,
-  useColorModeValue as mode,
+  useColorModeValue as mode
 } from '@chakra-ui/react';
-import { FiExternalLink } from '@react-icons/all-files/fi/FiExternalLink';
+import { FiExternalLink } from 'react-icons/fi';
 import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from 'src/constants';
 
 const ExternalLink = ({ children, ...linkProps }: LinkProps) => {

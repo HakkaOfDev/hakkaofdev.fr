@@ -5,14 +5,13 @@ import {
   HTMLChakraProps,
   Kbd,
   Link,
-  useColorMode,
-  useColorModeValue,
+  useColorModeValue
 } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
 import NextImage from 'next/image';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import darkTheme from 'prism-react-renderer/themes/nightOwl';
 import lightTheme from 'prism-react-renderer/themes/nightOwlLight';
+import { useId } from 'react';
 import slugify from 'slugify';
 import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from 'src/constants';
 
@@ -31,7 +30,10 @@ const Table = (props) => (
 
 const THead = (props) => (
   <chakra.th
-    bg={useColorModeValue('gray.50', 'whiteAlpha.100')}
+    bg='gray.50'
+    _dark={{
+      bg: 'whiteAlpha.100',
+    }}
     fontWeight='semibold'
     p={2}
     fontSize='sm'
@@ -51,10 +53,27 @@ const TData = (props) => (
 );
 
 const CodeHighlight = ({ children: codeString, className: language }: any) => {
-  language = language.replace('language-', '');
   const theme = useColorModeValue(lightTheme, darkTheme);
-  const lineNumberColor = useColorModeValue('blackAlpha.500', 'whiteAlpha.500');
-  const preBackground = useColorModeValue('gray.50', 'gray.900');
+  const codeId = useId();
+  if (!language) {
+    return (
+      <chakra.code
+        apply='mdx.code'
+        color='purple.500'
+        _dark={{
+          color: 'purple.200',
+          bg: 'purple.900',
+        }}
+        bg='purple.50'
+        px={1}
+        py={0.5}
+        rounded={{ base: 'none', md: 'md' }}
+      >
+        {codeString}
+      </chakra.code>
+    );
+  }
+  language = language.replace('language-', '');
   const showLineNumbers = !['shell', 'text'].includes(language);
 
   return (
@@ -70,7 +89,10 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
           <div data-language={className}>
             <chakra.pre
               className={className}
-              sx={{ ...style, backgroundColor: preBackground }}
+              sx={{ ...style, backgroundColor: 'gray.50' }}
+              _dark={{
+                backgroundColor: 'gray.900',
+              }}
               overflowX='auto'
               rounded='md'
               p={4}
@@ -79,15 +101,23 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
               {tokens.map((line, i) => {
                 const lineProps = getLineProps({ line, key: i });
                 return (
-                  <chakra.div {...lineProps} display='table-row' key={i}>
+                  <chakra.div
+                    {...lineProps}
+                    display='table-row'
+                    key={`${codeId}.${i}`}
+                  >
                     {showLineNumbers && (
                       <chakra.span
+                        key={`${codeId}.${i}.number`}
                         w={8}
                         display='table-cell'
                         textAlign='right'
                         userSelect='none'
-                        color={lineNumberColor}
-                        px={3}
+                        color='blackAlpha.500'
+                        pr={3}
+                        _dark={{
+                          color: 'whiteAlpha.500',
+                        }}
                       >
                         {i + 1}
                       </chakra.span>
@@ -96,7 +126,7 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
                       return (
                         <chakra.span
                           {...getTokenProps({ token, key })}
-                          key={`${i}.${key}`}
+                          key={`${codeId}.${i}.${key}`}
                         />
                       );
                     })}
@@ -125,19 +155,27 @@ const InlineCode = (props: any) => (
 
 const LinkedHeading = (props: HTMLChakraProps<'h2'>) => {
   const slug = slugify(props.children as string, { lower: true });
+
   return (
-    <Link href={`#${slug}`} role='group' fontSize='2xl'>
+    <Link alignItems='flex-end' display='flex' href={`#${slug}`} role='group'>
       <Box
         {...props}
         display='inline'
+        color='gray.700'
         fontFamily='heading'
-        color={useColorModeValue('gray.700', 'white')}
+        fontWeight='bold'
+        _dark={{
+          color: 'white',
+        }}
       >
         {props.children}
       </Box>
       <chakra.span
         aria-label='anchor'
-        color={useColorModeValue(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
+        color={LIGHT_BLUE_COLOR}
+        _dark={{
+          color: DARK_BLUE_COLOR,
+        }}
         userSelect='none'
         fontWeight='normal'
         outline='none'
@@ -158,15 +196,15 @@ const Image = (props) => {
   );
 };
 
-const Anchor = (props) => {
-  const { colorMode } = useColorMode();
-  return (
-    <chakra.a
-      color={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)({ colorMode })}
-      {...props}
-    />
-  );
-};
+const Anchor = (props) => (
+  <chakra.a
+    color={LIGHT_BLUE_COLOR}
+    _dark={{
+      color: DARK_BLUE_COLOR,
+    }}
+    {...props}
+  />
+);
 
 const MDXComponents = {
   code: CodeHighlight,
@@ -180,13 +218,7 @@ const MDXComponents = {
   pre: Pre,
   kbd: Kbd,
   img: Image,
-  br: ({ reset, ...props }) => (
-    <Box
-      as={reset ? 'br' : undefined}
-      height={reset ? undefined : '10px'}
-      {...props}
-    />
-  ),
+  br: (props) => <Box as='br' h={undefined} {...props} />,
   table: Table,
   th: THead,
   td: TData,
@@ -200,12 +232,14 @@ const MDXComponents = {
   blockquote: (props) => (
     <Box>
       <Alert
+        as='blockquote'
+        role='none'
+        rounded='4px'
         status='warning'
         variant='left-accent'
-        as='blockquote'
-        rounded='md'
         {...props}
         w='unset'
+        mx={-4}
       />
     </Box>
   ),

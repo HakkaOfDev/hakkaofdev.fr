@@ -12,9 +12,9 @@ import {
   ListItem,
   Text,
 } from '@chakra-ui/react';
-import { BsSearch } from '@react-icons/all-files/bs/BsSearch';
 import { GetStaticProps } from 'next';
 import { ChangeEventHandler, useState } from 'react';
+import { BsSearch } from 'react-icons/bs';
 
 type Props = {
   posts: BlogPost[];

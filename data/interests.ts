@@ -1,7 +1,7 @@
 import { Extra } from '@/types/extra';
-import { BiDumbbell } from '@react-icons/all-files/bi/BiDumbbell';
-import { FaPlaneDeparture } from '@react-icons/all-files/fa/FaPlaneDeparture';
-import { GoKeyboard } from '@react-icons/all-files/go/GoKeyboard';
+import { BiDumbbell } from 'react-icons/bi';
+import { FaPlaneDeparture } from 'react-icons/fa';
+import { GoKeyboard } from 'react-icons/go';
 
 const interests: Extra[] = [
   {

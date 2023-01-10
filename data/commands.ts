@@ -1,14 +1,13 @@
 import { Command } from '@/types/command';
-import { BsMoon } from '@react-icons/all-files/bs/BsMoon';
-import { FcCloseUpMode } from '@react-icons/all-files/fc/FcCloseUpMode';
-import { FcEditImage } from '@react-icons/all-files/fc/FcEditImage';
-import { FcHome } from '@react-icons/all-files/fc/FcHome';
-import { FcNews } from '@react-icons/all-files/fc/FcNews';
-import { RiGithubFill } from '@react-icons/all-files/ri/RiGithubFill';
-import { RiInstagramFill } from '@react-icons/all-files/ri/RiInstagramFill';
-import { RiLinkedinFill } from '@react-icons/all-files/ri/RiLinkedinFill';
-import { RiTwitterFill } from '@react-icons/all-files/ri/RiTwitterFill';
-import { WiDaySunny } from '@react-icons/all-files/wi/WiDaySunny';
+import { BsMoon } from 'react-icons/bs';
+import { FcCloseUpMode, FcEditImage, FcHome, FcNews } from 'react-icons/fc';
+import {
+  RiGithubFill,
+  RiInstagramFill,
+  RiLinkedinFill,
+  RiTwitterFill
+} from 'react-icons/ri';
+import { WiDaySunny } from 'react-icons/wi';
 import { LINKEDIN } from 'src/constants';
 import { GITHUB, INSTAGRAM, TWITTER } from './../src/constants';
 

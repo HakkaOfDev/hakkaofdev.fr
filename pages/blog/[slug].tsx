@@ -1,6 +1,7 @@
 import Layout from '@/components/layout';
 import MDXComponents from '@/components/mdx-components';
 import { BlogPost } from '@/types/blog-post';
+import imageMetadata from '@/utils/plugins/image-metadata';
 import { getBlogPosts, readBlogPost } from '@/utils/posts-handler';
 import {
   Button,
@@ -9,12 +10,12 @@ import {
   useColorModeValue as mode,
   VStack,
 } from '@chakra-ui/react';
-import { AiOutlineLeftCircle } from '@react-icons/all-files/ai/AiOutlineLeftCircle';
 import matter from 'gray-matter';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import NextLink from 'next/link';
+import { AiOutlineLeftCircle } from 'react-icons/ai';
 import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from 'src/constants';
 
 type Props = BlogPost & {
@@ -84,7 +85,11 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   return {
     props: {
-      source: await serialize(content),
+      source: await serialize(content, {
+        mdxOptions: {
+          rehypePlugins: [imageMetadata],
+        },
+      }),
       title,
       description,
       date,

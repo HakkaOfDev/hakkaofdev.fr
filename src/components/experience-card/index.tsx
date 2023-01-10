@@ -8,13 +8,13 @@ import {
   SkeletonCircle,
   Text,
   useColorModeValue as mode,
-  VStack,
+  VStack
 } from '@chakra-ui/react';
 import {
   DARK_BLUE_COLOR,
   DARK_CARD_COLOR,
   LIGHT_BLUE_COLOR,
-  LIGHT_CARD_COLOR,
+  LIGHT_CARD_COLOR
 } from 'src/constants';
 
 const ExperienceCard = ({
@@ -34,10 +34,12 @@ const ExperienceCard = ({
       spacing={1}
     >
       <HStack>
-        <SkeletonCircle
-          startColor={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
-          size='5'
-        />
+        {date.startsWith('Since') && (
+          <SkeletonCircle
+            startColor={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
+            size='5'
+          />
+        )}
         <Text
           textTransform='uppercase'
           fontWeight='thin'

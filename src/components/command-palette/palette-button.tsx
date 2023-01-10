@@ -1,6 +1,6 @@
 import { IconButton, Tooltip } from '@chakra-ui/react';
-import { FiCommand } from '@react-icons/all-files/fi/FiCommand';
 import { useContext } from 'react';
+import { FiCommand } from 'react-icons/fi';
 import { PaletteContext } from 'src/providers/palette-provider';
 
 const PaletteButton = () => {

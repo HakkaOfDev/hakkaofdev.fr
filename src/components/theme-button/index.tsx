@@ -2,11 +2,11 @@ import {
   IconButton,
   IconButtonProps,
   useColorMode,
-  useColorModeValue as mode,
+  useColorModeValue as mode
 } from '@chakra-ui/react';
-import { BsMoon } from '@react-icons/all-files/bs/BsMoon';
-import { WiDaySunny } from '@react-icons/all-files/wi/WiDaySunny';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
+import { BsMoon } from 'react-icons/bs';
+import { WiDaySunny } from 'react-icons/wi';
 
 const variants: Variants = {
   initial: {
@@ -41,7 +41,7 @@ const ThemeButton = () => {
   const MotionButton = motion<IconButtonProps>(IconButton);
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence mode='wait' initial={false}>
       <MotionButton
         style={{ display: 'inline-flex' }}
         variants={variants}

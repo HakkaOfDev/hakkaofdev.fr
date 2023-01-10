@@ -126,7 +126,7 @@ const Palette = () => {
   const paletteBackgroundColor = mode('white', 'gray.800');
 
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode='wait'>
       {isOpened && (
         <Portal>
           <MotionFlex

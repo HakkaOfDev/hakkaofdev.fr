@@ -1,6 +1,6 @@
 import { IconButton, useColorModeValue } from '@chakra-ui/react';
-import { BiArrowToTop } from '@react-icons/all-files/bi/BiArrowToTop';
 import { useEffect, useState } from 'react';
+import { BiArrowToTop } from 'react-icons/bi';
 
 const ScrollToTopButton = () => {
   const [showScrollToTop, setScrollToTop] = useState(false);

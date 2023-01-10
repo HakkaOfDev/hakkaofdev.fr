@@ -1,5 +1,5 @@
 import { Button } from '@chakra-ui/react';
-import { HiOutlineArrowNarrowDown } from '@react-icons/all-files/hi/HiOutlineArrowNarrowDown';
+import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
 
 const ScrollIDButton = ({ text, id }) => {
   const scrollTo = (id) => {

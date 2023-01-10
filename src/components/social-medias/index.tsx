@@ -1,8 +1,10 @@
 import { Button, HStack, Link } from '@chakra-ui/react';
-import { RiGithubFill } from '@react-icons/all-files/ri/RiGithubFill';
-import { RiInstagramFill } from '@react-icons/all-files/ri/RiInstagramFill';
-import { RiLinkedinFill } from '@react-icons/all-files/ri/RiLinkedinFill';
-import { RiTwitterFill } from '@react-icons/all-files/ri/RiTwitterFill';
+import {
+  RiGithubFill,
+  RiInstagramFill,
+  RiLinkedinFill,
+  RiTwitterFill
+} from 'react-icons/ri';
 
 const SocialMedias = () => {
   return (

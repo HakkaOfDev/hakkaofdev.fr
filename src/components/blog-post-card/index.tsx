@@ -7,7 +7,7 @@ import {
   Stack,
   Text,
   useColorModeValue as mode,
-  VStack,
+  VStack
 } from '@chakra-ui/react';
 import Nextlink from 'next/link';
 import { DARK_CARD_COLOR, LIGHT_CARD_COLOR } from 'src/constants';
@@ -32,24 +32,25 @@ const BlogPostCard = ({ title, description, date, tags, slug }: BlogPost) => {
           transform: 'scale(1.05, 1.05)',
         }}
       >
-        <Nextlink href={`/blog/${slug}`} passHref>
-          <LinkOverlay>
-            <Stack
-              direction={{ base: 'column-reverse', md: 'row' }}
-              justify='space-between'
-              w='full'
-            >
-              <Heading size='md'>{title}</Heading>
-              <Badge
-                fontSize={{ base: 'xs', lg: 'sm' }}
-                colorScheme='hakka'
-                flexShrink={0}
-              >
-                {date}
-              </Badge>
-            </Stack>
-          </LinkOverlay>
-        </Nextlink>
+        <Stack
+          direction={{ base: 'column-reverse', md: 'row' }}
+          justify='space-between'
+          w='full'
+        >
+          <Heading size='md'>
+            <LinkOverlay as={Nextlink} href={`/blog/${slug}`} passHref>
+              {title}
+            </LinkOverlay>
+          </Heading>
+          <Badge
+            fontSize={{ base: 'xs', lg: 'sm' }}
+            colorScheme='hakka'
+            w='fit-content'
+            flexShrink={0}
+          >
+            {date}
+          </Badge>
+        </Stack>
         <Text fontSize='sm' color='gray.500'>
           {description}
         </Text>

@@ -7,10 +7,10 @@ import {
   useColorModeValue as mode,
   useMenuDescendant,
 } from '@chakra-ui/react';
-import { AiOutlineEnter } from '@react-icons/all-files/ai/AiOutlineEnter';
-import { FiExternalLink } from '@react-icons/all-files/fi/FiExternalLink';
 import { useRouter } from 'next/router';
 import { useContext, useEffect, useRef } from 'react';
+import { AiOutlineEnter } from 'react-icons/ai';
+import { FiExternalLink } from 'react-icons/fi';
 import { useKeyPressEvent } from 'react-use';
 import { PaletteContext } from 'src/providers/palette-provider';
 

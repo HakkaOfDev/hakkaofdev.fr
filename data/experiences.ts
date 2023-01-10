@@ -1,20 +1,87 @@
 import { Experience } from '@/types/experience';
-import { DiJava } from '@react-icons/all-files/di/DiJava';
-import { DiLinux } from '@react-icons/all-files/di/DiLinux';
-import { FaPeopleCarry } from '@react-icons/all-files/fa/FaPeopleCarry';
-import { FaRaspberryPi } from '@react-icons/all-files/fa/FaRaspberryPi';
-import { FiMonitor } from '@react-icons/all-files/fi/FiMonitor';
-import { GiServerRack } from '@react-icons/all-files/gi/GiServerRack';
-import { GiWifiRouter } from '@react-icons/all-files/gi/GiWifiRouter';
-import { RiCalendarEventLine } from '@react-icons/all-files/ri/RiCalendarEventLine';
-import { RiUserVoiceFill } from '@react-icons/all-files/ri/RiUserVoiceFill';
-import { SiGnubash } from '@react-icons/all-files/si/SiGnubash';
+import { BsFillHddNetworkFill } from 'react-icons/bs';
+import { DiJava, DiLinux } from 'react-icons/di';
+import { FaDocker, FaPeopleCarry, FaRaspberryPi } from 'react-icons/fa';
+import { FiMonitor } from 'react-icons/fi';
+import { GiServerRack, GiWifiRouter } from 'react-icons/gi';
+import { IoIosGitNetwork } from 'react-icons/io';
+import { MdDeveloperMode, MdEngineering } from 'react-icons/md';
+import { RiCalendarEventLine, RiUserVoiceFill } from 'react-icons/ri';
+import { SiGnubash, SiHiveBlockchain } from 'react-icons/si';
 
 const experiences: Experience[] = [
   {
+    title: 'Freelance',
+    company: 'Alexandre GOSSARD',
+    date: 'Since July 2022',
+    location: 'Châlons-en-Champagne, France',
+    tasks: [
+      {
+        task: 'Software Engineer',
+        icon: MdDeveloperMode,
+      },
+      {
+        task: 'System Administrator (implementation of services and maintenance)',
+        icon: BsFillHddNetworkFill,
+      },
+      {
+        task: 'Networks & Telecommunications Technician',
+        icon: IoIosGitNetwork,
+      },
+    ],
+  },
+  {
+    title: 'Lead Front-end Developers',
+    company: 'Kabila App',
+    date: 'Since June 2022',
+    location: 'Madrid, Spain',
+    tasks: [
+      {
+        task: 'Software Enginner',
+        icon: MdEngineering,
+      },
+      {
+        task: 'Blockchain Developer (Hedera Hashgraph)',
+        icon: SiHiveBlockchain,
+      },
+      {
+        task: 'Management of a team of 2 developers',
+        icon: FaPeopleCarry,
+      },
+    ],
+  },
+  {
+    title: 'Apprenticeship',
+    company: 'Arche MC2',
+    date: 'Since September 2022',
+    location: 'Châlons-en-Champagne, France',
+    tasks: [
+      {
+        task: 'System Administrator',
+        icon: BsFillHddNetworkFill,
+      },
+      {
+        task: 'Docker',
+        icon: FaDocker,
+      },
+    ],
+  },
+  {
+    title: 'Internship',
+    company: 'Efficience-Informatique',
+    date: 'March 2022 - June 2022',
+    location: 'Châlons-en-Champagne, France',
+    tasks: [
+      {
+        task: 'System Administrator',
+        icon: BsFillHddNetworkFill,
+      },
+    ],
+  },
+  {
     title: 'CEO',
     company: 'Association of students of Networks and Telecommunications',
-    date: 'Since 2021',
+    date: 'March 2021 - March 2022',
     location: 'Châlons-en-Champagne, France',
     tasks: [
       {
@@ -46,7 +113,7 @@ const experiences: Experience[] = [
     location: 'Châlons-en-Champagne, France',
     tasks: [
       {
-        task: 'System administrator (implementation of services and maintenance)',
+        task: 'System Administrator',
         icon: FiMonitor,
       },
       {

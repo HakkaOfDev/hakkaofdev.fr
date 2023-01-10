@@ -17,19 +17,17 @@ import { Raindrop } from '@/types/raindrop';
 import { getRaindrops } from '@/utils/raindrop-handler';
 import {
   Button,
-  HStack,
   Link,
   SimpleGrid,
   Stack,
   Text,
   VStack,
   Wrap,
-  WrapItem,
+  WrapItem
 } from '@chakra-ui/react';
-import { AiOutlineMail } from '@react-icons/all-files/ai/AiOutlineMail';
-import { AiOutlineRightCircle } from '@react-icons/all-files/ai/AiOutlineRightCircle';
 import { GetStaticProps } from 'next';
 import { useState } from 'react';
+import { AiOutlineMail, AiOutlineRightCircle } from 'react-icons/ai';
 
 type Props = {
   skills: Raindrop[];
@@ -52,7 +50,7 @@ const AboutPage = ({ skills, tags }) => {
       title='About'
       description='Discover who I am, my passions, my qualities, my spoken languages, my professional experiences, my skills and my background.'
     >
-      <VStack py={{ base: 20, md: 0 }}>
+      <VStack maxW='full' py={{ base: 20, md: 0 }} px={2}>
         <AboutHero />
         <Scene
           id='skills'
@@ -64,7 +62,8 @@ const AboutPage = ({ skills, tags }) => {
           <Text align='center' color='gray.500'>
             I was able to learn these skills mainly by{' '}
             <strong>self-taught</strong> and
-            <strong> autonomously</strong> but also from some of my experiences.{' '}
+            <strong> autonomously</strong>
+            <br />but also from some of my experiences.{' '}
             <ScrollIDButton text="Check'em" id='experiences' />
           </Text>
           <Wrap justify='center' spacing={2}>
@@ -110,7 +109,7 @@ const AboutPage = ({ skills, tags }) => {
         >
           <Text align='center' color='gray.500'>
             Between delivering pizzas in the summer and being the president of
-            an association, I did some jobs to discover{' '}
+            an association, <br />I did some jobs to discover{' '}
             <strong>the professional world</strong>.{' '}
             <ScrollIDButton text="See my certif's" id='degrees' />
           </Text>
@@ -135,16 +134,16 @@ const AboutPage = ({ skills, tags }) => {
           align='start'
         >
           <Text align='center' color='gray.500'>
-            <strong>Student</strong> in Networks and Telecommunications,{' '}
-            <strong>Web developer</strong>, I base myself on principles and
-            values which are for me fundamental <strong>to success</strong>.{' '}
+            <strong>Student</strong> in Networks and Telecommunications and{' '}
+            <strong>Software Engineer</strong>, <br />I base myself on
+            principles and values which are for me fundamental{' '}
+            <strong>to success</strong>.<br />{' '}
             <ScrollIDButton text='More details' id='details' />
-            <br />
-            <Quote
-              quote="Act with kindness, but don't expect recognition."
-              author='Confucius'
-            />
           </Text>
+          <Quote
+            quote="Act with kindness, but don't expect recognition."
+            author='Confucius'
+          />
           <Stack direction={{ base: 'column', md: 'row' }} spacing={6}>
             {degrees.map(({ title, date, location, icon, details }) => (
               <DegreeCard
@@ -167,16 +166,20 @@ const AboutPage = ({ skills, tags }) => {
         >
           <Text align='center' color='gray.500'>
             <strong>Sporty</strong> and <strong>passionate</strong> about
-            computers and new technologies. <strong>Serious</strong> and{' '}
-            <strong>determined</strong>, I have the qualities of adaptation
-            essential <strong>to satisfy you</strong>.
+            computers and new technologies. <br />
+            <strong>Serious</strong> and <strong>determined</strong>, I have the
+            qualities of adaptation essential <strong>to satisfy you</strong>.
           </Text>
           <Stack direction={{ base: 'column', md: 'row' }} spacing={6}>
             <ExtraCard title='Qualities' extras={qualities} />
             <LangsCard />
             <ExtraCard title='Interests' extras={interests} />
           </Stack>
-          <HStack>
+          <Stack
+            direction={{ base: 'column', md: 'row' }}
+            justify='center'
+            align='center'
+          >
             <Button
               colorScheme='hakka'
               variant='outline'
@@ -194,7 +197,7 @@ const AboutPage = ({ skills, tags }) => {
                 See my resume
               </Button>
             </Link>
-          </HStack>
+          </Stack>
         </Scene>
       </VStack>
       <ScrollToTopButton />

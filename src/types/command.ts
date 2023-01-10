@@ -1,4 +1,4 @@
-import { IconType } from '@react-icons/all-files/lib';
+import { IconType } from 'react-icons';
 
 export type Command = {
   title: string;

@@ -1,0 +1,113 @@
+---
+title: How was my night during the HackSecuReims CTF ?
+description: Discover the challenges, the atmoshpere,the competition and the determination of each one during this special event.
+date: 06 March, 2022
+tags: ['ctf', 'hack', 'hacksecureims', 'python']
+---
+
+# What is this special event ?
+
+The [HackSecuReims](https://www.hacksecureims.eu) organized a special event which called `a CTF` (type Jeopardy) but what's it ?
+>   Jeopardy-style CTFs present competitors with a set of questions that reveal clues that guide them in solving complex tasks in a specific order. By revealing clues, contestants learn the right direction regarding techniques and methodologies that are needed going forward.
+
+# My team
+
+With my brothers [Alexis LEBEL](https://github.com/Alestrio) and [Corentin FREIRE](https://github.com/PtitNost), we've participed to this event with name `Peignoir'Bros` and we came dressed in `bathrobes`.
+
+**BECAUSE WE LOVE BATHROBES.**
+
+# Atmoshpere
+
+In the room, we were about sixty may be seventy and seperated in team of 3 in table with 6blocks. We helped each other for the most hardest levels, and we've the opportunities to discuss with em and others like organizers.
+
+# Challenges
+
+The most interessant part because it's the heart of CTF. From scanning a qrcode to get a flag to writing a program in rust, this CTF have a huge panel of challenges.
+I'll expose you twos of em'.
+
+First the `GIF problem`.
+You have a GIF with a sequence of +1000 frames which itself represents a qrcode. Each frame, when you scanned her, give you one letter from a base64 code which I've to decode him to get the flag. But to have the correct code, I was not going to scan every single frames. So I automatised the code with Python.
+
+```python
+from os import listdir
+from PIL import Image
+from pyzbar.pyzbar import decode
+
+def get_index(x): #function to sort the list of images
+  return(x[6:10])
+
+message = ''
+gifs = sorted(listdir('/home/hakka/Downloads/gifs/'), key=get_index)
+
+for gif in gifs:
+  message += decode(Image.open(f'/home/hakka/Downloads/gifs/{gif}'))[0].data.decode('utf-8')
+
+print(message)
+```
+So when this script was executed, he returned to me the base 64 code, so I went to [Base 64 Decoder](https://www.base64decode.org/) to decode it and get the flag.
+
+The second one was the `OCR Reload`.
+It was my first approach with OCRs. I spent 3 hours on it ahah but I was happy to pass it.
+> But what is OCR ?
+> Optical character recognition or optical character reader is the electronic or mechanical conversion of images of typed, handwritten or printed text into machine-encoded text, whether from a scanned document, a photo of a document, a scene-photo or from subtitle text superimposed on an image.
+
+I programmed twos differents codes to pass this challenge. First is with [pytesseract](https://pypi.org/project/pytesseract/) whichis specialized in OCR.
+```python
+from os import listdir
+from PIL import Image
+import pytesseract
+
+def get_index(x): #function to sort the list of images
+  return(x[6:1O])
+
+message = ''
+imgs = sorted(listdir('/home/hakka/Downloads/imgs/'), key=get_index)
+config = r'--oem 3 --psm 10' #config needed to OCR
+for img in imgs:
+  im = Image.open(f'/home/hakka/Downloads/imgs/{img}')
+  character = pytesseract.image_to_string(im, config=config)
+  message += stri.strip()[0]
+
+print(message)
+```
+The first one worked almost to the excpetion of 2-3 characters that were fighting, so I decided to retry with an another method.
+
+The second one is with the hashes of images. For example if imgs folder contains 2 imgs with a inside, they'll have the same hashes. So I created a code to compare the hashes of images and I stored them in a dict.
+For doing that, I used [ImageHash](https://pypi.org/project/ImageHash/)
+```python
+from os import listdir
+from PIL import Image
+import imagehash
+
+def get_index(x):
+  return(x[6:10])
+
+hashes = {} # ex {'a': 'vreveve33klkn2'} key: character, value: hash
+message=''
+ims = sorted(listdir('/home/hakka/Downloads/imgs/'), key=get_index)
+for img in imgs:
+  im = Image.open(f'/home/hakka/Downloads/imgs/{img}')
+  im_hash = imagehash.dhash(im) # can use phash too
+
+  if im_hash in hashes.values():
+    for key, value in hashes.items():
+      if im_hash == value:
+        message += key
+        break
+  else:
+    newKey = str(input(f'Enter one key for {img}: '))
+    hashes[newKey] = im_hash
+    message += newKey
+
+print(message)
+```
+
+And it's worked.
+The other challenges was cool too and some were unfortunately impossible because I had not the required skillset.
+
+# Conclusion 
+
+Like everyone in this event, I am happy to have been able to participate in such an event. I don't regrets anything.
+I'm looking forward to next year's and this time coming back much stronger.
+
+Thanks to all.

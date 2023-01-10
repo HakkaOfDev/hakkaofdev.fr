@@ -37,11 +37,13 @@ const DegreeCard = ({ title, date, location, icon, details }: Degree) => {
           <Text fontWeight='light'>
             {date} •<em> {location}</em>
           </Text>
-          <UnorderedList>
-            {details.map((detail) => (
-              <ListItem key={detail}>{detail}</ListItem>
-            ))}
-          </UnorderedList>
+          {details && (
+            <UnorderedList>
+              {details.map((detail) => (
+                <ListItem key={detail}>{detail}</ListItem>
+              ))}
+            </UnorderedList>
+          )}
         </VStack>
       </HStack>
     </Box>

@@ -3,11 +3,11 @@ import {
   Heading,
   Stack,
   Text,
-  useColorModeValue as mode,
+  useColorModeValue as mode
 } from '@chakra-ui/react';
-import { BiArrowToRight } from '@react-icons/all-files/bi/BiArrowToRight';
 import { motion } from 'framer-motion';
 import NextLink from 'next/link';
+import { BiArrowToRight } from 'react-icons/bi';
 import Typed from 'react-typed';
 import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from 'src/constants';
 import ExternalLink from '../external-link';
@@ -61,12 +61,7 @@ const HomeHero = () => {
               fontSize={{ base: '2xl', sm: '3xl', lg: '4xl' }}
             >
               <Typed
-                strings={[
-                  'Web Developer',
-                  'Student',
-                  'UI Designer',
-                  'Python Developer',
-                ]}
+                strings={['Software Enginner', 'Student', 'UI/UX Designer']}
                 typeSpeed={30}
                 backSpeed={40}
                 backDelay={1500}
@@ -87,7 +82,7 @@ const HomeHero = () => {
             as='h2'
             align='justify'
           >
-            <strong>Student</strong> by day, <strong>mad developer</strong> by
+            <strong>Student</strong> by day, <strong>Software Enginner</strong> by
             night. Passionate about computer science and{' '}
             <strong>new technologies</strong>, currently{' '}
             <ExternalLink href='https://nextjs.org/'>Next.js</ExternalLink> and{' '}
