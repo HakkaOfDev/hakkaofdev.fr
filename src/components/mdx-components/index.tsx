@@ -59,12 +59,11 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
     return (
       <chakra.code
         apply='mdx.code'
-        color='purple.500'
+        color='hakka.900'
+        bg={LIGHT_BLUE_COLOR}
         _dark={{
-          color: 'purple.200',
-          bg: 'purple.900',
+          bg: DARK_BLUE_COLOR,
         }}
-        bg='purple.50'
         px={1}
         py={0.5}
         rounded={{ base: 'none', md: 'md' }}
@@ -141,18 +140,6 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
   );
 };
 
-const InlineCode = (props: any) => (
-  <chakra.code
-    apply='mdx.code'
-    color={useColorModeValue('hakka.100', 'hakka.900')}
-    bg={useColorModeValue(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
-    px={1.5}
-    py={0.5}
-    rounded='md'
-    {...props}
-  />
-);
-
 const LinkedHeading = (props: HTMLChakraProps<'h2'>) => {
   const slug = slugify(props.children as string, { lower: true });
 
@@ -208,7 +195,6 @@ const Anchor = (props) => (
 
 const MDXComponents = {
   code: CodeHighlight,
-  inlineCode: InlineCode,
   h1: (props) => <LinkedHeading as='h1' apply='mdx.h1' {...props} />,
   h2: (props) => <LinkedHeading as='h2' apply='mdx.h2' {...props} />,
   h3: (props) => <LinkedHeading as='h3' apply='mdx.h3' {...props} />,
@@ -233,13 +219,11 @@ const MDXComponents = {
     <Box>
       <Alert
         as='blockquote'
-        role='none'
         rounded='4px'
         status='warning'
         variant='left-accent'
         {...props}
         w='unset'
-        mx={-4}
       />
     </Box>
   ),
