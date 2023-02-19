@@ -61,7 +61,7 @@ const HomeHero = () => {
               fontSize={{ base: '2xl', sm: '3xl', lg: '4xl' }}
             >
               <Typed
-                strings={['Software Enginner', 'Student', 'UI/UX Designer']}
+                strings={['Software Engineer', 'Student', 'UI/UX Designer']}
                 typeSpeed={30}
                 backSpeed={40}
                 backDelay={1500}
@@ -82,7 +82,7 @@ const HomeHero = () => {
             as='h2'
             align='justify'
           >
-            <strong>Student</strong> by day, <strong>Software Enginner</strong> by
+            <strong>Student</strong> by day, <strong>Software Engineer</strong> by
             night. Passionate about computer science and{' '}
             <strong>new technologies</strong>, currently{' '}
             <ExternalLink href='https://nextjs.org/'>Next.js</ExternalLink> and{' '}

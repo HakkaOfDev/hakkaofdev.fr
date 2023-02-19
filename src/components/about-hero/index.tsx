@@ -178,7 +178,7 @@ const AboutHero = () => {
               colorScheme='hakka'
               onClick={sendEasterEgg}
             >
-              Software Enginner
+              Software Engineer
             </Button>
           </Tooltip>
         </MotionStack>

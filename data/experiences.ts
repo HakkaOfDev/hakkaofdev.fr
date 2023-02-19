@@ -37,7 +37,7 @@ const experiences: Experience[] = [
     location: 'Madrid, Spain',
     tasks: [
       {
-        task: 'Software Enginner',
+        task: 'Software Engineer',
         icon: MdEngineering,
       },
       {
