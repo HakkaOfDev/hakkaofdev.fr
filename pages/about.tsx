@@ -34,7 +34,7 @@ type Props = {
   tags: string[];
 };
 
-const AboutPage = ({ skills, tags }) => {
+const AboutPage = ({ skills, tags }: Props) => {
   const [displayedSkills, setDisplayedSkills] = useState<Raindrop[]>(
     skills.filter(({ tags }) => tags.includes('framework'))
   );
@@ -63,7 +63,8 @@ const AboutPage = ({ skills, tags }) => {
             I was able to learn these skills mainly by{' '}
             <strong>self-taught</strong> and
             <strong> autonomously</strong>
-            <br />but also from some of my experiences.{' '}
+            <br />
+            but also from some of my experiences.{' '}
             <ScrollIDButton text="Check'em" id='experiences' />
           </Text>
           <Wrap justify='center' spacing={2}>
@@ -184,9 +185,11 @@ const AboutPage = ({ skills, tags }) => {
               colorScheme='hakka'
               variant='outline'
               leftIcon={<AiOutlineMail />}
-              onClick={() => window.open('mailto:contact@hakkaofdev.fr')}
+              onClick={() =>
+                window.open('mailto:alexandre.gossard.pro@gmail.com')
+              }
             >
-              contact@hakkaofdev.fr
+              alexandre.gossard.pro@gmail.com
             </Button>
             <Link href='/lib/resume.pdf' isExternal>
               <Button
