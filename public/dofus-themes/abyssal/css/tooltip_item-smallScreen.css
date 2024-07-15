@@ -1,0 +1,286 @@
+p {
+	font-family: RobotoCondensed;
+	font-size: 17;
+	color: #c7c7c5;
+	text-align: justify;
+}
+
+.separator {
+	leading: -12;
+}
+
+.customli {
+	color: #57574f;
+	margin-left: 22;
+}
+
+.customlirightmargin {
+	color: #57574f;
+	margin-left: 22;
+	margin-right: 104;
+}
+
+.value {
+	font-family: Roboto;
+	font-size: 17;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.subtitle {
+	font-family: Roboto;
+	font-size: 18;
+	font-weight: bold;
+	color: #dfdfdf;
+	margin-left: 16;
+}
+
+.subtitlenomargin {
+	font-family: Roboto;
+	font-size: 18;
+	font-weight: bold;
+	color: #dfdfdf;
+}
+
+.bonus {
+	font-family: Roboto;
+	font-size: 17;
+	color: #6db213;
+}
+
+.bonusvalue {
+	font-family: Roboto;
+	font-size: 17;
+	font-weight: bold;
+	color: #8bf402;
+}
+
+.malus {
+	font-family: Roboto;
+	font-size: 17;
+	color: #d0483a;
+}
+
+.malusvalue {
+	font-family: Roboto;
+	font-size: 17;
+	font-weight: bold;
+	color: #d0483a;
+}
+
+.neutral {
+	font-family: Roboto;
+	font-size: 17;
+	color: #969695;
+}
+
+.neutralvalue {
+	font-family: Roboto;
+	font-size: 17;
+	color: #969695;
+}
+
+.overFm {
+	font-family: Roboto;
+	font-size: 18;
+	font-weight: bold;
+	color: #5dcf45;
+}
+
+.overFmvalue {
+	font-family: Roboto;
+	font-size: 18;
+	font-weight: bold;
+	color: #5dcf45;
+}
+
+.subeffectleftcolumn {
+	margin-left: 32;
+	leading: -15;
+}
+
+.subeffectrightcolumn {
+	margin-left: 228;
+}
+
+.exotic {
+	font-family: Roboto;
+	font-size: 18;
+	font-weight: bold;
+	color: #68b6ff;
+}
+
+.exoticvalue {
+	font-family: Roboto;
+	font-size: 18;
+	font-weight: bold;
+	color: #68b6ff;
+}
+
+.theoretical {
+	font-family: Roboto;
+	font-size: 17;
+	color: #c7c7c5 ;
+}
+
+.requirement {
+	font-family: Roboto;
+	font-size: 17;
+	color: #d9ad67;
+}
+
+.special {
+	font-family: Roboto;
+	font-size: 17;
+	color: #deb169;
+}
+
+.set {
+	font-family: Roboto;
+	text-transform : uppercase;
+	font-size: 18;
+	color: #ebc304;
+}
+
+.importantNotice {
+	font-family: Roboto;
+	font-size: 17;
+	color: #ebc304;
+	margin-left: 32;
+}
+
+.description {
+	font-family: Roboto;
+	text-align: justify;
+	font-size: 17px;
+	color: #64BCB0;
+}
+
+.quote {
+	font-family: Roboto;
+	font-size: 17;
+	font-style: italic;
+	color: #64BCB0;
+}
+
+.headerp {
+	font-family: Roboto;
+	font-size: 17;
+	color: #c7c7c5;
+	margin-left: 48;
+}
+
+.headermalus {
+	font-family: Roboto;
+	font-size: 17;
+	color: #d0483a;
+	margin-left: 48;
+}
+
+.headertitle {
+	font-family: Roboto;
+	font-size: 20;
+	text-transform : uppercase;
+	font-weight: bold;
+	color: #dfdfdf;
+	margin-left: 48;
+}
+
+.footer {
+	font-family: Roboto;
+	font-size: 17;
+	font-style: italic;
+	color: #6d6d6d;
+	text-align: center;
+}
+
+.footerleft {
+	font-family: Roboto;
+	font-size: 17;
+	font-style: italic;
+	color: #6d6d6d;
+	text-align: left;
+	leading: -17;
+}
+
+.footerright {
+	font-family: Roboto;
+	font-size: 17;
+	font-style: italic;
+	color: #6d6d6d;
+	text-align: right;
+}
+
+spellZone {
+	font-family: Roboto;
+	font-size: 17;
+	color: #c7c7c5;
+	margin-left: 32;
+}
+
+.contentmargin {
+	margin-right: 126;
+}
+
+.probaright {
+	font-family: Roboto;
+	font-size: 17;
+	text-align: right;
+	leading: -19;
+}
+
+.common {
+	font-family: Roboto;
+	font-size: 17;
+	text-align: right;
+	leading: -19;
+	color: #848480;
+}
+
+.uncommon {
+	font-family: Roboto;
+	font-size: 17;
+	text-align: right;
+	leading: -19;
+	color: #6db213;
+}
+
+.rare {
+	font-family: Roboto;
+	font-size: 17;
+	text-align: right;
+	leading: -19;
+	color: #1B96FF;
+}
+
+.epic {
+	font-family: Roboto;
+	font-size: 17;
+	text-align: right;
+	leading: -19;
+	color: #9400d3;
+}
+
+.legendary {
+	font-family: Roboto;
+	font-size: 17;
+	text-align: right;
+	leading: -19;
+	color: #ffb400;
+}
+
+.descriptionproba {
+	font-family: Roboto;
+	font-size: 17;
+	color: #E6893D;
+	margin-left: 22;
+	margin-right: 75;
+	text-align: left;
+}
+
+.valueLineWithIcon {
+	font-family: Roboto;
+	font-size: 15;
+	color: #c7c7c5;
+	margin-right: 126;
+}
