@@ -151,3 +151,12 @@ export const PROJECTS = [
     tags: ["React", "Typescript", "Open-source"],
   },
 ];
+
+export const SKILLS = {
+  languages: ["Javascript", "Typescript", "Python"],
+  frameworks: ["Next.js", "Vue.js", "React", "React Native", "Flask"],
+  tools: ["Tailwind", "Chakra UI", "Framer Motion", "Docker", "Redis"],
+  databases: ["PostgreSQL", "MySQL", "MongoDB"],
+  hosting: ["Vercel", "AWS"],
+  workflow: ["Git", "Gitlab"],
+};

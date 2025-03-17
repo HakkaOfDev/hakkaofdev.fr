@@ -9,6 +9,7 @@ import { Loader } from "lucide-react";
 import CClear from "./renders/CClear";
 import CWelcome from "./renders/CWelcome";
 import CProjects from "./renders/CProjects";
+import CSkills from "./renders/CSkills";
 
 function CommandWrapper({
   children,
@@ -44,6 +45,8 @@ function CommandItem({ input, timestamp }: Command) {
         return <CWelcome />;
       case "projects":
         return <CProjects />;
+      case "skills":
+        return <CSkills />;
       default:
         return <CNotFound input={input} />;
     }
