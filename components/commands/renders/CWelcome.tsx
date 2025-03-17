@@ -1,11 +1,14 @@
+import { useCommands } from "@/components/CommandsProvider";
 import { AnimatedSpan } from "@/components/Terminal";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-function CWelcome() {
+function CWelcome({ className }: { className?: string }) {
+  const { addCommand } = useCommands();
+
   return (
-    <AnimatedSpan>
+    <AnimatedSpan className={className}>
       <Image
         src="/avatar.jpeg"
         alt="Alexandre Gossard"
@@ -47,7 +50,7 @@ function CWelcome() {
         <b className="font-semibold text-chart-2">Lead Frontend Developer</b> at{" "}
         <Link
           href="https://kabila.app"
-          className="text-chart-2 font-semibold"
+          className="text-chart-2 font-semibold hover:text-chart-2/80 transition-colors duration-200"
           target="_blank"
         >
           kabila.app
@@ -60,8 +63,13 @@ function CWelcome() {
       </h3>
       <p className="mt-4">
         Start to explore by typing{" "}
-        <span className="text-chart-2 font-semibold">help</span> in the terminal
-        and enjoy the experience 😁
+        <span
+          className="text-chart-2 font-semibold cursor-pointer relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-chart-2 after:transition-transform hover:after:scale-x-100"
+          onClick={() => addCommand("help")}
+        >
+          help
+        </span>{" "}
+        in the terminal and enjoy the experience 😁
       </p>
     </AnimatedSpan>
   );

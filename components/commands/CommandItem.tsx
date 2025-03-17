@@ -8,6 +8,7 @@ import CNotFound from "./renders/CNotFound";
 import { Loader } from "lucide-react";
 import CClear from "./renders/CClear";
 import CWelcome from "./renders/CWelcome";
+import CProjects from "./renders/CProjects";
 
 function CommandWrapper({
   children,
@@ -41,6 +42,8 @@ function CommandItem({ input, timestamp }: Command) {
         return <CClear />;
       case "welcome":
         return <CWelcome />;
+      case "projects":
+        return <CProjects />;
       default:
         return <CNotFound input={input} />;
     }

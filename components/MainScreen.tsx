@@ -10,7 +10,7 @@ function MainScreen() {
 
   return (
     <Terminal>
-      {showWelcome && <CWelcome />}
+      {showWelcome && <CWelcome className="pb-2" />}
       {commands.map((command, index) => (
         <CommandItem
           key={index}

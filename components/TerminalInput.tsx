@@ -35,7 +35,7 @@ function TerminalInput() {
         <input
           type="text"
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) => setValue(e.target.value.toLowerCase())}
           placeholder="Type 'help' or your command here..."
           className="outline-none bg-transparent border w-full h-10 p-2 pr-10 rounded-md text-sm"
           onKeyDown={handleKeyPress}
@@ -56,8 +56,9 @@ function TerminalInput() {
 
         <button
           type="submit"
-          className="absolute right-2 top-1/2 hover:bg-accent rounded-full aspect-square w-7 transition-colors duration-200 cursor-pointer flex items-center justify-center -translate-y-1/2"
+          className="absolute right-2 top-1/2 hover:bg-accent rounded-full aspect-square w-7 transition-colors duration-200 cursor-pointer flex items-center justify-center -translate-y-1/2 disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Submit Command"
+          disabled={value.length === 0}
         >
           <ArrowRight size={16} />
           <span className="sr-only">Submit Command</span>
