@@ -160,3 +160,26 @@ export const SKILLS = {
   hosting: ["Vercel", "AWS"],
   workflow: ["Git", "Gitlab"],
 };
+
+export const EDUCATION = [
+  {
+    period: "2022-2023",
+    name: "System Administration and Security (vocational degree)",
+    location: "IUT Châlons (Châlons-en-Champagne, France)",
+  },
+  {
+    period: "2020-2022",
+    name: "DUT Networks and Telecommunications (technical degree)",
+    location: "IUT Châlons (Châlons-en-Champagne, France)",
+    descriptions: ["Salutatorian"],
+  },
+  {
+    period: "2019-2020",
+    name: "Scientific Baccalaureate (A level equivalent)",
+    location: "Lycée Jean Talon (Châlons-en-Champagne, France)",
+    descriptions: [
+      "Specialised in ISN (Computer and digital sicences)",
+      "With distinctions",
+    ],
+  },
+];

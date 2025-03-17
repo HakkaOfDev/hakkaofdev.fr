@@ -10,6 +10,7 @@ import CClear from "./renders/CClear";
 import CWelcome from "./renders/CWelcome";
 import CProjects from "./renders/CProjects";
 import CSkills from "./renders/CSkills";
+import CEducation from "./renders/CEducation";
 
 function CommandWrapper({
   children,
@@ -47,6 +48,8 @@ function CommandItem({ input, timestamp }: Command) {
         return <CProjects />;
       case "skills":
         return <CSkills />;
+      case "education":
+        return <CEducation />;
       default:
         return <CNotFound input={input} />;
     }
