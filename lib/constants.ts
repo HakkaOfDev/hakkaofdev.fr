@@ -224,3 +224,20 @@ export const EXPERIENCES = [
     ],
   },
 ];
+
+export const LANGUAGES = [
+  {
+    lang: "French",
+    level: "Native",
+  },
+  {
+    lang: "English",
+    level: "C1",
+  },
+  {
+    lang: "Spanish",
+    level: "A2",
+  },
+];
+
+export const HOBBIES = ["Traveling", "Musculation", "Gaming"];
