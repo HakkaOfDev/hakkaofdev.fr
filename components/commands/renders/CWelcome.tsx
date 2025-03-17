@@ -13,6 +13,8 @@ function CWelcome() {
         quality={100}
         width={100}
         height={100}
+        sizes="100px"
+        priority
       />
       <p className="mt-4 text-sm md:text-base text-muted-foreground">
         Hellooo!{" "}

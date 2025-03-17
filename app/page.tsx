@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col flex-1 size-full container max-w-2xl items-center justify-center gap-8 pt-8 mx-auto px-4">
+    <main className="flex flex-col flex-1 overflow-hidden container max-w-2xl items-center justify-center gap-8 pt-8 mx-auto px-4">
       <Image
         src="/logo.png"
         alt="Alexandre Gossard Logo"

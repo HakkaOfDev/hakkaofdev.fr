@@ -13,6 +13,9 @@ function TerminalInput() {
     e.preventDefault();
     addCommand(value);
     setValue("");
+    if (window.innerWidth <= 768) {
+      (document.activeElement as HTMLElement)?.blur();
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -20,6 +23,9 @@ function TerminalInput() {
       e.preventDefault();
       addCommand(value);
       setValue("");
+      if (window.innerWidth <= 768) {
+        e.currentTarget.blur();
+      }
     }
   };
 
@@ -51,8 +57,10 @@ function TerminalInput() {
         <button
           type="submit"
           className="absolute right-2 top-1/2 hover:bg-accent rounded-full aspect-square w-7 transition-colors duration-200 cursor-pointer flex items-center justify-center -translate-y-1/2"
+          aria-label="Submit Command"
         >
           <ArrowRight size={16} />
+          <span className="sr-only">Submit Command</span>
         </button>
       </form>
     </div>

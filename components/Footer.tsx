@@ -13,8 +13,10 @@ function Footer() {
             href={social.url}
             className="text-muted-foreground hover:text-foreground transition-colors duration-200"
             target="_blank"
+            aria-label={social.name}
           >
             <DynamicIcon name={social.icon} />
+            <span className="sr-only">{social.name}</span>
           </Link>
         ))}
       </div>
