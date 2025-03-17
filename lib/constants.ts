@@ -183,3 +183,44 @@ export const EDUCATION = [
     ],
   },
 ];
+
+export const EXPERIENCES = [
+  {
+    period: "Since April 2025",
+    name: "Lead Frontend Developer",
+    company: "kabila.app",
+    location: "Madrid, Spain",
+    descriptions: [
+      "Leading a team to deliver high-quality web applications",
+      "Implementing modern frontend architecture and best practices",
+      "Managing technical roadmap and sprint planning",
+      "Mentoring junior developers and conducting code reviews",
+      "Building reusable component libraries and design systems",
+    ],
+  },
+  {
+    period: "July 2022 - April 2025",
+    name: "Freelance",
+    company: "Alexandre GOSSARD",
+    location: "Châlons-en-Champagne, France",
+    descriptions: [
+      "Developed full-stack web applications using React and Next.js",
+      "Built cross-platform mobile apps with React Native and Expo",
+      "Implemented CI/CD pipelines and automated deployment workflows",
+      "Provided technical consulting and architecture recommendations",
+      "Managed client relationships and project timelines independently",
+    ],
+  },
+  {
+    period: "September 2022 - August 2023",
+    name: "Apprenticeship",
+    company: "Arche MC2",
+    location: "Châlons-en-Champagne, France",
+    descriptions: [
+      "Implemented GitLab CI/CD pipelines for automated testing and deployment",
+      "Managed Docker containerization of applications and services",
+      "Automated system administration tasks using shell scripts",
+      "Monitored system health and implemented scalable solutions",
+    ],
+  },
+];

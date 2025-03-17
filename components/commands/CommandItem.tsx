@@ -11,6 +11,7 @@ import CWelcome from "./renders/CWelcome";
 import CProjects from "./renders/CProjects";
 import CSkills from "./renders/CSkills";
 import CEducation from "./renders/CEducation";
+import CExperiences from "./renders/CExperiences";
 
 function CommandWrapper({
   children,
@@ -50,6 +51,8 @@ function CommandItem({ input, timestamp }: Command) {
         return <CSkills />;
       case "education":
         return <CEducation />;
+      case "experiences":
+        return <CExperiences />;
       default:
         return <CNotFound input={input} />;
     }
