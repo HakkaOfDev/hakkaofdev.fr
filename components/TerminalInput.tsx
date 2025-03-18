@@ -44,11 +44,7 @@ function TerminalInput() {
         />
         <datalist id="commands-autocomplete">
           {COMMANDS.map((command) => (
-            <option
-              key={command.command}
-              value={command.command}
-              className="px-2 py-1 hover:bg-accent cursor-pointer text-sm"
-            >
+            <option key={command.command} value={command.command}>
               {command.description}
             </option>
           ))}

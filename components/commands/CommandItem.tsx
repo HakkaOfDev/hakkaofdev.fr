@@ -13,6 +13,7 @@ import CSkills from "./renders/CSkills";
 import CEducation from "./renders/CEducation";
 import CExperiences from "./renders/CExperiences";
 import CAbout from "./renders/CAbout";
+import CSpotify from "./renders/spotify/CSpotify";
 
 function CommandWrapper({
   children,
@@ -39,6 +40,8 @@ function CommandWrapper({
 
 function CommandItem({ input, timestamp }: Command) {
   const content = useMemo(() => {
+    if (input.includes("spotify")) return <CSpotify input={input} />;
+
     switch (input) {
       case "help":
         return <CHelp />;

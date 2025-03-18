@@ -1,6 +1,6 @@
 import { CommandsProvider } from "@/components/CommandsProvider";
 import Footer from "@/components/Footer";
-import ThemeProvider from "@/components/ThemeProvider";
+import Providers from "@/components/Providers";
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
@@ -44,6 +44,7 @@ export const metadata: Metadata = {
       url: "https://github.com/hakkaofdev",
     },
   ],
+  metadataBase: new URL("https://hakkaofdev.fr"),
   robots: {
     index: true,
     follow: true,
@@ -69,14 +70,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${montserrat.variable} flex flex-col h-screen overflow-hidden antialiased`}
+        className={`${montserrat.variable} flex flex-col h-[100dvh] overflow-hidden antialiased`}
       >
-        <ThemeProvider>
+        <Providers>
           <CommandsProvider>
             {children}
             <Footer />
           </CommandsProvider>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

@@ -38,6 +38,10 @@ export const COMMANDS = [
     description: "Display a list of available commands and their descriptions",
   },
   {
+    command: "clear",
+    description: "Clear all previous commands and output from the terminal",
+  },
+  {
     command: "projects",
     description:
       "Browse through my portfolio of personal and professional projects",
@@ -59,8 +63,23 @@ export const COMMANDS = [
     description: "Explore my professional work history and accomplishments",
   },
   {
-    command: "clear",
-    description: "Clear all previous commands and output from the terminal",
+    command: "spotify",
+    description: "Display the help for the spotify commands",
+  },
+];
+
+export const SPOTIFY_COMMANDS = [
+  {
+    command: "now",
+    description: "Display the currently playing song",
+  },
+  {
+    command: "top",
+    description: "Display my top tracks",
+  },
+  {
+    command: "history",
+    description: "Display my listening history",
   },
 ];
 
