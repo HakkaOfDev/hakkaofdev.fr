@@ -2,7 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { useCommands } from "./CommandsProvider";
-import { COMMANDS } from "@/lib/constants";
+import { COMMANDS, SPOTIFY_COMMANDS } from "@/lib/constants";
 import { useState } from "react";
 
 function TerminalInput() {
@@ -40,11 +40,24 @@ function TerminalInput() {
           className="outline-none bg-transparent border w-full h-10 p-2 pr-10 rounded-md text-sm"
           onKeyDown={handleKeyPress}
           autoComplete="off"
-          list={value.length > 0 ? "commands-autocomplete" : undefined}
+          list={
+            value.length > 0
+              ? value.startsWith("spotify")
+                ? "spotify-commands-autocomplete"
+                : "commands-autocomplete"
+              : undefined
+          }
         />
         <datalist id="commands-autocomplete">
           {COMMANDS.map((command) => (
             <option key={command.command} value={command.command}>
+              {command.description}
+            </option>
+          ))}
+        </datalist>
+        <datalist id="spotify-commands-autocomplete">
+          {SPOTIFY_COMMANDS.map((command) => (
+            <option key={command.command} value={`spotify ${command.command}`}>
               {command.description}
             </option>
           ))}

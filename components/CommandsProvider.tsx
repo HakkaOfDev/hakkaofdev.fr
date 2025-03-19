@@ -11,7 +11,7 @@ interface CommandsContextType {
 }
 
 const CommandsContext = createContext<CommandsContextType | undefined>(
-  undefined,
+  undefined
 );
 
 export function useCommands() {
@@ -34,7 +34,7 @@ export function CommandsProvider({ children }: { children: React.ReactNode }) {
     setCommands((prev) => [
       ...prev,
       {
-        input,
+        input: input.trimStart().trimEnd(),
         timestamp: new Date(),
       },
     ]);

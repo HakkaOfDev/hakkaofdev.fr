@@ -259,4 +259,11 @@ export const LANGUAGES = [
   },
 ];
 
-export const HOBBIES = ["Traveling", "Musculation", "Gaming"];
+export const HOBBIES = [
+  "Motorcycles",
+  "Cars",
+  "Weightlifting",
+  "Traveling",
+  "Manga",
+  "Gaming",
+];
