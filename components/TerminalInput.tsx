@@ -11,6 +11,7 @@ function TerminalInput() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (value === "") return;
     addCommand(value);
     setValue("");
     if (window.innerWidth <= 768) {
@@ -21,6 +22,7 @@ function TerminalInput() {
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
+      if (value === "") return;
       addCommand(value);
       setValue("");
       if (window.innerWidth <= 768) {
