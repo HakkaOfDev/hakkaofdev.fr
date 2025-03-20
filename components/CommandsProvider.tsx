@@ -8,6 +8,7 @@ interface CommandsContextType {
   commands: Command[];
   addCommand: (input: string) => void;
   clearCommands: () => void;
+  reset: () => void;
 }
 
 const CommandsContext = createContext<CommandsContextType | undefined>(
@@ -44,6 +45,11 @@ export function CommandsProvider({ children }: { children: React.ReactNode }) {
     setCommands([]);
   };
 
+  const reset = () => {
+    setCommands([]);
+    setShowWelcome(true);
+  };
+
   return (
     <CommandsContext.Provider
       value={{
@@ -51,6 +57,7 @@ export function CommandsProvider({ children }: { children: React.ReactNode }) {
         addCommand,
         clearCommands,
         showWelcome,
+        reset,
       }}
     >
       {children}

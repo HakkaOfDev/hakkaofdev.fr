@@ -42,6 +42,10 @@ export const COMMANDS = [
     description: "Clear all previous commands and output from the terminal",
   },
   {
+    command: "reset",
+    description: "Reset the terminal to the initial state",
+  },
+  {
     command: "projects",
     description:
       "Browse through my portfolio of personal and professional projects",

@@ -39,6 +39,8 @@ export const getNowPlaying = async () => {
     },
   });
 
+  if (!response.ok || response.status === 204) return null;
+
   return response.json() as Promise<{
     is_playing: boolean;
     item: {
@@ -61,6 +63,8 @@ export const getTopTracks = async () => {
     },
   });
 
+  if (!response.ok) return null;
+
   return response.json() as Promise<{
     items: Track[];
   }>;
@@ -74,6 +78,8 @@ export const getRecentlyPlayed = async () => {
       Authorization: `Bearer ${access_token}`,
     },
   });
+
+  if (!response.ok) return null;
 
   return response.json() as Promise<{
     items: PlayHistory[];

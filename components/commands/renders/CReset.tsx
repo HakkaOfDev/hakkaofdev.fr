@@ -1,14 +1,14 @@
 import { useCommands } from "@/components/CommandsProvider";
 import { useEffect } from "react";
 
-function CClear() {
-  const { clearCommands } = useCommands();
+function CReset() {
+  const { reset } = useCommands();
 
   useEffect(() => {
-    clearCommands();
-  }, [clearCommands]);
+    reset();
+  }, [reset]);
 
   return null;
 }
 
-export default CClear;
+export default CReset;

@@ -14,6 +14,7 @@ import CEducation from "./renders/CEducation";
 import CExperiences from "./renders/CExperiences";
 import CAbout from "./renders/CAbout";
 import CSpotify from "./renders/spotify/CSpotify";
+import CReset from "./renders/CReset";
 
 function CommandWrapper({
   children,
@@ -47,6 +48,8 @@ function CommandItem({ input, timestamp }: Command) {
         return <CHelp />;
       case "clear":
         return <CClear />;
+      case "reset":
+        return <CReset />;
       case "welcome":
         return <CWelcome />;
       case "projects":
