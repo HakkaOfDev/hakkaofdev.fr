@@ -32,7 +32,10 @@ function CommandWrapper({
   }, []);
 
   return (
-    <div className="flex flex-col gap-2 w-full pb-4">
+    <div
+      id={`cmd-${input}-${timestamp.getTime()}`}
+      className="flex flex-col gap-2 w-full pb-4"
+    >
       <CommandBash input={input} timestamp={timestamp} />
       {!show ? <Loader size={16} className="animate-spin" /> : children}
     </div>

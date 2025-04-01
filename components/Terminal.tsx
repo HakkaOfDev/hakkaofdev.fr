@@ -120,7 +120,7 @@ export const Terminal = ({ children, className }: TerminalProps) => {
           <ModeToggle />
         </div>
       </div>
-      <pre className="px-4 pt-4 flex-1 overflow-auto flex flex-col-reverse [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-border [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-muted-foreground">
+      <pre className="px-4 pt-4 gap-4 divide-y flex-1 overflow-auto flex flex-col-reverse [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-border [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-muted-foreground">
         <code className="grid divide-y gap-4">{children}</code>
       </pre>
       <div className="p-4">

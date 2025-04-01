@@ -89,12 +89,19 @@ export const SPOTIFY_COMMANDS = [
 
 export const PROJECTS = [
   {
+    name: "Brian Grav&Style",
+    description: "An e-commerce website for an engraving company.",
+    url: "https://brian-gravure.com",
+    imageUrl: "/projects/brian-gravure.png",
+    tags: ["Next.js", "Tailwind", "Typescript", "E-commerce"],
+  },
+  {
     name: "Kabila Wallet",
     description:
       "A secure and easy-to-use wallet for managing your crypto assets on Hedera Blockchain.",
     url: "https://www.kabila.app/wallet",
     imageUrl: "/projects/kabila-wallet.png",
-    tags: ["Next.js", "Tailwind", "Typescript", "Blockchain"],
+    tags: ["Next.js", "Chakra-UI", "Javascript", "Blockchain"],
   },
   {
     name: "Kabila Marketplace",
@@ -137,25 +144,11 @@ export const PROJECTS = [
     tags: ["Next.js", "Chakra UI", "Typescript", "Template", "Open-source"],
   },
   {
-    name: "HakkaOfDev's API",
-    description: "A simple API for my global stats (spotify/development time).",
-    url: "https://api.hakkaofdev.fr/",
-    imageUrl: "/projects/hakkaofdev-api.png",
-    tags: ["Next.js", "Chakra UI", "Typescript", "Open-source"],
-  },
-  {
     name: "AC-Vision",
     description: "DASAN OLT/ONUs Supervision tool [Opensource].",
     url: "https://github.com/hakkaofdev/ac-vision",
     imageUrl: "/projects/ac-vision.png",
     tags: ["Next.js", "Python", "Typescript", "Redis", "Docker", "Open-source"],
-  },
-  {
-    name: "Flonoa Homepage",
-    description: "Florine Leroy website. Graphic designer.",
-    url: "https://github.com/hakkaofdev/flonoa-homepage",
-    imageUrl: "/projects/flonoa.png",
-    tags: ["Next.js", "Chakra UI", "Javascript", "Open-source"],
   },
   {
     name: "RT'ransport",

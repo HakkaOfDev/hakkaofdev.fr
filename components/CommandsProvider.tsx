@@ -32,13 +32,25 @@ export function CommandsProvider({ children }: { children: React.ReactNode }) {
       setShowWelcome(false);
     }
 
+    const timestamp = new Date();
+
     setCommands((prev) => [
       ...prev,
       {
         input: input.trimStart().trimEnd(),
-        timestamp: new Date(),
+        timestamp,
       },
     ]);
+
+    setTimeout(() => {
+      const command = document.getElementById(
+        `cmd-${input}-${timestamp.getTime()}`
+      );
+
+      if (command) {
+        command.scrollIntoView({ behavior: "smooth", inline: "start" });
+      }
+    }, 500);
   };
 
   const clearCommands = () => {
