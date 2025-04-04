@@ -4,6 +4,7 @@ import Providers from "@/components/Providers";
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -78,6 +79,7 @@ export default function RootLayout({
             <Footer />
           </CommandsProvider>
         </Providers>
+        <SpeedInsights />
       </body>
     </html>
   );
