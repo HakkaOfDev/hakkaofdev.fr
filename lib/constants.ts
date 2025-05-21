@@ -136,6 +136,14 @@ export const PROJECTS = [
     tags: ["Next.js", "Tailwind", "Typescript", "Blockchain"],
   },
   {
+    name: "Old Portfolio",
+    description:
+      "My previous portfolio website built with Next.js and Chakra UI, featuring a dark theme and smooth animations.",
+    url: "https://hakkaofdev-portfolio-v1.vercel.app/",
+    imageUrl: "/projects/old-portfolio.png",
+    tags: ["Next.js", "Chakra UI", "Typescript", "Open-source"],
+  },
+  {
     name: "ts-next-chakra-motion-kit",
     description:
       "Discover a starter kit which includes Next.js, Chakra-UI, Framer-Motion in Typescript. You have few components, Internationalization, SEO and more in this template.",
@@ -157,14 +165,6 @@ export const PROJECTS = [
     url: "https://github.com/HakkaOfDev/RT-ransport",
     imageUrl: "/projects/rt-ransport.png",
     tags: ["Python", "Flask", "Tailwind", "Open-source"],
-  },
-  {
-    name: "hakkaofdev.me",
-    description:
-      "My first opensource portfolio made with React and my own CSS framework.",
-    url: "https://github.com/HakkaOfDev/hakkaofdev.me",
-    imageUrl: "/projects/hakkaofdev-me.png",
-    tags: ["React", "Typescript", "Open-source"],
   },
 ];
 
