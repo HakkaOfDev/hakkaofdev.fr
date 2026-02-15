@@ -5,11 +5,15 @@ import { getSiteUrl } from "@/lib/site-url";
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { cn } from "@/lib/utils";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
+  display: "optional",
+  adjustFontFallback: true,
 });
 
 const siteUrl = getSiteUrl();
@@ -17,7 +21,7 @@ const siteUrl = getSiteUrl();
 export const metadata: Metadata = {
   title: "Alexandre Gossard",
   description:
-    "Lead Frontend Developer @kabila.app, open-source enthusiast and passionate about modern technologies.",
+    "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
   creator: "Alexandre Gossard",
   alternates: {
     canonical: "/",
@@ -25,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alexandre Gossard",
     description:
-      "Lead Frontend Developer @kabila.app, open-source enthusiast and passionate about modern technologies.",
+      "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
     url: siteUrl,
     images: [
       {
@@ -40,13 +44,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alexandre Gossard",
     description:
-      "Lead Frontend Developer @kabila.app, open-source enthusiast and passionate about modern technologies.",
+      "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
     images: ["/avatar.jpeg"],
     creator: "@hakkaofdev",
   },
   keywords: [
     "Alexandre Gossard",
     "Frontend Developer",
+    "Digital Nomad",
     "Open-source",
     "Modern Technologies",
     "hakkaofdev",
@@ -74,8 +79,6 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export default function RootLayout({
@@ -86,7 +89,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${montserrat.variable} flex flex-col h-[100dvh] overflow-hidden antialiased`}
+        className={cn(
+          montserrat.variable,
+          "font-montserrat flex flex-col h-[100dvh] overflow-hidden antialiased",
+        )}
       >
         <Providers>
           <CommandsProvider>
@@ -94,7 +100,8 @@ export default function RootLayout({
             <Footer />
           </CommandsProvider>
         </Providers>
-        <SpeedInsights />
+        {process.env.VERCEL && <Analytics />}
+        {process.env.VERCEL && <SpeedInsights />}
       </body>
     </html>
   );
