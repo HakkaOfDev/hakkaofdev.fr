@@ -1,5 +1,5 @@
 import { getTopTracks } from "@/app/actions";
-import { AnimatedSpan } from "@/components/Terminal";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 import Image from "next/image";
 import Link from "next/link";
 import SpotifyQuery from "./SpotifyQuery";

@@ -1,4 +1,4 @@
-import { AnimatedSpan } from "@/components/Terminal";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { SKILLS } from "@/lib/constants";
 
 function CSkills() {

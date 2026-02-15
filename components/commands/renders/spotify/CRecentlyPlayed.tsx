@@ -1,5 +1,5 @@
 import { getRecentlyPlayed } from "@/app/actions";
-import { AnimatedSpan } from "@/components/Terminal";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,7 +33,7 @@ function CRecentlyPlayed() {
                     {item.track.artists.map((artist) => artist.name).join(", ")}
                   </p>
                 </div>
-                <p className="text-[0.7rem] text-muted-foreground">
+                <p className="text-xs text-muted-foreground">
                   {formatDistanceToNow(new Date(item.played_at), {
                     addSuffix: true,
                   })}

@@ -1,7 +1,6 @@
-import { AnimatedSpan } from "@/components/Terminal";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { EDUCATION } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import React from "react";
 
 function CEducation() {
   return (
@@ -11,7 +10,7 @@ function CEducation() {
           key={education.name}
           className={cn(
             "border-l-2 pl-4 relative pb-4",
-            idx === EDUCATION.length - 1 && "pb-1"
+            idx === EDUCATION.length - 1 && "pb-1",
           )}
         >
           <div className="absolute -left-[5px] size-2 top-1 rounded-full bg-chart-2 z-[1]" />

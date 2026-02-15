@@ -1,6 +1,5 @@
-import { AnimatedSpan } from "@/components/Terminal";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { HOBBIES, LANGUAGES } from "@/lib/constants";
-import React from "react";
 
 function CAbout() {
   return (
@@ -16,7 +15,7 @@ function CAbout() {
       <Info
         title="Languages"
         value={LANGUAGES.map((lang) => `${lang.lang} (${lang.level})`).join(
-          ", "
+          ", ",
         )}
       />
       <Info title="Hobbies" value={HOBBIES.join(", ")} />

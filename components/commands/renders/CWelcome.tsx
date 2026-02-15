@@ -1,5 +1,5 @@
 import { useCommands } from "@/components/CommandsProvider";
-import { AnimatedSpan } from "@/components/Terminal";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
