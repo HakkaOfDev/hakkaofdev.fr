@@ -1,6 +1,7 @@
 import { CommandsProvider } from "@/components/CommandsProvider";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
+import { getSiteUrl } from "@/lib/site-url";
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
@@ -11,15 +12,21 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
   title: "Alexandre Gossard",
   description:
     "Lead Frontend Developer @kabila.app, open-source enthusiast and passionate about modern technologies.",
   creator: "Alexandre Gossard",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Alexandre Gossard",
     description:
       "Lead Frontend Developer @kabila.app, open-source enthusiast and passionate about modern technologies.",
+    url: siteUrl,
     images: [
       {
         url: "/avatar.jpeg",
@@ -28,6 +35,14 @@ export const metadata: Metadata = {
         alt: "Alexandre Gossard",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alexandre Gossard",
+    description:
+      "Lead Frontend Developer @kabila.app, open-source enthusiast and passionate about modern technologies.",
+    images: ["/avatar.jpeg"],
+    creator: "@hakkaofdev",
   },
   keywords: [
     "Alexandre Gossard",
@@ -45,7 +60,7 @@ export const metadata: Metadata = {
       url: "https://github.com/hakkaofdev",
     },
   ],
-  metadataBase: new URL("https://hakkaofdev.fr"),
+  metadataBase: new URL(siteUrl),
   robots: {
     index: true,
     follow: true,
