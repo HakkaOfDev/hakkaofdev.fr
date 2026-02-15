@@ -29,57 +29,56 @@ export const SOCIALS: { name: string; url: string; icon: LucideIcon }[] = [
 
 export const PROJECTS = [
   {
-    name: "Brian Grav&Style",
-    description: "An e-commerce website for an engraving company.",
-    url: "https://brian-gravure.com",
-    imageUrl: "/projects/brian-gravure.png",
-    tags: ["Next.js", "Tailwind", "Typescript", "E-commerce"],
-  },
-  {
-    name: "Kabila Wallet",
+    name: "Kabila App",
     description:
-      "A secure and easy-to-use wallet for managing your crypto assets on Hedera Blockchain.",
-    url: "https://www.kabila.app/wallet",
-    imageUrl: "/projects/kabila-wallet.png",
-    tags: ["Next.js", "Chakra-UI", "Javascript", "Blockchain"],
-  },
-  {
-    name: "Kabila Marketplace",
-    description:
-      "An NFT Marketplace built on Hedera where users can access the best NFT launches.",
-    url: "https://market.kabila.app",
-    imageUrl: "/projects/kabila-marketplace.webp",
-    tags: ["Next.js", "Tailwind", "Typescript", "Blockchain"],
-  },
-  {
-    name: "Kabila Plazas",
-    description:
-      "A social media platform built on Hedera where users can create and manage their own communities.",
-    url: "https://plazas.social",
-    imageUrl: "/projects/kabila-plazas.avif",
-    tags: ["Next.js", "Tailwind", "Typescript", "Blockchain"],
+      "A Web3 social platform and NFT ecosystem built on Hedera, featuring an NFT marketplace, community plazas, launchpads and creator tools.",
+    url: "https://kabila.app",
+    imageUrl: "/projects/kabila-app.png",
+    tags: [
+      "Next.js",
+      "Tailwind",
+      "Typescript",
+      "Blockchain",
+      "Marketplace",
+      "Web3 Social",
+    ],
   },
   {
     name: "Kabila Tools",
     description:
-      "A place where community builders can find tools to help them build NFTs, collections and more.",
+      "An all-in-one NFT toolkit for creators and communities on Hedera. A powerful and easy-to-use platform to create, launch, and manage your NFT collections while being in total control.",
     url: "https://tools.kabila.app",
-    imageUrl: "/projects/kabila-tools.avif",
+    imageUrl: "/projects/kabila-tools.png",
     tags: ["Next.js", "Tailwind", "Typescript", "Blockchain"],
   },
   {
-    name: "Kabila Token App",
+    name: "Kabila Wallet",
     description:
-      "The token app made for the $KBL token, you can stake, unstake, claim daily rewards and more.",
-    url: "https://token.kabila.app",
-    imageUrl: "/projects/kabila-token.png",
-    tags: ["Next.js", "Tailwind", "Typescript", "Blockchain"],
+      "A non-custodial, simple, and secure wallet for the Hedera network. Manage your accounts, tokens, NFTs, and connect with DApps while maintaining full control of your assets.",
+    url: "https://www.kabila.app/docs/kabila-wallet",
+    imageUrl: "/projects/kabila-wallet.webp",
+    tags: ["Next.js", "Tailwind", "Javascript", "Blockchain"],
   },
   {
-    name: "Old Portfolio",
+    name: "Ferreira Borges Thomas",
+    description:
+      "A professional website for an automotive repair business, featuring services, transparent pricing and contact information.",
+    url: "https://www.thomas-ferreira.fr",
+    imageUrl: "/projects/fbt-auto-repair.png",
+    tags: ["Next.js", "Tailwind", "Typescript", "Freelance"],
+  },
+  {
+    name: "Brian Grav&Style",
+    description: "An e-commerce website for an engraving company.",
+    url: "https://brian-gravure.vercel.app",
+    imageUrl: "/projects/brian-gravure.png",
+    tags: ["Next.js", "Tailwind", "Typescript", "E-commerce"],
+  },
+  {
+    name: "Portfolio V1",
     description:
       "My previous portfolio website built with Next.js and Chakra UI, featuring a dark theme and smooth animations.",
-    url: "https://hakkaofdev-portfolio-v1.vercel.app/",
+    url: "https://hakkaofdev-portfolio-v1.vercel.app",
     imageUrl: "/projects/old-portfolio.png",
     tags: ["Next.js", "Chakra UI", "Typescript", "Open-source"],
   },
@@ -87,7 +86,7 @@ export const PROJECTS = [
     name: "ts-next-chakra-motion-kit",
     description:
       "Discover a starter kit which includes Next.js, Chakra-UI, Framer-Motion in Typescript. You have few components, Internationalization, SEO and more in this template.",
-    url: "https://ts-next-chakra-motion-kit.vercel.app/",
+    url: "https://ts-next-chakra-motion-kit.vercel.app",
     imageUrl: "/projects/ts-next-chakra-motion-kit.png",
     tags: ["Next.js", "Chakra UI", "Typescript", "Template", "Open-source"],
   },
@@ -110,11 +109,24 @@ export const PROJECTS = [
 
 export const SKILLS = {
   languages: ["Javascript", "Typescript", "Python"],
-  frameworks: ["Next.js", "Vue.js", "React", "React Native", "Flask"],
-  tools: ["Tailwind", "Chakra UI", "Framer Motion", "Docker", "Redis"],
-  databases: ["PostgreSQL", "MySQL", "MongoDB"],
+  frameworks: [
+    "Next.js",
+    "Vue.js",
+    "React",
+    "React Native",
+    "Expo",
+    "Flask",
+    "Django",
+  ],
+  styling: ["Tailwind", "shadcn/ui", "framer-motion"],
+  devtools: ["Biome", "Bun"],
+  databases: ["PostgreSQL", "Supabase", "MongoDB", "Redis"],
   hosting: ["Vercel", "AWS"],
   workflow: ["Git", "Gitlab"],
+  orm: ["Prisma"],
+  devops: ["Docker", "k8s"],
+  automation: ["n8n", "openclaw"],
+  ai: ["Codex", "Claude"],
 };
 
 export const EDUCATION = [
@@ -142,8 +154,8 @@ export const EDUCATION = [
 
 export const EXPERIENCES = [
   {
-    period: "Since April 2025",
-    name: "Lead Frontend Developer",
+    period: "Since July 2022",
+    name: "Software Engineer",
     company: "kabila.app",
     location: "Madrid, Spain",
     descriptions: [
@@ -155,7 +167,7 @@ export const EXPERIENCES = [
     ],
   },
   {
-    period: "July 2022 - April 2025",
+    period: "Since July 2022",
     name: "Freelance",
     company: "Alexandre GOSSARD",
     location: "Châlons-en-Champagne, France",
