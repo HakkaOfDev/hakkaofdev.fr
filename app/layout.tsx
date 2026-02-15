@@ -17,6 +17,25 @@ const montserrat = Montserrat({
 });
 
 const siteUrl = getSiteUrl();
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Alexandre Gossard",
+  url: siteUrl,
+  image: new URL("/avatar.jpeg", siteUrl).toString(),
+  jobTitle: "Lead Frontend Developer",
+  worksFor: {
+    "@type": "Organization",
+    name: "kabila.app",
+    url: "https://kabila.app",
+  },
+  sameAs: [
+    "https://github.com/hakkaofdev",
+    "https://www.linkedin.com/in/hakkaofdev/",
+    "https://www.instagram.com/hakkaofdev/",
+    "https://x.com/hakkaofdev",
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Alexandre Gossard",
@@ -31,11 +50,13 @@ export const metadata: Metadata = {
     description:
       "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
     url: siteUrl,
+    type: "website",
+    siteName: "Alexandre Gossard",
     images: [
       {
-        url: "/avatar.jpeg",
-        width: 500,
-        height: 500,
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
         alt: "Alexandre Gossard",
       },
     ],
@@ -45,7 +66,8 @@ export const metadata: Metadata = {
     title: "Alexandre Gossard",
     description:
       "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
-    images: ["/avatar.jpeg"],
+    images: ["/twitter-image"],
+    site: "@hakkaofdev",
     creator: "@hakkaofdev",
   },
   keywords: [
@@ -94,6 +116,11 @@ export default function RootLayout({
           "font-montserrat flex flex-col h-[100dvh] overflow-hidden antialiased",
         )}
       >
+        <script
+          type="application/ld+json"
+          // JSON-LD is not a React component; this is the recommended approach in Next.js.
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <Providers>
           <CommandsProvider>
             {children}
