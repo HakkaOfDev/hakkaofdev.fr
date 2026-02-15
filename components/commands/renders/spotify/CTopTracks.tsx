@@ -35,7 +35,7 @@ function CTopTracks() {
                         className="rounded-sm"
                       />
                       <div>
-                        <p className="text-sm leading-4 line-clamp-2 font-semibold group-hover:text-chart-2 transition-colors duration-200">
+                        <p className="text-sm leading-4 line-clamp-2 font-semibold group-hover:text-chart-1 transition-colors duration-200">
                           {item.name}
                         </p>
                         <p className="text-muted-foreground">
@@ -49,7 +49,7 @@ function CTopTracks() {
                       <Link
                         href={item.album.external_urls.spotify}
                         target="_blank"
-                        className="hover:text-chart-2 leading-4 font-semibold line-clamp-2 text-sm transition-colors duration-200"
+                        className="hover:text-chart-1 leading-4 font-semibold line-clamp-2 text-sm transition-colors duration-200"
                       >
                         {item.album.name}
                       </Link>

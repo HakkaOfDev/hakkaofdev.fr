@@ -26,7 +26,7 @@ function CRecentlyPlayed() {
               />
               <div className="flex flex-col sm:flex-row items-start sm:items-center flex-1 gap-1">
                 <div className="flex-1">
-                  <p className="text-sm leading-4 line-clamp-1 font-semibold group-hover:text-chart-2 transition-colors duration-200">
+                  <p className="text-sm leading-4 line-clamp-1 font-semibold group-hover:text-chart-1 transition-colors duration-200">
                     {item.track.name}
                   </p>
                   <p className="text-muted-foreground line-clamp-1">
