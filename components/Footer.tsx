@@ -1,6 +1,5 @@
 import { SOCIALS } from "@/lib/constants";
 import { Heart } from "lucide-react";
-import { DynamicIcon } from "lucide-react/dynamic";
 import Link from "next/link";
 
 function Footer() {
@@ -15,7 +14,7 @@ function Footer() {
             target="_blank"
             aria-label={social.name}
           >
-            <DynamicIcon name={social.icon} />
+            <social.icon size={20} />
             <span className="sr-only">{social.name}</span>
           </Link>
         ))}

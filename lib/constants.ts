@@ -1,30 +1,25 @@
-import { DynamicIcon } from "lucide-react/dynamic";
-import { ComponentProps } from "react";
+import { Github, Instagram, Linkedin, Twitter, LucideIcon } from "lucide-react";
 
-export const SOCIALS: {
-  name: string;
-  url: string;
-  icon: ComponentProps<typeof DynamicIcon>["name"];
-}[] = [
+export const SOCIALS: { name: string; url: string; icon: LucideIcon }[] = [
   {
     name: "GitHub",
     url: "https://github.com/hakkaofdev",
-    icon: "github",
+    icon: Github,
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/hakkaofdev/",
-    icon: "linkedin",
+    icon: Linkedin,
   },
   {
     name: "Instagram",
     url: "https://www.instagram.com/hakkaofdev/",
-    icon: "instagram",
+    icon: Instagram,
   },
   {
     name: "Twitter",
     url: "https://x.com/hakkaofdev",
-    icon: "twitter",
+    icon: Twitter,
   },
 ];
 
