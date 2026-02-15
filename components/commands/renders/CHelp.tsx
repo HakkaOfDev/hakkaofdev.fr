@@ -1,6 +1,6 @@
 import { useCommands } from "@/components/CommandsProvider";
 import { AnimatedSpan } from "@/components/Terminal";
-import { COMMANDS } from "@/lib/constants";
+import { COMMANDS } from "@/components/commands/registry";
 
 function CHelp() {
   const { addCommand } = useCommands();

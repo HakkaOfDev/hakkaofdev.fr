@@ -28,64 +28,9 @@ export const SOCIALS: {
   },
 ];
 
-export const COMMANDS = [
-  {
-    command: "welcome",
-    description: "Display a welcome message and introduction",
-  },
-  {
-    command: "help",
-    description: "Display a list of available commands and their descriptions",
-  },
-  {
-    command: "clear",
-    description: "Clear all previous commands and output from the terminal",
-  },
-  {
-    command: "reset",
-    description: "Reset the terminal to the initial state",
-  },
-  {
-    command: "projects",
-    description:
-      "Browse through my portfolio of personal and professional projects",
-  },
-  {
-    command: "skills",
-    description: "View my technical skills, tools and technologies I work with",
-  },
-  {
-    command: "about",
-    description: "Learn more about my background, interests and career goals",
-  },
-  {
-    command: "education",
-    description: "See my academic background and qualifications",
-  },
-  {
-    command: "experiences",
-    description: "Explore my professional work history and accomplishments",
-  },
-  {
-    command: "spotify",
-    description: "Display the help for the spotify commands",
-  },
-];
-
-export const SPOTIFY_COMMANDS = [
-  {
-    command: "now",
-    description: "Display the currently playing song",
-  },
-  {
-    command: "top",
-    description: "Display my top tracks",
-  },
-  {
-    command: "history",
-    description: "Display my listening history",
-  },
-];
+// Commands/Spotify commands were moved to:
+// - components/commands/registry.tsx
+// - components/commands/spotify-registry.tsx
 
 export const PROJECTS = [
   {

@@ -9,14 +9,10 @@ function MainScreen() {
   const { showWelcome, commands } = useCommands();
 
   return (
-    <Terminal>
-      {showWelcome && <CWelcome className="pb-2" />}
-      {commands.map((command, index) => (
-        <CommandItem
-          key={index}
-          input={command.input}
-          timestamp={command.timestamp}
-        />
+      <Terminal>
+        {showWelcome && <CWelcome className="pb-2" />}
+      {commands.map((command) => (
+        <CommandItem key={command.id} {...command} />
       ))}
     </Terminal>
   );

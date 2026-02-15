@@ -2,7 +2,8 @@
 
 import { ArrowRight } from "lucide-react";
 import { useCommands } from "./CommandsProvider";
-import { COMMANDS, SPOTIFY_COMMANDS } from "@/lib/constants";
+import { COMMANDS } from "@/components/commands/registry";
+import { SPOTIFY_COMMANDS } from "@/components/commands/spotify-registry";
 import { useState } from "react";
 
 function TerminalInput() {

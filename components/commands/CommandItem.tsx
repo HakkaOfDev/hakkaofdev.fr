@@ -3,21 +3,14 @@
 import { Command } from "@/types";
 import CommandBash from "./CommandBash";
 import { useEffect, useMemo, useState } from "react";
-import CHelp from "./renders/CHelp";
 import CNotFound from "./renders/CNotFound";
 import { Loader } from "lucide-react";
-import CClear from "./renders/CClear";
-import CWelcome from "./renders/CWelcome";
-import CProjects from "./renders/CProjects";
-import CSkills from "./renders/CSkills";
-import CEducation from "./renders/CEducation";
-import CExperiences from "./renders/CExperiences";
-import CAbout from "./renders/CAbout";
 import CSpotify from "./renders/spotify/CSpotify";
-import CReset from "./renders/CReset";
+import { COMMAND_RENDERERS } from "./registry";
 
 function CommandWrapper({
   children,
+  id,
   input,
   timestamp,
 }: { children: React.ReactNode } & Command) {
@@ -32,46 +25,24 @@ function CommandWrapper({
   }, []);
 
   return (
-    <div
-      id={`cmd-${input}-${timestamp.getTime()}`}
-      className="flex flex-col gap-2 w-full pb-4"
-    >
+    <div id={`cmd-${id}`} className="flex flex-col gap-2 w-full pb-4">
       <CommandBash input={input} timestamp={timestamp} />
       {!show ? <Loader size={16} className="animate-spin" /> : children}
     </div>
   );
 }
 
-function CommandItem({ input, timestamp }: Command) {
+function CommandItem({ id, input, timestamp }: Command) {
   const content = useMemo(() => {
-    if (input.includes("spotify")) return <CSpotify input={input} />;
+    if (input.startsWith("spotify")) return <CSpotify input={input} />;
 
-    switch (input) {
-      case "help":
-        return <CHelp />;
-      case "clear":
-        return <CClear />;
-      case "reset":
-        return <CReset />;
-      case "welcome":
-        return <CWelcome />;
-      case "projects":
-        return <CProjects />;
-      case "skills":
-        return <CSkills />;
-      case "education":
-        return <CEducation />;
-      case "experiences":
-        return <CExperiences />;
-      case "about":
-        return <CAbout />;
-      default:
-        return <CNotFound input={input} />;
-    }
+    const renderer = COMMAND_RENDERERS[input];
+    if (!renderer) return <CNotFound input={input} />;
+    return renderer();
   }, [input]);
 
   return (
-    <CommandWrapper input={input} timestamp={timestamp}>
+    <CommandWrapper id={id} input={input} timestamp={timestamp}>
       {content}
     </CommandWrapper>
   );

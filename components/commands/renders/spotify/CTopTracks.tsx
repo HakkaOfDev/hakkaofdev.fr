@@ -14,7 +14,12 @@ function CTopTracks() {
 
   if (isLoading) return <Loader size={16} className="animate-spin" />;
 
-  if (!data) return <p className="text-destructive">No data found.</p>;
+  if (!data)
+    return (
+      <p className="text-destructive">
+        Spotify is not configured or is unavailable.
+      </p>
+    );
 
   return (
     <AnimatedSpan>

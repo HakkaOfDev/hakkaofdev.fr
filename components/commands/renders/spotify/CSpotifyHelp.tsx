@@ -1,6 +1,6 @@
 import { useCommands } from "@/components/CommandsProvider";
 import { AnimatedSpan } from "@/components/Terminal";
-import { SPOTIFY_COMMANDS } from "@/lib/constants";
+import { SPOTIFY_COMMANDS } from "@/components/commands/spotify-registry";
 
 function CSpotifyHelp() {
   const { addCommand } = useCommands();

@@ -1,7 +1,7 @@
 "use client";
 
 import { Command } from "@/types";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useRef, useState } from "react";
 
 interface CommandsContextType {
   showWelcome: boolean;
@@ -26,26 +26,32 @@ export function useCommands() {
 export function CommandsProvider({ children }: { children: React.ReactNode }) {
   const [commands, setCommands] = useState<Command[]>([]);
   const [showWelcome, setShowWelcome] = useState(true);
+  const pendingScrollId = useRef<number | null>(null);
 
   const addCommand = (input: string) => {
-    if (commands.length === 0) {
-      setShowWelcome(false);
-    }
+    if (showWelcome) setShowWelcome(false);
 
+    const normalizedInput = input.trim().toLowerCase();
+    if (!normalizedInput) return;
+
+    const id =
+      typeof crypto !== "undefined" && "randomUUID" in crypto
+        ? crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
     const timestamp = new Date();
 
     setCommands((prev) => [
       ...prev,
       {
-        input: input.trimStart().trimEnd(),
+        id,
+        input: normalizedInput,
         timestamp,
       },
     ]);
 
-    setTimeout(() => {
-      const command = document.getElementById(
-        `cmd-${input}-${timestamp.getTime()}`
-      );
+    if (pendingScrollId.current) window.clearTimeout(pendingScrollId.current);
+    pendingScrollId.current = window.setTimeout(() => {
+      const command = document.getElementById(`cmd-${id}`);
 
       if (command) {
         command.scrollIntoView({ behavior: "smooth", inline: "start" });

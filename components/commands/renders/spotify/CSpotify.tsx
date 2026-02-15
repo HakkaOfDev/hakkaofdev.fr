@@ -1,9 +1,7 @@
 import { useMemo } from "react";
-import CNowPlaying from "./CNowPlaying";
 import CNotFound from "../CNotFound";
 import CSpotifyHelp from "./CSpotifyHelp";
-import CTopTracks from "./CTopTracks";
-import CRecentlyPlayed from "./CRecentlyPlayed";
+import { SPOTIFY_COMMAND_RENDERERS } from "@/components/commands/spotify-registry";
 
 function CSpotify({ input }: { input: string }) {
   const content = useMemo(() => {
@@ -11,16 +9,15 @@ function CSpotify({ input }: { input: string }) {
 
     if (command === "spotify" && !arg) return <CSpotifyHelp />;
 
-    switch (arg) {
-      case "now":
-        return <CNowPlaying />;
-      case "top":
-        return <CTopTracks />;
-      case "history":
-        return <CRecentlyPlayed />;
-      default:
-        return <CNotFound input={input} />;
-    }
+    if (!arg) return <CSpotifyHelp />;
+
+    const renderer =
+      SPOTIFY_COMMAND_RENDERERS[
+        arg as keyof typeof SPOTIFY_COMMAND_RENDERERS
+      ];
+    if (!renderer) return <CNotFound input={input} />;
+
+    return renderer();
   }, [input]);
 
   return content;
