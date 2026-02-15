@@ -13,7 +13,7 @@ function CEducation() {
             idx === EDUCATION.length - 1 && "pb-1",
           )}
         >
-          <div className="absolute -left-[5px] size-2 top-1 rounded-full bg-chart-2 z-[1]" />
+          <div className="absolute -left-[5px] size-2 top-1 rounded-full bg-chart-1 z-[1]" />
           <p className="text-muted-foreground">{education.period}</p>
           <p className="text-sm font-semibold">{education.name}</p>
           <p className="text-muted-foreground">{education.location}</p>

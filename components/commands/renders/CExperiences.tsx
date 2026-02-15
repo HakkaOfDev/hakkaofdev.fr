@@ -13,9 +13,9 @@ function CExperiences() {
             idx === EXPERIENCES.length - 1 && "pb-1",
           )}
         >
-          <div className="absolute -left-[5px] size-2 top-1 rounded-full bg-chart-2 z-[1]" />
+          <div className="absolute -left-[5px] size-2 top-1 rounded-full bg-chart-1 z-[1]" />
           {experience.period.toLowerCase().includes("since") && (
-            <div className="absolute -left-[5px] size-2 top-1 animate-ping rounded-full bg-chart-2 opacity-75" />
+            <div className="absolute -left-[5px] size-2 top-1 animate-ping rounded-full bg-chart-1 opacity-75" />
           )}
           <p className="text-muted-foreground">{experience.period}</p>
           <p className="text-sm font-semibold">{experience.name}</p>

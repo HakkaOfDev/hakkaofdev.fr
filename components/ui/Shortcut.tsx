@@ -15,6 +15,8 @@ const shortcutVariants = cva(
           "bg-chart-1/10 text-chart-1 ring-chart-1/20 hover:bg-chart-1/20",
         secondary:
           "bg-chart-2/10 text-chart-2 ring-chart-2/20 hover:bg-chart-2/20",
+        purple:
+          "bg-chart-3/10 text-chart-3 ring-chart-3/20 hover:bg-chart-3/20",
       },
     },
     defaultVariants: {

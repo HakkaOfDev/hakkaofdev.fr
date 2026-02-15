@@ -83,7 +83,7 @@ function WelcomeHero({ className }: { className?: string }) {
         </ShortcutRow>
 
         <ShortcutRow label="Extras">
-          <Shortcut label="spotify" command="spotify" />
+          <Shortcut label="spotify" command="spotify" variant="purple" />
           <Shortcut label="help" command="help" />
         </ShortcutRow>
       </ShortcutSection>

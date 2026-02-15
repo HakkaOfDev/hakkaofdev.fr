@@ -33,7 +33,7 @@ function CProjects() {
                   .map((tag) => (
                     <p
                       key={tag}
-                      className="text-xs rounded-xs py-1 px-2 bg-chart-2/10 text-chart-2"
+                      className="text-xs rounded-xs py-1 px-2 bg-chart-1/10 text-chart-1"
                     >
                       {tag}
                     </p>

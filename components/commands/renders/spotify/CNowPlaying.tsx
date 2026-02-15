@@ -25,7 +25,7 @@ function CNowPlaying() {
                 className="rounded-sm"
               />
               <div>
-                <p className="text-sm font-semibold group-hover:text-chart-2 transition-colors duration-200">
+                <p className="text-sm font-semibold group-hover:text-chart-1 transition-colors duration-200">
                   {data.item.name}
                 </p>
                 <p className="text-muted-foreground">
