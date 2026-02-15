@@ -7,10 +7,12 @@ export default function Home() {
       <Image
         src="/logo.png"
         alt="Alexandre Gossard Logo"
-        quality={100}
+        quality={75}
         width={50}
         height={50}
+        sizes="50px"
         className="rounded-full border-2 border-primary"
+        priority
       />
       <MainScreen />
     </main>
