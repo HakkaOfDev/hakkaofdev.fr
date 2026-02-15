@@ -1,72 +1,75 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { useRef, useState } from "react";
 import { useCommands } from "./CommandsProvider";
-import {
-  COMMANDS,
-  SPOTIFY_COMMANDS,
-} from "@/components/commands/command-descriptors";
-import { useState } from "react";
+import { useCommandHistory } from "@/hooks/useCommandHistory";
+import { useSuggestions } from "@/hooks/useSuggestions";
+import { useInputHandlers } from "@/hooks/useInputHandlers";
+import SuggestionList from "./SuggestionList";
 
 function TerminalInput() {
   const { addCommand } = useCommands();
   const [value, setValue] = useState("");
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (value === "") return;
-    addCommand(value);
-    setValue("");
-    if (window.innerWidth <= 768) {
-      (document.activeElement as HTMLElement)?.blur();
-    }
-  };
+  const { navigateHistory, resetHistory } = useCommandHistory(value, setValue);
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      if (value === "") return;
-      addCommand(value);
-      setValue("");
-      if (window.innerWidth <= 768) {
-        e.currentTarget.blur();
-      }
-    }
-  };
+  const {
+    suggestions,
+    isOpen,
+    safeActiveIndex,
+    openPopover,
+    closePopover,
+    moveActiveIndex,
+    applyTabCompletion,
+    applyActiveSuggestion,
+    applySuggestion,
+  } = useSuggestions(value, setValue);
+
+  const { handleSubmit, handleKeyDown, handleChange, handleFocus } =
+    useInputHandlers({
+      value,
+      setValue,
+      addCommand,
+      navigateHistory,
+      resetHistory,
+      isOpen,
+      activeIndex: safeActiveIndex,
+      suggestionsCount: suggestions.length,
+      openPopover,
+      closePopover,
+      moveActiveIndex,
+      applyTabCompletion,
+      applyActiveSuggestion,
+      hasSuggestions: suggestions.length > 0,
+    });
 
   return (
     <div className="relative">
       <form onSubmit={handleSubmit}>
+        {isOpen && (
+          <SuggestionList
+            suggestions={suggestions}
+            activeIndex={safeActiveIndex}
+            onSelect={(idx) => {
+              applySuggestion(idx);
+              inputRef.current?.focus();
+            }}
+          />
+        )}
+
         <input
           type="text"
           value={value}
-          onChange={(e) => setValue(e.target.value.toLowerCase())}
+          onChange={handleChange}
           placeholder="Type 'help' or your command here..."
           className="outline-none bg-transparent border w-full h-10 p-2 pr-10 rounded-md text-sm"
-          onKeyDown={handleKeyPress}
+          onKeyDown={handleKeyDown}
+          onFocus={handleFocus}
           autoComplete="off"
-          list={
-            value.length > 0
-              ? value.startsWith("spotify")
-                ? "spotify-commands-autocomplete"
-                : "commands-autocomplete"
-              : undefined
-          }
+          ref={inputRef}
         />
-        <datalist id="commands-autocomplete">
-          {COMMANDS.map((command) => (
-            <option key={command.command} value={command.command}>
-              {command.description}
-            </option>
-          ))}
-        </datalist>
-        <datalist id="spotify-commands-autocomplete">
-          {SPOTIFY_COMMANDS.map((command) => (
-            <option key={command.command} value={`spotify ${command.command}`}>
-              {command.description}
-            </option>
-          ))}
-        </datalist>
 
         <button
           type="submit"
