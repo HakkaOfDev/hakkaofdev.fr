@@ -1,13 +1,6 @@
-import React from "react";
-import { AnimatedSpan } from "../Terminal";
+import { AnimatedSpan } from "../AnimatedComponents";
 
-function CommandBash({
-  input,
-  timestamp,
-}: {
-  input: string;
-  timestamp: Date;
-}) {
+function CommandBash({ input, timestamp }: { input: string; timestamp: Date }) {
   return (
     <AnimatedSpan>
       <div className="flex w-full items-center justify-between font-semibold text-sm gap-2">

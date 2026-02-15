@@ -1,0 +1,55 @@
+"use client";
+
+import { useCommands } from "@/components/CommandsProvider";
+import { cn } from "@/lib/utils";
+import { cva, type VariantProps } from "class-variance-authority";
+
+const shortcutVariants = cva(
+  "inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-xs font-semibold font-mono ring-1 ring-inset transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-chart-1/70",
+  {
+    variants: {
+      variant: {
+        default:
+          "bg-muted text-foreground ring-border/60 hover:bg-accent hover:text-accent-foreground hover:ring-border",
+        primary:
+          "bg-chart-1/10 text-chart-1 ring-chart-1/20 hover:bg-chart-1/20",
+        secondary:
+          "bg-chart-2/10 text-chart-2 ring-chart-2/20 hover:bg-chart-2/20",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  },
+);
+
+interface ShortcutProps
+  extends
+  Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "onClick">,
+  VariantProps<typeof shortcutVariants> {
+  label: string;
+  command: string;
+}
+
+function Shortcut({
+  label,
+  command,
+  variant,
+  className,
+  ...props
+}: ShortcutProps) {
+  const { addCommand } = useCommands();
+
+  return (
+    <button
+      type="button"
+      onClick={() => addCommand(command)}
+      className={cn(shortcutVariants({ variant }), className)}
+      {...props}
+    >
+      {label}
+    </button>
+  );
+}
+
+export { Shortcut, shortcutVariants };

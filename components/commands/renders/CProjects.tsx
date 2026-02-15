@@ -1,4 +1,4 @@
-import { AnimatedSpan } from "@/components/Terminal";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { PROJECTS } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,7 +33,7 @@ function CProjects() {
                   .map((tag) => (
                     <p
                       key={tag}
-                      className="text-[0.6rem] rounded-xs py-1 px-2 bg-chart-2/10 text-chart-2"
+                      className="text-xs rounded-xs py-1 px-2 bg-chart-2/10 text-chart-2"
                     >
                       {tag}
                     </p>

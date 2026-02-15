@@ -1,7 +1,7 @@
 "use client";
 
 import { useCommands } from "@/components/CommandsProvider";
-import { AnimatedSpan } from "@/components/Terminal";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 
 type Item = {
   command: string;

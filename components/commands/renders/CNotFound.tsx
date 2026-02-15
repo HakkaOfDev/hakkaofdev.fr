@@ -1,4 +1,4 @@
-import { AnimatedSpan } from "@/components/Terminal";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 
 function CNotFound({ input }: { input: string }) {
   return (

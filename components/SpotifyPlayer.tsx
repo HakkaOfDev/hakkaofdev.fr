@@ -33,7 +33,7 @@ function SpotifyPlayer() {
           alt={data.item.name}
           width={24}
           height={24}
-          quality={100}
+          quality={75}
           className="max-h-6 rounded-xs"
         />
         <div className="flex flex-col items-start ml-2 mr-1">
