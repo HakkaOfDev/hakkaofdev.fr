@@ -1,5 +1,30 @@
 import { Github, Instagram, Linkedin, Twitter, LucideIcon } from "lucide-react";
 
+export const SITE = {
+  title: "Alexandre Gossard | Digital Nomad & Software Engineer",
+  name: "Alexandre Gossard",
+  handle: "hakkaofdev",
+  description:
+    "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
+  jobTitle: "Software Engineer",
+  employer: {
+    name: "kabila.app",
+    url: "https://kabila.app",
+  },
+  keywords: [
+    "Alexandre Gossard",
+    "Frontend Developer",
+    "Digital Nomad",
+    "Open-source",
+    "Modern Technologies",
+    "hakkaofdev",
+    "kabila.app",
+    "Kabila",
+    "Software Engineer",
+    "Freelance",
+  ],
+} as const;
+
 export const SOCIALS: { name: string; url: string; icon: LucideIcon }[] = [
   {
     name: "GitHub",

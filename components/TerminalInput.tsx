@@ -64,7 +64,7 @@ function TerminalInput() {
           value={value}
           onChange={handleChange}
           placeholder="Type 'help' or your command here..."
-          className="outline-none bg-transparent border w-full h-10 p-2 pr-10 rounded-md text-sm"
+          className="outline-none bg-transparent border w-full h-10 p-2 pr-10 rounded-md text-base md:text-sm"
           onKeyDown={handleKeyDown}
           onFocus={handleFocus}
           autoComplete="off"
