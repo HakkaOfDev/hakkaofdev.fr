@@ -8,6 +8,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
+import { SITE, SOCIALS } from "@/lib/constants";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -17,52 +18,59 @@ const montserrat = Montserrat({
 });
 
 const siteUrl = getSiteUrl();
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: SITE.name,
+  url: siteUrl,
+  image: new URL("/avatar.jpeg", siteUrl).toString(),
+  jobTitle: SITE.jobTitle,
+  worksFor: {
+    "@type": "Organization",
+    name: SITE.employer.name,
+    url: SITE.employer.url,
+  },
+  sameAs: SOCIALS.map((social) => social.url),
+};
+
+const twitterHandle = `@${SITE.handle}` as const;
+const githubUrl = SOCIALS.find((s) => s.name === "GitHub")!.url;
 
 export const metadata: Metadata = {
-  title: "Alexandre Gossard",
-  description:
-    "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
-  creator: "Alexandre Gossard",
+  title: SITE.title,
+  description: SITE.description,
+  creator: SITE.name,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Alexandre Gossard",
-    description:
-      "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
+    title: SITE.title,
+    description: SITE.description,
     url: siteUrl,
+    type: "website",
+    siteName: SITE.title,
     images: [
       {
-        url: "/avatar.jpeg",
-        width: 500,
-        height: 500,
-        alt: "Alexandre Gossard",
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: SITE.name,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alexandre Gossard",
-    description:
-      "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
-    images: ["/avatar.jpeg"],
-    creator: "@hakkaofdev",
+    title: SITE.title,
+    description: SITE.description,
+    images: ["/opengraph-image"],
+    site: twitterHandle,
+    creator: twitterHandle,
   },
-  keywords: [
-    "Alexandre Gossard",
-    "Frontend Developer",
-    "Digital Nomad",
-    "Open-source",
-    "Modern Technologies",
-    "hakkaofdev",
-    "kabila.app",
-    "Software Engineer",
-    "Freelance",
-  ],
+  keywords: [...SITE.keywords],
   authors: [
     {
-      name: "Alexandre Gossard",
-      url: "https://github.com/hakkaofdev",
+      name: SITE.name,
+      url: githubUrl,
     },
   ],
   metadataBase: new URL(siteUrl),
@@ -94,6 +102,10 @@ export default function RootLayout({
           "font-montserrat flex flex-col h-[100dvh] overflow-hidden antialiased",
         )}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <Providers>
           <CommandsProvider>
             {children}

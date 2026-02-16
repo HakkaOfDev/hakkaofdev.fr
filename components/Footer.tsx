@@ -1,4 +1,4 @@
-import { SOCIALS } from "@/lib/constants";
+import { SITE, SOCIALS } from "@/lib/constants";
 import { Heart } from "lucide-react";
 import Link from "next/link";
 
@@ -22,10 +22,10 @@ function Footer() {
       <p className="text-sm text-muted-foreground">
         Made with <Heart className="inline-block text-chart-1" size={20} /> by{" "}
         <Link
-          href="https://github.com/hakkaofdev"
+          href={SOCIALS.find((s) => s.name === "GitHub")!.url}
           className="text-chart-1 font-semibold relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-chart-1 after:transition-transform hover:after:scale-x-100"
         >
-          Alexandre Gossard
+          {SITE.name}
         </Link>
         .
       </p>
