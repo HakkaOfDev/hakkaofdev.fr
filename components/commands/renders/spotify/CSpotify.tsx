@@ -1,11 +1,10 @@
 "use client";
 
 import {
-  SPOTIFY_COMMANDS,
   SPOTIFY_COMMAND_RENDERERS,
+  SPOTIFY_COMMANDS,
 } from "@/components/commands/spotify-registry";
 import SubCommandRouter from "../SubCommandRouter";
-
 
 function CSpotify({ input }: { input: string }) {
   return (
@@ -18,7 +17,7 @@ function CSpotify({ input }: { input: string }) {
       renderValid={(subcommand) => {
         const renderer =
           SPOTIFY_COMMAND_RENDERERS[
-          subcommand as keyof typeof SPOTIFY_COMMAND_RENDERERS
+            subcommand as keyof typeof SPOTIFY_COMMAND_RENDERERS
           ];
         return renderer();
       }}

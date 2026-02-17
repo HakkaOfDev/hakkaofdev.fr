@@ -39,7 +39,10 @@ function CContact() {
             >
               {social.name}
             </Link>
-            <span className="text-muted-foreground"> · {getDisplayLink(social.url)}</span>
+            <span className="text-muted-foreground">
+              {" "}
+              · {getDisplayLink(social.url)}
+            </span>
           </li>
         ))}
       </ul>
