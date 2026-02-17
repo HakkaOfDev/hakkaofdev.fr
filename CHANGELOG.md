@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.2.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.1.1...v1.2.0) (2026-02-17)
+
+
+### Features
+
+* **analytics:** add page view tracking with Supabase ([036c882](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/036c882acdb63aecd5d0731dc37efdc521f39a07))
+* **commands:** add new commands and refactor command system ([2d2859f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/2d2859f6f1507367909b39cc9c569663269b4998))
+* **cv:** add PDF resume generation with react-pdf ([7146532](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/714653208807831e0fb49ab73786f870416b19f1))
+* **lib:** add service layer with types and Supabase client ([dc25725](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/dc25725af7ef3a7a8c6d3b9054f4ae32be6fc2ff))
+* terminal v2 redesign with new commands, CV generation, and analytics ([ba74849](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/ba74849258c2164ed78ea818895531e8a66622bb))
+* **ux:** add global shortcuts and improve input and suggestion UX ([23cbcb5](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/23cbcb551c256ee98563e02c9b3d80745876b24e))
+
+
+### Bug Fixes
+
+* **lint:** sort imports to satisfy Biome organizeImports rule ([a0bd1e7](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a0bd1e7968ee718b7806300226f687b2bcef3829))
+
+
+### Miscellaneous
+
+* **config:** update environment template and relax biome rules ([df3a386](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/df3a38639b30de19e83d41ac89bdc967d9376eeb))
+* **deps:** add react-pdf and supabase dependencies ([0b76eb0](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/0b76eb0444fc62a37b009634a336a6feb3c94033))
+
+
+### Code Refactoring
+
+* **actions:** delegate server actions to service modules ([be7bb9d](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/be7bb9df064b3b3586e965a840f5dadc44a8f1b7))
+* **content:** update site metadata, skill labels, and languages ([6be12ae](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/6be12ae30aae7e2343c5b8bb474fc0b970c8aa62))
+* **terminal:** redesign terminal with macOS-style chrome ([bb551f7](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/bb551f7bad6074e63eea83ab616b5f8d78a9e485))
+
 ## [1.1.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.1.0...v1.1.1) (2026-02-17)
 
 
