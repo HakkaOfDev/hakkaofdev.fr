@@ -152,7 +152,7 @@ export const SKILLS = {
     "Flask",
     "Django",
   ],
-  styling: ["Tailwind", "shadcn/ui", "framer-motion"],
+  styling: ["Tailwind", "shadcn/ui", "Motion"],
   devtools: ["Biome", "Bun"],
   databases: ["PostgreSQL", "Supabase", "MongoDB", "Redis"],
   hosting: ["Vercel", "AWS"],
@@ -198,6 +198,7 @@ export const EXPERIENCES = [
       "Managing technical roadmap and sprint planning",
       "Mentoring junior developers and conducting code reviews",
       "Building reusable component libraries and design systems",
+      "Creating mobile apps with React Native and Expo",
     ],
   },
   {
@@ -211,6 +212,7 @@ export const EXPERIENCES = [
       "Implemented CI/CD pipelines and automated deployment workflows",
       "Provided technical consulting and architecture recommendations",
       "Managed client relationships and project timelines independently",
+      "Delivering mobile apps for clients on the Google Play Store and Apple App Store",
     ],
   },
   {
