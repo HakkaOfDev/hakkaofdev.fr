@@ -104,7 +104,8 @@ export const COMMANDS: CommandDescriptor[] = [
   },
   {
     command: "stats",
-    description: "Display live metrics from WakaTime, GitHub, Spotify & more",
+    description:
+      "Display coding activity, GitHub metrics & unique visitor count",
     group: "Profile",
   },
   {
