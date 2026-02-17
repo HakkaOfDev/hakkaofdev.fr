@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useRef, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useRef,
+  useState,
+} from "react";
 import type { Command } from "@/types";
 
 interface CommandsContextType {
@@ -59,14 +65,14 @@ export function CommandsProvider({ children }: { children: React.ReactNode }) {
     }, 500);
   };
 
-  const clearCommands = () => {
+  const clearCommands = useCallback(() => {
     setCommands([]);
-  };
+  }, []);
 
-  const reset = () => {
+  const reset = useCallback(() => {
     setCommands([]);
     setShowWelcome(true);
-  };
+  }, []);
 
   return (
     <CommandsContext.Provider

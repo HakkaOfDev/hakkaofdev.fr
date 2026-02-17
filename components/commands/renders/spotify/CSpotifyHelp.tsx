@@ -1,8 +1,15 @@
 import { SPOTIFY_COMMANDS } from "@/components/commands/spotify-registry";
-import CommandList from "../CommandList";
+import SubCommandHelp from "../SubCommandHelp";
 
 function CSpotifyHelp() {
-  return <CommandList items={SPOTIFY_COMMANDS} prefix="spotify " />;
+  return (
+    <SubCommandHelp
+      title="Spotify commands"
+      items={SPOTIFY_COMMANDS}
+      prefix="spotify "
+      variant="purple"
+    />
+  );
 }
 
 export default CSpotifyHelp;

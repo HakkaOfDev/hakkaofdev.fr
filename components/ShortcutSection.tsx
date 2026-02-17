@@ -14,10 +14,10 @@ function ShortcutSection({
   return (
     <div className={cn("grid gap-2", className)}>
       <div className="flex items-center gap-2" aria-hidden>
-        <span className="text-xs font-semibold text-muted-foreground">
+        <span className="text-[10px] font-semibold text-muted-foreground/80 uppercase tracking-widest">
           {title}
         </span>
-        <div className="h-px flex-1 bg-border/70" />
+        <div className="h-px flex-1 bg-border/40 dark:bg-white/[0.06]" />
       </div>
 
       <div className="grid gap-2">{children}</div>
@@ -40,7 +40,7 @@ function ShortcutRow({
     <div
       className={cn("grid grid-cols-[64px_1fr] gap-4 items-start", className)}
     >
-      <p className="text-xs font-semibold text-muted-foreground pt-0.5">
+      <p className="text-[11px] font-medium text-muted-foreground/80 pt-0.5">
         {label}
       </p>
       <div className="flex flex-wrap gap-1.5">{children}</div>

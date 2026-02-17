@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
-import { HOBBIES, LANGUAGES } from "@/lib/constants";
+import { HOBBIES, LANGUAGES, SITE } from "@/lib/constants";
 
 function CAbout() {
   return (
@@ -11,14 +11,14 @@ function CAbout() {
         title="Age"
         value={`${Math.floor((Date.now() - new Date("2002-12-24").getTime()) / (1000 * 60 * 60 * 24 * 365.25))} years`}
       />
-      <Info title="Location" value="Châlons-en-Champagne, France" />
+      <Info title="Location" value={SITE.location} />
       <p className="text-muted-foreground">
         Email:{" "}
         <Link
-          href="mailto:alexandre.gossard.pro@gmail.com"
+          href={`mailto:${SITE.email}`}
           className="font-semibold text-chart-1 hover:text-chart-1/80 transition-colors duration-200"
         >
-          alexandre.gossard.pro@gmail.com
+          {SITE.email}
         </Link>
       </p>
       <Info

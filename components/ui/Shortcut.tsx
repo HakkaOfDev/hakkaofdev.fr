@@ -5,18 +5,20 @@ import { useCommands } from "@/components/CommandsProvider";
 import { cn } from "@/lib/utils";
 
 const shortcutVariants = cva(
-  "inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-xs font-semibold font-mono ring-1 ring-inset transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-chart-1/70",
+  "inline-flex w-fit items-center gap-1 rounded-md px-2 py-0.5 text-xs font-semibold font-mono ring-1 ring-inset transition-[color,background-color,box-shadow,transform] duration-200 cursor-pointer active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-chart-1/70",
   {
     variants: {
       variant: {
         default:
-          "bg-muted text-foreground ring-border/60 hover:bg-accent hover:text-accent-foreground hover:ring-border",
+          "bg-muted/60 text-foreground ring-border/50 hover:bg-accent hover:text-accent-foreground hover:ring-border dark:bg-white/[0.04] dark:ring-white/10 dark:hover:bg-white/[0.08]",
         primary:
-          "bg-chart-1/10 text-chart-1 ring-chart-1/20 hover:bg-chart-1/20",
+          "bg-chart-1/10 text-chart-1 ring-chart-1/20 hover:bg-chart-1/20 hover:ring-chart-1/30",
         secondary:
-          "bg-chart-2/10 text-chart-2 ring-chart-2/20 hover:bg-chart-2/20",
+          "bg-chart-2/10 text-chart-2 ring-chart-2/20 hover:bg-chart-2/20 hover:ring-chart-2/30",
         purple:
-          "bg-chart-3/10 text-chart-3 ring-chart-3/20 hover:bg-chart-3/20",
+          "bg-chart-3/10 text-chart-3 ring-chart-3/20 hover:bg-chart-3/20 hover:ring-chart-3/30",
+        orange:
+          "bg-chart-5/10 text-chart-5 ring-chart-5/20 hover:bg-chart-5/20 hover:ring-chart-5/30",
       },
     },
     defaultVariants: {
@@ -25,7 +27,7 @@ const shortcutVariants = cva(
   },
 );
 
-interface ShortcutProps
+export interface ShortcutProps
   extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "onClick">,
     VariantProps<typeof shortcutVariants> {
   label: string;

@@ -14,13 +14,13 @@ function WelcomeHero({ className }: { className?: string }) {
   const lastName = name.split(" ").slice(1).join(" ");
 
   return (
-    <div className={cn("grid gap-3 font-normal tracking-tight", className)}>
+    <div className={cn("grid gap-4 font-normal tracking-tight", className)}>
       {/* ── Profile ── */}
       <div className="flex flex-col sm:grid sm:grid-cols-[64px_1fr] items-start gap-4">
         <Image
           src="/avatar.jpeg"
           alt="Alexandre Gossard"
-          className="aspect-square shrink-0 rounded-sm object-cover object-top ring-1 ring-border"
+          className="aspect-square shrink-0 rounded-lg object-cover object-top ring-1 ring-border/60 dark:ring-white/10 shadow-sm"
           quality={75}
           width={64}
           height={64}
@@ -28,14 +28,21 @@ function WelcomeHero({ className }: { className?: string }) {
           sizes="64px"
           priority
         />
-        <div className="grid gap-1">
-          <p className="text-xs text-muted-foreground">Welcome 👋</p>
-          <h1 className="text-xl md:text-2xl font-bold tracking-tight leading-none">
-            I&apos;m {firstName}{" "}
-            <span className="text-chart-1">{lastName.toUpperCase()}</span>
+        <div className="grid gap-1.5">
+          <p className="text-[11px] text-muted-foreground/80 font-mono">
+            ~ Welcome{" "}
+            <span className="inline-block animate-wave origin-[70%_70%]">
+              👋
+            </span>
+          </p>
+          <h1 className="text-xl md:text-2xl font-bold tracking-wider leading-none">
+            {firstName}{" "}
+            <span className="bg-gradient-to-r from-chart-1 to-chart-3 bg-clip-text text-transparent">
+              {lastName.toUpperCase()}
+            </span>
           </h1>
           <p className="text-xs text-muted-foreground leading-relaxed">
-            <span className="font-semibold text-chart-1 underline underline-offset-4">
+            <span className="font-semibold text-chart-1 underline underline-offset-4 decoration-chart-1/50">
               Digital Nomad
             </span>{" "}
             · <span className="font-semibold text-chart-2">{jobTitle}</span> at{" "}
@@ -48,7 +55,7 @@ function WelcomeHero({ className }: { className?: string }) {
             </Link>
           </p>
 
-          <div className="flex flex-wrap gap-1.5 mt-2">
+          <div className="flex flex-wrap gap-1.5 mt-1.5">
             <Tag
               icon={<GitFork className="h-3 w-3" />}
               label="Open-source advocate"
@@ -83,10 +90,14 @@ function WelcomeHero({ className }: { className?: string }) {
           <Shortcut label="skills" command="skills" variant="secondary" />
           <Shortcut label="about" command="about" variant="secondary" />
           <Shortcut label="education" command="education" variant="secondary" />
+          <Shortcut label="contact" command="contact" variant="secondary" />
+          <Shortcut label="cv" command="cv" variant="secondary" />
         </ShortcutRow>
 
         <ShortcutRow label="Extras">
           <Shortcut label="spotify" command="spotify" variant="purple" />
+          <Shortcut label="theme" command="theme" variant="orange" />
+          <Shortcut label="repo" command="repo" />
           <Shortcut label="help" command="help" />
         </ShortcutRow>
       </ShortcutSection>
