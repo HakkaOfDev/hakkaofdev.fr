@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.2.0...v1.3.0) (2026-02-17)
+
+
+### Features
+
+* v1.2.0 — new commands, terminal redesign, analytics & CV generation ([5f9ee6f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/5f9ee6f6168879544cdc4d598e52b0db696da8a2))
+
+
+### Code Refactoring
+
+* **stats:** track unique visitors by IP instead of page views ([8e70c50](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/8e70c50815bf4ac2a36f95999fb2da0300da1e51))
+
 ## [1.2.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.1.1...v1.2.0) (2026-02-17)
 
 
