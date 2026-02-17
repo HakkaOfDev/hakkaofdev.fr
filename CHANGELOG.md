@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.1.0...v1.1.1) (2026-02-17)
+
+
+### Miscellaneous
+
+* **deps:** remove duplicate framer-motion in favor of motion ([8853fa5](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/8853fa555d8b27f96c1009b4ebbd6c9b1401c8f0))
+
 ## [1.1.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.0.0...v1.1.0) (2026-02-17)
 
 
