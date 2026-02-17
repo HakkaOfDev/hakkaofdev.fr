@@ -13,7 +13,7 @@ function CCv() {
           className="inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-semibold ring-1 ring-inset bg-chart-2/10 text-chart-2 ring-chart-2/20 hover:bg-chart-2/20 transition-colors duration-200"
         >
           <Eye className="h-3.5 w-3.5" />
-          Preview CV
+          Open PDF preview
         </Link>
         <Link
           href={CV_DOWNLOAD_URL}
@@ -21,9 +21,13 @@ function CCv() {
           className="inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-semibold ring-1 ring-inset bg-chart-1/10 text-chart-1 ring-chart-1/20 hover:bg-chart-1/20 transition-colors duration-200"
         >
           <Download className="h-3.5 w-3.5" />
-          Download CV
+          Download PDF
         </Link>
       </div>
+      <p className="text-[10px] text-muted-foreground/70">
+        Endpoints: <span className="font-mono">{CV_PREVIEW_URL}</span> and{" "}
+        <span className="font-mono">{CV_DOWNLOAD_URL}</span>
+      </p>
     </AnimatedSpan>
   );
 }

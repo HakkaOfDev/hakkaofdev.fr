@@ -7,10 +7,12 @@ Live: https://hakkaofdev.fr
 ## Features
 
 - Terminal UI with command input, command history, and autocomplete
-- Built-in commands: `help`, `projects`, `skills`, `about`, `education`, `experiences`, `clear`, `reset`, `spotify`
+- Built-in commands: `help`, `projects`, `experiences`, `skills`, `about`, `education`, `contact`, `cv`, `repo`, `theme`, `stats`, `echo`, `clear`, `reset`, `spotify`
 - Optional Spotify integration:
   - Header "Now Playing" widget (polls every 15s)
   - Terminal commands: `spotify now`, `spotify top`, `spotify history`
+- Theme command with modes: `theme dark`, `theme light`, `theme system`
+- Dynamic CV PDF endpoint with preview/download: `/api/cv`, `/api/cv?download=1`
 - Light/dark theme toggle (`next-themes`)
 - Animations (`motion`)
 - SEO-friendly metadata + `sitemap.xml` and `robots.txt`
@@ -101,6 +103,15 @@ Spotify subcommands are described in `components/commands/command-descriptors.ts
 | `skills` | Show categorized skills |
 | `about` | Show personal details (languages/hobbies/etc) |
 | `education` | Show education timeline |
+| `contact` | Show primary contact methods and social profiles |
+| `cv` | Open CV preview/download actions (powered by `/api/cv`) |
+| `repo` | Show repository details and clone command |
+| `theme` | Show current theme and available theme modes |
+| `theme dark` | Switch to dark mode |
+| `theme light` | Switch to light mode |
+| `theme system` | Follow operating system theme |
+| `stats` | Show coding and GitHub activity stats |
+| `echo <message>` | Print custom text in the terminal |
 | `experiences` | Show experience timeline |
 | `clear` | Clear terminal history |
 | `reset` | Reset terminal to the initial welcome state |
@@ -130,6 +141,18 @@ To add a new Spotify sub-command:
 1. Add the sub-command + description to `SPOTIFY_COMMANDS` in `components/commands/command-descriptors.ts`.
 2. Add the renderer in `components/commands/renders/spotify/`.
 3. Wire it in `components/commands/spotify-registry.tsx`.
+
+To add or modify theme modes:
+
+1. Update `THEME_COMMANDS` in `components/commands/command-descriptors.ts`.
+2. Keep parser/validation aligned in `components/commands/renders/CTheme.tsx`.
+
+To customize the CV PDF:
+
+1. Update data mapping/truncation in `lib/cv/cv-pdf.data.ts`.
+2. Update typography/layout in `lib/cv/cv-pdf.styles.ts`.
+3. Update rendering blocks in `components/cv-pdf/CVSections.tsx`.
+4. API endpoint is `app/api/cv/route.tsx` (`/api/cv`, `/api/cv?download=1`).
 
 ## Deployment
 
