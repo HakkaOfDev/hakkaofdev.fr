@@ -1,7 +1,7 @@
 "use client";
 
-import { Command } from "@/types";
 import { createContext, useContext, useRef, useState } from "react";
+import type { Command } from "@/types";
 
 interface CommandsContextType {
   showWelcome: boolean;
@@ -12,7 +12,7 @@ interface CommandsContextType {
 }
 
 const CommandsContext = createContext<CommandsContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export function useCommands() {

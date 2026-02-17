@@ -1,5 +1,5 @@
-import { useCommands } from "@/components/CommandsProvider";
 import { useEffect } from "react";
+import { useCommands } from "@/components/CommandsProvider";
 
 function CReset() {
   const { reset } = useCommands();

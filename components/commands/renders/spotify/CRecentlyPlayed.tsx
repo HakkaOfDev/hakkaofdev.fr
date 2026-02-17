@@ -1,8 +1,8 @@
-import { getRecentlyPlayed } from "@/app/actions";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
+import { getRecentlyPlayed } from "@/app/actions";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 import SpotifyQuery from "./SpotifyQuery";
 
 function CRecentlyPlayed() {
@@ -15,6 +15,7 @@ function CRecentlyPlayed() {
               key={item.played_at}
               href={item.track.external_urls.spotify}
               target="_blank"
+              aria-label={`Open recently played track: ${item.track.name}`}
               className="flex items-center gap-2 py-1 group"
             >
               <Image

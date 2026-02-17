@@ -1,3 +1,5 @@
+import { SITE } from "./constants";
+
 function stripTrailingSlashes(url: string) {
   return url.replace(/\/+$/, "");
 }
@@ -5,8 +7,10 @@ function stripTrailingSlashes(url: string) {
 /**
  * Canonical site URL (no trailing slash) used for SEO routes like sitemap/robots.
  *
- * Prefer explicit config via NEXT_PUBLIC_SITE_URL for production and forks.
- * Falls back to Vercel's deployment URL, then localhost for local dev.
+ * Resolution order:
+ *  1. NEXT_PUBLIC_SITE_URL – explicit override for custom domains / forks
+ *  2. VERCEL_URL – auto-set by Vercel on every deployment
+ *  3. SITE.url – production default so SEO metadata never references localhost
  */
 export function getSiteUrl() {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -20,6 +24,5 @@ export function getSiteUrl() {
     return stripTrailingSlashes(withProtocol);
   }
 
-  return "http://localhost:3000";
+  return SITE.url;
 }
-

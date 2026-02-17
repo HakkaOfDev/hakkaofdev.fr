@@ -1,14 +1,14 @@
+import type { Metadata, Viewport } from "next";
+import { Montserrat } from "next/font/google";
 import { CommandsProvider } from "@/components/CommandsProvider";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
 import { getSiteUrl } from "@/lib/site-url";
-import type { Metadata, Viewport } from "next";
-import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { cn } from "@/lib/utils";
 import { SITE, SOCIALS } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",

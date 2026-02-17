@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
 const tagVariants = cva(
   "inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium ring-1 ring-inset",
@@ -20,8 +20,7 @@ const tagVariants = cva(
 );
 
 interface TagProps
-  extends
-    React.HTMLAttributes<HTMLSpanElement>,
+  extends React.HTMLAttributes<HTMLSpanElement>,
     VariantProps<typeof tagVariants> {
   icon?: React.ReactNode;
   label: string;

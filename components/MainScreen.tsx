@@ -1,10 +1,10 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { Loader } from "lucide-react";
-import WelcomeHero from "./WelcomeHero";
+import dynamic from "next/dynamic";
 import { useCommands } from "./CommandsProvider";
 import { Terminal } from "./Terminal";
+import WelcomeHero from "./WelcomeHero";
 
 const CommandItem = dynamic(() => import("./commands/CommandItem"), {
   loading: () => <Loader size={16} className="animate-spin" />,

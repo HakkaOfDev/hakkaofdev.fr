@@ -1,12 +1,12 @@
 "use client";
 
-import { Command } from "@/types";
-import CommandBash from "./CommandBash";
-import { useEffect, useMemo, useState } from "react";
-import CNotFound from "./renders/CNotFound";
 import { Loader } from "lucide-react";
-import CSpotify from "./renders/spotify/CSpotify";
+import { useEffect, useMemo, useState } from "react";
+import type { Command } from "@/types";
+import CommandBash from "./CommandBash";
 import { COMMAND_RENDERERS } from "./registry";
+import CNotFound from "./renders/CNotFound";
+import CSpotify from "./renders/spotify/CSpotify";
 
 function CommandWrapper({
   children,

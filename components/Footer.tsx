@@ -1,6 +1,6 @@
-import { SITE, SOCIALS } from "@/lib/constants";
 import { Heart } from "lucide-react";
 import Link from "next/link";
+import { SITE, SOCIALS } from "@/lib/constants";
 
 function Footer() {
   return (

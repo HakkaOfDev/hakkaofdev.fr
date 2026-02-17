@@ -1,6 +1,11 @@
 "use server";
 
-import { Album, Artist, PlayHistory, Track } from "@spotify/web-api-ts-sdk";
+import type {
+  Album,
+  Artist,
+  PlayHistory,
+  Track,
+} from "@spotify/web-api-ts-sdk";
 
 const {
   SPOTIFY_CLIENT_ID: clientId,

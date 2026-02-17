@@ -1,7 +1,7 @@
-import { getNowPlaying } from "@/app/actions";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
 import Image from "next/image";
 import Link from "next/link";
+import { getNowPlaying } from "@/app/actions";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 import SpotifyQuery from "./SpotifyQuery";
 
 function CNowPlaying() {
@@ -14,6 +14,7 @@ function CNowPlaying() {
           <Link
             href={data.item.external_urls.spotify}
             target="_blank"
+            aria-label={`Open now playing track: ${data.item.name}`}
             className="group w-fit"
           >
             <AnimatedSpan className="border flex w-fit items-center gap-3 rounded-lg p-3">

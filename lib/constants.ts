@@ -1,6 +1,13 @@
-import { Github, Instagram, Linkedin, Twitter, LucideIcon } from "lucide-react";
+import {
+  Github,
+  Instagram,
+  Linkedin,
+  type LucideIcon,
+  Twitter,
+} from "lucide-react";
 
 export const SITE = {
+  url: "https://hakkaofdev.fr",
   title: "Alexandre Gossard | Digital Nomad & Software Engineer",
   name: "Alexandre Gossard",
   handle: "hakkaofdev",

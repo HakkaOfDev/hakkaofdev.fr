@@ -1,7 +1,7 @@
-import { SITE } from "@/lib/constants";
-import { getSiteUrl } from "@/lib/site-url";
 import { ImageResponse } from "next/og";
 import type { ReactNode } from "react";
+import { SITE } from "@/lib/constants";
+import { getSiteUrl } from "@/lib/site-url";
 
 export const runtime = "edge";
 export const contentType = "image/png";

@@ -1,7 +1,7 @@
 import { useMemo } from "react";
+import { SPOTIFY_COMMAND_RENDERERS } from "@/components/commands/spotify-registry";
 import CNotFound from "../CNotFound";
 import CSpotifyHelp from "./CSpotifyHelp";
-import { SPOTIFY_COMMAND_RENDERERS } from "@/components/commands/spotify-registry";
 
 function CSpotify({ input }: { input: string }) {
   const content = useMemo(() => {
@@ -12,9 +12,7 @@ function CSpotify({ input }: { input: string }) {
     if (!arg) return <CSpotifyHelp />;
 
     const renderer =
-      SPOTIFY_COMMAND_RENDERERS[
-        arg as keyof typeof SPOTIFY_COMMAND_RENDERERS
-      ];
+      SPOTIFY_COMMAND_RENDERERS[arg as keyof typeof SPOTIFY_COMMAND_RENDERERS];
     if (!renderer) return <CNotFound input={input} />;
 
     return renderer();

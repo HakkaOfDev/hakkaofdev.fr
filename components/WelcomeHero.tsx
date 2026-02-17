@@ -1,12 +1,18 @@
-import { Shortcut } from "@/components/ui/Shortcut";
-import { ShortcutRow, ShortcutSection } from "@/components/ShortcutSection";
-import { Tag } from "@/components/ui/Tag";
-import { cn } from "@/lib/utils";
 import { Code2, Dumbbell, GitFork } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { ShortcutRow, ShortcutSection } from "@/components/ShortcutSection";
+import { Shortcut } from "@/components/ui/Shortcut";
+import { Tag } from "@/components/ui/Tag";
+import { SITE } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 function WelcomeHero({ className }: { className?: string }) {
+  const { name, jobTitle, employer } = SITE;
+  const { name: employerName, url: employerUrl } = employer;
+  const firstName = name.split(" ")[0];
+  const lastName = name.split(" ").slice(1).join(" ");
+
   return (
     <div className={cn("grid gap-3 font-normal tracking-tight", className)}>
       {/* ── Profile ── */}
@@ -25,23 +31,22 @@ function WelcomeHero({ className }: { className?: string }) {
         <div className="grid gap-1">
           <p className="text-xs text-muted-foreground">Welcome 👋</p>
           <h1 className="text-xl md:text-2xl font-bold tracking-tight leading-none">
-            I&apos;m Alexandre <span className="text-chart-1">GOSSARD</span>
+            I&apos;m {firstName}{" "}
+            <span className="text-chart-1">{lastName.toUpperCase()}</span>
           </h1>
           <p className="text-xs text-muted-foreground leading-relaxed">
             <span className="font-semibold text-chart-1 underline underline-offset-4">
               Digital Nomad
             </span>{" "}
             ·{" "}
-            <span className="font-semibold text-chart-2">
-              Lead Frontend Developer
-            </span>{" "}
+            <span className="font-semibold text-chart-2">{jobTitle}</span>{" "}
             at{" "}
             <Link
-              href="https://kabila.app"
+              href={employerUrl}
               className="font-semibold text-chart-2 hover:text-chart-2/80 transition-colors duration-200"
               target="_blank"
             >
-              kabila.app
+              {employerName}
             </Link>
           </p>
 

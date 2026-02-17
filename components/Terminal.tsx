@@ -1,9 +1,9 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
-import TerminalInput from "./TerminalInput";
+import { cn } from "@/lib/utils";
 import { ModeToggle } from "./ModeToggle";
+import TerminalInput from "./TerminalInput";
 
 const SpotifyPlayer = dynamic(() => import("./SpotifyPlayer"), {
   ssr: false,

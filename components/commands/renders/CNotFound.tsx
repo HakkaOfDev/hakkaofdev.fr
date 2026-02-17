@@ -1,12 +1,12 @@
 "use client";
 
+import { useMemo } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { useCommands } from "@/components/CommandsProvider";
 import {
   COMMANDS,
   SPOTIFY_COMMANDS,
 } from "@/components/commands/command-descriptors";
-import { useMemo } from "react";
 
 function levenshtein(a: string, b: string) {
   const dp = Array.from({ length: a.length + 1 }, () =>
@@ -35,7 +35,10 @@ function CNotFound({ input }: { input: string }) {
     if (!q) return [] as string[];
 
     const base = COMMANDS.map((c) => c.command);
-    const spotify = ["spotify", ...SPOTIFY_COMMANDS.map((c) => `spotify ${c.command}`)];
+    const spotify = [
+      "spotify",
+      ...SPOTIFY_COMMANDS.map((c) => `spotify ${c.command}`),
+    ];
 
     const candidates = Array.from(
       new Set(q.startsWith("spotify") ? spotify : [...base, ...spotify]),
@@ -55,7 +58,9 @@ function CNotFound({ input }: { input: string }) {
 
   return (
     <AnimatedSpan>
-      <p className="text-destructive">Command &apos;{input}&apos; was not found.</p>
+      <p className="text-destructive">
+        Command &apos;{input}&apos; was not found.
+      </p>
       {suggestions.length > 0 && (
         <p className="text-muted-foreground">
           Did you mean{" "}

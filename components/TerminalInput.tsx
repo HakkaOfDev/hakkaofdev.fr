@@ -2,10 +2,10 @@
 
 import { ArrowRight } from "lucide-react";
 import { useRef, useState } from "react";
-import { useCommands } from "./CommandsProvider";
 import { useCommandHistory } from "@/hooks/useCommandHistory";
-import { useSuggestions } from "@/hooks/useSuggestions";
 import { useInputHandlers } from "@/hooks/useInputHandlers";
+import { useSuggestions } from "@/hooks/useSuggestions";
+import { useCommands } from "./CommandsProvider";
 import SuggestionList from "./SuggestionList";
 
 function TerminalInput() {

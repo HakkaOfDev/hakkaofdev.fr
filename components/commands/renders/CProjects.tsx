@@ -1,7 +1,7 @@
-import { AnimatedSpan } from "@/components/AnimatedComponents";
-import { PROJECTS } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { PROJECTS } from "@/lib/constants";
 
 function CProjects() {
   return (
@@ -10,6 +10,7 @@ function CProjects() {
         <Link
           href={project.url}
           key={project.name}
+          aria-label={`Open project: ${project.name}`}
           target="_blank"
           className="h-auto group"
         >

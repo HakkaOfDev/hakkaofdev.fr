@@ -1,5 +1,5 @@
-import MainScreen from "@/components/MainScreen";
 import Image from "next/image";
+import MainScreen from "@/components/MainScreen";
 
 export default function Home() {
   return (
