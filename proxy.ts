@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-import { type NextRequest, NextResponse, after } from "next/server";
+import { after, type NextRequest, NextResponse } from "next/server";
 
 export function proxy(_request: NextRequest) {
   if (process.env.NODE_ENV !== "production") return NextResponse.next();

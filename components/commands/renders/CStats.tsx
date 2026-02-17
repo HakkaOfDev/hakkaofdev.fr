@@ -1,9 +1,5 @@
 "use client";
 
-import { getStats } from "@/app/actions";
-import type { StatsData } from "@/lib/types/stats";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
-import { cn } from "@/lib/utils";
 import { useQuery } from "@tanstack/react-query";
 import {
   Calendar,
@@ -13,6 +9,10 @@ import {
   GitCommitHorizontal,
   Star,
 } from "lucide-react";
+import { getStats } from "@/app/actions";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
+import type { StatsData } from "@/lib/types/stats";
+import { cn } from "@/lib/utils";
 
 type StatCardProps = {
   icon: React.ReactNode;

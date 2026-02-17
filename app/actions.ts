@@ -1,7 +1,7 @@
 "use server";
 
-import * as spotifyService from "@/lib/services/spotify";
 import * as githubService from "@/lib/services/github";
+import * as spotifyService from "@/lib/services/spotify";
 import * as statsService from "@/lib/services/stats";
 
 // ─── Spotify ─────────────────────────────────────────────────────────────────

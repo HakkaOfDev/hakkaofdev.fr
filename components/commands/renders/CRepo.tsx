@@ -14,10 +14,10 @@ import {
 import Link from "next/link";
 import { useCallback, useState } from "react";
 import { getGitHubRepo } from "@/app/actions";
-import type { GitHubRepo } from "@/lib/types/github";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { Tag } from "@/components/ui/Tag";
 import { SITE } from "@/lib/constants";
+import type { GitHubRepo } from "@/lib/types/github";
 import { cn } from "@/lib/utils";
 
 function formatCount(count: number): string {
