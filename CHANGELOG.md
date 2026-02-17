@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.3.0...v1.3.1) (2026-02-17)
+
+
+### Bug Fixes
+
+* formatting in contact and spotify ([ffafa45](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/ffafa45f616db37c2b0244763f15d2f5e920a38f))
+
+
+### Code Refactoring
+
+* **commands:** extract SubCommandRouter and polish command renders ([ed6ab1c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/ed6ab1cf1a81bf52b50b38de695922858dc2b9d8))
+
 ## [1.3.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.2.0...v1.3.0) (2026-02-17)
 
 
