@@ -40,32 +40,7 @@
       "style": {
         "noNonNullAssertion": "warn",
         "useImportType": "error",
-        "useComponentExportOnlyModules": {
-          "level": "error",
-          "options": {
-            "allowExportNames": [
-              "metadata",
-              "viewport",
-              "generateMetadata",
-              "generateViewport",
-              "generateStaticParams",
-              "runtime",
-              "contentType",
-              "size",
-              "alt",
-              "dynamic",
-              "revalidate",
-              "fetchCache",
-              "preferredRegion",
-              "maxDuration",
-              "config",
-              "useCommands",
-              "shortcutVariants",
-              "tagVariants"
-            ],
-            "allowConstantExport": true
-          }
-        }
+        "useComponentExportOnlyModules": "off"
       },
       "suspicious": {
         "noExplicitAny": "warn"

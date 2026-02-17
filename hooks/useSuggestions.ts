@@ -1,15 +1,13 @@
 import { useCallback, useMemo, useState } from "react";
 import {
-  COMMANDS,
-  SPOTIFY_COMMANDS,
+  ALL_COMMANDS,
+  type CommandGroup,
 } from "@/components/commands/command-descriptors";
-
-export type SuggestionGroup = "Work" | "Profile" | "Spotify" | "Commands";
 
 export type Suggestion = {
   value: string;
   description?: string;
-  group: SuggestionGroup;
+  group: CommandGroup;
 };
 
 // ─── Helpers ───────────────────────────────────────────────────────────
@@ -26,31 +24,15 @@ function longestCommonPrefix(items: string[]): string {
   return prefix;
 }
 
-const COMMAND_GROUP_MAP: Record<string, SuggestionGroup> = {
-  projects: "Work",
-  experiences: "Work",
-  skills: "Profile",
-  about: "Profile",
-  education: "Profile",
-  spotify: "Spotify",
-};
-
 function buildSuggestionPool(): Suggestion[] {
-  const base: Suggestion[] = COMMANDS.map((c) => ({
-    value: c.command,
-    description: c.description,
-    group: COMMAND_GROUP_MAP[c.command] ?? "Commands",
-  }));
-
-  const spotify: Suggestion[] = SPOTIFY_COMMANDS.map((c) => ({
-    value: `spotify ${c.command}`,
-    description: c.description,
-    group: "Spotify" as const,
-  }));
-
-  // De-dupe by value (COMMANDS already includes "spotify").
   const map = new Map<string, Suggestion>();
-  for (const s of [...base, ...spotify]) map.set(s.value, s);
+  for (const c of ALL_COMMANDS) {
+    map.set(c.command, {
+      value: c.command,
+      description: c.description,
+      group: c.group,
+    });
+  }
 
   return Array.from(map.values()).sort((a, b) =>
     a.value.localeCompare(b.value),
@@ -80,6 +62,17 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
     if (q.startsWith("spotify ")) {
       return allSuggestions
         .filter((s) => s.value.startsWith("spotify "))
+        .filter((s) => s.value.startsWith(q))
+        .slice(0, 8);
+    }
+
+    if (q === "theme") {
+      return allSuggestions.filter((s) => s.value.startsWith(q)).slice(0, 8);
+    }
+
+    if (q.startsWith("theme ")) {
+      return allSuggestions
+        .filter((s) => s.value.startsWith("theme "))
         .filter((s) => s.value.startsWith(q))
         .slice(0, 8);
     }
@@ -126,6 +119,13 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
       return;
     }
 
+    // Special case: bare "theme" → append a space to drill into modes.
+    if (q === "theme") {
+      setValue("theme ");
+      openPopover();
+      return;
+    }
+
     const matches = suggestions.map((s) => s.value);
     if (matches.length === 0) return;
 
@@ -142,24 +142,17 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
     }
   }, [value, suggestions, setValue, openPopover, closePopover]);
 
-  /** Apply the currently highlighted suggestion. Returns `true` if the value
-   *  was actually changed (i.e. it was a partial completion). Returns `false`
-   *  when there's nothing to apply or the input already matches exactly, so
-   *  the caller can fall through to submit. */
-  const applyActiveSuggestion = useCallback((): boolean => {
+  /** Resolve the currently highlighted suggestion and close the popover.
+   *  Returns the suggestion value so the caller can submit it directly,
+   *  or `null` when there's nothing to apply. */
+  const applyActiveSuggestion = useCallback((): string | null => {
     const s = suggestions[safeActiveIndex];
-    if (!s) return false;
-
-    // Value already matches — just close the popover and let Enter submit.
-    if (value.trim().toLowerCase() === s.value) {
-      closePopover();
-      return false;
-    }
+    if (!s) return null;
 
     setValue(s.value);
     closePopover();
-    return true;
-  }, [suggestions, safeActiveIndex, value, setValue, closePopover]);
+    return s.value;
+  }, [suggestions, safeActiveIndex, setValue, closePopover]);
 
   /** Pick a specific suggestion by index (e.g. on click). */
   const applySuggestion = useCallback(

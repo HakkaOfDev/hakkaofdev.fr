@@ -78,12 +78,80 @@
   60% { rotate: 0deg; }
 }
 
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
     white-space: pre-wrap;
+    outline: none;
   }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* ── Terminal uniform shadow (only on focus) ── */
+.terminal-shadow {
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+}
+.terminal-shadow:has(.terminal-input:focus) {
+  box-shadow:
+    0 0 36px -6px oklch(0.55 0.17 195 / 22%),
+    0 0 14px -3px oklch(0.55 0.17 195 / 14%);
+}
+.dark .terminal-shadow:has(.terminal-input:focus) {
+  box-shadow:
+    0 0 36px -6px oklch(0.78 0.14 195 / 12%),
+    0 0 14px -3px oklch(0.78 0.14 195 / 6%);
+}
+
+/* ── Terminal scrollbar ── */
+.terminal-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.terminal-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.terminal-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 9999px;
+}
+.terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--muted-foreground);
+}
+
+/* ── Terminal input caret ── */
+.terminal-input {
+  caret-color: var(--chart-1);
+}
+
+/* ── Idle cursor blink (shown when input is empty & focused) ── */
+.terminal-cursor-idle::after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 1.1em;
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  background-color: var(--chart-1);
+  animation: cursor-blink 1s step-end infinite;
+}
+
+/* ── Traffic light dot glow on hover ── */
+.traffic-light {
+  transition: box-shadow 0.2s ease;
+}
+.group\/dots:hover .traffic-light-red {
+  box-shadow: 0 0 6px 1px oklch(0.65 0.25 25 / 40%);
+}
+.group\/dots:hover .traffic-light-yellow {
+  box-shadow: 0 0 6px 1px oklch(0.8 0.16 85 / 40%);
+}
+.group\/dots:hover .traffic-light-green {
+  box-shadow: 0 0 6px 1px oklch(0.65 0.2 145 / 40%);
 }

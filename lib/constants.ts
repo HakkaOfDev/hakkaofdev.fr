@@ -8,9 +8,12 @@ import {
 
 export const SITE = {
   url: "https://hakkaofdev.fr",
+  repositoryUrl: "https://github.com/hakkaofdev/hakkaofdev.fr",
   title: "Alexandre Gossard | Digital Nomad & Software Engineer",
   name: "Alexandre Gossard",
   handle: "hakkaofdev",
+  email: "alexandre.gossard.pro@gmail.com",
+  location: "Châlons-en-Champagne, France",
   description:
     "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
   jobTitle: "Software Engineer",
@@ -42,12 +45,12 @@ export const SOCIALS: { name: string; url: string; icon: LucideIcon }[] = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/hakkaofdev/",
+    url: "https://linkedin.com/in/hakkaofdev",
     icon: Linkedin,
   },
   {
     name: "Instagram",
-    url: "https://www.instagram.com/hakkaofdev/",
+    url: "https://instagram.com/hakkaofdev",
     icon: Instagram,
   },
   {
@@ -89,7 +92,7 @@ export const PROJECTS = [
     name: "Kabila Wallet",
     description:
       "A non-custodial, simple, and secure wallet for the Hedera network. Manage your accounts, tokens, NFTs, and connect with DApps while maintaining full control of your assets.",
-    url: "https://www.kabila.app/docs/kabila-wallet",
+    url: "https://kabila.app/docs/kabila-wallet",
     imageUrl: "/projects/kabila-wallet.webp",
     tags: ["Next.js", "Tailwind", "Javascript", "Blockchain"],
   },
@@ -97,13 +100,14 @@ export const PROJECTS = [
     name: "Ferreira Borges Thomas",
     description:
       "A professional website for an automotive repair business, featuring services, transparent pricing and contact information.",
-    url: "https://www.thomas-ferreira.fr",
+    url: "https://thomas-ferreira.fr",
     imageUrl: "/projects/fbt-auto-repair.png",
     tags: ["Next.js", "Tailwind", "Typescript", "Freelance"],
   },
   {
     name: "Brian Grav&Style",
-    description: "An e-commerce website for an engraving company.",
+    description:
+      "A custom e-commerce platform for a professional engraving studio, featuring a product catalog, online ordering and an admin dashboard for order management.",
     url: "https://brian-gravure.vercel.app",
     imageUrl: "/projects/brian-gravure.png",
     tags: ["Next.js", "Tailwind", "Typescript", "E-commerce"],
@@ -142,8 +146,8 @@ export const PROJECTS = [
 ];
 
 export const SKILLS = {
-  languages: ["Javascript", "Typescript", "Python"],
-  frameworks: [
+  Languages: ["Javascript", "Typescript", "Python"],
+  Frameworks: [
     "Next.js",
     "Vue.js",
     "React",
@@ -152,15 +156,15 @@ export const SKILLS = {
     "Flask",
     "Django",
   ],
-  styling: ["Tailwind", "shadcn/ui", "Motion"],
-  devtools: ["Biome", "Bun"],
-  databases: ["PostgreSQL", "Supabase", "MongoDB", "Redis"],
-  hosting: ["Vercel", "AWS"],
-  workflow: ["Git", "Gitlab"],
-  orm: ["Prisma"],
-  devops: ["Docker", "k8s"],
-  automation: ["n8n", "openclaw"],
-  ai: ["Codex", "Claude"],
+  "UI / Styling": ["Tailwind", "shadcn/ui", "Motion"],
+  Tooling: ["Biome", "Bun"],
+  Databases: ["PostgreSQL", "Supabase", "MongoDB", "Redis"],
+  Cloud: ["Vercel", "AWS"],
+  VCS: ["Git", "Gitlab"],
+  ORM: ["Prisma"],
+  DevOps: ["Docker", "k8s"],
+  Automation: ["n8n", "openclaw"],
+  AI: ["Codex", "Claude"],
 };
 
 export const EDUCATION = [
@@ -231,15 +235,19 @@ export const EXPERIENCES = [
 
 export const LANGUAGES = [
   {
-    lang: "French",
+    lang: "🇫🇷 French",
     level: "Native",
   },
   {
-    lang: "English",
+    lang: "🇬🇧 English",
     level: "C1",
   },
   {
-    lang: "Spanish",
+    lang: "🇷🇺 Russian",
+    level: "A2",
+  },
+  {
+    lang: "🇪🇸 Spanish",
     level: "A2",
   },
 ];
@@ -248,7 +256,19 @@ export const HOBBIES = [
   "Motorcycles",
   "Cars",
   "Weightlifting",
+  "Calisthenics",
   "Traveling",
   "Manga",
   "Gaming",
+];
+
+export const CLOSE_MESSAGES = [
+  "Nice try! You can't close me.",
+  "I'm not going anywhere. Try 'help' instead!",
+  "Nope. This terminal has trust issues with close buttons.",
+  "Error 418: I'm a teapot, not a closable window.",
+  "sudo rm -rf / ? Yeah... no.",
+  "You really thought that would work?",
+  "Close me? In this economy?",
+  "I'm built different. Try 'contact' instead.",
 ];

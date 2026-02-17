@@ -15,7 +15,7 @@ interface UseInputHandlersOptions {
   closePopover: () => void;
   moveActiveIndex: (delta: number) => void;
   applyTabCompletion: () => void;
-  applyActiveSuggestion: () => boolean;
+  applyActiveSuggestion: () => string | null;
   hasSuggestions: boolean;
 }
 
@@ -39,16 +39,20 @@ export function useInputHandlers({
   applyActiveSuggestion,
   hasSuggestions,
 }: UseInputHandlersOptions) {
-  const submit = useCallback(() => {
-    if (value === "") return;
-    addCommand(value);
-    setValue("");
-    resetHistory();
-    closePopover();
-    if (window.innerWidth <= 768) {
-      (document.activeElement as HTMLElement)?.blur();
-    }
-  }, [value, addCommand, setValue, resetHistory, closePopover]);
+  const submit = useCallback(
+    (override?: string) => {
+      const cmd = override ?? value;
+      if (cmd === "") return;
+      addCommand(cmd);
+      setValue("");
+      resetHistory();
+      closePopover();
+      if (window.innerWidth <= 768) {
+        (document.activeElement as HTMLElement)?.blur();
+      }
+    },
+    [value, addCommand, setValue, resetHistory, closePopover],
+  );
 
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
@@ -106,11 +110,11 @@ export function useInputHandlers({
         return;
       }
 
-      // Enter → apply suggestion or submit
+      // Enter → run the highlighted suggestion (or current input) immediately
       if (e.key === "Enter") {
         e.preventDefault();
-        if (isOpen && applyActiveSuggestion()) return;
-        submit();
+        const resolved = isOpen ? applyActiveSuggestion() : null;
+        submit(resolved ?? undefined);
       }
     },
     [

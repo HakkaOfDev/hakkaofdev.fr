@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { getNowPlaying } from "@/app/actions";
@@ -17,85 +17,72 @@ function SpotifyPlayer() {
   if (!data || !data.is_playing) return null;
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
+    <m.div
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
+      className="overflow-hidden border-t border-border/30 dark:border-white/[0.05]"
     >
       <Link
         href={data.item.external_urls.spotify}
         target="_blank"
-        aria-label="Spotify Player"
-        className="flex items-center group"
+        className="flex items-center gap-2.5 px-4 py-1.5 group hover:bg-muted/30 dark:hover:bg-white/[0.02] transition-colors duration-150"
       >
+        <span className="sr-only">Now playing on Spotify:</span>
+        {/* Animated bars */}
+        <div
+          className="flex items-end gap-[2px] h-3.5 shrink-0"
+          aria-hidden="true"
+        >
+          <m.span
+            animate={{ scaleY: [0.3, 1, 0.4, 0.8, 0.3] }}
+            transition={{
+              duration: 2.2,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "easeInOut",
+            }}
+            className="w-[2.5px] h-3 bg-chart-2/70 origin-bottom rounded-full"
+          />
+          <m.span
+            animate={{ scaleY: [0.8, 0.3, 1, 0.5, 0.8] }}
+            transition={{
+              duration: 2.6,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "easeInOut",
+            }}
+            className="w-[2.5px] h-3 bg-chart-2/70 origin-bottom rounded-full"
+          />
+          <m.span
+            animate={{ scaleY: [0.5, 0.9, 0.3, 1, 0.5] }}
+            transition={{
+              duration: 2.0,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "easeInOut",
+            }}
+            className="w-[2.5px] h-3 bg-chart-2/70 origin-bottom rounded-full"
+          />
+        </div>
+
+        {/* Album art */}
         <Image
           src={data.item.album.images[0].url}
           alt={data.item.name}
-          width={24}
-          height={24}
+          width={20}
+          height={20}
           quality={75}
-          className="max-h-6 rounded-xs"
+          className="h-5 w-5 rounded-sm shrink-0"
         />
-        <div className="flex flex-col items-start ml-2 mr-1">
-          <p className="text-[0.65rem] font-semibold line-clamp-1 max-w-[200px] group-hover:text-chart-2 transition-colors duration-200">
+
+        {/* Track info */}
+        <span className="text-[11px] text-muted-foreground/80 truncate min-w-0 group-hover:text-muted-foreground transition-colors duration-150">
+          <span className="font-medium text-muted-foreground/90 group-hover:text-chart-2 transition-colors duration-150">
             {data.item.name}
-          </p>
-          <p className="text-[0.5rem] leading-none text-muted-foreground">
-            {data.item.artists[0].name}
-          </p>
-        </div>
-        <div className="flex items-end gap-[2px] h-4 ml-2 overflow-hidden">
-          <motion.div
-            animate={{
-              transform: [
-                "scaleY(1.0) translateY(0rem)",
-                "scaleY(1.5) translateY(0.4rem)",
-                "scaleY(1.0) translateY(0rem)",
-              ],
-            }}
-            transition={{
-              delay: 0.1,
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="w-[2px] h-3 bg-chart-2"
-          />
-          <motion.div
-            animate={{
-              transform: [
-                "scaleY(1.0) translateY(0rem)",
-                "scaleY(3) translateY(0rem)",
-                "scaleY(1.0) translateY(0rem)",
-              ],
-            }}
-            transition={{
-              delay: 0.2,
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="w-[2px] h-2 bg-chart-2"
-          />
-          <motion.div
-            animate={{
-              transform: [
-                "scaleY(1.0) translateY(0rem)",
-                "scaleY(0.5) translateY(0.5rem)",
-                "scaleY(1.0) translateY(0rem)",
-              ],
-            }}
-            transition={{
-              delay: 0.3,
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="w-[2px] h-4 bg-chart-2"
-          />
-        </div>
+          </span>
+          <span className="mx-1.5 text-muted-foreground/70">&middot;</span>
+          {data.item.artists[0].name}
+        </span>
       </Link>
-    </motion.div>
+    </m.div>
   );
 }
 
