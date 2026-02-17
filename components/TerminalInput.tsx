@@ -3,13 +3,15 @@
 import { ArrowRight } from "lucide-react";
 import { useRef, useState } from "react";
 import { useCommandHistory } from "@/hooks/useCommandHistory";
+import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
 import { useInputHandlers } from "@/hooks/useInputHandlers";
 import { useSuggestions } from "@/hooks/useSuggestions";
+import { cn } from "@/lib/utils";
 import { useCommands } from "./CommandsProvider";
 import SuggestionList from "./SuggestionList";
 
 function TerminalInput() {
-  const { addCommand } = useCommands();
+  const { addCommand, clearCommands, reset } = useCommands();
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -26,6 +28,14 @@ function TerminalInput() {
     applyActiveSuggestion,
     applySuggestion,
   } = useSuggestions(value, setValue);
+
+  useGlobalShortcuts({
+    clearCommands,
+    reset,
+    setValue,
+    resetHistory,
+    closePopover,
+  });
 
   const { handleSubmit, handleKeyDown, handleChange, handleFocus } =
     useInputHandlers({
@@ -47,24 +57,29 @@ function TerminalInput() {
 
   return (
     <div className="relative">
-      <form onSubmit={handleSubmit}>
-        {isOpen && (
-          <SuggestionList
-            suggestions={suggestions}
-            activeIndex={safeActiveIndex}
-            onSelect={(idx) => {
-              applySuggestion(idx);
-              inputRef.current?.focus();
-            }}
-          />
-        )}
+      {isOpen && (
+        <SuggestionList
+          suggestions={suggestions}
+          activeIndex={safeActiveIndex}
+          query={value.trim().toLowerCase()}
+          onSelect={(idx) => {
+            applySuggestion(idx);
+            inputRef.current?.focus();
+          }}
+        />
+      )}
+
+      <form onSubmit={handleSubmit} className="flex items-center gap-2">
+        <span className="text-chart-1 font-bold text-sm select-none shrink-0">
+          ❯
+        </span>
 
         <input
           type="text"
           value={value}
           onChange={handleChange}
-          placeholder="Type 'help' or your command here..."
-          className="outline-none bg-transparent border w-full h-10 p-2 pr-10 rounded-md text-base md:text-sm"
+          placeholder="type a command..."
+          className="flex-1 min-w-0 outline-none bg-transparent text-sm font-mono terminal-input placeholder:text-muted-foreground/30 placeholder:font-normal"
           onKeyDown={handleKeyDown}
           onFocus={handleFocus}
           autoComplete="off"
@@ -73,11 +88,16 @@ function TerminalInput() {
 
         <button
           type="submit"
-          className="absolute right-2 top-1/2 hover:bg-accent rounded-full aspect-square w-7 transition-colors duration-200 cursor-pointer flex items-center justify-center -translate-y-1/2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className={cn(
+            "shrink-0 rounded-full aspect-square w-6 transition-all duration-200 cursor-pointer flex items-center justify-center",
+            value.length > 0
+              ? "text-muted-foreground/60 hover:text-chart-1 hover:bg-chart-1/10"
+              : "opacity-0 pointer-events-none",
+          )}
           aria-label="Submit Command"
           disabled={value.length === 0}
         >
-          <ArrowRight size={16} />
+          <ArrowRight size={14} />
           <span className="sr-only">Submit Command</span>
         </button>
       </form>
