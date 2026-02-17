@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit",
+    "audit": "pnpm audit --prod --audit-level=high",
     "prettier:fix": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "author": {

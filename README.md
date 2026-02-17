@@ -7,13 +7,14 @@ Live: https://hakkaofdev.fr
 ## Features
 
 - Terminal UI with command input, command history, and autocomplete
-- Built-in commands: `help`, `projects`, `skills`, `about`, `education`, `experiences`, `clear`, `reset`, `welcome`
+- Built-in commands: `help`, `projects`, `skills`, `about`, `education`, `experiences`, `clear`, `reset`, `spotify`
 - Optional Spotify integration:
   - Header "Now Playing" widget (polls every 15s)
   - Terminal commands: `spotify now`, `spotify top`, `spotify history`
 - Light/dark theme toggle (`next-themes`)
 - Animations (`framer-motion` + `motion/react`)
 - SEO-friendly metadata + `sitemap.xml` and `robots.txt`
+- Dynamic social preview images (`/opengraph-image`, `/twitter-image`) + JSON-LD person schema
 - Vercel Speed Insights
 
 ## Tech Stack
@@ -52,10 +53,12 @@ pnpm build
 pnpm start
 ```
 
-### Lint / Format
+### Quality / Format
 
 ```bash
 pnpm lint
+pnpm typecheck
+pnpm audit
 pnpm prettier:fix
 ```
 
@@ -88,11 +91,11 @@ If you do not set Spotify env vars, Spotify UI will stay hidden and the `spotify
 
 ## Terminal Commands
 
-Commands are defined in `lib/constants.ts` (used for autocomplete/help) and rendered via `components/commands/CommandItem.tsx`.
+Top-level commands are defined in `components/commands/command-descriptors.ts` and rendered via `components/commands/registry.tsx`.
+Spotify subcommands are described in `components/commands/command-descriptors.ts` and wired in `components/commands/spotify-registry.tsx`.
 
 | Command | What it does |
 | --- | --- |
-| `welcome` | Show the intro screen |
 | `help` | List all available commands |
 | `projects` | Show projects grid (opens links in a new tab) |
 | `skills` | Show categorized skills |
@@ -118,9 +121,15 @@ Most portfolio content lives in `lib/constants.ts`:
 
 To add a new terminal command:
 
-1. Add the command + description to `COMMANDS` in `lib/constants.ts` (for autocomplete/help).
+1. Add the command + description to `COMMANDS` in `components/commands/command-descriptors.ts` (autocomplete/help + did-you-mean).
 2. Create a renderer component in `components/commands/renders/`.
-3. Wire it into the `switch` in `components/commands/CommandItem.tsx`.
+3. Wire it in `components/commands/registry.tsx` (`COMMAND_RENDERERS` map).
+
+To add a new Spotify sub-command:
+
+1. Add the sub-command + description to `SPOTIFY_COMMANDS` in `components/commands/command-descriptors.ts`.
+2. Add the renderer in `components/commands/renders/spotify/`.
+3. Wire it in `components/commands/spotify-registry.tsx`.
 
 ## Deployment
 
@@ -130,6 +139,13 @@ Set these environment variables in your hosting provider:
 
 - `NEXT_PUBLIC_SITE_URL` (e.g. `https://hakkaofdev.fr`)
 - Spotify variables if you want Spotify features
+
+## CI
+
+GitHub Actions workflows are included:
+
+- `.github/workflows/ci.yml`: runs `pnpm lint`, `pnpm typecheck`, and `pnpm build` on PRs/pushes to `main`
+- `.github/workflows/dependency-audit.yml`: runs `pnpm audit --prod --audit-level=high` on PRs + weekly schedule
 
 ## Notes
 
