@@ -12,9 +12,9 @@ Live: https://hakkaofdev.fr
   - Header "Now Playing" widget (polls every 15s)
   - Terminal commands: `spotify now`, `spotify top`, `spotify history`
 - Light/dark theme toggle (`next-themes`)
-- Animations (`framer-motion` + `motion/react`)
+- Animations (`motion`)
 - SEO-friendly metadata + `sitemap.xml` and `robots.txt`
-- Dynamic social preview images (`/opengraph-image`, `/twitter-image`) + JSON-LD person schema
+- Dynamic social preview image (`/opengraph-image`) + JSON-LD person schema
 - Vercel Speed Insights
 
 ## Tech Stack
@@ -59,7 +59,7 @@ pnpm start
 pnpm lint
 pnpm typecheck
 pnpm audit
-pnpm prettier:fix
+pnpm format
 ```
 
 ## Configuration (Environment Variables)
