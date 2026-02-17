@@ -1,9 +1,14 @@
 "use client";
 
+import { RotateCcw } from "lucide-react";
 import dynamic from "next/dynamic";
+import { SITE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { useCommands } from "./CommandsProvider";
 import { ModeToggle } from "./ModeToggle";
 import TerminalInput from "./TerminalInput";
+import { useTerminal } from "./TerminalProvider";
+import { TrafficLights } from "./TrafficLights";
 
 const SpotifyPlayer = dynamic(() => import("./SpotifyPlayer"), {
   ssr: false,
@@ -15,30 +20,59 @@ interface TerminalProps {
 }
 
 export const Terminal = ({ children, className }: TerminalProps) => {
+  const { reset } = useCommands();
+  const { isMinimized, isMaximized } = useTerminal();
+
   return (
     <div
       className={cn(
-        "z-0 h-full flex flex-col max-h-full overflow-hidden md:h-[500px] md:max-h-[500px] w-full rounded-xl border border-border bg-background",
+        "z-0 flex flex-col w-full rounded-xl border border-border/60 bg-background terminal-shadow dark:border-white/[0.08] transition-all duration-300 overflow-hidden",
+        isMinimized
+          ? "h-11 max-h-11 md:h-11 md:max-h-11"
+          : isMaximized
+            ? "h-full max-h-full md:h-full md:max-h-full"
+            : "h-full max-h-full md:max-h-[450px]",
         className,
       )}
     >
-      <div className="flex relative border-b border-border p-4">
-        <div className="flex flex-row gap-x-2">
-          <div className="h-2 w-2 rounded-full bg-red-500"></div>
-          <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
-          <div className="h-2 w-2 rounded-full bg-green-500"></div>
+      {/* ── Title Bar ── */}
+      <div className="flex items-center border-b border-border/50 dark:border-white/[0.06] px-4 h-11 shrink-0 bg-muted/40 dark:bg-white/[0.03] select-none">
+        {/* Left zone */}
+        <div className="flex items-center flex-1 basis-0 min-w-0">
+          <TrafficLights />
         </div>
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <SpotifyPlayer />
-        </div>
-        <div className="absolute right-3 top-1/2 -translate-y-1/2">
+
+        {/* Center zone — title */}
+        <span className="text-[11px] text-muted-foreground/80 font-medium tracking-wide shrink-0">
+          {SITE.handle} &mdash; zsh
+        </span>
+
+        {/* Right zone */}
+        <div className="flex items-center justify-end flex-1 basis-0 min-w-0 gap-0.5">
+          <button
+            type="button"
+            onClick={reset}
+            className="size-7 min-w-7 flex items-center justify-center rounded-md cursor-pointer transition-all duration-200 hover:bg-muted/60 dark:hover:bg-white/[0.08] active:scale-90"
+            title="Reset terminal"
+            aria-label="Reset terminal"
+          >
+            <RotateCcw size={13} className="text-muted-foreground" />
+            <span className="sr-only">Reset terminal</span>
+          </button>
           <ModeToggle />
         </div>
       </div>
-      <pre className="px-4 pt-4 gap-4 divide-y flex-1 overflow-auto flex flex-col-reverse [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-border [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-muted-foreground">
-        <code className="grid divide-y gap-4">{children}</code>
+
+      {/* ── Content Area ── */}
+      <pre className="px-4 pt-4 flex-1 overflow-auto flex flex-col-reverse terminal-scrollbar">
+        <code className="grid gap-4">{children}</code>
       </pre>
-      <div className="p-4">
+
+      {/* ── Spotify Status Bar (only visible when playing) ── */}
+      <SpotifyPlayer />
+
+      {/* ── Input Area ── */}
+      <div className="px-4 py-3 border-t border-border/30 dark:border-white/[0.05]">
         <TerminalInput />
       </div>
     </div>

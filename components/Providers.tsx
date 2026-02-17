@@ -1,6 +1,7 @@
 "use client";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { domAnimation, LazyMotion } from "motion/react";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 
 const queryClient = new QueryClient();
@@ -13,7 +14,9 @@ function Providers({ children }: { children: React.ReactNode }) {
         defaultTheme="dark"
         disableTransitionOnChange
       >
-        {children}
+        <LazyMotion features={domAnimation} strict>
+          {children}
+        </LazyMotion>
       </NextThemeProvider>
     </QueryClientProvider>
   );
