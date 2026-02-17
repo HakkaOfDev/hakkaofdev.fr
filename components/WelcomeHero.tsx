@@ -90,15 +90,19 @@ function WelcomeHero({ className }: { className?: string }) {
           <Shortcut label="skills" command="skills" variant="secondary" />
           <Shortcut label="about" command="about" variant="secondary" />
           <Shortcut label="education" command="education" variant="secondary" />
-          <Shortcut label="contact" command="contact" variant="secondary" />
+          <Shortcut label="stats" command="stats" variant="secondary" />
           <Shortcut label="cv" command="cv" variant="secondary" />
         </ShortcutRow>
 
         <ShortcutRow label="Extras">
           <Shortcut label="spotify" command="spotify" variant="purple" />
           <Shortcut label="theme" command="theme" variant="orange" />
-          <Shortcut label="repo" command="repo" />
+        </ShortcutRow>
+
+        <ShortcutRow label="Utils">
+          <Shortcut label="contact" command="contact" />
           <Shortcut label="help" command="help" />
+          <Shortcut label="repo" command="repo" />
         </ShortcutRow>
       </ShortcutSection>
     </div>

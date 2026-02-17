@@ -15,7 +15,7 @@ import { Shortcut } from "@/components/ui/Shortcut";
 
 /* ─── Keyboard tips ─────────────────────────────────────────────────── */
 
-const TIPS = [
+const KEYBOARD_SHORTCUTS = [
   {
     icon: <CornerDownLeft className="h-3 w-3 shrink-0" />,
     keys: ["Enter"],
@@ -86,20 +86,20 @@ function CHelp() {
       {/* ── Keyboard shortcuts ── */}
       <ShortcutSection title="Keyboard shortcuts">
         <div className="grid gap-1.5">
-          {TIPS.map((tip) => (
+          {KEYBOARD_SHORTCUTS.map((shortcut) => (
             <div
-              key={tip.keys.join(" ")}
+              key={shortcut.keys.join(" ")}
               className="grid grid-cols-[140px_1fr] gap-3 items-center"
             >
               <span className="inline-flex items-center gap-1">
-                {tip.icon}
-                {tip.keys.map((key, i) => [
+                {shortcut.icon}
+                {shortcut.keys.map((key, i) => [
                   i > 0 && (
                     <span
                       key={`${key}-sep`}
                       className="text-[10px] text-muted-foreground/40"
                     >
-                      {tip?.isCombined ? "+" : "/"}
+                      {shortcut?.isCombined ? "+" : "/"}
                     </span>
                   ),
                   <kbd
@@ -111,7 +111,7 @@ function CHelp() {
                 ])}
               </span>
               <span className="text-xs text-muted-foreground">
-                {tip.description}
+                {shortcut.description}
               </span>
             </div>
           ))}

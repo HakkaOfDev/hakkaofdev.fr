@@ -26,12 +26,17 @@ function formatCount(count: number): string {
 }
 
 function CopyButton({ text }: { text: string }) {
-  const [copied, setCopied] = useState(false);
+  const [status, setStatus] = useState<"idle" | "copied" | "failed">("idle");
 
-  const handleCopy = useCallback(() => {
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const handleCopy = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setStatus("copied");
+    } catch {
+      setStatus("failed");
+    }
+
+    setTimeout(() => setStatus("idle"), 2000);
   }, [text]);
 
   return (
@@ -39,10 +44,18 @@ function CopyButton({ text }: { text: string }) {
       type="button"
       onClick={handleCopy}
       className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium bg-chart-1/10 text-chart-1 ring-1 ring-inset ring-chart-1/20 hover:bg-chart-1/20 transition-colors duration-200 cursor-pointer"
-      aria-label={copied ? "Copied" : "Copy to clipboard"}
+      aria-label={
+        status === "copied"
+          ? "Copied"
+          : status === "failed"
+            ? "Copy failed"
+            : "Copy to clipboard"
+      }
     >
-      {copied ? <Check size={12} /> : <Copy size={12} />}
-      {copied ? "Copied!" : "Copy"}
+      {status === "copied" ? <Check size={12} /> : <Copy size={12} />}
+      {status === "copied" && "Copied!"}
+      {status === "failed" && "Try again"}
+      {status === "idle" && "Copy"}
     </button>
   );
 }
@@ -188,8 +201,10 @@ function RepoFallback() {
   const cloneUrl = `git clone ${SITE.repositoryUrl}.git`;
 
   return (
-    <AnimatedSpan className="gap-1">
-      <p className="text-muted-foreground">Portfolio source repository:</p>
+    <AnimatedSpan className="gap-2">
+      <p className="text-muted-foreground">
+        Source code for this portfolio is available here:
+      </p>
       <p>
         <Link
           href={SITE.repositoryUrl}
@@ -199,11 +214,10 @@ function RepoFallback() {
           {SITE.repositoryUrl}
         </Link>
       </p>
-      <div className="flex items-center gap-2 mt-1">
-        <p className="text-muted-foreground">
-          Clone:{" "}
-          <span className="text-foreground font-semibold">{cloneUrl}</span>
-        </p>
+      <div className="flex items-center gap-2 mt-1 flex-wrap">
+        <code className="text-foreground font-semibold rounded bg-muted/60 px-2 py-1 text-[11px]">
+          {cloneUrl}
+        </code>
         <CopyButton text={cloneUrl} />
       </div>
     </AnimatedSpan>
