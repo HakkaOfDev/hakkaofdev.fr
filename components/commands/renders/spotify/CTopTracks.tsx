@@ -1,7 +1,7 @@
-import { getTopTracks } from "@/app/actions";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
 import Image from "next/image";
 import Link from "next/link";
+import { getTopTracks } from "@/app/actions";
+import { AnimatedSpan } from "@/components/AnimatedComponents";
 import SpotifyQuery from "./SpotifyQuery";
 
 function CTopTracks() {
@@ -25,6 +25,7 @@ function CTopTracks() {
                     <Link
                       href={item.external_urls.spotify}
                       target="_blank"
+                      aria-label={`Open top track: ${item.name}`}
                       className="flex items-center gap-2 py-1 group"
                     >
                       <Image
@@ -49,6 +50,7 @@ function CTopTracks() {
                       <Link
                         href={item.album.external_urls.spotify}
                         target="_blank"
+                        aria-label={`Open top album: ${item.album.name}`}
                         className="hover:text-chart-1 leading-4 font-semibold line-clamp-2 text-sm transition-colors duration-200"
                       >
                         {item.album.name}

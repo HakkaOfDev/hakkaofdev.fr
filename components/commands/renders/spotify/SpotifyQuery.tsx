@@ -1,6 +1,6 @@
 "use client";
 
-import { useQuery, type QueryKey } from "@tanstack/react-query";
+import { type QueryKey, useQuery } from "@tanstack/react-query";
 import { Loader } from "lucide-react";
 import type { ReactNode } from "react";
 import SpotifyUnavailable from "./SpotifyUnavailable";
@@ -28,4 +28,3 @@ export default function SpotifyQuery<T>({
 
   return children(data);
 }
-

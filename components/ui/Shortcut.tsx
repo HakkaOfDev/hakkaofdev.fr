@@ -1,8 +1,8 @@
 "use client";
 
+import { cva, type VariantProps } from "class-variance-authority";
 import { useCommands } from "@/components/CommandsProvider";
 import { cn } from "@/lib/utils";
-import { cva, type VariantProps } from "class-variance-authority";
 
 const shortcutVariants = cva(
   "inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-xs font-semibold font-mono ring-1 ring-inset transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-chart-1/70",
@@ -26,9 +26,8 @@ const shortcutVariants = cva(
 );
 
 interface ShortcutProps
-  extends
-  Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "onClick">,
-  VariantProps<typeof shortcutVariants> {
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "onClick">,
+    VariantProps<typeof shortcutVariants> {
   label: string;
   command: string;
 }

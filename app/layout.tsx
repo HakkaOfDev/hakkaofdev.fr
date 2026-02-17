@@ -1,14 +1,14 @@
+import type { Metadata, Viewport } from "next";
+import { Montserrat } from "next/font/google";
 import { CommandsProvider } from "@/components/CommandsProvider";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
 import { getSiteUrl } from "@/lib/site-url";
-import type { Metadata, Viewport } from "next";
-import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GITHUB_URL, SITE, SOCIALS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { SITE, SOCIALS } from "@/lib/constants";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -34,7 +34,6 @@ const personJsonLd = {
 };
 
 const twitterHandle = `@${SITE.handle}` as const;
-const githubUrl = SOCIALS.find((s) => s.name === "GitHub")!.url;
 
 export const metadata: Metadata = {
   title: SITE.title,
@@ -70,7 +69,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: SITE.name,
-      url: githubUrl,
+      url: GITHUB_URL,
     },
   ],
   metadataBase: new URL(siteUrl),

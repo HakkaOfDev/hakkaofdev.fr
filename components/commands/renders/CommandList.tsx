@@ -1,7 +1,7 @@
 "use client";
 
-import { useCommands } from "@/components/CommandsProvider";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { useCommands } from "@/components/CommandsProvider";
 
 type Item = {
   command: string;
@@ -25,13 +25,15 @@ export default function CommandList({
       <div className="flex flex-col w-full gap-1 max-w-full">
         {items.map((item) => (
           <p key={`${prefix}${item.command}`}>
-            <span
-              className="text-chart-2 hover:text-chart-2/80 transition-colors duration-200 cursor-pointer"
+            <button
+              type="button"
+              aria-label={`Run command: ${prefix}${item.command}`}
+              className="text-chart-2 hover:text-chart-2/80 transition-colors duration-200 cursor-pointer bg-transparent border-none p-0 font-inherit"
               onClick={() => addCommand(`${prefix}${item.command}`)}
             >
               {prefix}
               {item.command}
-            </span>{" "}
+            </button>{" "}
             - {item.description}
           </p>
         ))}
@@ -39,4 +41,3 @@ export default function CommandList({
     </AnimatedSpan>
   );
 }
-

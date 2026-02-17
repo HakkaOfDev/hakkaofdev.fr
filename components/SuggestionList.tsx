@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { cn } from "@/lib/utils";
 import type { Suggestion, SuggestionGroup } from "@/hooks/useSuggestions";
+import { cn } from "@/lib/utils";
 import { Tag } from "./ui/Tag";
 
 interface SuggestionListProps {

@@ -1,28 +1,28 @@
 /** @type {import('@commitlint/types').UserConfig} */
 const config = {
-  extends: ['@commitlint/config-conventional'],
+  extends: ["@commitlint/config-conventional"],
   rules: {
-    'type-enum': [
+    "type-enum": [
       2,
-      'always',
+      "always",
       [
-        'feat',
-        'fix',
-        'docs',
-        'style',
-        'refactor',
-        'perf',
-        'test',
-        'build',
-        'ci',
-        'chore',
-        'revert',
-        'deps',
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "build",
+        "ci",
+        "chore",
+        "revert",
+        "deps",
       ],
     ],
-    'subject-case': [2, 'never', ['start-case', 'pascal-case', 'upper-case']],
-    'subject-empty': [2, 'never'],
-    'type-empty': [2, 'never'],
+    "subject-case": [2, "never", ["start-case", "pascal-case", "upper-case"]],
+    "subject-empty": [2, "never"],
+    "type-empty": [2, "never"],
   },
 };
 

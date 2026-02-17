@@ -1,10 +1,10 @@
 "use client";
 
-import { getNowPlaying } from "@/app/actions";
 import { useQuery } from "@tanstack/react-query";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { getNowPlaying } from "@/app/actions";
 
 function SpotifyPlayer() {
   const { data } = useQuery({

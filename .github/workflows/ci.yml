@@ -49,8 +49,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint
-        run: pnpm lint
+      - name: Lint & Format (Biome)
+        run: pnpm format:check
 
       - name: Typecheck
         run: pnpm typecheck
