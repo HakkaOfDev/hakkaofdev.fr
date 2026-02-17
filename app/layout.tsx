@@ -7,7 +7,7 @@ import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { SITE, SOCIALS } from "@/lib/constants";
+import { GITHUB_URL, SITE, SOCIALS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const montserrat = Montserrat({
@@ -34,7 +34,6 @@ const personJsonLd = {
 };
 
 const twitterHandle = `@${SITE.handle}` as const;
-const githubUrl = SOCIALS.find((s) => s.name === "GitHub")!.url;
 
 export const metadata: Metadata = {
   title: SITE.title,
@@ -70,7 +69,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: SITE.name,
-      url: githubUrl,
+      url: GITHUB_URL,
     },
   ],
   metadataBase: new URL(siteUrl),

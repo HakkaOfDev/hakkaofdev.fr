@@ -38,9 +38,7 @@ function WelcomeHero({ className }: { className?: string }) {
             <span className="font-semibold text-chart-1 underline underline-offset-4">
               Digital Nomad
             </span>{" "}
-            ·{" "}
-            <span className="font-semibold text-chart-2">{jobTitle}</span>{" "}
-            at{" "}
+            · <span className="font-semibold text-chart-2">{jobTitle}</span> at{" "}
             <Link
               href={employerUrl}
               className="font-semibold text-chart-2 hover:text-chart-2/80 transition-colors duration-200"

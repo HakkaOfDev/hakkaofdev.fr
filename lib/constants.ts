@@ -32,10 +32,12 @@ export const SITE = {
   ],
 } as const;
 
+export const GITHUB_URL = "https://github.com/hakkaofdev";
+
 export const SOCIALS: { name: string; url: string; icon: LucideIcon }[] = [
   {
     name: "GitHub",
-    url: "https://github.com/hakkaofdev",
+    url: GITHUB_URL,
     icon: Github,
   },
   {
