@@ -70,7 +70,7 @@ export const COMMANDS: CommandDescriptor[] = [
     command: "contact",
     description:
       "Get my email address, social links and preferred contact paths",
-    group: "Profile",
+    group: "Terminal",
   },
   {
     command: "cv",
@@ -128,9 +128,9 @@ export type SpotifyCommandDescriptor = {
 };
 
 export const SPOTIFY_COMMANDS: SpotifyCommandDescriptor[] = [
-  { command: "history", description: "Display my listening history" },
   { command: "now", description: "Display the currently playing song" },
   { command: "top", description: "Display my top tracks" },
+  { command: "history", description: "Display my listening history" },
 ];
 
 export type ThemeCommandDescriptor = {

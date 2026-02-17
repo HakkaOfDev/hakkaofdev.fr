@@ -2,11 +2,20 @@ import Link from "next/link";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { SITE, SOCIALS } from "@/lib/constants";
 
+function getDisplayLink(url: string) {
+  return url.replace(/^https?:\/\/(www\.)?/, "");
+}
+
 function CContact() {
   return (
-    <AnimatedSpan className="gap-1">
+    <AnimatedSpan className="gap-2">
       <p className="text-muted-foreground">
-        Email:{" "}
+        Prefer email for opportunities, freelance requests, or technical
+        collaboration.
+      </p>
+
+      <p className="text-muted-foreground">
+        Primary email:{" "}
         <Link
           href={`mailto:${SITE.email}`}
           className="font-semibold text-chart-1 hover:text-chart-1/80 transition-colors duration-200"
@@ -18,8 +27,9 @@ function CContact() {
         Location:{" "}
         <span className="text-foreground font-semibold">{SITE.location}</span>
       </p>
-      <p className="text-muted-foreground">Socials:</p>
-      <ul className="list-disc pl-4">
+
+      <p className="text-muted-foreground">Social profiles:</p>
+      <ul className="list-disc pl-4 grid gap-1">
         {SOCIALS.map((social) => (
           <li key={social.name}>
             <Link
@@ -29,6 +39,10 @@ function CContact() {
             >
               {social.name}
             </Link>
+            <span className="text-muted-foreground">
+              {" "}
+              · {getDisplayLink(social.url)}
+            </span>
           </li>
         ))}
       </ul>

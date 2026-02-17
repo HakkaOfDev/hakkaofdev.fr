@@ -1,24 +1,28 @@
-import { useMemo } from "react";
-import { SPOTIFY_COMMAND_RENDERERS } from "@/components/commands/spotify-registry";
-import CNotFound from "../CNotFound";
-import CSpotifyHelp from "./CSpotifyHelp";
+"use client";
+
+import {
+  SPOTIFY_COMMAND_RENDERERS,
+  SPOTIFY_COMMANDS,
+} from "@/components/commands/spotify-registry";
+import SubCommandRouter from "../SubCommandRouter";
 
 function CSpotify({ input }: { input: string }) {
-  const content = useMemo(() => {
-    const [command, arg] = input.split(" ");
-
-    if (command === "spotify" && !arg) return <CSpotifyHelp />;
-
-    if (!arg) return <CSpotifyHelp />;
-
-    const renderer =
-      SPOTIFY_COMMAND_RENDERERS[arg as keyof typeof SPOTIFY_COMMAND_RENDERERS];
-    if (!renderer) return <CNotFound input={input} />;
-
-    return renderer();
-  }, [input]);
-
-  return content;
+  return (
+    <SubCommandRouter
+      input={input}
+      commands={SPOTIFY_COMMANDS}
+      prefix="spotify"
+      title="Spotify commands"
+      variant="purple"
+      renderValid={(subcommand) => {
+        const renderer =
+          SPOTIFY_COMMAND_RENDERERS[
+            subcommand as keyof typeof SPOTIFY_COMMAND_RENDERERS
+          ];
+        return renderer();
+      }}
+    />
+  );
 }
 
 export default CSpotify;
