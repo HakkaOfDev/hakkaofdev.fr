@@ -3,10 +3,7 @@
 import { useMemo } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { useCommands } from "@/components/CommandsProvider";
-import {
-  COMMANDS,
-  SPOTIFY_COMMANDS,
-} from "@/components/commands/command-descriptors";
+import { ALL_COMMANDS } from "@/components/commands/command-descriptors";
 
 function levenshtein(a: string, b: string) {
   const dp = Array.from({ length: a.length + 1 }, () =>
@@ -27,6 +24,8 @@ function levenshtein(a: string, b: string) {
   return dp[a.length][b.length];
 }
 
+const ALL_COMMAND_NAMES = ALL_COMMANDS.map((c) => c.command);
+
 function CNotFound({ input }: { input: string }) {
   const { addCommand } = useCommands();
 
@@ -34,15 +33,11 @@ function CNotFound({ input }: { input: string }) {
     const q = input.trim().toLowerCase();
     if (!q) return [] as string[];
 
-    const base = COMMANDS.map((c) => c.command);
-    const spotify = [
-      "spotify",
-      ...SPOTIFY_COMMANDS.map((c) => `spotify ${c.command}`),
-    ];
-
-    const candidates = Array.from(
-      new Set(q.startsWith("spotify") ? spotify : [...base, ...spotify]),
-    );
+    const candidates = q.startsWith("spotify")
+      ? ALL_COMMAND_NAMES.filter((c) => c.startsWith("spotify"))
+      : q.startsWith("theme")
+        ? ALL_COMMAND_NAMES.filter((c) => c.startsWith("theme"))
+        : ALL_COMMAND_NAMES;
 
     const startsWith = candidates.filter((c) => c.startsWith(q));
     if (startsWith.length > 0) return startsWith.slice(0, 3);
@@ -58,17 +53,17 @@ function CNotFound({ input }: { input: string }) {
 
   return (
     <AnimatedSpan>
-      <p className="text-destructive">
-        Command &apos;{input}&apos; was not found.
+      <p className="text-destructive font-mono text-xs">
+        zsh: command not found: {input}
       </p>
       {suggestions.length > 0 && (
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground text-xs mt-1">
           Did you mean{" "}
           {suggestions.map((s, idx) => (
             <span key={s}>
               <button
                 type="button"
-                className="text-chart-2 hover:text-chart-2/80 transition-colors duration-200 font-semibold"
+                className="text-chart-1 hover:text-chart-1/80 transition-colors duration-200 font-semibold font-mono"
                 onClick={() => addCommand(s)}
               >
                 {s}
