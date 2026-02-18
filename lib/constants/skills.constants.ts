@@ -1,0 +1,21 @@
+export const SKILLS = {
+  Languages: ["Javascript", "Typescript", "Python"],
+  Frameworks: [
+    "Next.js",
+    "Vue.js",
+    "React",
+    "React Native",
+    "Expo",
+    "Flask",
+    "Django",
+  ],
+  "UI / Styling": ["Tailwind", "shadcn/ui", "Motion"],
+  Tooling: ["Biome", "Bun"],
+  Databases: ["PostgreSQL", "Supabase", "MongoDB", "Redis"],
+  Cloud: ["Vercel", "AWS"],
+  VCS: ["Git", "Gitlab"],
+  ORM: ["Prisma"],
+  DevOps: ["Docker", "k8s"],
+  Automation: ["n8n", "openclaw"],
+  AI: ["Codex", "Claude"],
+};
