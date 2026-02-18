@@ -3,7 +3,7 @@
 import {
   SPOTIFY_COMMAND_RENDERERS,
   SPOTIFY_COMMANDS,
-} from "@/components/commands/spotify-registry";
+} from "@/components/commands/registries/spotify-registry";
 import SubCommandRouter from "../SubCommandRouter";
 
 function CSpotify({ input }: { input: string }) {

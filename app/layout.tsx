@@ -23,7 +23,7 @@ const personJsonLd = {
   "@type": "Person",
   name: SITE.name,
   url: siteUrl,
-  image: new URL("/avatar.jpeg", siteUrl).toString(),
+  image: new URL("/avatar.jpg", siteUrl).toString(),
   jobTitle: SITE.jobTitle,
   worksFor: {
     "@type": "Organization",

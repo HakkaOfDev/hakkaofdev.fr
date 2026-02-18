@@ -12,6 +12,7 @@ const tagVariants = cva(
         gold: "bg-chart-4/10 text-chart-4 ring-chart-4/20",
         purple: "bg-chart-3/10 text-chart-3 ring-chart-3/20",
         orange: "bg-chart-5/10 text-chart-5 ring-chart-5/20",
+        pink: "bg-pink-500/10 text-pink-500 ring-pink-500/20 dark:bg-pink-400/10 dark:text-pink-400 dark:ring-pink-400/20",
       },
     },
     defaultVariants: {

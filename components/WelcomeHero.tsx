@@ -18,7 +18,7 @@ function WelcomeHero({ className }: { className?: string }) {
       {/* ── Profile ── */}
       <div className="flex flex-col sm:grid sm:grid-cols-[64px_1fr] items-start gap-4">
         <Image
-          src="/avatar.jpeg"
+          src="/avatar.jpg"
           alt="Alexandre Gossard"
           className="aspect-square shrink-0 rounded-lg object-cover object-top ring-1 ring-border/60 dark:ring-white/10 shadow-sm"
           quality={75}
@@ -97,6 +97,7 @@ function WelcomeHero({ className }: { className?: string }) {
         <ShortcutRow label="Extras">
           <Shortcut label="spotify" command="spotify" variant="purple" />
           <Shortcut label="theme" command="theme" variant="orange" />
+          <Shortcut label="guestbook" command="guestbook" variant="pink" />
         </ShortcutRow>
 
         <ShortcutRow label="Utils">
