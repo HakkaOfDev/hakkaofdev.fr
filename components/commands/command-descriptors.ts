@@ -6,6 +6,7 @@ import type { TagProps } from "@/components/ui/Tag";
 export type CommandGroup =
   | "Work"
   | "Profile"
+  | "Guestbook"
   | "Spotify"
   | "Theme"
   | "Terminal";
@@ -20,6 +21,7 @@ export type CommandGroupMeta = {
 export const COMMAND_GROUPS: CommandGroupMeta[] = [
   { group: "Work", shortcutVariant: "primary", tagVariant: "teal" },
   { group: "Profile", shortcutVariant: "secondary", tagVariant: "gold" },
+  { group: "Guestbook", shortcutVariant: "pink", tagVariant: "pink" },
   { group: "Spotify", shortcutVariant: "purple", tagVariant: "purple" },
   { group: "Theme", shortcutVariant: "orange", tagVariant: "orange" },
   { group: "Terminal", shortcutVariant: "default", tagVariant: "default" },
@@ -71,6 +73,11 @@ export const COMMANDS: CommandDescriptor[] = [
     description:
       "Get my email address, social links and preferred contact paths",
     group: "Terminal",
+  },
+  {
+    command: "guestbook",
+    description: "Display the help for the guestbook sub-commands",
+    group: "Guestbook",
   },
   {
     command: "cv",
@@ -133,6 +140,16 @@ export const SPOTIFY_COMMANDS: SpotifyCommandDescriptor[] = [
   { command: "history", description: "Display my listening history" },
 ];
 
+export type GuestbookCommandDescriptor = {
+  command: "read" | "sign";
+  description: string;
+};
+
+export const GUESTBOOK_COMMANDS: GuestbookCommandDescriptor[] = [
+  { command: "read", description: "Browse the latest guestbook entries" },
+  { command: "sign", description: "Leave a message in the guestbook" },
+];
+
 export type ThemeCommandDescriptor = {
   command: "dark" | "light" | "system";
   description: string;
@@ -144,10 +161,18 @@ export const THEME_COMMANDS: ThemeCommandDescriptor[] = [
   { command: "system", description: "Follow the operating system preference" },
 ];
 
+/** Command names that act as namespaces for sub-commands. */
+export const SUBCOMMAND_PREFIXES = ["guestbook", "spotify", "theme"] as const;
+
 // ─── Derived: every command including expanded sub-commands ─────────────
 
 export const ALL_COMMANDS: CommandDescriptor[] = [
   ...COMMANDS,
+  ...GUESTBOOK_COMMANDS.map((c) => ({
+    command: `guestbook ${c.command}`,
+    description: c.description,
+    group: "Guestbook" as const,
+  })),
   ...SPOTIFY_COMMANDS.map((c) => ({
     command: `spotify ${c.command}`,
     description: c.description,
