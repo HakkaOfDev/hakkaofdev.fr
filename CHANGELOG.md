@@ -1,5 +1,45 @@
 # Changelog
 
+## [1.4.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.3.1...v1.4.0) (2026-02-18)
+
+
+### Features
+
+* add guestbook, enhanced analytics, terminal improvements, and project polish ([9d15bfd](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/9d15bfda6458ef3e3c129769b74df17e08522cd7))
+* **analytics:** enhance visitor tracking with IP hashing and geo-detection ([63bc2a5](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/63bc2a53d02f568b455452a6041c864099c5e305))
+* **guestbook:** add guestbook command with sign, read, and moderation ([79f031d](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/79f031d763d1b0a35c113a51de9bf74164e6eb43))
+* **terminal:** add GitHub star button and improve resize animation ([3e6b5fc](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/3e6b5fc8a7042c8924843e4d767e1f283c22e25b))
+* **ui:** add Popover component and pink variant to Shortcut and Tag ([6767914](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/676791489cf7863a01bff25893341f6da26ce20f))
+* **utils:** add formatEntryDate date formatting helper ([15c582a](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/15c582aa8fdeff44c598ca4f2c0e920be33344df))
+
+
+### Bug Fixes
+
+* **assets:** replace avatar.jpeg with optimized jpg and add site preview ([c59bb48](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c59bb483398700bdc7166cb6b49d9b31937125a5))
+* **lint:** apply Biome auto-formatting fixes ([75abfdc](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/75abfdc0b42df017792542c4069347884ac064fd))
+
+
+### Documentation
+
+* add project roadmap ([b673f3c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/b673f3cea3788d9fe599e822981d6b9abf5c220d))
+* rewrite README with badges, structure, and guestbook docs ([dcec697](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/dcec6978a2cfa74ef77f8d02e9c88a88348fe59c))
+
+
+### Miscellaneous
+
+* add MIT license ([8cae83b](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/8cae83ba6f980a57495df0ee279137fba838040e))
+* add pre-commit hook to run Biome on staged files ([a262f46](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a262f46e38a7063c2f748e043f5112f8232c14e7))
+* add pre-commit hook to run Biome on staged files ([3f14ad0](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/3f14ad027379a8f147d7d81402a5eb26f7bb85ac))
+* **config:** update env template for guestbook and analytics ([c073a82](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c073a822bb7b8c3de578a0a663469ce8e14bf37b))
+* **config:** update release-please settings ([38deead](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/38deead246dcb31ab86a19d6e6ca2653a3dc1ea0))
+* **deps:** add form, popover, validation, and e2e dependencies ([24b293c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/24b293cbc28087f606f8b6e09b102a6f7261a398))
+
+
+### Code Refactoring
+
+* **commands:** reorganize registries and generalize sub-command routing ([50d7b36](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/50d7b36a5ef1256b175d9fb56a0659b6efb328ee))
+* **constants:** split monolithic constants into dedicated modules ([c31811c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c31811c17e836728e935cd206494ed1937b306eb))
+
 ## [1.3.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.3.0...v1.3.1) (2026-02-17)
 
 
