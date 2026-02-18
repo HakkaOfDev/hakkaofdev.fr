@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import type { PostgrestError } from "@supabase/supabase-js";
-import { supabase } from "@/lib/supabase";
 import { GUESTBOOK_CONFIG } from "@/lib/constants/guestbook.constants";
+import { supabase } from "@/lib/supabase";
 import type {
   GuestbookCreateInput,
   GuestbookCreateResult,

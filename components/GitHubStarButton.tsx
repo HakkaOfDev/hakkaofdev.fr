@@ -14,7 +14,7 @@ export function GitHubStarButton() {
     retry: false,
   });
 
-  if (isError) return null
+  if (isError) return null;
 
   return (
     <Link
