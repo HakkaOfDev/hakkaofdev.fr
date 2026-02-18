@@ -1,179 +1,200 @@
-# hakkaofdev.fr (v2)
+<div align="center">
 
-Interactive terminal-style portfolio website for Alexandre Gossard ([@hakkaofdev](https://github.com/hakkaofdev)).
+# `> hakkaofdev.fr_`
 
-Live: https://hakkaofdev.fr
+### Interactive terminal-style portfolio
 
-## Features
+[![Live](https://img.shields.io/badge/%E2%96%B6%20Live-hakkaofdev.fr-22d3ee?style=for-the-badge&labelColor=141414)](https://hakkaofdev.fr)
+[![Version](https://img.shields.io/badge/v1.1.1-E8B931?style=for-the-badge&logo=semver&logoColor=E8B931&labelColor=141414)](https://github.com/hakkaofdev/hakkaofdev.fr/releases)
+[![CI](https://img.shields.io/github/actions/workflow/status/hakkaofdev/hakkaofdev.fr/ci.yml?style=for-the-badge&logo=github-actions&logoColor=22d3ee&label=CI&labelColor=141414)](https://github.com/hakkaofdev/hakkaofdev.fr/actions)
+[![License](https://img.shields.io/badge/license-MIT-A855F7?style=for-the-badge&labelColor=141414)](LICENSE)
 
-- Terminal UI with command input, command history, and autocomplete
-- Built-in commands: `help`, `projects`, `experiences`, `skills`, `about`, `education`, `contact`, `cv`, `repo`, `theme`, `stats`, `echo`, `clear`, `reset`, `spotify`
-- Optional Spotify integration:
-  - Header "Now Playing" widget (polls every 15s)
-  - Terminal commands: `spotify now`, `spotify top`, `spotify history`
-- Theme command with modes: `theme dark`, `theme light`, `theme system`
-- Dynamic CV PDF endpoint with preview/download: `/api/cv`, `/api/cv?download=1`
-- Light/dark theme toggle (`next-themes`)
-- Animations (`motion`)
-- SEO-friendly metadata + `sitemap.xml` and `robots.txt`
-- Dynamic social preview image (`/opengraph-image`) + JSON-LD person schema
-- Vercel Speed Insights
+<br />
 
-## Tech Stack
+[![Next.js](https://img.shields.io/badge/Next.js%2016-141414?style=flat-square&logo=next.js&logoColor=fff)](https://nextjs.org)
+[![React](https://img.shields.io/badge/React%2019-61DAFB?style=flat-square&logo=react&logoColor=61DAFB&labelColor=141414)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=3178C6&labelColor=141414)](https://typescriptlang.org)
+[![Tailwind](https://img.shields.io/badge/Tailwind%20v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=06B6D4&labelColor=141414)](https://tailwindcss.com)
+[![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=3FCF8E&labelColor=141414)](https://supabase.com)
+[![Vercel](https://img.shields.io/badge/Vercel-141414?style=flat-square&logo=vercel&logoColor=fff)](https://vercel.com)
+[![Biome](https://img.shields.io/badge/Biome-60A5FA?style=flat-square&logo=biome&logoColor=60A5FA&labelColor=141414)](https://biomejs.dev)
+[![Spotify](https://img.shields.io/badge/Spotify%20API-1DB954?style=flat-square&logo=spotify&logoColor=1DB954&labelColor=141414)](https://developer.spotify.com)
 
-- Next.js (App Router) + React
-- TypeScript
-- Tailwind CSS v4 (CSS-first config) + `tailwindcss-animate`
-- TanStack Query (`@tanstack/react-query`)
-- Spotify Web API (refresh-token flow)
+<br />
 
-## Getting Started
+<img src="public/preview.png" alt="hakkaofdev.fr preview" width="640" style="border-radius:8px;" />
 
-### Prerequisites
+</div>
 
-- Node.js (recommended: 22+, see `.node-version`)
-- pnpm (repo is pinned to `pnpm@9.14.2`)
+<br />
 
-### Install
+## Overview
+
+A terminal-inspired portfolio for **Alexandre Gossard** ([@hakkaofdev](https://github.com/hakkaofdev)) — Software Engineer & Digital Nomad.  
+Type commands, explore projects, browse skills, sign the guestbook, and even check what's playing on Spotify.
+
+<br />
+
+## Highlights
+
+| | Feature | Details |
+|---|---|---|
+| **`>`** | Terminal UI | Command input, history navigation, autocomplete, fuzzy did-you-mean |
+| **`>`** | 18+ commands | `help` `projects` `skills` `experiences` `education` `about` `contact` `guestbook` `cv` `repo` `theme` `stats` `echo` `clear` `reset` `spotify` |
+| **`>`** | Spotify integration | "Now Playing" header widget + `spotify now` / `spotify top` / `spotify history` |
+| **`>`** | Guestbook | Public sign & read, honeypot + per-IP rate-limiting, moderation-ready |
+| **`>`** | Dynamic CV | Server-rendered PDF via `@react-pdf/renderer` — preview or download |
+| **`>`** | Theming | `theme dark` / `theme light` / `theme system` |
+| **`>`** | SEO | Sitemap, robots.txt, JSON-LD, dynamic OG image |
+| **`>`** | Analytics | Vercel Speed Insights + Supabase page-view tracking |
+
+<br />
+
+## Quick Start
+
+> **Prerequisites** — Node.js 22+ &nbsp;·&nbsp; pnpm 9+
 
 ```bash
+# clone & install
+git clone https://github.com/hakkaofdev/hakkaofdev.fr.git
+cd hakkaofdev.fr
 pnpm install
+
+# develop
+pnpm dev          # → http://localhost:3000
+
+# production
+pnpm build && pnpm start
 ```
 
-### Development
+Copy `.env.example` to `.env.local` and fill in the values you need:
 
 ```bash
-pnpm dev
-```
-
-Then open http://localhost:3000
-
-### Production
-
-```bash
-pnpm build
-pnpm start
-```
-
-### Quality / Format
-
-```bash
-pnpm lint
-pnpm typecheck
-pnpm audit
-pnpm format
-```
-
-## Configuration (Environment Variables)
-
-Create a `.env.local` file at the repo root (you can start from `.env.example`):
-
-```bash
-# Used by app/sitemap.ts and app/robots.ts
+# Required
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
-# Optional (enables Spotify commands + header widget)
+# Spotify (optional — enables widget + commands)
 SPOTIFY_CLIENT_ID=
 SPOTIFY_CLIENT_SECRET=
 SPOTIFY_REFRESH_TOKEN=
+
+# Supabase (optional — enables analytics + guestbook)
+NEXT_PUBLIC_SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+APP_IP_SALT=
+GUESTBOOK_AUTO_APPROVE=true
+GUESTBOOK_RATE_LIMIT_MAX_PER_HOUR=3
 ```
 
-Notes:
+<br />
 
-- `NEXT_PUBLIC_SITE_URL` is used to build absolute URLs in `app/sitemap.ts` and `app/robots.ts`.
-- Spotify variables are read in `app/actions.ts`:
-  - Access token is obtained via the Spotify token endpoint using the refresh token.
-  - Data is fetched from `currently-playing`, `top/tracks`, and `recently-played`.
-- Required Spotify scopes typically include:
-  - `user-read-currently-playing` (or `user-read-playback-state`)
-  - `user-top-read`
-  - `user-read-recently-played`
+## Commands Reference
 
-If you do not set Spotify env vars, Spotify UI will stay hidden and the `spotify ...` commands will return "No data found.".
-
-## Terminal Commands
-
-Top-level commands are defined in `components/commands/command-descriptors.ts` and rendered via `components/commands/registry.tsx`.
-Spotify subcommands are described in `components/commands/command-descriptors.ts` and wired in `components/commands/spotify-registry.tsx`.
-
-| Command | What it does |
-| --- | --- |
+| Command | Description |
+|---|---|
 | `help` | List all available commands |
-| `projects` | Show projects grid (opens links in a new tab) |
+| `projects` | Show projects grid |
 | `skills` | Show categorized skills |
-| `about` | Show personal details (languages/hobbies/etc) |
-| `education` | Show education timeline |
-| `contact` | Show primary contact methods and social profiles |
-| `cv` | Open CV preview/download actions (powered by `/api/cv`) |
-| `repo` | Show repository details and clone command |
-| `theme` | Show current theme and available theme modes |
-| `theme dark` | Switch to dark mode |
-| `theme light` | Switch to light mode |
-| `theme system` | Follow operating system theme |
-| `stats` | Show coding and GitHub activity stats |
-| `echo <message>` | Print custom text in the terminal |
-| `experiences` | Show experience timeline |
-| `clear` | Clear terminal history |
-| `reset` | Reset terminal to the initial welcome state |
-| `spotify` | Show Spotify sub-command help |
-| `spotify now` | Show currently playing track |
-| `spotify top` | Show top tracks |
-| `spotify history` | Show recently played tracks |
+| `about` | Personal details, languages, hobbies |
+| `education` | Education timeline |
+| `experiences` | Experience timeline |
+| `guestbook` | List & sign guestbook entries |
+| `contact` | Contact methods & social profiles |
+| `cv` | Open CV preview / download |
+| `repo` | Repository details & clone command |
+| `theme [dark\|light\|system]` | View or change the current theme |
+| `stats` | Coding & GitHub activity stats |
+| `echo <msg>` | Print custom text |
+| `clear` | Clear terminal output |
+| `reset` | Reset to the welcome screen |
+| `spotify` | Spotify sub-command help |
+| `spotify now` | Currently playing track |
+| `spotify top` | Top tracks |
+| `spotify history` | Recently played tracks |
+
+<br />
+
+## Project Structure
+
+```
+app/
+├── api/            # Route handlers (cv, guestbook, spotify, views)
+├── layout.tsx      # Root layout, providers, fonts
+├── page.tsx        # Home (terminal shell)
+├── sitemap.ts      # Dynamic sitemap
+└── robots.ts       # Robots config
+
+components/
+├── commands/       # Command descriptors, registries, renderers
+├── cv-pdf/         # React-PDF sections for CV generation
+├── ui/             # Reusable UI primitives
+├── Terminal.tsx     # Main terminal component
+└── WelcomeHero.tsx # Initial greeting block
+
+lib/
+├── constants/      # Site, resume, skills, terminal, guestbook config
+├── cv/             # CV data mapping & PDF styles
+├── schemas/        # Zod validation schemas
+├── services/       # Analytics, guestbook, Supabase clients
+└── utils.ts        # Shared helpers
+
+supabase/
+└── schema/         # SQL migrations (guestbook table, RLS policies)
+```
+
+<br />
 
 ## Customization
 
-Most portfolio content lives in `lib/constants.ts`:
+**Content** lives in `lib/constants/` — edit the files there to change projects, skills, education, experiences, and social links.
 
-- Social links (`SOCIALS`)
-- Projects list (`PROJECTS`)
-- Skills (`SKILLS`)
-- Education (`EDUCATION`)
-- Experiences (`EXPERIENCES`)
+**Adding a command:**
 
-To add a new terminal command:
+1. Add it to `COMMANDS` in `components/commands/command-descriptors.ts`
+2. Create a renderer in `components/commands/renders/`
+3. Wire it in the registry under `components/commands/registries/`
 
-1. Add the command + description to `COMMANDS` in `components/commands/command-descriptors.ts` (autocomplete/help + did-you-mean).
-2. Create a renderer component in `components/commands/renders/`.
-3. Wire it in `components/commands/registry.tsx` (`COMMAND_RENDERERS` map).
+**Customizing the CV:** update data in `lib/cv/cv-pdf.data.ts`, styles in `lib/cv/cv-pdf.styles.ts`, and sections in `components/cv-pdf/CVSections.tsx`.
 
-To add a new Spotify sub-command:
+**Guestbook backend:** SQL schema in `supabase/schema/guestbook.sql`, API in `app/api/guestbook/route.ts`, tune with `GUESTBOOK_*` env vars.
 
-1. Add the sub-command + description to `SPOTIFY_COMMANDS` in `components/commands/command-descriptors.ts`.
-2. Add the renderer in `components/commands/renders/spotify/`.
-3. Wire it in `components/commands/spotify-registry.tsx`.
+<br />
 
-To add or modify theme modes:
+## CI / CD
 
-1. Update `THEME_COMMANDS` in `components/commands/command-descriptors.ts`.
-2. Keep parser/validation aligned in `components/commands/renders/CTheme.tsx`.
+| Workflow | Trigger | What it does |
+|---|---|---|
+| `ci.yml` | PR / push to `main` | Lint, typecheck, build |
+| `dependency-audit.yml` | PR / weekly | `pnpm audit --prod --audit-level=high` |
+| `release.yml` | Push to `main` | Release-please automated versioning |
 
-To customize the CV PDF:
+Deployed on **Vercel** — push to `main` and it ships.
 
-1. Update data mapping/truncation in `lib/cv/cv-pdf.data.ts`.
-2. Update typography/layout in `lib/cv/cv-pdf.styles.ts`.
-3. Update rendering blocks in `components/cv-pdf/CVSections.tsx`.
-4. API endpoint is `app/api/cv/route.tsx` (`/api/cv`, `/api/cv?download=1`).
+<br />
 
-## Deployment
+## Quality Scripts
 
-This repo is designed to deploy cleanly to Vercel (Speed Insights is already integrated).
+```bash
+pnpm lint          # Biome lint
+pnpm format        # Biome format
+pnpm typecheck     # tsc --noEmit
+pnpm audit         # Dependency audit
+```
 
-Set these environment variables in your hosting provider:
-
-- `NEXT_PUBLIC_SITE_URL` (e.g. `https://hakkaofdev.fr`)
-- Spotify variables if you want Spotify features
-
-## CI
-
-GitHub Actions workflows are included:
-
-- `.github/workflows/ci.yml`: runs `pnpm lint`, `pnpm typecheck`, and `pnpm build` on PRs/pushes to `main`
-- `.github/workflows/dependency-audit.yml`: runs `pnpm audit --prod --audit-level=high` on PRs + weekly schedule
-
-## Notes
-
-- Spotify album art comes from `https://i.scdn.co` and is allowlisted via `next.config.ts` (`images.remotePatterns`).
+<br />
 
 ## License
 
-No license file is currently included in this repository.
+MIT — see [LICENSE](LICENSE) for details.
+
+<br />
+
+<div align="center">
+
+Made by [Alexandre Gossard](https://hakkaofdev.fr)
+
+[![GitHub](https://img.shields.io/badge/GitHub-hakkaofdev-white?style=for-the-badge&logo=github&logoColor=fff&labelColor=181717)](https://github.com/hakkaofdev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-hakkaofdev-white?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2EyLjA2MiAyLjA2MiAwIDAxLTIuMDYzLTIuMDY1IDIuMDY0IDIuMDY0IDAgMTEyLjA2MyAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8+PC9zdmc+Cg==&labelColor=0A66C2)](https://linkedin.com/in/hakkaofdev)
+[![Twitter](https://img.shields.io/badge/Twitter-hakkaofdev-white?style=for-the-badge&logo=x&logoColor=fff&labelColor=000)](https://x.com/hakkaofdev)
+
+</div>
