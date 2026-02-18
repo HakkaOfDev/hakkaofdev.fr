@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { SITE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { useCommands } from "./CommandsProvider";
+import { GitHubStarButton } from "./GitHubStarButton";
 import { ModeToggle } from "./ModeToggle";
 import TerminalInput from "./TerminalInput";
 import { useTerminal } from "./TerminalProvider";
@@ -26,12 +27,12 @@ export const Terminal = ({ children, className }: TerminalProps) => {
   return (
     <div
       className={cn(
-        "z-0 flex flex-col w-full rounded-xl border border-border/60 bg-background terminal-shadow dark:border-white/[0.08] transition-all duration-300 overflow-hidden",
+        "z-0 flex flex-col w-full h-full rounded-xl border border-border/60 bg-background terminal-shadow dark:border-white/[0.08] terminal-resize overflow-hidden",
         isMinimized
-          ? "h-11 max-h-11 md:h-11 md:max-h-11"
+          ? "max-h-11"
           : isMaximized
-            ? "h-full max-h-full md:h-full md:max-h-full"
-            : "h-full max-h-full md:max-h-[450px]",
+            ? "max-h-[calc(100dvh-120px)]"
+            : "max-h-[calc(100dvh-120px)] md:max-h-[450px]",
         className,
       )}
     >
@@ -48,7 +49,8 @@ export const Terminal = ({ children, className }: TerminalProps) => {
         </span>
 
         {/* Right zone */}
-        <div className="flex items-center justify-end flex-1 basis-0 min-w-0 gap-0.5">
+        <div className="flex items-center justify-end flex-1 basis-0 min-w-0 gap-1.5">
+          <GitHubStarButton />
           <button
             type="button"
             onClick={reset}
@@ -63,17 +65,27 @@ export const Terminal = ({ children, className }: TerminalProps) => {
         </div>
       </div>
 
-      {/* ── Content Area ── */}
-      <pre className="px-4 pt-4 flex-1 overflow-auto flex flex-col-reverse terminal-scrollbar">
-        <code className="grid gap-4">{children}</code>
-      </pre>
+      {/* ── Body (content + spotify + input) ── */}
+      <div
+        className={cn(
+          "flex flex-col flex-1 min-h-0",
+          isMinimized
+            ? "opacity-0 pointer-events-none transition-opacity duration-200 ease-out"
+            : "opacity-100 transition-opacity duration-300 ease-in delay-150",
+        )}
+      >
+        {/* ── Content Area ── */}
+        <pre className="px-4 pt-4 flex-1 overflow-auto flex flex-col-reverse terminal-scrollbar">
+          <code className="grid gap-4">{children}</code>
+        </pre>
 
-      {/* ── Spotify Status Bar (only visible when playing) ── */}
-      <SpotifyPlayer />
+        {/* ── Spotify Status Bar (only visible when playing) ── */}
+        <SpotifyPlayer />
 
-      {/* ── Input Area ── */}
-      <div className="px-4 py-3 border-t border-border/30 dark:border-white/[0.05]">
-        <TerminalInput />
+        {/* ── Input Area ── */}
+        <div className="px-4 py-3 border-t border-border/30 dark:border-white/[0.05]">
+          <TerminalInput />
+        </div>
       </div>
     </div>
   );
