@@ -94,10 +94,16 @@
   }
 }
 
+/* ── Terminal resize animation ── */
+.terminal-resize {
+  transition-property: max-height, box-shadow;
+  transition-duration: 500ms, 300ms;
+  transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1), ease;
+}
+
 /* ── Terminal uniform shadow (only on focus) ── */
 .terminal-shadow {
   box-shadow: none;
-  transition: box-shadow 0.3s ease;
 }
 .terminal-shadow:has(.terminal-input:focus) {
   box-shadow:

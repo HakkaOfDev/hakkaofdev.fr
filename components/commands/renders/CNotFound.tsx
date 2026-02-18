@@ -3,7 +3,10 @@
 import { useMemo } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { useCommands } from "@/components/CommandsProvider";
-import { ALL_COMMANDS } from "@/components/commands/command-descriptors";
+import {
+  ALL_COMMANDS,
+  SUBCOMMAND_PREFIXES,
+} from "@/components/commands/command-descriptors";
 
 function levenshtein(a: string, b: string) {
   const dp = Array.from({ length: a.length + 1 }, () =>
@@ -33,11 +36,10 @@ function CNotFound({ input }: { input: string }) {
     const q = input.trim().toLowerCase();
     if (!q) return [] as string[];
 
-    const candidates = q.startsWith("spotify")
-      ? ALL_COMMAND_NAMES.filter((c) => c.startsWith("spotify"))
-      : q.startsWith("theme")
-        ? ALL_COMMAND_NAMES.filter((c) => c.startsWith("theme"))
-        : ALL_COMMAND_NAMES;
+    const subPrefix = SUBCOMMAND_PREFIXES.find((p) => q.startsWith(p));
+    const candidates = subPrefix
+      ? ALL_COMMAND_NAMES.filter((c) => c.startsWith(subPrefix))
+      : ALL_COMMAND_NAMES;
 
     const startsWith = candidates.filter((c) => c.startsWith(q));
     if (startsWith.length > 0) return startsWith.slice(0, 3);

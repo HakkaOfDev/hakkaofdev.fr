@@ -2,6 +2,7 @@ import { useCallback, useMemo, useState } from "react";
 import {
   ALL_COMMANDS,
   type CommandGroup,
+  SUBCOMMAND_PREFIXES,
 } from "@/components/commands/command-descriptors";
 
 export type Suggestion = {
@@ -55,26 +56,16 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
     const q = value.trim().toLowerCase();
     if (!q) return [] as Suggestion[];
 
-    if (q === "spotify") {
-      return allSuggestions.filter((s) => s.value.startsWith(q)).slice(0, 8);
-    }
-
-    if (q.startsWith("spotify ")) {
-      return allSuggestions
-        .filter((s) => s.value.startsWith("spotify "))
-        .filter((s) => s.value.startsWith(q))
-        .slice(0, 8);
-    }
-
-    if (q === "theme") {
-      return allSuggestions.filter((s) => s.value.startsWith(q)).slice(0, 8);
-    }
-
-    if (q.startsWith("theme ")) {
-      return allSuggestions
-        .filter((s) => s.value.startsWith("theme "))
-        .filter((s) => s.value.startsWith(q))
-        .slice(0, 8);
+    for (const prefix of SUBCOMMAND_PREFIXES) {
+      if (q === prefix) {
+        return allSuggestions.filter((s) => s.value.startsWith(q)).slice(0, 8);
+      }
+      if (q.startsWith(`${prefix} `)) {
+        return allSuggestions
+          .filter((s) => s.value.startsWith(`${prefix} `))
+          .filter((s) => s.value.startsWith(q))
+          .slice(0, 8);
+      }
     }
 
     return allSuggestions.filter((s) => s.value.startsWith(q)).slice(0, 8);
@@ -112,18 +103,12 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
     const q = value.trim().toLowerCase();
     if (!q) return;
 
-    // Special case: bare "spotify" → append a space to drill into subcommands.
-    if (q === "spotify") {
-      setValue("spotify ");
-      openPopover();
-      return;
-    }
-
-    // Special case: bare "theme" → append a space to drill into modes.
-    if (q === "theme") {
-      setValue("theme ");
-      openPopover();
-      return;
+    for (const prefix of SUBCOMMAND_PREFIXES) {
+      if (q === prefix) {
+        setValue(`${prefix} `);
+        openPopover();
+        return;
+      }
     }
 
     const matches = suggestions.map((s) => s.value);

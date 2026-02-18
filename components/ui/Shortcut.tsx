@@ -19,6 +19,7 @@ const shortcutVariants = cva(
           "bg-chart-3/10 text-chart-3 ring-chart-3/20 hover:bg-chart-3/20 hover:ring-chart-3/30",
         orange:
           "bg-chart-5/10 text-chart-5 ring-chart-5/20 hover:bg-chart-5/20 hover:ring-chart-5/30",
+        pink: "bg-pink-500/10 text-pink-500 ring-pink-500/20 hover:bg-pink-500/20 hover:ring-pink-500/30 dark:bg-pink-400/10 dark:text-pink-400 dark:ring-pink-400/20 dark:hover:bg-pink-400/20",
       },
     },
     defaultVariants: {

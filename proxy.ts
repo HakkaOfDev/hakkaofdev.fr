@@ -1,5 +1,10 @@
 import { createClient } from "@supabase/supabase-js";
 import { after, type NextRequest, NextResponse } from "next/server";
+import {
+  extractCountry,
+  extractIpAddress,
+  hashIpAddress,
+} from "@/lib/services/guestbook";
 
 export function proxy(request: NextRequest) {
   if (process.env.NODE_ENV !== "production") return NextResponse.next();
@@ -8,17 +13,22 @@ export function proxy(request: NextRequest) {
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
   if (url && key) {
-    const ip =
-      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
-      request.headers.get("x-real-ip") ??
-      null;
+    const ipAddress = extractIpAddress(request);
+    const ipHash = hashIpAddress(ipAddress);
+    const country = extractCountry(request);
+    const userAgent = request.headers.get("user-agent")?.slice(0, 255) ?? null;
 
     after(async () => {
-      if (!ip) return;
+      if (!ipHash) return;
 
       const supabase = createClient(url, key);
       try {
-        await supabase.rpc("track_visitor", { visitor_ip: ip });
+        await supabase.rpc("record_visit", {
+          p_slug: "/",
+          p_ip_hash: ipHash,
+          p_country: country,
+          p_user_agent: userAgent,
+        });
       } catch {}
     });
   }

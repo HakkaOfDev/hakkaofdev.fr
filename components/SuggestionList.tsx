@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 const GROUP_DOT: Record<CommandGroup, string> = {
   Work: "bg-chart-1",
   Profile: "bg-chart-2",
+  Guestbook: "bg-pink-500 dark:bg-pink-400",
   Spotify: "bg-chart-3",
   Theme: "bg-chart-5",
   Terminal: "bg-muted-foreground/50",
