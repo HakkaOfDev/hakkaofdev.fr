@@ -21,17 +21,17 @@ function SpotifyPlayer() {
       initial={{ opacity: 0, height: 0 }}
       animate={{ opacity: 1, height: "auto" }}
       transition={{ duration: 0.25, ease: "easeOut" }}
-      className="overflow-hidden border-t border-border/30 dark:border-white/[0.05]"
+      className="overflow-hidden border-border/30 border-t dark:border-overlay-subtle"
     >
       <Link
         href={data.item.external_urls.spotify}
         target="_blank"
-        className="flex items-center gap-2.5 px-4 py-1.5 group hover:bg-muted/30 dark:hover:bg-white/[0.02] transition-colors duration-150"
+        className="group flex items-center gap-2.5 px-4 py-1.5 transition-colors duration-150 hover:bg-muted/30 dark:hover:bg-overlay-subtle"
       >
         <span className="sr-only">Now playing on Spotify:</span>
         {/* Animated bars */}
         <div
-          className="flex items-end gap-[2px] h-3.5 shrink-0"
+          className="flex h-3.5 shrink-0 items-end gap-[2px]"
           aria-hidden="true"
         >
           <m.span
@@ -41,7 +41,7 @@ function SpotifyPlayer() {
               repeat: Number.POSITIVE_INFINITY,
               ease: "easeInOut",
             }}
-            className="w-[2.5px] h-3 bg-chart-2/70 origin-bottom rounded-full"
+            className="h-3 w-[2.5px] origin-bottom rounded-full bg-secondary/70"
           />
           <m.span
             animate={{ scaleY: [0.8, 0.3, 1, 0.5, 0.8] }}
@@ -50,7 +50,7 @@ function SpotifyPlayer() {
               repeat: Number.POSITIVE_INFINITY,
               ease: "easeInOut",
             }}
-            className="w-[2.5px] h-3 bg-chart-2/70 origin-bottom rounded-full"
+            className="h-3 w-[2.5px] origin-bottom rounded-full bg-secondary/70"
           />
           <m.span
             animate={{ scaleY: [0.5, 0.9, 0.3, 1, 0.5] }}
@@ -59,7 +59,7 @@ function SpotifyPlayer() {
               repeat: Number.POSITIVE_INFINITY,
               ease: "easeInOut",
             }}
-            className="w-[2.5px] h-3 bg-chart-2/70 origin-bottom rounded-full"
+            className="h-3 w-[2.5px] origin-bottom rounded-full bg-secondary/70"
           />
         </div>
 
@@ -70,12 +70,12 @@ function SpotifyPlayer() {
           width={20}
           height={20}
           quality={75}
-          className="h-5 w-5 rounded-sm shrink-0"
+          className="h-5 w-5 shrink-0 rounded-sm"
         />
 
         {/* Track info */}
-        <span className="text-[11px] text-muted-foreground/80 truncate min-w-0 group-hover:text-muted-foreground transition-colors duration-150">
-          <span className="font-medium text-muted-foreground/90 group-hover:text-chart-2 transition-colors duration-150">
+        <span className="min-w-0 truncate text-[11px] text-muted-foreground/80 transition-colors duration-150 group-hover:text-muted-foreground">
+          <span className="font-medium text-muted-foreground/90 transition-colors duration-150 group-hover:text-secondary">
             {data.item.name}
           </span>
           <span className="mx-1.5 text-muted-foreground/70">&middot;</span>

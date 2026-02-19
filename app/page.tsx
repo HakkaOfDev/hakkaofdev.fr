@@ -3,7 +3,7 @@ import MainScreen from "@/components/MainScreen";
 
 export default function Home() {
   return (
-    <main className="flex flex-col flex-1 overflow-hidden container max-w-2xl items-center justify-center gap-6 py-6 mx-auto px-4">
+    <main className="container mx-auto flex max-w-2xl flex-1 flex-col items-center justify-center gap-6 overflow-hidden px-4 py-6">
       <Image
         src="/logo.png"
         alt="Alexandre Gossard Logo"
@@ -11,7 +11,7 @@ export default function Home() {
         width={44}
         height={44}
         sizes="44px"
-        className="rounded-full ring-1 ring-border/40 dark:ring-white/10 shadow-sm"
+        className="rounded-full shadow-sm ring-1 ring-border/40 dark:ring-overlay-medium"
         priority
       />
       <MainScreen />

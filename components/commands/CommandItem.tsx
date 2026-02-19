@@ -6,9 +6,9 @@ import CommandBash from "./CommandBash";
 import { COMMAND_RENDERERS } from "./registries/registry";
 import CEcho from "./renders/CEcho";
 import CNotFound from "./renders/CNotFound";
-import CTheme from "./renders/CTheme";
 import CGuestbook from "./renders/guestbook/CGuestbook";
 import CSpotify from "./renders/spotify/CSpotify";
+import CTheme from "./renders/theme/CTheme";
 
 function CommandWrapper({
   children,
@@ -29,14 +29,14 @@ function CommandWrapper({
   return (
     <div
       id={`cmd-${id}`}
-      className="flex flex-col gap-2 w-full pt-3 first:pt-0 pb-4"
+      className="flex w-full flex-col gap-2 pt-3 pb-4 first:pt-0"
     >
       <CommandBash input={input} timestamp={timestamp} />
       {!show ? (
         <div className="flex items-center gap-1.5 pl-5">
-          <div className="h-1 w-1 rounded-full bg-chart-1/60 animate-pulse" />
-          <div className="h-1 w-1 rounded-full bg-chart-1/40 animate-pulse [animation-delay:150ms]" />
-          <div className="h-1 w-1 rounded-full bg-chart-1/20 animate-pulse [animation-delay:300ms]" />
+          <div className="h-1 w-1 animate-pulse rounded-full bg-primary/60" />
+          <div className="h-1 w-1 animate-pulse rounded-full bg-primary/40 [animation-delay:150ms]" />
+          <div className="h-1 w-1 animate-pulse rounded-full bg-primary/20 [animation-delay:300ms]" />
         </div>
       ) : (
         children

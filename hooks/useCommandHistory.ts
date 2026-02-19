@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef, useState } from "react";
-import { useCommands } from "@/components/CommandsProvider";
+import { useCommands } from "@/components/providers/CommandsProvider";
 
 /**
  * Manages browsing through previously executed commands with ↑/↓ or Ctrl-P/N.

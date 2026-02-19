@@ -24,8 +24,8 @@ export default function SubCommandHelp({
   return (
     <AnimatedSpan className="gap-4">
       <div className="flex items-center gap-2">
-        <Info className="h-3.5 w-3.5 text-chart-1 shrink-0" />
-        <p className="text-chart-1 font-semibold">{title}</p>
+        <Info className="h-3.5 w-3.5 shrink-0 text-primary" />
+        <p className="font-semibold text-primary">{title}</p>
       </div>
 
       <ShortcutSection title="Sub-commands">
@@ -33,14 +33,14 @@ export default function SubCommandHelp({
           {items.map((item) => (
             <div
               key={item.command}
-              className="grid grid-cols-[140px_1fr] gap-3 items-center"
+              className="grid grid-cols-[140px_1fr] items-center gap-3"
             >
               <Shortcut
                 label={`${prefix}${item.command}`}
                 command={`${prefix}${item.command}`}
                 variant={variant}
               />
-              <span className="text-xs text-muted-foreground leading-relaxed">
+              <span className="text-muted-foreground text-xs leading-relaxed">
                 {item.description}
               </span>
             </div>

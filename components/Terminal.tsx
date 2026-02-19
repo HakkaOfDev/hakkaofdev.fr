@@ -4,11 +4,11 @@ import { RotateCcw } from "lucide-react";
 import dynamic from "next/dynamic";
 import { SITE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { useCommands } from "./CommandsProvider";
+import { CycleTheme } from "./CycleTheme";
 import { GitHubStarButton } from "./GitHubStarButton";
-import { ModeToggle } from "./ModeToggle";
+import { useCommands } from "./providers/CommandsProvider";
+import { useTerminal } from "./providers/TerminalProvider";
 import TerminalInput from "./TerminalInput";
-import { useTerminal } from "./TerminalProvider";
 import { TrafficLights } from "./TrafficLights";
 
 const SpotifyPlayer = dynamic(() => import("./SpotifyPlayer"), {
@@ -27,7 +27,7 @@ export const Terminal = ({ children, className }: TerminalProps) => {
   return (
     <div
       className={cn(
-        "z-0 flex flex-col w-full h-full rounded-xl border border-border/60 bg-background terminal-shadow dark:border-white/[0.08] terminal-resize overflow-hidden",
+        "terminal-shadow terminal-resize z-0 flex h-full w-full flex-col overflow-hidden rounded-xl border border-border/60 bg-background dark:border-overlay-medium",
         isMinimized
           ? "max-h-11"
           : isMaximized
@@ -37,45 +37,45 @@ export const Terminal = ({ children, className }: TerminalProps) => {
       )}
     >
       {/* ── Title Bar ── */}
-      <div className="flex items-center border-b border-border/50 dark:border-white/[0.06] px-4 h-11 shrink-0 bg-muted/40 dark:bg-white/[0.03] select-none">
+      <div className="flex h-11 shrink-0 select-none items-center border-border/50 border-b bg-muted/40 px-4 dark:border-overlay-subtle dark:bg-overlay-subtle">
         {/* Left zone */}
-        <div className="flex items-center flex-1 basis-0 min-w-0">
+        <div className="flex min-w-0 flex-1 basis-0 items-center">
           <TrafficLights />
         </div>
 
         {/* Center zone — title */}
-        <span className="text-[11px] text-muted-foreground/80 font-medium tracking-wide shrink-0">
+        <span className="shrink-0 font-medium text-[11px] text-muted-foreground/80 tracking-wide">
           {SITE.handle} &mdash; zsh
         </span>
 
         {/* Right zone */}
-        <div className="flex items-center justify-end flex-1 basis-0 min-w-0 gap-1.5">
+        <div className="flex min-w-0 flex-1 basis-0 items-center justify-end gap-1.5">
           <GitHubStarButton />
           <button
             type="button"
             onClick={reset}
-            className="size-7 min-w-7 flex items-center justify-center rounded-md cursor-pointer transition-all duration-200 hover:bg-muted/60 dark:hover:bg-white/[0.08] active:scale-90"
+            className="flex size-7 min-w-7 cursor-pointer items-center justify-center rounded-md transition-all duration-200 hover:bg-muted/60 active:scale-90 dark:hover:bg-overlay-medium"
             title="Reset terminal"
             aria-label="Reset terminal"
           >
             <RotateCcw size={13} className="text-muted-foreground" />
             <span className="sr-only">Reset terminal</span>
           </button>
-          <ModeToggle />
+          <CycleTheme />
         </div>
       </div>
 
       {/* ── Body (content + spotify + input) ── */}
       <div
         className={cn(
-          "flex flex-col flex-1 min-h-0",
+          "flex min-h-0 flex-1 flex-col",
           isMinimized
-            ? "opacity-0 pointer-events-none transition-opacity duration-200 ease-out"
-            : "opacity-100 transition-opacity duration-300 ease-in delay-150",
+            ? "pointer-events-none opacity-0 transition-opacity duration-200 ease-out"
+            : "opacity-100 transition-opacity delay-150 duration-300 ease-in",
         )}
       >
         {/* ── Content Area ── */}
-        <pre className="px-4 pt-4 flex-1 overflow-auto flex flex-col-reverse terminal-scrollbar">
+        <pre className="terminal-scrollbar flex flex-1 flex-col-reverse overflow-auto px-4 pt-4">
           <code className="grid gap-4">{children}</code>
         </pre>
 
@@ -83,7 +83,7 @@ export const Terminal = ({ children, className }: TerminalProps) => {
         <SpotifyPlayer />
 
         {/* ── Input Area ── */}
-        <div className="px-4 py-3 border-t border-border/30 dark:border-white/[0.05]">
+        <div className="border-border/30 border-t px-4 py-3 dark:border-overlay-subtle">
           <TerminalInput />
         </div>
       </div>

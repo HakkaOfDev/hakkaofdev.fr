@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 import { getStats } from "@/app/actions";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
-import type { StatsData } from "@/lib/types/stats";
 import { cn } from "@/lib/utils";
+import type { StatsData } from "@/types/stats";
 
 type StatCardProps = {
   icon: React.ReactNode;
@@ -23,24 +23,24 @@ type StatCardProps = {
 
 const COLOR_MAP: Record<string, { bg: string; ring: string; icon: string }> = {
   teal: {
-    bg: "bg-chart-1/8",
-    ring: "ring-chart-1/20",
-    icon: "text-chart-1",
+    bg: "bg-primary/8",
+    ring: "ring-primary/20",
+    icon: "text-primary",
   },
   gold: {
-    bg: "bg-chart-2/8",
-    ring: "ring-chart-2/20",
-    icon: "text-chart-2",
+    bg: "bg-secondary/8",
+    ring: "ring-secondary/20",
+    icon: "text-secondary",
   },
   purple: {
-    bg: "bg-chart-3/8",
-    ring: "ring-chart-3/20",
-    icon: "text-chart-3",
+    bg: "bg-tertiary/8",
+    ring: "ring-tertiary/20",
+    icon: "text-tertiary",
   },
   orange: {
-    bg: "bg-chart-5/8",
-    ring: "ring-chart-5/20",
-    icon: "text-chart-5",
+    bg: "bg-quaternary/8",
+    ring: "ring-quaternary/20",
+    icon: "text-quaternary",
   },
 };
 
@@ -60,7 +60,7 @@ function StatCard({ icon, label, value, color }: StatCardProps) {
         <p className="text-[10px] text-muted-foreground leading-none">
           {label}
         </p>
-        <p className="text-xs font-semibold text-foreground truncate mt-0.5">
+        <p className="mt-0.5 truncate font-semibold text-foreground text-xs">
           {value ?? "N/A"}
         </p>
       </div>
@@ -75,11 +75,11 @@ function formatNumber(n: number): string {
 function StatsSkeleton() {
   return (
     <AnimatedSpan className="gap-2">
-      <div className="grid grid-cols-2 gap-2 max-w-md">
+      <div className="grid max-w-md grid-cols-2 gap-2">
         {["a", "b", "c", "d", "e", "f"].map((id) => (
           <div
             key={id}
-            className="flex items-center gap-3 rounded-lg px-3 py-2.5 ring-1 ring-inset bg-muted/30 ring-border/50 animate-pulse"
+            className="flex animate-pulse items-center gap-3 rounded-lg bg-muted/30 px-3 py-2.5 ring-1 ring-border/50 ring-inset"
           >
             <div className="h-4 w-4 rounded bg-muted" />
             <div className="flex-1 space-y-1.5">
@@ -134,14 +134,14 @@ function StatsContent({ data }: { data: StatsData }) {
     {
       icon: <Eye size={16} />,
       label: "Visitors",
-      value: data.pageViews !== null ? formatNumber(data.pageViews) : null,
+      value: data.visitors !== null ? formatNumber(data.visitors) : null,
       color: "orange",
     },
   ];
 
   return (
     <AnimatedSpan className="gap-2">
-      <div className="grid grid-cols-2 gap-2 max-w-md">
+      <div className="grid max-w-md grid-cols-2 gap-2">
         {stats.map((stat) => (
           <StatCard key={stat.label} {...stat} />
         ))}

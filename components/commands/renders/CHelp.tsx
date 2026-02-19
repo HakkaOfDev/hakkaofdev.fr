@@ -9,9 +9,9 @@ import {
   RotateCcw,
 } from "lucide-react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
-import { getCommandsByGroup } from "@/components/commands/command-descriptors";
 import { ShortcutSection } from "@/components/ShortcutSection";
 import { Shortcut } from "@/components/ui/Shortcut";
+import { getCommandsByGroup } from "@/lib/command-descriptors";
 
 /* ─── Keyboard tips ─────────────────────────────────────────────────── */
 
@@ -54,8 +54,8 @@ function CHelp() {
     <AnimatedSpan className="gap-4">
       {/* ── Header ── */}
       <div className="flex items-center gap-2">
-        <Info className="h-3.5 w-3.5 text-chart-1 shrink-0" />
-        <p className="text-chart-1 font-semibold">Available commands</p>
+        <Info className="h-3.5 w-3.5 shrink-0 text-primary" />
+        <p className="font-semibold text-primary">Available commands</p>
       </div>
 
       {/* ── Grouped commands with inline descriptions ── */}
@@ -66,14 +66,14 @@ function CHelp() {
               {commands.map((cmd) => (
                 <div
                   key={cmd.command}
-                  className="grid grid-cols-[140px_1fr] gap-3 items-center"
+                  className="grid grid-cols-[140px_1fr] items-center gap-3"
                 >
                   <Shortcut
                     label={cmd.command}
                     command={cmd.command}
                     variant={meta.shortcutVariant}
                   />
-                  <span className="text-xs text-muted-foreground leading-relaxed">
+                  <span className="text-muted-foreground text-xs leading-relaxed">
                     {cmd.description}
                   </span>
                 </div>
@@ -89,7 +89,7 @@ function CHelp() {
           {KEYBOARD_SHORTCUTS.map((shortcut) => (
             <div
               key={shortcut.keys.join(" ")}
-              className="grid grid-cols-[140px_1fr] gap-3 items-center"
+              className="grid grid-cols-[140px_1fr] items-center gap-3"
             >
               <span className="inline-flex items-center gap-1">
                 {shortcut.icon}
@@ -104,13 +104,13 @@ function CHelp() {
                   ),
                   <kbd
                     key={key}
-                    className="rounded-md border border-border/50 dark:border-white/10 bg-muted/60 dark:bg-white/[0.04] px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground shadow-[0_1px_0_0] shadow-border/50 dark:shadow-white/[0.06]"
+                    className="rounded-md border border-border/50 bg-muted/60 px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground shadow-[0_1px_0_0] shadow-border/50 dark:border-overlay-medium dark:bg-overlay-subtle dark:shadow-overlay-subtle"
                   >
                     {key}
                   </kbd>,
                 ])}
               </span>
-              <span className="text-xs text-muted-foreground">
+              <span className="text-muted-foreground text-xs">
                 {shortcut.description}
               </span>
             </div>

@@ -1,10 +1,10 @@
+import { useCallback, useMemo, useState } from "react";
 import type { CommandGroup } from "@/lib/command-descriptors";
 import {
   buildSuggestionPool,
   calculateTabCompletion,
   filterSuggestions,
 } from "@/lib/utils/suggestions.utils";
-import { useCallback, useMemo, useState } from "react";
 
 export type Suggestion = {
   value: string;

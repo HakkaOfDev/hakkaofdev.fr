@@ -18,24 +18,24 @@ function CContact() {
         Primary email:{" "}
         <Link
           href={`mailto:${SITE.email}`}
-          className="font-semibold text-chart-1 hover:text-chart-1/80 transition-colors duration-200"
+          className="font-semibold text-primary transition-colors duration-200 hover:text-primary/80"
         >
           {SITE.email}
         </Link>
       </p>
       <p className="text-muted-foreground">
         Location:{" "}
-        <span className="text-foreground font-semibold">{SITE.location}</span>
+        <span className="font-semibold text-foreground">{SITE.location}</span>
       </p>
 
       <p className="text-muted-foreground">Social profiles:</p>
-      <ul className="list-disc pl-4 grid gap-1">
+      <ul className="grid list-disc gap-1 pl-4">
         {SOCIALS.map((social) => (
           <li key={social.name}>
             <Link
               href={social.url}
               target="_blank"
-              className="font-semibold text-chart-2 hover:text-chart-2/80 transition-colors duration-200"
+              className="font-semibold text-secondary transition-colors duration-200 hover:text-secondary/80"
             >
               {social.name}
             </Link>

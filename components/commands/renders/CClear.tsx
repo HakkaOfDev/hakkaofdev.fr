@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useCommands } from "@/components/CommandsProvider";
+import { useCommands } from "@/components/providers/CommandsProvider";
 
 function CClear() {
   const { clearCommands } = useCommands();

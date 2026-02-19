@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { countryToFlag } from "@/lib/services/guestbook-client";
-import type { GuestbookEntry } from "@/lib/types/guestbook";
+import { GuestbookClientService } from "@/lib/services";
 import { cn, formatEntryDate } from "@/lib/utils";
+import type { GuestbookEntry } from "@/types/guestbook";
 
 export function GuestbookEntryRow({
   entry,
@@ -16,12 +16,12 @@ export function GuestbookEntryRow({
     <Link
       href={entry.website}
       target="_blank"
-      className="text-xs font-semibold text-foreground truncate hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 cursor-pointer"
+      className="cursor-pointer truncate font-semibold text-foreground text-xs transition-colors duration-200 hover:text-quinary"
     >
       {entry.name}
     </Link>
   ) : (
-    <span className="text-xs font-semibold text-foreground truncate">
+    <span className="truncate font-semibold text-foreground text-xs">
       {entry.name}
     </span>
   );
@@ -29,31 +29,31 @@ export function GuestbookEntryRow({
   return (
     <div
       className={cn(
-        "border-l-2 border-pink-500/30 dark:border-pink-400/20 pl-4 ml-1 relative min-w-0",
+        "relative ml-1 min-w-0 border-quinary/30 border-l-2 pl-4",
         isLast ? "pb-0" : "pb-3",
       )}
     >
-      <div className="absolute -left-[5px] top-[5px] size-2 rounded-full bg-pink-500 dark:bg-pink-400" />
+      <div className="absolute top-[5px] -left-[5px] size-2 rounded-full bg-quinary" />
 
       <div className="flex items-baseline gap-2">
-        <span className="font-mono text-[10px] text-muted-foreground/50 shrink-0">
+        <span className="shrink-0 font-mono text-[10px] text-muted-foreground/50">
           #{String(index + 1).padStart(3, "0")}
         </span>
         {nameElement}
         {entry.country && (
           <span
-            className="text-[11px] leading-none shrink-0"
+            className="shrink-0 text-[11px] leading-none"
             title={entry.country}
           >
-            {countryToFlag(entry.country)}
+            {GuestbookClientService.countryToFlag(entry.country)}
           </span>
         )}
-        <span className="text-[10px] text-muted-foreground/40 font-mono whitespace-nowrap ml-auto">
+        <span className="ml-auto whitespace-nowrap font-mono text-[10px] text-muted-foreground/40">
           {formatEntryDate(entry.created_at)}
         </span>
       </div>
 
-      <p className="mt-0.5 text-xs text-muted-foreground whitespace-pre-wrap break-words leading-relaxed">
+      <p className="mt-0.5 whitespace-pre-wrap break-words text-muted-foreground text-xs leading-relaxed">
         {entry.message}
       </p>
     </div>

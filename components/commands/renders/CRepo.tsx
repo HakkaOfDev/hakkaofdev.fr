@@ -17,8 +17,8 @@ import { getGitHubRepo } from "@/app/actions";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { Tag } from "@/components/ui/Tag";
 import { SITE } from "@/lib/constants";
-import type { GitHubRepo } from "@/lib/types/github";
 import { cn } from "@/lib/utils";
+import type { GitHubRepo } from "@/types/github";
 
 function formatCount(count: number): string {
   if (count >= 1000) return `${(count / 1000).toFixed(1)}k`;
@@ -43,7 +43,7 @@ function CopyButton({ text }: { text: string }) {
     <button
       type="button"
       onClick={handleCopy}
-      className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium bg-chart-1/10 text-chart-1 ring-1 ring-inset ring-chart-1/20 hover:bg-chart-1/20 transition-colors duration-200 cursor-pointer"
+      className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-primary/10 px-2 py-1 font-medium text-primary text-xs ring-1 ring-primary/20 ring-inset transition-colors duration-200 hover:bg-primary/20"
       aria-label={
         status === "copied"
           ? "Copied"
@@ -75,7 +75,7 @@ function Stat({
       title={label}
     >
       {icon}
-      <span className="text-foreground font-semibold">{value}</span>
+      <span className="font-semibold text-foreground">{value}</span>
     </span>
   );
 }
@@ -95,7 +95,7 @@ function LanguageDot({ language }: { language: string }) {
         size={8}
         className={cn("fill-current", colors[language] ?? "text-gray-400")}
       />
-      <span className="text-foreground font-semibold">{language}</span>
+      <span className="font-semibold text-foreground">{language}</span>
     </span>
   );
 }
@@ -105,21 +105,21 @@ function RepoCard({ repo }: { repo: GitHubRepo }) {
 
   return (
     <AnimatedSpan className="gap-3">
-      <div className="border rounded-lg p-4 max-w-md space-y-3">
+      <div className="max-w-md space-y-3 rounded-lg border p-4">
         {/* Header */}
         <div className="flex items-start justify-between gap-2">
           <Link
             href={repo.html_url}
             target="_blank"
-            className="group inline-flex items-center gap-2 min-w-0"
+            className="group inline-flex min-w-0 items-center gap-2"
           >
             <Github size={16} className="shrink-0 text-muted-foreground" />
-            <span className="font-semibold text-chart-2 group-hover:text-chart-2/80 transition-colors duration-200 truncate">
+            <span className="truncate font-semibold text-secondary transition-colors duration-200 group-hover:text-secondary/80">
               {repo.full_name}
             </span>
             <ExternalLink
               size={12}
-              className="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-muted-foreground"
+              className="shrink-0 text-muted-foreground opacity-0 transition-opacity duration-200 group-hover:opacity-100"
             />
           </Link>
         </div>
@@ -163,8 +163,8 @@ function RepoCard({ repo }: { repo: GitHubRepo }) {
         </div>
 
         {/* Clone */}
-        <div className="flex items-center gap-2 rounded-md bg-muted/50 px-3 py-2 ring-1 ring-inset ring-border">
-          <code className="flex-1 text-[11px] text-foreground font-mono truncate select-all">
+        <div className="flex items-center gap-2 rounded-md bg-muted/50 px-3 py-2 ring-1 ring-border ring-inset">
+          <code className="flex-1 select-all truncate font-mono text-[11px] text-foreground">
             {cloneUrl}
           </code>
           <CopyButton text={cloneUrl} />
@@ -177,9 +177,9 @@ function RepoCard({ repo }: { repo: GitHubRepo }) {
 function RepoSkeleton() {
   return (
     <AnimatedSpan className="gap-3">
-      <div className="border rounded-lg p-4 max-w-md space-y-3 animate-pulse">
+      <div className="max-w-md animate-pulse space-y-3 rounded-lg border p-4">
         <div className="flex items-center gap-2">
-          <div className="w-4 h-4 rounded bg-muted" />
+          <div className="h-4 w-4 rounded bg-muted" />
           <div className="h-4 w-40 rounded bg-muted" />
         </div>
         <div className="space-y-1.5">
@@ -209,13 +209,13 @@ function RepoFallback() {
         <Link
           href={SITE.repositoryUrl}
           target="_blank"
-          className="font-semibold text-chart-2 hover:text-chart-2/80 transition-colors duration-200 break-all"
+          className="break-all font-semibold text-secondary transition-colors duration-200 hover:text-secondary/80"
         >
           {SITE.repositoryUrl}
         </Link>
       </p>
-      <div className="flex items-center gap-2 mt-1 flex-wrap">
-        <code className="text-foreground font-semibold rounded bg-muted/60 px-2 py-1 text-[11px]">
+      <div className="mt-1 flex flex-wrap items-center gap-2">
+        <code className="rounded bg-muted/60 px-2 py-1 font-semibold text-[11px] text-foreground">
           {cloneUrl}
         </code>
         <CopyButton text={cloneUrl} />

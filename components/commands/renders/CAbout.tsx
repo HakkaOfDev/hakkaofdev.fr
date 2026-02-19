@@ -16,7 +16,7 @@ function CAbout() {
         Email:{" "}
         <Link
           href={`mailto:${SITE.email}`}
-          className="font-semibold text-chart-1 hover:text-chart-1/80 transition-colors duration-200"
+          className="font-semibold text-primary transition-colors duration-200 hover:text-primary/80"
         >
           {SITE.email}
         </Link>
@@ -35,7 +35,7 @@ function CAbout() {
 function Info({ title, value }: { title: string; value: string }) {
   return (
     <p className="text-muted-foreground">
-      {title}: <span className="text-foreground font-semibold">{value}</span>
+      {title}: <span className="font-semibold text-foreground">{value}</span>
     </p>
   );
 }

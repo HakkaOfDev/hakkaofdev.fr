@@ -22,13 +22,13 @@ export function GitHubStarButton() {
       target="_blank"
       title="Star on GitHub"
       aria-label="Star on GitHub"
-      className="h-6 flex items-center gap-1.5 rounded-md border border-border/60 dark:border-white/[0.08] bg-muted/40 dark:bg-white/[0.04] px-2 text-[11px] font-medium text-muted-foreground transition-all duration-200 hover:bg-muted/70 dark:hover:bg-white/[0.08] hover:text-foreground active:scale-95 select-none"
+      className="flex h-6 select-none items-center gap-1.5 rounded-md border border-border/60 bg-muted/40 px-2 font-medium text-[11px] text-muted-foreground transition-all duration-200 hover:bg-muted/70 hover:text-foreground active:scale-95 dark:border-overlay-medium dark:bg-overlay-subtle dark:hover:bg-overlay-medium"
     >
-      <Star size={12} className="fill-chart-2 text-chart-2 shrink-0" />
+      <Star size={12} className="shrink-0 fill-secondary text-secondary" />
       {data ? (
         <span className="tabular-nums">{data.stargazers_count}</span>
       ) : (
-        <span className="w-5 h-2.5 rounded-sm bg-muted-foreground/20 animate-pulse" />
+        <span className="h-2.5 w-5 animate-pulse rounded-sm bg-muted-foreground/20" />
       )}
     </Link>
   );

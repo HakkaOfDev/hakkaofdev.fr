@@ -9,12 +9,12 @@ function CTopTracks() {
     <SpotifyQuery queryKey={["top-tracks"]} queryFn={getTopTracks}>
       {(data) => (
         <AnimatedSpan>
-          <table className="overflow-x-auto max-w-full">
+          <table className="max-w-full overflow-x-auto">
             <thead>
-              <tr className="text-muted-foreground uppercase text-xs">
+              <tr className="text-muted-foreground text-xs uppercase">
                 <th className="pb-2">Rank</th>
-                <th className="text-left px-4 pb-2">Track</th>
-                <th className="text-left pb-2">Album</th>
+                <th className="px-4 pb-2 text-left">Track</th>
+                <th className="pb-2 text-left">Album</th>
               </tr>
             </thead>
             <tbody>
@@ -26,7 +26,7 @@ function CTopTracks() {
                       href={item.external_urls.spotify}
                       target="_blank"
                       aria-label={`Open top track: ${item.name}`}
-                      className="flex items-center gap-2 py-1 group"
+                      className="group flex items-center gap-2 py-1"
                     >
                       <Image
                         src={item.album.images[0].url}
@@ -36,7 +36,7 @@ function CTopTracks() {
                         className="rounded-sm"
                       />
                       <div>
-                        <p className="text-sm leading-4 line-clamp-2 font-semibold group-hover:text-chart-1 transition-colors duration-200">
+                        <p className="line-clamp-2 font-semibold text-sm leading-4 transition-colors duration-200 group-hover:text-primary">
                           {item.name}
                         </p>
                         <p className="text-muted-foreground">
@@ -51,7 +51,7 @@ function CTopTracks() {
                         href={item.album.external_urls.spotify}
                         target="_blank"
                         aria-label={`Open top album: ${item.album.name}`}
-                        className="hover:text-chart-1 leading-4 font-semibold line-clamp-2 text-sm transition-colors duration-200"
+                        className="line-clamp-2 font-semibold text-sm leading-4 transition-colors duration-200 hover:text-primary"
                       >
                         {item.album.name}
                       </Link>

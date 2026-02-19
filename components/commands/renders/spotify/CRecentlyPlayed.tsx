@@ -16,7 +16,7 @@ function CRecentlyPlayed() {
               href={item.track.external_urls.spotify}
               target="_blank"
               aria-label={`Open recently played track: ${item.track.name}`}
-              className="flex items-center gap-2 py-1 group"
+              className="group flex items-center gap-2 py-1"
             >
               <Image
                 src={item.track.album.images[0].url}
@@ -25,16 +25,16 @@ function CRecentlyPlayed() {
                 height={50}
                 className="rounded-sm"
               />
-              <div className="flex flex-col sm:flex-row items-start sm:items-center flex-1 gap-1">
+              <div className="flex flex-1 flex-col items-start gap-1 sm:flex-row sm:items-center">
                 <div className="flex-1">
-                  <p className="text-sm leading-4 line-clamp-1 font-semibold group-hover:text-chart-1 transition-colors duration-200">
+                  <p className="line-clamp-1 font-semibold text-sm leading-4 transition-colors duration-200 group-hover:text-primary">
                     {item.track.name}
                   </p>
-                  <p className="text-muted-foreground line-clamp-1">
+                  <p className="line-clamp-1 text-muted-foreground">
                     {item.track.artists.map((artist) => artist.name).join(", ")}
                   </p>
                 </div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-muted-foreground text-xs">
                   {formatDistanceToNow(new Date(item.played_at), {
                     addSuffix: true,
                   })}

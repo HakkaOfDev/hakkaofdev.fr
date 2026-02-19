@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import type { CommandGroup } from "@/lib/command-descriptors";
 import type { Suggestion } from "@/hooks/useSuggestions";
+import type { CommandGroup } from "@/lib/command-descriptors";
 import { cn } from "@/lib/utils";
 
 /* ─── Group → dot color mapping ─── */
