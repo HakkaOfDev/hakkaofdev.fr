@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { Command } from "@/types";
 import CommandBash from "./CommandBash";
 import { COMMAND_RENDERERS } from "./registries/registry";
@@ -17,17 +17,25 @@ function CommandWrapper({
   timestamp,
 }: { children: React.ReactNode } & Command) {
   const [show, setShow] = useState(false);
+  const commandRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShow(true);
-    }, 500);
-
+    const timeout = setTimeout(() => setShow(true), 500);
     return () => clearTimeout(timeout);
   }, []);
 
+  useLayoutEffect(() => {
+    if (!show) return;
+    commandRef.current?.scrollIntoView({
+      behavior: "auto",
+      block: "start",
+      inline: "nearest",
+    });
+  }, [show]);
+
   return (
     <div
+      ref={commandRef}
       id={`cmd-${id}`}
       className="flex w-full flex-col gap-2 pt-3 pb-4 first:pt-0"
     >

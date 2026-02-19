@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useRef,
-  useState,
-} from "react";
+import { createContext, useCallback, useContext, useState } from "react";
 import type { Command } from "@/types";
 
 interface CommandsContextType {
@@ -32,7 +26,6 @@ export function useCommands() {
 export function CommandsProvider({ children }: { children: React.ReactNode }) {
   const [commands, setCommands] = useState<Command[]>([]);
   const [showWelcome, setShowWelcome] = useState(true);
-  const pendingScrollId = useRef<number | null>(null);
 
   const addCommand = (input: string) => {
     if (showWelcome) setShowWelcome(false);
@@ -54,15 +47,6 @@ export function CommandsProvider({ children }: { children: React.ReactNode }) {
         timestamp,
       },
     ]);
-
-    if (pendingScrollId.current) window.clearTimeout(pendingScrollId.current);
-    pendingScrollId.current = window.setTimeout(() => {
-      const command = document.getElementById(`cmd-${id}`);
-
-      if (command) {
-        command.scrollIntoView({ behavior: "smooth", inline: "start" });
-      }
-    }, 500);
   };
 
   const clearCommands = useCallback(() => {
