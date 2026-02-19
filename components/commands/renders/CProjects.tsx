@@ -5,36 +5,36 @@ import { PROJECTS } from "@/lib/constants";
 
 function CProjects() {
   return (
-    <AnimatedSpan className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <AnimatedSpan className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {PROJECTS.map((project) => (
         <Link
           href={project.url}
           key={project.name}
           aria-label={`Open project: ${project.name}`}
           target="_blank"
-          className="h-auto group"
+          className="group h-auto"
         >
-          <div className="border rounded-lg h-full overflow-hidden flex flex-col">
+          <div className="flex h-full flex-col overflow-hidden rounded-lg border">
             <div className="relative aspect-video overflow-hidden">
               <Image
                 src={project.imageUrl}
                 alt={project.name}
-                className="object-cover group-hover:scale-105 transition-all duration-300"
+                className="object-cover transition-all duration-300 group-hover:scale-105"
                 fill
               />
             </div>
             <div className="flex flex-col justify-start p-3">
-              <p className="text-sm font-semibold">{project.name}</p>
-              <p className="text-muted-foreground mt-1">
+              <p className="font-semibold text-sm">{project.name}</p>
+              <p className="mt-1 text-muted-foreground">
                 {project.description}
               </p>
-              <div className="flex gap-1 flex-wrap mt-3">
+              <div className="mt-3 flex flex-wrap gap-1">
                 {project.tags
                   .sort((a, b) => a.localeCompare(b))
                   .map((tag) => (
                     <p
                       key={tag}
-                      className="text-xs rounded-xs py-1 px-2 bg-chart-1/10 text-chart-1"
+                      className="rounded-xs bg-primary/10 px-2 py-1 text-primary text-xs"
                     >
                       {tag}
                     </p>

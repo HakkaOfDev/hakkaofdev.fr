@@ -2,17 +2,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const tagVariants = cva(
-  "inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[10px] font-medium ring-1 ring-inset leading-none",
+  "inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 font-medium text-[10px] leading-none ring-1 ring-inset",
   {
     variants: {
       variant: {
         default:
-          "bg-muted/60 text-muted-foreground ring-border/50 dark:bg-white/[0.04] dark:ring-white/10",
-        teal: "bg-chart-1/10 text-chart-1 ring-chart-1/20",
-        gold: "bg-chart-4/10 text-chart-4 ring-chart-4/20",
-        purple: "bg-chart-3/10 text-chart-3 ring-chart-3/20",
-        orange: "bg-chart-5/10 text-chart-5 ring-chart-5/20",
-        pink: "bg-pink-500/10 text-pink-500 ring-pink-500/20 dark:bg-pink-400/10 dark:text-pink-400 dark:ring-pink-400/20",
+          "bg-muted/60 text-muted-foreground ring-border/50 dark:bg-overlay-subtle dark:ring-overlay-medium",
+        teal: "bg-primary/10 text-primary ring-primary/20",
+        gold: "bg-secondary/10 text-secondary ring-secondary/20",
+        purple: "bg-tertiary/10 text-tertiary ring-tertiary/20",
+        orange: "bg-quaternary/10 text-quaternary ring-quaternary/20",
+        pink: "bg-quinary/10 text-quinary ring-quinary/20",
       },
     },
     defaultVariants: {

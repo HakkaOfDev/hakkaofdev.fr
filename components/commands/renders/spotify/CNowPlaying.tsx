@@ -17,7 +17,7 @@ function CNowPlaying() {
             aria-label={`Open now playing track: ${data.item.name}`}
             className="group w-fit"
           >
-            <AnimatedSpan className="border flex w-fit items-center gap-3 rounded-lg p-3">
+            <AnimatedSpan className="flex w-fit items-center gap-3 rounded-lg border p-3">
               <Image
                 src={data.item.album.images[0].url}
                 alt={data.item.name}
@@ -26,7 +26,7 @@ function CNowPlaying() {
                 className="rounded-sm"
               />
               <div>
-                <p className="text-sm font-semibold group-hover:text-chart-1 transition-colors duration-200">
+                <p className="font-semibold text-sm transition-colors duration-200 group-hover:text-primary">
                   {data.item.name}
                 </p>
                 <p className="text-muted-foreground">

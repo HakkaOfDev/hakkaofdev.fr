@@ -4,9 +4,9 @@ import { ChevronDown, ChevronUp, RotateCcw } from "lucide-react";
 import dynamic from "next/dynamic";
 import { TrafficLightsPreview } from "@/components/TrafficLights";
 import { SITE } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import type { ThemeColors } from "@/types/theme";
 import { THEME_COLOR_KEYS } from "@/types/theme";
-import { cn } from "@/lib/utils";
 
 const WelcomeHero = dynamic(() => import("@/components/WelcomeHero"), {
   ssr: false,

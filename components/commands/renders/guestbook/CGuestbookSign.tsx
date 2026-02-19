@@ -72,13 +72,13 @@ function CGuestbookSign() {
         result.status === "pending_moderation" ? (
           "Entry submitted and pending moderation."
         ) : (
-          <span className="inline-flex items-center gap-1.5 flex-wrap">
+          <span className="inline-flex flex-wrap items-center gap-1.5">
             Entry published!
             <Shortcut
               label="guestbook read"
               command="guestbook read"
               variant="pink"
-              className="text-[10px] py-0 px-1.5"
+              className="px-1.5 py-0 text-[10px]"
             />
           </span>
         ),
@@ -108,7 +108,7 @@ function CGuestbookSign() {
 
   return (
     <AnimatedSpan className="gap-3">
-      <p className="text-xs text-muted-foreground">
+      <p className="text-muted-foreground text-xs">
         Leave a message in my guestbook.
       </p>
 
@@ -116,13 +116,13 @@ function CGuestbookSign() {
         onSubmit={handleSubmit(onSubmit)}
         className="grid gap-2 rounded-md border border-border/60 p-3"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
           <input
             {...register("name")}
             type="text"
             placeholder="Your name"
             className={cn(
-              "h-8 rounded-md border bg-transparent px-2 text-xs outline-none focus-visible:ring-1 focus-visible:ring-chart-1/60",
+              "h-8 rounded-md border bg-transparent px-2 text-xs outline-none focus-visible:ring-1 focus-visible:ring-primary/60",
               errors.name ? "border-destructive/60" : "border-border",
             )}
             maxLength={GUESTBOOK_CONFIG.MAX_NAME_LENGTH}
@@ -132,7 +132,7 @@ function CGuestbookSign() {
             type="text"
             placeholder="Website (optional)"
             className={cn(
-              "h-8 rounded-md border bg-transparent px-2 text-xs outline-none focus-visible:ring-1 focus-visible:ring-chart-1/60",
+              "h-8 rounded-md border bg-transparent px-2 text-xs outline-none focus-visible:ring-1 focus-visible:ring-primary/60",
               errors.website ? "border-destructive/60" : "border-border",
             )}
             maxLength={GUESTBOOK_CONFIG.MAX_WEBSITE_LENGTH}
@@ -143,7 +143,7 @@ function CGuestbookSign() {
           {...register("message")}
           placeholder="Your message"
           className={cn(
-            "min-h-20 rounded-md border bg-transparent px-2 py-1.5 text-xs outline-none focus-visible:ring-1 focus-visible:ring-chart-1/60 resize-y",
+            "min-h-20 resize-y rounded-md border bg-transparent px-2 py-1.5 text-xs outline-none focus-visible:ring-1 focus-visible:ring-primary/60",
             errors.message ? "border-destructive/60" : "border-border",
           )}
           maxLength={GUESTBOOK_CONFIG.MAX_MESSAGE_LENGTH}
@@ -155,7 +155,7 @@ function CGuestbookSign() {
           type="text"
           tabIndex={-1}
           autoComplete="off"
-          className="absolute -left-[9999px] h-0 w-0 overflow-hidden opacity-0 pointer-events-none"
+          className="pointer-events-none absolute -left-[9999px] h-0 w-0 overflow-hidden opacity-0"
           aria-hidden
         />
 
@@ -166,7 +166,7 @@ function CGuestbookSign() {
               submitMessage
                 ? createMutation.isError
                   ? "text-destructive"
-                  : "text-chart-1"
+                  : "text-primary"
                 : firstFieldError
                   ? "text-destructive"
                   : "text-muted-foreground/70",
@@ -188,7 +188,7 @@ function CGuestbookSign() {
           <button
             type="submit"
             disabled={createMutation.isPending || !isValid}
-            className="inline-flex items-center gap-1 whitespace-nowrap rounded-md px-2.5 py-1 text-xs font-semibold bg-chart-1/10 text-chart-1 ring-1 ring-inset ring-chart-1/20 hover:bg-chart-1/20 transition-colors duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+            className="inline-flex cursor-pointer items-center gap-1 whitespace-nowrap rounded-md bg-primary/10 px-2.5 py-1 font-semibold text-primary text-xs ring-1 ring-primary/20 ring-inset transition-colors duration-200 hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
           >
             {createMutation.isPending && (
               <Loader2 className="h-3 w-3 animate-spin" />

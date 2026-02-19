@@ -105,12 +105,12 @@ function GuestbookEntryRow({
     <Link
       href={entry.website}
       target="_blank"
-      className="text-xs font-semibold text-foreground truncate hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 cursor-pointer"
+      className="cursor-pointer truncate font-semibold text-foreground text-xs transition-colors duration-200 hover:text-quinary"
     >
       {entry.name}
     </Link>
   ) : (
-    <span className="text-xs font-semibold text-foreground truncate">
+    <span className="truncate font-semibold text-foreground text-xs">
       {entry.name}
     </span>
   );
@@ -118,34 +118,34 @@ function GuestbookEntryRow({
   return (
     <div
       className={cn(
-        "border-l-2 border-pink-500/30 dark:border-pink-400/20 pl-4 ml-1 relative min-w-0",
+        "relative ml-1 min-w-0 border-quinary/30 border-l-2 pl-4",
         isLast ? "pb-0" : "pb-3",
       )}
     >
       {/* Timeline dot */}
-      <div className="absolute -left-[5px] top-[5px] size-2 rounded-full bg-pink-500 dark:bg-pink-400" />
+      <div className="absolute top-[5px] -left-[5px] size-2 rounded-full bg-quinary" />
 
       {/* Author line */}
       <div className="flex items-baseline gap-2">
-        <span className="font-mono text-[10px] text-muted-foreground/50 shrink-0">
+        <span className="shrink-0 font-mono text-[10px] text-muted-foreground/50">
           #{String(index + 1).padStart(3, "0")}
         </span>
         {nameElement}
         {entry.country && (
           <span
-            className="text-[11px] leading-none shrink-0"
+            className="shrink-0 text-[11px] leading-none"
             title={entry.country}
           >
             {countryToFlag(entry.country)}
           </span>
         )}
-        <span className="text-[10px] text-muted-foreground/40 font-mono whitespace-nowrap ml-auto">
+        <span className="ml-auto whitespace-nowrap font-mono text-[10px] text-muted-foreground/40">
           {formatEntryDate(entry.created_at)}
         </span>
       </div>
 
       {/* Message */}
-      <p className="mt-0.5 text-xs text-muted-foreground whitespace-pre-wrap break-words leading-relaxed">
+      <p className="mt-0.5 whitespace-pre-wrap break-words text-muted-foreground text-xs leading-relaxed">
         {entry.message}
       </p>
     </div>
@@ -158,13 +158,13 @@ function ReadSkeleton() {
       {[1, 2, 3].map((i) => (
         <div
           key={i}
-          className="border-l-2 border-muted/40 pl-4 relative pb-3 animate-pulse"
+          className="relative animate-pulse border-muted/40 border-l-2 pb-3 pl-4"
         >
-          <div className="absolute -left-[5px] top-[5px] size-2 rounded-full bg-muted" />
+          <div className="absolute top-[5px] -left-[5px] size-2 rounded-full bg-muted" />
           <div className="flex items-center gap-2">
             <div className="h-2.5 w-6 rounded bg-muted" />
             <div className="h-3 w-24 rounded bg-muted" />
-            <div className="h-2.5 w-28 rounded bg-muted ml-auto" />
+            <div className="ml-auto h-2.5 w-28 rounded bg-muted" />
           </div>
           <div className="mt-1.5 h-3 w-3/4 rounded bg-muted" />
         </div>
@@ -206,25 +206,25 @@ function FilterPopover({
         type="button"
         onClick={() => setOpen((v) => !v)}
         className={cn(
-          "inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10px] font-semibold ring-1 ring-inset transition-colors duration-200 cursor-pointer",
+          "inline-flex cursor-pointer items-center gap-1 rounded-md px-2 py-0.5 font-semibold text-[10px] ring-1 ring-inset transition-colors duration-200",
           hasActiveFilters
-            ? "bg-pink-500/20 text-pink-500 dark:text-pink-400 ring-pink-500/30"
-            : "bg-pink-500/10 text-pink-500 dark:text-pink-400 ring-pink-500/20 hover:bg-pink-500/20",
+            ? "bg-quinary/20 text-quinary ring-quinary/30"
+            : "bg-quinary/10 text-quinary ring-quinary/20 hover:bg-quinary/20",
         )}
         aria-label="Filter guestbook entries"
       >
         <Filter className="h-2.5 w-2.5" />
         filter
         {hasActiveFilters && (
-          <span className="ml-0.5 size-1.5 rounded-full bg-pink-500 dark:bg-pink-400" />
+          <span className="ml-0.5 size-1.5 rounded-full bg-quinary" />
         )}
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-1 z-50 min-w-[180px] rounded-md border border-border/60 bg-background/95 backdrop-blur-sm shadow-lg p-2 grid gap-2">
+        <div className="absolute top-full right-0 z-50 mt-1 grid min-w-[180px] gap-2 rounded-md border border-border/60 bg-background/95 p-2 shadow-lg backdrop-blur-sm">
           {/* Sort order */}
           <div className="grid gap-1">
-            <span className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider">
+            <span className="font-mono text-[10px] text-muted-foreground/60 uppercase tracking-wider">
               sort
             </span>
             <div className="flex gap-1">
@@ -232,9 +232,9 @@ function FilterPopover({
                 type="button"
                 onClick={() => onChangeFilters({ ...filters, sort: "desc" })}
                 className={cn(
-                  "flex-1 inline-flex items-center justify-center gap-1 rounded px-2 py-1 text-[10px] font-semibold transition-colors duration-150 cursor-pointer",
+                  "inline-flex flex-1 cursor-pointer items-center justify-center gap-1 rounded px-2 py-1 font-semibold text-[10px] transition-colors duration-150",
                   filters.sort === "desc"
-                    ? "bg-pink-500/20 text-pink-500 dark:text-pink-400 ring-1 ring-inset ring-pink-500/30"
+                    ? "bg-quinary/20 text-quinary ring-1 ring-quinary/30 ring-inset"
                     : "text-muted-foreground hover:bg-muted/50",
                 )}
               >
@@ -245,9 +245,9 @@ function FilterPopover({
                 type="button"
                 onClick={() => onChangeFilters({ ...filters, sort: "asc" })}
                 className={cn(
-                  "flex-1 inline-flex items-center justify-center gap-1 rounded px-2 py-1 text-[10px] font-semibold transition-colors duration-150 cursor-pointer",
+                  "inline-flex flex-1 cursor-pointer items-center justify-center gap-1 rounded px-2 py-1 font-semibold text-[10px] transition-colors duration-150",
                   filters.sort === "asc"
-                    ? "bg-pink-500/20 text-pink-500 dark:text-pink-400 ring-1 ring-inset ring-pink-500/30"
+                    ? "bg-quinary/20 text-quinary ring-1 ring-quinary/30 ring-inset"
                     : "text-muted-foreground hover:bg-muted/50",
                 )}
               >
@@ -260,7 +260,7 @@ function FilterPopover({
           {/* Country filter */}
           {countries && countries.length > 0 && (
             <div className="grid gap-1">
-              <span className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider">
+              <span className="font-mono text-[10px] text-muted-foreground/60 uppercase tracking-wider">
                 country
               </span>
               <div className="flex gap-1">
@@ -272,7 +272,7 @@ function FilterPopover({
                       country: e.target.value || null,
                     })
                   }
-                  className="flex-1 h-6 rounded border border-border bg-transparent px-1.5 text-[10px] text-foreground outline-none focus-visible:ring-1 focus-visible:ring-pink-500/60 cursor-pointer appearance-none"
+                  className="h-6 flex-1 cursor-pointer appearance-none rounded border border-border bg-transparent px-1.5 text-[10px] text-foreground outline-none focus-visible:ring-1 focus-visible:ring-quinary/60"
                 >
                   <option value="">All countries</option>
                   {countries.map((code) => (
@@ -287,7 +287,7 @@ function FilterPopover({
                     onClick={() =>
                       onChangeFilters({ ...filters, country: null })
                     }
-                    className="inline-flex items-center justify-center size-6 rounded text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors cursor-pointer"
+                    className="inline-flex size-6 cursor-pointer items-center justify-center rounded text-muted-foreground transition-colors hover:bg-muted/50 hover:text-foreground"
                     aria-label="Clear country filter"
                   >
                     <X className="h-2.5 w-2.5" />
@@ -302,7 +302,7 @@ function FilterPopover({
             <button
               type="button"
               onClick={() => onChangeFilters({ sort: "desc", country: null })}
-              className="text-[10px] font-mono text-muted-foreground/60 hover:text-foreground transition-colors cursor-pointer text-left"
+              className="cursor-pointer text-left font-mono text-[10px] text-muted-foreground/60 transition-colors hover:text-foreground"
             >
               reset filters
             </button>
@@ -333,10 +333,8 @@ function CGuestbookRead() {
     <AnimatedSpan className="gap-2">
       {/* Header */}
       <div className="flex items-center justify-between gap-3">
-        <p className="text-xs text-muted-foreground font-mono">
-          <span className="text-pink-500 dark:text-pink-400 font-semibold">
-            guestbook
-          </span>
+        <p className="font-mono text-muted-foreground text-xs">
+          <span className="font-semibold text-quinary">guestbook</span>
           <span className="text-muted-foreground/40"> — </span>
           {data
             ? `${data.length} ${data.length === 1 ? "entry" : "entries"}`
@@ -352,7 +350,7 @@ function CGuestbookRead() {
               })
             }
             disabled={isFetching}
-            className="inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10px] font-semibold bg-pink-500/10 text-pink-500 dark:text-pink-400 ring-1 ring-inset ring-pink-500/20 hover:bg-pink-500/20 transition-colors duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+            className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-quinary/10 px-2 py-0.5 font-semibold text-[10px] text-quinary ring-1 ring-quinary/20 ring-inset transition-colors duration-200 hover:bg-quinary/20 disabled:cursor-not-allowed disabled:opacity-50"
             aria-label="Refresh guestbook entries"
           >
             <RefreshCcw
@@ -365,7 +363,7 @@ function CGuestbookRead() {
 
       {/* Error */}
       {isError && (
-        <p className="text-xs font-mono text-destructive">
+        <p className="font-mono text-destructive text-xs">
           <span className="text-destructive/60">error:</span>{" "}
           {error instanceof Error
             ? error.message
@@ -375,7 +373,7 @@ function CGuestbookRead() {
 
       {/* Empty */}
       {data && data.length === 0 && (
-        <p className="text-xs text-muted-foreground font-mono inline-flex items-center gap-1.5 flex-wrap">
+        <p className="inline-flex flex-wrap items-center gap-1.5 font-mono text-muted-foreground text-xs">
           <span className="text-muted-foreground/40">~</span>
           {filters.country ? (
             <>
@@ -392,7 +390,7 @@ function CGuestbookRead() {
                 label="guestbook sign"
                 command="guestbook sign"
                 variant="pink"
-                className="text-[10px] py-0 px-1.5"
+                className="px-1.5 py-0 text-[10px]"
               />{" "}
               to be the first.
             </>
@@ -402,7 +400,7 @@ function CGuestbookRead() {
 
       {/* Entry list */}
       {data && data.length > 0 && (
-        <div className="max-h-52 overflow-y-auto overflow-x-hidden terminal-scrollbar pr-1">
+        <div className="terminal-scrollbar max-h-52 overflow-y-auto overflow-x-hidden pr-1">
           {data.map((entry, idx) => (
             <GuestbookEntryRow
               key={entry.id}

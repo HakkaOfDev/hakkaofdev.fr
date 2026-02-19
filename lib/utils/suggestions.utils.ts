@@ -1,11 +1,8 @@
-import {
-  ALL_COMMANDS,
-  SUBCOMMAND_PREFIXES,
-} from "@/lib/command-descriptors";
 import { DYNAMIC_PARAM_COMMANDS } from "@/components/commands/registries/dynamic-param-registry";
 import type { Suggestion } from "@/hooks/useSuggestions";
-import { MAX_SUGGESTIONS } from "../constants/suggestions.constants";
+import { ALL_COMMANDS, SUBCOMMAND_PREFIXES } from "@/lib/command-descriptors";
 import type { TabCompletionResult } from "@/types/suggestions";
+import { MAX_SUGGESTIONS } from "../constants/suggestions.constants";
 
 // ─── Helpers ───────────────────────────────────────────────────────────
 

@@ -44,6 +44,14 @@
       },
       "suspicious": {
         "noExplicitAny": "warn"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "error",
+          "options": {
+            "functions": ["cn", "cva", "clsx", "twMerge", "tv"]
+          }
+        }
       }
     }
   },

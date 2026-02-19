@@ -9,11 +9,13 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-montserrat: var(--font-montserrat);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-quaternary: var(--quaternary);
+  --color-quinary: var(--quinary);
+  --color-overlay-subtle: color-mix(in oklch, var(--foreground) 4%, transparent);
+  --color-overlay-medium: color-mix(in oklch, var(--foreground) 8%, transparent);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -22,7 +24,6 @@
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
-  --color-primary: var(--primary);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -31,28 +32,8 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.55 0.17 195);
-  --chart-2: oklch(0.6 0.16 75);
-  --chart-3: oklch(0.5 0.18 300);
-  --chart-4: oklch(0.7 0.16 85);
-  --chart-5: oklch(0.65 0.2 30);
-}
-
-.dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
@@ -61,11 +42,11 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.78 0.14 195);
-  --chart-2: oklch(0.8 0.14 75);
-  --chart-3: oklch(0.68 0.18 300);
-  --chart-4: oklch(0.8 0.15 85);
-  --chart-5: oklch(0.72 0.18 30);
+  --primary: oklch(0.78 0.14 195);
+  --secondary: oklch(0.8 0.14 75);
+  --tertiary: oklch(0.68 0.18 300);
+  --quaternary: oklch(0.72 0.18 30);
+  --quinary: oklch(0.72 0.22 350);
 }
 
 @keyframes wave {
@@ -101,19 +82,14 @@
   transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1), ease;
 }
 
-/* ── Terminal uniform shadow (only on focus) ── */
+/* ── Terminal uniform shadow (only on focus) – derives from primary ── */
 .terminal-shadow {
   box-shadow: none;
 }
 .terminal-shadow:has(.terminal-input:focus) {
   box-shadow:
-    0 0 36px -6px oklch(0.55 0.17 195 / 22%),
-    0 0 14px -3px oklch(0.55 0.17 195 / 14%);
-}
-.dark .terminal-shadow:has(.terminal-input:focus) {
-  box-shadow:
-    0 0 36px -6px oklch(0.78 0.14 195 / 12%),
-    0 0 14px -3px oklch(0.78 0.14 195 / 6%);
+    0 0 36px -6px color-mix(in oklch, var(--primary) 22%, transparent),
+    0 0 14px -3px color-mix(in oklch, var(--primary) 22%, transparent);
 }
 
 /* ── Terminal scrollbar ── */
@@ -133,7 +109,7 @@
 
 /* ── Terminal input caret ── */
 .terminal-input {
-  caret-color: var(--chart-1);
+  caret-color: var(--primary);
 }
 
 /* ── Idle cursor blink (shown when input is empty & focused) ── */
@@ -144,7 +120,7 @@
   height: 1.1em;
   margin-left: 1px;
   vertical-align: text-bottom;
-  background-color: var(--chart-1);
+  background-color: var(--primary);
   animation: cursor-blink 1s step-end infinite;
 }
 
@@ -160,4 +136,9 @@
 }
 .group\/dots:hover .traffic-light-green {
   box-shadow: 0 0 6px 1px oklch(0.65 0.2 145 / 40%);
+}
+
+/* ── Disable transitions during theme change ── */
+.theme-changing * {
+  transition: none !important;
 }

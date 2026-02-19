@@ -4,8 +4,8 @@ import { Check, Trash2 } from "lucide-react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
 import { BUILTIN_THEME_MAP } from "@/lib/themes/palettes";
-import type { ThemePalette } from "@/types/theme";
 import { cn } from "@/lib/utils";
+import type { ThemePalette } from "@/types/theme";
 
 const SWATCH_KEYS = [
   "background",
