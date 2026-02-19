@@ -1,14 +1,13 @@
-import type { Metadata, Viewport } from "next";
-import { Montserrat } from "next/font/google";
-import { CommandsProvider } from "@/components/CommandsProvider";
-import Footer from "@/components/Footer";
-import Providers from "@/components/Providers";
-import { getSiteUrl } from "@/lib/site-url";
-import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata, Viewport } from "next";
+import { Montserrat } from "next/font/google";
+import Footer from "@/components/Footer";
+import Providers from "@/components/providers/Providers";
 import { GITHUB_URL, SITE, SOCIALS } from "@/lib/constants";
+import { getSiteUrl } from "@/lib/site-url";
 import { cn } from "@/lib/utils";
+import "./globals.css";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -98,7 +97,7 @@ export default function RootLayout({
       <body
         className={cn(
           montserrat.variable,
-          "font-montserrat flex flex-col h-[100dvh] overflow-hidden antialiased",
+          "flex h-[100dvh] flex-col overflow-hidden font-montserrat antialiased",
         )}
       >
         <script
@@ -106,10 +105,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         <Providers>
-          <CommandsProvider>
-            {children}
-            <Footer />
-          </CommandsProvider>
+          {children}
+          <Footer />
         </Providers>
         {process.env.VERCEL && <Analytics />}
         {process.env.VERCEL && <SpeedInsights />}
