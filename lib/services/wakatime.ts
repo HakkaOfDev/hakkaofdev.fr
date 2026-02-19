@@ -1,8 +1,7 @@
-import type { WakaTimeStats } from "@/lib/types/stats";
+import { REVALIDATE, WAKATIME_API } from "@/lib/constants/api.constants";
+import type { WakaTimeStats } from "@/types/stats";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
-
-const WAKATIME_API = "https://wakatime.com/api/v1/users/current";
 
 const EMPTY_STATS: WakaTimeStats = {
   codingTime: null,
@@ -13,7 +12,7 @@ const EMPTY_STATS: WakaTimeStats = {
 // ─── Public API ──────────────────────────────────────────────────────────────
 
 /** Fetches coding activity stats from the WakaTime API. */
-export async function getWakaTimeStats(): Promise<WakaTimeStats> {
+async function getStats(): Promise<WakaTimeStats> {
   const apiKey = process.env.WAKATIME_API_KEY;
   if (!apiKey) return EMPTY_STATS;
 
@@ -23,11 +22,11 @@ export async function getWakaTimeStats(): Promise<WakaTimeStats> {
     const [allTimeRes, statsRes] = await Promise.all([
       fetch(`${WAKATIME_API}/all_time_since_today`, {
         headers: { Authorization: authHeader },
-        next: { revalidate: 3600 },
+        next: { revalidate: REVALIDATE.MEDIUM },
       }),
       fetch(`${WAKATIME_API}/stats/last_7_days`, {
         headers: { Authorization: authHeader },
-        next: { revalidate: 3600 },
+        next: { revalidate: REVALIDATE.MEDIUM },
       }),
     ]);
 
@@ -59,3 +58,9 @@ export async function getWakaTimeStats(): Promise<WakaTimeStats> {
     return EMPTY_STATS;
   }
 }
+
+// ─── Exports ────────────────────────────────────────────────────────────────
+
+export const WakaTimeService = {
+  getStats,
+} as const;

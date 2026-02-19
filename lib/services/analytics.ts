@@ -1,15 +1,13 @@
-// ─── Types ───────────────────────────────────────────────────────────────────
-
-export type VisitorCountry = {
-  country: string;
-  unique_count: number;
-  total_hits: number;
-};
+import {
+  HOME_SLUG,
+  VISITOR_COUNTRIES_LIMIT,
+} from "@/lib/constants/analytics.constants";
+import type { UniqueVisitorsResult, VisitorCountry } from "@/types/analytics";
 
 // ─── Public API ──────────────────────────────────────────────────────────────
 
 /** Fetches total page views for the home page from Supabase. */
-export async function getPageViews(): Promise<number | null> {
+async function getPageViews(): Promise<number | null> {
   try {
     const { supabase } = await import("@/lib/supabase");
     if (!supabase) return null;
@@ -17,7 +15,7 @@ export async function getPageViews(): Promise<number | null> {
     const { data } = await supabase
       .from("page_views")
       .select("count")
-      .eq("slug", "/")
+      .eq("slug", HOME_SLUG)
       .single();
 
     return data?.count ?? 0;
@@ -27,11 +25,7 @@ export async function getPageViews(): Promise<number | null> {
 }
 
 /** Fetches unique visitor counts (total / last 30 days / today) for the home page. */
-export async function getUniqueVisitors(): Promise<{
-  total: number;
-  last_30d: number;
-  today: number;
-} | null> {
+async function getUniqueVisitors(): Promise<UniqueVisitorsResult | null> {
   try {
     const { supabase } = await import("@/lib/supabase");
     if (!supabase) return null;
@@ -39,7 +33,7 @@ export async function getUniqueVisitors(): Promise<{
     const { data } = await supabase
       .from("unique_visitors")
       .select("total, last_30d, today")
-      .eq("slug", "/")
+      .eq("slug", HOME_SLUG)
       .single();
 
     return data ?? { total: 0, last_30d: 0, today: 0 };
@@ -49,7 +43,7 @@ export async function getUniqueVisitors(): Promise<{
 }
 
 /** Fetches per-country visitor breakdown for the home page. */
-export async function getVisitorCountries(): Promise<VisitorCountry[] | null> {
+async function getVisitorCountries(): Promise<VisitorCountry[] | null> {
   try {
     const { supabase } = await import("@/lib/supabase");
     if (!supabase) return null;
@@ -57,12 +51,20 @@ export async function getVisitorCountries(): Promise<VisitorCountry[] | null> {
     const { data } = await supabase
       .from("visitor_countries")
       .select("country, unique_count, total_hits")
-      .eq("slug", "/")
+      .eq("slug", HOME_SLUG)
       .order("unique_count", { ascending: false })
-      .limit(20);
+      .limit(VISITOR_COUNTRIES_LIMIT);
 
     return data ?? [];
   } catch {
     return null;
   }
 }
+
+// ─── Exports ────────────────────────────────────────────────────────────────
+
+export const AnalyticsService = {
+  getPageViews,
+  getUniqueVisitors,
+  getVisitorCountries,
+} as const;

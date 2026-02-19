@@ -1,10 +1,16 @@
 import { SITE } from "@/lib/constants";
-import type { GitHubRepo } from "@/lib/types/github";
+import {
+  GITHUB_API,
+  GITHUB_GRAPHQL,
+  REVALIDATE,
+} from "@/lib/constants/api.constants";
+import type {
+  GitHubRepo,
+  GitHubRepoStargazersItem,
+  GitHubUserResponse,
+} from "@/types/github";
 
-// ─── Constants ───────────────────────────────────────────────────────────────
-
-const GITHUB_API = "https://api.github.com";
-const GITHUB_GRAPHQL = `${GITHUB_API}/graphql`;
+const REPOS_PER_PAGE = 100;
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -20,12 +26,12 @@ function githubHeaders(): HeadersInit {
 // ─── Public API ──────────────────────────────────────────────────────────────
 
 /** Fetches repository metadata for the site repo from the GitHub API. */
-export async function getGitHubRepo(): Promise<GitHubRepo | null> {
+async function getRepo(): Promise<GitHubRepo | null> {
   const repoPath = SITE.repositoryUrl.replace("https://github.com/", "");
 
   const response = await fetch(`${GITHUB_API}/repos/${repoPath}`, {
     headers: githubHeaders(),
-    next: { revalidate: 300 },
+    next: { revalidate: REVALIDATE.SHORT },
   });
 
   if (!response.ok) return null;
@@ -33,28 +39,25 @@ export async function getGitHubRepo(): Promise<GitHubRepo | null> {
 }
 
 /** Aggregates stargazers across all owned repositories. */
-export async function getTotalStars(): Promise<number | null> {
+async function getTotalStars(): Promise<number | null> {
   const username = SITE.handle;
 
   try {
     let totalStars = 0;
     let page = 1;
-    const perPage = 100;
 
     while (true) {
       const response = await fetch(
-        `${GITHUB_API}/users/${username}/repos?per_page=${perPage}&page=${page}&type=owner`,
+        `${GITHUB_API}/users/${username}/repos?per_page=${REPOS_PER_PAGE}&page=${page}&type=owner`,
         {
           headers: githubHeaders(),
-          next: { revalidate: 3600 },
+          next: { revalidate: REVALIDATE.MEDIUM },
         },
       );
 
       if (!response.ok) return null;
 
-      const repos = (await response.json()) as Array<{
-        stargazers_count: number;
-      }>;
+      const repos = (await response.json()) as GitHubRepoStargazersItem[];
       if (!repos.length) break;
 
       totalStars += repos.reduce(
@@ -62,7 +65,7 @@ export async function getTotalStars(): Promise<number | null> {
         0,
       );
 
-      if (repos.length < perPage) break;
+      if (repos.length < REPOS_PER_PAGE) break;
       page++;
     }
 
@@ -73,7 +76,7 @@ export async function getTotalStars(): Promise<number | null> {
 }
 
 /** Fetches the total contribution count for the current year via GitHub GraphQL. */
-export async function getContributions(): Promise<number | null> {
+async function getContributions(): Promise<number | null> {
   const token = process.env.GITHUB_TOKEN;
   if (!token) return null;
 
@@ -98,7 +101,7 @@ export async function getContributions(): Promise<number | null> {
         }`,
         variables: { username },
       }),
-      next: { revalidate: 3600 },
+      next: { revalidate: REVALIDATE.MEDIUM },
     });
 
     if (!response.ok) return null;
@@ -125,18 +128,18 @@ export async function getContributions(): Promise<number | null> {
 }
 
 /** Returns the year the GitHub account was created. */
-export async function getCodingSince(): Promise<number | null> {
+async function getCodingSince(): Promise<number | null> {
   const username = SITE.handle;
 
   try {
     const response = await fetch(`${GITHUB_API}/users/${username}`, {
       headers: githubHeaders(),
-      next: { revalidate: 86400 },
+      next: { revalidate: REVALIDATE.LONG },
     });
 
     if (!response.ok) return null;
 
-    const json = (await response.json()) as { created_at?: string };
+    const json = (await response.json()) as GitHubUserResponse;
     if (!json.created_at) return null;
 
     return new Date(json.created_at).getFullYear();
@@ -144,3 +147,12 @@ export async function getCodingSince(): Promise<number | null> {
     return null;
   }
 }
+
+// ─── Exports ────────────────────────────────────────────────────────────────
+
+export const GitHubService = {
+  getRepo,
+  getTotalStars,
+  getContributions,
+  getCodingSince,
+} as const;

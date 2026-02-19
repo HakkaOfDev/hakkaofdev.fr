@@ -1,18 +1,26 @@
-import type { StatsData } from "@/lib/types/stats";
-import { getPageViews } from "./analytics";
-import { getCodingSince, getContributions, getTotalStars } from "./github";
-import { getWakaTimeStats } from "./wakatime";
+import type { StatsData } from "@/types/stats";
+import { AnalyticsService } from "./analytics";
+import { GitHubService } from "./github";
+import { WakaTimeService } from "./wakatime";
 
 /** Aggregates stats from WakaTime, GitHub, and Supabase in parallel. */
-export async function getStats(): Promise<StatsData> {
-  const [wakatime, totalStars, contributions, codingSince, pageViews] =
+async function getStats(): Promise<StatsData> {
+  const [wakatime, totalStars, contributions, codingSince, uniqueVisitors] =
     await Promise.all([
-      getWakaTimeStats(),
-      getTotalStars(),
-      getContributions(),
-      getCodingSince(),
-      getPageViews(),
+      WakaTimeService.getStats(),
+      GitHubService.getTotalStars(),
+      GitHubService.getContributions(),
+      GitHubService.getCodingSince(),
+      AnalyticsService.getUniqueVisitors(),
     ]);
 
-  return { wakatime, totalStars, contributions, codingSince, pageViews };
+  const visitors = uniqueVisitors !== null ? uniqueVisitors.total : null;
+
+  return { wakatime, totalStars, contributions, codingSince, visitors };
 }
+
+// ─── Exports ────────────────────────────────────────────────────────────────
+
+export const StatsService = {
+  getStats,
+} as const;
