@@ -1,9 +1,9 @@
-import { listCountries } from "@/lib/services/guestbook";
+import { GuestbookService } from "@/lib/services";
 
 export const runtime = "nodejs";
 
 export async function GET() {
-  const result = await listCountries();
+  const result = await GuestbookService.listCountries();
 
   if (!result.ok) {
     return Response.json(

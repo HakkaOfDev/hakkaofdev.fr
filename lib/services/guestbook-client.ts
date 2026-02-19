@@ -1,19 +1,29 @@
+import {
+  GUESTBOOK_API_PATHS,
+  GUESTBOOK_DEFAULT_LIMIT,
+} from "@/lib/constants/guestbook-client.constants";
 import type {
   GuestbookApiError,
   GuestbookFilters,
   GuestbookListResponse,
-} from "../types/guestbook";
+} from "@/types/guestbook";
 
 // ─── Fetchers ────────────────────────────────────────────────────────────────
 
-export async function fetchGuestbookEntries(filters: GuestbookFilters) {
-  const params = new URLSearchParams({ limit: "12", sort: filters.sort });
+async function fetchEntries(filters: GuestbookFilters) {
+  const params = new URLSearchParams({
+    limit: String(GUESTBOOK_DEFAULT_LIMIT),
+    sort: filters.sort,
+  });
   if (filters.country) params.set("country", filters.country);
 
-  const response = await fetch(`/api/guestbook?${params.toString()}`, {
-    method: "GET",
-    cache: "no-store",
-  });
+  const response = await fetch(
+    `${GUESTBOOK_API_PATHS.entries}?${params.toString()}`,
+    {
+      method: "GET",
+      cache: "no-store",
+    },
+  );
 
   const json = (await response.json()) as
     | GuestbookListResponse
@@ -29,8 +39,8 @@ export async function fetchGuestbookEntries(filters: GuestbookFilters) {
   return (json as GuestbookListResponse).entries;
 }
 
-export async function fetchCountries(): Promise<string[]> {
-  const response = await fetch("/api/guestbook/countries", {
+async function fetchCountries(): Promise<string[]> {
+  const response = await fetch(GUESTBOOK_API_PATHS.countries, {
     method: "GET",
     cache: "no-store",
   });
@@ -42,10 +52,18 @@ export async function fetchCountries(): Promise<string[]> {
 
 // ─── Formatting ──────────────────────────────────────────────────────────────
 
-export function countryToFlag(code: string | null) {
+function countryToFlag(code: string | null) {
   if (!code || code.length !== 2) return null;
   const upper = code.toUpperCase();
   return String.fromCodePoint(
     ...[...upper].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65),
   );
 }
+
+// ─── Exports ────────────────────────────────────────────────────────────────
+
+export const GuestbookClientService = {
+  fetchEntries,
+  fetchCountries,
+  countryToFlag,
+} as const;

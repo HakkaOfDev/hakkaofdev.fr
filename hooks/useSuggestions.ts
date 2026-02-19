@@ -1,46 +1,16 @@
 import { useCallback, useMemo, useState } from "react";
+import type { CommandGroup } from "@/lib/command-descriptors";
 import {
-  ALL_COMMANDS,
-  type CommandGroup,
-  SUBCOMMAND_PREFIXES,
-} from "@/components/commands/command-descriptors";
+  buildSuggestionPool,
+  calculateTabCompletion,
+  filterSuggestions,
+} from "@/lib/utils/suggestions.utils";
 
 export type Suggestion = {
   value: string;
   description?: string;
   group: CommandGroup;
 };
-
-// ─── Helpers ───────────────────────────────────────────────────────────
-
-function longestCommonPrefix(items: string[]): string {
-  if (items.length === 0) return "";
-  let prefix = items[0];
-  for (const item of items) {
-    while (prefix && !item.startsWith(prefix)) {
-      prefix = prefix.slice(0, -1);
-    }
-    if (!prefix) return "";
-  }
-  return prefix;
-}
-
-function buildSuggestionPool(): Suggestion[] {
-  const map = new Map<string, Suggestion>();
-  for (const c of ALL_COMMANDS) {
-    map.set(c.command, {
-      value: c.command,
-      description: c.description,
-      group: c.group,
-    });
-  }
-
-  return Array.from(map.values()).sort((a, b) =>
-    a.value.localeCompare(b.value),
-  );
-}
-
-// ─── Hook ──────────────────────────────────────────────────────────────
 
 /**
  * Manages the autocomplete suggestion popover:
@@ -50,34 +20,23 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // Build the pool of all available suggestions once
   const allSuggestions = useMemo(() => buildSuggestionPool(), []);
 
+  // Filter suggestions based on current input
   const suggestions = useMemo(() => {
-    const q = value.trim().toLowerCase();
-    if (!q) return [] as Suggestion[];
-
-    for (const prefix of SUBCOMMAND_PREFIXES) {
-      if (q === prefix) {
-        return allSuggestions.filter((s) => s.value.startsWith(q)).slice(0, 8);
-      }
-      if (q.startsWith(`${prefix} `)) {
-        return allSuggestions
-          .filter((s) => s.value.startsWith(`${prefix} `))
-          .filter((s) => s.value.startsWith(q))
-          .slice(0, 8);
-      }
-    }
-
-    return allSuggestions.filter((s) => s.value.startsWith(q)).slice(0, 8);
+    const query = value.trim().toLowerCase();
+    return filterSuggestions(query, allSuggestions);
   }, [allSuggestions, value]);
 
+  // Derived state
   const isOpen = value.trim().length > 0 && suggestions.length > 0 && open;
   const safeActiveIndex = Math.max(
     0,
     Math.min(activeIndex, Math.max(0, suggestions.length - 1)),
   );
 
-  // ── Actions ────────────────────────────────────────────────────────
+  // ── Popover Control ────────────────────────────────────────────────────
 
   const openPopover = useCallback(() => {
     setOpen(true);
@@ -89,6 +48,8 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
     setActiveIndex(0);
   }, []);
 
+  // ── Navigation ─────────────────────────────────────────────────────────
+
   const moveActiveIndex = useCallback(
     (delta: number) => {
       setActiveIndex((i) => {
@@ -99,56 +60,64 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
     [suggestions.length],
   );
 
+  // ── Tab Completion ─────────────────────────────────────────────────────
+
   const applyTabCompletion = useCallback(() => {
-    const q = value.trim().toLowerCase();
-    if (!q) return;
+    const query = value.trim().toLowerCase();
+    const result = calculateTabCompletion(query, suggestions);
 
-    for (const prefix of SUBCOMMAND_PREFIXES) {
-      if (q === prefix) {
-        setValue(`${prefix} `);
+    switch (result.type) {
+      case "add_space":
+        setValue(result.value);
         openPopover();
-        return;
-      }
-    }
+        break;
 
-    const matches = suggestions.map((s) => s.value);
-    if (matches.length === 0) return;
+      case "complete_single":
+        setValue(result.value);
+        closePopover();
+        break;
 
-    if (matches.length === 1) {
-      setValue(matches[0]);
-      closePopover();
-      return;
-    }
+      case "complete_prefix":
+        setValue(result.value);
+        openPopover();
+        break;
 
-    const lcp = longestCommonPrefix(matches);
-    if (lcp && lcp !== q) {
-      setValue(lcp);
-      openPopover();
+      case "no_action":
+        // Do nothing
+        break;
     }
   }, [value, suggestions, setValue, openPopover, closePopover]);
 
-  /** Resolve the currently highlighted suggestion and close the popover.
-   *  Returns the suggestion value so the caller can submit it directly,
-   *  or `null` when there's nothing to apply. */
-  const applyActiveSuggestion = useCallback((): string | null => {
-    const s = suggestions[safeActiveIndex];
-    if (!s) return null;
+  // ── Selection ──────────────────────────────────────────────────────────
 
-    setValue(s.value);
+  /**
+   * Apply the currently highlighted suggestion.
+   * Returns the suggestion value or null if nothing to apply.
+   */
+  const applyActiveSuggestion = useCallback((): string | null => {
+    const suggestion = suggestions[safeActiveIndex];
+    if (!suggestion) return null;
+
+    setValue(suggestion.value);
     closePopover();
-    return s.value;
+    return suggestion.value;
   }, [suggestions, safeActiveIndex, setValue, closePopover]);
 
-  /** Pick a specific suggestion by index (e.g. on click). */
+  /**
+   * Apply a specific suggestion by index (e.g., on click).
+   */
   const applySuggestion = useCallback(
     (index: number) => {
-      const s = suggestions[index];
-      if (!s) return;
-      setValue(s.value);
+      const suggestion = suggestions[index];
+      if (!suggestion) return;
+
+      setValue(suggestion.value);
       closePopover();
     },
     [suggestions, setValue, closePopover],
   );
+
+  // ── Return ─────────────────────────────────────────────────────────────
 
   return {
     suggestions,

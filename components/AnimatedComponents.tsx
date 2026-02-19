@@ -18,7 +18,7 @@ export const AnimatedSpan = ({
     initial={{ opacity: 0, y: -5 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.3, delay: delay / 1000 }}
-    className={cn("grid text-xs font-normal tracking-tight", className)}
+    className={cn("grid font-normal text-xs tracking-tight", className)}
   >
     {children}
   </m.div>

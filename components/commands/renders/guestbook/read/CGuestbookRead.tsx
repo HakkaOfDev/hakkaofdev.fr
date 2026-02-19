@@ -5,12 +5,9 @@ import { RefreshCcw } from "lucide-react";
 import { useState } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { Shortcut } from "@/components/ui/Shortcut";
-import {
-  countryToFlag,
-  fetchGuestbookEntries,
-} from "@/lib/services/guestbook-client";
-import type { GuestbookFilters } from "@/lib/types/guestbook";
+import { GuestbookClientService } from "@/lib/services";
 import { cn } from "@/lib/utils";
+import type { GuestbookFilters } from "@/types/guestbook";
 import { FilterPopover } from "./FilterPopover";
 import { GuestbookEntryRow } from "./GuestbookEntryRow";
 import { ReadSkeleton } from "./ReadSkeleton";
@@ -24,7 +21,7 @@ function CGuestbookRead() {
 
   const { data, error, isLoading, isFetching, isError } = useQuery({
     queryKey: ["guestbook-entries", filters],
-    queryFn: () => fetchGuestbookEntries(filters),
+    queryFn: () => GuestbookClientService.fetchEntries(filters),
     staleTime: 30_000,
     retry: false,
   });
@@ -35,10 +32,8 @@ function CGuestbookRead() {
     <AnimatedSpan className="gap-2">
       {/* Header */}
       <div className="flex items-center justify-between gap-3">
-        <p className="text-xs text-muted-foreground font-mono">
-          <span className="text-pink-500 dark:text-pink-400 font-semibold">
-            guestbook
-          </span>
+        <p className="font-mono text-muted-foreground text-xs">
+          <span className="font-semibold text-quinary">guestbook</span>
           <span className="text-muted-foreground/40"> — </span>
           {data
             ? `${data.length} ${data.length === 1 ? "entry" : "entries"}`
@@ -54,7 +49,7 @@ function CGuestbookRead() {
               })
             }
             disabled={isFetching}
-            className="inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10px] font-semibold bg-pink-500/10 text-pink-500 dark:text-pink-400 ring-1 ring-inset ring-pink-500/20 hover:bg-pink-500/20 transition-colors duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+            className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-quinary/10 px-2 py-0.5 font-semibold text-[10px] text-quinary ring-1 ring-quinary/20 ring-inset transition-colors duration-200 hover:bg-quinary/20 disabled:cursor-not-allowed disabled:opacity-50"
             aria-label="Refresh guestbook entries"
           >
             <RefreshCcw
@@ -67,7 +62,7 @@ function CGuestbookRead() {
 
       {/* Error */}
       {isError && (
-        <p className="text-xs font-mono text-destructive">
+        <p className="font-mono text-destructive text-xs">
           <span className="text-destructive/60">error:</span>{" "}
           {error instanceof Error
             ? error.message
@@ -77,13 +72,14 @@ function CGuestbookRead() {
 
       {/* Empty */}
       {data && data.length === 0 && (
-        <p className="text-xs text-muted-foreground font-mono inline-flex items-center gap-1.5 flex-wrap">
+        <p className="inline-flex flex-wrap items-center gap-1.5 font-mono text-muted-foreground text-xs">
           <span className="text-muted-foreground/40">~</span>
           {filters.country ? (
             <>
               No entries from{" "}
               <span className="font-semibold">
-                {countryToFlag(filters.country)} {filters.country}
+                {GuestbookClientService.countryToFlag(filters.country)}{" "}
+                {filters.country}
               </span>
               .
             </>
@@ -94,7 +90,7 @@ function CGuestbookRead() {
                 label="guestbook sign"
                 command="guestbook sign"
                 variant="pink"
-                className="text-[10px] py-0 px-1.5"
+                className="px-1.5 py-0 text-[10px]"
               />{" "}
               to be the first.
             </>
@@ -104,7 +100,7 @@ function CGuestbookRead() {
 
       {/* Entry list */}
       {data && data.length > 0 && (
-        <div className="max-h-52 overflow-y-auto overflow-x-hidden terminal-scrollbar pr-1">
+        <div className="terminal-scrollbar max-h-52 overflow-y-auto overflow-x-hidden pr-1">
           {data.map((entry, idx) => (
             <GuestbookEntryRow
               key={entry.id}

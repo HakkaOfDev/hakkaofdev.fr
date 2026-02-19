@@ -1,11 +1,10 @@
+import { GuestbookService } from "@/lib/services";
 import {
-  createEntry,
   extractCountry,
   extractIpAddress,
   hashIpAddress,
-  listEntries,
-} from "@/lib/services/guestbook";
-import type { GuestbookCreateInput } from "@/lib/types/guestbook";
+} from "@/lib/utils/request.utils";
+import type { GuestbookCreateInput } from "@/types/guestbook";
 
 export const runtime = "nodejs";
 
@@ -17,7 +16,7 @@ export async function GET(request: Request) {
   const sort = searchParams.get("sort") === "asc" ? "asc" : "desc";
   const country = searchParams.get("country") || undefined;
 
-  const result = await listEntries({ limit, sort, country });
+  const result = await GuestbookService.listEntries({ limit, sort, country });
 
   if (!result.ok) {
     return Response.json(
@@ -41,11 +40,14 @@ export async function POST(request: Request) {
   const userAgent = request.headers.get("user-agent");
   const country = extractCountry(request);
 
-  const result = await createEntry(body as GuestbookCreateInput, {
-    ipHash,
-    userAgent,
-    country,
-  });
+  const result = await GuestbookService.createEntry(
+    body as GuestbookCreateInput,
+    {
+      ipHash,
+      userAgent,
+      country,
+    },
+  );
 
   if (!result.ok) {
     return Response.json(

@@ -14,9 +14,9 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/Popover";
-import { countryToFlag, fetchCountries } from "@/lib/services/guestbook-client";
-import type { GuestbookFilters, SortOrder } from "@/lib/types/guestbook";
+import { GuestbookClientService } from "@/lib/services";
 import { cn } from "@/lib/utils";
+import type { GuestbookFilters, SortOrder } from "@/types/guestbook";
 
 type FilterProps = {
   filters: GuestbookFilters;
@@ -36,7 +36,7 @@ const SORT_OPTIONS: {
 function SortOrderFilter({ filters, onChangeFilters, onClose }: FilterProps) {
   return (
     <div className="grid gap-1.5">
-      <span className="text-[10px] font-mono text-pink-500/70 dark:text-pink-400/70 uppercase tracking-wider font-semibold">
+      <span className="font-mono font-semibold text-[10px] text-quinary/70 uppercase tracking-wider">
         sort
       </span>
       <div className="flex gap-1">
@@ -49,10 +49,10 @@ function SortOrderFilter({ filters, onChangeFilters, onClose }: FilterProps) {
               onClose?.();
             }}
             className={cn(
-              "flex-1 inline-flex items-center justify-center gap-1 rounded-md px-2 py-1.5 text-[10px] font-semibold transition-colors duration-150 cursor-pointer border",
+              "inline-flex flex-1 cursor-pointer items-center justify-center gap-1 rounded-md border px-2 py-1.5 font-semibold text-[10px] transition-colors duration-150",
               filters.sort === value
-                ? "bg-pink-500/20 text-pink-500 dark:text-pink-400 border-pink-500/50"
-                : "text-foreground/70 border-border hover:bg-muted/60 hover:text-foreground",
+                ? "border-quinary/50 bg-quinary/20 text-quinary"
+                : "border-border text-foreground/70 hover:bg-muted/60 hover:text-foreground",
             )}
           >
             <Icon className="h-3 w-3" />
@@ -74,7 +74,7 @@ function CountryFilter({
 
   return (
     <div className="grid gap-1.5">
-      <span className="text-[10px] font-mono text-pink-500/70 dark:text-pink-400/70 uppercase tracking-wider font-semibold">
+      <span className="font-mono font-semibold text-[10px] text-quinary/70 uppercase tracking-wider">
         country
       </span>
       <div className="flex gap-1">
@@ -88,16 +88,16 @@ function CountryFilter({
               });
               onClose?.();
             }}
-            className="w-full h-7 appearance-none rounded-md border border-border bg-muted/40 pl-2 pr-6 text-[11px] text-foreground outline-none cursor-pointer"
+            className="h-7 w-full cursor-pointer appearance-none rounded-md border border-border bg-muted/40 pr-6 pl-2 text-[11px] text-foreground outline-none"
           >
             <option value="">All countries</option>
             {countries.map((code) => (
               <option key={code} value={code}>
-                {countryToFlag(code)} {code}
+                {GuestbookClientService.countryToFlag(code)} {code}
               </option>
             ))}
           </select>
-          <ChevronDown className="pointer-events-none absolute right-1.5 top-1/2 -translate-y-1/2 h-3 w-3 text-foreground/50" />
+          <ChevronDown className="pointer-events-none absolute top-1/2 right-1.5 h-3 w-3 -translate-y-1/2 text-foreground/50" />
         </div>
         {filters.country && (
           <button
@@ -106,7 +106,7 @@ function CountryFilter({
               onChangeFilters({ ...filters, country: null });
               onClose?.();
             }}
-            className="inline-flex items-center justify-center size-7 rounded-md border border-border text-foreground/70 hover:text-foreground hover:bg-muted/60 transition-colors cursor-pointer"
+            className="inline-flex size-7 cursor-pointer items-center justify-center rounded-md border border-border text-foreground/70 transition-colors hover:bg-muted/60 hover:text-foreground"
             aria-label="Clear country filter"
           >
             <X className="h-3 w-3" />
@@ -122,7 +122,7 @@ export function FilterPopover({ filters, onChangeFilters }: FilterProps) {
 
   const { data: countries } = useQuery({
     queryKey: ["guestbook-countries"],
-    queryFn: fetchCountries,
+    queryFn: GuestbookClientService.fetchCountries,
     staleTime: 60_000,
   });
 
@@ -134,24 +134,24 @@ export function FilterPopover({ filters, onChangeFilters }: FilterProps) {
         <button
           type="button"
           className={cn(
-            "inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10px] font-semibold ring-1 ring-inset transition-colors duration-200 cursor-pointer",
+            "inline-flex cursor-pointer items-center gap-1 rounded-md px-2 py-0.5 font-semibold text-[10px] ring-1 ring-inset transition-colors duration-200",
             hasActiveFilters
-              ? "bg-pink-500/20 text-pink-500 dark:text-pink-400 ring-pink-500/30"
-              : "bg-pink-500/10 text-pink-500 dark:text-pink-400 ring-pink-500/20 hover:bg-pink-500/20",
+              ? "bg-quinary/20 text-quinary ring-quinary/30"
+              : "bg-quinary/10 text-quinary ring-quinary/20 hover:bg-quinary/20",
           )}
           aria-label="Filter guestbook entries"
         >
           <Filter className="h-2.5 w-2.5" />
           filter
           {hasActiveFilters && (
-            <span className="ml-0.5 size-1.5 rounded-full bg-pink-500 dark:bg-pink-400" />
+            <span className="ml-0.5 size-1.5 rounded-full bg-quinary" />
           )}
         </button>
       </PopoverTrigger>
       <PopoverContent
         align="end"
         sideOffset={6}
-        className="w-[200px] rounded-lg border-pink-500/40 bg-background/95 backdrop-blur-md shadow-xl shadow-pink-500/5 p-2.5 grid gap-2.5"
+        className="grid w-[200px] gap-2.5 rounded-lg border-quinary/40 bg-background/95 p-2.5 shadow-quinary/5 shadow-xl backdrop-blur-md"
       >
         <SortOrderFilter
           filters={filters}

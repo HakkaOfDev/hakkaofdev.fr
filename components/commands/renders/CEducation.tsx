@@ -9,16 +9,16 @@ function CEducation() {
         <div
           key={education.name}
           className={cn(
-            "border-l-2 pl-4 relative pb-4",
+            "relative border-l-2 pb-4 pl-4",
             idx === EDUCATION.length - 1 && "pb-1",
           )}
         >
-          <div className="absolute -left-[5px] size-2 top-1 rounded-full bg-chart-1 z-[1]" />
+          <div className="absolute top-1 -left-[5px] z-[1] size-2 rounded-full bg-primary" />
           <p className="text-muted-foreground">{education.period}</p>
-          <p className="text-sm font-semibold">{education.name}</p>
+          <p className="font-semibold text-sm">{education.name}</p>
           <p className="text-muted-foreground">{education.location}</p>
           {education.descriptions && education.descriptions?.length > 0 && (
-            <ul className="list-disc pl-4 mt-2">
+            <ul className="mt-2 list-disc pl-4">
               {education.descriptions?.map((description) => (
                 <li key={description}>{description}</li>
               ))}

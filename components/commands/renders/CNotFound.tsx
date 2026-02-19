@@ -2,11 +2,8 @@
 
 import { useMemo } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
-import { useCommands } from "@/components/CommandsProvider";
-import {
-  ALL_COMMANDS,
-  SUBCOMMAND_PREFIXES,
-} from "@/components/commands/command-descriptors";
+import { useCommands } from "@/components/providers/CommandsProvider";
+import { ALL_COMMANDS, SUBCOMMAND_PREFIXES } from "@/lib/command-descriptors";
 
 function levenshtein(a: string, b: string) {
   const dp = Array.from({ length: a.length + 1 }, () =>
@@ -55,17 +52,17 @@ function CNotFound({ input }: { input: string }) {
 
   return (
     <AnimatedSpan>
-      <p className="text-destructive font-mono text-xs">
+      <p className="font-mono text-destructive text-xs">
         zsh: command not found: {input}
       </p>
       {suggestions.length > 0 && (
-        <p className="text-muted-foreground text-xs mt-1">
+        <p className="mt-1 text-muted-foreground text-xs">
           Did you mean{" "}
           {suggestions.map((s, idx) => (
             <span key={s}>
               <button
                 type="button"
-                className="text-chart-1 hover:text-chart-1/80 transition-colors duration-200 font-semibold font-mono"
+                className="font-mono font-semibold text-primary transition-colors duration-200 hover:text-primary/80"
                 onClick={() => addCommand(s)}
               >
                 {s}

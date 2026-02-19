@@ -57,9 +57,9 @@ export default function SubCommandRouter({
     return (
       <AnimatedSpan className="gap-2">
         {status}
-        <p className="text-muted-foreground mb-2">
+        <p className="mb-2 text-muted-foreground">
           Usage:{" "}
-          <span className="text-foreground font-semibold">
+          <span className="font-semibold text-foreground">
             {prefix} {validNames.join(` | ${prefix} `)}
           </span>
         </p>
@@ -83,9 +83,9 @@ export default function SubCommandRouter({
         <p className="text-destructive">
           {invalidReason} Use one of: {validNames.join(", ")}.
         </p>
-        <p className="text-muted-foreground mb-2">
+        <p className="mb-2 text-muted-foreground">
           Example:{" "}
-          <span className="text-foreground font-semibold">
+          <span className="font-semibold text-foreground">
             {prefix} {validNames[0]}
           </span>
         </p>

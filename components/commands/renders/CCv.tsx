@@ -10,7 +10,7 @@ function CCv() {
         <Link
           href={CV_PREVIEW_URL}
           target="_blank"
-          className="inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-semibold ring-1 ring-inset bg-chart-2/10 text-chart-2 ring-chart-2/20 hover:bg-chart-2/20 transition-colors duration-200"
+          className="inline-flex items-center gap-1.5 rounded-md bg-secondary/10 px-2.5 py-1 font-semibold text-secondary text-xs ring-1 ring-secondary/20 ring-inset transition-colors duration-200 hover:bg-secondary/20"
         >
           <Eye className="h-3.5 w-3.5" />
           Open PDF preview
@@ -18,7 +18,7 @@ function CCv() {
         <Link
           href={CV_DOWNLOAD_URL}
           target="_blank"
-          className="inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-semibold ring-1 ring-inset bg-chart-1/10 text-chart-1 ring-chart-1/20 hover:bg-chart-1/20 transition-colors duration-200"
+          className="inline-flex items-center gap-1.5 rounded-md bg-primary/10 px-2.5 py-1 font-semibold text-primary text-xs ring-1 ring-primary/20 ring-inset transition-colors duration-200 hover:bg-primary/20"
         >
           <Download className="h-3.5 w-3.5" />
           Download PDF

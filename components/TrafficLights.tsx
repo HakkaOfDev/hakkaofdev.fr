@@ -1,7 +1,45 @@
 "use client";
 
 import { Maximize2, Minimize2, Minus, X } from "lucide-react";
-import { useTerminal } from "./TerminalProvider";
+import { useTerminal } from "./providers/TerminalProvider";
+
+const TRAFFIC_LIGHT_COLORS = {
+  red: "#FF5F57",
+  yellow: "#FEBC2E",
+  green: "#28C840",
+} as const;
+
+const ICON_CLASS =
+  "text-black/60 opacity-0 transition-opacity duration-150 group-hover/dots:opacity-100";
+
+// ─── Shared visual (used by both interactive and preview) ────────────────────
+
+interface TrafficLightDotProps {
+  color: keyof typeof TRAFFIC_LIGHT_COLORS;
+  icon: React.ComponentType<{
+    size: number;
+    strokeWidth: number;
+    className: string;
+  }>;
+  iconSize?: number;
+}
+
+function TrafficLightDot({
+  color,
+  icon: Icon,
+  iconSize = 10,
+}: TrafficLightDotProps) {
+  return (
+    <span
+      className={`traffic-light traffic-light-${color} flex h-[13px] w-[13px] items-center justify-center rounded-full transition-[box-shadow] duration-200 group-hover/btn:brightness-110`}
+      style={{ backgroundColor: TRAFFIC_LIGHT_COLORS[color] }}
+    >
+      <Icon size={iconSize} strokeWidth={2.5} className={ICON_CLASS} />
+    </span>
+  );
+}
+
+// ─── Interactive (terminal header) ──────────────────────────────────────────
 
 function TrafficLights() {
   const {
@@ -13,64 +51,57 @@ function TrafficLights() {
   } = useTerminal();
 
   return (
-    <div className="flex flex-row items-center group/dots -ml-1.5">
-      {/* Close → Easter egg */}
+    <div className="group/dots -ml-1.5 flex flex-row items-center">
       <button
         type="button"
         onClick={handleClose}
         aria-label="Close terminal"
-        className="relative flex items-center justify-center w-6 h-6 cursor-pointer group/btn"
+        className="group/btn relative flex h-6 w-6 cursor-pointer items-center justify-center"
       >
-        <span className="traffic-light traffic-light-red h-[13px] w-[13px] rounded-full bg-[#FF5F57] flex items-center justify-center transition-[box-shadow] duration-200 group-hover/btn:brightness-110">
-          <X
-            size={10}
-            strokeWidth={2.5}
-            className="text-black/60 opacity-0 group-hover/dots:opacity-100 transition-opacity duration-150"
-          />
-        </span>
+        <TrafficLightDot color="red" icon={X} />
       </button>
 
-      {/* Minimize → Collapse / restore terminal body */}
       <button
         type="button"
         onClick={handleMinimize}
         aria-label={isMinimized ? "Restore terminal" : "Minimize terminal"}
-        className="relative flex items-center justify-center w-6 h-6 cursor-pointer group/btn"
+        className="group/btn relative flex h-6 w-6 cursor-pointer items-center justify-center"
       >
-        <span className="traffic-light traffic-light-yellow h-[13px] w-[13px] rounded-full bg-[#FEBC2E] flex items-center justify-center transition-[box-shadow] duration-200 group-hover/btn:brightness-110">
-          <Minus
-            size={10}
-            strokeWidth={2.5}
-            className="text-black/60 opacity-0 group-hover/dots:opacity-100 transition-opacity duration-150"
-          />
-        </span>
+        <TrafficLightDot color="yellow" icon={Minus} />
       </button>
 
-      {/* Fullscreen → Toggle expanded view */}
       <button
         type="button"
         onClick={handleMaximize}
         aria-label={isMaximized ? "Restore terminal size" : "Expand terminal"}
-        className="relative flex items-center justify-center w-6 h-6 cursor-pointer group/btn"
+        className="group/btn relative flex h-6 w-6 cursor-pointer items-center justify-center"
       >
-        <span className="traffic-light traffic-light-green h-[13px] w-[13px] rounded-full bg-[#28C840] flex items-center justify-center transition-[box-shadow] duration-200 group-hover/btn:brightness-110">
-          {isMaximized ? (
-            <Minimize2
-              size={8}
-              strokeWidth={2.5}
-              className="text-black/60 opacity-0 group-hover/dots:opacity-100 transition-opacity duration-150"
-            />
-          ) : (
-            <Maximize2
-              size={7}
-              strokeWidth={2.5}
-              className="text-black/60 opacity-0 group-hover/dots:opacity-100 transition-opacity duration-150"
-            />
-          )}
-        </span>
+        <TrafficLightDot
+          color="green"
+          icon={isMaximized ? Minimize2 : Maximize2}
+          iconSize={isMaximized ? 8 : 7}
+        />
       </button>
     </div>
   );
 }
 
-export { TrafficLights };
+// ─── Preview (decorative, no TerminalProvider required) ──────────────────────
+
+function TrafficLightsPreview() {
+  return (
+    <div className="group/dots -ml-1.5 flex flex-row items-center">
+      <div className="group/btn relative flex h-6 w-6 items-center justify-center">
+        <TrafficLightDot color="red" icon={X} />
+      </div>
+      <div className="group/btn relative flex h-6 w-6 items-center justify-center">
+        <TrafficLightDot color="yellow" icon={Minus} />
+      </div>
+      <div className="group/btn relative flex h-6 w-6 items-center justify-center">
+        <TrafficLightDot color="green" icon={Maximize2} iconSize={7} />
+      </div>
+    </div>
+  );
+}
+
+export { TrafficLights, TrafficLightsPreview };

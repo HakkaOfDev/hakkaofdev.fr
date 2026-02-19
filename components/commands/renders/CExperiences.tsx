@@ -9,21 +9,21 @@ function CExperiences() {
         <div
           key={experience.name}
           className={cn(
-            "border-l-2 pl-4 relative pb-4",
+            "relative border-l-2 pb-4 pl-4",
             idx === EXPERIENCES.length - 1 && "pb-1",
           )}
         >
-          <div className="absolute -left-[5px] size-2 top-1 rounded-full bg-chart-1 z-[1]" />
+          <div className="absolute top-1 -left-[5px] z-[1] size-2 rounded-full bg-primary" />
           {experience.period.toLowerCase().includes("since") && (
-            <div className="absolute -left-[5px] size-2 top-1 animate-ping rounded-full bg-chart-1 opacity-75" />
+            <div className="absolute top-1 -left-[5px] size-2 animate-ping rounded-full bg-primary opacity-75" />
           )}
           <p className="text-muted-foreground">{experience.period}</p>
-          <p className="text-sm font-semibold">{experience.name}</p>
+          <p className="font-semibold text-sm">{experience.name}</p>
           <p className="text-muted-foreground">
             {experience.company} · {experience.location}
           </p>
           {experience.descriptions && experience.descriptions?.length > 0 && (
-            <ul className="list-disc pl-4 mt-2">
+            <ul className="mt-2 list-disc pl-4">
               {experience.descriptions?.map((description) => (
                 <li key={description}>{description}</li>
               ))}

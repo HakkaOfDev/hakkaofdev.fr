@@ -36,3 +36,19 @@ export type GuestbookFilters = {
   sort: SortOrder;
   country: string | null;
 };
+
+export type GuestbookCountriesResult =
+  | { ok: true; countries: string[] }
+  | { ok: false; error: string; httpStatus: number };
+
+export type GuestbookListOptions = {
+  limit?: number;
+  sort?: "asc" | "desc";
+  country?: string;
+};
+
+export type GuestbookCreateMeta = {
+  ipHash: string | null;
+  userAgent: string | null;
+  country: string | null;
+};

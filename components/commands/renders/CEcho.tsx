@@ -5,7 +5,7 @@ function CEcho({ input }: { input: string }) {
 
   return (
     <AnimatedSpan>
-      <p className="text-chart-1">{msg}</p>
+      <p className="text-primary">{msg}</p>
     </AnimatedSpan>
   );
 }

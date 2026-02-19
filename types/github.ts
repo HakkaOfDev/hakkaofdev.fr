@@ -13,3 +13,11 @@ export type GitHubRepo = {
   license: { spdx_id: string } | null;
   updated_at: string;
 };
+
+export type GitHubRepoStargazersItem = {
+  stargazers_count: number;
+};
+
+export type GitHubUserResponse = {
+  created_at?: string;
+};

@@ -1,21 +1,20 @@
-import type { ShortcutProps } from "@/components/ui/Shortcut";
-import type { TagProps } from "@/components/ui/Tag";
+import type {
+  CommandDescriptor,
+  CommandGroup,
+  CommandGroupMeta,
+  GuestbookCommandDescriptor,
+  SpotifyCommandDescriptor,
+  ThemeCommandDescriptor,
+} from "@/types/command";
 
-// ─── Group types ────────────────────────────────────────────────────────
-
-export type CommandGroup =
-  | "Work"
-  | "Profile"
-  | "Guestbook"
-  | "Spotify"
-  | "Theme"
-  | "Terminal";
-
-export type CommandGroupMeta = {
-  group: CommandGroup;
-  shortcutVariant: ShortcutProps["variant"];
-  tagVariant: TagProps["variant"];
-};
+export type {
+  CommandDescriptor,
+  CommandGroup,
+  CommandGroupMeta,
+  GuestbookCommandDescriptor,
+  SpotifyCommandDescriptor,
+  ThemeCommandDescriptor,
+} from "@/types/command";
 
 /** Ordered list of command groups (rendering order for help, etc.). */
 export const COMMAND_GROUPS: CommandGroupMeta[] = [
@@ -31,14 +30,6 @@ export const COMMAND_GROUPS: CommandGroupMeta[] = [
 export const GROUP_META = Object.fromEntries(
   COMMAND_GROUPS.map((g) => [g.group, g]),
 ) as Record<CommandGroup, CommandGroupMeta>;
-
-// ─── Command types ──────────────────────────────────────────────────────
-
-export type CommandDescriptor = {
-  command: string;
-  description: string;
-  group: CommandGroup;
-};
 
 // ─── Base commands ──────────────────────────────────────────────────────
 
@@ -129,36 +120,31 @@ export const COMMANDS: CommandDescriptor[] = [
 
 // ─── Sub-commands ───────────────────────────────────────────────────────
 
-export type SpotifyCommandDescriptor = {
-  command: "now" | "top" | "history";
-  description: string;
-};
-
 export const SPOTIFY_COMMANDS: SpotifyCommandDescriptor[] = [
   { command: "now", description: "Display the currently playing song" },
   { command: "top", description: "Display my top tracks" },
   { command: "history", description: "Display my listening history" },
 ];
-
-export type GuestbookCommandDescriptor = {
-  command: "read" | "sign";
-  description: string;
-};
-
 export const GUESTBOOK_COMMANDS: GuestbookCommandDescriptor[] = [
   { command: "read", description: "Browse the latest guestbook entries" },
   { command: "sign", description: "Leave a message in the guestbook" },
 ];
-
-export type ThemeCommandDescriptor = {
-  command: "dark" | "light" | "system";
-  description: string;
-};
-
+1;
 export const THEME_COMMANDS: ThemeCommandDescriptor[] = [
-  { command: "dark", description: "Switch to dark mode" },
-  { command: "light", description: "Switch to light mode" },
-  { command: "system", description: "Follow the operating system preference" },
+  { command: "list", description: "Show all available themes" },
+  {
+    command: "set",
+    description: "Apply a theme by name (e.g. theme set dracula)",
+  },
+  { command: "preview", description: "Preview a theme without applying it" },
+  {
+    command: "create",
+    description: "Create a custom theme with visual or JSON editor",
+  },
+  {
+    command: "validate",
+    description: "Check the current theme for contrast issues",
+  },
 ];
 
 /** Command names that act as namespaces for sub-commands. */

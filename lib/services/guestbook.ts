@@ -1,12 +1,22 @@
-import { createHash } from "node:crypto";
 import type { PostgrestError } from "@supabase/supabase-js";
-import { GUESTBOOK_CONFIG } from "@/lib/constants/guestbook.constants";
+import {
+  GUESTBOOK_CONFIG,
+  GUESTBOOK_ERRORS,
+  HONEYPOT_MAX_LENGTH,
+  RATE_LIMIT_WINDOW_MS,
+} from "@/lib/constants/guestbook.constants";
 import { supabase } from "@/lib/supabase";
+import { parsePositiveInt } from "@/lib/utils/number.utils";
+import { cleanText, codepointLength } from "@/lib/utils/string.utils";
+import { normalizeWebsite } from "@/lib/utils/url.utils";
 import type {
+  GuestbookCountriesResult,
   GuestbookCreateInput,
+  GuestbookCreateMeta,
   GuestbookCreateResult,
+  GuestbookListOptions,
   GuestbookListResult,
-} from "../types/guestbook";
+} from "@/types/guestbook";
 
 const {
   DEFAULT_PAGE_SIZE,
@@ -20,36 +30,6 @@ const {
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
-function codepointLength(str: string) {
-  return [...str].length;
-}
-
-function cleanText(input: unknown, maxLength: number) {
-  if (typeof input !== "string") return "";
-  const cleaned = input.trim().replace(/\s+/g, " ");
-  return [...cleaned].slice(0, maxLength).join("");
-}
-
-function normalizeWebsite(input: string) {
-  if (!input) return null;
-
-  const candidate = /^https?:\/\//i.test(input) ? input : `https://${input}`;
-  try {
-    const url = new URL(candidate);
-    if (!["http:", "https:"].includes(url.protocol)) return null;
-    return url.toString();
-  } catch {
-    return null;
-  }
-}
-
-function parsePositiveInt(value: string | null, fallback: number) {
-  if (!value) return fallback;
-  const num = Number.parseInt(value, 10);
-  if (!Number.isFinite(num) || num <= 0) return fallback;
-  return num;
-}
-
 function isAutoApproveEnabled() {
   const value = process.env.GUESTBOOK_AUTO_APPROVE?.trim().toLowerCase();
   return value !== "false";
@@ -62,48 +42,20 @@ function isGuestbookSchemaMissing(error: PostgrestError | null) {
 function schemaMissingError(): GuestbookListResult & { ok: false } {
   return {
     ok: false,
-    error: "Guestbook is not initialized. Run supabase/schema/guestbook.sql.",
+    error: GUESTBOOK_ERRORS.SCHEMA_MISSING,
     httpStatus: 503,
   };
 }
 
-// ─── IP Hashing ──────────────────────────────────────────────────────────────
-
-export function extractIpAddress(request: Request) {
-  const forwardedFor = request.headers
-    .get("x-forwarded-for")
-    ?.split(",")[0]
-    ?.trim();
-  const realIp = request.headers.get("x-real-ip")?.trim();
-  return forwardedFor || realIp || null;
-}
-
-export function hashIpAddress(ip: string | null) {
-  if (!ip) return null;
-
-  const salt = process.env.APP_IP_SALT?.trim() ?? "";
-  return createHash("sha256").update(`${ip}:${salt}`).digest("hex");
-}
-
-export function extractCountry(request: Request) {
-  return (
-    request.headers.get("x-vercel-ip-country") ??
-    request.headers.get("cf-ipcountry") ??
-    null
-  );
-}
-
 // ─── Public API ──────────────────────────────────────────────────────────────
 
-export async function listEntries(options?: {
-  limit?: number;
-  sort?: "asc" | "desc";
-  country?: string;
-}): Promise<GuestbookListResult> {
+async function listEntries(
+  options?: GuestbookListOptions,
+): Promise<GuestbookListResult> {
   if (!supabase) {
     return {
       ok: false,
-      error: "Guestbook service is unavailable.",
+      error: GUESTBOOK_ERRORS.UNAVAILABLE,
       httpStatus: 503,
     };
   }
@@ -135,7 +87,7 @@ export async function listEntries(options?: {
     if (isGuestbookSchemaMissing(error)) return schemaMissingError();
     return {
       ok: false,
-      error: "Failed to fetch guestbook entries.",
+      error: GUESTBOOK_ERRORS.FETCH_ENTRIES_FAILED,
       httpStatus: 500,
     };
   }
@@ -143,15 +95,11 @@ export async function listEntries(options?: {
   return { ok: true, entries: data ?? [] };
 }
 
-export type GuestbookCountriesResult =
-  | { ok: true; countries: string[] }
-  | { ok: false; error: string; httpStatus: number };
-
-export async function listCountries(): Promise<GuestbookCountriesResult> {
+async function listCountries(): Promise<GuestbookCountriesResult> {
   if (!supabase) {
     return {
       ok: false,
-      error: "Guestbook service is unavailable.",
+      error: GUESTBOOK_ERRORS.UNAVAILABLE,
       httpStatus: 503,
     };
   }
@@ -166,7 +114,7 @@ export async function listCountries(): Promise<GuestbookCountriesResult> {
     if (isGuestbookSchemaMissing(error)) return schemaMissingError();
     return {
       ok: false,
-      error: "Failed to fetch countries.",
+      error: GUESTBOOK_ERRORS.FETCH_COUNTRIES_FAILED,
       httpStatus: 500,
     };
   }
@@ -182,23 +130,19 @@ export async function listCountries(): Promise<GuestbookCountriesResult> {
   return { ok: true, countries: unique };
 }
 
-export async function createEntry(
+async function createEntry(
   body: GuestbookCreateInput,
-  meta: {
-    ipHash: string | null;
-    userAgent: string | null;
-    country: string | null;
-  },
+  meta: GuestbookCreateMeta,
 ): Promise<GuestbookCreateResult> {
   if (!supabase) {
     return {
       ok: false,
-      error: "Guestbook service is unavailable.",
+      error: GUESTBOOK_ERRORS.UNAVAILABLE,
       httpStatus: 503,
     };
   }
 
-  const honeypot = cleanText(body.company, 100);
+  const honeypot = cleanText(body.company, HONEYPOT_MAX_LENGTH);
   if (honeypot) return { ok: true, status: "published" };
 
   const name = cleanText(body.name, MAX_NAME_LENGTH);
@@ -209,19 +153,23 @@ export async function createEntry(
   if (codepointLength(name) < 2) {
     return {
       ok: false,
-      error: "Name must be at least 2 characters.",
+      error: GUESTBOOK_ERRORS.NAME_TOO_SHORT,
       httpStatus: 400,
     };
   }
   if (codepointLength(message) < 2) {
     return {
       ok: false,
-      error: "Message must be at least 2 characters.",
+      error: GUESTBOOK_ERRORS.MESSAGE_TOO_SHORT,
       httpStatus: 400,
     };
   }
   if (websiteInput && !website) {
-    return { ok: false, error: "Website URL is invalid.", httpStatus: 400 };
+    return {
+      ok: false,
+      error: GUESTBOOK_ERRORS.WEBSITE_INVALID,
+      httpStatus: 400,
+    };
   }
 
   const rateLimitMaxPerHour = parsePositiveInt(
@@ -231,7 +179,9 @@ export async function createEntry(
   const autoApprove = isAutoApproveEnabled();
 
   if (meta.ipHash) {
-    const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+    const oneHourAgo = new Date(
+      Date.now() - RATE_LIMIT_WINDOW_MS,
+    ).toISOString();
 
     const { count, error: countError } = await supabase
       .from("guestbook_entries")
@@ -241,13 +191,17 @@ export async function createEntry(
 
     if (countError) {
       if (isGuestbookSchemaMissing(countError)) return schemaMissingError();
-      return { ok: false, error: "Rate limit check failed.", httpStatus: 500 };
+      return {
+        ok: false,
+        error: GUESTBOOK_ERRORS.RATE_LIMIT_CHECK_FAILED,
+        httpStatus: 500,
+      };
     }
 
     if ((count ?? 0) >= rateLimitMaxPerHour) {
       return {
         ok: false,
-        error: "Rate limit exceeded. Please try again later.",
+        error: GUESTBOOK_ERRORS.RATE_LIMIT_EXCEEDED,
         httpStatus: 429,
       };
     }
@@ -269,10 +223,18 @@ export async function createEntry(
     if (isGuestbookSchemaMissing(insertError)) return schemaMissingError();
     return {
       ok: false,
-      error: "Failed to save guestbook entry.",
+      error: GUESTBOOK_ERRORS.SAVE_FAILED,
       httpStatus: 500,
     };
   }
 
   return { ok: true, status: autoApprove ? "published" : "pending_moderation" };
 }
+
+// ─── Exports ────────────────────────────────────────────────────────────────
+
+export const GuestbookService = {
+  listEntries,
+  listCountries,
+  createEntry,
+} as const;
