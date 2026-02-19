@@ -9,5 +9,5 @@ export type StatsData = {
   totalStars: number | null;
   contributions: number | null;
   codingSince: number | null;
-  pageViews: number | null;
+  visitors: number | null;
 };
