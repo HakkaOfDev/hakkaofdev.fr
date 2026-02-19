@@ -2,8 +2,8 @@
 
 import { Palette } from "lucide-react";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
-import type { ThemePalette } from "@/types/theme";
 import { cn } from "@/lib/utils";
+import type { ThemePalette } from "@/types/theme";
 
 export function CycleTheme({ className }: { className?: string }) {
   const { palette, themes, setTheme } = useThemeEngine();

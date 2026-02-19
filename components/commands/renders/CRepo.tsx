@@ -17,8 +17,8 @@ import { getGitHubRepo } from "@/app/actions";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { Tag } from "@/components/ui/Tag";
 import { SITE } from "@/lib/constants";
-import type { GitHubRepo } from "@/types/github";
 import { cn } from "@/lib/utils";
+import type { GitHubRepo } from "@/types/github";
 
 function formatCount(count: number): string {
   if (count >= 1000) return `${(count / 1000).toFixed(1)}k`;

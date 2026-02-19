@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { GuestbookClientService } from "@/lib/services";
-import type { GuestbookEntry } from "@/types/guestbook";
 import { cn, formatEntryDate } from "@/lib/utils";
+import type { GuestbookEntry } from "@/types/guestbook";
 
 export function GuestbookEntryRow({
   entry,

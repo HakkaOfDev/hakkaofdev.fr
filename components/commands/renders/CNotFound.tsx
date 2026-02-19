@@ -2,11 +2,8 @@
 
 import { useMemo } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
-import {
-  ALL_COMMANDS,
-  SUBCOMMAND_PREFIXES,
-} from "@/lib/command-descriptors";
 import { useCommands } from "@/components/providers/CommandsProvider";
+import { ALL_COMMANDS, SUBCOMMAND_PREFIXES } from "@/lib/command-descriptors";
 
 function levenshtein(a: string, b: string) {
   const dp = Array.from({ length: a.length + 1 }, () =>

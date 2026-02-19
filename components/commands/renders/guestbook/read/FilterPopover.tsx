@@ -15,8 +15,8 @@ import {
   PopoverTrigger,
 } from "@/components/ui/Popover";
 import { GuestbookClientService } from "@/lib/services";
-import type { GuestbookFilters, SortOrder } from "@/types/guestbook";
 import { cn } from "@/lib/utils";
+import type { GuestbookFilters, SortOrder } from "@/types/guestbook";
 
 type FilterProps = {
   filters: GuestbookFilters;

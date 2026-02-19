@@ -9,9 +9,9 @@ import {
   RotateCcw,
 } from "lucide-react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
-import { getCommandsByGroup } from "@/lib/command-descriptors";
 import { ShortcutSection } from "@/components/ShortcutSection";
 import { Shortcut } from "@/components/ui/Shortcut";
+import { getCommandsByGroup } from "@/lib/command-descriptors";
 
 /* ─── Keyboard tips ─────────────────────────────────────────────────── */
 

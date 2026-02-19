@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 import { getStats } from "@/app/actions";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
-import type { StatsData } from "@/types/stats";
 import { cn } from "@/lib/utils";
+import type { StatsData } from "@/types/stats";
 
 type StatCardProps = {
   icon: React.ReactNode;
