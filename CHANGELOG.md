@@ -1,5 +1,99 @@
 # Changelog
 
+## [1.4.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.3.1...v1.4.0) (2026-02-18)
+
+
+### Features
+
+* add guestbook, enhanced analytics, terminal improvements, and project polish ([9d15bfd](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/9d15bfda6458ef3e3c129769b74df17e08522cd7))
+* **analytics:** enhance visitor tracking with IP hashing and geo-detection ([63bc2a5](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/63bc2a53d02f568b455452a6041c864099c5e305))
+* **guestbook:** add guestbook command with sign, read, and moderation ([79f031d](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/79f031d763d1b0a35c113a51de9bf74164e6eb43))
+* **terminal:** add GitHub star button and improve resize animation ([3e6b5fc](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/3e6b5fc8a7042c8924843e4d767e1f283c22e25b))
+* **ui:** add Popover component and pink variant to Shortcut and Tag ([6767914](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/676791489cf7863a01bff25893341f6da26ce20f))
+* **utils:** add formatEntryDate date formatting helper ([15c582a](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/15c582aa8fdeff44c598ca4f2c0e920be33344df))
+
+
+### Bug Fixes
+
+* **assets:** replace avatar.jpeg with optimized jpg and add site preview ([c59bb48](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c59bb483398700bdc7166cb6b49d9b31937125a5))
+* **lint:** apply Biome auto-formatting fixes ([75abfdc](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/75abfdc0b42df017792542c4069347884ac064fd))
+
+
+### Documentation
+
+* add project roadmap ([b673f3c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/b673f3cea3788d9fe599e822981d6b9abf5c220d))
+* rewrite README with badges, structure, and guestbook docs ([dcec697](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/dcec6978a2cfa74ef77f8d02e9c88a88348fe59c))
+
+
+### Miscellaneous
+
+* add MIT license ([8cae83b](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/8cae83ba6f980a57495df0ee279137fba838040e))
+* add pre-commit hook to run Biome on staged files ([a262f46](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a262f46e38a7063c2f748e043f5112f8232c14e7))
+* add pre-commit hook to run Biome on staged files ([3f14ad0](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/3f14ad027379a8f147d7d81402a5eb26f7bb85ac))
+* **config:** update env template for guestbook and analytics ([c073a82](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c073a822bb7b8c3de578a0a663469ce8e14bf37b))
+* **config:** update release-please settings ([38deead](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/38deead246dcb31ab86a19d6e6ca2653a3dc1ea0))
+* **deps:** add form, popover, validation, and e2e dependencies ([24b293c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/24b293cbc28087f606f8b6e09b102a6f7261a398))
+
+
+### Code Refactoring
+
+* **commands:** reorganize registries and generalize sub-command routing ([50d7b36](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/50d7b36a5ef1256b175d9fb56a0659b6efb328ee))
+* **constants:** split monolithic constants into dedicated modules ([c31811c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c31811c17e836728e935cd206494ed1937b306eb))
+
+## [1.3.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.3.0...v1.3.1) (2026-02-17)
+
+
+### Bug Fixes
+
+* formatting in contact and spotify ([ffafa45](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/ffafa45f616db37c2b0244763f15d2f5e920a38f))
+
+
+### Code Refactoring
+
+* **commands:** extract SubCommandRouter and polish command renders ([ed6ab1c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/ed6ab1cf1a81bf52b50b38de695922858dc2b9d8))
+
+## [1.3.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.2.0...v1.3.0) (2026-02-17)
+
+
+### Features
+
+* v1.2.0 — new commands, terminal redesign, analytics & CV generation ([5f9ee6f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/5f9ee6f6168879544cdc4d598e52b0db696da8a2))
+
+
+### Code Refactoring
+
+* **stats:** track unique visitors by IP instead of page views ([8e70c50](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/8e70c50815bf4ac2a36f95999fb2da0300da1e51))
+
+## [1.2.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.1.1...v1.2.0) (2026-02-17)
+
+
+### Features
+
+* **analytics:** add page view tracking with Supabase ([036c882](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/036c882acdb63aecd5d0731dc37efdc521f39a07))
+* **commands:** add new commands and refactor command system ([2d2859f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/2d2859f6f1507367909b39cc9c569663269b4998))
+* **cv:** add PDF resume generation with react-pdf ([7146532](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/714653208807831e0fb49ab73786f870416b19f1))
+* **lib:** add service layer with types and Supabase client ([dc25725](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/dc25725af7ef3a7a8c6d3b9054f4ae32be6fc2ff))
+* terminal v2 redesign with new commands, CV generation, and analytics ([ba74849](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/ba74849258c2164ed78ea818895531e8a66622bb))
+* **ux:** add global shortcuts and improve input and suggestion UX ([23cbcb5](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/23cbcb551c256ee98563e02c9b3d80745876b24e))
+
+
+### Bug Fixes
+
+* **lint:** sort imports to satisfy Biome organizeImports rule ([a0bd1e7](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a0bd1e7968ee718b7806300226f687b2bcef3829))
+
+
+### Miscellaneous
+
+* **config:** update environment template and relax biome rules ([df3a386](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/df3a38639b30de19e83d41ac89bdc967d9376eeb))
+* **deps:** add react-pdf and supabase dependencies ([0b76eb0](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/0b76eb0444fc62a37b009634a336a6feb3c94033))
+
+
+### Code Refactoring
+
+* **actions:** delegate server actions to service modules ([be7bb9d](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/be7bb9df064b3b3586e965a840f5dadc44a8f1b7))
+* **content:** update site metadata, skill labels, and languages ([6be12ae](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/6be12ae30aae7e2343c5b8bb474fc0b970c8aa62))
+* **terminal:** redesign terminal with macOS-style chrome ([bb551f7](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/bb551f7bad6074e63eea83ab616b5f8d78a9e485))
+
 ## [1.1.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.1.0...v1.1.1) (2026-02-17)
 
 
