@@ -1,40 +1,26 @@
+import {
+  SPOTIFY_BASE_URL,
+  SPOTIFY_TOKEN_ENDPOINT,
+} from "@/lib/constants/api.constants";
 import type {
-  Album,
-  Artist,
-  PlayHistory,
-  Track,
-} from "@spotify/web-api-ts-sdk";
+  NowPlayingResponse,
+  RecentlyPlayedResponse,
+  SpotifyEnv,
+  SpotifyTokenResponse,
+  TopTracksResponse,
+} from "@/types/spotify";
 
-// ─── Config ──────────────────────────────────────────────────────────────────
-
-const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
-const BASE_URL = "https://api.spotify.com/v1/me";
+// ─── Endpoints ──────────────────────────────────────────────────────────────
 
 const ENDPOINTS = {
-  nowPlaying: `${BASE_URL}/player/currently-playing`,
-  topTracks: `${BASE_URL}/top/tracks`,
-  recentlyPlayed: `${BASE_URL}/player/recently-played`,
+  nowPlaying: `${SPOTIFY_BASE_URL}/player/currently-playing`,
+  topTracks: `${SPOTIFY_BASE_URL}/top/tracks`,
+  recentlyPlayed: `${SPOTIFY_BASE_URL}/player/recently-played`,
 } as const;
 
-// ─── Response Types ──────────────────────────────────────────────────────────
+// ─── Auth ───────────────────────────────────────────────────────────────────
 
-export type NowPlayingResponse = {
-  is_playing: boolean;
-  item: {
-    album: Album;
-    artists: Artist[];
-    external_urls: { spotify: string };
-    name: string;
-  };
-};
-
-export type TopTracksResponse = { items: Track[] };
-
-export type RecentlyPlayedResponse = { items: PlayHistory[] };
-
-// ─── Auth ────────────────────────────────────────────────────────────────────
-
-function getSpotifyEnv() {
+function getSpotifyEnv(): SpotifyEnv | null {
   const clientId = process.env.SPOTIFY_CLIENT_ID;
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
   const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
@@ -51,7 +37,7 @@ async function getAccessToken(): Promise<string | null> {
     "base64",
   );
 
-  const response = await fetch(TOKEN_ENDPOINT, {
+  const response = await fetch(SPOTIFY_TOKEN_ENDPOINT, {
     method: "POST",
     headers: {
       Authorization: `Basic ${basic}`,
@@ -66,7 +52,7 @@ async function getAccessToken(): Promise<string | null> {
 
   if (!response.ok) return null;
 
-  const json = (await response.json()) as { access_token?: string };
+  const json = (await response.json()) as SpotifyTokenResponse;
   return json.access_token ?? null;
 }
 
@@ -89,16 +75,24 @@ async function spotifyFetch<T>(endpoint: string): Promise<T | null> {
 // ─── Public API ──────────────────────────────────────────────────────────────
 
 /** Fetches the currently playing track from Spotify. */
-export async function getNowPlaying(): Promise<NowPlayingResponse | null> {
+async function getNowPlaying(): Promise<NowPlayingResponse | null> {
   return spotifyFetch<NowPlayingResponse>(ENDPOINTS.nowPlaying);
 }
 
 /** Fetches the user's top tracks from Spotify. */
-export async function getTopTracks(): Promise<TopTracksResponse | null> {
+async function getTopTracks(): Promise<TopTracksResponse | null> {
   return spotifyFetch<TopTracksResponse>(ENDPOINTS.topTracks);
 }
 
 /** Fetches the user's recently played tracks from Spotify. */
-export async function getRecentlyPlayed(): Promise<RecentlyPlayedResponse | null> {
+async function getRecentlyPlayed(): Promise<RecentlyPlayedResponse | null> {
   return spotifyFetch<RecentlyPlayedResponse>(ENDPOINTS.recentlyPlayed);
 }
+
+// ─── Exports ────────────────────────────────────────────────────────────────
+
+export const SpotifyService = {
+  getNowPlaying,
+  getTopTracks,
+  getRecentlyPlayed,
+} as const;

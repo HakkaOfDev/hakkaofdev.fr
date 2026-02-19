@@ -1,22 +1,23 @@
+import { HOME_SLUG } from "@/lib/constants/analytics.constants";
+import { supabase } from "@/lib/supabase";
 import {
   extractCountry,
   extractIpAddress,
   hashIpAddress,
-} from "@/lib/services/guestbook";
-import { supabase } from "@/lib/supabase";
+} from "@/lib/utils/request.utils";
 
 export const runtime = "nodejs";
 
 export async function GET() {
-  if (!supabase) return Response.json({ views: null }, { status: 503 });
+  if (!supabase) return Response.json({ visitors: null }, { status: 503 });
 
   const { data } = await supabase
-    .from("page_views")
-    .select("count")
-    .eq("slug", "/")
+    .from("unique_visitors")
+    .select("total")
+    .eq("slug", HOME_SLUG)
     .single();
 
-  return Response.json({ views: data?.count ?? 0 });
+  return Response.json({ visitors: data?.total ?? 0 });
 }
 
 export async function POST(request: Request) {
@@ -29,7 +30,7 @@ export async function POST(request: Request) {
   const userAgent = request.headers.get("user-agent")?.slice(0, 255) ?? null;
 
   const { data, error } = await supabase.rpc("record_visit", {
-    p_slug: "/",
+    p_slug: HOME_SLUG,
     p_ip_hash: ipHash,
     p_country: country,
     p_user_agent: userAgent,

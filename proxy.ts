@@ -1,10 +1,11 @@
 import { createClient } from "@supabase/supabase-js";
 import { after, type NextRequest, NextResponse } from "next/server";
+import { HOME_SLUG } from "@/lib/constants/analytics.constants";
 import {
   extractCountry,
   extractIpAddress,
   hashIpAddress,
-} from "@/lib/services/guestbook";
+} from "@/lib/utils/request.utils";
 
 export function proxy(request: NextRequest) {
   if (process.env.NODE_ENV !== "production") return NextResponse.next();
@@ -24,7 +25,7 @@ export function proxy(request: NextRequest) {
       const supabase = createClient(url, key);
       try {
         await supabase.rpc("record_visit", {
-          p_slug: "/",
+          p_slug: HOME_SLUG,
           p_ip_hash: ipHash,
           p_country: country,
           p_user_agent: userAgent,

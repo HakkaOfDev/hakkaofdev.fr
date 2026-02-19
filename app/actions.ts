@@ -1,31 +1,29 @@
 "use server";
 
-import * as githubService from "@/lib/services/github";
-import * as spotifyService from "@/lib/services/spotify";
-import * as statsService from "@/lib/services/stats";
+import { GitHubService, SpotifyService, StatsService } from "@/lib/services";
 
 // ─── Spotify ─────────────────────────────────────────────────────────────────
 
 export async function getNowPlaying() {
-  return spotifyService.getNowPlaying();
+  return SpotifyService.getNowPlaying();
 }
 
 export async function getTopTracks() {
-  return spotifyService.getTopTracks();
+  return SpotifyService.getTopTracks();
 }
 
 export async function getRecentlyPlayed() {
-  return spotifyService.getRecentlyPlayed();
+  return SpotifyService.getRecentlyPlayed();
 }
 
 // ─── GitHub ──────────────────────────────────────────────────────────────────
 
 export async function getGitHubRepo() {
-  return githubService.getGitHubRepo();
+  return GitHubService.getRepo();
 }
 
 // ─── Stats ───────────────────────────────────────────────────────────────────
 
 export async function getStats() {
-  return statsService.getStats();
+  return StatsService.getStats();
 }
