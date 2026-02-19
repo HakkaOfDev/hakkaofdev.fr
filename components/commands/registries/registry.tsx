@@ -14,8 +14,8 @@ import CReset from "../renders/CReset";
 import CSkills from "../renders/CSkills";
 import CStats from "../renders/CStats";
 
-export type { CommandDescriptor } from "../command-descriptors";
-export { COMMANDS } from "../command-descriptors";
+export type { CommandDescriptor } from "../../../lib/command-descriptors";
+export { COMMANDS } from "../../../lib/command-descriptors";
 
 export const COMMAND_RENDERERS: Record<string, () => ReactNode> = {
   help: () => <CHelp />,
