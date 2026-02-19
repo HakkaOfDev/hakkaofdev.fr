@@ -23,7 +23,7 @@
         { "type": "ci", "section": "CI/CD", "hidden": true }
       ],
       "versioning": "default",
-      "extra-files": []
+      "extra-files": ["README.md"]
     }
   }
 }

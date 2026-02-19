@@ -24,6 +24,37 @@
 - [x] `theme dark`, `theme light`, `theme system` commands
 - [x] Header toggle button with accessible label
 
+### Advanced Theming System
+
+- [x] Extracted all tokens into centralized theme definitions (`types/theme.ts`)
+- [x] Runtime theme engine that injects CSS custom properties from active palette
+- [x] Built-in terminal themes: **Dracula**, **Nord**, **Solarized Dark/Light**, **Monokai**, **Gruvbox Dark/Light**, **Tokyo Night**, **GitHub Dark/Light**, **Catppuccin Mocha/Latte**, **One Dark**, **Material**, **Synthwave '84**
+- [x] Extended `theme` command suite:
+  - `theme` — Show current theme info and quick actions
+  - `theme list` — Browse all available themes with color previews
+  - `theme set <name>` — Apply a theme instantly
+  - `theme preview <name>` — Preview theme with 10-second auto-revert
+  - `theme create` — Interactive theme creator with visual and JSON modes
+  - `theme validate` — WCAG AA contrast audit for current theme
+  - `theme cycle` — Rotate through themes with header button
+- [x] Theme persistence in `localStorage` with SSR-safe hydration
+- [x] Custom theme support via interactive creator with:
+  - Visual editor with color pickers for all 15 semantic tokens
+  - JSON editor for advanced users supporting OKLCH, hex, RGB, HSL
+  - Live preview with exact terminal replica (non-functional shortcuts)
+  - Copy theme JSON for sharing
+  - Reset to default colors button
+  - Real-time theme application on creation
+- [x] WCAG AA contrast validation:
+  - Automated contrast ratio checks on all text/background pairs
+  - Pass/fail indicators with specific ratio requirements
+  - Support for OKLCH, hex, RGB, and HSL color formats
+  - Detailed validation reports with actionable feedback
+- [x] Theme storage system:
+  - Custom themes saved to `localStorage` and persisted across sessions
+  - Theme registry with built-in and custom theme management
+  - Conflict resolution between built-in and custom theme names
+
 ### Guestbook
 
 - [x] REST API — `GET /api/guestbook` (list, sort, country filter) and `POST /api/guestbook` (create)
@@ -116,19 +147,6 @@ There is currently no testing infrastructure. This is the highest-priority gap.
 - [ ] Integrate test runs into CI as a required check on PRs
 - [ ] Add coverage reporting with a minimum threshold
 
-### Theming — Fully Customizable Theme Engine
-
-The current system supports dark/light/system but all colors are hardcoded in CSS. The goal is a flexible, user-driven theme engine.
-
-- [ ] Extract all tokens into a centralized theme definition (`lib/theme.ts`) with typed palettes
-- [ ] Build a runtime theme provider that injects CSS custom properties from the active palette
-- [ ] Refactor every component to consume theme tokens exclusively — eliminate all hardcoded colors
-- [ ] Ship built-in terminal themes: **Dracula**, **Nord**, **Solarized**, **Monokai**, **Gruvbox**, **Tokyo Night**
-- [ ] Extend the `theme` command: `theme list`, `theme set <name>`, `theme preview <name>`
-- [ ] Persist selected theme in `localStorage` and hydrate on load
-- [ ] Support custom themes via `theme create` interactive flow or JSON import
-- [ ] Validate all themes against **WCAG AA** contrast requirements
-
 ### Internationalization (i18n)
 
 - [ ] Integrate `next-intl` or a lightweight i18n solution
@@ -143,6 +161,21 @@ The current system supports dark/light/system but all colors are hardcoded in CS
 - [ ] `man <command>` — show detailed help/usage for a specific command
 - [ ] Pipe/chain support (`help | grep spotify`) for a more authentic shell feel
 - [ ] `fortune` / `motd` — display a random dev quote or tip on session start
+
+### Terminal UX Improvements
+
+- [ ] Resizable terminal window (drag from edges/corners)
+- [ ] Fullscreen/maximize toggle button in terminal header
+- [ ] Split terminal view — multiple terminal instances side by side
+- [ ] Font size controls (`Ctrl/Cmd +/-` to zoom in/out)
+- [ ] Custom font family selection (Fira Code, JetBrains Mono, Source Code Pro, etc.)
+- [ ] Terminal tabs — run multiple command sessions in different tabs
+- [ ] Output copying with text selection support
+- [ ] Search/filter in terminal output (`Ctrl/Cmd+F`)
+- [ ] Terminal scrollback limit configuration
+- [ ] Restore terminal position and size from `localStorage`
+- [ ] Mobile-responsive terminal with touch gestures
+- [ ] Terminal transparency/blur effect toggle
 
 ### Guestbook Improvements
 

@@ -5,7 +5,7 @@
 ### Interactive terminal-style portfolio
 
 [![Live](https://img.shields.io/badge/%E2%96%B6%20Live-hakkaofdev.fr-22d3ee?style=for-the-badge&labelColor=141414)](https://hakkaofdev.fr)
-[![Version](https://img.shields.io/badge/v1.1.1-E8B931?style=for-the-badge&logo=semver&logoColor=E8B931&labelColor=141414)](https://github.com/hakkaofdev/hakkaofdev.fr/releases)
+[![Version](https://img.shields.io/badge/v1.1.1-E8B931?style=for-the-badge&logo=semver&logoColor=E8B931&labelColor=141414)](https://github.com/hakkaofdev/hakkaofdev.fr/releases) <!-- x-release-please-version -->
 [![CI](https://img.shields.io/github/actions/workflow/status/hakkaofdev/hakkaofdev.fr/ci.yml?style=for-the-badge&logo=github-actions&logoColor=22d3ee&label=CI&labelColor=141414)](https://github.com/hakkaofdev/hakkaofdev.fr/actions)
 [![License](https://img.shields.io/badge/license-MIT-A855F7?style=for-the-badge&labelColor=141414)](LICENSE)
 
@@ -44,7 +44,7 @@ Type commands, explore projects, browse skills, sign the guestbook, and even che
 | **`>`** | Spotify integration | "Now Playing" header widget + `spotify now` / `spotify top` / `spotify history` |
 | **`>`** | Guestbook | Public sign & read, honeypot + per-IP rate-limiting, moderation-ready |
 | **`>`** | Dynamic CV | Server-rendered PDF via `@react-pdf/renderer` — preview or download |
-| **`>`** | Theming | `theme dark` / `theme light` / `theme system` |
+| **`>`** | Advanced Theming | 8+ built-in terminal themes (Dracula, Nord, Solarized, etc.) + custom theme support with preview & WCAG validation |
 | **`>`** | SEO | Sitemap, robots.txt, JSON-LD, dynamic OG image |
 | **`>`** | Analytics | Vercel Speed Insights + Supabase page-view tracking |
 
@@ -102,7 +102,7 @@ GUESTBOOK_RATE_LIMIT_MAX_PER_HOUR=3
 | `contact` | Contact methods & social profiles |
 | `cv` | Open CV preview / download |
 | `repo` | Repository details & clone command |
-| `theme [dark\|light\|system]` | View or change the current theme |
+| `theme` | Manage themes: `theme list`, `theme set <name>`, `theme preview <name>`, `theme create`, `theme delete <name>` |
 | `stats` | Coding & GitHub activity stats |
 | `echo <msg>` | Print custom text |
 | `clear` | Clear terminal output |
@@ -136,6 +136,7 @@ lib/
 ├── cv/             # CV data mapping & PDF styles
 ├── schemas/        # Zod validation schemas
 ├── services/       # Analytics, guestbook, Supabase clients
+├── themes/         # Theme engine: palettes, provider, storage, contrast validation
 └── utils.ts        # Shared helpers
 
 supabase/
@@ -144,15 +145,74 @@ supabase/
 
 <br />
 
+## Theme System
+
+The portfolio features a fully customizable theme engine with 8 built-in terminal-inspired themes and support for custom palettes.
+
+**Built-in Themes:**
+- `default` — Clean dark theme with cyan accents
+- `daylight` — Light theme with warm tones
+- `dracula` — Purple & pink dark theme
+- `nord` — Arctic-inspired cool palette
+- `solarized` — Precision colors for readability
+- `monokai` — Vibrant syntax highlighting colors
+- `gruvbox` — Retro groove with warm earth tones
+- `tokyo-night` — Deep blue night theme
+
+**Theme Commands:**
+```bash
+theme list              # Show all available themes with color swatches
+theme set dracula       # Apply a theme instantly
+theme preview nord      # Preview for 10s, then revert
+theme create            # Interactive custom theme builder
+theme delete <name>     # Remove a custom theme
+```
+
+**Custom Themes:**
+- Create custom color palettes via the `theme create` command
+- Automatic WCAG AA contrast validation ensures readability
+- Themes persist in `localStorage` across sessions
+- Delete custom themes anytime (built-in themes are protected)
+
+All theme changes apply instantly with smooth color transitions.
+
+<br />
+
 ## Customization
 
 **Content** lives in `lib/constants/` — edit the files there to change projects, skills, education, experiences, and social links.
+
+**Themes** are in `lib/themes/palettes/` — each theme exports a `ThemePalette` object with color definitions and metadata. See existing themes as templates.
 
 **Adding a command:**
 
 1. Add it to `COMMANDS` in `components/commands/command-descriptors.ts`
 2. Create a renderer in `components/commands/renders/`
 3. Wire it in the registry under `components/commands/registries/`
+
+**Adding dynamic autocomplete parameters:**
+
+Commands can have smart autocomplete for their parameters (like `theme set <themeName>`). To add your own:
+
+```typescript
+// 1. Create a parameter provider function
+function getOptions(): string[] {
+  return ["option1", "option2", "option3"];
+}
+
+// 2. Register the command pattern
+import { registerDynamicParamCommand } from "@/components/commands/registries/dynamic-param-registry";
+
+registerDynamicParamCommand({
+  pattern: "mycommand action",
+  paramProvider: getOptions,
+  group: "Terminal",
+});
+
+// 3. Import your registry in components/providers/Providers.tsx
+```
+
+See `components/commands/registries/EXAMPLES.ts` for more patterns (localStorage, async data, context-aware, etc.)
 
 **Customizing the CV:** update data in `lib/cv/cv-pdf.data.ts`, styles in `lib/cv/cv-pdf.styles.ts`, and sections in `components/cv-pdf/CVSections.tsx`.
 
