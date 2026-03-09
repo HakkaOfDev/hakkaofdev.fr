@@ -32,7 +32,7 @@ export function CThemeList() {
         <span className="font-semibold text-foreground">{themes.length}</span>):
       </p>
 
-      <div className="terminal-scrollbar grid max-h-60 gap-2 overflow-y-auto overflow-x-hidden border-y py-2 pr-2">
+      <div className="terminal-scrollbar grid max-h-60 overflow-y-auto overflow-x-hidden border-y py-2 pr-2">
         {themes.map((t) => {
           const isActive = t.name === theme;
           const isCustom = !BUILTIN_THEME_MAP.has(t.name);
@@ -50,7 +50,7 @@ export function CThemeList() {
         })}
       </div>
 
-      <p className="text-[10px] text-muted-foreground/60">
+      <p className="text-muted-foreground/60 text-xs">
         Tap or click on a theme to apply it.
       </p>
     </AnimatedSpan>
@@ -92,19 +92,19 @@ function ThemeInfo({ label, isActive, isCustom, isDark }: ThemeInfoProps) {
           {label}
         </span>
         {isActive && (
-          <span className="hidden shrink-0 text-[10px] text-muted-foreground/50 md:inline">
+          <span className="hidden shrink-0 text-muted-foreground/50 text-xs md:inline">
             (active)
           </span>
         )}
         {isCustom && (
-          <span className="shrink-0 font-semibold text-[10px] text-tertiary/80">
+          <span className="shrink-0 font-semibold text-tertiary/80 text-xs">
             custom
           </span>
         )}
       </span>
 
       {/* Dark/light badge */}
-      <span className="shrink-0 font-mono text-[10px] text-muted-foreground/50">
+      <span className="shrink-0 font-mono text-muted-foreground/50 text-xs">
         {isDark ? "dark" : "light"}
       </span>
     </>

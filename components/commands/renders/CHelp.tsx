@@ -1,49 +1,11 @@
 "use client";
 
-import {
-  ArrowUpDown,
-  CornerDownLeft,
-  Delete as DeleteIcon,
-  Info,
-  Keyboard,
-  RotateCcw,
-} from "lucide-react";
+import { Info } from "lucide-react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { ShortcutSection } from "@/components/ShortcutSection";
 import { Shortcut } from "@/components/ui/Shortcut";
 import { getCommandsByGroup } from "@/lib/command-descriptors";
-
-/* ─── Keyboard tips ─────────────────────────────────────────────────── */
-
-const KEYBOARD_SHORTCUTS = [
-  {
-    icon: <CornerDownLeft className="h-3 w-3 shrink-0" />,
-    keys: ["Enter"],
-    description: "Run a command",
-  },
-  {
-    icon: <Keyboard className="h-3 w-3 shrink-0" />,
-    keys: ["Tab"],
-    description: "Autocomplete the current input",
-  },
-  {
-    icon: <ArrowUpDown className="h-3 w-3 shrink-0" />,
-    keys: ["↑", "↓"],
-    description: "Navigate suggestions or command history",
-  },
-  {
-    icon: <DeleteIcon className="h-3 w-3 shrink-0" />,
-    keys: ["Ctrl", "L"],
-    isCombined: true,
-    description: "Clear the terminal screen",
-  },
-  {
-    icon: <RotateCcw className="h-3 w-3 shrink-0" />,
-    keys: ["Ctrl", "R"],
-    isCombined: true,
-    description: "Reset the terminal to the welcome screen",
-  },
-];
+import { TERMINAL_KEYBOARD_SHORTCUTS } from "@/lib/constants";
 
 const GROUPED_COMMANDS = getCommandsByGroup();
 
@@ -86,29 +48,27 @@ function CHelp() {
       {/* ── Keyboard shortcuts ── */}
       <ShortcutSection title="Keyboard shortcuts">
         <div className="grid gap-1.5">
-          {KEYBOARD_SHORTCUTS.map((shortcut) => (
+          {TERMINAL_KEYBOARD_SHORTCUTS.map((shortcut) => (
             <div
-              key={shortcut.keys.join(" ")}
+              key={`${shortcut.description}-${shortcut.keys.join("-")}`}
               className="grid grid-cols-[140px_1fr] items-center gap-3"
             >
               <span className="inline-flex items-center gap-1">
-                {shortcut.icon}
-                {shortcut.keys.map((key, i) => [
-                  i > 0 && (
-                    <span
-                      key={`${key}-sep`}
-                      className="text-[10px] text-muted-foreground/40"
-                    >
-                      {shortcut?.isCombined ? "+" : "/"}
-                    </span>
-                  ),
-                  <kbd
-                    key={key}
-                    className="rounded-md border border-border/50 bg-muted/60 px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground shadow-[0_1px_0_0] shadow-border/50 dark:border-overlay-medium dark:bg-overlay-subtle dark:shadow-overlay-subtle"
+                {shortcut.keys.map((key, i) => (
+                  <span
+                    key={`${shortcut.description}-${key}`}
+                    className="inline-flex items-center gap-1"
                   >
-                    {key}
-                  </kbd>,
-                ])}
+                    {i > 0 && (
+                      <span className="text-muted-foreground/40 text-xs">
+                        {shortcut?.isCombined ? "+" : "/"}
+                      </span>
+                    )}
+                    <kbd className="rounded-md border border-border/50 bg-muted/60 px-1.5 py-0.5 font-mono text-muted-foreground text-xs shadow-[0_1px_0_0] shadow-border/50 dark:border-overlay-medium dark:bg-overlay-subtle dark:shadow-overlay-subtle">
+                      {key}
+                    </kbd>
+                  </span>
+                ))}
               </span>
               <span className="text-muted-foreground text-xs">
                 {shortcut.description}
@@ -119,7 +79,7 @@ function CHelp() {
       </ShortcutSection>
 
       {/* ── Footer tip ── */}
-      <p className="text-[10px] text-muted-foreground/60 italic">
+      <p className="text-muted-foreground/60 text-xs italic">
         Tip: Click any command above or type it in the prompt to run it.
       </p>
     </AnimatedSpan>

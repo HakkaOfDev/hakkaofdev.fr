@@ -5,7 +5,7 @@ import { AnimatedSpan } from "@/components/AnimatedComponents";
 import {
   THEME_COMMAND_RENDERERS,
   THEME_COMMANDS,
-} from "@/components/commands/registries/theme-registry";
+} from "@/components/commands/registries/theme.registry";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
 import SubCommandHelp from "../SubCommandHelp";
 

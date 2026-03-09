@@ -41,11 +41,11 @@ function ValidationSummary({
           {failCount} fail
         </span>
       )}
-      <span className="text-[10px] text-muted-foreground/50">
+      <span className="text-muted-foreground/50 text-xs">
         ({totalChecked} pairs checked)
       </span>
       {hasNonOklch && (
-        <span className="text-[10px] text-muted-foreground/50">
+        <span className="text-muted-foreground/50 text-xs">
           ⚠️ Some colors skipped (unsupported format)
         </span>
       )}
@@ -62,7 +62,7 @@ function ValidationResultRow({ result }: ValidationResultRowProps) {
   const requiredRatio = pair.level === "normal" ? "≥ 4.5" : "≥ 3.0";
 
   return (
-    <div className="grid grid-cols-[16px_1fr_80px_60px] items-center gap-2 font-mono text-[11px]">
+    <div className="grid grid-cols-[16px_1fr_80px_60px] items-center gap-2 font-mono text-xs">
       <span>{passes ? "✓" : "✗"}</span>
       <span className={passes ? "text-muted-foreground" : "text-destructive"}>
         {pair.label}
@@ -98,14 +98,14 @@ interface ValidationFooterProps {
 function ValidationFooter({ failureCount }: ValidationFooterProps) {
   if (failureCount === 0) {
     return (
-      <p className="font-semibold text-[11px] text-secondary">
+      <p className="font-semibold text-secondary text-xs">
         All pairs pass WCAG AA requirements.
       </p>
     );
   }
 
   return (
-    <p className="text-[10px] text-destructive">
+    <p className="text-destructive text-xs">
       {failureCount} pair{failureCount > 1 ? "s" : ""} below the required
       contrast ratio. Consider adjusting color lightness values.
     </p>

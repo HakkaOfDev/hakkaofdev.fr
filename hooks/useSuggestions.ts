@@ -25,7 +25,7 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
 
   // Filter suggestions based on current input
   const suggestions = useMemo(() => {
-    const query = value.trim().toLowerCase();
+    const query = value.toLowerCase().trimStart();
     return filterSuggestions(query, allSuggestions);
   }, [allSuggestions, value]);
 
@@ -63,7 +63,7 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
   // ── Tab Completion ─────────────────────────────────────────────────────
 
   const applyTabCompletion = useCallback(() => {
-    const query = value.trim().toLowerCase();
+    const query = value.toLowerCase().trimStart();
     const result = calculateTabCompletion(query, suggestions);
 
     switch (result.type) {

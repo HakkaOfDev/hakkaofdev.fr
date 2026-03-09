@@ -164,7 +164,7 @@ function RepoCard({ repo }: { repo: GitHubRepo }) {
 
         {/* Clone */}
         <div className="flex items-center gap-2 rounded-md bg-muted/50 px-3 py-2 ring-1 ring-border ring-inset">
-          <code className="flex-1 select-all truncate font-mono text-[11px] text-foreground">
+          <code className="flex-1 select-all truncate font-mono text-foreground text-xs">
             {cloneUrl}
           </code>
           <CopyButton text={cloneUrl} />
@@ -215,7 +215,7 @@ function RepoFallback() {
         </Link>
       </p>
       <div className="mt-1 flex flex-wrap items-center gap-2">
-        <code className="rounded bg-muted/60 px-2 py-1 font-semibold text-[11px] text-foreground">
+        <code className="rounded bg-muted/60 px-2 py-1 font-semibold text-foreground text-xs">
           {cloneUrl}
         </code>
         <CopyButton text={cloneUrl} />
@@ -227,7 +227,7 @@ function RepoFallback() {
 function CRepo() {
   const { data, isLoading } = useQuery({
     queryKey: ["github-repo"],
-    queryFn: getGitHubRepo,
+    queryFn: () => getGitHubRepo(),
     staleTime: 5 * 60 * 1000,
     retry: false,
   });

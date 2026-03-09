@@ -24,7 +24,7 @@ function CCv() {
           Download PDF
         </Link>
       </div>
-      <p className="text-[10px] text-muted-foreground/70">
+      <p className="text-muted-foreground/70 text-xs">
         Endpoints: <span className="font-mono">{CV_PREVIEW_URL}</span> and{" "}
         <span className="font-mono">{CV_DOWNLOAD_URL}</span>
       </p>
