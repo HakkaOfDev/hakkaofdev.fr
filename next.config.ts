@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   experimental: {
     inlineCss: true,
+    optimizePackageImports: ["lucide-react", "date-fns"],
   },
   images: {
     qualities: [75],

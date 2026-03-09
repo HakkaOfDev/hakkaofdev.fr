@@ -9,14 +9,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        crawlDelay: 10,
-      },
-      {
-        userAgent: "Googlebot",
-        allow: "/",
       },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,
-    host: siteUrl,
   };
 }

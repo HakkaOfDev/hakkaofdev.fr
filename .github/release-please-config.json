@@ -25,7 +25,7 @@
         { "type": "ci", "section": "CI/CD", "hidden": true }
       ],
       "versioning": "default",
-      "extra-files": ["README.md"]
+      "extra-files": ["README.md", "lib/constants/site.constants.ts"]
     }
   }
 }
