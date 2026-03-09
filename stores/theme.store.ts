@@ -1,10 +1,10 @@
 "use client";
 
+import { create } from "zustand";
+import { createJSONStorage, persist } from "zustand/middleware";
 import { BUILTIN_THEME_MAP } from "@/lib/themes/palettes";
 import { DEFAULT_THEME_NAME } from "@/lib/utils/terminal.utils";
 import { THEME_COLOR_KEYS, type ThemePalette } from "@/types/theme";
-import { create } from "zustand";
-import { createJSONStorage, persist } from "zustand/middleware";
 
 const LEGACY_THEME_KEY = "terminal-theme";
 const LEGACY_CUSTOM_THEMES_KEY = "terminal-custom-themes";
@@ -58,7 +58,9 @@ function parseThemePalettes(input: unknown): ThemePalette[] {
     const parsed = parseThemePalette(rawPalette);
     if (!parsed) continue;
 
-    const alreadyExists = palettes.some((palette) => palette.name === parsed.name);
+    const alreadyExists = palettes.some(
+      (palette) => palette.name === parsed.name,
+    );
     if (!alreadyExists) {
       palettes.push(parsed);
     }
@@ -98,7 +100,10 @@ function loadLegacyThemeState(): PersistedThemeState | null {
     const customThemes = rawCustomThemes
       ? parseThemePalettes(JSON.parse(rawCustomThemes))
       : [];
-    const theme = resolveThemeName(rawThemeName ?? DEFAULT_THEME_NAME, customThemes);
+    const theme = resolveThemeName(
+      rawThemeName ?? DEFAULT_THEME_NAME,
+      customThemes,
+    );
 
     return { theme, customThemes };
   } catch {

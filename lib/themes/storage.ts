@@ -1,7 +1,7 @@
 "use client";
 
-import type { ThemePalette } from "@/types/theme";
 import { useThemeStore } from "@/stores/theme.store";
+import type { ThemePalette } from "@/types/theme";
 
 export function getStoredThemeName(): string | null {
   const { theme } = useThemeStore.getState();

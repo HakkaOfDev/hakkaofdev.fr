@@ -1,5 +1,7 @@
 "use client";
 
+import { create } from "zustand";
+import { createJSONStorage, persist } from "zustand/middleware";
 import {
   clampFontScale,
   clampScrollbackLimit,
@@ -9,9 +11,10 @@ import {
   SCROLLBACK_STORAGE_KEY,
   TERMINAL_PREFERENCES_STORAGE_KEY,
 } from "@/lib/utils/terminal.utils";
-import type { StoredTerminalPreferences, TerminalFontId } from "@/types/terminal";
-import { create } from "zustand";
-import { createJSONStorage, persist } from "zustand/middleware";
+import type {
+  StoredTerminalPreferences,
+  TerminalFontId,
+} from "@/types/terminal";
 
 type NumberUpdater = number | ((previous: number) => number);
 
@@ -51,7 +54,9 @@ function parseTerminalPreferences(
     fontScale,
     fontFamily,
     scrollbackLimit:
-      scrollbackLimit ?? loadLegacyScrollbackLimit() ?? DEFAULT_SCROLLBACK_LIMIT,
+      scrollbackLimit ??
+      loadLegacyScrollbackLimit() ??
+      DEFAULT_SCROLLBACK_LIMIT,
   };
 }
 
