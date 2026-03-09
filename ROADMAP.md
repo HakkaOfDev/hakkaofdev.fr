@@ -13,16 +13,21 @@
 - [x] Autocomplete suggestions with tab completion and longest common prefix
 - [x] Command history navigation (arrow keys, Ctrl-P/N)
 - [x] Did-you-mean suggestions on unknown commands (Levenshtein distance)
-- [x] Global keyboard shortcuts — Ctrl/Cmd+L (clear), Ctrl/Cmd+R (reset)
+- [x] Global keyboard shortcuts — Ctrl/Cmd+L (clear), Ctrl/Cmd+R (reset), Ctrl/Cmd+F (search), Ctrl/Cmd+/- (font zoom)
 - [x] 16 base commands across 6 groups: Work, Profile, Guestbook, Spotify, Theme, Terminal
 
-### Theming (Dark / Light)
+### Terminal UX Enhancements
 
-- [x] `next-themes` provider with `class` attribute strategy and dark default
-- [x] Light and dark palettes using OKLCH tokens in `globals.css`
-- [x] Semantic CSS custom properties (`--background`, `--foreground`, `--primary`, `--muted`, `--accent`, etc.)
-- [x] `theme dark`, `theme light`, `theme system` commands
-- [x] Header toggle button with accessible label
+- [x] Resizable terminal window (drag from edges/corners on desktop viewport ≥768px)
+- [x] Fullscreen/maximize toggle in traffic lights (green button)
+- [x] Minimize/restore toggle in traffic lights (yellow button)
+- [x] Font size controls — Ctrl/Cmd +/- to zoom in/out (80–160%), persisted in `localStorage`
+- [x] Custom font family selection — System Mono, JetBrains Mono, Fira Code, Source Code Pro, Montserrat
+- [x] Terminal tabs — multiple command sessions (up to 8 tabs) with create, close, rename
+- [x] Search/filter in terminal output — Ctrl/Cmd+F to toggle search bar
+- [x] Terminal scrollback limit configuration (25/50/75/100 lines) in settings
+- [x] Terminal settings dialog — theme, font family, font size, scrollback, keyboard shortcuts, reset-all
+- [x] Preferences persistence — font scale, font family, scrollback limit in `localStorage`
 
 ### Advanced Theming System
 
@@ -161,21 +166,6 @@ There is currently no testing infrastructure. This is the highest-priority gap.
 - [ ] `man <command>` — show detailed help/usage for a specific command
 - [ ] Pipe/chain support (`help | grep spotify`) for a more authentic shell feel
 - [ ] `fortune` / `motd` — display a random dev quote or tip on session start
-
-### Terminal UX Improvements
-
-- [ ] Resizable terminal window (drag from edges/corners)
-- [ ] Fullscreen/maximize toggle button in terminal header
-- [ ] Split terminal view — multiple terminal instances side by side
-- [ ] Font size controls (`Ctrl/Cmd +/-` to zoom in/out)
-- [ ] Custom font family selection (Fira Code, JetBrains Mono, Source Code Pro, etc.)
-- [ ] Terminal tabs — run multiple command sessions in different tabs
-- [ ] Output copying with text selection support
-- [ ] Search/filter in terminal output (`Ctrl/Cmd+F`)
-- [ ] Terminal scrollback limit configuration
-- [ ] Restore terminal position and size from `localStorage`
-- [ ] Mobile-responsive terminal with touch gestures
-- [ ] Terminal transparency/blur effect toggle
 
 ### Guestbook Improvements
 

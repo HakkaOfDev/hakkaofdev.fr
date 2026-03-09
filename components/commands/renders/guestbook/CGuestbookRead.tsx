@@ -127,19 +127,16 @@ function GuestbookEntryRow({
 
       {/* Author line */}
       <div className="flex items-baseline gap-2">
-        <span className="shrink-0 font-mono text-[10px] text-muted-foreground/50">
+        <span className="shrink-0 font-mono text-muted-foreground/50 text-xs">
           #{String(index + 1).padStart(3, "0")}
         </span>
         {nameElement}
         {entry.country && (
-          <span
-            className="shrink-0 text-[11px] leading-none"
-            title={entry.country}
-          >
+          <span className="shrink-0 text-xs leading-none" title={entry.country}>
             {countryToFlag(entry.country)}
           </span>
         )}
-        <span className="ml-auto whitespace-nowrap font-mono text-[10px] text-muted-foreground/40">
+        <span className="ml-auto whitespace-nowrap font-mono text-muted-foreground/40 text-xs">
           {formatEntryDate(entry.created_at)}
         </span>
       </div>
@@ -206,7 +203,7 @@ function FilterPopover({
         type="button"
         onClick={() => setOpen((v) => !v)}
         className={cn(
-          "inline-flex cursor-pointer items-center gap-1 rounded-md px-2 py-0.5 font-semibold text-[10px] ring-1 ring-inset transition-colors duration-200",
+          "inline-flex cursor-pointer items-center gap-1 rounded-md px-2 py-0.5 font-semibold text-xs ring-1 ring-inset transition-colors duration-200",
           hasActiveFilters
             ? "bg-quinary/20 text-quinary ring-quinary/30"
             : "bg-quinary/10 text-quinary ring-quinary/20 hover:bg-quinary/20",
@@ -224,7 +221,7 @@ function FilterPopover({
         <div className="absolute top-full right-0 z-50 mt-1 grid min-w-[180px] gap-2 rounded-md border border-border/60 bg-background/95 p-2 shadow-lg backdrop-blur-sm">
           {/* Sort order */}
           <div className="grid gap-1">
-            <span className="font-mono text-[10px] text-muted-foreground/60 uppercase tracking-wider">
+            <span className="font-mono text-muted-foreground/60 text-xs uppercase tracking-wider">
               sort
             </span>
             <div className="flex gap-1">
@@ -232,7 +229,7 @@ function FilterPopover({
                 type="button"
                 onClick={() => onChangeFilters({ ...filters, sort: "desc" })}
                 className={cn(
-                  "inline-flex flex-1 cursor-pointer items-center justify-center gap-1 rounded px-2 py-1 font-semibold text-[10px] transition-colors duration-150",
+                  "inline-flex flex-1 cursor-pointer items-center justify-center gap-1 rounded px-2 py-1 font-semibold text-xs transition-colors duration-150",
                   filters.sort === "desc"
                     ? "bg-quinary/20 text-quinary ring-1 ring-quinary/30 ring-inset"
                     : "text-muted-foreground hover:bg-muted/50",
@@ -245,7 +242,7 @@ function FilterPopover({
                 type="button"
                 onClick={() => onChangeFilters({ ...filters, sort: "asc" })}
                 className={cn(
-                  "inline-flex flex-1 cursor-pointer items-center justify-center gap-1 rounded px-2 py-1 font-semibold text-[10px] transition-colors duration-150",
+                  "inline-flex flex-1 cursor-pointer items-center justify-center gap-1 rounded px-2 py-1 font-semibold text-xs transition-colors duration-150",
                   filters.sort === "asc"
                     ? "bg-quinary/20 text-quinary ring-1 ring-quinary/30 ring-inset"
                     : "text-muted-foreground hover:bg-muted/50",
@@ -260,7 +257,7 @@ function FilterPopover({
           {/* Country filter */}
           {countries && countries.length > 0 && (
             <div className="grid gap-1">
-              <span className="font-mono text-[10px] text-muted-foreground/60 uppercase tracking-wider">
+              <span className="font-mono text-muted-foreground/60 text-xs uppercase tracking-wider">
                 country
               </span>
               <div className="flex gap-1">
@@ -272,7 +269,7 @@ function FilterPopover({
                       country: e.target.value || null,
                     })
                   }
-                  className="h-6 flex-1 cursor-pointer appearance-none rounded border border-border bg-transparent px-1.5 text-[10px] text-foreground outline-none focus-visible:ring-1 focus-visible:ring-quinary/60"
+                  className="h-6 flex-1 cursor-pointer appearance-none rounded border border-border bg-transparent px-1.5 text-foreground text-xs outline-none focus-visible:ring-1 focus-visible:ring-quinary/60"
                 >
                   <option value="">All countries</option>
                   {countries.map((code) => (
@@ -302,7 +299,7 @@ function FilterPopover({
             <button
               type="button"
               onClick={() => onChangeFilters({ sort: "desc", country: null })}
-              className="cursor-pointer text-left font-mono text-[10px] text-muted-foreground/60 transition-colors hover:text-foreground"
+              className="cursor-pointer text-left font-mono text-muted-foreground/60 text-xs transition-colors hover:text-foreground"
             >
               reset filters
             </button>
@@ -350,7 +347,7 @@ function CGuestbookRead() {
               })
             }
             disabled={isFetching}
-            className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-quinary/10 px-2 py-0.5 font-semibold text-[10px] text-quinary ring-1 ring-quinary/20 ring-inset transition-colors duration-200 hover:bg-quinary/20 disabled:cursor-not-allowed disabled:opacity-50"
+            className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-quinary/10 px-2 py-0.5 font-semibold text-quinary text-xs ring-1 ring-quinary/20 ring-inset transition-colors duration-200 hover:bg-quinary/20 disabled:cursor-not-allowed disabled:opacity-50"
             aria-label="Refresh guestbook entries"
           >
             <RefreshCcw
@@ -390,7 +387,7 @@ function CGuestbookRead() {
                 label="guestbook sign"
                 command="guestbook sign"
                 variant="pink"
-                className="px-1.5 py-0 text-[10px]"
+                className="px-1.5 py-0 text-xs"
               />{" "}
               to be the first.
             </>

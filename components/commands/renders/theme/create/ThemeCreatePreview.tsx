@@ -63,7 +63,7 @@ function PreviewToggleButton({
     <button
       type="button"
       onClick={onToggle}
-      className="mb-2 flex cursor-pointer items-center gap-2 font-semibold text-[10px] text-muted-foreground uppercase tracking-wide transition-colors hover:text-foreground"
+      className="mb-2 flex cursor-pointer items-center gap-2 font-semibold text-muted-foreground text-xs uppercase tracking-wide transition-colors hover:text-foreground"
     >
       Live Preview
       {showPreview ? (
@@ -93,7 +93,7 @@ function PreviewTerminalHeader({ colors }: PreviewTerminalHeaderProps) {
       </div>
 
       <span
-        className="shrink-0 font-medium text-[11px] tracking-wide"
+        className="shrink-0 font-medium text-xs tracking-wide"
         style={{ color: colors["muted-foreground"] }}
       >
         {SITE.handle} &mdash; zsh

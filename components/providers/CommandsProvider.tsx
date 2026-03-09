@@ -1,15 +1,26 @@
 "use client";
 
-import { createContext, useCallback, useContext, useState } from "react";
-import type { Command } from "@/types";
+import { createContext, useContext, useMemo } from "react";
+import { useShallow } from "zustand/react/shallow";
+import { MAX_SESSIONS } from "@/lib/utils/terminal.utils";
+import { useTerminalSessionsStore } from "@/stores/terminal-sessions.store";
+import type { SessionSnapshot, SessionTab } from "@/types/terminal";
 
-interface CommandsContextType {
+type CommandsContextType = {
+  commands: SessionSnapshot["commands"];
   showWelcome: boolean;
-  commands: Command[];
+  sessionSnapshots: SessionSnapshot[];
+  sessionTabs: SessionTab[];
+  activeSessionId: string;
+  setActiveSession: (id: string) => void;
+  createSession: () => void;
+  closeSession: (id: string) => void;
+  renameSession: (id: string, name: string) => void;
+  canCreateSession: boolean;
   addCommand: (input: string) => void;
   clearCommands: () => void;
   reset: () => void;
-}
+};
 
 const CommandsContext = createContext<CommandsContextType | undefined>(
   undefined,
@@ -24,50 +35,90 @@ export function useCommands() {
 }
 
 export function CommandsProvider({ children }: { children: React.ReactNode }) {
-  const [commands, setCommands] = useState<Command[]>([]);
-  const [showWelcome, setShowWelcome] = useState(true);
+  const {
+    sessions,
+    activeSessionId,
+    addCommand,
+    clearCommands,
+    reset,
+    setActiveSession,
+    createSession,
+    closeSession,
+    renameSession,
+  } = useTerminalSessionsStore(
+    useShallow((state) => ({
+      sessions: state.sessions,
+      activeSessionId: state.activeSessionId,
+      addCommand: state.addCommand,
+      clearCommands: state.clearCommands,
+      reset: state.resetActiveSession,
+      setActiveSession: state.setActiveSession,
+      createSession: state.createSessionTab,
+      closeSession: state.closeSession,
+      renameSession: state.renameSession,
+    })),
+  );
 
-  const addCommand = (input: string) => {
-    if (showWelcome) setShowWelcome(false);
+  const activeSession = useMemo(
+    () =>
+      sessions.find((session) => session.id === activeSessionId) ?? sessions[0],
+    [sessions, activeSessionId],
+  );
 
-    const normalizedInput = input.trim().toLowerCase();
-    if (!normalizedInput) return;
+  const sessionTabs = useMemo<SessionTab[]>(
+    () =>
+      sessions.map((session) => ({
+        id: session.id,
+        name: session.name,
+        commandCount: session.commands.length,
+      })),
+    [sessions],
+  );
 
-    const id =
-      typeof crypto !== "undefined" && "randomUUID" in crypto
-        ? crypto.randomUUID()
-        : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
-    const timestamp = new Date();
+  const sessionSnapshots = useMemo<SessionSnapshot[]>(
+    () =>
+      sessions.map((session) => ({
+        id: session.id,
+        showWelcome: session.showWelcome,
+        commands: session.commands,
+      })),
+    [sessions],
+  );
 
-    setCommands((prev) => [
-      ...prev,
-      {
-        id,
-        input: normalizedInput,
-        timestamp,
-      },
-    ]);
-  };
-
-  const clearCommands = useCallback(() => {
-    setCommands([]);
-  }, []);
-
-  const reset = useCallback(() => {
-    setCommands([]);
-    setShowWelcome(true);
-  }, []);
+  const commandsState = useMemo<CommandsContextType>(
+    () => ({
+      commands: activeSession?.commands ?? [],
+      showWelcome: activeSession?.showWelcome ?? true,
+      sessionSnapshots,
+      sessionTabs,
+      activeSessionId,
+      setActiveSession,
+      createSession,
+      closeSession,
+      renameSession,
+      canCreateSession: sessions.length < MAX_SESSIONS,
+      addCommand,
+      clearCommands,
+      reset,
+    }),
+    [
+      activeSession,
+      sessionSnapshots,
+      sessionTabs,
+      activeSessionId,
+      setActiveSession,
+      createSession,
+      closeSession,
+      renameSession,
+      sessions.length,
+      addCommand,
+      clearCommands,
+      reset,
+    ],
+  );
 
   return (
-    <CommandsContext.Provider
-      value={{
-        commands,
-        addCommand,
-        clearCommands,
-        showWelcome,
-        reset,
-      }}
-    >
+    <CommandsContext.Provider value={commandsState}>
       {children}
     </CommandsContext.Provider>
   );

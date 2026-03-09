@@ -1,14 +1,22 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { memo, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { resolveTerminalRenderer } from "@/components/commands/registries/commands.registry";
 import type { Command } from "@/types";
 import CommandBash from "./CommandBash";
-import { COMMAND_RENDERERS } from "./registries/registry";
-import CEcho from "./renders/CEcho";
 import CNotFound from "./renders/CNotFound";
-import CGuestbook from "./renders/guestbook/CGuestbook";
-import CSpotify from "./renders/spotify/CSpotify";
-import CTheme from "./renders/theme/CTheme";
+
+type CommandResolutionState =
+  | { status: "loading" }
+  | { status: "not-found" }
+  | {
+      status: "ready";
+      needsInput: boolean;
+      normalizedInput: string;
+      Component:
+        | React.ComponentType<{ input: string }>
+        | React.ComponentType<Record<string, never>>;
+    };
 
 function CommandWrapper({
   children,
@@ -26,7 +34,9 @@ function CommandWrapper({
 
   useLayoutEffect(() => {
     if (!show) return;
-    commandRef.current?.scrollIntoView({
+    const commandElement = commandRef.current;
+    if (!commandElement || commandElement.offsetParent === null) return;
+    commandElement.scrollIntoView({
       behavior: "auto",
       block: "start",
       inline: "nearest",
@@ -37,7 +47,7 @@ function CommandWrapper({
     <div
       ref={commandRef}
       id={`cmd-${id}`}
-      className="flex w-full flex-col gap-2 pt-3 pb-4 first:pt-0"
+      className="flex w-full scroll-mt-3 flex-col gap-2 pt-3 pb-4 first:pt-0"
     >
       <CommandBash input={input} timestamp={timestamp} />
       {!show ? (
@@ -54,20 +64,57 @@ function CommandWrapper({
 }
 
 function CommandItem({ id, input, timestamp }: Command) {
-  const content = useMemo(() => {
-    if (input.startsWith("echo ")) return <CEcho input={input} />;
-    if (input === "guestbook" || input.startsWith("guestbook ")) {
-      return <CGuestbook input={input} />;
+  const [resolution, setResolution] = useState<CommandResolutionState>({
+    status: "loading",
+  });
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadRenderer = async () => {
+      const renderer = await resolveTerminalRenderer(input);
+      if (cancelled) return;
+      if (!renderer) return setResolution({ status: "not-found" });
+
+      setResolution({
+        status: "ready",
+        needsInput: renderer.needsInput,
+        normalizedInput: renderer.normalizedInput,
+        Component: renderer.Component,
+      });
+    };
+
+    void loadRenderer();
+    return () => {
+      cancelled = true;
+    };
+  }, [input]);
+
+  const content = (() => {
+    if (resolution.status === "loading") {
+      return (
+        <p className="pl-5 font-mono text-muted-foreground/50 text-xs">
+          Resolving command…
+        </p>
+      );
     }
-    if (input.startsWith("spotify")) return <CSpotify input={input} />;
-    if (input === "theme" || input.startsWith("theme ")) {
-      return <CTheme input={input} />;
+    if (resolution.status === "not-found") {
+      return <CNotFound input={input} />;
     }
 
-    const renderer = COMMAND_RENDERERS[input];
-    if (!renderer) return <CNotFound input={input} />;
-    return renderer();
-  }, [input]);
+    const { Component, needsInput, normalizedInput } = resolution;
+    if (needsInput) {
+      const InputComponent = Component as React.ComponentType<{
+        input: string;
+      }>;
+      return <InputComponent input={normalizedInput} />;
+    }
+
+    const StaticComponent = Component as React.ComponentType<
+      Record<string, never>
+    >;
+    return <StaticComponent />;
+  })();
 
   return (
     <CommandWrapper id={id} input={input} timestamp={timestamp}>
@@ -76,4 +123,4 @@ function CommandItem({ id, input, timestamp }: Command) {
   );
 }
 
-export default CommandItem;
+export default memo(CommandItem);

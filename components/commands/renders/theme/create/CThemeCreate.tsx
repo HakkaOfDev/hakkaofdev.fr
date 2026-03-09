@@ -158,7 +158,7 @@ export function CThemeCreate() {
           <button
             type="button"
             onClick={() => setMode("visual")}
-            className={`inline-flex cursor-pointer items-center gap-1.5 rounded-md px-2.5 py-1 font-semibold text-[10px] transition-colors ${
+            className={`inline-flex cursor-pointer items-center gap-1.5 rounded-md px-2.5 py-1 font-semibold text-xs transition-colors ${
               mode === "visual"
                 ? "bg-primary/10 text-primary ring-1 ring-primary/20 ring-inset"
                 : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
@@ -170,7 +170,7 @@ export function CThemeCreate() {
           <button
             type="button"
             onClick={() => setMode("json")}
-            className={`inline-flex cursor-pointer items-center gap-1.5 rounded-md px-2.5 py-1 font-semibold text-[10px] transition-colors ${
+            className={`inline-flex cursor-pointer items-center gap-1.5 rounded-md px-2.5 py-1 font-semibold text-xs transition-colors ${
               mode === "json"
                 ? "bg-primary/10 text-primary ring-1 ring-primary/20 ring-inset"
                 : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"

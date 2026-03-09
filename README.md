@@ -214,6 +214,29 @@ registerDynamicParamCommand({
 
 See `components/commands/registries/EXAMPLES.ts` for more patterns (localStorage, async data, context-aware, etc.)
 
+**State persistence (Lighthouse-friendly default):**
+
+- Session/tab history is intentionally **not** persisted (`stores/terminal-sessions.store.ts`) to avoid hydration/boot overhead.
+- UI preferences still persist in `localStorage` (see `stores/terminal-preferences.store.ts` for font + scrollback and `stores/theme.store.ts` for theme settings).
+- If you want session/tab persistence for an educational/demo build, you can toggle it back in the store by replacing the plain Zustand store with a `persist(...)` wrapper.
+
+```ts
+// Example (educational/demo only): persist session tabs/history
+import { create } from "zustand";
+import { createJSONStorage, persist } from "zustand/middleware";
+
+const createSessionStore = (set) => ({
+  /* same session/tab logic as your current store initializer */
+});
+
+export const useTerminalSessionsStore = create<TerminalSessionsStore>()(
+  persist(createSessionStore, {
+    name: "terminal-sessions-store",
+    storage: createJSONStorage(() => localStorage),
+  }),
+);
+```
+
 **Customizing the CV:** update data in `lib/cv/cv-pdf.data.ts`, styles in `lib/cv/cv-pdf.styles.ts`, and sections in `components/cv-pdf/CVSections.tsx`.
 
 **Guestbook backend:** SQL schema in `supabase/schema/guestbook.sql`, API in `app/api/guestbook/route.ts`, tune with `GUESTBOOK_*` env vars.

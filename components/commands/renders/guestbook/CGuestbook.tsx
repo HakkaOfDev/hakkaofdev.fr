@@ -3,7 +3,7 @@
 import {
   GUESTBOOK_COMMAND_RENDERERS,
   GUESTBOOK_COMMANDS,
-} from "@/components/commands/registries/guestbook-registry";
+} from "@/components/commands/registries/guestbook.registry";
 import SubCommandRouter from "../SubCommandRouter";
 
 function CGuestbook({ input }: { input: string }) {

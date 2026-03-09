@@ -90,7 +90,7 @@ function SuggestionList({
 
                 {/* Description */}
                 {s.description && (
-                  <span className="ml-auto truncate pl-3 text-[11px] text-muted-foreground/40">
+                  <span className="ml-auto truncate pl-3 text-muted-foreground/40 text-xs">
                     {s.description}
                   </span>
                 )}
@@ -102,20 +102,20 @@ function SuggestionList({
 
       {/* ── Keyboard hints footer ── */}
       <div className="flex items-center gap-3 border-border/30 border-t bg-muted/20 px-3 py-1.5 dark:border-overlay-subtle dark:bg-overlay-subtle">
-        <span className="flex items-center gap-1 text-[10px] text-muted-foreground/40">
-          <kbd className="rounded bg-muted/60 px-1 py-px font-mono text-[9px] dark:bg-overlay-medium">
+        <span className="flex items-center gap-1 text-muted-foreground/40 text-xs">
+          <kbd className="rounded bg-muted/60 px-1 py-px font-mono text-xs dark:bg-overlay-medium">
             ↑↓
           </kbd>
           navigate
         </span>
-        <span className="flex items-center gap-1 text-[10px] text-muted-foreground/40">
-          <kbd className="rounded bg-muted/60 px-1 py-px font-mono text-[9px] dark:bg-overlay-medium">
+        <span className="flex items-center gap-1 text-muted-foreground/40 text-xs">
+          <kbd className="rounded bg-muted/60 px-1 py-px font-mono text-xs dark:bg-overlay-medium">
             Tab
           </kbd>
           complete
         </span>
-        <span className="flex items-center gap-1 text-[10px] text-muted-foreground/40">
-          <kbd className="rounded bg-muted/60 px-1 py-px font-mono text-[9px] dark:bg-overlay-medium">
+        <span className="flex items-center gap-1 text-muted-foreground/40 text-xs">
+          <kbd className="rounded bg-muted/60 px-1 py-px font-mono text-xs dark:bg-overlay-medium">
             ↵
           </kbd>
           run

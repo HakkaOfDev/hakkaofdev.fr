@@ -57,9 +57,7 @@ function StatCard({ icon, label, value, color }: StatCardProps) {
     >
       <div className={cn("shrink-0", c.icon)}>{icon}</div>
       <div className="min-w-0 flex-1">
-        <p className="text-[10px] text-muted-foreground leading-none">
-          {label}
-        </p>
+        <p className="text-muted-foreground text-xs leading-none">{label}</p>
         <p className="mt-0.5 truncate font-semibold text-foreground text-xs">
           {value ?? "N/A"}
         </p>
@@ -153,7 +151,7 @@ function StatsContent({ data }: { data: StatsData }) {
 function CStats() {
   const { data, isLoading } = useQuery({
     queryKey: ["stats"],
-    queryFn: getStats,
+    queryFn: () => getStats(),
     staleTime: 5 * 60 * 1000,
     retry: false,
   });

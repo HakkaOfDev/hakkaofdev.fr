@@ -34,7 +34,7 @@ export function CThemePreview({ name }: { name: string }) {
             label="theme list"
             command="theme list"
             variant="orange"
-            className="px-1.5 py-0 text-[10px]"
+            className="px-1.5 py-0 text-xs"
           />{" "}
           to see available themes.
         </p>
@@ -77,7 +77,7 @@ export function CThemePreview({ name }: { name: string }) {
           />
         ))}
       </div>
-      <p className="mt-1 text-[10px] text-muted-foreground/50">
+      <p className="mt-1 text-muted-foreground/50 text-xs">
         Use{" "}
         <span className="font-mono font-semibold text-foreground">
           theme set {target.name}

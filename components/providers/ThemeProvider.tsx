@@ -9,12 +9,7 @@ import {
   useState,
 } from "react";
 import { BUILTIN_THEME_MAP, BUILTIN_THEMES } from "../../lib/themes/palettes";
-import {
-  getCustomThemes,
-  getStoredThemeName,
-  removeCustomTheme,
-  storeThemeName,
-} from "../../lib/themes/storage";
+import { useThemeStore } from "../../stores/theme.store";
 import type { ThemePalette } from "../../types/theme";
 import { THEME_COLOR_KEYS } from "../../types/theme";
 
@@ -84,33 +79,18 @@ export function ThemeEngineProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [customThemes, setCustomThemes] = useState<ThemePalette[]>([]);
-  const [themeName, setThemeName] = useState<string>(DEFAULT_THEME);
+  const themeName = useThemeStore((state) => state.theme);
+  const customThemes = useThemeStore((state) => state.customThemes);
+  const setStoredTheme = useThemeStore((state) => state.setTheme);
+  const removeStoredCustomTheme = useThemeStore(
+    (state) => state.removeCustomTheme,
+  );
   const [previewName, setPreviewName] = useState<string | null>(null);
   const previewTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  // Sync init from localStorage on mount
-  useEffect(() => {
-    const stored = getStoredThemeName();
-    const custom = getCustomThemes();
-
-    setCustomThemes(custom);
-
-    if (stored) {
-      const palette = lookupPalette(stored, custom);
-      if (palette) {
-        setThemeName(stored);
-        applyPalette(palette);
-      }
-    } else {
-      // Apply default immediately
-      const defaultPalette = BUILTIN_THEME_MAP.get(DEFAULT_THEME);
-      if (defaultPalette) applyPalette(defaultPalette);
-    }
-  }, []);
+  const resolvedCustomThemes = customThemes;
 
   const allThemes = useMemo(() => {
-    const combined = [...BUILTIN_THEMES, ...customThemes];
+    const combined = [...BUILTIN_THEMES, ...resolvedCustomThemes];
     return combined.sort((a, b) => {
       // First sort by mode: light themes first, then dark
       if (a.isDark !== b.isDark) {
@@ -119,17 +99,25 @@ export function ThemeEngineProvider({
       // Then sort alphabetically by label
       return a.label.localeCompare(b.label);
     });
-  }, [customThemes]);
+  }, [resolvedCustomThemes]);
 
   const activeName = previewName ?? themeName;
   const palette =
-    lookupPalette(activeName, customThemes) ||
+    lookupPalette(activeName, resolvedCustomThemes) ||
     BUILTIN_THEME_MAP.get(DEFAULT_THEME) ||
     BUILTIN_THEMES[0];
 
   useEffect(() => {
     applyPalette(palette);
   }, [palette]);
+
+  useEffect(() => {
+    return () => {
+      if (previewTimerRef.current) {
+        clearTimeout(previewTimerRef.current);
+      }
+    };
+  }, []);
 
   const setTheme = useCallback(
     (name: string) => {
@@ -138,33 +126,26 @@ export function ThemeEngineProvider({
         previewTimerRef.current = null;
       }
       setPreviewName(null);
-      setThemeName(name);
-      storeThemeName(name);
-
-      const p = lookupPalette(name, customThemes);
-      if (p) applyPalette(p);
+      setStoredTheme(name);
     },
-    [customThemes],
+    [setStoredTheme],
   );
 
   const previewTheme = useCallback(
     (name: string, durationMs = 10_000) => {
       if (previewTimerRef.current) clearTimeout(previewTimerRef.current);
 
-      const p = lookupPalette(name, customThemes);
+      const p = lookupPalette(name, resolvedCustomThemes);
       if (!p) return;
 
       setPreviewName(name);
-      applyPalette(p);
 
       previewTimerRef.current = setTimeout(() => {
         setPreviewName(null);
         previewTimerRef.current = null;
-        const current = lookupPalette(themeName, customThemes);
-        if (current) applyPalette(current);
       }, durationMs);
     },
-    [customThemes, themeName],
+    [resolvedCustomThemes],
   );
 
   const cancelPreview = useCallback(() => {
@@ -173,9 +154,7 @@ export function ThemeEngineProvider({
       previewTimerRef.current = null;
     }
     setPreviewName(null);
-    const current = lookupPalette(themeName, customThemes);
-    if (current) applyPalette(current);
-  }, [themeName, customThemes]);
+  }, []);
 
   const deleteCustomTheme = useCallback(
     (name: string) => {
@@ -184,24 +163,17 @@ export function ThemeEngineProvider({
         return;
       }
 
-      // Remove from storage
-      removeCustomTheme(name);
+      removeStoredCustomTheme(name);
 
-      // Update local state
-      const updated = customThemes.filter((t) => t.name !== name);
-      setCustomThemes(updated);
-
-      // If the deleted theme is currently active, switch to default
-      if (themeName === name) {
-        setTheme(DEFAULT_THEME);
-      }
-
-      // If the deleted theme is being previewed, cancel the preview
       if (previewName === name) {
-        cancelPreview();
+        if (previewTimerRef.current) {
+          clearTimeout(previewTimerRef.current);
+          previewTimerRef.current = null;
+        }
+        setPreviewName(null);
       }
     },
-    [customThemes, themeName, previewName, setTheme, cancelPreview],
+    [removeStoredCustomTheme, previewName],
   );
 
   const value = useMemo<ThemeEngineContextValue>(

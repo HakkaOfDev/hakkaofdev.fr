@@ -39,7 +39,7 @@ export function ThemeCreateVisualForm({
     <form onSubmit={onSubmit} className="grid max-w-2xl gap-3">
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
         <label className="grid gap-1.5">
-          <span className="font-semibold text-[10px] text-muted-foreground uppercase tracking-wide">
+          <span className="font-semibold text-muted-foreground text-xs uppercase tracking-wide">
             Theme ID
           </span>
           <input
@@ -51,12 +51,12 @@ export function ThemeCreateVisualForm({
               )
             }
             placeholder="my-custom-theme"
-            className="w-full rounded-md border border-border bg-muted/30 px-3 py-1.5 font-mono text-[11px] text-foreground outline-none placeholder:text-muted-foreground/40 focus:ring-1 focus:ring-primary/50"
+            className="w-full rounded-md border border-border bg-muted/30 px-3 py-1.5 font-mono text-foreground text-xs outline-none placeholder:text-muted-foreground/40 focus:ring-1 focus:ring-primary/50"
             required
           />
         </label>
         <label className="grid gap-1.5">
-          <span className="font-semibold text-[10px] text-muted-foreground uppercase tracking-wide">
+          <span className="font-semibold text-muted-foreground text-xs uppercase tracking-wide">
             Display Name
           </span>
           <input
@@ -64,7 +64,7 @@ export function ThemeCreateVisualForm({
             value={themeLabel}
             onChange={(e) => onThemeLabelChange(e.target.value)}
             placeholder="My Custom Theme"
-            className="w-full rounded-md border border-border bg-muted/30 px-3 py-1.5 text-[11px] text-foreground outline-none placeholder:text-muted-foreground/40 focus:ring-1 focus:ring-primary/50"
+            className="w-full rounded-md border border-border bg-muted/30 px-3 py-1.5 text-foreground text-xs outline-none placeholder:text-muted-foreground/40 focus:ring-1 focus:ring-primary/50"
             required
           />
         </label>
@@ -78,7 +78,7 @@ export function ThemeCreateVisualForm({
           >
             Theme Mode
           </label>
-          <p className="mt-0.5 text-[10px] text-muted-foreground">
+          <p className="mt-0.5 text-muted-foreground text-xs">
             {isDark ? "Dark theme" : "Light theme"}
           </p>
         </div>
@@ -125,7 +125,7 @@ export function ThemeCreateVisualForm({
       </div>
 
       <div className="border-border border-t pt-2">
-        <p className="mb-2 font-semibold text-[10px] text-muted-foreground uppercase tracking-wide">
+        <p className="mb-2 font-semibold text-muted-foreground text-xs uppercase tracking-wide">
           Colors
         </p>
         <div className="terminal-scrollbar grid max-h-80 grid-cols-1 gap-2 overflow-y-auto pr-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -139,7 +139,7 @@ export function ThemeCreateVisualForm({
                 aria-label={`${COLOR_LABELS[key]} color picker`}
               />
               <div className="flex min-w-0 flex-1 flex-col">
-                <span className="truncate font-medium text-[10px] text-foreground">
+                <span className="truncate font-medium text-foreground text-xs">
                   {COLOR_LABELS[key]}
                 </span>
                 <input
@@ -158,14 +158,14 @@ export function ThemeCreateVisualForm({
       <div className="flex items-center gap-2 border-border border-t pt-2">
         <button
           type="submit"
-          className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-primary/10 px-4 py-1.5 font-semibold text-[11px] text-primary ring-1 ring-primary/20 ring-inset transition-colors hover:bg-primary/20"
+          className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-primary/10 px-4 py-1.5 font-semibold text-primary text-xs ring-1 ring-primary/20 ring-inset transition-colors hover:bg-primary/20"
         >
           Create Theme
         </button>
         <button
           type="button"
           onClick={onCopyJSON}
-          className="inline-flex cursor-pointer items-center gap-1 rounded-md px-3 py-1.5 font-semibold text-[10px] text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground"
+          className="inline-flex cursor-pointer items-center gap-1 rounded-md px-3 py-1.5 font-semibold text-muted-foreground text-xs transition-colors hover:bg-accent/50 hover:text-foreground"
           aria-label="Copy JSON to clipboard"
         >
           Copy JSON
@@ -173,7 +173,7 @@ export function ThemeCreateVisualForm({
         <button
           type="button"
           onClick={onResetColors}
-          className="inline-flex cursor-pointer items-center gap-1.5 rounded-md px-3 py-1.5 font-semibold text-[10px] text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground"
+          className="inline-flex cursor-pointer items-center gap-1.5 rounded-md px-3 py-1.5 font-semibold text-muted-foreground text-xs transition-colors hover:bg-accent/50 hover:text-foreground"
           aria-label="Reset colors to defaults"
           title="Reset colors to defaults"
         >

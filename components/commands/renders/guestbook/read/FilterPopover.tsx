@@ -4,7 +4,6 @@ import { useQuery } from "@tanstack/react-query";
 import {
   ArrowDownNarrowWide,
   ArrowUpNarrowWide,
-  ChevronDown,
   Filter,
   X,
 } from "lucide-react";
@@ -14,6 +13,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/Popover";
+import { Select } from "@/components/ui/Select";
 import { GuestbookClientService } from "@/lib/services";
 import { cn } from "@/lib/utils";
 import type { GuestbookFilters, SortOrder } from "@/types/guestbook";
@@ -36,7 +36,7 @@ const SORT_OPTIONS: {
 function SortOrderFilter({ filters, onChangeFilters, onClose }: FilterProps) {
   return (
     <div className="grid gap-1.5">
-      <span className="font-mono font-semibold text-[10px] text-quinary/70 uppercase tracking-wider">
+      <span className="font-mono font-semibold text-quinary/70 text-xs uppercase tracking-wider">
         sort
       </span>
       <div className="flex gap-1">
@@ -49,7 +49,7 @@ function SortOrderFilter({ filters, onChangeFilters, onClose }: FilterProps) {
               onClose?.();
             }}
             className={cn(
-              "inline-flex flex-1 cursor-pointer items-center justify-center gap-1 rounded-md border px-2 py-1.5 font-semibold text-[10px] transition-colors duration-150",
+              "inline-flex flex-1 cursor-pointer items-center justify-center gap-1 rounded-md border px-2 py-1.5 font-semibold text-xs transition-colors duration-150",
               filters.sort === value
                 ? "border-quinary/50 bg-quinary/20 text-quinary"
                 : "border-border text-foreground/70 hover:bg-muted/60 hover:text-foreground",
@@ -74,31 +74,29 @@ function CountryFilter({
 
   return (
     <div className="grid gap-1.5">
-      <span className="font-mono font-semibold text-[10px] text-quinary/70 uppercase tracking-wider">
+      <span className="font-mono font-semibold text-quinary/70 text-xs uppercase tracking-wider">
         country
       </span>
       <div className="flex gap-1">
-        <div className="relative flex-1">
-          <select
-            value={filters.country ?? ""}
-            onChange={(e) => {
-              onChangeFilters({
-                ...filters,
-                country: e.target.value || null,
-              });
-              onClose?.();
-            }}
-            className="h-7 w-full cursor-pointer appearance-none rounded-md border border-border bg-muted/40 pr-6 pl-2 text-[11px] text-foreground outline-none"
-          >
-            <option value="">All countries</option>
-            {countries.map((code) => (
-              <option key={code} value={code}>
-                {GuestbookClientService.countryToFlag(code)} {code}
-              </option>
-            ))}
-          </select>
-          <ChevronDown className="pointer-events-none absolute top-1/2 right-1.5 h-3 w-3 -translate-y-1/2 text-foreground/50" />
-        </div>
+        <Select
+          wrapperClassName="flex-1"
+          value={filters.country ?? ""}
+          onChange={(event) => {
+            onChangeFilters({
+              ...filters,
+              country: event.target.value || null,
+            });
+            onClose?.();
+          }}
+          className="h-7 border-border bg-muted/40 text-xs"
+        >
+          <option value="">All countries</option>
+          {countries.map((code) => (
+            <option key={code} value={code}>
+              {GuestbookClientService.countryToFlag(code)} {code}
+            </option>
+          ))}
+        </Select>
         {filters.country && (
           <button
             type="button"
@@ -134,7 +132,7 @@ export function FilterPopover({ filters, onChangeFilters }: FilterProps) {
         <button
           type="button"
           className={cn(
-            "inline-flex cursor-pointer items-center gap-1 rounded-md px-2 py-0.5 font-semibold text-[10px] ring-1 ring-inset transition-colors duration-200",
+            "inline-flex cursor-pointer items-center gap-1 rounded-md px-2 py-0.5 font-semibold text-xs ring-1 ring-inset transition-colors duration-200",
             hasActiveFilters
               ? "bg-quinary/20 text-quinary ring-quinary/30"
               : "bg-quinary/10 text-quinary ring-quinary/20 hover:bg-quinary/20",

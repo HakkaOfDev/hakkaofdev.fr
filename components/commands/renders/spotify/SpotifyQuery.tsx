@@ -18,7 +18,7 @@ export default function SpotifyQuery<T>({
 }) {
   const { data, isLoading } = useQuery({
     queryKey,
-    queryFn,
+    queryFn: () => queryFn(),
     refetchInterval,
     retry: false,
   });

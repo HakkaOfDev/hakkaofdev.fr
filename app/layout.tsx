@@ -1,7 +1,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
-import { Montserrat } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 import Providers from "@/components/providers/Providers";
 import { GITHUB_URL, SITE, SOCIALS } from "@/lib/constants";
@@ -9,8 +9,8 @@ import { getSiteUrl } from "@/lib/site-url";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   display: "optional",
   adjustFontFallback: true,
@@ -96,8 +96,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          montserrat.variable,
-          "flex h-[100dvh] flex-col overflow-hidden font-montserrat antialiased",
+          jetbrainsMono.variable,
+          "flex h-[100dvh] flex-col overflow-hidden antialiased",
         )}
       >
         <script

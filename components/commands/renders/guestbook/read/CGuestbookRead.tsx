@@ -49,7 +49,7 @@ function CGuestbookRead() {
               })
             }
             disabled={isFetching}
-            className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-quinary/10 px-2 py-0.5 font-semibold text-[10px] text-quinary ring-1 ring-quinary/20 ring-inset transition-colors duration-200 hover:bg-quinary/20 disabled:cursor-not-allowed disabled:opacity-50"
+            className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-quinary/10 px-2 py-0.5 font-semibold text-quinary text-xs ring-1 ring-quinary/20 ring-inset transition-colors duration-200 hover:bg-quinary/20 disabled:cursor-not-allowed disabled:opacity-50"
             aria-label="Refresh guestbook entries"
           >
             <RefreshCcw
@@ -90,7 +90,7 @@ function CGuestbookRead() {
                 label="guestbook sign"
                 command="guestbook sign"
                 variant="pink"
-                className="px-1.5 py-0 text-[10px]"
+                className="px-1.5 py-0 text-xs"
               />{" "}
               to be the first.
             </>
