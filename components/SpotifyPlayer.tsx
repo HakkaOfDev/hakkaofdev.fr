@@ -9,7 +9,7 @@ import { getNowPlaying } from "@/app/actions";
 function SpotifyPlayer() {
   const { data } = useQuery({
     queryKey: ["now-playing"],
-    queryFn: getNowPlaying,
+    queryFn: () => getNowPlaying(),
     refetchInterval: 15000,
     retry: false,
   });
@@ -74,7 +74,7 @@ function SpotifyPlayer() {
         />
 
         {/* Track info */}
-        <span className="min-w-0 truncate text-[11px] text-muted-foreground/80 transition-colors duration-150 group-hover:text-muted-foreground">
+        <span className="min-w-0 truncate text-muted-foreground/80 text-xs transition-colors duration-150 group-hover:text-muted-foreground">
           <span className="font-medium text-muted-foreground/90 transition-colors duration-150 group-hover:text-secondary">
             {data.item.name}
           </span>
