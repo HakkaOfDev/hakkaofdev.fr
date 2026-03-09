@@ -36,19 +36,16 @@ export function GuestbookEntryRow({
       <div className="absolute top-[5px] -left-[5px] size-2 rounded-full bg-quinary" />
 
       <div className="flex items-baseline gap-2">
-        <span className="shrink-0 font-mono text-[10px] text-muted-foreground/50">
+        <span className="shrink-0 font-mono text-muted-foreground/50 text-xs">
           #{String(index + 1).padStart(3, "0")}
         </span>
         {nameElement}
         {entry.country && (
-          <span
-            className="shrink-0 text-[11px] leading-none"
-            title={entry.country}
-          >
+          <span className="shrink-0 text-xs leading-none" title={entry.country}>
             {GuestbookClientService.countryToFlag(entry.country)}
           </span>
         )}
-        <span className="ml-auto whitespace-nowrap font-mono text-[10px] text-muted-foreground/40">
+        <span className="ml-auto whitespace-nowrap font-mono text-muted-foreground/40 text-xs">
           {formatEntryDate(entry.created_at)}
         </span>
       </div>
