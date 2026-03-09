@@ -148,7 +148,9 @@ function TerminalSettingsDialog({
         <TerminalShortcutList shortcuts={TERMINAL_KEYBOARD_SHORTCUTS} />
 
         <div className="select-none text-center">
-          <span className="font-mono text-muted-foreground text-xs tabular-nums">v{SITE.version}</span>
+          <span className="font-mono text-muted-foreground text-xs tabular-nums">
+            v{SITE.version}
+          </span>
         </div>
       </div>
     </Dialog>

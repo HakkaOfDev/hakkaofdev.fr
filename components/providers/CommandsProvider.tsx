@@ -1,10 +1,10 @@
 "use client";
 
 import { createContext, useContext, useMemo } from "react";
+import { useShallow } from "zustand/react/shallow";
 import { MAX_SESSIONS } from "@/lib/utils/terminal.utils";
 import { useTerminalSessionsStore } from "@/stores/terminal-sessions.store";
 import type { SessionSnapshot, SessionTab } from "@/types/terminal";
-import { useShallow } from "zustand/react/shallow";
 
 type CommandsContextType = {
   commands: SessionSnapshot["commands"];

@@ -1,12 +1,11 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useShallow } from "zustand/react/shallow";
 import { useCommands } from "@/components/providers/CommandsProvider";
 import { CLOSE_MESSAGES } from "@/lib/constants";
 import {
   getTerminalMinimums,
   isTerminalResizeEnabled,
 } from "@/lib/terminal-layout";
-import { useTerminalPreferencesStore } from "@/stores/terminal-preferences.store";
-import { useTerminalSessionsStore } from "@/stores/terminal-sessions.store";
 import {
   clampFontScale,
   clampScrollbackLimit,
@@ -16,7 +15,8 @@ import {
   isTerminalFontId,
   TERMINAL_FONT_OPTIONS,
 } from "@/lib/utils/terminal.utils";
-import { useShallow } from "zustand/react/shallow";
+import { useTerminalPreferencesStore } from "@/stores/terminal-preferences.store";
+import { useTerminalSessionsStore } from "@/stores/terminal-sessions.store";
 
 export function useTerminalState() {
   const { addCommand, commands } = useCommands();
