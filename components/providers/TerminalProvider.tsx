@@ -1,16 +1,9 @@
 "use client";
 
-import { createContext, useCallback, useContext, useState } from "react";
-import { CLOSE_MESSAGES } from "@/lib/constants";
-import { useCommands } from "./CommandsProvider";
+import { createContext, useContext } from "react";
+import { useTerminalState } from "@/hooks/useTerminalState";
 
-interface TerminalContextType {
-  isMinimized: boolean;
-  isMaximized: boolean;
-  handleClose: () => void;
-  handleMinimize: () => void;
-  handleMaximize: () => void;
-}
+type TerminalContextType = ReturnType<typeof useTerminalState>;
 
 const TerminalContext = createContext<TerminalContextType | undefined>(
   undefined,
@@ -25,36 +18,9 @@ export function useTerminal() {
 }
 
 export function TerminalProvider({ children }: { children: React.ReactNode }) {
-  const { addCommand } = useCommands();
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isMaximized, setIsMaximized] = useState(false);
-
-  const handleClose = useCallback(() => {
-    if (isMinimized) setIsMinimized(false);
-    const msg =
-      CLOSE_MESSAGES[Math.floor(Math.random() * CLOSE_MESSAGES.length)];
-    addCommand(`echo "${msg}"`);
-  }, [addCommand, isMinimized]);
-
-  const handleMinimize = useCallback(() => {
-    setIsMinimized((v) => !v);
-  }, []);
-
-  const handleMaximize = useCallback(() => {
-    if (isMinimized) setIsMinimized(false);
-    setIsMaximized((v) => !v);
-  }, [isMinimized]);
-
+  const terminalState = useTerminalState();
   return (
-    <TerminalContext.Provider
-      value={{
-        isMinimized,
-        isMaximized,
-        handleClose,
-        handleMinimize,
-        handleMaximize,
-      }}
-    >
+    <TerminalContext.Provider value={terminalState}>
       {children}
     </TerminalContext.Provider>
   );
