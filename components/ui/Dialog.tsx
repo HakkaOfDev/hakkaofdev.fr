@@ -1,9 +1,9 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { AnimatePresence, m, useIsPresent } from "motion/react";
 import { useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
+import { cn } from "@/lib/utils";
 
 interface DialogProps {
   open: boolean;
@@ -146,10 +146,7 @@ function DialogOverlay({
                 {title}
               </h2>
               {description ? (
-                <p
-                  id={descriptionId}
-                  className="text-muted-foreground text-xs"
-                >
+                <p id={descriptionId} className="text-muted-foreground text-xs">
                   {description}
                 </p>
               ) : null}
