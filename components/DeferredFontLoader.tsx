@@ -9,7 +9,8 @@ const FONT_CONFIG = {
   montserrat: {
     url: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap",
     variable: "--font-montserrat",
-    family: "'Montserrat', -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+    family:
+      "'Montserrat', -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
   },
   fira: {
     url: "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap",
