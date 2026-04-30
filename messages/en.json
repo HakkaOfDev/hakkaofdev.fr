@@ -144,7 +144,10 @@
       "themeSet": "Apply a theme by name (e.g. theme set dracula)",
       "themePreview": "Preview a theme without applying it",
       "themeCreate": "Create a custom theme with visual or JSON editor",
-      "themeValidate": "Check the current theme for contrast issues"
+      "themeValidate": "Check the current theme for contrast issues",
+      "lang": "Show or switch the active language",
+      "langSet": "Switch language (e.g. lang set fr)",
+      "langAuto": "Re-enable browser language detection"
     },
     "help": {
       "available": "Available commands",
@@ -216,6 +219,32 @@
     "navigate": "navigate",
     "complete": "complete",
     "run": "run"
+  },
+  "Lang": {
+    "subCommandsTitle": "Language commands",
+    "currentLabel": "Current language:",
+    "availablePrefix": "Available:",
+    "usagePrefix": "Usage:",
+    "switching": "Switching to {locale}…",
+    "autoCleared": "Locale will be auto-detected on the next page load.",
+    "missingCode": "Missing locale code.",
+    "unknownLocale": "Unknown locale: {code}.",
+    "unknownSubcommand": "Unknown sub-command: {sub}.",
+    "tooManyArgs": "Too many arguments.",
+    "switcher": {
+      "ariaLabel": "Change language",
+      "title": "Change language"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語"
+    }
   },
   "OpenGraph": {
     "tags": {

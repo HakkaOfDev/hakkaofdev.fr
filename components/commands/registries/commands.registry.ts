@@ -77,6 +77,12 @@ const ENTRIES: ReadonlyArray<RendererEntry> = [
     true,
     () => import("@/components/commands/renders/theme/CTheme"),
   ),
+  prefix(
+    "lang",
+    "lang",
+    true,
+    () => import("@/components/commands/renders/CLang"),
+  ),
 ];
 
 export async function resolveTerminalRenderer(input: string) {

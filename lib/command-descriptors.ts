@@ -3,6 +3,7 @@ import type {
   CommandGroup,
   CommandGroupMeta,
   GuestbookCommandDescriptor,
+  LangCommandDescriptor,
   SpotifyCommandDescriptor,
   ThemeCommandDescriptor,
 } from "@/types/command";
@@ -12,6 +13,7 @@ export type {
   CommandGroup,
   CommandGroupMeta,
   GuestbookCommandDescriptor,
+  LangCommandDescriptor,
   SpotifyCommandDescriptor,
   ThemeCommandDescriptor,
 } from "@/types/command";
@@ -50,6 +52,7 @@ export const COMMANDS: CommandDescriptor[] = [
   { command: "stats", slug: "stats", group: "Profile" },
   { command: "repo", slug: "repo", group: "Terminal" },
   { command: "echo", slug: "echo", group: "Terminal" },
+  { command: "lang", slug: "lang", group: "Terminal" },
 ];
 
 // ─── Sub-commands ───────────────────────────────────────────────────────
@@ -71,8 +74,18 @@ export const THEME_COMMANDS: ThemeCommandDescriptor[] = [
   { command: "validate", slug: "themeValidate" },
 ];
 
+export const LANG_COMMANDS: LangCommandDescriptor[] = [
+  { command: "set", slug: "langSet" },
+  { command: "auto", slug: "langAuto" },
+];
+
 /** Command names that act as namespaces for sub-commands. */
-export const SUBCOMMAND_PREFIXES = ["guestbook", "spotify", "theme"] as const;
+export const SUBCOMMAND_PREFIXES = [
+  "guestbook",
+  "spotify",
+  "theme",
+  "lang",
+] as const;
 
 // ─── Derived: every command including expanded sub-commands ─────────────
 
@@ -92,6 +105,11 @@ export const ALL_COMMANDS: CommandDescriptor[] = [
     command: `theme ${c.command}`,
     slug: c.slug,
     group: "Theme" as const,
+  })),
+  ...LANG_COMMANDS.map((c) => ({
+    command: `lang ${c.command}`,
+    slug: c.slug,
+    group: "Terminal" as const,
   })),
 ];
 

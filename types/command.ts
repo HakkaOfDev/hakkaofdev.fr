@@ -45,6 +45,11 @@ export type ThemeCommandDescriptor = {
   slug: string;
 };
 
+export type LangCommandDescriptor = {
+  command: "set" | "auto";
+  slug: string;
+};
+
 // ─── Dynamic commands ───────────────────────────────────────────────────
 
 /**
