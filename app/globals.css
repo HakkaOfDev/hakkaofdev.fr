@@ -96,8 +96,12 @@
 .terminal-shell button,
 .terminal-shell kbd,
 .terminal-shell code {
-  font-family: var(--terminal-font-family), ui-monospace, SFMono-Regular, Menlo,
-    Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* CJK-capable fallbacks: only loaded on zh/ja routes (see i18n/fonts.ts).
+     Browsers walk this stack per-glyph, so Latin chars stay in JetBrains Mono
+     while CJK chars fall through to Noto Sans SC/JP. */
+  font-family: var(--terminal-font-family), var(--font-noto-sc),
+    var(--font-noto-jp), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
 /* ── Terminal zoom controls ── */

@@ -11,7 +11,8 @@ import {
 } from "next-intl/server";
 import Footer from "@/components/Footer";
 import Providers from "@/components/providers/Providers";
-import { routing } from "@/i18n/routing";
+import { getCjkFontVariable } from "@/i18n/fonts";
+import { type Locale, routing } from "@/i18n/routing";
 import { GITHUB_URL, SITE, SOCIALS } from "@/lib/constants";
 import { getSiteUrl } from "@/lib/site-url";
 import { cn } from "@/lib/utils";
@@ -156,11 +157,14 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
     sameAs: SOCIALS.map((social) => social.url),
   };
 
+  const cjkFontVariable = getCjkFontVariable(locale as Locale);
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
           jetbrainsMono.variable,
+          cjkFontVariable,
           "flex h-[100dvh] flex-col overflow-hidden antialiased",
         )}
       >

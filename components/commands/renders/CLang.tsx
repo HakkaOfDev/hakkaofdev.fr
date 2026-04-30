@@ -3,8 +3,8 @@
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useMemo } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
-import { Shortcut } from "@/components/ui/Shortcut";
 import { LANG_COMMANDS } from "@/components/commands/registries/lang.registry";
+import { Shortcut } from "@/components/ui/Shortcut";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { type Locale, routing } from "@/i18n/routing";
 import SubCommandHelp from "./SubCommandHelp";
