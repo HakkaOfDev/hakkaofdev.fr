@@ -13,8 +13,22 @@ function isLocale(code: string): code is Locale {
   return (routing.locales as readonly string[]).includes(code);
 }
 
+type CookieStore = {
+  delete(name: string): Promise<void>;
+};
+
 function clearLocaleCookie() {
   if (typeof document === "undefined") return;
+
+  // Prefer the Cookie Store API where available (Chromium-based browsers).
+  const store = (globalThis as { cookieStore?: CookieStore }).cookieStore;
+  if (store) {
+    void store.delete("NEXT_LOCALE");
+    return;
+  }
+
+  // Fallback for Safari/Firefox, which don't ship the Cookie Store API yet.
+  // biome-ignore lint/suspicious/noDocumentCookie: legacy fallback for browsers without Cookie Store API
   document.cookie =
     "NEXT_LOCALE=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
 }
@@ -41,7 +55,6 @@ function CLang({ input }: { input: string }) {
     isLocale(parsed.arg) &&
     !parsed.hasExtra;
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: setOk implies parsed.arg is set
   useEffect(() => {
     if (setOk && parsed.arg) {
       router.replace(pathname, { locale: parsed.arg as Locale });

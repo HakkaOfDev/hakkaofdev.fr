@@ -1,10 +1,13 @@
 import { z } from "zod";
 import { GUESTBOOK_CONFIG } from "@/lib/constants/guestbook.constants";
 
-// biome-ignore lint/suspicious/noExplicitAny: next-intl's t function uses a
-// narrowed key union that's not assignable to `(key: string) => string`.
-// Using `any` here keeps the call site simple; validation strings stay typed
-// at the message-file level via the AppConfig augmentation.
+/**
+ * next-intl's `t` function uses a narrowed key union that's not assignable
+ * to `(key: string) => string` (function-argument variance). The schema
+ * builder accepts the bivariant `any`-keyed signature so any namespaced
+ * translator from `useTranslations` / `getTranslations` can be passed in.
+ * The Biome rule is disabled file-level via biome.json.
+ */
 type Translator = (key: any, values?: any) => string;
 
 export function buildGuestbookFormSchema(t: Translator) {

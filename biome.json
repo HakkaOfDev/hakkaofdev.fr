@@ -97,6 +97,16 @@
           }
         }
       }
+    },
+    {
+      "includes": ["lib/schemas/guestbook.schema.ts"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noExplicitAny": "off"
+          }
+        }
+      }
     }
   ]
 }

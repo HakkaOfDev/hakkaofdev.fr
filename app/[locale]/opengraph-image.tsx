@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import type { ReactNode } from "react";
-import { routing } from "@/i18n/routing";
+import { type Locale, routing } from "@/i18n/routing";
 import { SITE } from "@/lib/constants";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -154,6 +154,46 @@ function getHostLabel() {
   }
 }
 
+/**
+ * Locales whose script isn't covered by the default Satori font (Noto Sans).
+ * For these we fetch a matching Noto family from Google Fonts and embed it
+ * in the ImageResponse so glyphs render instead of falling back to tofu.
+ */
+const SCRIPT_FONT_FAMILY: Partial<Record<Locale, string>> = {
+  zh: "Noto Sans SC",
+  ja: "Noto Sans JP",
+  ko: "Noto Sans KR",
+  hi: "Noto Sans Devanagari",
+  ar: "Noto Sans Arabic",
+  he: "Noto Sans Hebrew",
+};
+
+/**
+ * Pulls a single weight of a Google Font subset to just the glyphs we need
+ * (`text=` param). Returns the binary woff2 buffer or `null` on any failure;
+ * Satori falls back to its default font in that case rather than throwing.
+ */
+async function loadGoogleFont(
+  family: string,
+  text: string,
+): Promise<ArrayBuffer | null> {
+  try {
+    const url = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(
+      family,
+    )}&text=${encodeURIComponent(text)}`;
+    const css = await fetch(url, { cache: "force-cache" }).then((r) =>
+      r.text(),
+    );
+    const fontUrl = css.match(/src:\s*url\(([^)]+)\)/)?.[1];
+    if (!fontUrl) return null;
+    return await fetch(fontUrl, { cache: "force-cache" }).then((r) =>
+      r.arrayBuffer(),
+    );
+  } catch {
+    return null;
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
@@ -162,7 +202,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export default async function OpenGraphImage({ params }: Props) {
   const { locale } = await params;
-  const resolvedLocale = hasLocale(routing.locales, locale)
+  const resolvedLocale: Locale = hasLocale(routing.locales, locale)
     ? locale
     : routing.defaultLocale;
 
@@ -199,6 +239,25 @@ export default async function OpenGraphImage({ params }: Props) {
   ];
 
   const host = getHostLabel();
+  const footerLabel = tOg("footer");
+  const jobTitle = tMeta("jobTitle");
+
+  // Load a script-specific Noto font when the locale uses non-Latin glyphs.
+  const fontFamily = SCRIPT_FONT_FAMILY[resolvedLocale];
+  const fontEntries: { name: string; data: ArrayBuffer }[] = [];
+  if (fontFamily) {
+    const text = [jobTitle, ...tags.map((t) => t.label), footerLabel].join("");
+    const fontData = await loadGoogleFont(fontFamily, text);
+    if (fontData) {
+      fontEntries.push({ name: fontFamily, data: fontData });
+    }
+  }
+
+  const baseFontStack =
+    'ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial';
+  const rootFontFamily = fontFamily
+    ? `"${fontFamily}", ${baseFontStack}`
+    : baseFontStack;
 
   return new ImageResponse(
     <div
@@ -213,8 +272,7 @@ export default async function OpenGraphImage({ params }: Props) {
         background:
           "radial-gradient(1200px 630px at 80% 0%, rgba(0, 229, 255, 0.12), transparent 55%), radial-gradient(900px 630px at 0% 100%, rgba(255, 176, 0, 0.10), transparent 60%), linear-gradient(135deg, #07090B 0%, #030405 60%, #020304 100%)",
         color: "#EDEFF2",
-        fontFamily:
-          'ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+        fontFamily: rootFontFamily,
       }}
     >
       <GridOverlay />
@@ -228,7 +286,7 @@ export default async function OpenGraphImage({ params }: Props) {
             color: "rgba(237,239,242,0.70)",
           }}
         >
-          {tMeta("jobTitle")}
+          {jobTitle}
         </div>
 
         <NameHeading />
@@ -248,8 +306,16 @@ export default async function OpenGraphImage({ params }: Props) {
         </div>
       </div>
 
-      <FooterBar host={host} label={tOg("footer")} />
+      <FooterBar host={host} label={footerLabel} />
     </div>,
-    { ...size },
+    {
+      ...size,
+      fonts: fontEntries.map((entry) => ({
+        name: entry.name,
+        data: entry.data,
+        style: "normal" as const,
+        weight: 400 as const,
+      })),
+    },
   );
 }

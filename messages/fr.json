@@ -297,6 +297,21 @@
         "allCountries": "Tous les pays",
         "clearCountry": "Effacer le filtre pays"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Charge JSON invalide.",
+        "schemaMissing": "Le livre d'or n'est pas initialisé. Exécutez supabase/schema/guestbook.sql.",
+        "unavailable": "Le service du livre d'or est indisponible.",
+        "fetchEntriesFailed": "Impossible de récupérer les entrées du livre d'or.",
+        "fetchCountriesFailed": "Impossible de récupérer la liste des pays.",
+        "saveFailed": "Impossible d'enregistrer l'entrée du livre d'or.",
+        "rateLimitCheckFailed": "Échec de la vérification de la limite de débit.",
+        "rateLimitExceeded": "Limite de débit dépassée. Réessayez plus tard.",
+        "nameTooShort": "Le nom doit contenir au moins 2 caractères.",
+        "messageTooShort": "Le message doit contenir au moins 2 caractères.",
+        "websiteInvalid": "L'URL du site web n'est pas valide."
+      }
     }
   },
   "Spotify": {

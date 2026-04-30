@@ -311,6 +311,21 @@
         "allCountries": "All countries",
         "clearCountry": "Clear country filter"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Invalid JSON payload.",
+        "schemaMissing": "Guestbook is not initialized. Run supabase/schema/guestbook.sql.",
+        "unavailable": "Guestbook service is unavailable.",
+        "fetchEntriesFailed": "Failed to fetch guestbook entries.",
+        "fetchCountriesFailed": "Failed to fetch countries.",
+        "saveFailed": "Failed to save guestbook entry.",
+        "rateLimitCheckFailed": "Rate limit check failed.",
+        "rateLimitExceeded": "Rate limit exceeded. Please try again later.",
+        "nameTooShort": "Name must be at least 2 characters.",
+        "messageTooShort": "Message must be at least 2 characters.",
+        "websiteInvalid": "Website URL is invalid."
+      }
     }
   },
   "Spotify": {

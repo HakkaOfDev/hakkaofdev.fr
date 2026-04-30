@@ -1,6 +1,7 @@
 import {
   ar,
   cs,
+  type Locale as DateFnsLocale,
   de,
   el,
   enUS,
@@ -21,7 +22,6 @@ import {
   uk,
   vi,
   zhCN,
-  type Locale as DateFnsLocale,
 } from "date-fns/locale";
 import type { Locale } from "./routing";
 
