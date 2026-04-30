@@ -3,7 +3,6 @@
 import { RotateCcw, Settings2 } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
-import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { TrafficLights } from "@/components/TrafficLights";
 import { SITE } from "@/lib/constants";
 
@@ -45,8 +44,6 @@ function TerminalHeader({
         <div className="hidden min-[430px]:block">
           <GitHubStarButton />
         </div>
-
-        <LocaleSwitcher />
 
         <button
           type="button"

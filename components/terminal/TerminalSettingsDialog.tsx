@@ -1,8 +1,10 @@
 "use client";
 
 import { RotateCcw, X } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { type Locale, routing } from "@/i18n/routing";
 import { SITE, TERMINAL_KEYBOARD_SHORTCUTS } from "@/lib/constants";
 import {
   DEFAULT_SCROLLBACK_LIMIT,
@@ -25,6 +27,11 @@ function TerminalSettingsDialog({
   onOpenChange,
 }: TerminalSettingsDialogProps) {
   const t = useTranslations("Terminal");
+  const tNames = useTranslations("Lang.names");
+  const currentLocale = useLocale() as Locale;
+  const router = useRouter();
+  const pathname = usePathname();
+
   const { themes, theme, setTheme } = useThemeEngine();
   const {
     fontScale,
@@ -49,9 +56,16 @@ function TerminalSettingsDialog({
     resetTerminalLayout();
   };
 
+  const handleLocaleChange = (next: string) => {
+    if (next === currentLocale) return;
+    if (!(routing.locales as readonly string[]).includes(next)) return;
+    router.replace(pathname, { locale: next as Locale });
+  };
+
   const themeSelectId = "terminal-theme-select";
   const fontSelectId = "terminal-font-select";
   const scrollbackSelectId = "terminal-scrollback-select";
+  const languageSelectId = "terminal-language-select";
   const iconButtonClass =
     "inline-flex h-7 w-7 cursor-pointer items-center justify-center rounded-md border border-border/60 bg-background/45 text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground dark:border-overlay-medium dark:hover:bg-overlay-medium";
 
@@ -108,6 +122,23 @@ function TerminalSettingsDialog({
                       ? t("settings.darkSuffix")
                       : t("settings.lightSuffix"),
                   })}
+                </option>
+              ))}
+            </Select>
+          </div>
+
+          <div className="grid gap-1 text-muted-foreground text-xs">
+            <label htmlFor={languageSelectId}>
+              {t("settings.languageLabel")}
+            </label>
+            <Select
+              id={languageSelectId}
+              value={currentLocale}
+              onChange={(event) => handleLocaleChange(event.target.value)}
+            >
+              {routing.locales.map((code) => (
+                <option key={code} value={code}>
+                  {tNames(code as never)}
                 </option>
               ))}
             </Select>

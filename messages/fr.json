@@ -82,6 +82,7 @@
       "themeLabel": "Thème",
       "fontLabel": "Police du terminal",
       "scrollbackLabel": "Historique",
+      "languageLabel": "Langue",
       "scrollbackOption": "{count, plural, =0 {aucune commande} =1 {1 commande} other {# commandes}}",
       "darkSuffix": "sombre",
       "lightSuffix": "clair",
