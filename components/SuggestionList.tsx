@@ -55,9 +55,7 @@ function SuggestionList({
           const matchLen = query.length;
           const matched = s.value.slice(0, matchLen);
           const rest = s.value.slice(matchLen);
-          const description = s.slug
-            ? tCommands(s.slug as never)
-            : undefined;
+          const description = s.slug ? tCommands(s.slug as never) : undefined;
 
           return (
             <button

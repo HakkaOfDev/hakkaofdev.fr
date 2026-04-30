@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { THEME_COLOR_KEYS } from "@/types/theme";
 
 interface ThemeCreateJSONFormProps {
@@ -11,12 +12,10 @@ export function ThemeCreateJSONForm({
   defaultJSON,
   onSubmit,
 }: ThemeCreateJSONFormProps) {
+  const t = useTranslations("Theme.create");
   return (
     <form onSubmit={onSubmit} className="grid max-w-md gap-2">
-      <p className="text-muted-foreground/50 text-xs">
-        Supports OKLCH (recommended), hex, rgb, hsl. Contrast validation works
-        for all formats.
-      </p>
+      <p className="text-muted-foreground/50 text-xs">{t("jsonHint")}</p>
       <textarea
         name="json"
         rows={16}
@@ -29,11 +28,10 @@ export function ThemeCreateJSONForm({
           type="submit"
           className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-primary/10 px-4 py-1.5 font-semibold text-primary text-xs ring-1 ring-primary/20 ring-inset transition-colors hover:bg-primary/20"
         >
-          Create Theme
+          {t("submit")}
         </button>
         <span className="text-muted-foreground/40 text-xs">
-          Required keys: name, label, isDark, colors ({THEME_COLOR_KEYS.length}{" "}
-          tokens)
+          {t("jsonRequired", { count: THEME_COLOR_KEYS.length })}
         </span>
       </div>
     </form>

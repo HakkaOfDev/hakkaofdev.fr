@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useMemo } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
@@ -10,10 +11,14 @@ interface ValidationHeaderProps {
 }
 
 function ValidationHeader({ paletteName }: ValidationHeaderProps) {
+  const t = useTranslations("Theme.validate");
   return (
     <p className="text-muted-foreground">
-      WCAG AA contrast audit for{" "}
-      <span className="font-semibold text-foreground">{paletteName}</span>:
+      {t.rich("header", {
+        name: () => (
+          <span className="font-semibold text-foreground">{paletteName}</span>
+        ),
+      })}
     </p>
   );
 }
@@ -31,22 +36,23 @@ function ValidationSummary({
   totalChecked,
   hasNonOklch,
 }: ValidationSummaryProps) {
+  const t = useTranslations("Theme.validate");
   return (
     <div className="flex items-center gap-3">
       <span className="font-semibold text-secondary text-xs">
-        {passCount} pass
+        {t("passCount", { count: passCount })}
       </span>
       {failCount > 0 && (
         <span className="font-semibold text-destructive text-xs">
-          {failCount} fail
+          {t("failCount", { count: failCount })}
         </span>
       )}
       <span className="text-muted-foreground/50 text-xs">
-        ({totalChecked} pairs checked)
+        {t("totalChecked", { count: totalChecked })}
       </span>
       {hasNonOklch && (
         <span className="text-muted-foreground/50 text-xs">
-          ⚠️ Some colors skipped (unsupported format)
+          {t("skippedWarning")}
         </span>
       )}
     </div>
@@ -58,6 +64,7 @@ interface ValidationResultRowProps {
 }
 
 function ValidationResultRow({ result }: ValidationResultRowProps) {
+  const t = useTranslations("Theme.validate.pairs");
   const { passes, pair, ratio } = result;
   const requiredRatio = pair.level === "normal" ? "≥ 4.5" : "≥ 3.0";
 
@@ -65,7 +72,7 @@ function ValidationResultRow({ result }: ValidationResultRowProps) {
     <div className="grid grid-cols-[16px_1fr_80px_60px] items-center gap-2 font-mono text-xs">
       <span>{passes ? "✓" : "✗"}</span>
       <span className={passes ? "text-muted-foreground" : "text-destructive"}>
-        {pair.label}
+        {t(pair.slug as never)}
       </span>
       <span className="text-right text-muted-foreground/60">
         {ratio.toFixed(2)}:1
@@ -85,7 +92,7 @@ function ValidationDetailsTable({ results }: ValidationDetailsTableProps) {
   return (
     <div className="terminal-scrollbar grid max-h-48 gap-1 overflow-y-auto pr-1">
       {results.map((result) => (
-        <ValidationResultRow key={result.pair.label} result={result} />
+        <ValidationResultRow key={result.pair.slug} result={result} />
       ))}
     </div>
   );
@@ -96,18 +103,16 @@ interface ValidationFooterProps {
 }
 
 function ValidationFooter({ failureCount }: ValidationFooterProps) {
+  const t = useTranslations("Theme.validate");
   if (failureCount === 0) {
     return (
-      <p className="font-semibold text-secondary text-xs">
-        All pairs pass WCAG AA requirements.
-      </p>
+      <p className="font-semibold text-secondary text-xs">{t("allPass")}</p>
     );
   }
 
   return (
     <p className="text-destructive text-xs">
-      {failureCount} pair{failureCount > 1 ? "s" : ""} below the required
-      contrast ratio. Consider adjusting color lightness values.
+      {t("someFail", { count: failureCount })}
     </p>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useMemo } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import {
@@ -10,6 +11,7 @@ import { useThemeEngine } from "@/hooks/useThemeEngine";
 import SubCommandHelp from "../SubCommandHelp";
 
 function CTheme({ input }: { input: string }) {
+  const t = useTranslations("Theme");
   const { palette } = useThemeEngine();
 
   const parsed = useMemo(() => {
@@ -25,20 +27,20 @@ function CTheme({ input }: { input: string }) {
     return (
       <AnimatedSpan className="gap-2">
         <p className="text-muted-foreground">
-          Current theme:{" "}
+          {t("currentLabel")}{" "}
           <span className="font-semibold text-foreground">{palette.label}</span>{" "}
           <span className="text-muted-foreground/50">
-            ({palette.isDark ? "dark" : "light"})
+            ({palette.isDark ? t("darkSuffix") : t("lightSuffix")})
           </span>
         </p>
         <p className="mb-2 text-muted-foreground">
-          Usage:{" "}
+          {t("usagePrefix")}{" "}
           <span className="font-semibold text-foreground">
             theme {THEME_COMMANDS.map((c) => c.command).join(" | theme ")}
           </span>
         </p>
         <SubCommandHelp
-          title="Theme commands"
+          title={t("themeCommandsTitle")}
           items={THEME_COMMANDS}
           prefix="theme "
           variant="orange"
@@ -62,7 +64,9 @@ function CTheme({ input }: { input: string }) {
       if (arg) {
         return (
           <AnimatedSpan>
-            <p className="text-destructive">theme list takes no arguments.</p>
+            <p className="text-destructive">
+              {t("noArgs", { command: "theme list" })}
+            </p>
           </AnimatedSpan>
         );
       }
@@ -73,10 +77,10 @@ function CTheme({ input }: { input: string }) {
         return (
           <AnimatedSpan className="gap-1">
             <p className="text-destructive">
-              {!arg ? "Missing theme name." : "Too many arguments."}
+              {!arg ? t("missingName") : t("tooManyArgs")}
             </p>
             <p className="text-muted-foreground">
-              Usage:{" "}
+              {t("usagePrefix")}{" "}
               <span className="font-semibold text-foreground">
                 theme set &lt;name&gt;
               </span>
@@ -91,10 +95,10 @@ function CTheme({ input }: { input: string }) {
         return (
           <AnimatedSpan className="gap-1">
             <p className="text-destructive">
-              {!arg ? "Missing theme name." : "Too many arguments."}
+              {!arg ? t("missingName") : t("tooManyArgs")}
             </p>
             <p className="text-muted-foreground">
-              Usage:{" "}
+              {t("usagePrefix")}{" "}
               <span className="font-semibold text-foreground">
                 theme preview &lt;name&gt;
               </span>
@@ -112,7 +116,7 @@ function CTheme({ input }: { input: string }) {
         return (
           <AnimatedSpan>
             <p className="text-destructive">
-              theme validate takes no arguments.
+              {t("noArgs", { command: "theme validate" })}
             </p>
           </AnimatedSpan>
         );
@@ -123,12 +127,13 @@ function CTheme({ input }: { input: string }) {
       return (
         <AnimatedSpan className="gap-2">
           <p className="text-destructive">
-            Unknown sub-command:{" "}
-            <span className="font-semibold">{subcommand}</span>. Use one of:{" "}
-            {validCommands.join(", ")}.
+            {t("unknownSubcommand", {
+              sub: subcommand,
+              commands: validCommands.join(", "),
+            })}
           </p>
           <SubCommandHelp
-            title="Theme commands"
+            title={t("themeCommandsTitle")}
             items={THEME_COMMANDS}
             prefix="theme "
             variant="orange"

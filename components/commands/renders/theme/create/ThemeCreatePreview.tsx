@@ -2,6 +2,7 @@
 
 import { ChevronDown, ChevronUp, RotateCcw } from "lucide-react";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 import { TrafficLightsPreview } from "@/components/TrafficLights";
 import { SITE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -59,13 +60,14 @@ function PreviewToggleButton({
   showPreview,
   onToggle,
 }: PreviewToggleButtonProps) {
+  const t = useTranslations("Theme.create");
   return (
     <button
       type="button"
       onClick={onToggle}
       className="mb-2 flex cursor-pointer items-center gap-2 font-semibold text-muted-foreground text-xs uppercase tracking-wide transition-colors hover:text-foreground"
     >
-      Live Preview
+      {t("previewToggle")}
       {showPreview ? (
         <ChevronUp className="h-3 w-3" />
       ) : (
@@ -109,12 +111,13 @@ interface PreviewActionButtonsProps {
 }
 
 function PreviewActionButtons({ colors }: PreviewActionButtonsProps) {
+  const t = useTranslations("Terminal");
   return (
     <div className="flex min-w-0 flex-1 basis-0 items-center justify-end gap-1.5">
       <div
         className="flex size-7 min-w-7 items-center justify-center rounded-md transition-all duration-200 hover:brightness-95"
         style={{ backgroundColor: colors.muted }}
-        title="Reset terminal"
+        title={t("header.resetLabel")}
       >
         <RotateCcw size={13} style={{ color: colors["muted-foreground"] }} />
       </div>
