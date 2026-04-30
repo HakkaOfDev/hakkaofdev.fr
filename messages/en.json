@@ -1,1 +1,43 @@
-{}
+{
+  "Metadata": {
+    "title": "Alexandre Gossard | Digital Nomad & Software Engineer",
+    "description": "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
+    "jobTitle": "Software Engineer",
+    "location": "Châlons-en-Champagne, France",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Frontend Developer",
+      "Digital Nomad",
+      "Open-source",
+      "Modern Technologies",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Software Engineer",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Made with <heart></heart> by <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Welcome <wave>👋</wave>",
+    "intro": "<tagline>Digital Nomad</tagline> · <job>Software Engineer</job> at <employer>{employerName}</employer>",
+    "tags": {
+      "openSource": "Open-source advocate",
+      "calisthenics": "Calisthenics devotee",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Start",
+      "work": "Work",
+      "profile": "Profile",
+      "extras": "Extras",
+      "utils": "Utils"
+    }
+  },
+  "Terminal": {
+    "noMatch": "No command matches \"{query}\"."
+  }
+}

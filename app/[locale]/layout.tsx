@@ -4,7 +4,11 @@ import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import Footer from "@/components/Footer";
 import Providers from "@/components/providers/Providers";
 import { routing } from "@/i18n/routing";
@@ -23,53 +27,90 @@ const jetbrainsMono = JetBrains_Mono({
 const siteUrl = getSiteUrl();
 const twitterHandle = `@${SITE.handle}` as const;
 
-export const metadata: Metadata = {
-  title: SITE.title,
-  description: SITE.description,
-  creator: SITE.name,
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: SITE.title,
-    description: SITE.description,
-    url: siteUrl,
-    type: "website",
-    siteName: SITE.title,
-    images: [
+type Params = { locale: string };
+
+function buildOpenGraphImagePath(locale: string) {
+  return locale === routing.defaultLocale
+    ? "/opengraph-image"
+    : `/${locale}/opengraph-image`;
+}
+
+function buildCanonicalPath(locale: string) {
+  return locale === routing.defaultLocale ? "/" : `/${locale}`;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<Params>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  const title = t("title");
+  const description = t("description");
+  const keywords = t.raw("keywords") as string[];
+  const ogImageAlt = t("ogImageAlt");
+  const canonicalPath = buildCanonicalPath(locale);
+  const ogImagePath = buildOpenGraphImagePath(locale);
+
+  const languageAlternates = Object.fromEntries(
+    routing.locales.map((l) => [l, buildCanonicalPath(l)]),
+  );
+
+  return {
+    title,
+    description,
+    creator: SITE.name,
+    alternates: {
+      canonical: canonicalPath,
+      languages: languageAlternates,
+    },
+    openGraph: {
+      title,
+      description,
+      url: new URL(canonicalPath, siteUrl).toString(),
+      type: "website",
+      siteName: title,
+      locale,
+      images: [
+        {
+          url: ogImagePath,
+          width: 1200,
+          height: 630,
+          alt: ogImageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImagePath],
+      site: twitterHandle,
+      creator: twitterHandle,
+    },
+    keywords,
+    authors: [
       {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: SITE.name,
+        name: SITE.name,
+        url: GITHUB_URL,
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: SITE.title,
-    description: SITE.description,
-    images: ["/opengraph-image"],
-    site: twitterHandle,
-    creator: twitterHandle,
-  },
-  keywords: [...SITE.keywords],
-  authors: [
-    {
-      name: SITE.name,
-      url: GITHUB_URL,
-    },
-  ],
-  metadataBase: new URL(siteUrl),
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    metadataBase: new URL(siteUrl),
+    robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
     },
-  },
-};
+  };
+}
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -80,12 +121,12 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-type Props = {
+type LayoutProps = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<Params>;
 };
 
-export default async function LocaleLayout({ children, params }: Props) {
+export default async function LocaleLayout({ children, params }: LayoutProps) {
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
@@ -94,7 +135,10 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   setRequestLocale(locale);
 
-  const messages = await getMessages();
+  const [messages, t] = await Promise.all([
+    getMessages(),
+    getTranslations({ locale, namespace: "Metadata" }),
+  ]);
 
   const personJsonLd = {
     "@context": "https://schema.org",
@@ -102,7 +146,8 @@ export default async function LocaleLayout({ children, params }: Props) {
     name: SITE.name,
     url: siteUrl,
     image: new URL("/avatar.jpg", siteUrl).toString(),
-    jobTitle: SITE.jobTitle,
+    jobTitle: t("jobTitle"),
+    description: t("description"),
     worksFor: {
       "@type": "Organization",
       name: SITE.employer.name,

@@ -1,8 +1,11 @@
 import { Heart } from "lucide-react";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { GITHUB_URL, SITE, SOCIALS } from "@/lib/constants";
 
-function Footer() {
+async function Footer() {
+  const t = await getTranslations("Footer");
+
   return (
     <div className="flex flex-col items-center justify-center gap-3 pt-6 pb-4">
       <div className="flex items-center gap-3">
@@ -20,13 +23,19 @@ function Footer() {
         ))}
       </div>
       <p className="text-muted-foreground/80 text-xs">
-        Made with <Heart className="inline-block text-primary" size={14} /> by{" "}
-        <Link
-          href={GITHUB_URL}
-          className="font-medium text-primary/80 transition-colors duration-200 hover:text-primary"
-        >
-          {SITE.name}
-        </Link>
+        {t.rich("madeBy", {
+          heart: () => (
+            <Heart className="inline-block text-primary" size={14} />
+          ),
+          name: () => (
+            <Link
+              href={GITHUB_URL}
+              className="font-medium text-primary/80 transition-colors duration-200 hover:text-primary"
+            >
+              {SITE.name}
+            </Link>
+          ),
+        })}
       </p>
     </div>
   );
