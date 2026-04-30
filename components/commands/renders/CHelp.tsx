@@ -13,19 +13,26 @@ const GROUPED_COMMANDS = getCommandsByGroup();
 /* ─── Component ─────────────────────────────────────────────────────── */
 
 function CHelp() {
-  const t = useTranslations("Terminal");
+  const tCommands = useTranslations("Commands");
+  const tTerminal = useTranslations("Terminal");
+
   return (
     <AnimatedSpan className="gap-4">
       {/* ── Header ── */}
       <div className="flex items-center gap-2">
         <Info className="h-3.5 w-3.5 shrink-0 text-primary" />
-        <p className="font-semibold text-primary">Available commands</p>
+        <p className="font-semibold text-primary">
+          {tCommands("help.available")}
+        </p>
       </div>
 
       {/* ── Grouped commands with inline descriptions ── */}
       <div className="grid gap-4">
         {GROUPED_COMMANDS.map(({ meta, commands }) => (
-          <ShortcutSection key={meta.group} title={meta.group}>
+          <ShortcutSection
+            key={meta.group}
+            title={tCommands(`groups.${meta.group}` as never)}
+          >
             <div className="grid gap-1.5">
               {commands.map((cmd) => (
                 <div
@@ -38,7 +45,7 @@ function CHelp() {
                     variant={meta.shortcutVariant}
                   />
                   <span className="text-muted-foreground text-xs leading-relaxed">
-                    {cmd.description}
+                    {tCommands(`descriptions.${cmd.slug}` as never)}
                   </span>
                 </div>
               ))}
@@ -48,7 +55,7 @@ function CHelp() {
       </div>
 
       {/* ── Keyboard shortcuts ── */}
-      <ShortcutSection title={t("shortcutsHeading")}>
+      <ShortcutSection title={tTerminal("shortcutsHeading")}>
         <div className="grid gap-1.5">
           {TERMINAL_KEYBOARD_SHORTCUTS.map((shortcut) => (
             <div
@@ -73,7 +80,7 @@ function CHelp() {
                 ))}
               </span>
               <span className="text-muted-foreground text-xs">
-                {t(`shortcuts.${shortcut.slug}` as never)}
+                {tTerminal(`shortcuts.${shortcut.slug}` as never)}
               </span>
             </div>
           ))}
@@ -82,7 +89,7 @@ function CHelp() {
 
       {/* ── Footer tip ── */}
       <p className="text-muted-foreground/60 text-xs italic">
-        Tip: Click any command above or type it in the prompt to run it.
+        {tCommands("help.tip")}
       </p>
     </AnimatedSpan>
   );

@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { SITE, SOCIALS } from "@/lib/constants";
 
@@ -7,15 +10,14 @@ function getDisplayLink(url: string) {
 }
 
 function CContact() {
+  const t = useTranslations("Commands.contact");
+  const tMeta = useTranslations("Metadata");
   return (
     <AnimatedSpan className="gap-2">
-      <p className="text-muted-foreground">
-        Prefer email for opportunities, freelance requests, or technical
-        collaboration.
-      </p>
+      <p className="text-muted-foreground">{t("intro")}</p>
 
       <p className="text-muted-foreground">
-        Primary email:{" "}
+        {t("primaryEmail")}{" "}
         <Link
           href={`mailto:${SITE.email}`}
           className="font-semibold text-primary transition-colors duration-200 hover:text-primary/80"
@@ -24,11 +26,13 @@ function CContact() {
         </Link>
       </p>
       <p className="text-muted-foreground">
-        Location:{" "}
-        <span className="font-semibold text-foreground">{SITE.location}</span>
+        {t("location")}{" "}
+        <span className="font-semibold text-foreground">
+          {tMeta("location")}
+        </span>
       </p>
 
-      <p className="text-muted-foreground">Social profiles:</p>
+      <p className="text-muted-foreground">{t("socialProfiles")}</p>
       <ul className="grid list-disc gap-1 pl-4">
         {SOCIALS.map((social) => (
           <li key={social.name}>

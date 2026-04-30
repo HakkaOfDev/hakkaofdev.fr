@@ -23,7 +23,7 @@ export function buildSuggestionPool(): Suggestion[] {
   for (const c of ALL_COMMANDS) {
     map.set(c.command, {
       value: c.command,
-      description: c.description,
+      slug: c.slug,
       group: c.group,
     });
   }
@@ -63,7 +63,7 @@ export function getDynamicParamSuggestions(
           .filter((param) => param.toLowerCase().startsWith(paramQuery))
           .map((param) => ({
             value: `${pattern} ${param}`,
-            description: undefined,
+            slug: undefined,
             group: dynConfig.group,
           }))
           .slice(0, MAX_SUGGESTIONS);

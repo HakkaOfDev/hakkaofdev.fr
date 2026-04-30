@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 import { useEffect, useMemo } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
@@ -8,7 +9,7 @@ import SubCommandHelp from "./SubCommandHelp";
 
 type SubCommandItem = {
   command: string;
-  description: string;
+  slug: string;
 };
 
 type SubCommandRouterProps = {
@@ -29,11 +30,12 @@ export default function SubCommandRouter({
   prefix,
   title,
   variant,
-  subcommandLabel = "sub-command",
+  subcommandLabel,
   status,
   onValidEffect,
   renderValid,
 }: SubCommandRouterProps) {
+  const t = useTranslations("Commands.subCommandRouter");
   const validNames = useMemo(() => commands.map((c) => c.command), [commands]);
 
   const validSet = useMemo(() => new Set<string>(validNames), [validNames]);
@@ -58,7 +60,7 @@ export default function SubCommandRouter({
       <AnimatedSpan className="gap-2">
         {status}
         <p className="mb-2 text-muted-foreground">
-          Usage:{" "}
+          {t("usagePrefix")}{" "}
           <span className="font-semibold text-foreground">
             {prefix} {validNames.join(` | ${prefix} `)}
           </span>
@@ -74,17 +76,18 @@ export default function SubCommandRouter({
   }
 
   if (!isValid || parsed.hasExtraArgs) {
+    const label = subcommandLabel ?? t("subcommand");
     const invalidReason = parsed.hasExtraArgs
-      ? "Too many arguments."
-      : `Unknown ${subcommandLabel}: ${parsed.subcommand}.`;
+      ? t("tooManyArgs")
+      : t("unknown", { label, sub: parsed.subcommand });
 
     return (
       <AnimatedSpan className="gap-2">
         <p className="text-destructive">
-          {invalidReason} Use one of: {validNames.join(", ")}.
+          {invalidReason} {t("useOneOf", { options: validNames.join(", ") })}
         </p>
         <p className="mb-2 text-muted-foreground">
-          Example:{" "}
+          {t("examplePrefix")}{" "}
           <span className="font-semibold text-foreground">
             {prefix} {validNames[0]}
           </span>

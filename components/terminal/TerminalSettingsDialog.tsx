@@ -129,7 +129,9 @@ function TerminalSettingsDialog({
           </div>
 
           <div className="grid gap-1 text-muted-foreground text-xs">
-            <label htmlFor={scrollbackSelectId}>{t("settings.scrollbackLabel")}</label>
+            <label htmlFor={scrollbackSelectId}>
+              {t("settings.scrollbackLabel")}
+            </label>
             <Select
               id={scrollbackSelectId}
               value={scrollbackLimit}

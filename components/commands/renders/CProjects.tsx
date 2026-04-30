@@ -1,9 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { PROJECTS } from "@/lib/constants";
 
 function CProjects() {
+  const t = useTranslations("Commands.projects");
   return (
     <AnimatedSpan className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {PROJECTS.map((project) => {
@@ -54,7 +58,7 @@ function CProjects() {
           <Link
             href={project.url}
             key={project.name}
-            aria-label={`Open project: ${project.name}`}
+            aria-label={t("openLabel", { name: project.name })}
             target="_blank"
             className="group h-auto"
           >

@@ -70,7 +70,11 @@ function TrafficLights() {
       <button
         type="button"
         onClick={handleMinimize}
-        aria-label={isMinimized ? t("trafficLights.restoreMinimize") : t("trafficLights.minimize")}
+        aria-label={
+          isMinimized
+            ? t("trafficLights.restoreMinimize")
+            : t("trafficLights.minimize")
+        }
         className="group/btn relative flex h-6 w-6 cursor-pointer items-center justify-center"
       >
         <TrafficLightDot color="yellow" icon={Minus} />
@@ -79,7 +83,11 @@ function TrafficLights() {
       <button
         type="button"
         onClick={handleMaximize}
-        aria-label={isMaximized ? t("trafficLights.restoreExpand") : t("trafficLights.expand")}
+        aria-label={
+          isMaximized
+            ? t("trafficLights.restoreExpand")
+            : t("trafficLights.expand")
+        }
         className="group/btn relative flex h-6 w-6 cursor-pointer items-center justify-center"
       >
         <TrafficLightDot

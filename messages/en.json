@@ -108,5 +108,113 @@
       "Close me? In this economy?",
       "I'm built different. Try 'contact' instead."
     ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Work",
+      "Profile": "Profile",
+      "Guestbook": "Guestbook",
+      "Spotify": "Spotify",
+      "Theme": "Theme",
+      "Terminal": "Terminal"
+    },
+    "descriptions": {
+      "projects": "Things I've built, shipped, or contributed to",
+      "experiences": "Explore my professional work history and accomplishments",
+      "about": "Learn more about my background, interests and career goals",
+      "skills": "View my technical skills, tools and technologies I work with",
+      "education": "See my academic background and qualifications",
+      "contact": "Get my email address, social links and preferred contact paths",
+      "guestbook": "Display the help for the guestbook sub-commands",
+      "cv": "Preview and download my generated PDF resume",
+      "spotify": "Display the help for the spotify sub-commands",
+      "theme": "Show or switch the UI theme",
+      "help": "Display all available commands and their descriptions",
+      "clear": "Clear all previous commands and output from the terminal",
+      "reset": "Reset the terminal to the welcome screen and clear history",
+      "stats": "Display coding activity, GitHub metrics & unique visitor count",
+      "repo": "Open the source code of this portfolio repository",
+      "echo": "Print a message to the terminal",
+      "spotifyNow": "Display the currently playing song",
+      "spotifyTop": "Display my top tracks",
+      "spotifyHistory": "Display my listening history",
+      "guestbookRead": "Browse the latest guestbook entries",
+      "guestbookSign": "Leave a message in the guestbook",
+      "themeList": "Show all available themes",
+      "themeSet": "Apply a theme by name (e.g. theme set dracula)",
+      "themePreview": "Preview a theme without applying it",
+      "themeCreate": "Create a custom theme with visual or JSON editor",
+      "themeValidate": "Check the current theme for contrast issues"
+    },
+    "help": {
+      "available": "Available commands",
+      "tip": "Tip: Click any command above or type it in the prompt to run it.",
+      "subCommands": "Sub-commands"
+    },
+    "notFound": {
+      "title": "zsh: command not found: {input}",
+      "didYouMean": "Did you mean {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Usage:",
+      "examplePrefix": "Example:",
+      "tooManyArgs": "Too many arguments.",
+      "unknown": "Unknown {label}: {sub}.",
+      "useOneOf": "Use one of: {options}.",
+      "subcommand": "sub-command"
+    },
+    "about": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "age": "Age",
+      "yearsOld": "{years, plural, one {# year} other {# years}}",
+      "location": "Location",
+      "email": "Email",
+      "languages": "Languages",
+      "hobbies": "Hobbies"
+    },
+    "contact": {
+      "intro": "Prefer email for opportunities, freelance requests, or technical collaboration.",
+      "primaryEmail": "Primary email:",
+      "location": "Location:",
+      "socialProfiles": "Social profiles:"
+    },
+    "stats": {
+      "totalCodingTime": "Total Coding Time",
+      "topLanguage": "Top Language",
+      "githubStars": "GitHub Stars",
+      "contributions": "Contributions ({year})",
+      "codingSince": "Coding Since",
+      "codingSinceValue": "{since} ({years} yrs)",
+      "visitors": "Visitors",
+      "failed": "Failed to fetch stats. Try again later.",
+      "na": "N/A"
+    },
+    "repo": {
+      "starsLabel": "Stars",
+      "forksLabel": "Forks",
+      "licenseLabel": "License",
+      "copyAria": "Copy to clipboard",
+      "copy": "Copy",
+      "copiedAria": "Copied",
+      "copiedNotice": "Copied!",
+      "copyFailedAria": "Copy failed",
+      "copyFailedNotice": "Try again",
+      "fallback": "Source code for this portfolio is available here:"
+    },
+    "cv": {
+      "openPreview": "Open PDF preview",
+      "downloadPdf": "Download PDF",
+      "endpointsLabel": "Endpoints:",
+      "endpointsAnd": "and"
+    },
+    "projects": {
+      "openLabel": "Open project: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "navigate",
+    "complete": "complete",
+    "run": "run"
   }
 }

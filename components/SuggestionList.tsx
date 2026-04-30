@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 import type { Suggestion } from "@/hooks/useSuggestions";
 import type { CommandGroup } from "@/lib/command-descriptors";
@@ -31,6 +34,8 @@ function SuggestionList({
   query,
   onSelect,
 }: SuggestionListProps) {
+  const t = useTranslations("Suggestions");
+  const tCommands = useTranslations("Commands.descriptions");
   const itemRefs = useRef<Map<number, HTMLButtonElement>>(new Map());
 
   useEffect(() => {
@@ -50,6 +55,9 @@ function SuggestionList({
           const matchLen = query.length;
           const matched = s.value.slice(0, matchLen);
           const rest = s.value.slice(matchLen);
+          const description = s.slug
+            ? tCommands(s.slug as never)
+            : undefined;
 
           return (
             <button
@@ -89,9 +97,9 @@ function SuggestionList({
                 </span>
 
                 {/* Description */}
-                {s.description && (
+                {description && (
                   <span className="ml-auto truncate pl-3 text-muted-foreground/40 text-xs">
-                    {s.description}
+                    {description}
                   </span>
                 )}
               </div>
@@ -106,19 +114,19 @@ function SuggestionList({
           <kbd className="rounded bg-muted/60 px-1 py-px font-mono text-xs dark:bg-overlay-medium">
             ↑↓
           </kbd>
-          navigate
+          {t("navigate")}
         </span>
         <span className="flex items-center gap-1 text-muted-foreground/40 text-xs">
           <kbd className="rounded bg-muted/60 px-1 py-px font-mono text-xs dark:bg-overlay-medium">
             Tab
           </kbd>
-          complete
+          {t("complete")}
         </span>
         <span className="flex items-center gap-1 text-muted-foreground/40 text-xs">
           <kbd className="rounded bg-muted/60 px-1 py-px font-mono text-xs dark:bg-overlay-medium">
             ↵
           </kbd>
-          run
+          {t("run")}
         </span>
       </div>
     </div>
