@@ -7,21 +7,7 @@ import { useThemeEngine } from "@/hooks/useThemeEngine";
 import { BUILTIN_THEME_MAP } from "@/lib/themes/palettes";
 import { cn } from "@/lib/utils";
 import type { ThemePalette } from "@/types/theme";
-
-const SWATCH_KEYS = [
-  "background",
-  "foreground",
-  "muted",
-  "primary",
-  "secondary",
-  "tertiary",
-  "quaternary",
-  "quinary",
-] as const;
-
-interface ColorSwatchesProps {
-  colors: ThemePalette["colors"];
-}
+import { ColorSwatches } from "./ThemeColorSwatches";
 
 export function CThemeList() {
   const t = useTranslations("Theme");
@@ -55,20 +41,6 @@ export function CThemeList() {
 
       <p className="text-muted-foreground/60 text-xs">{t("list.tip")}</p>
     </AnimatedSpan>
-  );
-}
-
-function ColorSwatches({ colors }: ColorSwatchesProps) {
-  return (
-    <div className="flex shrink-0 gap-px overflow-hidden rounded-full border">
-      {SWATCH_KEYS.map((key) => (
-        <span
-          key={key}
-          className="h-4 w-2 first:rounded-l-sm last:rounded-r-sm"
-          style={{ backgroundColor: colors[key] }}
-        />
-      ))}
-    </div>
   );
 }
 

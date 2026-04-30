@@ -2,6 +2,7 @@
 
 import { RotateCcw, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
+import { ColorSwatches } from "@/components/commands/renders/theme/ThemeColorSwatches";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { type Locale, routing } from "@/i18n/routing";
@@ -32,7 +33,7 @@ function TerminalSettingsDialog({
   const router = useRouter();
   const pathname = usePathname();
 
-  const { themes, theme, setTheme } = useThemeEngine();
+  const { themes, theme, setTheme, palette } = useThemeEngine();
   const {
     fontScale,
     increaseFontScale,
@@ -108,26 +109,6 @@ function TerminalSettingsDialog({
       <div className="space-y-4 [&_select]:truncate [&_select]:whitespace-nowrap">
         <div className="grid gap-3 sm:grid-cols-2">
           <div className="grid gap-1 text-muted-foreground text-xs">
-            <label htmlFor={themeSelectId}>{t("settings.themeLabel")}</label>
-            <Select
-              id={themeSelectId}
-              value={theme}
-              onChange={(event) => setTheme(event.target.value)}
-            >
-              {themes.map((palette) => (
-                <option key={palette.name} value={palette.name}>
-                  {t("settings.themeOption", {
-                    label: palette.label,
-                    mode: palette.isDark
-                      ? t("settings.darkSuffix")
-                      : t("settings.lightSuffix"),
-                  })}
-                </option>
-              ))}
-            </Select>
-          </div>
-
-          <div className="grid gap-1 text-muted-foreground text-xs">
             <label htmlFor={languageSelectId}>
               {t("settings.languageLabel")}
             </label>
@@ -183,6 +164,32 @@ function TerminalSettingsDialog({
             onIncrease={increaseFontScale}
             onDecrease={decreaseFontScale}
           />
+
+          {/* Theme — full width row, select on left, live swatches on right */}
+          <div className="grid gap-3 sm:col-span-2 sm:grid-cols-2 sm:items-end">
+            <div className="grid gap-1 text-muted-foreground text-xs">
+              <label htmlFor={themeSelectId}>{t("settings.themeLabel")}</label>
+              <Select
+                id={themeSelectId}
+                value={theme}
+                onChange={(event) => setTheme(event.target.value)}
+              >
+                {themes.map((p) => (
+                  <option key={p.name} value={p.name}>
+                    {t("settings.themeOption", {
+                      label: p.label,
+                      mode: p.isDark
+                        ? t("settings.darkSuffix")
+                        : t("settings.lightSuffix"),
+                    })}
+                  </option>
+                ))}
+              </Select>
+            </div>
+            <div className="flex h-8 items-center justify-end sm:justify-start">
+              <ColorSwatches colors={palette.colors} />
+            </div>
+          </div>
         </div>
 
         <TerminalShortcutList shortcuts={TERMINAL_KEYBOARD_SHORTCUTS} />
