@@ -1,6 +1,7 @@
 "use client";
 
 import { Info } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { ShortcutSection } from "@/components/ShortcutSection";
 import { Shortcut } from "@/components/ui/Shortcut";
@@ -12,6 +13,7 @@ const GROUPED_COMMANDS = getCommandsByGroup();
 /* ─── Component ─────────────────────────────────────────────────────── */
 
 function CHelp() {
+  const t = useTranslations("Terminal");
   return (
     <AnimatedSpan className="gap-4">
       {/* ── Header ── */}
@@ -46,17 +48,17 @@ function CHelp() {
       </div>
 
       {/* ── Keyboard shortcuts ── */}
-      <ShortcutSection title="Keyboard shortcuts">
+      <ShortcutSection title={t("shortcutsHeading")}>
         <div className="grid gap-1.5">
           {TERMINAL_KEYBOARD_SHORTCUTS.map((shortcut) => (
             <div
-              key={`${shortcut.description}-${shortcut.keys.join("-")}`}
+              key={`${shortcut.slug}-${shortcut.keys.join("-")}`}
               className="grid grid-cols-[140px_1fr] items-center gap-3"
             >
               <span className="inline-flex items-center gap-1">
                 {shortcut.keys.map((key, i) => (
                   <span
-                    key={`${shortcut.description}-${key}`}
+                    key={`${shortcut.slug}-${key}`}
                     className="inline-flex items-center gap-1"
                   >
                     {i > 0 && (
@@ -71,7 +73,7 @@ function CHelp() {
                 ))}
               </span>
               <span className="text-muted-foreground text-xs">
-                {shortcut.description}
+                {t(`shortcuts.${shortcut.slug}` as never)}
               </span>
             </div>
           ))}

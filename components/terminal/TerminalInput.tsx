@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import SuggestionList from "@/components/SuggestionList";
 import { useCommandHistory } from "@/hooks/useCommandHistory";
@@ -12,6 +13,7 @@ import { useCommands } from "../providers/CommandsProvider";
 import { useTerminal } from "../providers/TerminalProvider";
 
 function TerminalInput() {
+  const t = useTranslations("Terminal");
   const { addCommand, clearCommands, reset, activeSessionId } = useCommands();
   const { toggleSearch, canSearch, increaseFontScale, decreaseFontScale } =
     useTerminal();
@@ -96,7 +98,7 @@ function TerminalInput() {
           onKeyDown={handleKeyDown}
           onFocus={handleFocus}
           autoComplete="off"
-          placeholder="type a command..."
+          placeholder={t("input.placeholder")}
           className="terminal-input mb-1 min-w-0 flex-1 bg-transparent font-mono text-sm outline-none placeholder:font-normal placeholder:text-muted-foreground/30"
         />
 
@@ -108,7 +110,7 @@ function TerminalInput() {
               ? "text-muted-foreground/60 hover:bg-primary/10 hover:text-primary"
               : "pointer-events-none opacity-0",
           )}
-          aria-label="Submit command"
+          aria-label={t("input.submit")}
           disabled={value.length === 0}
         >
           <ArrowRight size={14} />

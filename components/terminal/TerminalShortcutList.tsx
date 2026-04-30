@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import type { TerminalShortcut } from "@/types/terminal";
 
 interface TerminalShortcutListProps {
@@ -7,21 +8,22 @@ interface TerminalShortcutListProps {
 }
 
 function TerminalShortcutList({ shortcuts }: TerminalShortcutListProps) {
+  const t = useTranslations("Terminal");
   return (
     <div className="space-y-2 rounded-xl border border-border/50 bg-background/30 p-3 dark:border-overlay-medium">
       <p className="font-medium text-muted-foreground text-xs">
-        Keyboard shortcuts
+        {t("shortcutsHeading")}
       </p>
       <div className="grid gap-1.5">
         {shortcuts.map((shortcut) => (
           <div
-            key={`${shortcut.keys.join("-")}-${shortcut.description}`}
+            key={`${shortcut.keys.join("-")}-${shortcut.slug}`}
             className="grid grid-cols-[140px_1fr] items-center gap-3"
           >
             <span className="inline-flex items-center gap-1">
               {shortcut.keys.map((key, index) => (
                 <span
-                  key={`${shortcut.description}-${key}`}
+                  key={`${shortcut.slug}-${key}`}
                   className="inline-flex items-center gap-1"
                 >
                   {index > 0 ? (
@@ -36,7 +38,7 @@ function TerminalShortcutList({ shortcuts }: TerminalShortcutListProps) {
               ))}
             </span>
             <span className="text-muted-foreground text-xs">
-              {shortcut.description}
+              {t(`shortcuts.${shortcut.slug}` as never)}
             </span>
           </div>
         ))}

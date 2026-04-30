@@ -1,6 +1,7 @@
 "use client";
 
 import { RotateCcw, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
 import { SITE, TERMINAL_KEYBOARD_SHORTCUTS } from "@/lib/constants";
 import {
@@ -23,6 +24,7 @@ function TerminalSettingsDialog({
   open,
   onOpenChange,
 }: TerminalSettingsDialogProps) {
+  const t = useTranslations("Terminal");
   const { themes, theme, setTheme } = useThemeEngine();
   const {
     fontScale,
@@ -57,15 +59,15 @@ function TerminalSettingsDialog({
     <Dialog
       open={open}
       onOpenChange={onOpenChange}
-      title="Terminal Settings"
+      title={t("settings.title")}
       headerActions={
         <>
           <button
             type="button"
             onClick={handleResetAll}
             className={iconButtonClass}
-            title="Reset all settings to default (includes resize)"
-            aria-label="Reset all settings"
+            title={t("settings.resetAllTitle")}
+            aria-label={t("settings.resetAllLabel")}
           >
             <RotateCcw size={12} />
           </button>
@@ -73,8 +75,8 @@ function TerminalSettingsDialog({
             type="button"
             onClick={() => onOpenChange(false)}
             className={iconButtonClass}
-            title="Close settings"
-            aria-label="Close settings"
+            title={t("settings.closeTitle")}
+            aria-label={t("settings.closeLabel")}
           >
             <X size={12} />
           </button>
@@ -92,7 +94,7 @@ function TerminalSettingsDialog({
       <div className="space-y-4 [&_select]:truncate [&_select]:whitespace-nowrap">
         <div className="grid gap-3 sm:grid-cols-2">
           <div className="grid gap-1 text-muted-foreground text-xs">
-            <label htmlFor={themeSelectId}>Theme</label>
+            <label htmlFor={themeSelectId}>{t("settings.themeLabel")}</label>
             <Select
               id={themeSelectId}
               value={theme}
@@ -100,14 +102,19 @@ function TerminalSettingsDialog({
             >
               {themes.map((palette) => (
                 <option key={palette.name} value={palette.name}>
-                  {palette.label} ({palette.isDark ? "dark" : "light"})
+                  {t("settings.themeOption", {
+                    label: palette.label,
+                    mode: palette.isDark
+                      ? t("settings.darkSuffix")
+                      : t("settings.lightSuffix"),
+                  })}
                 </option>
               ))}
             </Select>
           </div>
 
           <div className="grid gap-1 text-muted-foreground text-xs">
-            <label htmlFor={fontSelectId}>Terminal Font</label>
+            <label htmlFor={fontSelectId}>{t("settings.fontLabel")}</label>
             <Select
               id={fontSelectId}
               value={fontFamily}
@@ -122,7 +129,7 @@ function TerminalSettingsDialog({
           </div>
 
           <div className="grid gap-1 text-muted-foreground text-xs">
-            <label htmlFor={scrollbackSelectId}>Scrollback</label>
+            <label htmlFor={scrollbackSelectId}>{t("settings.scrollbackLabel")}</label>
             <Select
               id={scrollbackSelectId}
               value={scrollbackLimit}
@@ -132,7 +139,7 @@ function TerminalSettingsDialog({
             >
               {SCROLLBACK_OPTIONS.map((option) => (
                 <option key={option} value={option}>
-                  {option} commands
+                  {t("settings.scrollbackOption", { count: option })}
                 </option>
               ))}
             </Select>

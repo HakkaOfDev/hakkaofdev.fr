@@ -17,10 +17,7 @@ function deepMerge(target: Messages, source: Messages): Messages {
       typeof targetValue === "object" &&
       !Array.isArray(targetValue)
     ) {
-      result[key] = deepMerge(
-        targetValue as Messages,
-        sourceValue as Messages,
-      );
+      result[key] = deepMerge(targetValue as Messages, sourceValue as Messages);
     } else {
       result[key] = sourceValue;
     }

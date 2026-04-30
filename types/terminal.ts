@@ -15,7 +15,8 @@ export type TerminalFontOption = {
 
 export type TerminalShortcut = {
   keys: string[];
-  description: string;
+  /** Key under `Terminal.shortcuts.*` for the localized description. */
+  slug: string;
   isCombined?: boolean;
 };
 

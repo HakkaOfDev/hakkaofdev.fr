@@ -38,6 +38,75 @@
     }
   },
   "Terminal": {
-    "noMatch": "No command matches \"{query}\"."
+    "noMatch": "No command matches \"{query}\".",
+    "header": {
+      "resetTitle": "Reset terminal (Ctrl+R)",
+      "resetLabel": "Reset terminal",
+      "settingsTitle": "Terminal settings",
+      "settingsLabel": "Terminal settings"
+    },
+    "trafficLights": {
+      "close": "Close terminal",
+      "minimize": "Minimize terminal",
+      "restoreMinimize": "Restore terminal",
+      "expand": "Expand terminal",
+      "restoreExpand": "Restore terminal size"
+    },
+    "tabs": {
+      "rename": "Rename {name}",
+      "close": "Close {name}",
+      "create": "Create terminal tab",
+      "limitReached": "Session limit reached"
+    },
+    "search": {
+      "placeholder": "Filter command history...",
+      "hide": "Hide search"
+    },
+    "input": {
+      "placeholder": "type a command...",
+      "submit": "Submit command"
+    },
+    "fontSize": {
+      "label": "Font size",
+      "decrease": "Decrease font size",
+      "decreaseTitle": "Decrease font size (Ctrl+-)",
+      "increase": "Increase font size",
+      "increaseTitle": "Increase font size (Ctrl++)"
+    },
+    "settings": {
+      "title": "Terminal Settings",
+      "resetAllTitle": "Reset all settings to default (includes resize)",
+      "resetAllLabel": "Reset all settings",
+      "closeTitle": "Close settings",
+      "closeLabel": "Close settings",
+      "themeLabel": "Theme",
+      "fontLabel": "Terminal Font",
+      "scrollbackLabel": "Scrollback",
+      "scrollbackOption": "{count, plural, =0 {no commands} =1 {1 command} other {# commands}}",
+      "darkSuffix": "dark",
+      "lightSuffix": "light",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "Keyboard shortcuts",
+    "shortcuts": {
+      "runCommand": "Run a command",
+      "autocomplete": "Autocomplete current input",
+      "history": "History and suggestions",
+      "clearOutput": "Clear output",
+      "resetTerminal": "Reset terminal",
+      "toggleSearch": "Toggle search",
+      "increaseFontSize": "Increase font size",
+      "decreaseFontSize": "Decrease font size"
+    },
+    "closeMessages": [
+      "Nice try! You can't close me.",
+      "I'm not going anywhere. Try 'help' instead!",
+      "Nope. This terminal has trust issues with close buttons.",
+      "Error 418: I'm a teapot, not a closable window.",
+      "sudo rm -rf / ? Yeah... no.",
+      "You really thought that would work?",
+      "Close me? In this economy?",
+      "I'm built different. Try 'contact' instead."
+    ]
   }
 }
