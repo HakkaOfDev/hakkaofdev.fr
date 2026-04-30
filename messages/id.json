@@ -1,0 +1,336 @@
+{
+  "_meta": {
+    "needsReview": true,
+    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+  },
+  "Metadata": {
+    "title": "Alexandre Gossard | Pengelana digital & Software Engineer",
+    "description": "Pengelana digital dan software engineer @kabila.app. Pegiat open source, saya merancang pengalaman web berperforma tinggi dengan React dan Next.js.",
+    "jobTitle": "Software Engineer",
+    "location": "Châlons-en-Champagne, Prancis",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Frontend developer",
+      "Pengelana digital",
+      "Open source",
+      "Teknologi modern",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Software Engineer",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Dibuat dengan <heart></heart> oleh <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Selamat datang <wave>👋</wave>",
+    "intro": "<tagline>Pengelana digital</tagline> · <job>Software Engineer</job> di <employer>{employerName}</employer>",
+    "tags": {
+      "openSource": "Pendukung open source",
+      "calisthenics": "Penggemar calisthenics",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Mulai",
+      "work": "Pekerjaan",
+      "profile": "Profil",
+      "extras": "Ekstra",
+      "utils": "Utilitas"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Tidak ada perintah yang cocok dengan \"{query}\".",
+    "header": {
+      "resetTitle": "Atur ulang terminal (Ctrl+R)",
+      "resetLabel": "Atur ulang terminal",
+      "settingsTitle": "Pengaturan terminal",
+      "settingsLabel": "Pengaturan terminal"
+    },
+    "trafficLights": {
+      "close": "Tutup terminal",
+      "minimize": "Minimalkan terminal",
+      "restoreMinimize": "Pulihkan terminal",
+      "expand": "Maksimalkan terminal",
+      "restoreExpand": "Pulihkan ukuran terminal"
+    },
+    "tabs": {
+      "rename": "Ganti nama {name}",
+      "close": "Tutup {name}",
+      "create": "Buat tab",
+      "limitReached": "Batas sesi tercapai"
+    },
+    "search": {
+      "placeholder": "Filter riwayat perintah…",
+      "hide": "Sembunyikan pencarian"
+    },
+    "input": {
+      "placeholder": "ketik perintah…",
+      "submit": "Jalankan perintah"
+    },
+    "fontSize": {
+      "label": "Ukuran font",
+      "decrease": "Perkecil font",
+      "decreaseTitle": "Perkecil font (Ctrl+-)",
+      "increase": "Perbesar font",
+      "increaseTitle": "Perbesar font (Ctrl++)"
+    },
+    "settings": {
+      "title": "Pengaturan terminal",
+      "resetAllTitle": "Atur ulang semua pengaturan (termasuk ukuran)",
+      "resetAllLabel": "Atur ulang semua",
+      "closeTitle": "Tutup pengaturan",
+      "closeLabel": "Tutup pengaturan",
+      "themeLabel": "Tema",
+      "fontLabel": "Font terminal",
+      "scrollbackLabel": "Riwayat",
+      "scrollbackOption": "{count, plural, =0 {tidak ada perintah} other {# perintah}}",
+      "darkSuffix": "gelap",
+      "lightSuffix": "terang",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "Pintasan keyboard",
+    "shortcuts": {
+      "runCommand": "Jalankan perintah",
+      "autocomplete": "Lengkapi otomatis",
+      "history": "Riwayat dan saran",
+      "clearOutput": "Bersihkan output",
+      "resetTerminal": "Atur ulang terminal",
+      "toggleSearch": "Beralih pencarian",
+      "increaseFontSize": "Perbesar font",
+      "decreaseFontSize": "Perkecil font"
+    },
+    "closeMessages": [
+      "Bagus! Tapi kamu tidak bisa menutupku.",
+      "Aku tidak ke mana-mana. Coba 'help'!",
+      "Tidak. Terminal ini punya masalah kepercayaan dengan tombol tutup.",
+      "Error 418: Aku teko, bukan jendela yang bisa ditutup.",
+      "sudo rm -rf / ? Hmm… tidak.",
+      "Kamu serius mengira itu akan berhasil?",
+      "Menutupku? Di zaman seperti ini?",
+      "Aku dibuat berbeda. Coba 'contact'."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Pekerjaan",
+      "Profile": "Profil",
+      "Guestbook": "Buku tamu",
+      "Spotify": "Spotify",
+      "Theme": "Tema",
+      "Terminal": "Terminal"
+    },
+    "descriptions": {
+      "projects": "Yang saya bangun, luncurkan, atau ikut kontribusi",
+      "experiences": "Pengalaman dan pencapaian profesional",
+      "about": "Lebih lanjut tentang saya, minat, dan tujuan",
+      "skills": "Kemampuan teknis dan stack",
+      "education": "Pendidikan saya",
+      "contact": "Email, media sosial, dan cara kontak",
+      "guestbook": "Tampilkan bantuan untuk subperintah buku tamu",
+      "cv": "Pratinjau dan unduh CV PDF saya",
+      "spotify": "Tampilkan bantuan untuk subperintah Spotify",
+      "theme": "Tampilkan atau ubah tema UI",
+      "help": "Tampilkan semua perintah dan deskripsinya",
+      "clear": "Bersihkan semua perintah dan output sebelumnya",
+      "reset": "Atur ulang terminal ke layar selamat datang",
+      "stats": "Tampilkan aktivitas coding, GitHub, dan jumlah pengunjung",
+      "repo": "Buka kode sumber portfolio ini",
+      "echo": "Cetak pesan di terminal",
+      "spotifyNow": "Tampilkan lagu yang sedang diputar",
+      "spotifyTop": "Tampilkan lagu favorit saya",
+      "spotifyHistory": "Tampilkan riwayat dengar saya",
+      "guestbookRead": "Lihat entri terbaru di buku tamu",
+      "guestbookSign": "Tinggalkan pesan di buku tamu",
+      "themeList": "Tampilkan semua tema yang tersedia",
+      "themeSet": "Terapkan tema berdasarkan nama (mis. theme set dracula)",
+      "themePreview": "Pratinjau tema tanpa menerapkannya",
+      "themeCreate": "Buat tema kustom dengan editor visual atau JSON",
+      "themeValidate": "Periksa kontras tema saat ini",
+      "lang": "Tampilkan atau ubah bahasa aktif",
+      "langSet": "Ubah bahasa (mis. lang set fr)",
+      "langAuto": "Aktifkan kembali deteksi bahasa otomatis"
+    },
+    "help": {
+      "available": "Perintah yang tersedia",
+      "tip": "Tip: klik perintah di atas atau ketik di prompt untuk menjalankannya.",
+      "subCommands": "Subperintah"
+    },
+    "notFound": {
+      "title": "zsh: perintah tidak ditemukan: {input}",
+      "didYouMean": "Apakah maksud Anda {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Penggunaan:",
+      "examplePrefix": "Contoh:",
+      "tooManyArgs": "Terlalu banyak argumen.",
+      "unknown": "{label} tidak dikenal: {sub}.",
+      "useOneOf": "Gunakan salah satu: {options}.",
+      "subcommand": "subperintah"
+    },
+    "about": {
+      "firstName": "Nama Depan",
+      "lastName": "Nama Belakang",
+      "age": "Usia",
+      "yearsOld": "{years} tahun",
+      "location": "Lokasi",
+      "email": "Email",
+      "languages": "Bahasa",
+      "hobbies": "Hobi"
+    },
+    "contact": {
+      "intro": "Saya lebih suka email untuk peluang, permintaan freelance, atau kolaborasi teknis.",
+      "primaryEmail": "Email utama:",
+      "location": "Lokasi:",
+      "socialProfiles": "Profil sosial:"
+    },
+    "stats": {
+      "totalCodingTime": "Total waktu coding",
+      "topLanguage": "Bahasa utama",
+      "githubStars": "Bintang GitHub",
+      "contributions": "Kontribusi ({year})",
+      "codingSince": "Coding sejak",
+      "codingSinceValue": "{since} ({years} tahun)",
+      "visitors": "Pengunjung",
+      "failed": "Tidak dapat memuat statistik. Coba lagi nanti.",
+      "na": "T/A"
+    },
+    "repo": {
+      "starsLabel": "Bintang",
+      "forksLabel": "Forks",
+      "licenseLabel": "Lisensi",
+      "copyAria": "Salin ke clipboard",
+      "copy": "Salin",
+      "copiedAria": "Disalin",
+      "copiedNotice": "Disalin!",
+      "copyFailedAria": "Gagal menyalin",
+      "copyFailedNotice": "Coba lagi",
+      "fallback": "Kode sumber portfolio ini tersedia di sini:"
+    },
+    "cv": {
+      "openPreview": "Buka pratinjau PDF",
+      "downloadPdf": "Unduh PDF",
+      "endpointsLabel": "Endpoint:",
+      "endpointsAnd": "dan"
+    },
+    "projects": {
+      "openLabel": "Buka proyek: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "navigasi",
+    "complete": "lengkapi",
+    "run": "jalankan"
+  },
+  "Lang": {
+    "subCommandsTitle": "Perintah bahasa",
+    "currentLabel": "Bahasa saat ini:",
+    "availablePrefix": "Tersedia:",
+    "usagePrefix": "Penggunaan:",
+    "switching": "Beralih ke {locale}…",
+    "autoCleared": "Bahasa akan terdeteksi otomatis pada pemuatan berikutnya.",
+    "missingCode": "Kode bahasa hilang.",
+    "unknownLocale": "Bahasa tidak dikenal: {code}.",
+    "unknownSubcommand": "Subperintah tidak dikenal: {sub}.",
+    "tooManyArgs": "Terlalu banyak argumen.",
+    "switcher": {
+      "ariaLabel": "Ubah bahasa",
+      "title": "Ubah bahasa"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Pengelana digital",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI Engineering",
+      "openSource": "Open source"
+    },
+    "footer": "Portfolio"
+  },
+  "Guestbook": {
+    "title": "Perintah buku tamu",
+    "validation": {
+      "nameMin": "Nama harus minimal {min} karakter.",
+      "nameMax": "Nama tidak boleh lebih dari {max} karakter.",
+      "messageMin": "Pesan harus minimal {min} karakter.",
+      "messageMax": "Pesan tidak boleh lebih dari {max} karakter.",
+      "websiteMax": "Situs web tidak boleh lebih dari {max} karakter.",
+      "websiteInvalid": "URL situs web tidak valid."
+    },
+    "sign": {
+      "intro": "Tinggalkan pesan di buku tamu saya.",
+      "namePlaceholder": "Nama Anda",
+      "websitePlaceholder": "Situs web (opsional)",
+      "messagePlaceholder": "Pesan Anda",
+      "submit": "Tanda tangan",
+      "submitPending": "Entri dikirim dan menunggu moderasi.",
+      "submitPublishedPrefix": "Entri diterbitkan!",
+      "submitFailed": "Tidak dapat mengirim entri buku tamu."
+    },
+    "read": {
+      "headerLabel": "buku tamu",
+      "entry": "{count} entri",
+      "unavailable": "tidak tersedia",
+      "refresh": "segarkan",
+      "refreshAria": "Segarkan entri buku tamu",
+      "errorPrefix": "kesalahan:",
+      "errorFallback": "Tidak dapat memuat entri buku tamu.",
+      "noneFromCountryPrefix": "Tidak ada entri dari",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Belum ada entri. Jalankan",
+      "noneYetSuffix": "untuk menjadi yang pertama.",
+      "filter": {
+        "ariaLabel": "Filter entri buku tamu",
+        "label": "filter",
+        "sort": "urutan",
+        "newest": "terbaru",
+        "oldest": "terlama",
+        "country": "negara",
+        "allCountries": "Semua negara",
+        "clearCountry": "Hapus filter negara"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Perintah Spotify",
+    "notPlaying": "Tidak ada yang diputar 😕",
+    "unavailable": "Spotify belum dikonfigurasi atau tidak tersedia.",
+    "nowPlayingPrefix": "Sedang diputar di Spotify:",
+    "openNowPlayingAria": "Buka lagu yang sedang diputar: {name}",
+    "openRecentlyPlayedAria": "Buka lagu yang baru diputar: {name}",
+    "openTopTrackAria": "Buka lagu favorit: {name}",
+    "openTopAlbumAria": "Buka album favorit: {name}",
+    "topTracks": {
+      "rank": "Peringkat",
+      "track": "Lagu",
+      "album": "Album"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Tema saat ini:",
+    "darkSuffix": "gelap",
+    "lightSuffix": "terang",
+    "usagePrefix": "Penggunaan:",
+    "themeCommandsTitle": "Perintah tema",
+    "noArgs": "{command} tidak menerima argumen.",
+    "missingName": "Nama tema hilang.",
+    "tooManyArgs": "Terlalu banyak argumen.",
+    "usageSet": "Penggunaan: theme set <nama>",
+    "usagePreview": "Penggunaan: theme preview <nama>",
+    "unknownSubcommand": "Subperintah tidak dikenal: {sub}. Gunakan salah satu: {commands}.",
+    "list": {
+      "available": "Tema tersedia ({count}):",
+      "tip": "Klik tema untuk menerapkannya.",
+      "active": "(aktif)",
+      "custom": "kustom",
+      "deleteAria": "Hapus {label}"
+    },
+    "set": {
+      "unknownAvailable": "Tema tidak dikenal: {name}. Tema yang tersedia:",
+      "updated": "Tema diperbarui ke {label}.",
+      "active": "Tema aktif: {label} ({mode})"
+    }
+  }
+}

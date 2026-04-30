@@ -1,0 +1,332 @@
+{
+  "Metadata": {
+    "title": "Alexandre Gossard | Dijital göçebe ve yazılım mühendisi",
+    "description": "Dijital göçebe ve yazılım mühendisi @kabila.app. Open source tutkunuyum, React ve Next.js ile yüksek performanslı web deneyimleri tasarlıyorum.",
+    "jobTitle": "Yazılım mühendisi",
+    "location": "Châlons-en-Champagne, Fransa",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Frontend geliştirici",
+      "Dijital göçebe",
+      "Open source",
+      "Modern teknolojiler",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Yazılım mühendisi",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "<heart></heart> ile <name></name> tarafından yapıldı"
+  },
+  "Welcome": {
+    "greeting": "~ Hoş geldin <wave>👋</wave>",
+    "intro": "<tagline>Dijital göçebe</tagline> · <employer>{employerName}</employer> şirketinde <job>Yazılım mühendisi</job>",
+    "tags": {
+      "openSource": "Open source savunucusu",
+      "calisthenics": "Kalistenik tutkunu",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Başla",
+      "work": "İş",
+      "profile": "Profil",
+      "extras": "Ekstralar",
+      "utils": "Araçlar"
+    }
+  },
+  "Terminal": {
+    "noMatch": "«{query}» ile eşleşen komut yok.",
+    "header": {
+      "resetTitle": "Terminali sıfırla (Ctrl+R)",
+      "resetLabel": "Terminali sıfırla",
+      "settingsTitle": "Terminal ayarları",
+      "settingsLabel": "Terminal ayarları"
+    },
+    "trafficLights": {
+      "close": "Terminali kapat",
+      "minimize": "Terminali küçült",
+      "restoreMinimize": "Terminali geri yükle",
+      "expand": "Terminali büyüt",
+      "restoreExpand": "Terminal boyutunu geri yükle"
+    },
+    "tabs": {
+      "rename": "{name} sekmesini yeniden adlandır",
+      "close": "{name} sekmesini kapat",
+      "create": "Sekme oluştur",
+      "limitReached": "Oturum sınırına ulaşıldı"
+    },
+    "search": {
+      "placeholder": "Komut geçmişini filtrele…",
+      "hide": "Aramayı gizle"
+    },
+    "input": {
+      "placeholder": "bir komut yaz…",
+      "submit": "Komutu çalıştır"
+    },
+    "fontSize": {
+      "label": "Yazı boyutu",
+      "decrease": "Yazı boyutunu küçült",
+      "decreaseTitle": "Yazı boyutunu küçült (Ctrl+-)",
+      "increase": "Yazı boyutunu büyüt",
+      "increaseTitle": "Yazı boyutunu büyüt (Ctrl++)"
+    },
+    "settings": {
+      "title": "Terminal ayarları",
+      "resetAllTitle": "Tüm ayarları sıfırla (boyut dahil)",
+      "resetAllLabel": "Tümünü sıfırla",
+      "closeTitle": "Ayarları kapat",
+      "closeLabel": "Ayarları kapat",
+      "themeLabel": "Tema",
+      "fontLabel": "Terminal yazı tipi",
+      "scrollbackLabel": "Geçmiş",
+      "scrollbackOption": "{count, plural, =0 {komut yok} one {1 komut} other {# komut}}",
+      "darkSuffix": "koyu",
+      "lightSuffix": "açık",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "Klavye kısayolları",
+    "shortcuts": {
+      "runCommand": "Komutu çalıştır",
+      "autocomplete": "Otomatik tamamla",
+      "history": "Geçmiş ve öneriler",
+      "clearOutput": "Çıktıyı temizle",
+      "resetTerminal": "Terminali sıfırla",
+      "toggleSearch": "Aramayı aç/kapat",
+      "increaseFontSize": "Yazı boyutunu büyüt",
+      "decreaseFontSize": "Yazı boyutunu küçült"
+    },
+    "closeMessages": [
+      "İyi denemeydi! Beni kapatamazsın.",
+      "Hiçbir yere gitmiyorum. «help» dene!",
+      "Hayır. Bu terminalin kapatma butonlarına güven sorunu var.",
+      "Hata 418: Ben bir çaydanlığım, kapatılabilir bir pencere değilim.",
+      "sudo rm -rf / ? Şey… hayır.",
+      "Bunun işe yarayacağını gerçekten düşündün mü?",
+      "Beni kapatmak mı? Bu ekonomide?",
+      "Ben farklı yaratıldım. «contact» dene."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "İş",
+      "Profile": "Profil",
+      "Guestbook": "Ziyaretçi defteri",
+      "Spotify": "Spotify",
+      "Theme": "Tema",
+      "Terminal": "Terminal"
+    },
+    "descriptions": {
+      "projects": "İnşa ettiğim, yayınladığım veya katkı sunduğum şeyler",
+      "experiences": "Profesyonel iş geçmişim ve başarılarım",
+      "about": "Geçmişim, ilgi alanlarım ve hedeflerim hakkında daha fazlası",
+      "skills": "Teknik beceriler ve yığın",
+      "education": "Eğitim geçmişim",
+      "contact": "E-posta, sosyal medya ve iletişim yolları",
+      "guestbook": "Ziyaretçi defteri alt komutları için yardım",
+      "cv": "PDF özgeçmişimi önizle ve indir",
+      "spotify": "Spotify alt komutları için yardım",
+      "theme": "UI temasını göster veya değiştir",
+      "help": "Mevcut tüm komutları ve açıklamalarını göster",
+      "clear": "Önceki tüm komutları ve çıktıyı temizle",
+      "reset": "Terminali karşılama ekranına sıfırla",
+      "stats": "Kodlama aktivitesi, GitHub ölçütleri ve ziyaretçi sayısı",
+      "repo": "Bu portfolyonun kaynak kodunu aç",
+      "echo": "Terminale bir mesaj yazdır",
+      "spotifyNow": "Şu anda çalan şarkıyı göster",
+      "spotifyTop": "En sevdiğim şarkıları göster",
+      "spotifyHistory": "Dinleme geçmişimi göster",
+      "guestbookRead": "Ziyaretçi defterindeki son kayıtlara göz at",
+      "guestbookSign": "Ziyaretçi defterine mesaj bırak",
+      "themeList": "Mevcut tüm temaları göster",
+      "themeSet": "İsme göre tema uygula (örn. theme set dracula)",
+      "themePreview": "Bir temayı uygulamadan önizle",
+      "themeCreate": "Görsel veya JSON editörüyle özel tema oluştur",
+      "themeValidate": "Mevcut temanın kontrastını kontrol et",
+      "lang": "Aktif dili göster veya değiştir",
+      "langSet": "Dili değiştir (örn. lang set fr)",
+      "langAuto": "Tarayıcı dil algılamasını yeniden etkinleştir"
+    },
+    "help": {
+      "available": "Kullanılabilir komutlar",
+      "tip": "İpucu: yukarıdaki bir komuta tıkla veya istemde yaz, böylece çalıştır.",
+      "subCommands": "Alt komutlar"
+    },
+    "notFound": {
+      "title": "zsh: komut bulunamadı: {input}",
+      "didYouMean": "Şunu mu demek istediniz: {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Kullanım:",
+      "examplePrefix": "Örnek:",
+      "tooManyArgs": "Çok fazla argüman.",
+      "unknown": "Bilinmeyen {label}: {sub}.",
+      "useOneOf": "Şunlardan birini kullanın: {options}.",
+      "subcommand": "alt komut"
+    },
+    "about": {
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "age": "Yaş",
+      "yearsOld": "{years} yaşında",
+      "location": "Konum",
+      "email": "E-posta",
+      "languages": "Diller",
+      "hobbies": "Hobiler"
+    },
+    "contact": {
+      "intro": "Fırsatlar, freelance işler veya teknik iş birliği için e-postayı tercih ediyorum.",
+      "primaryEmail": "Birincil e-posta:",
+      "location": "Konum:",
+      "socialProfiles": "Sosyal profiller:"
+    },
+    "stats": {
+      "totalCodingTime": "Toplam kodlama süresi",
+      "topLanguage": "Birincil dil",
+      "githubStars": "GitHub yıldızları",
+      "contributions": "Katkılar ({year})",
+      "codingSince": "Kodluyor",
+      "codingSinceValue": "{since} ({years} yıl)",
+      "visitors": "Ziyaretçiler",
+      "failed": "İstatistikler getirilemedi. Daha sonra tekrar deneyin.",
+      "na": "Yok"
+    },
+    "repo": {
+      "starsLabel": "Yıldızlar",
+      "forksLabel": "Forklar",
+      "licenseLabel": "Lisans",
+      "copyAria": "Panoya kopyala",
+      "copy": "Kopyala",
+      "copiedAria": "Kopyalandı",
+      "copiedNotice": "Kopyalandı!",
+      "copyFailedAria": "Kopyalama başarısız",
+      "copyFailedNotice": "Tekrar dene",
+      "fallback": "Bu portfolyonun kaynak kodu burada mevcut:"
+    },
+    "cv": {
+      "openPreview": "PDF önizlemeyi aç",
+      "downloadPdf": "PDF indir",
+      "endpointsLabel": "Uç noktalar:",
+      "endpointsAnd": "ve"
+    },
+    "projects": {
+      "openLabel": "Projeyi aç: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "gezin",
+    "complete": "tamamla",
+    "run": "çalıştır"
+  },
+  "Lang": {
+    "subCommandsTitle": "Dil komutları",
+    "currentLabel": "Mevcut dil:",
+    "availablePrefix": "Mevcut:",
+    "usagePrefix": "Kullanım:",
+    "switching": "{locale} diline geçiliyor…",
+    "autoCleared": "Dil bir sonraki yüklemede otomatik olarak algılanacak.",
+    "missingCode": "Dil kodu eksik.",
+    "unknownLocale": "Bilinmeyen dil: {code}.",
+    "unknownSubcommand": "Bilinmeyen alt komut: {sub}.",
+    "tooManyArgs": "Çok fazla argüman.",
+    "switcher": {
+      "ariaLabel": "Dil değiştir",
+      "title": "Dil değiştir"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Dijital göçebe",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI Mühendisliği",
+      "openSource": "Open source"
+    },
+    "footer": "Portfolyo"
+  },
+  "Guestbook": {
+    "title": "Ziyaretçi defteri komutları",
+    "validation": {
+      "nameMin": "Ad en az {min} karakter olmalı.",
+      "nameMax": "Ad en fazla {max} karakter olmalı.",
+      "messageMin": "Mesaj en az {min} karakter olmalı.",
+      "messageMax": "Mesaj en fazla {max} karakter olmalı.",
+      "websiteMax": "Web sitesi en fazla {max} karakter olmalı.",
+      "websiteInvalid": "Web sitesi URL'si geçersiz."
+    },
+    "sign": {
+      "intro": "Ziyaretçi defterime bir mesaj bırakın.",
+      "namePlaceholder": "Adınız",
+      "websitePlaceholder": "Web sitesi (isteğe bağlı)",
+      "messagePlaceholder": "Mesajınız",
+      "submit": "İmzala",
+      "submitPending": "Kayıt gönderildi ve moderasyon bekliyor.",
+      "submitPublishedPrefix": "Kayıt yayınlandı!",
+      "submitFailed": "Ziyaretçi defteri kaydı gönderilemedi."
+    },
+    "read": {
+      "headerLabel": "ziyaretçi defteri",
+      "entry": "{count, plural, =0 {0 kayıt} one {# kayıt} other {# kayıt}}",
+      "unavailable": "kullanılamaz",
+      "refresh": "yenile",
+      "refreshAria": "Ziyaretçi defteri kayıtlarını yenile",
+      "errorPrefix": "hata:",
+      "errorFallback": "Ziyaretçi defteri kayıtları yüklenemedi.",
+      "noneFromCountryPrefix": "Şuradan kayıt yok:",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Henüz kayıt yok.",
+      "noneYetSuffix": "ile ilk olun.",
+      "filter": {
+        "ariaLabel": "Ziyaretçi defteri kayıtlarını filtrele",
+        "label": "filtrele",
+        "sort": "sırala",
+        "newest": "en yeni",
+        "oldest": "en eski",
+        "country": "ülke",
+        "allCountries": "Tüm ülkeler",
+        "clearCountry": "Ülke filtresini temizle"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Spotify komutları",
+    "notPlaying": "Çalan bir şey yok 😕",
+    "unavailable": "Spotify yapılandırılmamış veya kullanılamıyor.",
+    "nowPlayingPrefix": "Şu anda Spotify'da:",
+    "openNowPlayingAria": "Çalan şarkıyı aç: {name}",
+    "openRecentlyPlayedAria": "Son çalınan şarkıyı aç: {name}",
+    "openTopTrackAria": "En sevilen şarkıyı aç: {name}",
+    "openTopAlbumAria": "En sevilen albümü aç: {name}",
+    "topTracks": {
+      "rank": "Sıra",
+      "track": "Şarkı",
+      "album": "Albüm"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Mevcut tema:",
+    "darkSuffix": "koyu",
+    "lightSuffix": "açık",
+    "usagePrefix": "Kullanım:",
+    "themeCommandsTitle": "Tema komutları",
+    "noArgs": "{command} argüman almıyor.",
+    "missingName": "Tema adı eksik.",
+    "tooManyArgs": "Çok fazla argüman.",
+    "usageSet": "Kullanım: theme set <ad>",
+    "usagePreview": "Kullanım: theme preview <ad>",
+    "unknownSubcommand": "Bilinmeyen alt komut: {sub}. Şunlardan birini kullanın: {commands}.",
+    "list": {
+      "available": "Mevcut temalar ({count}):",
+      "tip": "Bir temayı uygulamak için üzerine tıklayın.",
+      "active": "(aktif)",
+      "custom": "özel",
+      "deleteAria": "{label} sil"
+    },
+    "set": {
+      "unknownAvailable": "Bilinmeyen tema: {name}. Mevcut temalar:",
+      "updated": "Tema {label} olarak güncellendi.",
+      "active": "Aktif tema: {label} ({mode})"
+    }
+  }
+}

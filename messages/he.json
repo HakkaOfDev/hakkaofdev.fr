@@ -1,0 +1,336 @@
+{
+  "_meta": {
+    "needsReview": true,
+    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping. Note: site renders with dir=\"rtl\" but UI was originally built LTR; some terminal layout quirks expected."
+  },
+  "Metadata": {
+    "title": "אלכסנדר גוסארד | נווד דיגיטלי ומהנדס תוכנה",
+    "description": "נווד דיגיטלי ומהנדס תוכנה @kabila.app. חובב קוד פתוח, יוצר חוויות ווב מהירות עם React ו-Next.js.",
+    "jobTitle": "מהנדס תוכנה",
+    "location": "שאלון-אן-שמפאן, צרפת",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "מפתח פרונטאנד",
+      "נווד דיגיטלי",
+      "קוד פתוח",
+      "טכנולוגיות מודרניות",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "מהנדס תוכנה",
+      "פרילנס"
+    ]
+  },
+  "Footer": {
+    "madeBy": "נעשה עם <heart></heart> על ידי <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ ברוך הבא <wave>👋</wave>",
+    "intro": "<tagline>נווד דיגיטלי</tagline> · <job>מהנדס תוכנה</job> ב-<employer>{employerName}</employer>",
+    "tags": {
+      "openSource": "תומך קוד פתוח",
+      "calisthenics": "חובב קליסתניקס",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "התחל",
+      "work": "עבודה",
+      "profile": "פרופיל",
+      "extras": "תוספות",
+      "utils": "כלים"
+    }
+  },
+  "Terminal": {
+    "noMatch": "אין פקודה שמתאימה ל-«{query}».",
+    "header": {
+      "resetTitle": "אפס טרמינל (Ctrl+R)",
+      "resetLabel": "אפס טרמינל",
+      "settingsTitle": "הגדרות טרמינל",
+      "settingsLabel": "הגדרות טרמינל"
+    },
+    "trafficLights": {
+      "close": "סגור טרמינל",
+      "minimize": "מזער טרמינל",
+      "restoreMinimize": "שחזר טרמינל",
+      "expand": "הגדל טרמינל",
+      "restoreExpand": "שחזר גודל טרמינל"
+    },
+    "tabs": {
+      "rename": "שנה שם {name}",
+      "close": "סגור {name}",
+      "create": "צור לשונית",
+      "limitReached": "הגעת למגבלת הסשנים"
+    },
+    "search": {
+      "placeholder": "סנן היסטוריית פקודות…",
+      "hide": "הסתר חיפוש"
+    },
+    "input": {
+      "placeholder": "הקלד פקודה…",
+      "submit": "הרץ פקודה"
+    },
+    "fontSize": {
+      "label": "גודל גופן",
+      "decrease": "הקטן גופן",
+      "decreaseTitle": "הקטן גופן (Ctrl+-)",
+      "increase": "הגדל גופן",
+      "increaseTitle": "הגדל גופן (Ctrl++)"
+    },
+    "settings": {
+      "title": "הגדרות טרמינל",
+      "resetAllTitle": "אפס את כל ההגדרות (כולל גודל)",
+      "resetAllLabel": "אפס הכל",
+      "closeTitle": "סגור הגדרות",
+      "closeLabel": "סגור הגדרות",
+      "themeLabel": "ערכת נושא",
+      "fontLabel": "גופן טרמינל",
+      "scrollbackLabel": "היסטוריה",
+      "scrollbackOption": "{count, plural, =0 {אין פקודות} one {פקודה אחת} two {שתי פקודות} other {# פקודות}}",
+      "darkSuffix": "כהה",
+      "lightSuffix": "בהיר",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "קיצורי מקלדת",
+    "shortcuts": {
+      "runCommand": "הרץ פקודה",
+      "autocomplete": "השלמה אוטומטית",
+      "history": "היסטוריה והצעות",
+      "clearOutput": "נקה פלט",
+      "resetTerminal": "אפס טרמינל",
+      "toggleSearch": "החלף חיפוש",
+      "increaseFontSize": "הגדל גופן",
+      "decreaseFontSize": "הקטן גופן"
+    },
+    "closeMessages": [
+      "ניסיון יפה! אבל אי אפשר לסגור אותי.",
+      "אני לא הולך לשום מקום. נסה «help»!",
+      "לא. לטרמינל הזה יש בעיות אמון עם כפתורי סגירה.",
+      "שגיאה 418: אני קומקום, לא חלון שניתן לסגור.",
+      "sudo rm -rf / ? אממ… לא.",
+      "באמת חשבת שזה יעבוד?",
+      "לסגור אותי? בתקופה הזו?",
+      "אני בנוי אחרת. נסה «contact»."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "עבודה",
+      "Profile": "פרופיל",
+      "Guestbook": "ספר אורחים",
+      "Spotify": "Spotify",
+      "Theme": "ערכת נושא",
+      "Terminal": "טרמינל"
+    },
+    "descriptions": {
+      "projects": "מה שבניתי, השקתי או תרמתי לו",
+      "experiences": "ניסיון מקצועי והישגים",
+      "about": "עוד עליי, תחומי עניין ומטרות",
+      "skills": "כישורים טכניים וסטאק",
+      "education": "השכלתי",
+      "contact": "אימייל, רשתות חברתיות ודרכי קשר",
+      "guestbook": "הצג עזרה לפקודות המשנה של ספר האורחים",
+      "cv": "תצוגה מקדימה והורדה של קורות החיים שלי",
+      "spotify": "הצג עזרה לפקודות המשנה של Spotify",
+      "theme": "הצג או החלף ערכת נושא",
+      "help": "הצג את כל הפקודות הזמינות ותיאוריהן",
+      "clear": "נקה את כל הפקודות והפלט הקודמים",
+      "reset": "אפס את הטרמינל למסך הפתיחה",
+      "stats": "פעילות תכנות, GitHub וכמות מבקרים",
+      "repo": "פתח את קוד המקור של תיק העבודות",
+      "echo": "הדפס הודעה בטרמינל",
+      "spotifyNow": "הצג את השיר המתנגן כעת",
+      "spotifyTop": "הצג את השירים המועדפים שלי",
+      "spotifyHistory": "הצג את היסטוריית ההאזנה",
+      "guestbookRead": "עיין בכניסות האחרונות בספר האורחים",
+      "guestbookSign": "השאר הודעה בספר האורחים",
+      "themeList": "הצג את כל ערכות הנושא הזמינות",
+      "themeSet": "החל ערכת נושא לפי שם (לדוגמה theme set dracula)",
+      "themePreview": "תצוגה מקדימה של ערכת נושא ללא החלה",
+      "themeCreate": "צור ערכת נושא מותאמת באמצעות עורך ויזואלי או JSON",
+      "themeValidate": "בדוק ניגודיות של ערכת הנושא הנוכחית",
+      "lang": "הצג או החלף את השפה הפעילה",
+      "langSet": "שנה שפה (לדוגמה lang set fr)",
+      "langAuto": "הפעל מחדש זיהוי שפה אוטומטי"
+    },
+    "help": {
+      "available": "פקודות זמינות",
+      "tip": "טיפ: לחץ על פקודה למעלה או הקלד אותה בשורת הפקודה כדי להריץ אותה.",
+      "subCommands": "פקודות משנה"
+    },
+    "notFound": {
+      "title": "zsh: פקודה לא נמצאה: {input}",
+      "didYouMean": "האם התכוונת ל-{suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "שימוש:",
+      "examplePrefix": "דוגמה:",
+      "tooManyArgs": "יותר מדי ארגומנטים.",
+      "unknown": "{label} לא ידוע: {sub}.",
+      "useOneOf": "השתמש באחד מ: {options}.",
+      "subcommand": "פקודת משנה"
+    },
+    "about": {
+      "firstName": "שם פרטי",
+      "lastName": "שם משפחה",
+      "age": "גיל",
+      "yearsOld": "{years} שנים",
+      "location": "מיקום",
+      "email": "אימייל",
+      "languages": "שפות",
+      "hobbies": "תחביבים"
+    },
+    "contact": {
+      "intro": "אני מעדיף אימייל להזדמנויות, בקשות פרילנס או שיתוף פעולה טכני.",
+      "primaryEmail": "אימייל ראשי:",
+      "location": "מיקום:",
+      "socialProfiles": "פרופילים חברתיים:"
+    },
+    "stats": {
+      "totalCodingTime": "סה\"כ זמן תכנות",
+      "topLanguage": "שפה ראשית",
+      "githubStars": "כוכבי GitHub",
+      "contributions": "תרומות ({year})",
+      "codingSince": "מתכנת מאז",
+      "codingSinceValue": "{since} ({years} שנים)",
+      "visitors": "מבקרים",
+      "failed": "לא ניתן לטעון את הנתונים. נסה שוב מאוחר יותר.",
+      "na": "לא זמין"
+    },
+    "repo": {
+      "starsLabel": "כוכבים",
+      "forksLabel": "Forks",
+      "licenseLabel": "רישיון",
+      "copyAria": "העתק ללוח",
+      "copy": "העתק",
+      "copiedAria": "הועתק",
+      "copiedNotice": "הועתק!",
+      "copyFailedAria": "העתקה נכשלה",
+      "copyFailedNotice": "נסה שוב",
+      "fallback": "קוד המקור של תיק העבודות זמין כאן:"
+    },
+    "cv": {
+      "openPreview": "פתח תצוגת PDF",
+      "downloadPdf": "הורד PDF",
+      "endpointsLabel": "Endpoints:",
+      "endpointsAnd": "ו-"
+    },
+    "projects": {
+      "openLabel": "פתח פרויקט: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "ניווט",
+    "complete": "השלם",
+    "run": "הרץ"
+  },
+  "Lang": {
+    "subCommandsTitle": "פקודות שפה",
+    "currentLabel": "שפה נוכחית:",
+    "availablePrefix": "זמינות:",
+    "usagePrefix": "שימוש:",
+    "switching": "מעבר ל-{locale}…",
+    "autoCleared": "השפה תזוהה אוטומטית בטעינה הבאה.",
+    "missingCode": "חסר קוד שפה.",
+    "unknownLocale": "שפה לא ידועה: {code}.",
+    "unknownSubcommand": "פקודת משנה לא ידועה: {sub}.",
+    "tooManyArgs": "יותר מדי ארגומנטים.",
+    "switcher": {
+      "ariaLabel": "החלף שפה",
+      "title": "החלף שפה"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "נווד דיגיטלי",
+      "nextjs": "Next.js",
+      "uiEngineering": "הנדסת UI",
+      "openSource": "קוד פתוח"
+    },
+    "footer": "תיק עבודות"
+  },
+  "Guestbook": {
+    "title": "פקודות ספר אורחים",
+    "validation": {
+      "nameMin": "השם חייב להכיל לפחות {min} תווים.",
+      "nameMax": "השם לא יכול לעלות על {max} תווים.",
+      "messageMin": "ההודעה חייבת להכיל לפחות {min} תווים.",
+      "messageMax": "ההודעה לא יכולה לעלות על {max} תווים.",
+      "websiteMax": "האתר לא יכול לעלות על {max} תווים.",
+      "websiteInvalid": "כתובת האתר אינה תקינה."
+    },
+    "sign": {
+      "intro": "השאר הודעה בספר האורחים שלי.",
+      "namePlaceholder": "השם שלך",
+      "websitePlaceholder": "אתר (אופציונלי)",
+      "messagePlaceholder": "ההודעה שלך",
+      "submit": "חתום",
+      "submitPending": "ההודעה נשלחה ומחכה לאישור.",
+      "submitPublishedPrefix": "ההודעה פורסמה!",
+      "submitFailed": "לא ניתן לשלוח את הודעת ספר האורחים."
+    },
+    "read": {
+      "headerLabel": "ספר אורחים",
+      "entry": "{count} הודעות",
+      "unavailable": "לא זמין",
+      "refresh": "רענן",
+      "refreshAria": "רענן הודעות ספר אורחים",
+      "errorPrefix": "שגיאה:",
+      "errorFallback": "לא ניתן לטעון את הודעות ספר האורחים.",
+      "noneFromCountryPrefix": "אין הודעות מ-",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "אין עדיין הודעות.",
+      "noneYetSuffix": "כדי להיות הראשון.",
+      "filter": {
+        "ariaLabel": "סנן הודעות ספר אורחים",
+        "label": "סנן",
+        "sort": "מיון",
+        "newest": "החדשים ביותר",
+        "oldest": "הישנים ביותר",
+        "country": "מדינה",
+        "allCountries": "כל המדינות",
+        "clearCountry": "נקה סינון מדינה"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "פקודות Spotify",
+    "notPlaying": "לא מתנגן כלום 😕",
+    "unavailable": "Spotify לא הוגדר או אינו זמין.",
+    "nowPlayingPrefix": "מתנגן כעת ב-Spotify:",
+    "openNowPlayingAria": "פתח את השיר המתנגן: {name}",
+    "openRecentlyPlayedAria": "פתח שיר שהתנגן לאחרונה: {name}",
+    "openTopTrackAria": "פתח שיר מועדף: {name}",
+    "openTopAlbumAria": "פתח אלבום מועדף: {name}",
+    "topTracks": {
+      "rank": "דירוג",
+      "track": "שיר",
+      "album": "אלבום"
+    }
+  },
+  "Theme": {
+    "currentLabel": "ערכת נושא נוכחית:",
+    "darkSuffix": "כהה",
+    "lightSuffix": "בהיר",
+    "usagePrefix": "שימוש:",
+    "themeCommandsTitle": "פקודות ערכת נושא",
+    "noArgs": "{command} לא מקבל ארגומנטים.",
+    "missingName": "חסר שם ערכת נושא.",
+    "tooManyArgs": "יותר מדי ארגומנטים.",
+    "usageSet": "שימוש: theme set <שם>",
+    "usagePreview": "שימוש: theme preview <שם>",
+    "unknownSubcommand": "פקודת משנה לא ידועה: {sub}. השתמש באחד מ: {commands}.",
+    "list": {
+      "available": "ערכות נושא זמינות ({count}):",
+      "tip": "לחץ על ערכת נושא כדי להחיל אותה.",
+      "active": "(פעילה)",
+      "custom": "מותאמת",
+      "deleteAria": "מחק {label}"
+    },
+    "set": {
+      "unknownAvailable": "ערכת נושא לא ידועה: {name}. ערכות נושא זמינות:",
+      "updated": "ערכת הנושא עודכנה ל-{label}.",
+      "active": "ערכת נושא פעילה: {label} ({mode})"
+    }
+  }
+}

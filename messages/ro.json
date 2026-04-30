@@ -1,0 +1,336 @@
+{
+  "_meta": {
+    "needsReview": true,
+    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+  },
+  "Metadata": {
+    "title": "Alexandre Gossard | Nomad digital și inginer software",
+    "description": "Nomad digital și inginer software @kabila.app. Pasionat de open source, creez experiențe web performante cu React și Next.js.",
+    "jobTitle": "Inginer software",
+    "location": "Châlons-en-Champagne, Franța",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Dezvoltator frontend",
+      "Nomad digital",
+      "Open source",
+      "Tehnologii moderne",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Inginer software",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Realizat cu <heart></heart> de <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Bun venit <wave>👋</wave>",
+    "intro": "<tagline>Nomad digital</tagline> · <job>Inginer software</job> la <employer>{employerName}</employer>",
+    "tags": {
+      "openSource": "Susținător open source",
+      "calisthenics": "Pasionat de calistenie",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Start",
+      "work": "Muncă",
+      "profile": "Profil",
+      "extras": "Extra",
+      "utils": "Utilitare"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Nicio comandă nu corespunde cu „{query}\".",
+    "header": {
+      "resetTitle": "Resetează terminalul (Ctrl+R)",
+      "resetLabel": "Resetează terminalul",
+      "settingsTitle": "Setări terminal",
+      "settingsLabel": "Setări terminal"
+    },
+    "trafficLights": {
+      "close": "Închide terminalul",
+      "minimize": "Minimizează terminalul",
+      "restoreMinimize": "Restaurează terminalul",
+      "expand": "Maximizează terminalul",
+      "restoreExpand": "Restaurează dimensiunea terminalului"
+    },
+    "tabs": {
+      "rename": "Redenumește {name}",
+      "close": "Închide {name}",
+      "create": "Creează tab",
+      "limitReached": "Limita de sesiuni atinsă"
+    },
+    "search": {
+      "placeholder": "Filtrează istoricul de comenzi…",
+      "hide": "Ascunde căutarea"
+    },
+    "input": {
+      "placeholder": "tastează o comandă…",
+      "submit": "Execută comanda"
+    },
+    "fontSize": {
+      "label": "Mărimea fontului",
+      "decrease": "Micșorează fontul",
+      "decreaseTitle": "Micșorează fontul (Ctrl+-)",
+      "increase": "Mărește fontul",
+      "increaseTitle": "Mărește fontul (Ctrl++)"
+    },
+    "settings": {
+      "title": "Setări terminal",
+      "resetAllTitle": "Resetează toate setările (inclusiv dimensiunea)",
+      "resetAllLabel": "Resetează tot",
+      "closeTitle": "Închide setările",
+      "closeLabel": "Închide setările",
+      "themeLabel": "Temă",
+      "fontLabel": "Font terminal",
+      "scrollbackLabel": "Istoric",
+      "scrollbackOption": "{count, plural, =0 {nicio comandă} =1 {1 comandă} other {# de comenzi}}",
+      "darkSuffix": "întunecat",
+      "lightSuffix": "luminos",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "Comenzi rapide",
+    "shortcuts": {
+      "runCommand": "Execută comanda",
+      "autocomplete": "Autocompletare",
+      "history": "Istoric și sugestii",
+      "clearOutput": "Șterge ieșirea",
+      "resetTerminal": "Resetează terminalul",
+      "toggleSearch": "Comută căutarea",
+      "increaseFontSize": "Mărește fontul",
+      "decreaseFontSize": "Micșorează fontul"
+    },
+    "closeMessages": [
+      "Bună încercare! Nu mă poți închide.",
+      "Nu plec nicăieri. Încearcă „help\"!",
+      "Nu. Acest terminal are probleme de încredere cu butoanele de închidere.",
+      "Eroare 418: sunt un ceainic, nu o fereastră închidere.",
+      "sudo rm -rf / ? Hmm… nu.",
+      "Chiar credeai că va funcționa?",
+      "Să mă închizi? În aceste vremuri?",
+      "Sunt construit altfel. Încearcă „contact\"."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Muncă",
+      "Profile": "Profil",
+      "Guestbook": "Carte de oaspeți",
+      "Spotify": "Spotify",
+      "Theme": "Temă",
+      "Terminal": "Terminal"
+    },
+    "descriptions": {
+      "projects": "Ce am construit, lansat sau la ce am contribuit",
+      "experiences": "Experiența mea profesională și realizările",
+      "about": "Mai multe despre mine, interese și obiective",
+      "skills": "Competențe tehnice și stack",
+      "education": "Educația mea",
+      "contact": "Email, social media și căi de contact",
+      "guestbook": "Afișează ajutorul pentru subcomenzile cărții de oaspeți",
+      "cv": "Previzualizează și descarcă CV-ul meu PDF",
+      "spotify": "Afișează ajutorul pentru subcomenzile Spotify",
+      "theme": "Afișează sau schimbă tema interfeței",
+      "help": "Afișează toate comenzile disponibile și descrierile",
+      "clear": "Șterge toate comenzile și ieșirea anterioare",
+      "reset": "Resetează terminalul la ecranul de bun venit",
+      "stats": "Afișează activitatea de programare, GitHub și vizitatori",
+      "repo": "Deschide codul sursă al acestui portofoliu",
+      "echo": "Afișează un mesaj în terminal",
+      "spotifyNow": "Afișează melodia care se redă acum",
+      "spotifyTop": "Afișează melodiile mele preferate",
+      "spotifyHistory": "Afișează istoricul de ascultare",
+      "guestbookRead": "Răsfoiește cele mai recente intrări din cartea de oaspeți",
+      "guestbookSign": "Lasă un mesaj în cartea de oaspeți",
+      "themeList": "Afișează toate temele disponibile",
+      "themeSet": "Aplică o temă după nume (ex. theme set dracula)",
+      "themePreview": "Previzualizează o temă fără a o aplica",
+      "themeCreate": "Creează o temă personalizată cu editor vizual sau JSON",
+      "themeValidate": "Verifică contrastul temei curente",
+      "lang": "Afișează sau schimbă limba activă",
+      "langSet": "Schimbă limba (ex. lang set fr)",
+      "langAuto": "Reactivează detectarea automată a limbii"
+    },
+    "help": {
+      "available": "Comenzi disponibile",
+      "tip": "Sfat: dă clic pe o comandă sau scrie-o în prompt pentru a o executa.",
+      "subCommands": "Subcomenzi"
+    },
+    "notFound": {
+      "title": "zsh: comandă negăsită: {input}",
+      "didYouMean": "Ai vrut să spui {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Utilizare:",
+      "examplePrefix": "Exemplu:",
+      "tooManyArgs": "Prea multe argumente.",
+      "unknown": "{label} necunoscut: {sub}.",
+      "useOneOf": "Folosește una din: {options}.",
+      "subcommand": "subcomandă"
+    },
+    "about": {
+      "firstName": "Prenume",
+      "lastName": "Nume",
+      "age": "Vârstă",
+      "yearsOld": "{years, plural, one {# an} other {# ani}}",
+      "location": "Locație",
+      "email": "Email",
+      "languages": "Limbi",
+      "hobbies": "Hobby-uri"
+    },
+    "contact": {
+      "intro": "Prefer email-ul pentru oportunități, cereri freelance sau colaborări tehnice.",
+      "primaryEmail": "Email principal:",
+      "location": "Locație:",
+      "socialProfiles": "Profile sociale:"
+    },
+    "stats": {
+      "totalCodingTime": "Timp total de programare",
+      "topLanguage": "Limbaj principal",
+      "githubStars": "Stele GitHub",
+      "contributions": "Contribuții ({year})",
+      "codingSince": "Programez din",
+      "codingSinceValue": "{since} ({years} ani)",
+      "visitors": "Vizitatori",
+      "failed": "Statisticile nu au putut fi încărcate. Încearcă mai târziu.",
+      "na": "N/A"
+    },
+    "repo": {
+      "starsLabel": "Stele",
+      "forksLabel": "Forks",
+      "licenseLabel": "Licență",
+      "copyAria": "Copiază în clipboard",
+      "copy": "Copiază",
+      "copiedAria": "Copiat",
+      "copiedNotice": "Copiat!",
+      "copyFailedAria": "Eroare la copiere",
+      "copyFailedNotice": "Reîncearcă",
+      "fallback": "Codul sursă al acestui portofoliu este disponibil aici:"
+    },
+    "cv": {
+      "openPreview": "Deschide previzualizarea PDF",
+      "downloadPdf": "Descarcă PDF",
+      "endpointsLabel": "Endpoints:",
+      "endpointsAnd": "și"
+    },
+    "projects": {
+      "openLabel": "Deschide proiectul: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "navighează",
+    "complete": "completează",
+    "run": "execută"
+  },
+  "Lang": {
+    "subCommandsTitle": "Comenzi de limbă",
+    "currentLabel": "Limba actuală:",
+    "availablePrefix": "Disponibile:",
+    "usagePrefix": "Utilizare:",
+    "switching": "Se schimbă în {locale}…",
+    "autoCleared": "Limba va fi detectată automat la următoarea încărcare.",
+    "missingCode": "Lipsește codul limbii.",
+    "unknownLocale": "Limbă necunoscută: {code}.",
+    "unknownSubcommand": "Subcomandă necunoscută: {sub}.",
+    "tooManyArgs": "Prea multe argumente.",
+    "switcher": {
+      "ariaLabel": "Schimbă limba",
+      "title": "Schimbă limba"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Nomad digital",
+      "nextjs": "Next.js",
+      "uiEngineering": "Inginerie UI",
+      "openSource": "Open source"
+    },
+    "footer": "Portofoliu"
+  },
+  "Guestbook": {
+    "title": "Comenzi cartea de oaspeți",
+    "validation": {
+      "nameMin": "Numele trebuie să aibă cel puțin {min} caractere.",
+      "nameMax": "Numele nu poate depăși {max} caractere.",
+      "messageMin": "Mesajul trebuie să aibă cel puțin {min} caractere.",
+      "messageMax": "Mesajul nu poate depăși {max} caractere.",
+      "websiteMax": "Website-ul nu poate depăși {max} caractere.",
+      "websiteInvalid": "URL-ul website-ului este invalid."
+    },
+    "sign": {
+      "intro": "Lasă un mesaj în cartea mea de oaspeți.",
+      "namePlaceholder": "Numele tău",
+      "websitePlaceholder": "Website (opțional)",
+      "messagePlaceholder": "Mesajul tău",
+      "submit": "Semnează",
+      "submitPending": "Intrare trimisă și în așteptare de moderare.",
+      "submitPublishedPrefix": "Intrare publicată!",
+      "submitFailed": "Intrarea cărții de oaspeți nu a putut fi trimisă."
+    },
+    "read": {
+      "headerLabel": "carte de oaspeți",
+      "entry": "{count, plural, =0 {0 intrări} one {# intrare} other {# intrări}}",
+      "unavailable": "indisponibil",
+      "refresh": "reîmprospătează",
+      "refreshAria": "Reîmprospătează intrările cărții de oaspeți",
+      "errorPrefix": "eroare:",
+      "errorFallback": "Intrările cărții de oaspeți nu au putut fi încărcate.",
+      "noneFromCountryPrefix": "Nicio intrare din",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Încă nu există intrări. Rulează",
+      "noneYetSuffix": "pentru a fi primul.",
+      "filter": {
+        "ariaLabel": "Filtrează intrările cărții de oaspeți",
+        "label": "filtrează",
+        "sort": "sortează",
+        "newest": "cele mai noi",
+        "oldest": "cele mai vechi",
+        "country": "țară",
+        "allCountries": "Toate țările",
+        "clearCountry": "Șterge filtrul de țară"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Comenzi Spotify",
+    "notPlaying": "Nu se redă nimic 😕",
+    "unavailable": "Spotify nu este configurat sau este indisponibil.",
+    "nowPlayingPrefix": "Acum pe Spotify:",
+    "openNowPlayingAria": "Deschide melodia curentă: {name}",
+    "openRecentlyPlayedAria": "Deschide melodia redată recent: {name}",
+    "openTopTrackAria": "Deschide melodia preferată: {name}",
+    "openTopAlbumAria": "Deschide albumul preferat: {name}",
+    "topTracks": {
+      "rank": "Loc",
+      "track": "Melodie",
+      "album": "Album"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Tema curentă:",
+    "darkSuffix": "întunecat",
+    "lightSuffix": "luminos",
+    "usagePrefix": "Utilizare:",
+    "themeCommandsTitle": "Comenzi temă",
+    "noArgs": "{command} nu acceptă argumente.",
+    "missingName": "Lipsește numele temei.",
+    "tooManyArgs": "Prea multe argumente.",
+    "usageSet": "Utilizare: theme set <nume>",
+    "usagePreview": "Utilizare: theme preview <nume>",
+    "unknownSubcommand": "Subcomandă necunoscută: {sub}. Folosește una din: {commands}.",
+    "list": {
+      "available": "Teme disponibile ({count}):",
+      "tip": "Dă clic pe o temă pentru a o aplica.",
+      "active": "(activă)",
+      "custom": "personalizată",
+      "deleteAria": "Șterge {label}"
+    },
+    "set": {
+      "unknownAvailable": "Temă necunoscută: {name}. Teme disponibile:",
+      "updated": "Tema schimbată în {label}.",
+      "active": "Tema activă: {label} ({mode})"
+    }
+  }
+}

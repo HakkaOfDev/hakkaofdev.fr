@@ -1,0 +1,336 @@
+{
+  "_meta": {
+    "needsReview": true,
+    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+  },
+  "Metadata": {
+    "title": "Alexandre Gossard | 디지털 노마드 & 소프트웨어 엔지니어",
+    "description": "디지털 노마드이자 소프트웨어 엔지니어 @kabila.app. 오픈소스 애호가로서 React와 Next.js로 고성능 웹 경험을 만들고 있습니다.",
+    "jobTitle": "소프트웨어 엔지니어",
+    "location": "프랑스 샬롱앙샹파뉴",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "프론트엔드 개발자",
+      "디지털 노마드",
+      "오픈소스",
+      "최신 기술",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "소프트웨어 엔지니어",
+      "프리랜서"
+    ]
+  },
+  "Footer": {
+    "madeBy": "<name></name>가 <heart></heart>으로 만들었습니다"
+  },
+  "Welcome": {
+    "greeting": "~ 환영합니다 <wave>👋</wave>",
+    "intro": "<tagline>디지털 노마드</tagline> · <employer>{employerName}</employer>의 <job>소프트웨어 엔지니어</job>",
+    "tags": {
+      "openSource": "오픈소스 옹호자",
+      "calisthenics": "캘리스테닉스 애호가",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "시작",
+      "work": "업무",
+      "profile": "프로필",
+      "extras": "기타",
+      "utils": "유틸리티"
+    }
+  },
+  "Terminal": {
+    "noMatch": "\"{query}\"와 일치하는 명령이 없습니다.",
+    "header": {
+      "resetTitle": "터미널 재설정 (Ctrl+R)",
+      "resetLabel": "터미널 재설정",
+      "settingsTitle": "터미널 설정",
+      "settingsLabel": "터미널 설정"
+    },
+    "trafficLights": {
+      "close": "터미널 닫기",
+      "minimize": "터미널 최소화",
+      "restoreMinimize": "터미널 복원",
+      "expand": "터미널 최대화",
+      "restoreExpand": "터미널 크기 복원"
+    },
+    "tabs": {
+      "rename": "{name} 이름 변경",
+      "close": "{name} 닫기",
+      "create": "탭 생성",
+      "limitReached": "세션 제한에 도달했습니다"
+    },
+    "search": {
+      "placeholder": "명령 기록 필터링…",
+      "hide": "검색 숨기기"
+    },
+    "input": {
+      "placeholder": "명령 입력…",
+      "submit": "명령 실행"
+    },
+    "fontSize": {
+      "label": "글꼴 크기",
+      "decrease": "글꼴 작게",
+      "decreaseTitle": "글꼴 작게 (Ctrl+-)",
+      "increase": "글꼴 크게",
+      "increaseTitle": "글꼴 크게 (Ctrl++)"
+    },
+    "settings": {
+      "title": "터미널 설정",
+      "resetAllTitle": "모든 설정 재설정 (크기 포함)",
+      "resetAllLabel": "모두 재설정",
+      "closeTitle": "설정 닫기",
+      "closeLabel": "설정 닫기",
+      "themeLabel": "테마",
+      "fontLabel": "터미널 글꼴",
+      "scrollbackLabel": "기록",
+      "scrollbackOption": "{count, plural, =0 {명령 없음} other {# 명령}}",
+      "darkSuffix": "다크",
+      "lightSuffix": "라이트",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "키보드 단축키",
+    "shortcuts": {
+      "runCommand": "명령 실행",
+      "autocomplete": "자동 완성",
+      "history": "기록 및 제안",
+      "clearOutput": "출력 지우기",
+      "resetTerminal": "터미널 재설정",
+      "toggleSearch": "검색 전환",
+      "increaseFontSize": "글꼴 크게",
+      "decreaseFontSize": "글꼴 작게"
+    },
+    "closeMessages": [
+      "좋은 시도! 하지만 저를 닫을 수는 없어요.",
+      "어디 가지 않아요. 'help'를 시도해 보세요!",
+      "안 됩니다. 이 터미널은 닫기 버튼에 대한 신뢰 문제가 있어요.",
+      "오류 418: 저는 찻주전자입니다. 닫을 수 있는 창이 아니에요.",
+      "sudo rm -rf / ? 음… 안 돼요.",
+      "정말 그게 통할 거라고 생각했나요?",
+      "저를 닫는다고요? 이 시국에?",
+      "저는 다르게 만들어졌어요. 'contact'를 시도해 보세요."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "업무",
+      "Profile": "프로필",
+      "Guestbook": "방명록",
+      "Spotify": "Spotify",
+      "Theme": "테마",
+      "Terminal": "터미널"
+    },
+    "descriptions": {
+      "projects": "내가 만들고, 출시하고, 기여한 것들",
+      "experiences": "경력 및 성과",
+      "about": "배경, 관심사, 목표에 대해 더 알아보기",
+      "skills": "기술 스택과 도구",
+      "education": "학력",
+      "contact": "이메일, SNS 및 연락 방법",
+      "guestbook": "방명록 하위 명령 도움말 표시",
+      "cv": "내 PDF 이력서 미리보기 및 다운로드",
+      "spotify": "Spotify 하위 명령 도움말 표시",
+      "theme": "UI 테마 표시 또는 변경",
+      "help": "사용 가능한 모든 명령과 설명 표시",
+      "clear": "이전 모든 명령과 출력 지우기",
+      "reset": "터미널을 환영 화면으로 재설정",
+      "stats": "코딩 활동, GitHub 지표, 방문자 수 표시",
+      "repo": "이 포트폴리오의 소스 코드 열기",
+      "echo": "터미널에 메시지 출력",
+      "spotifyNow": "현재 재생 중인 곡 표시",
+      "spotifyTop": "내 즐겨 듣는 트랙 표시",
+      "spotifyHistory": "내 청취 기록 표시",
+      "guestbookRead": "최신 방명록 항목 둘러보기",
+      "guestbookSign": "방명록에 메시지 남기기",
+      "themeList": "사용 가능한 모든 테마 표시",
+      "themeSet": "이름으로 테마 적용 (예: theme set dracula)",
+      "themePreview": "적용 없이 테마 미리보기",
+      "themeCreate": "비주얼 또는 JSON 에디터로 사용자 지정 테마 생성",
+      "themeValidate": "현재 테마의 대비 확인",
+      "lang": "활성 언어 표시 또는 변경",
+      "langSet": "언어 변경 (예: lang set fr)",
+      "langAuto": "브라우저 언어 자동 감지 다시 활성화"
+    },
+    "help": {
+      "available": "사용 가능한 명령",
+      "tip": "팁: 위의 명령을 클릭하거나 프롬프트에 입력해 실행하세요.",
+      "subCommands": "하위 명령"
+    },
+    "notFound": {
+      "title": "zsh: 명령을 찾을 수 없음: {input}",
+      "didYouMean": "혹시 {suggestions}을(를) 의미하셨나요?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "사용법:",
+      "examplePrefix": "예:",
+      "tooManyArgs": "인수가 너무 많습니다.",
+      "unknown": "알 수 없는 {label}: {sub}.",
+      "useOneOf": "다음 중 하나를 사용하세요: {options}.",
+      "subcommand": "하위 명령"
+    },
+    "about": {
+      "firstName": "이름",
+      "lastName": "성",
+      "age": "나이",
+      "yearsOld": "{years}세",
+      "location": "위치",
+      "email": "이메일",
+      "languages": "언어",
+      "hobbies": "취미"
+    },
+    "contact": {
+      "intro": "기회, 프리랜서 의뢰, 기술 협업은 이메일을 선호합니다.",
+      "primaryEmail": "주 이메일:",
+      "location": "위치:",
+      "socialProfiles": "SNS 프로필:"
+    },
+    "stats": {
+      "totalCodingTime": "총 코딩 시간",
+      "topLanguage": "주요 언어",
+      "githubStars": "GitHub 스타",
+      "contributions": "기여 ({year})",
+      "codingSince": "코딩 시작",
+      "codingSinceValue": "{since} ({years}년)",
+      "visitors": "방문자",
+      "failed": "통계를 가져올 수 없습니다. 나중에 다시 시도하세요.",
+      "na": "없음"
+    },
+    "repo": {
+      "starsLabel": "스타",
+      "forksLabel": "포크",
+      "licenseLabel": "라이선스",
+      "copyAria": "클립보드에 복사",
+      "copy": "복사",
+      "copiedAria": "복사됨",
+      "copiedNotice": "복사됨!",
+      "copyFailedAria": "복사 실패",
+      "copyFailedNotice": "다시 시도",
+      "fallback": "이 포트폴리오의 소스 코드는 여기에 있습니다:"
+    },
+    "cv": {
+      "openPreview": "PDF 미리보기 열기",
+      "downloadPdf": "PDF 다운로드",
+      "endpointsLabel": "엔드포인트:",
+      "endpointsAnd": "및"
+    },
+    "projects": {
+      "openLabel": "프로젝트 열기: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "이동",
+    "complete": "완성",
+    "run": "실행"
+  },
+  "Lang": {
+    "subCommandsTitle": "언어 명령",
+    "currentLabel": "현재 언어:",
+    "availablePrefix": "사용 가능:",
+    "usagePrefix": "사용법:",
+    "switching": "{locale}(으)로 전환 중…",
+    "autoCleared": "다음 로드 시 언어가 자동으로 감지됩니다.",
+    "missingCode": "언어 코드가 누락되었습니다.",
+    "unknownLocale": "알 수 없는 언어: {code}.",
+    "unknownSubcommand": "알 수 없는 하위 명령: {sub}.",
+    "tooManyArgs": "인수가 너무 많습니다.",
+    "switcher": {
+      "ariaLabel": "언어 변경",
+      "title": "언어 변경"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "디지털 노마드",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI 엔지니어링",
+      "openSource": "오픈소스"
+    },
+    "footer": "포트폴리오"
+  },
+  "Guestbook": {
+    "title": "방명록 명령",
+    "validation": {
+      "nameMin": "이름은 {min}자 이상이어야 합니다.",
+      "nameMax": "이름은 {max}자 이하여야 합니다.",
+      "messageMin": "메시지는 {min}자 이상이어야 합니다.",
+      "messageMax": "메시지는 {max}자 이하여야 합니다.",
+      "websiteMax": "웹사이트는 {max}자 이하여야 합니다.",
+      "websiteInvalid": "웹사이트 URL이 유효하지 않습니다."
+    },
+    "sign": {
+      "intro": "방명록에 메시지를 남겨주세요.",
+      "namePlaceholder": "이름",
+      "websitePlaceholder": "웹사이트 (선택사항)",
+      "messagePlaceholder": "메시지",
+      "submit": "서명",
+      "submitPending": "항목이 제출되어 모더레이션 대기 중입니다.",
+      "submitPublishedPrefix": "항목이 게시되었습니다!",
+      "submitFailed": "방명록 항목을 제출할 수 없습니다."
+    },
+    "read": {
+      "headerLabel": "방명록",
+      "entry": "{count}개 항목",
+      "unavailable": "사용 불가",
+      "refresh": "새로고침",
+      "refreshAria": "방명록 항목 새로고침",
+      "errorPrefix": "오류:",
+      "errorFallback": "방명록 항목을 로드할 수 없습니다.",
+      "noneFromCountryPrefix": "다음 국가에서 항목 없음:",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "아직 항목이 없습니다.",
+      "noneYetSuffix": "을(를) 실행해 첫 번째가 되어보세요.",
+      "filter": {
+        "ariaLabel": "방명록 항목 필터링",
+        "label": "필터",
+        "sort": "정렬",
+        "newest": "최신순",
+        "oldest": "오래된순",
+        "country": "국가",
+        "allCountries": "모든 국가",
+        "clearCountry": "국가 필터 지우기"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Spotify 명령",
+    "notPlaying": "재생 중 아님 😕",
+    "unavailable": "Spotify가 구성되지 않았거나 사용할 수 없습니다.",
+    "nowPlayingPrefix": "Spotify에서 재생 중:",
+    "openNowPlayingAria": "현재 트랙 열기: {name}",
+    "openRecentlyPlayedAria": "최근 재생 트랙 열기: {name}",
+    "openTopTrackAria": "즐겨 듣는 트랙 열기: {name}",
+    "openTopAlbumAria": "즐겨 듣는 앨범 열기: {name}",
+    "topTracks": {
+      "rank": "순위",
+      "track": "트랙",
+      "album": "앨범"
+    }
+  },
+  "Theme": {
+    "currentLabel": "현재 테마:",
+    "darkSuffix": "다크",
+    "lightSuffix": "라이트",
+    "usagePrefix": "사용법:",
+    "themeCommandsTitle": "테마 명령",
+    "noArgs": "{command}은(는) 인수를 받지 않습니다.",
+    "missingName": "테마 이름이 누락되었습니다.",
+    "tooManyArgs": "인수가 너무 많습니다.",
+    "usageSet": "사용법: theme set <이름>",
+    "usagePreview": "사용법: theme preview <이름>",
+    "unknownSubcommand": "알 수 없는 하위 명령: {sub}. 다음 중 하나를 사용하세요: {commands}.",
+    "list": {
+      "available": "사용 가능한 테마 ({count}):",
+      "tip": "테마를 클릭해 적용하세요.",
+      "active": "(활성)",
+      "custom": "사용자 지정",
+      "deleteAria": "{label} 삭제"
+    },
+    "set": {
+      "unknownAvailable": "알 수 없는 테마: {name}. 사용 가능한 테마:",
+      "updated": "테마가 {label}(으)로 업데이트되었습니다.",
+      "active": "활성 테마: {label} ({mode})"
+    }
+  }
+}

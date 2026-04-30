@@ -1,0 +1,336 @@
+{
+  "_meta": {
+    "needsReview": true,
+    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+  },
+  "Metadata": {
+    "title": "Alexandre Gossard | Du mục số & Kỹ sư phần mềm",
+    "description": "Du mục số và kỹ sư phần mềm @kabila.app. Đam mê mã nguồn mở, tôi tạo trải nghiệm web hiệu năng cao với React và Next.js.",
+    "jobTitle": "Kỹ sư phần mềm",
+    "location": "Châlons-en-Champagne, Pháp",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Lập trình viên frontend",
+      "Du mục số",
+      "Mã nguồn mở",
+      "Công nghệ hiện đại",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Kỹ sư phần mềm",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Tạo bởi <name></name> với <heart></heart>"
+  },
+  "Welcome": {
+    "greeting": "~ Chào mừng <wave>👋</wave>",
+    "intro": "<tagline>Du mục số</tagline> · <job>Kỹ sư phần mềm</job> tại <employer>{employerName}</employer>",
+    "tags": {
+      "openSource": "Người ủng hộ mã nguồn mở",
+      "calisthenics": "Người yêu thích calisthenics",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Bắt đầu",
+      "work": "Công việc",
+      "profile": "Hồ sơ",
+      "extras": "Khác",
+      "utils": "Tiện ích"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Không có lệnh nào khớp với \"{query}\".",
+    "header": {
+      "resetTitle": "Đặt lại terminal (Ctrl+R)",
+      "resetLabel": "Đặt lại terminal",
+      "settingsTitle": "Cài đặt terminal",
+      "settingsLabel": "Cài đặt terminal"
+    },
+    "trafficLights": {
+      "close": "Đóng terminal",
+      "minimize": "Thu nhỏ terminal",
+      "restoreMinimize": "Khôi phục terminal",
+      "expand": "Mở rộng terminal",
+      "restoreExpand": "Khôi phục kích thước terminal"
+    },
+    "tabs": {
+      "rename": "Đổi tên {name}",
+      "close": "Đóng {name}",
+      "create": "Tạo tab",
+      "limitReached": "Đã đạt giới hạn phiên"
+    },
+    "search": {
+      "placeholder": "Lọc lịch sử lệnh…",
+      "hide": "Ẩn tìm kiếm"
+    },
+    "input": {
+      "placeholder": "nhập một lệnh…",
+      "submit": "Chạy lệnh"
+    },
+    "fontSize": {
+      "label": "Kích cỡ font",
+      "decrease": "Giảm cỡ font",
+      "decreaseTitle": "Giảm cỡ font (Ctrl+-)",
+      "increase": "Tăng cỡ font",
+      "increaseTitle": "Tăng cỡ font (Ctrl++)"
+    },
+    "settings": {
+      "title": "Cài đặt terminal",
+      "resetAllTitle": "Đặt lại tất cả cài đặt (bao gồm kích thước)",
+      "resetAllLabel": "Đặt lại tất cả",
+      "closeTitle": "Đóng cài đặt",
+      "closeLabel": "Đóng cài đặt",
+      "themeLabel": "Chủ đề",
+      "fontLabel": "Font terminal",
+      "scrollbackLabel": "Lịch sử",
+      "scrollbackOption": "{count, plural, =0 {không có lệnh} other {# lệnh}}",
+      "darkSuffix": "tối",
+      "lightSuffix": "sáng",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "Phím tắt",
+    "shortcuts": {
+      "runCommand": "Chạy lệnh",
+      "autocomplete": "Tự động hoàn thành",
+      "history": "Lịch sử và gợi ý",
+      "clearOutput": "Xóa đầu ra",
+      "resetTerminal": "Đặt lại terminal",
+      "toggleSearch": "Bật/tắt tìm kiếm",
+      "increaseFontSize": "Tăng cỡ font",
+      "decreaseFontSize": "Giảm cỡ font"
+    },
+    "closeMessages": [
+      "Cố gắng tốt! Nhưng bạn không thể đóng tôi.",
+      "Tôi không đi đâu cả. Hãy thử 'help'!",
+      "Không. Terminal này có vấn đề về niềm tin với nút đóng.",
+      "Lỗi 418: Tôi là ấm trà, không phải cửa sổ có thể đóng.",
+      "sudo rm -rf / ? Ừm… không.",
+      "Bạn thực sự nghĩ rằng nó sẽ hoạt động sao?",
+      "Đóng tôi? Trong thời điểm này?",
+      "Tôi được tạo ra khác biệt. Hãy thử 'contact'."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Công việc",
+      "Profile": "Hồ sơ",
+      "Guestbook": "Sổ lưu bút",
+      "Spotify": "Spotify",
+      "Theme": "Chủ đề",
+      "Terminal": "Terminal"
+    },
+    "descriptions": {
+      "projects": "Những thứ tôi đã xây dựng, ra mắt hoặc đóng góp",
+      "experiences": "Kinh nghiệm và thành tựu nghề nghiệp",
+      "about": "Tìm hiểu thêm về tôi, sở thích và mục tiêu",
+      "skills": "Kỹ năng kỹ thuật và stack",
+      "education": "Học vấn",
+      "contact": "Email, mạng xã hội và cách liên hệ",
+      "guestbook": "Hiển thị trợ giúp các lệnh con sổ lưu bút",
+      "cv": "Xem trước và tải xuống CV PDF",
+      "spotify": "Hiển thị trợ giúp các lệnh con Spotify",
+      "theme": "Hiển thị hoặc thay đổi chủ đề giao diện",
+      "help": "Hiển thị tất cả lệnh khả dụng và mô tả",
+      "clear": "Xóa tất cả lệnh và đầu ra trước đó",
+      "reset": "Đặt lại terminal về màn hình chào mừng",
+      "stats": "Hiển thị hoạt động lập trình, GitHub và khách truy cập",
+      "repo": "Mở mã nguồn portfolio này",
+      "echo": "In thông báo trong terminal",
+      "spotifyNow": "Hiển thị bài hát đang phát",
+      "spotifyTop": "Hiển thị bài hát yêu thích",
+      "spotifyHistory": "Hiển thị lịch sử nghe",
+      "guestbookRead": "Duyệt các mục mới nhất trong sổ lưu bút",
+      "guestbookSign": "Để lại tin nhắn trong sổ lưu bút",
+      "themeList": "Hiển thị tất cả chủ đề khả dụng",
+      "themeSet": "Áp dụng chủ đề theo tên (ví dụ: theme set dracula)",
+      "themePreview": "Xem trước chủ đề mà không áp dụng",
+      "themeCreate": "Tạo chủ đề tùy chỉnh bằng trình soạn thảo trực quan hoặc JSON",
+      "themeValidate": "Kiểm tra độ tương phản của chủ đề hiện tại",
+      "lang": "Hiển thị hoặc thay đổi ngôn ngữ hoạt động",
+      "langSet": "Đổi ngôn ngữ (ví dụ: lang set fr)",
+      "langAuto": "Bật lại tự động phát hiện ngôn ngữ"
+    },
+    "help": {
+      "available": "Lệnh khả dụng",
+      "tip": "Mẹo: nhấp vào lệnh ở trên hoặc nhập vào dấu nhắc để chạy.",
+      "subCommands": "Lệnh con"
+    },
+    "notFound": {
+      "title": "zsh: không tìm thấy lệnh: {input}",
+      "didYouMean": "Bạn có ý định {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Cách dùng:",
+      "examplePrefix": "Ví dụ:",
+      "tooManyArgs": "Quá nhiều đối số.",
+      "unknown": "{label} không xác định: {sub}.",
+      "useOneOf": "Sử dụng một trong: {options}.",
+      "subcommand": "lệnh con"
+    },
+    "about": {
+      "firstName": "Tên",
+      "lastName": "Họ",
+      "age": "Tuổi",
+      "yearsOld": "{years} tuổi",
+      "location": "Vị trí",
+      "email": "Email",
+      "languages": "Ngôn ngữ",
+      "hobbies": "Sở thích"
+    },
+    "contact": {
+      "intro": "Tôi ưu tiên email cho cơ hội, yêu cầu freelance hoặc hợp tác kỹ thuật.",
+      "primaryEmail": "Email chính:",
+      "location": "Vị trí:",
+      "socialProfiles": "Mạng xã hội:"
+    },
+    "stats": {
+      "totalCodingTime": "Tổng thời gian lập trình",
+      "topLanguage": "Ngôn ngữ chính",
+      "githubStars": "Sao GitHub",
+      "contributions": "Đóng góp ({year})",
+      "codingSince": "Lập trình từ",
+      "codingSinceValue": "{since} ({years} năm)",
+      "visitors": "Khách truy cập",
+      "failed": "Không thể tải số liệu thống kê. Hãy thử lại sau.",
+      "na": "Không có"
+    },
+    "repo": {
+      "starsLabel": "Sao",
+      "forksLabel": "Forks",
+      "licenseLabel": "Giấy phép",
+      "copyAria": "Sao chép vào clipboard",
+      "copy": "Sao chép",
+      "copiedAria": "Đã sao chép",
+      "copiedNotice": "Đã sao chép!",
+      "copyFailedAria": "Sao chép thất bại",
+      "copyFailedNotice": "Thử lại",
+      "fallback": "Mã nguồn portfolio này có sẵn tại đây:"
+    },
+    "cv": {
+      "openPreview": "Mở xem trước PDF",
+      "downloadPdf": "Tải xuống PDF",
+      "endpointsLabel": "Endpoints:",
+      "endpointsAnd": "và"
+    },
+    "projects": {
+      "openLabel": "Mở dự án: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "điều hướng",
+    "complete": "hoàn thành",
+    "run": "chạy"
+  },
+  "Lang": {
+    "subCommandsTitle": "Lệnh ngôn ngữ",
+    "currentLabel": "Ngôn ngữ hiện tại:",
+    "availablePrefix": "Khả dụng:",
+    "usagePrefix": "Cách dùng:",
+    "switching": "Đang chuyển sang {locale}…",
+    "autoCleared": "Ngôn ngữ sẽ được phát hiện tự động vào lần tải tiếp theo.",
+    "missingCode": "Thiếu mã ngôn ngữ.",
+    "unknownLocale": "Ngôn ngữ không xác định: {code}.",
+    "unknownSubcommand": "Lệnh con không xác định: {sub}.",
+    "tooManyArgs": "Quá nhiều đối số.",
+    "switcher": {
+      "ariaLabel": "Đổi ngôn ngữ",
+      "title": "Đổi ngôn ngữ"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Du mục số",
+      "nextjs": "Next.js",
+      "uiEngineering": "Kỹ thuật UI",
+      "openSource": "Mã nguồn mở"
+    },
+    "footer": "Portfolio"
+  },
+  "Guestbook": {
+    "title": "Lệnh sổ lưu bút",
+    "validation": {
+      "nameMin": "Tên phải có ít nhất {min} ký tự.",
+      "nameMax": "Tên không được vượt quá {max} ký tự.",
+      "messageMin": "Tin nhắn phải có ít nhất {min} ký tự.",
+      "messageMax": "Tin nhắn không được vượt quá {max} ký tự.",
+      "websiteMax": "Trang web không được vượt quá {max} ký tự.",
+      "websiteInvalid": "URL trang web không hợp lệ."
+    },
+    "sign": {
+      "intro": "Để lại tin nhắn trong sổ lưu bút của tôi.",
+      "namePlaceholder": "Tên của bạn",
+      "websitePlaceholder": "Trang web (tùy chọn)",
+      "messagePlaceholder": "Tin nhắn của bạn",
+      "submit": "Ký tên",
+      "submitPending": "Mục đã được gửi và đang chờ kiểm duyệt.",
+      "submitPublishedPrefix": "Mục đã được xuất bản!",
+      "submitFailed": "Không thể gửi mục sổ lưu bút."
+    },
+    "read": {
+      "headerLabel": "sổ lưu bút",
+      "entry": "{count} mục",
+      "unavailable": "không khả dụng",
+      "refresh": "làm mới",
+      "refreshAria": "Làm mới các mục sổ lưu bút",
+      "errorPrefix": "lỗi:",
+      "errorFallback": "Không thể tải các mục sổ lưu bút.",
+      "noneFromCountryPrefix": "Không có mục nào từ",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Chưa có mục nào.",
+      "noneYetSuffix": "để là người đầu tiên.",
+      "filter": {
+        "ariaLabel": "Lọc các mục sổ lưu bút",
+        "label": "lọc",
+        "sort": "sắp xếp",
+        "newest": "mới nhất",
+        "oldest": "cũ nhất",
+        "country": "quốc gia",
+        "allCountries": "Tất cả quốc gia",
+        "clearCountry": "Xóa bộ lọc quốc gia"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Lệnh Spotify",
+    "notPlaying": "Không có gì đang phát 😕",
+    "unavailable": "Spotify chưa được cấu hình hoặc không khả dụng.",
+    "nowPlayingPrefix": "Đang phát trên Spotify:",
+    "openNowPlayingAria": "Mở bài đang phát: {name}",
+    "openRecentlyPlayedAria": "Mở bài phát gần đây: {name}",
+    "openTopTrackAria": "Mở bài hát yêu thích: {name}",
+    "openTopAlbumAria": "Mở album yêu thích: {name}",
+    "topTracks": {
+      "rank": "Hạng",
+      "track": "Bài hát",
+      "album": "Album"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Chủ đề hiện tại:",
+    "darkSuffix": "tối",
+    "lightSuffix": "sáng",
+    "usagePrefix": "Cách dùng:",
+    "themeCommandsTitle": "Lệnh chủ đề",
+    "noArgs": "{command} không nhận đối số.",
+    "missingName": "Thiếu tên chủ đề.",
+    "tooManyArgs": "Quá nhiều đối số.",
+    "usageSet": "Cách dùng: theme set <tên>",
+    "usagePreview": "Cách dùng: theme preview <tên>",
+    "unknownSubcommand": "Lệnh con không xác định: {sub}. Sử dụng một trong: {commands}.",
+    "list": {
+      "available": "Chủ đề khả dụng ({count}):",
+      "tip": "Nhấp vào chủ đề để áp dụng.",
+      "active": "(đang dùng)",
+      "custom": "tùy chỉnh",
+      "deleteAria": "Xóa {label}"
+    },
+    "set": {
+      "unknownAvailable": "Chủ đề không xác định: {name}. Chủ đề khả dụng:",
+      "updated": "Đã cập nhật chủ đề thành {label}.",
+      "active": "Chủ đề đang dùng: {label} ({mode})"
+    }
+  }
+}

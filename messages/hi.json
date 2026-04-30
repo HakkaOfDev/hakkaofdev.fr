@@ -1,0 +1,336 @@
+{
+  "_meta": {
+    "needsReview": true,
+    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+  },
+  "Metadata": {
+    "title": "अलेक्जेंडर गोसार्ड | डिजिटल खानाबदोश और सॉफ्टवेयर इंजीनियर",
+    "description": "डिजिटल खानाबदोश और सॉफ्टवेयर इंजीनियर @kabila.app। ओपन सोर्स के शौकीन, React और Next.js के साथ बेहतरीन वेब अनुभव बनाता हूँ।",
+    "jobTitle": "सॉफ्टवेयर इंजीनियर",
+    "location": "शालोन-आं-शोंपान्य, फ्रांस",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "फ्रंटएंड डेवलपर",
+      "डिजिटल खानाबदोश",
+      "ओपन सोर्स",
+      "आधुनिक तकनीक",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "सॉफ्टवेयर इंजीनियर",
+      "फ्रीलांस"
+    ]
+  },
+  "Footer": {
+    "madeBy": "<name></name> द्वारा <heart></heart> से बनाया गया"
+  },
+  "Welcome": {
+    "greeting": "~ स्वागत है <wave>👋</wave>",
+    "intro": "<tagline>डिजिटल खानाबदोश</tagline> · <employer>{employerName}</employer> में <job>सॉफ्टवेयर इंजीनियर</job>",
+    "tags": {
+      "openSource": "ओपन सोर्स समर्थक",
+      "calisthenics": "कैलिस्थेनिक्स प्रेमी",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "शुरू",
+      "work": "काम",
+      "profile": "प्रोफ़ाइल",
+      "extras": "अतिरिक्त",
+      "utils": "उपयोगिता"
+    }
+  },
+  "Terminal": {
+    "noMatch": "\"{query}\" से कोई कमांड मेल नहीं खाती।",
+    "header": {
+      "resetTitle": "टर्मिनल रीसेट करें (Ctrl+R)",
+      "resetLabel": "टर्मिनल रीसेट करें",
+      "settingsTitle": "टर्मिनल सेटिंग्स",
+      "settingsLabel": "टर्मिनल सेटिंग्स"
+    },
+    "trafficLights": {
+      "close": "टर्मिनल बंद करें",
+      "minimize": "टर्मिनल छोटा करें",
+      "restoreMinimize": "टर्मिनल पुनर्स्थापित करें",
+      "expand": "टर्मिनल बड़ा करें",
+      "restoreExpand": "टर्मिनल का आकार पुनर्स्थापित करें"
+    },
+    "tabs": {
+      "rename": "{name} का नाम बदलें",
+      "close": "{name} बंद करें",
+      "create": "टैब बनाएं",
+      "limitReached": "सत्र की सीमा पूरी हो गई"
+    },
+    "search": {
+      "placeholder": "कमांड इतिहास फ़िल्टर करें…",
+      "hide": "खोज छिपाएँ"
+    },
+    "input": {
+      "placeholder": "कमांड टाइप करें…",
+      "submit": "कमांड चलाएं"
+    },
+    "fontSize": {
+      "label": "फ़ॉन्ट आकार",
+      "decrease": "फ़ॉन्ट छोटा करें",
+      "decreaseTitle": "फ़ॉन्ट छोटा करें (Ctrl+-)",
+      "increase": "फ़ॉन्ट बड़ा करें",
+      "increaseTitle": "फ़ॉन्ट बड़ा करें (Ctrl++)"
+    },
+    "settings": {
+      "title": "टर्मिनल सेटिंग्स",
+      "resetAllTitle": "सभी सेटिंग्स रीसेट करें (आकार सहित)",
+      "resetAllLabel": "सब रीसेट",
+      "closeTitle": "सेटिंग्स बंद करें",
+      "closeLabel": "सेटिंग्स बंद करें",
+      "themeLabel": "थीम",
+      "fontLabel": "टर्मिनल फ़ॉन्ट",
+      "scrollbackLabel": "इतिहास",
+      "scrollbackOption": "{count, plural, =0 {कोई कमांड नहीं} one {1 कमांड} other {# कमांड}}",
+      "darkSuffix": "डार्क",
+      "lightSuffix": "लाइट",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "कीबोर्ड शॉर्टकट",
+    "shortcuts": {
+      "runCommand": "कमांड चलाएं",
+      "autocomplete": "ऑटो-कम्प्लीट",
+      "history": "इतिहास और सुझाव",
+      "clearOutput": "आउटपुट साफ़ करें",
+      "resetTerminal": "टर्मिनल रीसेट करें",
+      "toggleSearch": "खोज टॉगल करें",
+      "increaseFontSize": "फ़ॉन्ट बड़ा करें",
+      "decreaseFontSize": "फ़ॉन्ट छोटा करें"
+    },
+    "closeMessages": [
+      "अच्छी कोशिश! आप मुझे बंद नहीं कर सकते।",
+      "मैं कहीं नहीं जा रहा। 'help' आज़माएँ!",
+      "नहीं। इस टर्मिनल को बंद करने के बटन पर भरोसा नहीं है।",
+      "त्रुटि 418: मैं एक चायदानी हूँ, बंद होने वाली खिड़की नहीं।",
+      "sudo rm -rf / ? हम्म… नहीं।",
+      "क्या आपने सच में सोचा कि यह काम करेगा?",
+      "मुझे बंद करना? इस अर्थव्यवस्था में?",
+      "मैं अलग बना हूँ। 'contact' आज़माएँ।"
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "काम",
+      "Profile": "प्रोफ़ाइल",
+      "Guestbook": "अतिथि पुस्तिका",
+      "Spotify": "Spotify",
+      "Theme": "थीम",
+      "Terminal": "टर्मिनल"
+    },
+    "descriptions": {
+      "projects": "जो मैंने बनाया, लॉन्च किया या योगदान दिया",
+      "experiences": "मेरा पेशेवर अनुभव और उपलब्धियां",
+      "about": "मेरे बारे में, रुचियां और लक्ष्य",
+      "skills": "तकनीकी कौशल और स्टैक",
+      "education": "मेरी शिक्षा",
+      "contact": "ईमेल, सोशल मीडिया और संपर्क के तरीके",
+      "guestbook": "अतिथि पुस्तिका के सब-कमांड्स की मदद दिखाएं",
+      "cv": "मेरा PDF रिज्यूमे देखें और डाउनलोड करें",
+      "spotify": "Spotify सब-कमांड्स की मदद दिखाएं",
+      "theme": "UI थीम दिखाएं या बदलें",
+      "help": "सभी उपलब्ध कमांड्स और उनके विवरण दिखाएं",
+      "clear": "पिछले सभी कमांड और आउटपुट साफ़ करें",
+      "reset": "टर्मिनल को स्वागत स्क्रीन पर रीसेट करें",
+      "stats": "कोडिंग गतिविधि, GitHub मेट्रिक्स और विज़िटर्स दिखाएं",
+      "repo": "इस पोर्टफोलियो का सोर्स कोड खोलें",
+      "echo": "टर्मिनल में संदेश प्रिंट करें",
+      "spotifyNow": "वर्तमान में चल रहा गाना दिखाएं",
+      "spotifyTop": "मेरे पसंदीदा ट्रैक दिखाएं",
+      "spotifyHistory": "मेरा सुनने का इतिहास दिखाएं",
+      "guestbookRead": "नवीनतम अतिथि पुस्तिका प्रविष्टियां ब्राउज़ करें",
+      "guestbookSign": "अतिथि पुस्तिका में संदेश छोड़ें",
+      "themeList": "सभी उपलब्ध थीम दिखाएं",
+      "themeSet": "नाम से थीम लागू करें (जैसे theme set dracula)",
+      "themePreview": "लागू किए बिना थीम का पूर्वावलोकन",
+      "themeCreate": "विज़ुअल या JSON एडिटर से कस्टम थीम बनाएं",
+      "themeValidate": "वर्तमान थीम का कंट्रास्ट जांचें",
+      "lang": "सक्रिय भाषा दिखाएं या बदलें",
+      "langSet": "भाषा बदलें (जैसे lang set fr)",
+      "langAuto": "ब्राउज़र भाषा ऑटो-डिटेक्शन फिर से सक्षम करें"
+    },
+    "help": {
+      "available": "उपलब्ध कमांड्स",
+      "tip": "टिप: ऊपर किसी कमांड पर क्लिक करें या प्रॉम्प्ट में टाइप करके चलाएं।",
+      "subCommands": "सब-कमांड्स"
+    },
+    "notFound": {
+      "title": "zsh: कमांड नहीं मिली: {input}",
+      "didYouMean": "क्या आपका मतलब {suggestions} था?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "उपयोग:",
+      "examplePrefix": "उदाहरण:",
+      "tooManyArgs": "बहुत अधिक तर्क।",
+      "unknown": "अज्ञात {label}: {sub}.",
+      "useOneOf": "इनमें से एक का उपयोग करें: {options}.",
+      "subcommand": "सब-कमांड"
+    },
+    "about": {
+      "firstName": "पहला नाम",
+      "lastName": "अंतिम नाम",
+      "age": "उम्र",
+      "yearsOld": "{years} वर्ष",
+      "location": "स्थान",
+      "email": "ईमेल",
+      "languages": "भाषाएं",
+      "hobbies": "शौक"
+    },
+    "contact": {
+      "intro": "अवसरों, फ्रीलांस अनुरोधों या तकनीकी सहयोग के लिए ईमेल पसंद करता हूँ।",
+      "primaryEmail": "मुख्य ईमेल:",
+      "location": "स्थान:",
+      "socialProfiles": "सोशल प्रोफ़ाइल:"
+    },
+    "stats": {
+      "totalCodingTime": "कुल कोडिंग समय",
+      "topLanguage": "मुख्य भाषा",
+      "githubStars": "GitHub सितारे",
+      "contributions": "योगदान ({year})",
+      "codingSince": "कोडिंग से",
+      "codingSinceValue": "{since} ({years} वर्ष)",
+      "visitors": "विज़िटर",
+      "failed": "आँकड़े लोड नहीं हो सके। बाद में पुनः प्रयास करें।",
+      "na": "उपलब्ध नहीं"
+    },
+    "repo": {
+      "starsLabel": "सितारे",
+      "forksLabel": "फोर्क्स",
+      "licenseLabel": "लाइसेंस",
+      "copyAria": "क्लिपबोर्ड पर कॉपी करें",
+      "copy": "कॉपी",
+      "copiedAria": "कॉपी किया गया",
+      "copiedNotice": "कॉपी हो गया!",
+      "copyFailedAria": "कॉपी विफल",
+      "copyFailedNotice": "पुनः प्रयास",
+      "fallback": "इस पोर्टफोलियो का सोर्स कोड यहाँ उपलब्ध है:"
+    },
+    "cv": {
+      "openPreview": "PDF पूर्वावलोकन खोलें",
+      "downloadPdf": "PDF डाउनलोड करें",
+      "endpointsLabel": "एंडपॉइंट:",
+      "endpointsAnd": "और"
+    },
+    "projects": {
+      "openLabel": "प्रोजेक्ट खोलें: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "नेविगेट",
+    "complete": "पूर्ण",
+    "run": "चलाएं"
+  },
+  "Lang": {
+    "subCommandsTitle": "भाषा कमांड",
+    "currentLabel": "वर्तमान भाषा:",
+    "availablePrefix": "उपलब्ध:",
+    "usagePrefix": "उपयोग:",
+    "switching": "{locale} में स्विच कर रहे हैं…",
+    "autoCleared": "अगली लोडिंग पर भाषा स्वचालित रूप से पता लगाई जाएगी।",
+    "missingCode": "भाषा कोड गायब है।",
+    "unknownLocale": "अज्ञात भाषा: {code}.",
+    "unknownSubcommand": "अज्ञात सब-कमांड: {sub}.",
+    "tooManyArgs": "बहुत अधिक तर्क।",
+    "switcher": {
+      "ariaLabel": "भाषा बदलें",
+      "title": "भाषा बदलें"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "डिजिटल खानाबदोश",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI इंजीनियरिंग",
+      "openSource": "ओपन सोर्स"
+    },
+    "footer": "पोर्टफोलियो"
+  },
+  "Guestbook": {
+    "title": "अतिथि पुस्तिका कमांड",
+    "validation": {
+      "nameMin": "नाम कम से कम {min} वर्णों का होना चाहिए।",
+      "nameMax": "नाम अधिकतम {max} वर्णों का हो सकता है।",
+      "messageMin": "संदेश कम से कम {min} वर्णों का होना चाहिए।",
+      "messageMax": "संदेश अधिकतम {max} वर्णों का हो सकता है।",
+      "websiteMax": "वेबसाइट अधिकतम {max} वर्णों की हो सकती है।",
+      "websiteInvalid": "वेबसाइट URL अमान्य है।"
+    },
+    "sign": {
+      "intro": "मेरी अतिथि पुस्तिका में संदेश छोड़ें।",
+      "namePlaceholder": "आपका नाम",
+      "websitePlaceholder": "वेबसाइट (वैकल्पिक)",
+      "messagePlaceholder": "आपका संदेश",
+      "submit": "हस्ताक्षर करें",
+      "submitPending": "प्रविष्टि सबमिट की गई और मॉडरेशन की प्रतीक्षा में है।",
+      "submitPublishedPrefix": "प्रविष्टि प्रकाशित!",
+      "submitFailed": "अतिथि पुस्तिका प्रविष्टि सबमिट नहीं की जा सकी।"
+    },
+    "read": {
+      "headerLabel": "अतिथि पुस्तिका",
+      "entry": "{count} प्रविष्टि",
+      "unavailable": "अनुपलब्ध",
+      "refresh": "ताज़ा करें",
+      "refreshAria": "अतिथि पुस्तिका प्रविष्टियां ताज़ा करें",
+      "errorPrefix": "त्रुटि:",
+      "errorFallback": "अतिथि पुस्तिका प्रविष्टियां लोड नहीं हो सकीं।",
+      "noneFromCountryPrefix": "इस देश से कोई प्रविष्टि नहीं:",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "अभी कोई प्रविष्टि नहीं है।",
+      "noneYetSuffix": "चलाएं और पहले बनें।",
+      "filter": {
+        "ariaLabel": "अतिथि पुस्तिका प्रविष्टियां फ़िल्टर करें",
+        "label": "फ़िल्टर",
+        "sort": "क्रम",
+        "newest": "नवीनतम",
+        "oldest": "पुराने",
+        "country": "देश",
+        "allCountries": "सभी देश",
+        "clearCountry": "देश फ़िल्टर साफ़ करें"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Spotify कमांड",
+    "notPlaying": "कुछ नहीं चल रहा 😕",
+    "unavailable": "Spotify कॉन्फ़िगर नहीं है या उपलब्ध नहीं है।",
+    "nowPlayingPrefix": "अभी Spotify पर:",
+    "openNowPlayingAria": "वर्तमान ट्रैक खोलें: {name}",
+    "openRecentlyPlayedAria": "हाल का ट्रैक खोलें: {name}",
+    "openTopTrackAria": "पसंदीदा ट्रैक खोलें: {name}",
+    "openTopAlbumAria": "पसंदीदा एल्बम खोलें: {name}",
+    "topTracks": {
+      "rank": "रैंक",
+      "track": "ट्रैक",
+      "album": "एल्बम"
+    }
+  },
+  "Theme": {
+    "currentLabel": "वर्तमान थीम:",
+    "darkSuffix": "डार्क",
+    "lightSuffix": "लाइट",
+    "usagePrefix": "उपयोग:",
+    "themeCommandsTitle": "थीम कमांड",
+    "noArgs": "{command} तर्क स्वीकार नहीं करता।",
+    "missingName": "थीम का नाम गायब है।",
+    "tooManyArgs": "बहुत अधिक तर्क।",
+    "usageSet": "उपयोग: theme set <नाम>",
+    "usagePreview": "उपयोग: theme preview <नाम>",
+    "unknownSubcommand": "अज्ञात सब-कमांड: {sub}. इनमें से एक का उपयोग करें: {commands}.",
+    "list": {
+      "available": "उपलब्ध थीम ({count}):",
+      "tip": "थीम पर क्लिक करें इसे लागू करने के लिए।",
+      "active": "(सक्रिय)",
+      "custom": "कस्टम",
+      "deleteAria": "{label} हटाएं"
+    },
+    "set": {
+      "unknownAvailable": "अज्ञात थीम: {name}. उपलब्ध थीम:",
+      "updated": "थीम {label} में अपडेट की गई।",
+      "active": "सक्रिय थीम: {label} ({mode})"
+    }
+  }
+}

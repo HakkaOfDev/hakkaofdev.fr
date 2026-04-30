@@ -1,0 +1,336 @@
+{
+  "_meta": {
+    "needsReview": true,
+    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+  },
+  "Metadata": {
+    "title": "Alexandre Gossard | Ψηφιακός νομάδας & μηχανικός λογισμικού",
+    "description": "Ψηφιακός νομάδας και μηχανικός λογισμικού @kabila.app. Λάτρης του open source, δημιουργώ γρήγορες εμπειρίες ιστού με React και Next.js.",
+    "jobTitle": "Μηχανικός λογισμικού",
+    "location": "Châlons-en-Champagne, Γαλλία",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Frontend developer",
+      "Ψηφιακός νομάδας",
+      "Open source",
+      "Σύγχρονες τεχνολογίες",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Μηχανικός λογισμικού",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Φτιαγμένο με <heart></heart> από <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Καλώς ήρθες <wave>👋</wave>",
+    "intro": "<tagline>Ψηφιακός νομάδας</tagline> · <job>Μηχανικός λογισμικού</job> στην <employer>{employerName}</employer>",
+    "tags": {
+      "openSource": "Υπέρμαχος του open source",
+      "calisthenics": "Λάτρης της καλισθενικής",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Έναρξη",
+      "work": "Δουλειά",
+      "profile": "Προφίλ",
+      "extras": "Επιπλέον",
+      "utils": "Εργαλεία"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Καμία εντολή δεν ταιριάζει με «{query}».",
+    "header": {
+      "resetTitle": "Επαναφορά τερματικού (Ctrl+R)",
+      "resetLabel": "Επαναφορά τερματικού",
+      "settingsTitle": "Ρυθμίσεις τερματικού",
+      "settingsLabel": "Ρυθμίσεις τερματικού"
+    },
+    "trafficLights": {
+      "close": "Κλείσιμο τερματικού",
+      "minimize": "Ελαχιστοποίηση τερματικού",
+      "restoreMinimize": "Επαναφορά τερματικού",
+      "expand": "Μεγιστοποίηση τερματικού",
+      "restoreExpand": "Επαναφορά μεγέθους τερματικού"
+    },
+    "tabs": {
+      "rename": "Μετονομασία {name}",
+      "close": "Κλείσιμο {name}",
+      "create": "Δημιουργία καρτέλας",
+      "limitReached": "Επιτεύχθηκε το όριο συνεδριών"
+    },
+    "search": {
+      "placeholder": "Φιλτράρισμα ιστορικού εντολών…",
+      "hide": "Απόκρυψη αναζήτησης"
+    },
+    "input": {
+      "placeholder": "πληκτρολογήστε μια εντολή…",
+      "submit": "Εκτέλεση εντολής"
+    },
+    "fontSize": {
+      "label": "Μέγεθος γραμματοσειράς",
+      "decrease": "Μείωση μεγέθους",
+      "decreaseTitle": "Μείωση μεγέθους (Ctrl+-)",
+      "increase": "Αύξηση μεγέθους",
+      "increaseTitle": "Αύξηση μεγέθους (Ctrl++)"
+    },
+    "settings": {
+      "title": "Ρυθμίσεις τερματικού",
+      "resetAllTitle": "Επαναφορά όλων των ρυθμίσεων (περιλαμβάνει το μέγεθος)",
+      "resetAllLabel": "Επαναφορά όλων",
+      "closeTitle": "Κλείσιμο ρυθμίσεων",
+      "closeLabel": "Κλείσιμο ρυθμίσεων",
+      "themeLabel": "Θέμα",
+      "fontLabel": "Γραμματοσειρά τερματικού",
+      "scrollbackLabel": "Ιστορικό",
+      "scrollbackOption": "{count, plural, =0 {καμία εντολή} one {1 εντολή} other {# εντολές}}",
+      "darkSuffix": "σκοτεινό",
+      "lightSuffix": "ανοιχτό",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "Συντομεύσεις πληκτρολογίου",
+    "shortcuts": {
+      "runCommand": "Εκτέλεση εντολής",
+      "autocomplete": "Αυτόματη συμπλήρωση",
+      "history": "Ιστορικό και προτάσεις",
+      "clearOutput": "Καθαρισμός εξόδου",
+      "resetTerminal": "Επαναφορά τερματικού",
+      "toggleSearch": "Εναλλαγή αναζήτησης",
+      "increaseFontSize": "Αύξηση μεγέθους",
+      "decreaseFontSize": "Μείωση μεγέθους"
+    },
+    "closeMessages": [
+      "Καλή προσπάθεια! Δεν μπορείς να με κλείσεις.",
+      "Δεν πάω πουθενά. Δοκίμασε «help»!",
+      "Όχι. Αυτό το τερματικό έχει θέματα εμπιστοσύνης με τα κουμπιά κλεισίματος.",
+      "Σφάλμα 418: είμαι τσαγιέρα, όχι κλεινόμενο παράθυρο.",
+      "sudo rm -rf / ? Ε… όχι.",
+      "Πραγματικά νόμιζες ότι θα δούλευε;",
+      "Να με κλείσεις; Σε αυτή τη συγκυρία;",
+      "Είμαι φτιαγμένος αλλιώς. Δοκίμασε «contact»."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Δουλειά",
+      "Profile": "Προφίλ",
+      "Guestbook": "Βιβλίο επισκεπτών",
+      "Spotify": "Spotify",
+      "Theme": "Θέμα",
+      "Terminal": "Τερματικό"
+    },
+    "descriptions": {
+      "projects": "Τι έχω φτιάξει, λανσάρει ή σε τι έχω συνεισφέρει",
+      "experiences": "Η επαγγελματική μου εμπειρία και τα επιτεύγματα",
+      "about": "Περισσότερα για εμένα, ενδιαφέροντα και στόχους",
+      "skills": "Τεχνικές δεξιότητες και stack",
+      "education": "Η εκπαίδευσή μου",
+      "contact": "Email, μέσα κοινωνικής δικτύωσης και τρόποι επικοινωνίας",
+      "guestbook": "Εμφάνιση βοήθειας για τις υποεντολές του βιβλίου επισκεπτών",
+      "cv": "Προεπισκόπηση και λήψη του βιογραφικού μου σε PDF",
+      "spotify": "Εμφάνιση βοήθειας για τις υποεντολές Spotify",
+      "theme": "Εμφάνιση ή αλλαγή θέματος UI",
+      "help": "Εμφάνιση όλων των διαθέσιμων εντολών και περιγραφών",
+      "clear": "Καθαρισμός όλων των προηγούμενων εντολών και εξόδου",
+      "reset": "Επαναφορά τερματικού στην οθόνη υποδοχής",
+      "stats": "Δραστηριότητα προγραμματισμού, GitHub και μοναδικοί επισκέπτες",
+      "repo": "Άνοιγμα του πηγαίου κώδικα αυτού του portfolio",
+      "echo": "Εμφάνιση μηνύματος στο τερματικό",
+      "spotifyNow": "Εμφάνιση του τραγουδιού που παίζει τώρα",
+      "spotifyTop": "Εμφάνιση των αγαπημένων μου τραγουδιών",
+      "spotifyHistory": "Εμφάνιση ιστορικού ακρόασης",
+      "guestbookRead": "Περιήγηση των τελευταίων καταχωρήσεων του βιβλίου επισκεπτών",
+      "guestbookSign": "Αφήστε ένα μήνυμα στο βιβλίο επισκεπτών",
+      "themeList": "Εμφάνιση όλων των διαθέσιμων θεμάτων",
+      "themeSet": "Εφαρμογή θέματος βάσει ονόματος (π.χ. theme set dracula)",
+      "themePreview": "Προεπισκόπηση θέματος χωρίς εφαρμογή",
+      "themeCreate": "Δημιουργία προσαρμοσμένου θέματος με οπτικό ή JSON editor",
+      "themeValidate": "Έλεγχος αντίθεσης τρέχοντος θέματος",
+      "lang": "Εμφάνιση ή αλλαγή ενεργής γλώσσας",
+      "langSet": "Αλλαγή γλώσσας (π.χ. lang set fr)",
+      "langAuto": "Επανενεργοποίηση αυτόματης ανίχνευσης γλώσσας"
+    },
+    "help": {
+      "available": "Διαθέσιμες εντολές",
+      "tip": "Συμβουλή: κάντε κλικ σε μια εντολή ή πληκτρολογήστε την στο prompt για εκτέλεση.",
+      "subCommands": "Υποεντολές"
+    },
+    "notFound": {
+      "title": "zsh: η εντολή δεν βρέθηκε: {input}",
+      "didYouMean": "Μήπως εννοούσατε {suggestions};"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Χρήση:",
+      "examplePrefix": "Παράδειγμα:",
+      "tooManyArgs": "Πάρα πολλά ορίσματα.",
+      "unknown": "Άγνωστη {label}: {sub}.",
+      "useOneOf": "Χρησιμοποιήστε ένα από: {options}.",
+      "subcommand": "υποεντολή"
+    },
+    "about": {
+      "firstName": "Όνομα",
+      "lastName": "Επώνυμο",
+      "age": "Ηλικία",
+      "yearsOld": "{years, plural, one {# χρόνος} other {# χρόνια}}",
+      "location": "Τοποθεσία",
+      "email": "Email",
+      "languages": "Γλώσσες",
+      "hobbies": "Χόμπι"
+    },
+    "contact": {
+      "intro": "Προτιμώ το email για ευκαιρίες, αιτήματα freelance ή τεχνική συνεργασία.",
+      "primaryEmail": "Κύριο email:",
+      "location": "Τοποθεσία:",
+      "socialProfiles": "Κοινωνικά προφίλ:"
+    },
+    "stats": {
+      "totalCodingTime": "Συνολικός χρόνος κώδικα",
+      "topLanguage": "Κύρια γλώσσα",
+      "githubStars": "Αστέρια GitHub",
+      "contributions": "Συνεισφορές ({year})",
+      "codingSince": "Κωδικοποιώ από",
+      "codingSinceValue": "{since} ({years} χρόνια)",
+      "visitors": "Επισκέπτες",
+      "failed": "Δεν ήταν δυνατή η ανάκτηση των στατιστικών. Δοκιμάστε ξανά αργότερα.",
+      "na": "Μ/Δ"
+    },
+    "repo": {
+      "starsLabel": "Αστέρια",
+      "forksLabel": "Forks",
+      "licenseLabel": "Άδεια",
+      "copyAria": "Αντιγραφή στο πρόχειρο",
+      "copy": "Αντιγραφή",
+      "copiedAria": "Αντιγράφηκε",
+      "copiedNotice": "Αντιγράφηκε!",
+      "copyFailedAria": "Αποτυχία αντιγραφής",
+      "copyFailedNotice": "Επανάληψη",
+      "fallback": "Ο πηγαίος κώδικας αυτού του portfolio είναι διαθέσιμος εδώ:"
+    },
+    "cv": {
+      "openPreview": "Άνοιγμα προεπισκόπησης PDF",
+      "downloadPdf": "Λήψη PDF",
+      "endpointsLabel": "Endpoints:",
+      "endpointsAnd": "και"
+    },
+    "projects": {
+      "openLabel": "Άνοιγμα έργου: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "πλοήγηση",
+    "complete": "συμπλήρωση",
+    "run": "εκτέλεση"
+  },
+  "Lang": {
+    "subCommandsTitle": "Εντολές γλώσσας",
+    "currentLabel": "Τρέχουσα γλώσσα:",
+    "availablePrefix": "Διαθέσιμες:",
+    "usagePrefix": "Χρήση:",
+    "switching": "Μετάβαση σε {locale}…",
+    "autoCleared": "Η γλώσσα θα ανιχνευθεί αυτόματα στην επόμενη φόρτωση.",
+    "missingCode": "Λείπει ο κωδικός γλώσσας.",
+    "unknownLocale": "Άγνωστη γλώσσα: {code}.",
+    "unknownSubcommand": "Άγνωστη υποεντολή: {sub}.",
+    "tooManyArgs": "Πάρα πολλά ορίσματα.",
+    "switcher": {
+      "ariaLabel": "Αλλαγή γλώσσας",
+      "title": "Αλλαγή γλώσσας"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Ψηφιακός νομάδας",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI Engineering",
+      "openSource": "Open source"
+    },
+    "footer": "Portfolio"
+  },
+  "Guestbook": {
+    "title": "Εντολές βιβλίου επισκεπτών",
+    "validation": {
+      "nameMin": "Το όνομα πρέπει να έχει τουλάχιστον {min} χαρακτήρες.",
+      "nameMax": "Το όνομα δεν μπορεί να υπερβαίνει τους {max} χαρακτήρες.",
+      "messageMin": "Το μήνυμα πρέπει να έχει τουλάχιστον {min} χαρακτήρες.",
+      "messageMax": "Το μήνυμα δεν μπορεί να υπερβαίνει τους {max} χαρακτήρες.",
+      "websiteMax": "Ο ιστότοπος δεν μπορεί να υπερβαίνει τους {max} χαρακτήρες.",
+      "websiteInvalid": "Το URL του ιστότοπου είναι μη έγκυρο."
+    },
+    "sign": {
+      "intro": "Αφήστε ένα μήνυμα στο βιβλίο επισκεπτών μου.",
+      "namePlaceholder": "Το όνομά σας",
+      "websitePlaceholder": "Ιστότοπος (προαιρετικό)",
+      "messagePlaceholder": "Το μήνυμά σας",
+      "submit": "Υπογραφή",
+      "submitPending": "Η καταχώρηση υποβλήθηκε και αναμένει έγκριση.",
+      "submitPublishedPrefix": "Η καταχώρηση δημοσιεύτηκε!",
+      "submitFailed": "Δεν ήταν δυνατή η υποβολή της καταχώρησης."
+    },
+    "read": {
+      "headerLabel": "βιβλίο επισκεπτών",
+      "entry": "{count, plural, =0 {0 καταχωρήσεις} one {# καταχώρηση} other {# καταχωρήσεις}}",
+      "unavailable": "μη διαθέσιμο",
+      "refresh": "ανανέωση",
+      "refreshAria": "Ανανέωση καταχωρήσεων βιβλίου επισκεπτών",
+      "errorPrefix": "σφάλμα:",
+      "errorFallback": "Δεν ήταν δυνατή η φόρτωση των καταχωρήσεων.",
+      "noneFromCountryPrefix": "Δεν υπάρχουν καταχωρήσεις από",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Δεν υπάρχουν καταχωρήσεις ακόμα. Εκτελέστε",
+      "noneYetSuffix": "για να γίνετε ο πρώτος.",
+      "filter": {
+        "ariaLabel": "Φιλτράρισμα καταχωρήσεων βιβλίου επισκεπτών",
+        "label": "φίλτρο",
+        "sort": "ταξινόμηση",
+        "newest": "νεότερα",
+        "oldest": "παλαιότερα",
+        "country": "χώρα",
+        "allCountries": "Όλες οι χώρες",
+        "clearCountry": "Καθαρισμός φίλτρου χώρας"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Εντολές Spotify",
+    "notPlaying": "Δεν παίζει τίποτα 😕",
+    "unavailable": "Το Spotify δεν είναι διαμορφωμένο ή δεν είναι διαθέσιμο.",
+    "nowPlayingPrefix": "Παίζει τώρα στο Spotify:",
+    "openNowPlayingAria": "Άνοιγμα τρέχοντος τραγουδιού: {name}",
+    "openRecentlyPlayedAria": "Άνοιγμα πρόσφατου τραγουδιού: {name}",
+    "openTopTrackAria": "Άνοιγμα αγαπημένου τραγουδιού: {name}",
+    "openTopAlbumAria": "Άνοιγμα αγαπημένου άλμπουμ: {name}",
+    "topTracks": {
+      "rank": "Θέση",
+      "track": "Τραγούδι",
+      "album": "Άλμπουμ"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Τρέχον θέμα:",
+    "darkSuffix": "σκοτεινό",
+    "lightSuffix": "ανοιχτό",
+    "usagePrefix": "Χρήση:",
+    "themeCommandsTitle": "Εντολές θέματος",
+    "noArgs": "Η {command} δεν δέχεται ορίσματα.",
+    "missingName": "Λείπει το όνομα του θέματος.",
+    "tooManyArgs": "Πάρα πολλά ορίσματα.",
+    "usageSet": "Χρήση: theme set <όνομα>",
+    "usagePreview": "Χρήση: theme preview <όνομα>",
+    "unknownSubcommand": "Άγνωστη υποεντολή: {sub}. Χρησιμοποιήστε μία από: {commands}.",
+    "list": {
+      "available": "Διαθέσιμα θέματα ({count}):",
+      "tip": "Κάντε κλικ σε ένα θέμα για να το εφαρμόσετε.",
+      "active": "(ενεργό)",
+      "custom": "προσαρμοσμένο",
+      "deleteAria": "Διαγραφή {label}"
+    },
+    "set": {
+      "unknownAvailable": "Άγνωστο θέμα: {name}. Διαθέσιμα θέματα:",
+      "updated": "Το θέμα άλλαξε σε {label}.",
+      "active": "Ενεργό θέμα: {label} ({mode})"
+    }
+  }
+}

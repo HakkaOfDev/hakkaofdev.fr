@@ -1,0 +1,332 @@
+{
+  "Metadata": {
+    "title": "Alexandre Gossard | Digital Nomad & Software Engineer",
+    "description": "Digital nomad en software engineer @kabila.app. Open source-enthousiasteling, ik bouw performante webervaringen met React en Next.js.",
+    "jobTitle": "Software Engineer",
+    "location": "Châlons-en-Champagne, Frankrijk",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Frontend ontwikkelaar",
+      "Digital Nomad",
+      "Open source",
+      "Moderne technologieën",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Software Engineer",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Gemaakt met <heart></heart> door <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Welkom <wave>👋</wave>",
+    "intro": "<tagline>Digital Nomad</tagline> · <job>Software Engineer</job> bij <employer>{employerName}</employer>",
+    "tags": {
+      "openSource": "Open source-pleitbezorger",
+      "calisthenics": "Calisthenics-liefhebber",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Start",
+      "work": "Werk",
+      "profile": "Profiel",
+      "extras": "Extra's",
+      "utils": "Hulpmiddelen"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Geen commando komt overeen met „{query}\".",
+    "header": {
+      "resetTitle": "Terminal resetten (Ctrl+R)",
+      "resetLabel": "Terminal resetten",
+      "settingsTitle": "Terminalinstellingen",
+      "settingsLabel": "Terminalinstellingen"
+    },
+    "trafficLights": {
+      "close": "Terminal sluiten",
+      "minimize": "Terminal minimaliseren",
+      "restoreMinimize": "Terminal herstellen",
+      "expand": "Terminal vergroten",
+      "restoreExpand": "Grootte van terminal herstellen"
+    },
+    "tabs": {
+      "rename": "{name} hernoemen",
+      "close": "{name} sluiten",
+      "create": "Tabblad maken",
+      "limitReached": "Sessielimiet bereikt"
+    },
+    "search": {
+      "placeholder": "Commandogeschiedenis filteren…",
+      "hide": "Zoeken verbergen"
+    },
+    "input": {
+      "placeholder": "voer een commando in…",
+      "submit": "Commando uitvoeren"
+    },
+    "fontSize": {
+      "label": "Lettergrootte",
+      "decrease": "Lettergrootte verkleinen",
+      "decreaseTitle": "Lettergrootte verkleinen (Ctrl+-)",
+      "increase": "Lettergrootte vergroten",
+      "increaseTitle": "Lettergrootte vergroten (Ctrl++)"
+    },
+    "settings": {
+      "title": "Terminalinstellingen",
+      "resetAllTitle": "Alle instellingen resetten (inclusief grootte)",
+      "resetAllLabel": "Alles resetten",
+      "closeTitle": "Instellingen sluiten",
+      "closeLabel": "Instellingen sluiten",
+      "themeLabel": "Thema",
+      "fontLabel": "Terminallettertype",
+      "scrollbackLabel": "Geschiedenis",
+      "scrollbackOption": "{count, plural, =0 {geen commando's} =1 {1 commando} other {# commando's}}",
+      "darkSuffix": "donker",
+      "lightSuffix": "licht",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "Sneltoetsen",
+    "shortcuts": {
+      "runCommand": "Commando uitvoeren",
+      "autocomplete": "Automatisch aanvullen",
+      "history": "Geschiedenis en suggesties",
+      "clearOutput": "Uitvoer wissen",
+      "resetTerminal": "Terminal resetten",
+      "toggleSearch": "Zoeken in/uitschakelen",
+      "increaseFontSize": "Lettergrootte vergroten",
+      "decreaseFontSize": "Lettergrootte verkleinen"
+    },
+    "closeMessages": [
+      "Mooie poging! Je kunt me niet sluiten.",
+      "Ik ga nergens heen. Probeer „help\"!",
+      "Nee. Deze terminal heeft vertrouwensproblemen met sluitknoppen.",
+      "Fout 418: ik ben een theepot, geen sluitbaar venster.",
+      "sudo rm -rf / ? Eh… nee.",
+      "Dacht je echt dat dat zou werken?",
+      "Mij sluiten? In deze tijd?",
+      "Ik ben anders gebouwd. Probeer „contact\"."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Werk",
+      "Profile": "Profiel",
+      "Guestbook": "Gastenboek",
+      "Spotify": "Spotify",
+      "Theme": "Thema",
+      "Terminal": "Terminal"
+    },
+    "descriptions": {
+      "projects": "Wat ik heb gebouwd, gelanceerd of aan heb bijgedragen",
+      "experiences": "Mijn professionele werkverleden en prestaties",
+      "about": "Meer over mijn achtergrond, interesses en doelen",
+      "skills": "Technische vaardigheden en stack",
+      "education": "Mijn opleiding en kwalificaties",
+      "contact": "E-mail, social media en contactvoorkeuren",
+      "guestbook": "Toon hulp voor de gastenboek-subcommando's",
+      "cv": "Bekijk en download mijn cv-PDF",
+      "spotify": "Toon hulp voor de Spotify-subcommando's",
+      "theme": "Toon of wissel het UI-thema",
+      "help": "Toon alle beschikbare commando's en hun beschrijvingen",
+      "clear": "Wis alle eerdere commando's en uitvoer",
+      "reset": "Reset de terminal naar het welkomstscherm",
+      "stats": "Toon programmeertijd, GitHub en bezoekersaantal",
+      "repo": "Open de broncode van dit portfolio",
+      "echo": "Print een bericht in de terminal",
+      "spotifyNow": "Toon het nu spelende nummer",
+      "spotifyTop": "Toon mijn favoriete nummers",
+      "spotifyHistory": "Toon mijn luistergeschiedenis",
+      "guestbookRead": "Bekijk de nieuwste gastenboekberichten",
+      "guestbookSign": "Laat een bericht achter in het gastenboek",
+      "themeList": "Toon alle beschikbare thema's",
+      "themeSet": "Pas een thema toe op naam (bijv. theme set dracula)",
+      "themePreview": "Bekijk een thema zonder het toe te passen",
+      "themeCreate": "Maak een aangepast thema met visuele of JSON-editor",
+      "themeValidate": "Controleer het contrast van het huidige thema",
+      "lang": "Toon of wijzig de actieve taal",
+      "langSet": "Wijzig taal (bijv. lang set fr)",
+      "langAuto": "Schakel automatische taaldetectie weer in"
+    },
+    "help": {
+      "available": "Beschikbare commando's",
+      "tip": "Tip: klik op een commando hierboven of typ het in de prompt om het uit te voeren.",
+      "subCommands": "Subcommando's"
+    },
+    "notFound": {
+      "title": "zsh: commando niet gevonden: {input}",
+      "didYouMean": "Bedoelde je {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Gebruik:",
+      "examplePrefix": "Voorbeeld:",
+      "tooManyArgs": "Te veel argumenten.",
+      "unknown": "Onbekend {label}: {sub}.",
+      "useOneOf": "Gebruik een van: {options}.",
+      "subcommand": "subcommando"
+    },
+    "about": {
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "age": "Leeftijd",
+      "yearsOld": "{years, plural, one {# jaar} other {# jaar}}",
+      "location": "Locatie",
+      "email": "E-mail",
+      "languages": "Talen",
+      "hobbies": "Hobby's"
+    },
+    "contact": {
+      "intro": "Ik geef de voorkeur aan e-mail voor kansen, freelance-aanvragen of technische samenwerking.",
+      "primaryEmail": "Primaire e-mail:",
+      "location": "Locatie:",
+      "socialProfiles": "Sociale profielen:"
+    },
+    "stats": {
+      "totalCodingTime": "Totale programmeertijd",
+      "topLanguage": "Hoofdtaal",
+      "githubStars": "GitHub-sterren",
+      "contributions": "Bijdragen ({year})",
+      "codingSince": "Programmeren sinds",
+      "codingSinceValue": "{since} ({years} jaar)",
+      "visitors": "Bezoekers",
+      "failed": "Statistieken konden niet worden opgehaald. Probeer het later opnieuw.",
+      "na": "N.v.t."
+    },
+    "repo": {
+      "starsLabel": "Sterren",
+      "forksLabel": "Forks",
+      "licenseLabel": "Licentie",
+      "copyAria": "Naar klembord kopiëren",
+      "copy": "Kopiëren",
+      "copiedAria": "Gekopieerd",
+      "copiedNotice": "Gekopieerd!",
+      "copyFailedAria": "Kopiëren mislukt",
+      "copyFailedNotice": "Opnieuw proberen",
+      "fallback": "De broncode van dit portfolio is hier beschikbaar:"
+    },
+    "cv": {
+      "openPreview": "PDF-voorbeeld openen",
+      "downloadPdf": "PDF downloaden",
+      "endpointsLabel": "Endpoints:",
+      "endpointsAnd": "en"
+    },
+    "projects": {
+      "openLabel": "Project openen: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "navigeren",
+    "complete": "aanvullen",
+    "run": "uitvoeren"
+  },
+  "Lang": {
+    "subCommandsTitle": "Taalcommando's",
+    "currentLabel": "Huidige taal:",
+    "availablePrefix": "Beschikbaar:",
+    "usagePrefix": "Gebruik:",
+    "switching": "Overschakelen naar {locale}…",
+    "autoCleared": "Taal wordt automatisch gedetecteerd bij de volgende keer laden.",
+    "missingCode": "Taalcode ontbreekt.",
+    "unknownLocale": "Onbekende taal: {code}.",
+    "unknownSubcommand": "Onbekend subcommando: {sub}.",
+    "tooManyArgs": "Te veel argumenten.",
+    "switcher": {
+      "ariaLabel": "Taal wijzigen",
+      "title": "Taal wijzigen"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Digital Nomad",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI Engineering",
+      "openSource": "Open source"
+    },
+    "footer": "Portfolio"
+  },
+  "Guestbook": {
+    "title": "Gastenboek-commando's",
+    "validation": {
+      "nameMin": "Naam moet minstens {min} tekens bevatten.",
+      "nameMax": "Naam mag maximaal {max} tekens bevatten.",
+      "messageMin": "Bericht moet minstens {min} tekens bevatten.",
+      "messageMax": "Bericht mag maximaal {max} tekens bevatten.",
+      "websiteMax": "Website mag maximaal {max} tekens bevatten.",
+      "websiteInvalid": "URL van website is ongeldig."
+    },
+    "sign": {
+      "intro": "Laat een bericht achter in mijn gastenboek.",
+      "namePlaceholder": "Je naam",
+      "websitePlaceholder": "Website (optioneel)",
+      "messagePlaceholder": "Je bericht",
+      "submit": "Ondertekenen",
+      "submitPending": "Bericht ingediend en wacht op moderatie.",
+      "submitPublishedPrefix": "Bericht gepubliceerd!",
+      "submitFailed": "Het bericht kon niet worden verzonden."
+    },
+    "read": {
+      "headerLabel": "gastenboek",
+      "entry": "{count, plural, =0 {0 berichten} one {# bericht} other {# berichten}}",
+      "unavailable": "niet beschikbaar",
+      "refresh": "vernieuwen",
+      "refreshAria": "Gastenboekberichten vernieuwen",
+      "errorPrefix": "fout:",
+      "errorFallback": "Gastenboekberichten konden niet worden geladen.",
+      "noneFromCountryPrefix": "Geen berichten uit",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Nog geen berichten. Voer",
+      "noneYetSuffix": "uit om de eerste te zijn.",
+      "filter": {
+        "ariaLabel": "Gastenboekberichten filteren",
+        "label": "filteren",
+        "sort": "sorteren",
+        "newest": "nieuwste",
+        "oldest": "oudste",
+        "country": "land",
+        "allCountries": "Alle landen",
+        "clearCountry": "Landfilter wissen"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Spotify-commando's",
+    "notPlaying": "Niets aan het spelen 😕",
+    "unavailable": "Spotify is niet geconfigureerd of niet beschikbaar.",
+    "nowPlayingPrefix": "Speelt nu op Spotify:",
+    "openNowPlayingAria": "Open nu spelend nummer: {name}",
+    "openRecentlyPlayedAria": "Open recent gespeeld nummer: {name}",
+    "openTopTrackAria": "Open favoriet nummer: {name}",
+    "openTopAlbumAria": "Open favoriet album: {name}",
+    "topTracks": {
+      "rank": "Positie",
+      "track": "Nummer",
+      "album": "Album"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Huidig thema:",
+    "darkSuffix": "donker",
+    "lightSuffix": "licht",
+    "usagePrefix": "Gebruik:",
+    "themeCommandsTitle": "Thema-commando's",
+    "noArgs": "{command} accepteert geen argumenten.",
+    "missingName": "Themanaam ontbreekt.",
+    "tooManyArgs": "Te veel argumenten.",
+    "usageSet": "Gebruik: theme set <naam>",
+    "usagePreview": "Gebruik: theme preview <naam>",
+    "unknownSubcommand": "Onbekend subcommando: {sub}. Gebruik een van: {commands}.",
+    "list": {
+      "available": "Beschikbare thema's ({count}):",
+      "tip": "Klik op een thema om het toe te passen.",
+      "active": "(actief)",
+      "custom": "aangepast",
+      "deleteAria": "{label} verwijderen"
+    },
+    "set": {
+      "unknownAvailable": "Onbekend thema: {name}. Beschikbare thema's:",
+      "updated": "Thema gewijzigd naar {label}.",
+      "active": "Actief thema: {label} ({mode})"
+    }
+  }
+}

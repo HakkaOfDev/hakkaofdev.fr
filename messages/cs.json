@@ -1,0 +1,336 @@
+{
+  "_meta": {
+    "needsReview": true,
+    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+  },
+  "Metadata": {
+    "title": "Alexandre Gossard | Digitální nomád a softwarový inženýr",
+    "description": "Digitální nomád a softwarový inženýr @kabila.app. Nadšenec open source, tvořím výkonné webové aplikace v React a Next.js.",
+    "jobTitle": "Softwarový inženýr",
+    "location": "Châlons-en-Champagne, Francie",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Frontend vývojář",
+      "Digitální nomád",
+      "Open source",
+      "Moderní technologie",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Softwarový inženýr",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Vytvořeno s <heart></heart> autorem <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Vítej <wave>👋</wave>",
+    "intro": "<tagline>Digitální nomád</tagline> · <job>Softwarový inženýr</job> v <employer>{employerName}</employer>",
+    "tags": {
+      "openSource": "Zastánce open source",
+      "calisthenics": "Příznivec kalisteniky",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Start",
+      "work": "Práce",
+      "profile": "Profil",
+      "extras": "Extra",
+      "utils": "Nástroje"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Žádný příkaz neodpovídá „{query}\".",
+    "header": {
+      "resetTitle": "Resetovat terminál (Ctrl+R)",
+      "resetLabel": "Resetovat terminál",
+      "settingsTitle": "Nastavení terminálu",
+      "settingsLabel": "Nastavení terminálu"
+    },
+    "trafficLights": {
+      "close": "Zavřít terminál",
+      "minimize": "Minimalizovat terminál",
+      "restoreMinimize": "Obnovit terminál",
+      "expand": "Maximalizovat terminál",
+      "restoreExpand": "Obnovit velikost terminálu"
+    },
+    "tabs": {
+      "rename": "Přejmenovat {name}",
+      "close": "Zavřít {name}",
+      "create": "Vytvořit kartu",
+      "limitReached": "Dosažen limit relací"
+    },
+    "search": {
+      "placeholder": "Filtrovat historii příkazů…",
+      "hide": "Skrýt vyhledávání"
+    },
+    "input": {
+      "placeholder": "zadejte příkaz…",
+      "submit": "Spustit příkaz"
+    },
+    "fontSize": {
+      "label": "Velikost písma",
+      "decrease": "Zmenšit písmo",
+      "decreaseTitle": "Zmenšit písmo (Ctrl+-)",
+      "increase": "Zvětšit písmo",
+      "increaseTitle": "Zvětšit písmo (Ctrl++)"
+    },
+    "settings": {
+      "title": "Nastavení terminálu",
+      "resetAllTitle": "Resetovat všechna nastavení (včetně velikosti)",
+      "resetAllLabel": "Resetovat vše",
+      "closeTitle": "Zavřít nastavení",
+      "closeLabel": "Zavřít nastavení",
+      "themeLabel": "Motiv",
+      "fontLabel": "Písmo terminálu",
+      "scrollbackLabel": "Historie",
+      "scrollbackOption": "{count, plural, =0 {žádné příkazy} one {# příkaz} few {# příkazy} other {# příkazů}}",
+      "darkSuffix": "tmavý",
+      "lightSuffix": "světlý",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "Klávesové zkratky",
+    "shortcuts": {
+      "runCommand": "Spustit příkaz",
+      "autocomplete": "Automatické dokončení",
+      "history": "Historie a návrhy",
+      "clearOutput": "Vyčistit výstup",
+      "resetTerminal": "Resetovat terminál",
+      "toggleSearch": "Přepnout vyhledávání",
+      "increaseFontSize": "Zvětšit písmo",
+      "decreaseFontSize": "Zmenšit písmo"
+    },
+    "closeMessages": [
+      "Hezký pokus! Nemůžeš mě zavřít.",
+      "Nikam nejdu. Zkus „help\"!",
+      "Ne. Tento terminál má problémy s důvěrou v tlačítka pro zavření.",
+      "Chyba 418: jsem konvička, ne zavíratelné okno.",
+      "sudo rm -rf / ? Hmm… ne.",
+      "Vážně sis myslel, že to bude fungovat?",
+      "Zavřít mě? V této době?",
+      "Jsem postaven jinak. Zkus „contact\"."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Práce",
+      "Profile": "Profil",
+      "Guestbook": "Návštěvní kniha",
+      "Spotify": "Spotify",
+      "Theme": "Motiv",
+      "Terminal": "Terminál"
+    },
+    "descriptions": {
+      "projects": "Co jsem postavil, vydal nebo k čemu jsem přispěl",
+      "experiences": "Moje profesní zkušenosti a úspěchy",
+      "about": "Více o mně, zájmech a cílech",
+      "skills": "Technické dovednosti a stack",
+      "education": "Moje vzdělání",
+      "contact": "E-mail, sociální sítě a kontaktní cesty",
+      "guestbook": "Nápověda k podpříkazům návštěvní knihy",
+      "cv": "Náhled a stažení mého životopisu v PDF",
+      "spotify": "Nápověda k podpříkazům Spotify",
+      "theme": "Zobrazit nebo přepnout motiv UI",
+      "help": "Zobrazit všechny dostupné příkazy a popisy",
+      "clear": "Vyčistit všechny předchozí příkazy a výstup",
+      "reset": "Resetovat terminál na uvítací obrazovku",
+      "stats": "Aktivita programování, GitHub a počet návštěvníků",
+      "repo": "Otevřít zdrojový kód tohoto portfolia",
+      "echo": "Vypsat zprávu do terminálu",
+      "spotifyNow": "Zobrazit aktuálně přehrávanou skladbu",
+      "spotifyTop": "Zobrazit mé oblíbené skladby",
+      "spotifyHistory": "Zobrazit historii poslechu",
+      "guestbookRead": "Procházet nejnovější záznamy v návštěvní knize",
+      "guestbookSign": "Zanechat zprávu v návštěvní knize",
+      "themeList": "Zobrazit všechny dostupné motivy",
+      "themeSet": "Použít motiv podle názvu (např. theme set dracula)",
+      "themePreview": "Náhled motivu bez aplikace",
+      "themeCreate": "Vytvořit vlastní motiv pomocí vizuálního nebo JSON editoru",
+      "themeValidate": "Zkontrolovat kontrast aktuálního motivu",
+      "lang": "Zobrazit nebo přepnout aktivní jazyk",
+      "langSet": "Přepnout jazyk (např. lang set fr)",
+      "langAuto": "Znovu povolit automatickou detekci jazyka"
+    },
+    "help": {
+      "available": "Dostupné příkazy",
+      "tip": "Tip: klikněte na příkaz nebo jej zadejte v promptu pro spuštění.",
+      "subCommands": "Podpříkazy"
+    },
+    "notFound": {
+      "title": "zsh: příkaz nenalezen: {input}",
+      "didYouMean": "Měli jste na mysli {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Použití:",
+      "examplePrefix": "Příklad:",
+      "tooManyArgs": "Příliš mnoho argumentů.",
+      "unknown": "Neznámý {label}: {sub}.",
+      "useOneOf": "Použijte jednu z: {options}.",
+      "subcommand": "podpříkaz"
+    },
+    "about": {
+      "firstName": "Jméno",
+      "lastName": "Příjmení",
+      "age": "Věk",
+      "yearsOld": "{years, plural, one {# rok} few {# roky} other {# let}}",
+      "location": "Lokace",
+      "email": "E-mail",
+      "languages": "Jazyky",
+      "hobbies": "Koníčky"
+    },
+    "contact": {
+      "intro": "Pro pracovní příležitosti, freelance zakázky nebo technickou spolupráci preferuji e-mail.",
+      "primaryEmail": "Hlavní e-mail:",
+      "location": "Lokace:",
+      "socialProfiles": "Sociální profily:"
+    },
+    "stats": {
+      "totalCodingTime": "Celkový čas kódování",
+      "topLanguage": "Hlavní jazyk",
+      "githubStars": "Hvězdičky GitHub",
+      "contributions": "Příspěvky ({year})",
+      "codingSince": "Programuji od",
+      "codingSinceValue": "{since} ({years} let)",
+      "visitors": "Návštěvníci",
+      "failed": "Nepodařilo se načíst statistiky. Zkuste to později.",
+      "na": "N/A"
+    },
+    "repo": {
+      "starsLabel": "Hvězdičky",
+      "forksLabel": "Forky",
+      "licenseLabel": "Licence",
+      "copyAria": "Kopírovat do schránky",
+      "copy": "Kopírovat",
+      "copiedAria": "Zkopírováno",
+      "copiedNotice": "Zkopírováno!",
+      "copyFailedAria": "Kopírování selhalo",
+      "copyFailedNotice": "Zkusit znovu",
+      "fallback": "Zdrojový kód tohoto portfolia je k dispozici zde:"
+    },
+    "cv": {
+      "openPreview": "Otevřít náhled PDF",
+      "downloadPdf": "Stáhnout PDF",
+      "endpointsLabel": "Endpointy:",
+      "endpointsAnd": "a"
+    },
+    "projects": {
+      "openLabel": "Otevřít projekt: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "navigovat",
+    "complete": "doplnit",
+    "run": "spustit"
+  },
+  "Lang": {
+    "subCommandsTitle": "Jazykové příkazy",
+    "currentLabel": "Aktuální jazyk:",
+    "availablePrefix": "Dostupné:",
+    "usagePrefix": "Použití:",
+    "switching": "Přepínání na {locale}…",
+    "autoCleared": "Jazyk bude detekován automaticky při dalším načtení.",
+    "missingCode": "Chybí kód jazyka.",
+    "unknownLocale": "Neznámý jazyk: {code}.",
+    "unknownSubcommand": "Neznámý podpříkaz: {sub}.",
+    "tooManyArgs": "Příliš mnoho argumentů.",
+    "switcher": {
+      "ariaLabel": "Změnit jazyk",
+      "title": "Změnit jazyk"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Digitální nomád",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI inženýrství",
+      "openSource": "Open source"
+    },
+    "footer": "Portfolio"
+  },
+  "Guestbook": {
+    "title": "Příkazy návštěvní knihy",
+    "validation": {
+      "nameMin": "Jméno musí mít alespoň {min} znaků.",
+      "nameMax": "Jméno smí mít nejvýše {max} znaků.",
+      "messageMin": "Zpráva musí mít alespoň {min} znaků.",
+      "messageMax": "Zpráva smí mít nejvýše {max} znaků.",
+      "websiteMax": "Web smí mít nejvýše {max} znaků.",
+      "websiteInvalid": "URL webu je neplatné."
+    },
+    "sign": {
+      "intro": "Zanechte vzkaz v mé návštěvní knize.",
+      "namePlaceholder": "Vaše jméno",
+      "websitePlaceholder": "Web (volitelně)",
+      "messagePlaceholder": "Vaše zpráva",
+      "submit": "Podepsat",
+      "submitPending": "Záznam odeslán a čeká na moderaci.",
+      "submitPublishedPrefix": "Záznam publikován!",
+      "submitFailed": "Záznam návštěvní knihy se nepodařilo odeslat."
+    },
+    "read": {
+      "headerLabel": "návštěvní kniha",
+      "entry": "{count, plural, =0 {0 záznamů} one {# záznam} few {# záznamy} other {# záznamů}}",
+      "unavailable": "nedostupné",
+      "refresh": "obnovit",
+      "refreshAria": "Obnovit záznamy návštěvní knihy",
+      "errorPrefix": "chyba:",
+      "errorFallback": "Záznamy návštěvní knihy se nepodařilo načíst.",
+      "noneFromCountryPrefix": "Žádné záznamy z",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Zatím žádné záznamy. Spusťte",
+      "noneYetSuffix": "abyste byli první.",
+      "filter": {
+        "ariaLabel": "Filtrovat záznamy návštěvní knihy",
+        "label": "filtr",
+        "sort": "řazení",
+        "newest": "nejnovější",
+        "oldest": "nejstarší",
+        "country": "země",
+        "allCountries": "Všechny země",
+        "clearCountry": "Vymazat filtr země"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Příkazy Spotify",
+    "notPlaying": "Nic se nepřehrává 😕",
+    "unavailable": "Spotify není nakonfigurované nebo není dostupné.",
+    "nowPlayingPrefix": "Teď na Spotify:",
+    "openNowPlayingAria": "Otevřít aktuální skladbu: {name}",
+    "openRecentlyPlayedAria": "Otevřít nedávno přehranou skladbu: {name}",
+    "openTopTrackAria": "Otevřít oblíbenou skladbu: {name}",
+    "openTopAlbumAria": "Otevřít oblíbené album: {name}",
+    "topTracks": {
+      "rank": "Pořadí",
+      "track": "Skladba",
+      "album": "Album"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Aktuální motiv:",
+    "darkSuffix": "tmavý",
+    "lightSuffix": "světlý",
+    "usagePrefix": "Použití:",
+    "themeCommandsTitle": "Příkazy motivu",
+    "noArgs": "{command} nepřijímá argumenty.",
+    "missingName": "Chybí název motivu.",
+    "tooManyArgs": "Příliš mnoho argumentů.",
+    "usageSet": "Použití: theme set <název>",
+    "usagePreview": "Použití: theme preview <název>",
+    "unknownSubcommand": "Neznámý podpříkaz: {sub}. Použijte jednu z: {commands}.",
+    "list": {
+      "available": "Dostupné motivy ({count}):",
+      "tip": "Klikněte na motiv pro jeho aplikaci.",
+      "active": "(aktivní)",
+      "custom": "vlastní",
+      "deleteAria": "Smazat {label}"
+    },
+    "set": {
+      "unknownAvailable": "Neznámý motiv: {name}. Dostupné motivy:",
+      "updated": "Motiv změněn na {label}.",
+      "active": "Aktivní motiv: {label} ({mode})"
+    }
+  }
+}

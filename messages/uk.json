@@ -1,0 +1,332 @@
+{
+  "Metadata": {
+    "title": "Олександр Госсар | Цифровий номад та інженер-програміст",
+    "description": "Цифровий номад та інженер-програміст @kabila.app. Прихильник open source, створюю продуктивні вебдодатки на React та Next.js.",
+    "jobTitle": "Інженер-програміст",
+    "location": "Шалон-ан-Шампань, Франція",
+    "ogImageAlt": "Олександр Госсар",
+    "keywords": [
+      "Олександр Госсар",
+      "Frontend-розробник",
+      "Цифровий номад",
+      "Open source",
+      "Сучасні технології",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Інженер-програміст",
+      "Фриланс"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Зроблено з <heart></heart> · <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Ласкаво просимо <wave>👋</wave>",
+    "intro": "<tagline>Цифровий номад</tagline> · <job>Інженер-програміст</job> у <employer>{employerName}</employer>",
+    "tags": {
+      "openSource": "Прихильник open source",
+      "calisthenics": "Любитель каліcтеніки",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Початок",
+      "work": "Робота",
+      "profile": "Профіль",
+      "extras": "Додатково",
+      "utils": "Утиліти"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Жодна команда не відповідає «{query}».",
+    "header": {
+      "resetTitle": "Скинути термінал (Ctrl+R)",
+      "resetLabel": "Скинути термінал",
+      "settingsTitle": "Налаштування терміналу",
+      "settingsLabel": "Налаштування терміналу"
+    },
+    "trafficLights": {
+      "close": "Закрити термінал",
+      "minimize": "Згорнути термінал",
+      "restoreMinimize": "Відновити термінал",
+      "expand": "Розгорнути термінал",
+      "restoreExpand": "Відновити розмір терміналу"
+    },
+    "tabs": {
+      "rename": "Перейменувати {name}",
+      "close": "Закрити {name}",
+      "create": "Створити вкладку",
+      "limitReached": "Досягнуто ліміту сесій"
+    },
+    "search": {
+      "placeholder": "Фільтр історії команд…",
+      "hide": "Сховати пошук"
+    },
+    "input": {
+      "placeholder": "введіть команду…",
+      "submit": "Виконати команду"
+    },
+    "fontSize": {
+      "label": "Розмір шрифту",
+      "decrease": "Зменшити шрифт",
+      "decreaseTitle": "Зменшити шрифт (Ctrl+-)",
+      "increase": "Збільшити шрифт",
+      "increaseTitle": "Збільшити шрифт (Ctrl++)"
+    },
+    "settings": {
+      "title": "Налаштування терміналу",
+      "resetAllTitle": "Скинути всі налаштування (включно з розміром)",
+      "resetAllLabel": "Скинути все",
+      "closeTitle": "Закрити налаштування",
+      "closeLabel": "Закрити налаштування",
+      "themeLabel": "Тема",
+      "fontLabel": "Шрифт терміналу",
+      "scrollbackLabel": "Історія",
+      "scrollbackOption": "{count, plural, =0 {немає команд} one {# команда} few {# команди} other {# команд}}",
+      "darkSuffix": "темна",
+      "lightSuffix": "світла",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "Гарячі клавіші",
+    "shortcuts": {
+      "runCommand": "Виконати команду",
+      "autocomplete": "Автодоповнення",
+      "history": "Історія та підказки",
+      "clearOutput": "Очистити вивід",
+      "resetTerminal": "Скинути термінал",
+      "toggleSearch": "Перемкнути пошук",
+      "increaseFontSize": "Збільшити шрифт",
+      "decreaseFontSize": "Зменшити шрифт"
+    },
+    "closeMessages": [
+      "Гарна спроба! Мене не можна закрити.",
+      "Я нікуди не йду. Спробуйте «help»!",
+      "Ні. Цей термінал має проблеми з довірою до кнопок закриття.",
+      "Помилка 418: я чайник, а не закривне вікно.",
+      "sudo rm -rf / ? Хм… ні.",
+      "Ти справді думав, що це спрацює?",
+      "Закрити мене? У такі часи?",
+      "Я влаштований інакше. Спробуй «contact»."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Робота",
+      "Profile": "Профіль",
+      "Guestbook": "Гостьова",
+      "Spotify": "Spotify",
+      "Theme": "Тема",
+      "Terminal": "Термінал"
+    },
+    "descriptions": {
+      "projects": "Що я створив, випустив або у чому брав участь",
+      "experiences": "Мій професійний досвід і досягнення",
+      "about": "Більше про мене, інтереси та цілі",
+      "skills": "Технічні навички та стек",
+      "education": "Моя освіта",
+      "contact": "Email, соцмережі та способи зв'язку",
+      "guestbook": "Довідка з підкоманд гостьової книги",
+      "cv": "Перегляд і завантаження мого PDF-резюме",
+      "spotify": "Довідка з підкоманд Spotify",
+      "theme": "Показати або змінити тему",
+      "help": "Усі доступні команди та їх описи",
+      "clear": "Очистити всі попередні команди та вивід",
+      "reset": "Повернути термінал до екрана привітання",
+      "stats": "Активність з коду, GitHub та кількість відвідувачів",
+      "repo": "Відкрити вихідний код цього портфоліо",
+      "echo": "Вивести повідомлення у термінал",
+      "spotifyNow": "Показати поточний трек",
+      "spotifyTop": "Показати улюблені треки",
+      "spotifyHistory": "Показати історію прослуховувань",
+      "guestbookRead": "Перегляд останніх записів у гостьовій",
+      "guestbookSign": "Залишити запис у гостьовій",
+      "themeList": "Показати всі доступні теми",
+      "themeSet": "Застосувати тему за іменем (наприклад, theme set dracula)",
+      "themePreview": "Попередній перегляд теми без застосування",
+      "themeCreate": "Створити свою тему через візуальний або JSON-редактор",
+      "themeValidate": "Перевірити контраст поточної теми",
+      "lang": "Показати або змінити активну мову",
+      "langSet": "Змінити мову (наприклад, lang set fr)",
+      "langAuto": "Знову увімкнути автовизначення мови"
+    },
+    "help": {
+      "available": "Доступні команди",
+      "tip": "Підказка: клікніть на команду або введіть її, щоб виконати.",
+      "subCommands": "Підкоманди"
+    },
+    "notFound": {
+      "title": "zsh: команду не знайдено: {input}",
+      "didYouMean": "Можливо, ви мали на увазі {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Використання:",
+      "examplePrefix": "Приклад:",
+      "tooManyArgs": "Забагато аргументів.",
+      "unknown": "Невідома {label}: {sub}.",
+      "useOneOf": "Використовуйте одне з: {options}.",
+      "subcommand": "підкоманда"
+    },
+    "about": {
+      "firstName": "Ім'я",
+      "lastName": "Прізвище",
+      "age": "Вік",
+      "yearsOld": "{years, plural, one {# рік} few {# роки} other {# років}}",
+      "location": "Місцезнаходження",
+      "email": "Email",
+      "languages": "Мови",
+      "hobbies": "Захоплення"
+    },
+    "contact": {
+      "intro": "Для пропозицій, фрилансу чи техспівпраці я надаю перевагу email.",
+      "primaryEmail": "Основний email:",
+      "location": "Місцезнаходження:",
+      "socialProfiles": "Соцмережі:"
+    },
+    "stats": {
+      "totalCodingTime": "Загальний час кодингу",
+      "topLanguage": "Головна мова",
+      "githubStars": "Зірки GitHub",
+      "contributions": "Внески ({year})",
+      "codingSince": "Кодую з",
+      "codingSinceValue": "{since} ({years} років)",
+      "visitors": "Відвідувачі",
+      "failed": "Не вдалося завантажити статистику. Спробуйте пізніше.",
+      "na": "Н/Д"
+    },
+    "repo": {
+      "starsLabel": "Зірки",
+      "forksLabel": "Форки",
+      "licenseLabel": "Ліцензія",
+      "copyAria": "Скопіювати у буфер обміну",
+      "copy": "Копіювати",
+      "copiedAria": "Скопійовано",
+      "copiedNotice": "Скопійовано!",
+      "copyFailedAria": "Помилка копіювання",
+      "copyFailedNotice": "Повторити",
+      "fallback": "Вихідний код цього портфоліо доступний тут:"
+    },
+    "cv": {
+      "openPreview": "Відкрити перегляд PDF",
+      "downloadPdf": "Завантажити PDF",
+      "endpointsLabel": "Ендпоінти:",
+      "endpointsAnd": "та"
+    },
+    "projects": {
+      "openLabel": "Відкрити проєкт: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "навігація",
+    "complete": "доповнити",
+    "run": "виконати"
+  },
+  "Lang": {
+    "subCommandsTitle": "Команди мови",
+    "currentLabel": "Поточна мова:",
+    "availablePrefix": "Доступно:",
+    "usagePrefix": "Використання:",
+    "switching": "Перемикання на {locale}…",
+    "autoCleared": "Мову буде визначено автоматично при наступному завантаженні.",
+    "missingCode": "Код мови не вказано.",
+    "unknownLocale": "Невідома мова: {code}.",
+    "unknownSubcommand": "Невідома підкоманда: {sub}.",
+    "tooManyArgs": "Забагато аргументів.",
+    "switcher": {
+      "ariaLabel": "Змінити мову",
+      "title": "Змінити мову"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Цифровий номад",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI-інжиніринг",
+      "openSource": "Open source"
+    },
+    "footer": "Портфоліо"
+  },
+  "Guestbook": {
+    "title": "Команди гостьової книги",
+    "validation": {
+      "nameMin": "Ім'я має містити щонайменше {min} символів.",
+      "nameMax": "Ім'я має містити не більше {max} символів.",
+      "messageMin": "Повідомлення має містити щонайменше {min} символів.",
+      "messageMax": "Повідомлення має містити не більше {max} символів.",
+      "websiteMax": "Сайт не повинен перевищувати {max} символів.",
+      "websiteInvalid": "Некоректний URL сайту."
+    },
+    "sign": {
+      "intro": "Залиште запис у моїй гостьовій книзі.",
+      "namePlaceholder": "Ваше ім'я",
+      "websitePlaceholder": "Сайт (необов'язково)",
+      "messagePlaceholder": "Ваше повідомлення",
+      "submit": "Підписати",
+      "submitPending": "Запис надіслано та очікує модерації.",
+      "submitPublishedPrefix": "Запис опубліковано!",
+      "submitFailed": "Не вдалося надіслати запис."
+    },
+    "read": {
+      "headerLabel": "гостьова",
+      "entry": "{count, plural, =0 {0 записів} one {# запис} few {# записи} other {# записів}}",
+      "unavailable": "недоступно",
+      "refresh": "оновити",
+      "refreshAria": "Оновити записи гостьової книги",
+      "errorPrefix": "помилка:",
+      "errorFallback": "Не вдалося завантажити записи гостьової книги.",
+      "noneFromCountryPrefix": "Немає записів з",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Записів ще немає. Запустіть",
+      "noneYetSuffix": "щоб бути першим.",
+      "filter": {
+        "ariaLabel": "Фільтр записів гостьової книги",
+        "label": "фільтр",
+        "sort": "сортування",
+        "newest": "новіші",
+        "oldest": "старіші",
+        "country": "країна",
+        "allCountries": "Усі країни",
+        "clearCountry": "Скинути фільтр країни"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Команди Spotify",
+    "notPlaying": "Нічого не грає 😕",
+    "unavailable": "Spotify не налаштовано або недоступний.",
+    "nowPlayingPrefix": "Зараз у Spotify:",
+    "openNowPlayingAria": "Відкрити поточний трек: {name}",
+    "openRecentlyPlayedAria": "Відкрити нещодавно прослуханий трек: {name}",
+    "openTopTrackAria": "Відкрити улюблений трек: {name}",
+    "openTopAlbumAria": "Відкрити улюблений альбом: {name}",
+    "topTracks": {
+      "rank": "Ранг",
+      "track": "Трек",
+      "album": "Альбом"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Поточна тема:",
+    "darkSuffix": "темна",
+    "lightSuffix": "світла",
+    "usagePrefix": "Використання:",
+    "themeCommandsTitle": "Команди теми",
+    "noArgs": "{command} не приймає аргументів.",
+    "missingName": "Не вказано ім'я теми.",
+    "tooManyArgs": "Забагато аргументів.",
+    "usageSet": "Використання: theme set <ім'я>",
+    "usagePreview": "Використання: theme preview <ім'я>",
+    "unknownSubcommand": "Невідома підкоманда: {sub}. Використовуйте: {commands}.",
+    "list": {
+      "available": "Доступні теми ({count}):",
+      "tip": "Клікніть по темі, щоб її застосувати.",
+      "active": "(активна)",
+      "custom": "своя",
+      "deleteAria": "Видалити {label}"
+    },
+    "set": {
+      "unknownAvailable": "Невідома тема: {name}. Доступні теми:",
+      "updated": "Тему змінено на {label}.",
+      "active": "Активна тема: {label} ({mode})"
+    }
+  }
+}
