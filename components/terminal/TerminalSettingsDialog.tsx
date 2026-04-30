@@ -165,8 +165,10 @@ function TerminalSettingsDialog({
             onDecrease={decreaseFontScale}
           />
 
-          {/* Theme — full width row, select on left, live swatches on right */}
-          <div className="grid gap-3 sm:col-span-2 sm:grid-cols-2 sm:items-end">
+          {/* Theme — always one row: select on left half, live swatches on
+              right half. `grid-cols-2` (no sm: prefix) keeps the layout
+              side-by-side on mobile too. */}
+          <div className="grid grid-cols-2 items-end gap-3 sm:col-span-2">
             <div className="grid gap-1 text-muted-foreground text-xs">
               <label htmlFor={themeSelectId}>{t("settings.themeLabel")}</label>
               <Select
@@ -186,7 +188,7 @@ function TerminalSettingsDialog({
                 ))}
               </Select>
             </div>
-            <div className="flex h-8 items-center justify-end sm:justify-start">
+            <div className="flex h-8 items-center justify-start">
               <ColorSwatches colors={palette.colors} />
             </div>
           </div>
