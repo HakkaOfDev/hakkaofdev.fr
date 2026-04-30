@@ -7,6 +7,7 @@ import {
   Filter,
   X,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import {
   Popover,
@@ -26,21 +27,22 @@ type FilterProps = {
 
 const SORT_OPTIONS: {
   value: SortOrder;
-  label: string;
+  slug: "newest" | "oldest";
   icon: typeof ArrowDownNarrowWide;
 }[] = [
-  { value: "desc", label: "newest", icon: ArrowDownNarrowWide },
-  { value: "asc", label: "oldest", icon: ArrowUpNarrowWide },
+  { value: "desc", slug: "newest", icon: ArrowDownNarrowWide },
+  { value: "asc", slug: "oldest", icon: ArrowUpNarrowWide },
 ];
 
 function SortOrderFilter({ filters, onChangeFilters, onClose }: FilterProps) {
+  const t = useTranslations("Guestbook.read.filter");
   return (
     <div className="grid gap-1.5">
       <span className="font-mono font-semibold text-quinary/70 text-xs uppercase tracking-wider">
-        sort
+        {t("sort")}
       </span>
       <div className="flex gap-1">
-        {SORT_OPTIONS.map(({ value, label, icon: Icon }) => (
+        {SORT_OPTIONS.map(({ value, slug, icon: Icon }) => (
           <button
             key={value}
             type="button"
@@ -56,7 +58,7 @@ function SortOrderFilter({ filters, onChangeFilters, onClose }: FilterProps) {
             )}
           >
             <Icon className="h-3 w-3" />
-            {label}
+            {t(slug as never)}
           </button>
         ))}
       </div>
@@ -70,12 +72,13 @@ function CountryFilter({
   onChangeFilters,
   onClose,
 }: FilterProps & { countries: string[] }) {
+  const t = useTranslations("Guestbook.read.filter");
   if (countries.length === 0) return null;
 
   return (
     <div className="grid gap-1.5">
       <span className="font-mono font-semibold text-quinary/70 text-xs uppercase tracking-wider">
-        country
+        {t("country")}
       </span>
       <div className="flex gap-1">
         <Select
@@ -90,7 +93,7 @@ function CountryFilter({
           }}
           className="h-7 border-border bg-muted/40 text-xs"
         >
-          <option value="">All countries</option>
+          <option value="">{t("allCountries")}</option>
           {countries.map((code) => (
             <option key={code} value={code}>
               {GuestbookClientService.countryToFlag(code)} {code}
@@ -105,7 +108,7 @@ function CountryFilter({
               onClose?.();
             }}
             className="inline-flex size-7 cursor-pointer items-center justify-center rounded-md border border-border text-foreground/70 transition-colors hover:bg-muted/60 hover:text-foreground"
-            aria-label="Clear country filter"
+            aria-label={t("clearCountry")}
           >
             <X className="h-3 w-3" />
           </button>
@@ -116,6 +119,7 @@ function CountryFilter({
 }
 
 export function FilterPopover({ filters, onChangeFilters }: FilterProps) {
+  const t = useTranslations("Guestbook.read.filter");
   const [open, setOpen] = useState(false);
 
   const { data: countries } = useQuery({
@@ -137,10 +141,10 @@ export function FilterPopover({ filters, onChangeFilters }: FilterProps) {
               ? "bg-quinary/20 text-quinary ring-quinary/30"
               : "bg-quinary/10 text-quinary ring-quinary/20 hover:bg-quinary/20",
           )}
-          aria-label="Filter guestbook entries"
+          aria-label={t("ariaLabel")}
         >
           <Filter className="h-2.5 w-2.5" />
-          filter
+          {t("label")}
           {hasActiveFilters && (
             <span className="ml-0.5 size-1.5 rounded-full bg-quinary" />
           )}

@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { useFormatter } from "next-intl";
 import { GuestbookClientService } from "@/lib/services";
-import { cn, formatEntryDate } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import type { GuestbookEntry } from "@/types/guestbook";
 
 export function GuestbookEntryRow({
@@ -12,6 +15,18 @@ export function GuestbookEntryRow({
   index: number;
   isLast: boolean;
 }) {
+  const format = useFormatter();
+  const date = new Date(entry.created_at);
+  const formattedDate = Number.isNaN(date.getTime())
+    ? entry.created_at
+    : format.dateTime(date, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
   const nameElement = entry.website ? (
     <Link
       href={entry.website}
@@ -46,7 +61,7 @@ export function GuestbookEntryRow({
           </span>
         )}
         <span className="ml-auto whitespace-nowrap font-mono text-muted-foreground/40 text-xs">
-          {formatEntryDate(entry.created_at)}
+          {formattedDate}
         </span>
       </div>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import {
   GUESTBOOK_COMMAND_RENDERERS,
   GUESTBOOK_COMMANDS,
@@ -7,12 +8,13 @@ import {
 import SubCommandRouter from "../SubCommandRouter";
 
 function CGuestbook({ input }: { input: string }) {
+  const t = useTranslations("Guestbook");
   return (
     <SubCommandRouter
       input={input}
       commands={GUESTBOOK_COMMANDS}
       prefix="guestbook"
-      title="Guestbook commands"
+      title={t("title")}
       variant="pink"
       renderValid={(subcommand) => {
         const renderer =

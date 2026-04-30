@@ -217,6 +217,50 @@
     "complete": "complete",
     "run": "run"
   },
+  "Guestbook": {
+    "title": "Guestbook commands",
+    "validation": {
+      "nameMin": "Name must be at least {min} characters.",
+      "nameMax": "Name must be at most {max} characters.",
+      "messageMin": "Message must be at least {min} characters.",
+      "messageMax": "Message must be at most {max} characters.",
+      "websiteMax": "Website must be at most {max} characters.",
+      "websiteInvalid": "Website URL is invalid."
+    },
+    "sign": {
+      "intro": "Leave a message in my guestbook.",
+      "namePlaceholder": "Your name",
+      "websitePlaceholder": "Website (optional)",
+      "messagePlaceholder": "Your message",
+      "submit": "Sign guestbook",
+      "submitPending": "Entry submitted and pending moderation.",
+      "submitPublishedPrefix": "Entry published!",
+      "submitFailed": "Failed to submit guestbook entry."
+    },
+    "read": {
+      "headerLabel": "guestbook",
+      "entry": "{count, plural, =0 {0 entries} one {# entry} other {# entries}}",
+      "unavailable": "unavailable",
+      "refresh": "refresh",
+      "refreshAria": "Refresh guestbook entries",
+      "errorPrefix": "error:",
+      "errorFallback": "Failed to load guestbook entries.",
+      "noneFromCountryPrefix": "No entries from",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "No entries yet. Run",
+      "noneYetSuffix": "to be the first.",
+      "filter": {
+        "ariaLabel": "Filter guestbook entries",
+        "label": "filter",
+        "sort": "sort",
+        "newest": "newest",
+        "oldest": "oldest",
+        "country": "country",
+        "allCountries": "All countries",
+        "clearCountry": "Clear country filter"
+      }
+    }
+  },
   "Spotify": {
     "title": "Spotify commands",
     "notPlaying": "Not playing 😕",
