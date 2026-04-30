@@ -26,7 +26,9 @@ export function CThemeSet({ name }: { name: string }) {
   if (!isValid) {
     return (
       <AnimatedSpan className="gap-2">
-        <p className="text-destructive">{t("set.unknownAvailable", { name })}</p>
+        <p className="text-destructive">
+          {t("set.unknownAvailable", { name })}
+        </p>
         <div className="flex flex-wrap gap-1.5">
           {themes.map((th) => (
             <Shortcut

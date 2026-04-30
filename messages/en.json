@@ -217,6 +217,21 @@
     "complete": "complete",
     "run": "run"
   },
+  "Spotify": {
+    "title": "Spotify commands",
+    "notPlaying": "Not playing 😕",
+    "unavailable": "Spotify is not configured or is unavailable.",
+    "nowPlayingPrefix": "Now playing on Spotify:",
+    "openNowPlayingAria": "Open now playing track: {name}",
+    "openRecentlyPlayedAria": "Open recently played track: {name}",
+    "openTopTrackAria": "Open top track: {name}",
+    "openTopAlbumAria": "Open top album: {name}",
+    "topTracks": {
+      "rank": "Rank",
+      "track": "Track",
+      "album": "Album"
+    }
+  },
   "Theme": {
     "currentLabel": "Current theme:",
     "darkSuffix": "dark",

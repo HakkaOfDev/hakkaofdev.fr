@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import {
   SPOTIFY_COMMAND_RENDERERS,
   SPOTIFY_COMMANDS,
@@ -7,12 +8,13 @@ import {
 import SubCommandRouter from "../SubCommandRouter";
 
 function CSpotify({ input }: { input: string }) {
+  const t = useTranslations("Spotify");
   return (
     <SubCommandRouter
       input={input}
       commands={SPOTIFY_COMMANDS}
       prefix="spotify"
-      title="Spotify commands"
+      title={t("title")}
       variant="purple"
       renderValid={(subcommand) => {
         const renderer =
