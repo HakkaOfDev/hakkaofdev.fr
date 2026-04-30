@@ -1,11 +1,15 @@
 import { ImageResponse } from "next/og";
+import { hasLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import type { ReactNode } from "react";
+import { routing } from "@/i18n/routing";
 import { SITE } from "@/lib/constants";
 import { getSiteUrl } from "@/lib/site-url";
 
 export const runtime = "edge";
 export const contentType = "image/png";
 export const size = { width: 1200, height: 630 };
+export const alt = SITE.name;
 
 // ---------------------------------------------------------------------------
 // Icons – Lucide-style inline SVGs (Satori-compatible)
@@ -59,29 +63,6 @@ function HeartIcon({ color }: { color: string }) {
 }
 
 // ---------------------------------------------------------------------------
-// Data
-// ---------------------------------------------------------------------------
-
-const TAGS: { label: string; accent: string; icon: ReactNode }[] = [
-  {
-    label: "Digital Nomad",
-    accent: "#00E5FF",
-    icon: <GlobeIcon color="#00E5FF" />,
-  },
-  { label: "Next.js", accent: "#00E5FF", icon: <CodeIcon color="#00E5FF" /> },
-  {
-    label: "UI Engineering",
-    accent: "#FFB000",
-    icon: <LayoutIcon color="#FFB000" />,
-  },
-  {
-    label: "Open-source",
-    accent: "#A78BFA",
-    icon: <HeartIcon color="#A78BFA" />,
-  },
-];
-
-// ---------------------------------------------------------------------------
 // Sub-components
 // ---------------------------------------------------------------------------
 
@@ -127,24 +108,6 @@ function Tag({ icon, label }: { icon: ReactNode; label: string }) {
   );
 }
 
-function TagList() {
-  return (
-    <div
-      style={{
-        display: "flex",
-        gap: 14,
-        alignItems: "center",
-        flexWrap: "wrap",
-        marginTop: 4,
-      }}
-    >
-      {TAGS.map((t) => (
-        <Tag key={t.label} icon={t.icon} label={t.label} />
-      ))}
-    </div>
-  );
-}
-
 function NameHeading() {
   const [firstName, ...lastParts] = SITE.name.split(" ");
   const lastName = lastParts.join(" ");
@@ -159,7 +122,7 @@ function NameHeading() {
   );
 }
 
-function FooterBar({ host }: { host: string }) {
+function FooterBar({ host, label }: { host: string; label: string }) {
   return (
     <div
       style={{
@@ -174,7 +137,7 @@ function FooterBar({ host }: { host: string }) {
       }}
     >
       <div>{host}</div>
-      <div style={{ letterSpacing: 1 }}>Portfolio</div>
+      <div style={{ letterSpacing: 1 }}>{label}</div>
     </div>
   );
 }
@@ -195,7 +158,46 @@ function getHostLabel() {
 // Main
 // ---------------------------------------------------------------------------
 
-export default function OpenGraphImage() {
+type Props = { params: Promise<{ locale: string }> };
+
+export default async function OpenGraphImage({ params }: Props) {
+  const { locale } = await params;
+  const resolvedLocale = hasLocale(routing.locales, locale)
+    ? locale
+    : routing.defaultLocale;
+
+  const tMeta = await getTranslations({
+    locale: resolvedLocale,
+    namespace: "Metadata",
+  });
+  const tOg = await getTranslations({
+    locale: resolvedLocale,
+    namespace: "OpenGraph",
+  });
+
+  const tags: { label: string; accent: string; icon: ReactNode }[] = [
+    {
+      label: tOg("tags.digitalNomad"),
+      accent: "#00E5FF",
+      icon: <GlobeIcon color="#00E5FF" />,
+    },
+    {
+      label: tOg("tags.nextjs"),
+      accent: "#00E5FF",
+      icon: <CodeIcon color="#00E5FF" />,
+    },
+    {
+      label: tOg("tags.uiEngineering"),
+      accent: "#FFB000",
+      icon: <LayoutIcon color="#FFB000" />,
+    },
+    {
+      label: tOg("tags.openSource"),
+      accent: "#A78BFA",
+      icon: <HeartIcon color="#A78BFA" />,
+    },
+  ];
+
   const host = getHostLabel();
 
   return new ImageResponse(
@@ -226,14 +228,27 @@ export default function OpenGraphImage() {
             color: "rgba(237,239,242,0.70)",
           }}
         >
-          {SITE.jobTitle}
+          {tMeta("jobTitle")}
         </div>
 
         <NameHeading />
-        <TagList />
+
+        <div
+          style={{
+            display: "flex",
+            gap: 14,
+            alignItems: "center",
+            flexWrap: "wrap",
+            marginTop: 4,
+          }}
+        >
+          {tags.map((t) => (
+            <Tag key={t.label} icon={t.icon} label={t.label} />
+          ))}
+        </div>
       </div>
 
-      <FooterBar host={host} />
+      <FooterBar host={host} label={tOg("footer")} />
     </div>,
     { ...size },
   );

@@ -16,16 +16,12 @@ function CExperiences() {
         const company = t(`${experience.slug}.company` as never);
         const location = t(`${experience.slug}.location` as never);
         const descriptions =
-          (t.raw(`${experience.slug}.descriptions` as never) as string[]) ??
-          [];
+          (t.raw(`${experience.slug}.descriptions` as never) as string[]) ?? [];
         const isLast = idx === EXPERIENCES.length - 1;
         return (
           <div
             key={experience.slug}
-            className={cn(
-              "relative border-l-2 pb-4 pl-4",
-              isLast && "pb-1",
-            )}
+            className={cn("relative border-l-2 pb-4 pl-4", isLast && "pb-1")}
           >
             <div className="absolute top-1 -left-[5px] z-[1] size-2 rounded-full bg-primary" />
             {period.toLowerCase().includes("since") && (

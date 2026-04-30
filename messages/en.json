@@ -217,6 +217,15 @@
     "complete": "complete",
     "run": "run"
   },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Digital Nomad",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI Engineering",
+      "openSource": "Open-source"
+    },
+    "footer": "Portfolio"
+  },
   "Guestbook": {
     "title": "Guestbook commands",
     "validation": {
