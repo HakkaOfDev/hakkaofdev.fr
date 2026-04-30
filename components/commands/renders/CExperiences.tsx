@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { EXPERIENCES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -20,7 +21,19 @@ function CExperiences() {
           <p className="text-muted-foreground">{experience.period}</p>
           <p className="font-semibold text-sm">{experience.name}</p>
           <p className="text-muted-foreground">
-            {experience.company} · {experience.location}
+            {experience.companyUrl ? (
+              <Link
+                href={experience.companyUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline-offset-2 hover:text-primary hover:underline"
+              >
+                {experience.company}
+              </Link>
+            ) : (
+              experience.company
+            )}{" "}
+            · {experience.location}
           </p>
           {experience.descriptions && experience.descriptions?.length > 0 && (
             <ul className="mt-2 list-disc pl-4">

@@ -14,7 +14,7 @@ import {
 export function CVDocument() {
   return (
     <Document
-      title={`${CV_DATA.name} — CV`}
+      title={`${CV_DATA.name} - CV`}
       author={CV_DATA.name}
       subject="CV"
       creator="hakkaofdev.fr"

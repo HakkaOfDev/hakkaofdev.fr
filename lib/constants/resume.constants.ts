@@ -1,3 +1,5 @@
+import { SITE } from "./site.constants";
+
 export const EDUCATION = [
   {
     period: "2022-2023",
@@ -25,41 +27,42 @@ export const EXPERIENCES = [
   {
     period: "Since July 2022",
     name: "Software Engineer",
-    company: "kabila.app",
+    company: "Kabila",
+    companyUrl: "https://kabila.app",
     location: "Madrid, Spain",
     descriptions: [
-      "Leading a team to deliver high-quality web applications",
-      "Implementing modern frontend architecture and best practices",
-      "Managing technical roadmap and sprint planning",
-      "Mentoring junior developers and conducting code reviews",
-      "Building reusable component libraries and design systems",
-      "Creating mobile apps with React Native and Expo",
+      "Lead a frontend team building production web apps with React and Next.js",
+      "Own the technical roadmap, sprint planning, and architecture decisions",
+      "Mentor junior developers and run code reviews",
+      "Build and maintain the shared component library and internal design system",
+      "Ship companion mobile apps with React Native and Expo",
     ],
   },
   {
     period: "Since July 2022",
     name: "Freelance",
     company: "Alexandre GOSSARD",
+    companyUrl: SITE.url,
     location: "Châlons-en-Champagne, France",
     descriptions: [
-      "Developed full-stack web applications using React and Next.js",
-      "Built cross-platform mobile apps with React Native and Expo",
-      "Implemented CI/CD pipelines and automated deployment workflows",
-      "Provided technical consulting and architecture recommendations",
-      "Managed client relationships and project timelines independently",
-      "Delivering mobile apps for clients on the Google Play Store and Apple App Store",
+      "Build full-stack web apps with React and Next.js for direct clients",
+      "Ship cross-platform mobile apps to the App Store and Google Play",
+      "Set up CI/CD pipelines and automated deployment workflows",
+      "Advise on architecture, tech choices, and project scoping",
+      "Handle client communication and delivery timelines on every project",
     ],
   },
   {
     period: "September 2022 - August 2023",
     name: "Apprenticeship",
     company: "Arche MC2",
+    companyUrl: "https://arche-mc2.fr",
     location: "Châlons-en-Champagne, France",
     descriptions: [
-      "Implemented GitLab CI/CD pipelines for automated testing and deployment",
-      "Managed Docker containerization of applications and services",
-      "Automated system administration tasks using shell scripts",
-      "Monitored system health and implemented scalable solutions",
+      "Built GitLab CI/CD pipelines for automated testing and deployment",
+      "Containerized internal applications and services with Docker",
+      "Automated routine sysadmin tasks with shell scripts",
+      "Monitored system health and improved infrastructure resilience",
     ],
   },
 ];

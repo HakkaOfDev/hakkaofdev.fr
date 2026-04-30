@@ -39,10 +39,16 @@ export const PROJECTS = [
     tags: ["Next.js", "Tailwind", "Typescript", "Freelance"],
   },
   {
+    name: "AC-Vision",
+    description: "DASAN OLT/ONUs Supervision tool [Opensource].",
+    url: "https://github.com/hakkaofdev/ac-vision",
+    imageUrl: "/projects/ac-vision.png",
+    tags: ["Next.js", "Python", "Typescript", "Redis", "Docker", "Open-source"],
+  },
+  {
     name: "Brian Grav&Style",
     description:
       "A custom e-commerce platform for a professional engraving studio, featuring a product catalog, online ordering and an admin dashboard for order management.",
-    url: "https://brian-gravure.vercel.app",
     imageUrl: "/projects/brian-gravure.png",
     tags: ["Next.js", "Tailwind", "Typescript", "E-commerce"],
   },
@@ -61,13 +67,6 @@ export const PROJECTS = [
     url: "https://ts-next-chakra-motion-kit.vercel.app",
     imageUrl: "/projects/ts-next-chakra-motion-kit.png",
     tags: ["Next.js", "Chakra UI", "Typescript", "Template", "Open-source"],
-  },
-  {
-    name: "AC-Vision",
-    description: "DASAN OLT/ONUs Supervision tool [Opensource].",
-    url: "https://github.com/hakkaofdev/ac-vision",
-    imageUrl: "/projects/ac-vision.png",
-    tags: ["Next.js", "Python", "Typescript", "Redis", "Docker", "Open-source"],
   },
   {
     name: "RT'ransport",
