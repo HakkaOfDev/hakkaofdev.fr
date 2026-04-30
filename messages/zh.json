@@ -1,1 +1,578 @@
-{}
+{
+  "_meta": {
+    "needsReview": true,
+    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+  },
+  "Metadata": {
+    "title": "Alexandre Gossard | 数字游民 & 软件工程师",
+    "description": "数字游民和软件工程师 @kabila.app。开源爱好者,使用 React 和 Next.js 打造高性能的网络体验。",
+    "jobTitle": "软件工程师",
+    "location": "法国 沙隆昂尚帕涅",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "前端开发者",
+      "数字游民",
+      "开源",
+      "现代技术",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "软件工程师",
+      "自由职业"
+    ]
+  },
+  "Footer": {
+    "madeBy": "由 <name></name> 用 <heart></heart> 制作"
+  },
+  "Welcome": {
+    "greeting": "~ 欢迎 <wave>👋</wave>",
+    "intro": "<tagline>数字游民</tagline> · <employer>{employerName}</employer> 的 <job>软件工程师</job>",
+    "tags": {
+      "openSource": "开源倡导者",
+      "calisthenics": "徒手健身爱好者",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "开始",
+      "work": "工作",
+      "profile": "资料",
+      "extras": "扩展",
+      "utils": "工具"
+    }
+  },
+  "Terminal": {
+    "noMatch": "没有命令匹配 \"{query}\"。",
+    "header": {
+      "resetTitle": "重置终端 (Ctrl+R)",
+      "resetLabel": "重置终端",
+      "settingsTitle": "终端设置",
+      "settingsLabel": "终端设置"
+    },
+    "trafficLights": {
+      "close": "关闭终端",
+      "minimize": "最小化终端",
+      "restoreMinimize": "还原终端",
+      "expand": "最大化终端",
+      "restoreExpand": "还原终端大小"
+    },
+    "tabs": {
+      "rename": "重命名 {name}",
+      "close": "关闭 {name}",
+      "create": "新建标签页",
+      "limitReached": "已达到会话上限"
+    },
+    "search": {
+      "placeholder": "筛选命令历史…",
+      "hide": "隐藏搜索"
+    },
+    "input": {
+      "placeholder": "输入命令…",
+      "submit": "执行命令"
+    },
+    "fontSize": {
+      "label": "字体大小",
+      "decrease": "减小字体",
+      "decreaseTitle": "减小字体 (Ctrl+-)",
+      "increase": "增大字体",
+      "increaseTitle": "增大字体 (Ctrl++)"
+    },
+    "settings": {
+      "title": "终端设置",
+      "resetAllTitle": "重置所有设置(包括尺寸)",
+      "resetAllLabel": "全部重置",
+      "closeTitle": "关闭设置",
+      "closeLabel": "关闭设置",
+      "themeLabel": "主题",
+      "fontLabel": "终端字体",
+      "scrollbackLabel": "回滚",
+      "scrollbackOption": "{count, plural, =0 {无命令} other {# 条命令}}",
+      "darkSuffix": "深色",
+      "lightSuffix": "浅色",
+      "themeOption": "{label}({mode})"
+    },
+    "shortcutsHeading": "键盘快捷键",
+    "shortcuts": {
+      "runCommand": "执行命令",
+      "autocomplete": "自动补全",
+      "history": "历史与建议",
+      "clearOutput": "清空输出",
+      "resetTerminal": "重置终端",
+      "toggleSearch": "切换搜索",
+      "increaseFontSize": "增大字体",
+      "decreaseFontSize": "减小字体"
+    },
+    "closeMessages": [
+      "好尝试!但你关不掉我。",
+      "我哪儿也不去。试试 'help' 吧!",
+      "不行。这个终端对关闭按钮有信任问题。",
+      "错误 418:我是个茶壶,不是可关闭的窗口。",
+      "sudo rm -rf / ?嗯…还是算了。",
+      "你真的觉得这能行得通?",
+      "关掉我?在这个时代?",
+      "我与众不同。试试 'contact' 吧。"
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "工作",
+      "Profile": "资料",
+      "Guestbook": "留言板",
+      "Spotify": "Spotify",
+      "Theme": "主题",
+      "Terminal": "终端"
+    },
+    "descriptions": {
+      "projects": "我构建、发布或参与过的项目",
+      "experiences": "查看我的职业经历与成就",
+      "about": "了解我的背景、兴趣和职业目标",
+      "skills": "查看我使用的技术栈、工具和技能",
+      "education": "我的学历和教育背景",
+      "contact": "邮箱、社交媒体和联系方式",
+      "guestbook": "显示留言板子命令的帮助",
+      "cv": "预览并下载我的 PDF 简历",
+      "spotify": "显示 Spotify 子命令的帮助",
+      "theme": "显示或切换界面主题",
+      "help": "显示所有可用命令及其说明",
+      "clear": "清除所有之前的命令和输出",
+      "reset": "重置终端到欢迎屏幕",
+      "stats": "显示编程活动、GitHub 数据和访客数",
+      "repo": "打开此作品集的源代码仓库",
+      "echo": "在终端中打印一条消息",
+      "spotifyNow": "显示当前正在播放的歌曲",
+      "spotifyTop": "显示我最常听的歌曲",
+      "spotifyHistory": "显示我的播放历史",
+      "guestbookRead": "浏览最新的留言板条目",
+      "guestbookSign": "在留言板中留言",
+      "themeList": "显示所有可用主题",
+      "themeSet": "按名称应用主题(如 theme set dracula)",
+      "themePreview": "预览主题但不应用",
+      "themeCreate": "通过可视化或 JSON 编辑器创建自定义主题",
+      "themeValidate": "检查当前主题的对比度",
+      "lang": "显示或切换当前语言",
+      "langSet": "切换语言(如 lang set fr)",
+      "langAuto": "重新启用浏览器语言自动检测"
+    },
+    "help": {
+      "available": "可用命令",
+      "tip": "提示:点击上方的命令或在提示符中输入即可执行。",
+      "subCommands": "子命令"
+    },
+    "notFound": {
+      "title": "zsh: 未找到命令: {input}",
+      "didYouMean": "你是不是想输入 {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "用法:",
+      "examplePrefix": "示例:",
+      "tooManyArgs": "参数过多。",
+      "unknown": "未知的{label}: {sub}。",
+      "useOneOf": "请使用其中之一: {options}。",
+      "subcommand": "子命令"
+    },
+    "about": {
+      "firstName": "名",
+      "lastName": "姓",
+      "age": "年龄",
+      "yearsOld": "{years} 岁",
+      "location": "位置",
+      "email": "邮箱",
+      "languages": "语言",
+      "hobbies": "爱好"
+    },
+    "contact": {
+      "intro": "对于工作机会、自由职业请求或技术合作,我更喜欢通过邮件联系。",
+      "primaryEmail": "主邮箱:",
+      "location": "位置:",
+      "socialProfiles": "社交资料:"
+    },
+    "stats": {
+      "totalCodingTime": "总编程时间",
+      "topLanguage": "主要语言",
+      "githubStars": "GitHub 星标",
+      "contributions": "贡献({year})",
+      "codingSince": "编程起始",
+      "codingSinceValue": "{since}({years} 年)",
+      "visitors": "访客",
+      "failed": "无法获取统计数据。请稍后再试。",
+      "na": "无"
+    },
+    "repo": {
+      "starsLabel": "星标",
+      "forksLabel": "Forks",
+      "licenseLabel": "许可证",
+      "copyAria": "复制到剪贴板",
+      "copy": "复制",
+      "copiedAria": "已复制",
+      "copiedNotice": "已复制!",
+      "copyFailedAria": "复制失败",
+      "copyFailedNotice": "重试",
+      "fallback": "此作品集的源代码可在此查看:"
+    },
+    "cv": {
+      "openPreview": "打开 PDF 预览",
+      "downloadPdf": "下载 PDF",
+      "endpointsLabel": "接口:",
+      "endpointsAnd": "和"
+    },
+    "projects": {
+      "openLabel": "打开项目: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "导航",
+    "complete": "补全",
+    "run": "执行"
+  },
+  "Lang": {
+    "subCommandsTitle": "语言命令",
+    "currentLabel": "当前语言:",
+    "availablePrefix": "可用:",
+    "usagePrefix": "用法:",
+    "switching": "正在切换到 {locale}…",
+    "autoCleared": "下次加载时将自动检测语言。",
+    "missingCode": "缺少语言代码。",
+    "unknownLocale": "未知语言: {code}。",
+    "unknownSubcommand": "未知子命令: {sub}。",
+    "tooManyArgs": "参数过多。",
+    "switcher": {
+      "ariaLabel": "切换语言",
+      "title": "切换语言"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "数字游民",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI 工程",
+      "openSource": "开源"
+    },
+    "footer": "作品集"
+  },
+  "Guestbook": {
+    "title": "留言板命令",
+    "validation": {
+      "nameMin": "姓名至少需要 {min} 个字符。",
+      "nameMax": "姓名最多 {max} 个字符。",
+      "messageMin": "留言至少需要 {min} 个字符。",
+      "messageMax": "留言最多 {max} 个字符。",
+      "websiteMax": "网站最多 {max} 个字符。",
+      "websiteInvalid": "网站 URL 无效。"
+    },
+    "sign": {
+      "intro": "在我的留言板上留言吧。",
+      "namePlaceholder": "你的姓名",
+      "websitePlaceholder": "网站(可选)",
+      "messagePlaceholder": "你的留言",
+      "submit": "签名",
+      "submitPending": "留言已提交,等待审核。",
+      "submitPublishedPrefix": "留言已发布!",
+      "submitFailed": "无法提交留言板条目。"
+    },
+    "read": {
+      "headerLabel": "留言板",
+      "entry": "{count} 条留言",
+      "unavailable": "不可用",
+      "refresh": "刷新",
+      "refreshAria": "刷新留言板条目",
+      "errorPrefix": "错误:",
+      "errorFallback": "无法加载留言板条目。",
+      "noneFromCountryPrefix": "没有来自",
+      "noneFromCountrySuffix": " 的留言。",
+      "noneYetPrefix": "还没有留言。运行",
+      "noneYetSuffix": "成为第一个吧。",
+      "filter": {
+        "ariaLabel": "筛选留言板条目",
+        "label": "筛选",
+        "sort": "排序",
+        "newest": "最新",
+        "oldest": "最旧",
+        "country": "国家",
+        "allCountries": "所有国家",
+        "clearCountry": "清除国家筛选"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Spotify 命令",
+    "notPlaying": "未在播放 😕",
+    "unavailable": "Spotify 未配置或不可用。",
+    "nowPlayingPrefix": "正在 Spotify 上播放:",
+    "openNowPlayingAria": "打开正在播放的歌曲: {name}",
+    "openRecentlyPlayedAria": "打开最近播放的歌曲: {name}",
+    "openTopTrackAria": "打开热门歌曲: {name}",
+    "openTopAlbumAria": "打开热门专辑: {name}",
+    "topTracks": {
+      "rank": "排名",
+      "track": "歌曲",
+      "album": "专辑"
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "简历",
+    "subject": "简历",
+    "summary": "软件工程师,近四年经验。我以自由职业者身份为自己的客户工作,构建发布到 App Store 和 Google Play 的网页和移动应用。React、Next.js 和 React Native 是我的主场,我钟爱整洁的架构、快速的反馈循环以及偶尔的开源副业。常驻法国,从笔记本能放下的任何地方工作。",
+    "sections": {
+      "summary": "职业概要",
+      "experience": "工作经历",
+      "skills": "技术能力",
+      "education": "教育背景",
+      "projects": "精选项目",
+      "languages": "语言",
+      "links": "链接"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "软件工程师",
+        "company": "Kabila",
+        "location": "西班牙 马德里",
+        "period": "2022 年 7 月至今",
+        "descriptions": [
+          "带领前端团队使用 React 和 Next.js 构建生产级网页应用",
+          "负责技术路线图、Sprint 规划和架构决策",
+          "辅导初级开发者并主持代码评审",
+          "构建和维护共享组件库及内部设计系统",
+          "使用 React Native 和 Expo 发布配套移动应用"
+        ]
+      },
+      "freelance": {
+        "name": "自由职业",
+        "company": "Alexandre GOSSARD",
+        "location": "法国 沙隆昂尚帕涅",
+        "period": "2022 年 7 月至今",
+        "descriptions": [
+          "为直接客户使用 React 和 Next.js 构建全栈网页应用",
+          "向 App Store 和 Google Play 发布跨平台移动应用",
+          "搭建 CI/CD 流水线和自动化部署工作流",
+          "在架构、技术选型和项目范围方面提供咨询",
+          "处理每个项目的客户沟通和交付时间"
+        ]
+      },
+      "archeMC2": {
+        "name": "学徒制",
+        "company": "Arche MC2",
+        "location": "法国 沙隆昂尚帕涅",
+        "period": "2022 年 9 月 — 2023 年 8 月",
+        "descriptions": [
+          "构建 GitLab CI/CD 流水线用于自动化测试和部署",
+          "使用 Docker 容器化内部应用和服务",
+          "通过 Shell 脚本自动化日常系统管理任务",
+          "监控系统健康并改进基础设施韧性"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "系统管理与安全(职业学士)",
+        "location": "IUT Châlons(法国 沙隆昂尚帕涅)",
+        "period": "2022-2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT 网络与电信(技术学位)",
+        "location": "IUT Châlons(法国 沙隆昂尚帕涅)",
+        "period": "2020-2022",
+        "descriptions": ["榜眼"]
+      },
+      "lyceeBac": {
+        "name": "理科业士(高考等同)",
+        "location": "Lycée Jean Talon(法国 沙隆昂尚帕涅)",
+        "period": "2019-2020",
+        "descriptions": ["专业 ISN(信息与数字科学)", "优等"]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "基于 Hedera 构建的 Web3 社交平台和 NFT 生态系统,具备 NFT 市场、社区广场、发射台和创作者工具。"
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "面向 Hedera 创作者和社区的全能 NFT 工具包。强大且易用的平台,可创建、发行和管理 NFT 系列,完全自主可控。"
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "面向 Hedera 网络的非托管、简洁、安全的钱包。管理账户、代币、NFT 并连接 DApp,完全掌控自己的资产。"
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "汽车维修业务的专业网站,展示服务、透明的价格和联系方式。"
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "DASAN OLT/ONU 监控工具 [开源]。"
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "为专业雕刻工作室定制的电商平台,包含产品目录、在线下单和订单管理后台。"
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "我之前的作品集网站,使用 Next.js 和 Chakra UI,具备深色主题和流畅动画。"
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "包含 Next.js、Chakra-UI、Framer-Motion 的 TypeScript 启动套件。提供少量组件、国际化、SEO 等。"
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "为我 DUT 网络与电信第一年的项目创建的快递平台。"
+      }
+    },
+    "skillGroups": {
+      "languages": "语言",
+      "frameworks": "框架",
+      "uiStyling": "UI / 样式",
+      "tooling": "工具",
+      "databases": "数据库",
+      "cloud": "云",
+      "vcs": "版本控制",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "自动化",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "法语",
+      "en": "英语",
+      "ru": "俄语",
+      "es": "西班牙语"
+    },
+    "languageLevels": {
+      "native": "母语",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "摩托车",
+      "cars": "汽车",
+      "weightlifting": "举重",
+      "calisthenics": "徒手健身",
+      "traveling": "旅行",
+      "manga": "漫画",
+      "gaming": "游戏"
+    }
+  },
+  "Theme": {
+    "currentLabel": "当前主题:",
+    "darkSuffix": "深色",
+    "lightSuffix": "浅色",
+    "usagePrefix": "用法:",
+    "themeCommandsTitle": "主题命令",
+    "noArgs": "{command} 不接受参数。",
+    "missingName": "缺少主题名称。",
+    "tooManyArgs": "参数过多。",
+    "usageSet": "用法: theme set <名称>",
+    "usagePreview": "用法: theme preview <名称>",
+    "unknownSubcommand": "未知子命令: {sub}。请使用其中之一: {commands}。",
+    "list": {
+      "available": "可用主题({count}):",
+      "tip": "点击或轻触主题即可应用。",
+      "active": "(当前)",
+      "custom": "自定义",
+      "deleteAria": "删除 {label}"
+    },
+    "preview": {
+      "unknown": "未知主题: {name}。",
+      "runListHint": "运行 <link></link> 查看可用主题。",
+      "previewing": "预览 {label}",
+      "autoReverts": "— {seconds} 秒后自动还原",
+      "applyHintPrefix": "使用",
+      "applyHintSuffix": "永久应用。"
+    },
+    "set": {
+      "unknownAvailable": "未知主题: {name}。可用主题:",
+      "updated": "主题已更新为 {label}。",
+      "active": "当前主题: {label}({mode})"
+    },
+    "validate": {
+      "header": "{name} 的 WCAG AA 对比度审计:",
+      "passCount": "{count} 通过",
+      "failCount": "{count} 失败",
+      "totalChecked": "(已检查 {count} 对)",
+      "skippedWarning": "⚠️ 部分颜色已跳过(不支持的格式)",
+      "allPass": "所有配对都符合 WCAG AA 要求。",
+      "someFail": "{count} 对低于所需对比度比例。请考虑调整明度值。",
+      "pairs": {
+        "bodyText": "正文文本",
+        "mutedOnBackground": "背景上的弱化文本",
+        "mutedOnMuted": "弱化背景上的弱化文本",
+        "accentOnAccent": "强调背景上的强调文本",
+        "destructive": "破坏性文本",
+        "primary": "主要强调",
+        "secondary": "次要强调",
+        "tertiary": "第三强调",
+        "quaternary": "第四强调",
+        "quinary": "第五强调"
+      }
+    },
+    "create": {
+      "introPrefix": "使用",
+      "introSuffix": "创建自定义主题。",
+      "modeVisual": "可视化编辑器",
+      "modeJson": "JSON 编辑器",
+      "tabVisual": "可视化",
+      "tabJson": "JSON",
+      "themeIdLabel": "主题 ID",
+      "displayNameLabel": "显示名称",
+      "themeModeLabel": "主题模式",
+      "darkTheme": "深色主题",
+      "lightTheme": "浅色主题",
+      "colorsHeading": "颜色",
+      "colorPickerAria": "{label} 颜色选择器",
+      "colorValueAria": "{label} 颜色值",
+      "submit": "创建主题",
+      "copyJson": "复制 JSON",
+      "copyJsonAria": "复制 JSON 到剪贴板",
+      "resetColors": "重置颜色",
+      "resetColorsAria": "重置颜色为默认值",
+      "jsonHint": "支持 OKLCH(推荐)、hex、rgb、hsl。所有格式都支持对比度验证。",
+      "jsonRequired": "必填字段: name、label、isDark、colors({count} 个标记)",
+      "previewToggle": "实时预览",
+      "successMessagePrefix": "自定义主题",
+      "successMessageSuffix": "已创建并应用。",
+      "successHint": "它将保存在你浏览器的 localStorage 中。",
+      "tryAgain": "重试",
+      "errors": {
+        "nameAndLabelRequired": "主题名称和标签为必填。",
+        "missingNameField": "缺少必填字段 \"name\"(字符串)。",
+        "missingLabelField": "缺少必填字段 \"label\"(字符串)。",
+        "missingIsDarkField": "缺少必填字段 \"isDark\"(布尔值)。",
+        "missingColorsField": "缺少必填字段 \"colors\"(对象)。",
+        "missingColor": "缺少或无效的颜色: \"{key}\"。",
+        "invalidJson": "JSON 输入无效。",
+        "invalidData": "主题数据无效。"
+      },
+      "colors": {
+        "background": "背景",
+        "foreground": "前景",
+        "muted": "弱化",
+        "muted-foreground": "弱化前景",
+        "accent": "强调",
+        "accent-foreground": "强调前景",
+        "destructive": "破坏性",
+        "border": "边框",
+        "input": "输入",
+        "ring": "环",
+        "primary": "主要",
+        "secondary": "次要",
+        "tertiary": "第三",
+        "quaternary": "第四",
+        "quinary": "第五"
+      }
+    }
+  }
+}
