@@ -34,7 +34,11 @@ function TrafficLightDot({
       className={`traffic-light traffic-light-${color} flex h-[13px] w-[13px] items-center justify-center rounded-full transition-[box-shadow] duration-200 group-hover/btn:brightness-110`}
       style={{ backgroundColor: TRAFFIC_LIGHT_COLORS[color] }}
     >
-      <Icon size={iconSize} strokeWidth={2.5} className={ICON_CLASS} />
+      <Icon
+        size={color !== "green" ? iconSize - 1 : iconSize}
+        strokeWidth={2.5}
+        className={ICON_CLASS}
+      />
     </span>
   );
 }

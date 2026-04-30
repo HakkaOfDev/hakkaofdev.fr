@@ -5,4 +5,5 @@ export * from "./guestbook";
 export * from "./spotify";
 export * from "./stats";
 export * from "./suggestions";
+export * from "./terminal";
 export * from "./theme";

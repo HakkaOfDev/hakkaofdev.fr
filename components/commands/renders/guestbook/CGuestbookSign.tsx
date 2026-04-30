@@ -78,7 +78,7 @@ function CGuestbookSign() {
               label="guestbook read"
               command="guestbook read"
               variant="pink"
-              className="px-1.5 py-0 text-[10px]"
+              className="px-1.5 py-0 text-xs"
             />
           </span>
         ),
@@ -162,7 +162,7 @@ function CGuestbookSign() {
         <div className="flex items-center justify-between gap-3">
           <p
             className={cn(
-              "text-[10px]",
+              "text-xs",
               submitMessage
                 ? createMutation.isError
                   ? "text-destructive"

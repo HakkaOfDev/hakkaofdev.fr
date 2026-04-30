@@ -116,10 +116,20 @@ export const styles = StyleSheet.create({
     alignItems: "baseline",
     marginBottom: 2,
   },
+  itemCompanyGroup: {
+    flexDirection: "row",
+    alignItems: "baseline",
+    gap: 6,
+  },
   itemCompany: {
     fontSize: 9.5,
     color: COLORS.dark,
     fontFamily: "Helvetica-Oblique",
+  },
+  itemCompanyLink: {
+    fontSize: 8.5,
+    color: COLORS.accent,
+    textDecoration: "none",
   },
   itemLocation: {
     fontSize: 9,

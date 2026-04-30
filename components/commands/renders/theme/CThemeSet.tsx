@@ -35,7 +35,7 @@ export function CThemeSet({ name }: { name: string }) {
               label={t.name}
               command={`theme set ${t.name}`}
               variant="orange"
-              className="px-1.5 py-0 text-[10px]"
+              className="px-1.5 py-0 text-xs"
             />
           ))}
         </div>

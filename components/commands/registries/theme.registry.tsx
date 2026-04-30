@@ -6,7 +6,7 @@ import { CThemePreview } from "../renders/theme/CThemePreview";
 import { CThemeSet } from "../renders/theme/CThemeSet";
 import { CThemeValidate } from "../renders/theme/CThemeValidate";
 import { CThemeCreate } from "../renders/theme/create/CThemeCreate";
-import { registerDynamicParamCommand } from "./dynamic-param-registry";
+import { registerDynamicParamCommand } from "./dynamic-param.registry";
 
 export type { ThemeCommandDescriptor } from "../../../lib/command-descriptors";
 export { THEME_COMMANDS } from "../../../lib/command-descriptors";
@@ -32,7 +32,7 @@ export const THEME_COMMAND_RENDERERS: ThemeCommandRenderer = {
  * This function is called lazily when the user types "theme set " or "theme preview ".
  */
 export function getAvailableThemeNames(): string[] {
-  // Must be in browser to access localStorage
+  // Must run in browser because this command registry is interactive.
   if (typeof window === "undefined") return [];
 
   try {

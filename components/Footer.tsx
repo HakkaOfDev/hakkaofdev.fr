@@ -19,7 +19,7 @@ function Footer() {
           </Link>
         ))}
       </div>
-      <p className="text-[11px] text-muted-foreground/80">
+      <p className="text-muted-foreground/80 text-xs">
         Made with <Heart className="inline-block text-primary" size={14} /> by{" "}
         <Link
           href={GITHUB_URL}

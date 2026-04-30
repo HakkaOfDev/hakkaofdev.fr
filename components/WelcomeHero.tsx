@@ -35,7 +35,7 @@ function WelcomeHero({
           priority
         />
         <div className="grid gap-1.5">
-          <p className="font-mono text-[11px] text-muted-foreground/80">
+          <p className="font-mono text-muted-foreground/80 text-xs">
             ~ Welcome{" "}
             <span className="inline-block origin-[70%_70%] animate-wave">
               👋
