@@ -2,12 +2,16 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono } from "next/font/google";
+import { notFound } from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import Footer from "@/components/Footer";
 import Providers from "@/components/providers/Providers";
+import { routing } from "@/i18n/routing";
 import { GITHUB_URL, SITE, SOCIALS } from "@/lib/constants";
 import { getSiteUrl } from "@/lib/site-url";
 import { cn } from "@/lib/utils";
-import "./globals.css";
+import "../globals.css";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -17,21 +21,6 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteUrl = getSiteUrl();
-const personJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: SITE.name,
-  url: siteUrl,
-  image: new URL("/avatar.jpg", siteUrl).toString(),
-  jobTitle: SITE.jobTitle,
-  worksFor: {
-    "@type": "Organization",
-    name: SITE.employer.name,
-    url: SITE.employer.url,
-  },
-  sameAs: SOCIALS.map((social) => social.url),
-};
-
 const twitterHandle = `@${SITE.handle}` as const;
 
 export const metadata: Metadata = {
@@ -87,13 +76,43 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+type Props = {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
+  const messages = await getMessages();
+
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: SITE.name,
+    url: siteUrl,
+    image: new URL("/avatar.jpg", siteUrl).toString(),
+    jobTitle: SITE.jobTitle,
+    worksFor: {
+      "@type": "Organization",
+      name: SITE.employer.name,
+      url: SITE.employer.url,
+    },
+    sameAs: SOCIALS.map((social) => social.url),
+  };
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
           jetbrainsMono.variable,
@@ -104,10 +123,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
-        <Providers>
-          {children}
-          <Footer />
-        </Providers>
+        <NextIntlClientProvider messages={messages}>
+          <Providers>
+            {children}
+            <Footer />
+          </Providers>
+        </NextIntlClientProvider>
         {process.env.VERCEL && <Analytics />}
         {process.env.VERCEL && <SpeedInsights />}
       </body>
