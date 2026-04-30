@@ -6,20 +6,18 @@ import { PROJECTS } from "@/lib/constants";
 function CProjects() {
   return (
     <AnimatedSpan className="grid grid-cols-1 gap-4 md:grid-cols-2">
-      {PROJECTS.map((project) => (
-        <Link
-          href={project.url}
-          key={project.name}
-          aria-label={`Open project: ${project.name}`}
-          target="_blank"
-          className="group h-auto"
-        >
+      {PROJECTS.map((project) => {
+        const content = (
           <div className="flex h-full flex-col overflow-hidden rounded-lg border">
             <div className="relative aspect-video overflow-hidden">
               <Image
                 src={project.imageUrl}
                 alt={project.name}
-                className="object-cover transition-all duration-300 group-hover:scale-105"
+                className={
+                  project.url
+                    ? "object-cover transition-all duration-300 group-hover:scale-105"
+                    : "object-cover"
+                }
                 fill
               />
             </div>
@@ -42,8 +40,28 @@ function CProjects() {
               </div>
             </div>
           </div>
-        </Link>
-      ))}
+        );
+
+        if (!project.url) {
+          return (
+            <div key={project.name} className="h-auto">
+              {content}
+            </div>
+          );
+        }
+
+        return (
+          <Link
+            href={project.url}
+            key={project.name}
+            aria-label={`Open project: ${project.name}`}
+            target="_blank"
+            className="group h-auto"
+          >
+            {content}
+          </Link>
+        );
+      })}
     </AnimatedSpan>
   );
 }

@@ -74,7 +74,14 @@ export function ExperienceSection({
             <Text style={styles.itemPeriod}>{exp.period}</Text>
           </View>
           <View style={styles.itemSubRow}>
-            <Text style={styles.itemCompany}>{exp.company}</Text>
+            <View style={styles.itemCompanyGroup}>
+              <Text style={styles.itemCompany}>{exp.company}</Text>
+              {exp.companyUrl && (
+                <Link src={exp.companyUrl} style={styles.itemCompanyLink}>
+                  {exp.companyUrl.replace(/^https?:\/\/(www\.)?/, "")}
+                </Link>
+              )}
+            </View>
             <Text style={styles.itemLocation}>{exp.location}</Text>
           </View>
           {exp.descriptions.map((desc) => (
@@ -141,9 +148,11 @@ export function ProjectsSection({
         <View key={project.name} style={styles.projectItem}>
           <View style={styles.projectHeader}>
             <Text style={styles.projectName}>{project.name}</Text>
-            <Link src={project.url} style={styles.projectLink}>
-              {project.url.replace(/^https?:\/\/(www\.)?/, "")}
-            </Link>
+            {project.url && (
+              <Link src={project.url} style={styles.projectLink}>
+                {project.url.replace(/^https?:\/\/(www\.)?/, "")}
+              </Link>
+            )}
           </View>
           <Text style={styles.projectTags}>{project.tags.join("  ·  ")}</Text>
           <Text style={styles.projectDesc}>{project.description}</Text>
@@ -168,7 +177,7 @@ export function BottomSection({
         <Section title="Languages">
           {languages.map((lang) => (
             <Text key={lang.lang} style={styles.langLine}>
-              <Text style={styles.langBold}>{lang.lang}</Text> — {lang.level}
+              <Text style={styles.langBold}>{lang.lang}</Text> - {lang.level}
             </Text>
           ))}
         </Section>

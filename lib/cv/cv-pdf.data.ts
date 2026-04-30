@@ -25,7 +25,8 @@ export const CV_DATA = {
   website: SITE.url,
   email: SITE.email,
   location: SITE.location,
-  summary: SITE.description,
+  summary:
+    "Software Engineer, nearly four years in. I freelance for my own clients, building web and mobile apps that ship to real users on the App Store and Google Play. React, Next.js and React Native are home turf, with a soft spot for clean architecture, quick feedback loops, and the occasional open-source side project. Based in France, working from wherever the laptop fits.",
   socials: SOCIALS.map((social) => ({
     name: social.name,
     url: social.url,
@@ -40,6 +41,7 @@ export const CV_DATA = {
     period: experience.period,
     title: experience.name,
     company: experience.company,
+    companyUrl: experience.companyUrl,
     location: experience.location,
     descriptions: experience.descriptions ?? [],
   })),
