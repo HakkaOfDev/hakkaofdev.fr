@@ -1,8 +1,14 @@
-export const PROJECTS = [
+export type ProjectEntry = {
+  /** Key under `CV.projects.{slug}` for translated `name` and `description`. */
+  slug: string;
+  url?: string;
+  imageUrl: string;
+  tags: string[];
+};
+
+export const PROJECTS: ReadonlyArray<ProjectEntry> = [
   {
-    name: "Kabila App",
-    description:
-      "A Web3 social platform and NFT ecosystem built on Hedera, featuring an NFT marketplace, community plazas, launchpads and creator tools.",
+    slug: "kabilaApp",
     url: "https://kabila.app",
     imageUrl: "/projects/kabila-app.png",
     tags: [
@@ -15,63 +21,48 @@ export const PROJECTS = [
     ],
   },
   {
-    name: "Kabila Tools",
-    description:
-      "An all-in-one NFT toolkit for creators and communities on Hedera. A powerful and easy-to-use platform to create, launch, and manage your NFT collections while being in total control.",
+    slug: "kabilaTools",
     url: "https://tools.kabila.app",
     imageUrl: "/projects/kabila-tools.png",
     tags: ["Next.js", "Tailwind", "Typescript", "Blockchain"],
   },
   {
-    name: "Kabila Wallet",
-    description:
-      "A non-custodial, simple, and secure wallet for the Hedera network. Manage your accounts, tokens, NFTs, and connect with DApps while maintaining full control of your assets.",
+    slug: "kabilaWallet",
     url: "https://kabila.app/docs/kabila-wallet",
     imageUrl: "/projects/kabila-wallet.webp",
     tags: ["Next.js", "Tailwind", "Javascript", "Blockchain"],
   },
   {
-    name: "Ferreira Borges Thomas",
-    description:
-      "A professional website for an automotive repair business, featuring services, transparent pricing and contact information.",
+    slug: "ferreiraBorges",
     url: "https://thomas-ferreira.fr",
     imageUrl: "/projects/fbt-auto-repair.png",
     tags: ["Next.js", "Tailwind", "Typescript", "Freelance"],
   },
   {
-    name: "AC-Vision",
-    description: "DASAN OLT/ONUs Supervision tool [Opensource].",
+    slug: "acVision",
     url: "https://github.com/hakkaofdev/ac-vision",
     imageUrl: "/projects/ac-vision.png",
     tags: ["Next.js", "Python", "Typescript", "Redis", "Docker", "Open-source"],
   },
   {
-    name: "Brian Grav&Style",
-    description:
-      "A custom e-commerce platform for a professional engraving studio, featuring a product catalog, online ordering and an admin dashboard for order management.",
+    slug: "brianGravure",
     imageUrl: "/projects/brian-gravure.png",
     tags: ["Next.js", "Tailwind", "Typescript", "E-commerce"],
   },
   {
-    name: "Portfolio V1",
-    description:
-      "My previous portfolio website built with Next.js and Chakra UI, featuring a dark theme and smooth animations.",
+    slug: "portfolioV1",
     url: "https://hakkaofdev-portfolio-v1.vercel.app",
     imageUrl: "/projects/old-portfolio.png",
     tags: ["Next.js", "Chakra UI", "Typescript", "Open-source"],
   },
   {
-    name: "ts-next-chakra-motion-kit",
-    description:
-      "Discover a starter kit which includes Next.js, Chakra-UI, Framer-Motion in Typescript. You have few components, Internationalization, SEO and more in this template.",
+    slug: "tsNextKit",
     url: "https://ts-next-chakra-motion-kit.vercel.app",
     imageUrl: "/projects/ts-next-chakra-motion-kit.png",
     tags: ["Next.js", "Chakra UI", "Typescript", "Template", "Open-source"],
   },
   {
-    name: "RT'ransport",
-    description:
-      "A Percel Platform created for the project of my first year in DUT Networks & Telecoms (two-year university degree).",
+    slug: "rtransport",
     url: "https://github.com/HakkaOfDev/RT-ransport",
     imageUrl: "/projects/rt-ransport.png",
     tags: ["Python", "Flask", "Tailwind", "Open-source"],

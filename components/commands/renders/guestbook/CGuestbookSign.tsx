@@ -39,9 +39,7 @@ async function createGuestbookEntry(
     | GuestbookCreateResponse
     | GuestbookApiError;
   if (!response.ok) {
-    throw new Error(
-      "error" in json && json.error ? json.error : fallbackError,
-    );
+    throw new Error("error" in json && json.error ? json.error : fallbackError);
   }
 
   return json as GuestbookCreateResponse;

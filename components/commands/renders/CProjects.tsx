@@ -7,16 +7,19 @@ import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { PROJECTS } from "@/lib/constants";
 
 function CProjects() {
-  const t = useTranslations("Commands.projects");
+  const tProjects = useTranslations("CV.projects");
+  const tCommands = useTranslations("Commands.projects");
   return (
     <AnimatedSpan className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {PROJECTS.map((project) => {
+        const name = tProjects(`${project.slug}.name` as never);
+        const description = tProjects(`${project.slug}.description` as never);
         const content = (
           <div className="flex h-full flex-col overflow-hidden rounded-lg border">
             <div className="relative aspect-video overflow-hidden">
               <Image
                 src={project.imageUrl}
-                alt={project.name}
+                alt={name}
                 className={
                   project.url
                     ? "object-cover transition-all duration-300 group-hover:scale-105"
@@ -26,12 +29,11 @@ function CProjects() {
               />
             </div>
             <div className="flex flex-col justify-start p-3">
-              <p className="font-semibold text-sm">{project.name}</p>
-              <p className="mt-1 text-muted-foreground">
-                {project.description}
-              </p>
+              <p className="font-semibold text-sm">{name}</p>
+              <p className="mt-1 text-muted-foreground">{description}</p>
               <div className="mt-3 flex flex-wrap gap-1">
                 {project.tags
+                  .slice()
                   .sort((a, b) => a.localeCompare(b))
                   .map((tag) => (
                     <p
@@ -48,7 +50,7 @@ function CProjects() {
 
         if (!project.url) {
           return (
-            <div key={project.name} className="h-auto">
+            <div key={project.slug} className="h-auto">
               {content}
             </div>
           );
@@ -57,8 +59,8 @@ function CProjects() {
         return (
           <Link
             href={project.url}
-            key={project.name}
-            aria-label={t("openLabel", { name: project.name })}
+            key={project.slug}
+            aria-label={tCommands("openLabel", { name })}
             target="_blank"
             className="group h-auto"
           >

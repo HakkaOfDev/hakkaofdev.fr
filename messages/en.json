@@ -276,6 +276,157 @@
       "album": "Album"
     }
   },
+  "CV": {
+    "documentTitleSuffix": "CV",
+    "subject": "CV",
+    "summary": "Software Engineer, nearly four years in. I freelance for my own clients, building web and mobile apps that ship to real users on the App Store and Google Play. React, Next.js and React Native are home turf, with a soft spot for clean architecture, quick feedback loops, and the occasional open-source side project. Based in France, working from wherever the laptop fits.",
+    "sections": {
+      "summary": "Professional Summary",
+      "experience": "Experience",
+      "skills": "Technical Skills",
+      "education": "Education",
+      "projects": "Selected Projects",
+      "languages": "Languages",
+      "links": "Links"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Software Engineer",
+        "company": "Kabila",
+        "location": "Madrid, Spain",
+        "period": "Since July 2022",
+        "descriptions": [
+          "Lead a frontend team building production web apps with React and Next.js",
+          "Own the technical roadmap, sprint planning, and architecture decisions",
+          "Mentor junior developers and run code reviews",
+          "Build and maintain the shared component library and internal design system",
+          "Ship companion mobile apps with React Native and Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Freelance",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, France",
+        "period": "Since July 2022",
+        "descriptions": [
+          "Build full-stack web apps with React and Next.js for direct clients",
+          "Ship cross-platform mobile apps to the App Store and Google Play",
+          "Set up CI/CD pipelines and automated deployment workflows",
+          "Advise on architecture, tech choices, and project scoping",
+          "Handle client communication and delivery timelines on every project"
+        ]
+      },
+      "archeMC2": {
+        "name": "Apprenticeship",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, France",
+        "period": "September 2022 - August 2023",
+        "descriptions": [
+          "Built GitLab CI/CD pipelines for automated testing and deployment",
+          "Containerized internal applications and services with Docker",
+          "Automated routine sysadmin tasks with shell scripts",
+          "Monitored system health and improved infrastructure resilience"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "System Administration and Security (vocational degree)",
+        "location": "IUT Châlons (Châlons-en-Champagne, France)",
+        "period": "2022-2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Networks and Telecommunications (technical degree)",
+        "location": "IUT Châlons (Châlons-en-Champagne, France)",
+        "period": "2020-2022",
+        "descriptions": ["Salutatorian"]
+      },
+      "lyceeBac": {
+        "name": "Scientific Baccalaureate (A level equivalent)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, France)",
+        "period": "2019-2020",
+        "descriptions": [
+          "Specialised in ISN (Computer and digital sicences)",
+          "With distinctions"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "A Web3 social platform and NFT ecosystem built on Hedera, featuring an NFT marketplace, community plazas, launchpads and creator tools."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "An all-in-one NFT toolkit for creators and communities on Hedera. A powerful and easy-to-use platform to create, launch, and manage your NFT collections while being in total control."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "A non-custodial, simple, and secure wallet for the Hedera network. Manage your accounts, tokens, NFTs, and connect with DApps while maintaining full control of your assets."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "A professional website for an automotive repair business, featuring services, transparent pricing and contact information."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "DASAN OLT/ONUs Supervision tool [Opensource]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "A custom e-commerce platform for a professional engraving studio, featuring a product catalog, online ordering and an admin dashboard for order management."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "My previous portfolio website built with Next.js and Chakra UI, featuring a dark theme and smooth animations."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Discover a starter kit which includes Next.js, Chakra-UI, Framer-Motion in Typescript. You have few components, Internationalization, SEO and more in this template."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "A Percel Platform created for the project of my first year in DUT Networks & Telecoms (two-year university degree)."
+      }
+    },
+    "skillGroups": {
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "uiStyling": "UI / Styling",
+      "tooling": "Tooling",
+      "databases": "Databases",
+      "cloud": "Cloud",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Automation",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "French",
+      "en": "English",
+      "ru": "Russian",
+      "es": "Spanish"
+    },
+    "languageLevels": {
+      "native": "Native",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Motorcycles",
+      "cars": "Cars",
+      "weightlifting": "Weightlifting",
+      "calisthenics": "Calisthenics",
+      "traveling": "Traveling",
+      "manga": "Manga",
+      "gaming": "Gaming"
+    }
+  },
   "Theme": {
     "currentLabel": "Current theme:",
     "darkSuffix": "dark",

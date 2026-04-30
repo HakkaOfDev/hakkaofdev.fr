@@ -10,9 +10,19 @@ const BIRTH_DATE = new Date("2002-12-24");
 function CAbout() {
   const t = useTranslations("Commands.about");
   const tMeta = useTranslations("Metadata");
+  const tHobbies = useTranslations("CV.hobbies");
+  const tLanguages = useTranslations("CV.spokenLanguages");
+  const tLevels = useTranslations("CV.languageLevels");
   const ageYears = Math.floor(
     (Date.now() - BIRTH_DATE.getTime()) / (1000 * 60 * 60 * 24 * 365.25),
   );
+
+  const hobbies = HOBBIES.map((slug) => tHobbies(slug as never)).join(", ");
+  const languages = LANGUAGES.map((lang) => {
+    const name = tLanguages(lang.code as never);
+    const level = tLevels(lang.levelSlug as never);
+    return `${lang.flag} ${name} (${level})`;
+  }).join(", ");
 
   return (
     <AnimatedSpan className="gap-1">
@@ -29,13 +39,8 @@ function CAbout() {
           {SITE.email}
         </Link>
       </p>
-      <Info
-        title={t("languages")}
-        value={LANGUAGES.map((lang) => `${lang.lang} (${lang.level})`).join(
-          ", ",
-        )}
-      />
-      <Info title={t("hobbies")} value={HOBBIES.join(", ")} />
+      <Info title={t("languages")} value={languages} />
+      <Info title={t("hobbies")} value={hobbies} />
     </AnimatedSpan>
   );
 }
