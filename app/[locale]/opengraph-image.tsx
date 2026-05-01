@@ -6,10 +6,21 @@ import { type Locale, routing } from "@/i18n/routing";
 import { SITE } from "@/lib/constants";
 import { getSiteUrl } from "@/lib/site-url";
 
-export const runtime = "edge";
 export const contentType = "image/png";
 export const size = { width: 1200, height: 630 };
 export const alt = SITE.name;
+
+/**
+ * Pre-render OG images at build time so cold starts don't pay the
+ * Google Fonts roundtrip. Arabic is excluded because Satori's font parser
+ * doesn't yet support the GSUB lookupType 5 / substFormat 3 features used
+ * by Noto Sans Arabic — that locale is rendered on demand instead.
+ */
+export function generateStaticParams() {
+  return routing.locales
+    .filter((locale) => locale !== "ar")
+    .map((locale) => ({ locale }));
+}
 
 // ---------------------------------------------------------------------------
 // Icons – Lucide-style inline SVGs (Satori-compatible)
@@ -175,12 +186,13 @@ const SCRIPT_FONT_FAMILY: Partial<Record<Locale, string>> = {
  */
 async function loadGoogleFont(
   family: string,
+  weight: 400 | 700 | 800,
   text: string,
 ): Promise<ArrayBuffer | null> {
   try {
     const url = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(
       family,
-    )}&text=${encodeURIComponent(text)}`;
+    )}:wght@${weight}&text=${encodeURIComponent(text)}`;
     const css = await fetch(url, { cache: "force-cache" }).then((r) =>
       r.text(),
     );
@@ -242,21 +254,58 @@ export default async function OpenGraphImage({ params }: Props) {
   const footerLabel = tOg("footer");
   const jobTitle = tMeta("jobTitle");
 
+  // Always load Inter at 400/800 for Latin glyphs — Satori (Node runtime)
+  // requires at least one explicit font, and the build-time fetch is cached
+  // by `force-cache` so cold starts at request time stay fast.
+  const [firstName, ...lastParts] = SITE.name.split(" ");
+  const lastName = lastParts.join(" ");
+  const latinText = [
+    jobTitle,
+    ...tags.map((t) => t.label),
+    footerLabel,
+    host,
+    firstName,
+    lastName.toUpperCase(),
+  ].join("");
+  const [interRegular, interBold] = await Promise.all([
+    loadGoogleFont("Inter", 400, latinText),
+    loadGoogleFont("Inter", 800, latinText),
+  ]);
+
+  const fontEntries: {
+    name: string;
+    data: ArrayBuffer;
+    weight: 400 | 800;
+  }[] = [];
+  if (interRegular) {
+    fontEntries.push({ name: "Inter", data: interRegular, weight: 400 });
+  }
+  if (interBold) {
+    fontEntries.push({ name: "Inter", data: interBold, weight: 800 });
+  }
+
   // Load a script-specific Noto font when the locale uses non-Latin glyphs.
-  const fontFamily = SCRIPT_FONT_FAMILY[resolvedLocale];
-  const fontEntries: { name: string; data: ArrayBuffer }[] = [];
-  if (fontFamily) {
-    const text = [jobTitle, ...tags.map((t) => t.label), footerLabel].join("");
-    const fontData = await loadGoogleFont(fontFamily, text);
-    if (fontData) {
-      fontEntries.push({ name: fontFamily, data: fontData });
+  const scriptFontFamily = SCRIPT_FONT_FAMILY[resolvedLocale];
+  if (scriptFontFamily) {
+    const scriptText = [
+      jobTitle,
+      ...tags.map((t) => t.label),
+      footerLabel,
+    ].join("");
+    const scriptData = await loadGoogleFont(scriptFontFamily, 400, scriptText);
+    if (scriptData) {
+      fontEntries.push({
+        name: scriptFontFamily,
+        data: scriptData,
+        weight: 400,
+      });
     }
   }
 
   const baseFontStack =
-    'ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial';
-  const rootFontFamily = fontFamily
-    ? `"${fontFamily}", ${baseFontStack}`
+    '"Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial';
+  const rootFontFamily = scriptFontFamily
+    ? `"${scriptFontFamily}", ${baseFontStack}`
     : baseFontStack;
 
   return new ImageResponse(
@@ -314,7 +363,7 @@ export default async function OpenGraphImage({ params }: Props) {
         name: entry.name,
         data: entry.data,
         style: "normal" as const,
-        weight: 400 as const,
+        weight: entry.weight,
       })),
     },
   );
