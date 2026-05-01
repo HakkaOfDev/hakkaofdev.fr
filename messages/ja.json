@@ -397,18 +397,13 @@
         "name": "DUT ネットワーク・通信(技術学位)",
         "location": "IUT Châlons(フランス、シャロン・アン・シャンパーニュ)",
         "period": "2020-2022",
-        "descriptions": [
-          "次席卒業"
-        ]
+        "descriptions": ["次席卒業"]
       },
       "lyceeBac": {
         "name": "理系バカロレア",
         "location": "Lycée Jean Talon(フランス、シャロン・アン・シャンパーニュ)",
         "period": "2019-2020",
-        "descriptions": [
-          "ISN(情報・デジタル科学)専攻",
-          "優秀賞"
-        ]
+        "descriptions": ["ISN(情報・デジタル科学)専攻", "優秀賞"]
       }
     },
     "projects": {
