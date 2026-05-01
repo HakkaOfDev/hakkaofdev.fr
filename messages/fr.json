@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Nomade numérique & Ingénieur logiciel",
-    "description": "Nomade numérique et ingénieur logiciel @kabila.app. Passionné d'open source, je conçois des expériences web performantes avec React et Next.js.",
+    "description": "Nomade numérique et ingénieur logiciel freelance. Passionné d'open source, je conçois des expériences web performantes avec React et Next.js.",
     "jobTitle": "Ingénieur logiciel",
     "location": "Châlons-en-Champagne, France",
     "ogImageAlt": "Alexandre Gossard",
@@ -23,7 +23,7 @@
   },
   "Welcome": {
     "greeting": "~ Bienvenue <wave>👋</wave>",
-    "intro": "<tagline>Nomade numérique</tagline> · <job>Ingénieur logiciel</job> chez <employer>{employerName}</employer>",
+    "intro": "<tagline>Nomade numérique</tagline> · <job>Ingénieur logiciel</job> · <freelance>Freelance</freelance>",
     "tags": {
       "openSource": "Adepte de l'open source",
       "calisthenics": "Pratiquant de calisthénie",
@@ -244,7 +244,21 @@
       "pt": "Português",
       "it": "Italiano",
       "zh": "中文",
-      "ja": "日本語"
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {

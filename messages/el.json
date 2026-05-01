@@ -1,11 +1,10 @@
 {
   "_meta": {
-    "needsReview": true,
-    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+    "needsReview": true
   },
   "Metadata": {
     "title": "Alexandre Gossard | Ψηφιακός νομάδας & μηχανικός λογισμικού",
-    "description": "Ψηφιακός νομάδας και μηχανικός λογισμικού @kabila.app. Λάτρης του open source, δημιουργώ γρήγορες εμπειρίες ιστού με React και Next.js.",
+    "description": "Ψηφιακός νομάδας και freelance μηχανικός λογισμικού. Λάτρης του open source, δημιουργώ γρήγορες εμπειρίες ιστού με React και Next.js.",
     "jobTitle": "Μηχανικός λογισμικού",
     "location": "Châlons-en-Champagne, Γαλλία",
     "ogImageAlt": "Alexandre Gossard",
@@ -27,7 +26,7 @@
   },
   "Welcome": {
     "greeting": "~ Καλώς ήρθες <wave>👋</wave>",
-    "intro": "<tagline>Ψηφιακός νομάδας</tagline> · <job>Μηχανικός λογισμικού</job> στην <employer>{employerName}</employer>",
+    "intro": "<tagline>Ψηφιακός νομάδας</tagline> · <job>Μηχανικός λογισμικού</job> · <freelance>Freelance</freelance>",
     "tags": {
       "openSource": "Υπέρμαχος του open source",
       "calisthenics": "Λάτρης της καλισθενικής",
@@ -89,7 +88,8 @@
       "scrollbackOption": "{count, plural, =0 {καμία εντολή} one {1 εντολή} other {# εντολές}}",
       "darkSuffix": "σκοτεινό",
       "lightSuffix": "ανοιχτό",
-      "themeOption": "{label} ({mode})"
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Γλώσσα"
     },
     "shortcutsHeading": "Συντομεύσεις πληκτρολογίου",
     "shortcuts": {
@@ -238,6 +238,30 @@
     "switcher": {
       "ariaLabel": "Αλλαγή γλώσσας",
       "title": "Αλλαγή γλώσσας"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {
@@ -346,6 +370,241 @@
       "unknownAvailable": "Άγνωστο θέμα: {name}. Διαθέσιμα θέματα:",
       "updated": "Το θέμα άλλαξε σε {label}.",
       "active": "Ενεργό θέμα: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Άγνωστο θέμα: {name}.",
+      "runListHint": "Εκτελέστε <link></link> για να δείτε τα διαθέσιμα θέματα.",
+      "previewing": "Προεπισκόπηση {label}",
+      "autoReverts": "— επιστροφή σε {seconds} δ.",
+      "applyHintPrefix": "Χρησιμοποιήστε",
+      "applyHintSuffix": "για μόνιμη εφαρμογή."
+    },
+    "validate": {
+      "header": "Έλεγχος αντίθεσης WCAG AA για {name}:",
+      "passCount": "{count} επιτυχία",
+      "failCount": "{count} αποτυχία",
+      "totalChecked": "(ελέγχθηκαν {count} ζεύγη)",
+      "skippedWarning": "⚠️ Παρακάμφθηκαν ορισμένα χρώματα (μη υποστηριζόμενη μορφή)",
+      "allPass": "Όλα τα ζεύγη πληρούν τις απαιτήσεις WCAG AA.",
+      "someFail": "{count, plural, one {# ζεύγος} other {# ζεύγη}} κάτω από τον απαιτούμενο λόγο αντίθεσης. Σκεφτείτε να προσαρμόσετε τη φωτεινότητα των χρωμάτων.",
+      "pairs": {
+        "bodyText": "Κύριο κείμενο",
+        "mutedOnBackground": "Απαλό κείμενο σε φόντο",
+        "mutedOnMuted": "Απαλό κείμενο σε απαλό φόντο",
+        "accentOnAccent": "Κείμενο τόνου σε φόντο τόνου",
+        "destructive": "Καταστροφικό κείμενο",
+        "primary": "Κύριος τόνος",
+        "secondary": "Δευτερεύων τόνος",
+        "tertiary": "Τριτεύων τόνος",
+        "quaternary": "Τέταρτος τόνος",
+        "quinary": "Πέμπτος τόνος"
+      }
+    },
+    "create": {
+      "introPrefix": "Δημιουργήστε ένα προσαρμοσμένο θέμα χρησιμοποιώντας τον",
+      "introSuffix": ".",
+      "modeVisual": "οπτικό επεξεργαστή",
+      "modeJson": "επεξεργαστή JSON",
+      "tabVisual": "Οπτικός",
+      "tabJson": "JSON",
+      "themeIdLabel": "ID θέματος",
+      "displayNameLabel": "Όνομα εμφάνισης",
+      "themeModeLabel": "Λειτουργία θέματος",
+      "darkTheme": "Σκούρο θέμα",
+      "lightTheme": "Φωτεινό θέμα",
+      "colorsHeading": "Χρώματα",
+      "colorPickerAria": "Επιλογέας χρώματος {label}",
+      "colorValueAria": "Τιμή χρώματος {label}",
+      "submit": "Δημιουργία θέματος",
+      "copyJson": "Αντιγραφή JSON",
+      "copyJsonAria": "Αντιγραφή JSON στο πρόχειρο",
+      "resetColors": "Επαναφορά χρωμάτων",
+      "resetColorsAria": "Επαναφορά χρωμάτων στις προεπιλογές",
+      "jsonHint": "Υποστηρίζει OKLCH (συνιστάται), hex, rgb, hsl. Η επικύρωση αντίθεσης λειτουργεί για όλες τις μορφές.",
+      "jsonRequired": "Απαιτούμενα κλειδιά: name, label, isDark, colors ({count} tokens)",
+      "previewToggle": "Ζωντανή προεπισκόπηση",
+      "successMessagePrefix": "Το προσαρμοσμένο θέμα",
+      "successMessageSuffix": "δημιουργήθηκε και εφαρμόστηκε.",
+      "successHint": "Θα διατηρηθεί στο localStorage του προγράμματος περιήγησης.",
+      "tryAgain": "Δοκιμάστε ξανά",
+      "errors": {
+        "nameAndLabelRequired": "Το όνομα και η ετικέτα του θέματος είναι υποχρεωτικά.",
+        "missingNameField": "Λείπει το υποχρεωτικό πεδίο \"name\" (string).",
+        "missingLabelField": "Λείπει το υποχρεωτικό πεδίο \"label\" (string).",
+        "missingIsDarkField": "Λείπει το υποχρεωτικό πεδίο \"isDark\" (boolean).",
+        "missingColorsField": "Λείπει το υποχρεωτικό πεδίο \"colors\" (object).",
+        "missingColor": "Λείπει ή είναι μη έγκυρο χρώμα: \"{key}\".",
+        "invalidJson": "Μη έγκυρη είσοδος JSON.",
+        "invalidData": "Μη έγκυρα δεδομένα θέματος."
+      },
+      "colors": {
+        "background": "Φόντο",
+        "foreground": "Προσκήνιο",
+        "muted": "Απαλό",
+        "muted-foreground": "Απαλό προσκήνιο",
+        "accent": "Τόνος",
+        "accent-foreground": "Προσκήνιο τόνου",
+        "destructive": "Καταστροφικό",
+        "border": "Περίγραμμα",
+        "input": "Είσοδος",
+        "ring": "Δακτύλιος",
+        "primary": "Κύριο",
+        "secondary": "Δευτερεύον",
+        "tertiary": "Τριτεύον",
+        "quaternary": "Τέταρτο",
+        "quinary": "Πέμπτο"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "Βιογραφικό",
+    "subject": "Βιογραφικό",
+    "summary": "Μηχανικός λογισμικού με σχεδόν τέσσερα χρόνια εμπειρίας. Εργάζομαι ως freelancer για δικούς μου πελάτες, χτίζοντας web και mobile εφαρμογές που φτάνουν σε πραγματικούς χρήστες στο App Store και στο Google Play. React, Next.js και React Native είναι το έδαφός μου, με αδυναμία στην καθαρή αρχιτεκτονική, τους γρήγορους κύκλους ανατροφοδότησης και τα περιστασιακά open-source παράπλευρα έργα. Έδρα στη Γαλλία, εργάζομαι από όπου χωράει το λάπτοπ.",
+    "sections": {
+      "summary": "Επαγγελματικό προφίλ",
+      "experience": "Εμπειρία",
+      "skills": "Τεχνικές δεξιότητες",
+      "education": "Εκπαίδευση",
+      "projects": "Επιλεγμένα έργα",
+      "languages": "Γλώσσες",
+      "links": "Σύνδεσμοι"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Μηχανικός λογισμικού",
+        "company": "Kabila",
+        "location": "Μαδρίτη, Ισπανία",
+        "period": "Από τον Ιούλιο 2022",
+        "descriptions": [
+          "Ηγούμαι ομάδας frontend που χτίζει εφαρμογές παραγωγής με React και Next.js",
+          "Έχω την ευθύνη του τεχνικού roadmap, του προγραμματισμού sprint και των αρχιτεκτονικών αποφάσεων",
+          "Καθοδηγώ junior developers και διεξάγω code reviews",
+          "Χτίζω και συντηρώ τη βιβλιοθήκη κοινών component και το εσωτερικό σύστημα σχεδίασης",
+          "Παραδίδω συνοδευτικές mobile εφαρμογές με React Native και Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Freelance",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, Γαλλία",
+        "period": "Από τον Ιούλιο 2022",
+        "descriptions": [
+          "Χτίζω full-stack web εφαρμογές με React και Next.js για άμεσους πελάτες",
+          "Παραδίδω cross-platform mobile εφαρμογές στο App Store και στο Google Play",
+          "Στήνω CI/CD pipelines και αυτοματοποιημένες ροές deployment",
+          "Συμβουλεύω σε αρχιτεκτονική, επιλογές τεχνολογίας και εκτίμηση έργων",
+          "Διαχειρίζομαι την επικοινωνία με τον πελάτη και τα χρονοδιαγράμματα παράδοσης"
+        ]
+      },
+      "archeMC2": {
+        "name": "Πρακτική άσκηση",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, Γαλλία",
+        "period": "Σεπτέμβριος 2022 — Αύγουστος 2023",
+        "descriptions": [
+          "Έχτισα GitLab CI/CD pipelines για αυτοματοποιημένες δοκιμές και deployment",
+          "Δοχειροποίησα εσωτερικές εφαρμογές και υπηρεσίες με Docker",
+          "Αυτοματοποίησα ρουτίνες sysadmin με shell scripts",
+          "Παρακολουθούσα την υγεία των συστημάτων και βελτίωσα την ανθεκτικότητα της υποδομής"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Διαχείριση συστημάτων και ασφάλεια (επαγγελματικό πτυχίο)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Γαλλία)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Δίκτυα και Τηλεπικοινωνίες (τεχνικό πτυχίο)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Γαλλία)",
+        "period": "2020–2022",
+        "descriptions": ["Δεύτερος του έτους"]
+      },
+      "lyceeBac": {
+        "name": "Επιστημονικό απολυτήριο (αντίστοιχο A-level)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Γαλλία)",
+        "period": "2019–2020",
+        "descriptions": [
+          "Ειδίκευση ISN (Πληροφορική και ψηφιακές επιστήμες)",
+          "Με διάκριση"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Μια κοινωνική πλατφόρμα Web3 και οικοσύστημα NFT στο Hedera, με NFT marketplace, πλαζ κοινοτήτων, launchpads και εργαλεία για δημιουργούς."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Ένα πλήρες NFT toolkit για δημιουργούς και κοινότητες στο Hedera. Μια ισχυρή και εύχρηστη πλατφόρμα για δημιουργία, εκκίνηση και διαχείριση συλλογών NFT με πλήρη έλεγχο."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Ένα non-custodial, απλό και ασφαλές πορτοφόλι για το δίκτυο Hedera. Διαχειριστείτε λογαριασμούς, tokens, NFT και συνδεθείτε με DApps διατηρώντας πλήρη έλεγχο των περιουσιακών σας στοιχείων."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Επαγγελματικός ιστότοπος για επιχείρηση επισκευής αυτοκινήτων, με υπηρεσίες, διαφανείς τιμές και στοιχεία επικοινωνίας."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Εργαλείο εποπτείας DASAN OLT/ONU [open source]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Μια προσαρμοσμένη πλατφόρμα ηλεκτρονικού εμπορίου για ένα επαγγελματικό στούντιο χάραξης, με κατάλογο προϊόντων, παραγγελίες online και dashboard διαχείρισης παραγγελιών."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Το προηγούμενο πορτφόλιο μου, χτισμένο με Next.js και Chakra UI, με σκούρο θέμα και ομαλά animations."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Ένα starter kit με Next.js, Chakra-UI, Framer-Motion σε TypeScript. Περιέχει κάποια components, διεθνοποίηση, SEO και πολλά άλλα."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "Πλατφόρμα δεμάτων που δημιουργήθηκε για το έργο του πρώτου έτους στο DUT Δίκτυα & Τηλεπικοινωνίες."
+      }
+    },
+    "skillGroups": {
+      "languages": "Γλώσσες",
+      "frameworks": "Frameworks",
+      "uiStyling": "UI / Στυλ",
+      "tooling": "Εργαλεία",
+      "databases": "Βάσεις δεδομένων",
+      "cloud": "Cloud",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Αυτοματισμός",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "Γαλλικά",
+      "en": "Αγγλικά",
+      "ru": "Ρωσικά",
+      "es": "Ισπανικά"
+    },
+    "languageLevels": {
+      "native": "Μητρική",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Μοτοσικλέτες",
+      "cars": "Αυτοκίνητα",
+      "weightlifting": "Άρση βαρών",
+      "calisthenics": "Calisthenics",
+      "traveling": "Ταξίδια",
+      "manga": "Manga",
+      "gaming": "Gaming"
     }
   }
 }

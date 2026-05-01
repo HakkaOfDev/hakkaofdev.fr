@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Александр Госсар | Цифровой кочевник и инженер-программист",
-    "description": "Цифровой кочевник и инженер-программист @kabila.app. Энтузиаст open source, создаю производительные веб-приложения на React и Next.js.",
+    "description": "Цифровой кочевник и инженер-программист на фрилансе. Энтузиаст open source, создаю производительные веб-приложения на React и Next.js.",
     "jobTitle": "Инженер-программист",
     "location": "Шалон-ан-Шампань, Франция",
     "ogImageAlt": "Александр Госсар",
@@ -23,7 +23,7 @@
   },
   "Welcome": {
     "greeting": "~ Добро пожаловать <wave>👋</wave>",
-    "intro": "<tagline>Цифровой кочевник</tagline> · <job>Инженер-программист</job> в <employer>{employerName}</employer>",
+    "intro": "<tagline>Цифровой кочевник</tagline> · <job>Инженер-программист</job> · <freelance>Фриланс</freelance>",
     "tags": {
       "openSource": "Сторонник open source",
       "calisthenics": "Любитель калистеники",
@@ -85,7 +85,8 @@
       "scrollbackOption": "{count, plural, =0 {нет команд} one {# команда} few {# команды} other {# команд}}",
       "darkSuffix": "тёмная",
       "lightSuffix": "светлая",
-      "themeOption": "{label} ({mode})"
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Язык"
     },
     "shortcutsHeading": "Горячие клавиши",
     "shortcuts": {
@@ -234,6 +235,30 @@
     "switcher": {
       "ariaLabel": "Сменить язык",
       "title": "Сменить язык"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {
@@ -342,6 +367,241 @@
       "unknownAvailable": "Неизвестная тема: {name}. Доступные темы:",
       "updated": "Тема изменена на {label}.",
       "active": "Активная тема: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Неизвестная тема: {name}.",
+      "runListHint": "Запустите <link></link>, чтобы увидеть доступные темы.",
+      "previewing": "Предпросмотр {label}",
+      "autoReverts": "— возврат через {seconds} с",
+      "applyHintPrefix": "Используйте",
+      "applyHintSuffix": "чтобы применить навсегда."
+    },
+    "validate": {
+      "header": "Аудит контраста WCAG AA для {name}:",
+      "passCount": "{count} прошло",
+      "failCount": "{count} не прошло",
+      "totalChecked": "(проверено {count} пар)",
+      "skippedWarning": "⚠️ Некоторые цвета пропущены (неподдерживаемый формат)",
+      "allPass": "Все пары соответствуют требованиям WCAG AA.",
+      "someFail": "{count, plural, one {# пара} few {# пары} many {# пар} other {# пар}} ниже требуемого коэффициента контраста. Рассмотрите корректировку светлоты цветов.",
+      "pairs": {
+        "bodyText": "Основной текст",
+        "mutedOnBackground": "Приглушённый текст на фоне",
+        "mutedOnMuted": "Приглушённый текст на приглушённом фоне",
+        "accentOnAccent": "Акцентный текст на акцентном фоне",
+        "destructive": "Деструктивный текст",
+        "primary": "Первичный акцент",
+        "secondary": "Вторичный акцент",
+        "tertiary": "Третичный акцент",
+        "quaternary": "Четвертичный акцент",
+        "quinary": "Пятеричный акцент"
+      }
+    },
+    "create": {
+      "introPrefix": "Создайте свою тему с помощью",
+      "introSuffix": ".",
+      "modeVisual": "визуального редактора",
+      "modeJson": "редактора JSON",
+      "tabVisual": "Визуально",
+      "tabJson": "JSON",
+      "themeIdLabel": "ID темы",
+      "displayNameLabel": "Отображаемое имя",
+      "themeModeLabel": "Режим темы",
+      "darkTheme": "Тёмная тема",
+      "lightTheme": "Светлая тема",
+      "colorsHeading": "Цвета",
+      "colorPickerAria": "Палитра цвета {label}",
+      "colorValueAria": "Значение цвета {label}",
+      "submit": "Создать тему",
+      "copyJson": "Копировать JSON",
+      "copyJsonAria": "Копировать JSON в буфер обмена",
+      "resetColors": "Сбросить цвета",
+      "resetColorsAria": "Сбросить цвета к значениям по умолчанию",
+      "jsonHint": "Поддерживается OKLCH (рекомендуется), hex, rgb, hsl. Валидация контраста работает для всех форматов.",
+      "jsonRequired": "Обязательные ключи: name, label, isDark, colors ({count} токенов)",
+      "previewToggle": "Живой предпросмотр",
+      "successMessagePrefix": "Своя тема",
+      "successMessageSuffix": "создана и применена.",
+      "successHint": "Будет сохранена в localStorage браузера.",
+      "tryAgain": "Попробовать снова",
+      "errors": {
+        "nameAndLabelRequired": "Имя и ярлык темы обязательны.",
+        "missingNameField": "Отсутствует обязательное поле \"name\" (string).",
+        "missingLabelField": "Отсутствует обязательное поле \"label\" (string).",
+        "missingIsDarkField": "Отсутствует обязательное поле \"isDark\" (boolean).",
+        "missingColorsField": "Отсутствует обязательное поле \"colors\" (object).",
+        "missingColor": "Отсутствует или некорректен цвет: \"{key}\".",
+        "invalidJson": "Некорректный JSON.",
+        "invalidData": "Некорректные данные темы."
+      },
+      "colors": {
+        "background": "Фон",
+        "foreground": "Передний план",
+        "muted": "Приглушённый",
+        "muted-foreground": "Приглушённый передний план",
+        "accent": "Акцент",
+        "accent-foreground": "Акцентный передний план",
+        "destructive": "Деструктивный",
+        "border": "Граница",
+        "input": "Ввод",
+        "ring": "Кольцо",
+        "primary": "Первичный",
+        "secondary": "Вторичный",
+        "tertiary": "Третичный",
+        "quaternary": "Четвертичный",
+        "quinary": "Пятеричный"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "Резюме",
+    "subject": "Резюме",
+    "summary": "Инженер-программист с почти четырёхлетним опытом. Работаю фрилансером с собственными клиентами — создаю веб- и мобильные приложения, которые попадают к реальным пользователям в App Store и Google Play. React, Next.js и React Native — моя родная территория, с особой любовью к чистой архитектуре, быстрым циклам обратной связи и редким open-source пет-проектам. Живу во Франции, работаю откуда угодно, куда умещается ноутбук.",
+    "sections": {
+      "summary": "Профессиональный профиль",
+      "experience": "Опыт работы",
+      "skills": "Технические навыки",
+      "education": "Образование",
+      "projects": "Избранные проекты",
+      "languages": "Языки",
+      "links": "Ссылки"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Инженер-программист",
+        "company": "Kabila",
+        "location": "Мадрид, Испания",
+        "period": "С июля 2022",
+        "descriptions": [
+          "Руковожу фронтенд-командой, создающей продакшен веб-приложения на React и Next.js",
+          "Отвечаю за технический roadmap, планирование спринтов и архитектурные решения",
+          "Менторю младших разработчиков и провожу код-ревью",
+          "Создаю и поддерживаю общую библиотеку компонентов и внутреннюю дизайн-систему",
+          "Выпускаю мобильные приложения-компаньоны на React Native и Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Фриланс",
+        "company": "Alexandre GOSSARD",
+        "location": "Шалон-ан-Шампань, Франция",
+        "period": "С июля 2022",
+        "descriptions": [
+          "Создаю full-stack веб-приложения на React и Next.js для прямых клиентов",
+          "Выпускаю кросс-платформенные мобильные приложения в App Store и Google Play",
+          "Настраиваю CI/CD-пайплайны и автоматизированные процессы деплоя",
+          "Консультирую по архитектуре, выбору технологий и оценке проектов",
+          "Веду коммуникацию с клиентами и слежу за сроками поставки в каждом проекте"
+        ]
+      },
+      "archeMC2": {
+        "name": "Стажировка по контракту",
+        "company": "Arche MC2",
+        "location": "Шалон-ан-Шампань, Франция",
+        "period": "Сентябрь 2022 — август 2023",
+        "descriptions": [
+          "Создавал GitLab CI/CD-пайплайны для автоматического тестирования и развёртывания",
+          "Контейнеризировал внутренние приложения и сервисы с помощью Docker",
+          "Автоматизировал рутинные задачи системного администрирования shell-скриптами",
+          "Мониторил состояние систем и повышал отказоустойчивость инфраструктуры"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Системное администрирование и безопасность (профессиональный бакалавриат)",
+        "location": "IUT Châlons (Шалон-ан-Шампань, Франция)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Сети и телекоммуникации (среднее техническое)",
+        "location": "IUT Châlons (Шалон-ан-Шампань, Франция)",
+        "period": "2020–2022",
+        "descriptions": ["Второе место в выпуске"]
+      },
+      "lyceeBac": {
+        "name": "Научный бакалавриат (аналог A-Level)",
+        "location": "Lycée Jean Talon (Шалон-ан-Шампань, Франция)",
+        "period": "2019–2020",
+        "descriptions": [
+          "Специализация ISN (Информатика и цифровые науки)",
+          "С отличием"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Web3 социальная платформа и NFT-экосистема на Hedera, с NFT-маркетплейсом, сообществами, лаунчпадами и инструментами для авторов."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Универсальный NFT-инструментарий для авторов и сообществ на Hedera. Мощная и простая платформа для создания, запуска и управления NFT-коллекциями с полным контролем."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Некастодиальный, простой и безопасный кошелёк для сети Hedera. Управляйте аккаунтами, токенами, NFT и подключайтесь к DApp, сохраняя полный контроль над активами."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Профессиональный сайт автосервиса с услугами, прозрачным прайсом и контактной информацией."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Инструмент мониторинга DASAN OLT/ONU [open-source]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Кастомная e-commerce платформа для профессиональной гравировальной студии с каталогом, онлайн-заказами и админ-панелью управления заказами."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Моё предыдущее портфолио на Next.js и Chakra UI с тёмной темой и плавными анимациями."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Стартовый набор с Next.js, Chakra-UI, Framer-Motion на TypeScript. Включает несколько компонентов, интернационализацию, SEO и больше."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "Платформа доставки посылок, созданная для проекта первого года DUT Сети и Телекоммуникации."
+      }
+    },
+    "skillGroups": {
+      "languages": "Языки",
+      "frameworks": "Фреймворки",
+      "uiStyling": "UI / Стилизация",
+      "tooling": "Инструменты",
+      "databases": "Базы данных",
+      "cloud": "Облако",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Автоматизация",
+      "ai": "ИИ"
+    },
+    "spokenLanguages": {
+      "fr": "Французский",
+      "en": "Английский",
+      "ru": "Русский",
+      "es": "Испанский"
+    },
+    "languageLevels": {
+      "native": "Родной",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Мотоциклы",
+      "cars": "Автомобили",
+      "weightlifting": "Силовые тренировки",
+      "calisthenics": "Калистеника",
+      "traveling": "Путешествия",
+      "manga": "Манга",
+      "gaming": "Видеоигры"
     }
   }
 }

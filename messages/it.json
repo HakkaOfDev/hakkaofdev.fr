@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Nomade digitale & Software Engineer",
-    "description": "Nomade digitale e software engineer @kabila.app. Appassionato di open source, creo esperienze web performanti con React e Next.js.",
+    "description": "Nomade digitale e software engineer freelance. Appassionato di open source, creo esperienze web performanti con React e Next.js.",
     "jobTitle": "Software Engineer",
     "location": "Châlons-en-Champagne, Francia",
     "ogImageAlt": "Alexandre Gossard",
@@ -23,7 +23,7 @@
   },
   "Welcome": {
     "greeting": "~ Benvenuto <wave>👋</wave>",
-    "intro": "<tagline>Nomade digitale</tagline> · <job>Software Engineer</job> presso <employer>{employerName}</employer>",
+    "intro": "<tagline>Nomade digitale</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
     "tags": {
       "openSource": "Sostenitore dell'open source",
       "calisthenics": "Devoto della calisthenics",
@@ -85,7 +85,8 @@
       "scrollbackOption": "{count, plural, =0 {nessun comando} =1 {1 comando} other {# comandi}}",
       "darkSuffix": "scuro",
       "lightSuffix": "chiaro",
-      "themeOption": "{label} ({mode})"
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Lingua"
     },
     "shortcutsHeading": "Scorciatoie da tastiera",
     "shortcuts": {
@@ -243,7 +244,21 @@
       "pt": "Português",
       "it": "Italiano",
       "zh": "中文",
-      "ja": "日本語"
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {

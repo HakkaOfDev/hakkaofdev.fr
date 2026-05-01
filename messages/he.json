@@ -1,11 +1,10 @@
 {
   "_meta": {
-    "needsReview": true,
-    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping. Note: site renders with dir=\"rtl\" but UI was originally built LTR; some terminal layout quirks expected."
+    "needsReview": true
   },
   "Metadata": {
     "title": "אלכסנדר גוסארד | נווד דיגיטלי ומהנדס תוכנה",
-    "description": "נווד דיגיטלי ומהנדס תוכנה @kabila.app. חובב קוד פתוח, יוצר חוויות ווב מהירות עם React ו-Next.js.",
+    "description": "נווד דיגיטלי ומהנדס תוכנה פרילנס. חובב קוד פתוח, יוצר חוויות ווב מהירות עם React ו-Next.js.",
     "jobTitle": "מהנדס תוכנה",
     "location": "שאלון-אן-שמפאן, צרפת",
     "ogImageAlt": "Alexandre Gossard",
@@ -27,7 +26,7 @@
   },
   "Welcome": {
     "greeting": "~ ברוך הבא <wave>👋</wave>",
-    "intro": "<tagline>נווד דיגיטלי</tagline> · <job>מהנדס תוכנה</job> ב-<employer>{employerName}</employer>",
+    "intro": "<tagline>נווד דיגיטלי</tagline> · <job>מהנדס תוכנה</job> · <freelance>פרילנס</freelance>",
     "tags": {
       "openSource": "תומך קוד פתוח",
       "calisthenics": "חובב קליסתניקס",
@@ -89,7 +88,8 @@
       "scrollbackOption": "{count, plural, =0 {אין פקודות} one {פקודה אחת} two {שתי פקודות} other {# פקודות}}",
       "darkSuffix": "כהה",
       "lightSuffix": "בהיר",
-      "themeOption": "{label} ({mode})"
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "שפה"
     },
     "shortcutsHeading": "קיצורי מקלדת",
     "shortcuts": {
@@ -238,6 +238,30 @@
     "switcher": {
       "ariaLabel": "החלף שפה",
       "title": "החלף שפה"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {
@@ -346,6 +370,238 @@
       "unknownAvailable": "ערכת נושא לא ידועה: {name}. ערכות נושא זמינות:",
       "updated": "ערכת הנושא עודכנה ל-{label}.",
       "active": "ערכת נושא פעילה: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "ערכת נושא לא ידועה: {name}.",
+      "runListHint": "הריצו <link></link> כדי לראות ערכות זמינות.",
+      "previewing": "תצוגה מקדימה של {label}",
+      "autoReverts": "— חוזרת אוטומטית בעוד {seconds} שניות",
+      "applyHintPrefix": "השתמשו ב",
+      "applyHintSuffix": "כדי להחיל לצמיתות."
+    },
+    "validate": {
+      "header": "בדיקת ניגודיות WCAG AA עבור {name}:",
+      "passCount": "{count} עברו",
+      "failCount": "{count} נכשלו",
+      "totalChecked": "(נבדקו {count} זוגות)",
+      "skippedWarning": "⚠️ חלק מהצבעים דולגו (פורמט לא נתמך)",
+      "allPass": "כל הזוגות עומדים בדרישות WCAG AA.",
+      "someFail": "{count} זוגות מתחת ליחס הניגודיות הנדרש. שקלו להתאים את ערכי הבהירות של הצבעים.",
+      "pairs": {
+        "bodyText": "טקסט גוף",
+        "mutedOnBackground": "טקסט עמום על רקע",
+        "mutedOnMuted": "טקסט עמום על רקע עמום",
+        "accentOnAccent": "טקסט הדגשה על רקע הדגשה",
+        "destructive": "טקסט הרסני",
+        "primary": "הדגשה ראשית",
+        "secondary": "הדגשה משנית",
+        "tertiary": "הדגשה שלישית",
+        "quaternary": "הדגשה רביעית",
+        "quinary": "הדגשה חמישית"
+      }
+    },
+    "create": {
+      "introPrefix": "צרו ערכת נושא מותאמת באמצעות",
+      "introSuffix": ".",
+      "modeVisual": "עורך ויזואלי",
+      "modeJson": "עורך JSON",
+      "tabVisual": "ויזואלי",
+      "tabJson": "JSON",
+      "themeIdLabel": "מזהה ערכה",
+      "displayNameLabel": "שם תצוגה",
+      "themeModeLabel": "מצב ערכה",
+      "darkTheme": "ערכה כהה",
+      "lightTheme": "ערכה בהירה",
+      "colorsHeading": "צבעים",
+      "colorPickerAria": "בורר צבע {label}",
+      "colorValueAria": "ערך צבע {label}",
+      "submit": "צור ערכה",
+      "copyJson": "העתק JSON",
+      "copyJsonAria": "העתק JSON ללוח",
+      "resetColors": "איפוס צבעים",
+      "resetColorsAria": "איפוס צבעים לברירת המחדל",
+      "jsonHint": "תומך ב-OKLCH (מומלץ), hex, rgb, hsl. אימות ניגודיות פועל לכל הפורמטים.",
+      "jsonRequired": "מפתחות נדרשים: name, label, isDark, colors ({count} טוקנים)",
+      "previewToggle": "תצוגה מקדימה חיה",
+      "successMessagePrefix": "ערכת נושא מותאמת",
+      "successMessageSuffix": "נוצרה והוחלה.",
+      "successHint": "תישמר ב-localStorage של הדפדפן.",
+      "tryAgain": "נסו שוב",
+      "errors": {
+        "nameAndLabelRequired": "שם ותווית של ערכת הנושא נדרשים.",
+        "missingNameField": "השדה הנדרש \"name\" (מחרוזת) חסר.",
+        "missingLabelField": "השדה הנדרש \"label\" (מחרוזת) חסר.",
+        "missingIsDarkField": "השדה הנדרש \"isDark\" (בוליאני) חסר.",
+        "missingColorsField": "השדה הנדרש \"colors\" (אובייקט) חסר.",
+        "missingColor": "צבע חסר או לא תקין: \"{key}\".",
+        "invalidJson": "קלט JSON לא תקין.",
+        "invalidData": "נתוני ערכת נושא לא תקינים."
+      },
+      "colors": {
+        "background": "רקע",
+        "foreground": "חזית",
+        "muted": "עמום",
+        "muted-foreground": "חזית עמומה",
+        "accent": "הדגשה",
+        "accent-foreground": "חזית הדגשה",
+        "destructive": "הרסני",
+        "border": "גבול",
+        "input": "קלט",
+        "ring": "טבעת",
+        "primary": "ראשי",
+        "secondary": "משני",
+        "tertiary": "שלישי",
+        "quaternary": "רביעי",
+        "quinary": "חמישי"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "קורות חיים",
+    "subject": "קורות חיים",
+    "summary": "מהנדס תוכנה עם כמעט ארבע שנות ניסיון. אני עובד כפרילנסר עבור לקוחות פרטיים, בונה אפליקציות ווב ומובייל שמגיעות למשתמשים אמיתיים ב-App Store וב-Google Play. React, Next.js ו-React Native הם מגרש הביתי שלי, עם חיבה לאדריכלות נקייה, לולאות משוב מהירות ופרויקטי קוד פתוח צדדיים מדי פעם. מבוסס בצרפת, עובד מכל מקום שהמחשב הנייד נכנס אליו.",
+    "sections": {
+      "summary": "פרופיל מקצועי",
+      "experience": "ניסיון",
+      "skills": "כישורים טכניים",
+      "education": "השכלה",
+      "projects": "פרויקטים נבחרים",
+      "languages": "שפות",
+      "links": "קישורים"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "מהנדס תוכנה",
+        "company": "Kabila",
+        "location": "מדריד, ספרד",
+        "period": "מיולי 2022",
+        "descriptions": [
+          "מוביל צוות פרונטאנד שבונה אפליקציות ווב לייצור עם React ו-Next.js",
+          "אחראי על מפת הדרכים הטכנולוגית, תכנון ספרינטים והחלטות אדריכליות",
+          "מלווה מפתחים זוטרים ומנהל code review",
+          "בונה ומתחזק את ספריית הרכיבים המשותפת ואת מערכת העיצוב הפנימית",
+          "מוציא לאוויר אפליקציות מובייל נלוות עם React Native ו-Expo"
+        ]
+      },
+      "freelance": {
+        "name": "פרילנס",
+        "company": "Alexandre GOSSARD",
+        "location": "שאלון-אן-שמפן, צרפת",
+        "period": "מיולי 2022",
+        "descriptions": [
+          "בונה אפליקציות ווב full-stack עם React ו-Next.js עבור לקוחות ישירים",
+          "מוציא לאוויר אפליקציות מובייל חוצות פלטפורמות ל-App Store ול-Google Play",
+          "מקים פייפליינים של CI/CD ותהליכי deployment אוטומטיים",
+          "מייעץ בנושאי אדריכלות, בחירת טכנולוגיות והגדרת היקפי פרויקטים",
+          "מנהל את התקשורת עם הלקוח ואת לוחות הזמנים של המסירה בכל פרויקט"
+        ]
+      },
+      "archeMC2": {
+        "name": "התמחות מקצועית",
+        "company": "Arche MC2",
+        "location": "שאלון-אן-שמפן, צרפת",
+        "period": "ספטמבר 2022 — אוגוסט 2023",
+        "descriptions": [
+          "בניתי פייפליינים של GitLab CI/CD לבדיקות ול-deployment אוטומטיים",
+          "בודדתי אפליקציות ושירותים פנימיים לקונטיינרים עם Docker",
+          "אוטומציה של משימות sysadmin שגרתיות באמצעות סקריפטי shell",
+          "ניטור בריאות מערכות ושיפור עמידות התשתית"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "ניהול מערכות ואבטחת מידע (תואר מקצועי)",
+        "location": "IUT Châlons (שאלון-אן-שמפן, צרפת)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT רשתות וטלקומוניקציה (תעודה טכנית)",
+        "location": "IUT Châlons (שאלון-אן-שמפן, צרפת)",
+        "period": "2020–2022",
+        "descriptions": ["מקום שני במחזור"]
+      },
+      "lyceeBac": {
+        "name": "בגרות מדעית (מקבילה ל-A-level)",
+        "location": "Lycée Jean Talon (שאלון-אן-שמפן, צרפת)",
+        "period": "2019–2020",
+        "descriptions": ["התמחות ב-ISN (מדעי המחשב והדיגיטליים)", "בהצטיינות"]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "פלטפורמה חברתית Web3 ומערכת אקולוגית של NFT הבנויות על Hedera, הכוללת שוק NFT, רחבות קהילה, launchpads וכלים ליוצרים."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "ערכת כלי NFT הכל-באחד עבור יוצרים וקהילות ב-Hedera. פלטפורמה חזקה וקלה לשימוש ליצירה, להשקה ולניהול אוספי NFT תוך שמירה על שליטה מלאה."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "ארנק non-custodial פשוט ובטוח לרשת Hedera. נהלו חשבונות, טוקנים ו-NFT והתחברו ל-DApps תוך שמירה על שליטה מלאה בנכסים שלכם."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "אתר מקצועי לעסק תיקון רכבים, הכולל שירותים, מחירים שקופים ופרטי קשר."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "כלי פיקוח על DASAN OLT/ONU [קוד פתוח]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "פלטפורמת מסחר אלקטרוני מותאמת אישית לסטודיו חריטה מקצועי, עם קטלוג מוצרים, הזמנות מקוונות ולוח ניהול להזמנות."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "אתר התיק הקודם שלי שנבנה עם Next.js ו-Chakra UI, עם ערכת נושא כהה ואנימציות חלקות."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "ערכת התחלה הכוללת Next.js, Chakra-UI, Framer-Motion ב-TypeScript. כוללת כמה רכיבים, בינלאום, SEO ועוד."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "פלטפורמת חבילות שנוצרה לפרויקט שנת הלימודים הראשונה ב-DUT רשתות וטלקומוניקציה."
+      }
+    },
+    "skillGroups": {
+      "languages": "שפות",
+      "frameworks": "פריימוורקים",
+      "uiStyling": "UI / עיצוב",
+      "tooling": "כלים",
+      "databases": "מסדי נתונים",
+      "cloud": "ענן",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "אוטומציה",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "צרפתית",
+      "en": "אנגלית",
+      "ru": "רוסית",
+      "es": "ספרדית"
+    },
+    "languageLevels": {
+      "native": "שפת אם",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "אופנועים",
+      "cars": "מכוניות",
+      "weightlifting": "הרמת משקולות",
+      "calisthenics": "קליסטניקס",
+      "traveling": "טיולים",
+      "manga": "מנגה",
+      "gaming": "גיימינג"
     }
   }
 }

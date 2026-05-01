@@ -1,11 +1,10 @@
 {
   "_meta": {
-    "needsReview": true,
-    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+    "needsReview": true
   },
   "Metadata": {
     "title": "Alexandre Gossard | Nomad digital și inginer software",
-    "description": "Nomad digital și inginer software @kabila.app. Pasionat de open source, creez experiențe web performante cu React și Next.js.",
+    "description": "Nomad digital și inginer software freelance. Pasionat de open source, creez experiențe web performante cu React și Next.js.",
     "jobTitle": "Inginer software",
     "location": "Châlons-en-Champagne, Franța",
     "ogImageAlt": "Alexandre Gossard",
@@ -27,7 +26,7 @@
   },
   "Welcome": {
     "greeting": "~ Bun venit <wave>👋</wave>",
-    "intro": "<tagline>Nomad digital</tagline> · <job>Inginer software</job> la <employer>{employerName}</employer>",
+    "intro": "<tagline>Nomad digital</tagline> · <job>Inginer software</job> · <freelance>Freelance</freelance>",
     "tags": {
       "openSource": "Susținător open source",
       "calisthenics": "Pasionat de calistenie",
@@ -89,7 +88,8 @@
       "scrollbackOption": "{count, plural, =0 {nicio comandă} =1 {1 comandă} other {# de comenzi}}",
       "darkSuffix": "întunecat",
       "lightSuffix": "luminos",
-      "themeOption": "{label} ({mode})"
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Limbă"
     },
     "shortcutsHeading": "Comenzi rapide",
     "shortcuts": {
@@ -238,6 +238,30 @@
     "switcher": {
       "ariaLabel": "Schimbă limba",
       "title": "Schimbă limba"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {
@@ -346,6 +370,241 @@
       "unknownAvailable": "Temă necunoscută: {name}. Teme disponibile:",
       "updated": "Tema schimbată în {label}.",
       "active": "Tema activă: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Temă necunoscută: {name}.",
+      "runListHint": "Rulează <link></link> pentru a vedea temele disponibile.",
+      "previewing": "Previzualizare {label}",
+      "autoReverts": "— revine în {seconds} s",
+      "applyHintPrefix": "Folosește",
+      "applyHintSuffix": "pentru a aplica permanent."
+    },
+    "validate": {
+      "header": "Audit de contrast WCAG AA pentru {name}:",
+      "passCount": "{count} trecute",
+      "failCount": "{count} eșuate",
+      "totalChecked": "({count} perechi verificate)",
+      "skippedWarning": "⚠️ Unele culori sărite (format nesuportat)",
+      "allPass": "Toate perechile îndeplinesc cerințele WCAG AA.",
+      "someFail": "{count, plural, one {# pereche} few {# perechi} other {# de perechi}} sub raportul de contrast cerut. Ia în considerare ajustarea luminozității culorilor.",
+      "pairs": {
+        "bodyText": "Text principal",
+        "mutedOnBackground": "Text estompat pe fundal",
+        "mutedOnMuted": "Text estompat pe fundal estompat",
+        "accentOnAccent": "Text accent pe fundal accent",
+        "destructive": "Text distructiv",
+        "primary": "Accent primar",
+        "secondary": "Accent secundar",
+        "tertiary": "Accent terțiar",
+        "quaternary": "Accent cuaternar",
+        "quinary": "Accent cvinar"
+      }
+    },
+    "create": {
+      "introPrefix": "Creează o temă personalizată folosind",
+      "introSuffix": ".",
+      "modeVisual": "editorul vizual",
+      "modeJson": "editorul JSON",
+      "tabVisual": "Vizual",
+      "tabJson": "JSON",
+      "themeIdLabel": "ID temă",
+      "displayNameLabel": "Nume afișat",
+      "themeModeLabel": "Mod temă",
+      "darkTheme": "Temă întunecată",
+      "lightTheme": "Temă deschisă",
+      "colorsHeading": "Culori",
+      "colorPickerAria": "Selector de culoare {label}",
+      "colorValueAria": "Valoarea culorii {label}",
+      "submit": "Creează tema",
+      "copyJson": "Copiază JSON",
+      "copyJsonAria": "Copiază JSON în clipboard",
+      "resetColors": "Resetează culorile",
+      "resetColorsAria": "Resetează culorile la valorile implicite",
+      "jsonHint": "Suportă OKLCH (recomandat), hex, rgb, hsl. Validarea contrastului funcționează pentru toate formatele.",
+      "jsonRequired": "Chei obligatorii: name, label, isDark, colors ({count} tokenuri)",
+      "previewToggle": "Previzualizare live",
+      "successMessagePrefix": "Tema personalizată",
+      "successMessageSuffix": "creată și aplicată.",
+      "successHint": "Va persista în localStorage-ul browserului.",
+      "tryAgain": "Încearcă din nou",
+      "errors": {
+        "nameAndLabelRequired": "Numele și eticheta temei sunt obligatorii.",
+        "missingNameField": "Lipsește câmpul obligatoriu \"name\" (string).",
+        "missingLabelField": "Lipsește câmpul obligatoriu \"label\" (string).",
+        "missingIsDarkField": "Lipsește câmpul obligatoriu \"isDark\" (boolean).",
+        "missingColorsField": "Lipsește câmpul obligatoriu \"colors\" (object).",
+        "missingColor": "Culoare lipsă sau invalidă: \"{key}\".",
+        "invalidJson": "Intrare JSON invalidă.",
+        "invalidData": "Date temă invalide."
+      },
+      "colors": {
+        "background": "Fundal",
+        "foreground": "Prim-plan",
+        "muted": "Estompat",
+        "muted-foreground": "Prim-plan estompat",
+        "accent": "Accent",
+        "accent-foreground": "Prim-plan accent",
+        "destructive": "Distructiv",
+        "border": "Margine",
+        "input": "Intrare",
+        "ring": "Inel",
+        "primary": "Primar",
+        "secondary": "Secundar",
+        "tertiary": "Terțiar",
+        "quaternary": "Cuaternar",
+        "quinary": "Cvinar"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "CV",
+    "subject": "CV",
+    "summary": "Inginer software cu aproape patru ani de experiență. Lucrez ca freelancer pentru proprii clienți, construind aplicații web și mobile care ajung la utilizatori reali pe App Store și Google Play. React, Next.js și React Native sunt teritoriul meu, cu o slăbiciune pentru arhitectura curată, bucle rapide de feedback și ocazional proiecte open source secundare. Bazat în Franța, lucrez de oriunde încape laptopul.",
+    "sections": {
+      "summary": "Profil profesional",
+      "experience": "Experiență",
+      "skills": "Competențe tehnice",
+      "education": "Educație",
+      "projects": "Proiecte selectate",
+      "languages": "Limbi",
+      "links": "Linkuri"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Inginer software",
+        "company": "Kabila",
+        "location": "Madrid, Spania",
+        "period": "Din iulie 2022",
+        "descriptions": [
+          "Conduc o echipă de frontend care construiește aplicații web de producție cu React și Next.js",
+          "Răspund de roadmap-ul tehnic, planificarea sprinturilor și deciziile de arhitectură",
+          "Mentorez dezvoltatori juniori și conduc code review-uri",
+          "Construiesc și întrețin biblioteca de componente partajate și sistemul de design intern",
+          "Livrez aplicații mobile însoțitoare cu React Native și Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Freelance",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, Franța",
+        "period": "Din iulie 2022",
+        "descriptions": [
+          "Construiesc aplicații web full-stack cu React și Next.js pentru clienți direcți",
+          "Livrez aplicații mobile multi-platformă în App Store și Google Play",
+          "Configurez pipeline-uri CI/CD și fluxuri de deployment automate",
+          "Consiliez asupra arhitecturii, alegerii tehnologiilor și domeniului de aplicare al proiectului",
+          "Gestionez comunicarea cu clientul și termenele de livrare la fiecare proiect"
+        ]
+      },
+      "archeMC2": {
+        "name": "Stagiu de ucenicie",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, Franța",
+        "period": "Septembrie 2022 — august 2023",
+        "descriptions": [
+          "Am construit pipeline-uri GitLab CI/CD pentru testare și deployment automate",
+          "Am containerizat aplicații și servicii interne cu Docker",
+          "Am automatizat sarcini de rutină de sysadmin cu scripturi shell",
+          "Am monitorizat starea sistemelor și am îmbunătățit reziliența infrastructurii"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Administrare de sistem și securitate (licență profesională)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Franța)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Rețele și telecomunicații (diplomă tehnică)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Franța)",
+        "period": "2020–2022",
+        "descriptions": ["Locul al doilea pe promoție"]
+      },
+      "lyceeBac": {
+        "name": "Bacalaureat științific (echivalent A-level)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Franța)",
+        "period": "2019–2020",
+        "descriptions": [
+          "Specializare ISN (Informatică și științe digitale)",
+          "Cu mențiune"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "O platformă socială Web3 și ecosistem NFT construite pe Hedera, cu marketplace NFT, plaze comunitare, launchpad-uri și instrumente pentru creatori."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Un toolkit NFT all-in-one pentru creatori și comunități pe Hedera. O platformă puternică și ușor de folosit pentru a crea, lansa și gestiona colecții NFT, păstrând controlul total."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Un wallet non-custodial, simplu și sigur pentru rețeaua Hedera. Gestionează conturi, tokenuri, NFT-uri și conectează-te la DApp-uri menținând controlul total asupra activelor tale."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Un site profesional pentru o afacere de reparații auto, cu servicii, prețuri transparente și informații de contact."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Instrument de supraveghere DASAN OLT/ONU [open source]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "O platformă e-commerce personalizată pentru un studio profesional de gravare, cu catalog de produse, comenzi online și panou de administrare al comenzilor."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Portofoliul meu anterior construit cu Next.js și Chakra UI, cu temă întunecată și animații fluide."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Un starter kit cu Next.js, Chakra-UI, Framer-Motion în TypeScript. Conține câteva componente, internaționalizare, SEO și mai mult."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "O platformă de colete creată pentru proiectul primului an din DUT Rețele și Telecomunicații."
+      }
+    },
+    "skillGroups": {
+      "languages": "Limbaje",
+      "frameworks": "Framework-uri",
+      "uiStyling": "UI / Stilizare",
+      "tooling": "Unelte",
+      "databases": "Baze de date",
+      "cloud": "Cloud",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Automatizare",
+      "ai": "IA"
+    },
+    "spokenLanguages": {
+      "fr": "Franceză",
+      "en": "Engleză",
+      "ru": "Rusă",
+      "es": "Spaniolă"
+    },
+    "languageLevels": {
+      "native": "Nativă",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Motociclete",
+      "cars": "Mașini",
+      "weightlifting": "Haltere",
+      "calisthenics": "Calistenie",
+      "traveling": "Călătorii",
+      "manga": "Manga",
+      "gaming": "Gaming"
     }
   }
 }

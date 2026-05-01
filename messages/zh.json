@@ -1,11 +1,10 @@
 {
   "_meta": {
-    "needsReview": true,
-    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+    "needsReview": true
   },
   "Metadata": {
     "title": "Alexandre Gossard | 数字游民 & 软件工程师",
-    "description": "数字游民和软件工程师 @kabila.app。开源爱好者,使用 React 和 Next.js 打造高性能的网络体验。",
+    "description": "数字游民和自由职业软件工程师。开源爱好者,使用 React 和 Next.js 打造高性能的网络体验。",
     "jobTitle": "软件工程师",
     "location": "法国 沙隆昂尚帕涅",
     "ogImageAlt": "Alexandre Gossard",
@@ -27,7 +26,7 @@
   },
   "Welcome": {
     "greeting": "~ 欢迎 <wave>👋</wave>",
-    "intro": "<tagline>数字游民</tagline> · <employer>{employerName}</employer> 的 <job>软件工程师</job>",
+    "intro": "<tagline>数字游民</tagline> · <job>软件工程师</job> · <freelance>自由职业</freelance>",
     "tags": {
       "openSource": "开源倡导者",
       "calisthenics": "徒手健身爱好者",
@@ -89,7 +88,8 @@
       "scrollbackOption": "{count, plural, =0 {无命令} other {# 条命令}}",
       "darkSuffix": "深色",
       "lightSuffix": "浅色",
-      "themeOption": "{label}({mode})"
+      "themeOption": "{label}({mode})",
+      "languageLabel": "语言"
     },
     "shortcutsHeading": "键盘快捷键",
     "shortcuts": {
@@ -247,7 +247,21 @@
       "pt": "Português",
       "it": "Italiano",
       "zh": "中文",
-      "ja": "日本語"
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {

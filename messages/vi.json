@@ -1,11 +1,10 @@
 {
   "_meta": {
-    "needsReview": true,
-    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+    "needsReview": true
   },
   "Metadata": {
     "title": "Alexandre Gossard | Du mục số & Kỹ sư phần mềm",
-    "description": "Du mục số và kỹ sư phần mềm @kabila.app. Đam mê mã nguồn mở, tôi tạo trải nghiệm web hiệu năng cao với React và Next.js.",
+    "description": "Du mục số và kỹ sư phần mềm freelance. Đam mê mã nguồn mở, tôi tạo trải nghiệm web hiệu năng cao với React và Next.js.",
     "jobTitle": "Kỹ sư phần mềm",
     "location": "Châlons-en-Champagne, Pháp",
     "ogImageAlt": "Alexandre Gossard",
@@ -27,7 +26,7 @@
   },
   "Welcome": {
     "greeting": "~ Chào mừng <wave>👋</wave>",
-    "intro": "<tagline>Du mục số</tagline> · <job>Kỹ sư phần mềm</job> tại <employer>{employerName}</employer>",
+    "intro": "<tagline>Du mục số</tagline> · <job>Kỹ sư phần mềm</job> · <freelance>Freelance</freelance>",
     "tags": {
       "openSource": "Người ủng hộ mã nguồn mở",
       "calisthenics": "Người yêu thích calisthenics",
@@ -89,7 +88,8 @@
       "scrollbackOption": "{count, plural, =0 {không có lệnh} other {# lệnh}}",
       "darkSuffix": "tối",
       "lightSuffix": "sáng",
-      "themeOption": "{label} ({mode})"
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Ngôn ngữ"
     },
     "shortcutsHeading": "Phím tắt",
     "shortcuts": {
@@ -238,6 +238,30 @@
     "switcher": {
       "ariaLabel": "Đổi ngôn ngữ",
       "title": "Đổi ngôn ngữ"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {
@@ -346,6 +370,241 @@
       "unknownAvailable": "Chủ đề không xác định: {name}. Chủ đề khả dụng:",
       "updated": "Đã cập nhật chủ đề thành {label}.",
       "active": "Chủ đề đang dùng: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Chủ đề không xác định: {name}.",
+      "runListHint": "Chạy <link></link> để xem các chủ đề khả dụng.",
+      "previewing": "Đang xem trước {label}",
+      "autoReverts": "— tự khôi phục sau {seconds} giây",
+      "applyHintPrefix": "Dùng",
+      "applyHintSuffix": "để áp dụng vĩnh viễn."
+    },
+    "validate": {
+      "header": "Kiểm tra độ tương phản WCAG AA cho {name}:",
+      "passCount": "{count} đạt",
+      "failCount": "{count} không đạt",
+      "totalChecked": "(đã kiểm {count} cặp)",
+      "skippedWarning": "⚠️ Một số màu bị bỏ qua (định dạng không hỗ trợ)",
+      "allPass": "Tất cả các cặp đáp ứng yêu cầu WCAG AA.",
+      "someFail": "{count} cặp dưới tỉ số tương phản yêu cầu. Hãy cân nhắc điều chỉnh độ sáng của các màu.",
+      "pairs": {
+        "bodyText": "Văn bản chính",
+        "mutedOnBackground": "Văn bản mờ trên nền",
+        "mutedOnMuted": "Văn bản mờ trên nền mờ",
+        "accentOnAccent": "Văn bản nhấn trên nền nhấn",
+        "destructive": "Văn bản phá hủy",
+        "primary": "Nhấn chính",
+        "secondary": "Nhấn phụ",
+        "tertiary": "Nhấn cấp ba",
+        "quaternary": "Nhấn cấp bốn",
+        "quinary": "Nhấn cấp năm"
+      }
+    },
+    "create": {
+      "introPrefix": "Tạo chủ đề tùy chỉnh bằng",
+      "introSuffix": ".",
+      "modeVisual": "trình chỉnh sửa trực quan",
+      "modeJson": "trình chỉnh sửa JSON",
+      "tabVisual": "Trực quan",
+      "tabJson": "JSON",
+      "themeIdLabel": "ID chủ đề",
+      "displayNameLabel": "Tên hiển thị",
+      "themeModeLabel": "Chế độ chủ đề",
+      "darkTheme": "Chủ đề tối",
+      "lightTheme": "Chủ đề sáng",
+      "colorsHeading": "Màu sắc",
+      "colorPickerAria": "Bộ chọn màu {label}",
+      "colorValueAria": "Giá trị màu {label}",
+      "submit": "Tạo chủ đề",
+      "copyJson": "Sao chép JSON",
+      "copyJsonAria": "Sao chép JSON vào bộ nhớ tạm",
+      "resetColors": "Đặt lại màu",
+      "resetColorsAria": "Đặt lại màu về mặc định",
+      "jsonHint": "Hỗ trợ OKLCH (khuyến nghị), hex, rgb, hsl. Xác thực tương phản hoạt động cho mọi định dạng.",
+      "jsonRequired": "Khóa bắt buộc: name, label, isDark, colors ({count} token)",
+      "previewToggle": "Xem trước trực tiếp",
+      "successMessagePrefix": "Chủ đề tùy chỉnh",
+      "successMessageSuffix": "đã được tạo và áp dụng.",
+      "successHint": "Sẽ được lưu trong localStorage của trình duyệt.",
+      "tryAgain": "Thử lại",
+      "errors": {
+        "nameAndLabelRequired": "Tên và nhãn chủ đề là bắt buộc.",
+        "missingNameField": "Thiếu trường bắt buộc \"name\" (string).",
+        "missingLabelField": "Thiếu trường bắt buộc \"label\" (string).",
+        "missingIsDarkField": "Thiếu trường bắt buộc \"isDark\" (boolean).",
+        "missingColorsField": "Thiếu trường bắt buộc \"colors\" (object).",
+        "missingColor": "Thiếu hoặc màu không hợp lệ: \"{key}\".",
+        "invalidJson": "Đầu vào JSON không hợp lệ.",
+        "invalidData": "Dữ liệu chủ đề không hợp lệ."
+      },
+      "colors": {
+        "background": "Nền",
+        "foreground": "Chữ chính",
+        "muted": "Mờ",
+        "muted-foreground": "Chữ chính mờ",
+        "accent": "Nhấn",
+        "accent-foreground": "Chữ chính nhấn",
+        "destructive": "Phá hủy",
+        "border": "Viền",
+        "input": "Nhập",
+        "ring": "Vòng",
+        "primary": "Chính",
+        "secondary": "Phụ",
+        "tertiary": "Cấp ba",
+        "quaternary": "Cấp bốn",
+        "quinary": "Cấp năm"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "CV",
+    "subject": "CV",
+    "summary": "Kỹ sư phần mềm với gần bốn năm kinh nghiệm. Tôi làm freelance cho các khách hàng riêng, xây dựng các ứng dụng web và di động đến tay người dùng thực trên App Store và Google Play. React, Next.js và React Native là sân nhà, với một niềm yêu thích đặc biệt dành cho kiến trúc gọn gàng, vòng phản hồi nhanh và những dự án phụ open-source thỉnh thoảng. Có trụ sở tại Pháp, làm việc từ bất cứ nơi nào laptop có thể đặt vừa.",
+    "sections": {
+      "summary": "Hồ sơ chuyên môn",
+      "experience": "Kinh nghiệm",
+      "skills": "Kỹ năng kỹ thuật",
+      "education": "Học vấn",
+      "projects": "Dự án tiêu biểu",
+      "languages": "Ngôn ngữ",
+      "links": "Liên kết"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Kỹ sư phần mềm",
+        "company": "Kabila",
+        "location": "Madrid, Tây Ban Nha",
+        "period": "Từ tháng 7 năm 2022",
+        "descriptions": [
+          "Dẫn dắt một đội frontend xây dựng ứng dụng web sản phẩm với React và Next.js",
+          "Sở hữu lộ trình kỹ thuật, lập kế hoạch sprint và các quyết định kiến trúc",
+          "Hướng dẫn các lập trình viên junior và chủ trì code review",
+          "Xây dựng và duy trì thư viện component dùng chung và hệ thống thiết kế nội bộ",
+          "Phát hành các ứng dụng di động đi kèm với React Native và Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Freelance",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, Pháp",
+        "period": "Từ tháng 7 năm 2022",
+        "descriptions": [
+          "Xây dựng các ứng dụng web full-stack với React và Next.js cho khách hàng trực tiếp",
+          "Phát hành các ứng dụng di động đa nền tảng lên App Store và Google Play",
+          "Thiết lập pipeline CI/CD và quy trình triển khai tự động",
+          "Tư vấn về kiến trúc, lựa chọn công nghệ và phạm vi dự án",
+          "Xử lý giao tiếp với khách hàng và các mốc thời gian giao hàng trên mỗi dự án"
+        ]
+      },
+      "archeMC2": {
+        "name": "Thực tập học nghề",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, Pháp",
+        "period": "Tháng 9 năm 2022 — Tháng 8 năm 2023",
+        "descriptions": [
+          "Xây dựng pipeline GitLab CI/CD cho kiểm thử và triển khai tự động",
+          "Đóng gói container các ứng dụng và dịch vụ nội bộ với Docker",
+          "Tự động hóa các tác vụ sysadmin định kỳ bằng shell script",
+          "Giám sát tình trạng hệ thống và cải thiện khả năng phục hồi hạ tầng"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Quản trị Hệ thống và An ninh (cử nhân nghề)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Pháp)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Mạng và Viễn thông (bằng kỹ thuật)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Pháp)",
+        "period": "2020–2022",
+        "descriptions": ["Á khoa khóa"]
+      },
+      "lyceeBac": {
+        "name": "Tú tài Khoa học (tương đương A-level)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Pháp)",
+        "period": "2019–2020",
+        "descriptions": [
+          "Chuyên ngành ISN (Tin học và Khoa học Số)",
+          "Đạt loại Giỏi"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Một nền tảng xã hội Web3 và hệ sinh thái NFT được xây dựng trên Hedera, bao gồm chợ NFT, quảng trường cộng đồng, launchpad và công cụ cho creator."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Bộ công cụ NFT toàn diện cho creator và cộng đồng trên Hedera. Một nền tảng mạnh mẽ và dễ dùng để tạo, ra mắt và quản lý các bộ sưu tập NFT trong khi vẫn giữ toàn quyền kiểm soát."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Một ví non-custodial, đơn giản và an toàn cho mạng Hedera. Quản lý tài khoản, token, NFT và kết nối với các DApp trong khi vẫn giữ toàn quyền kiểm soát tài sản của bạn."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Một website chuyên nghiệp cho doanh nghiệp sửa chữa ô tô, có dịch vụ, bảng giá minh bạch và thông tin liên hệ."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Công cụ giám sát DASAN OLT/ONU [mã nguồn mở]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Một nền tảng thương mại điện tử tùy chỉnh cho một xưởng khắc chuyên nghiệp, có catalog sản phẩm, đặt hàng trực tuyến và bảng quản trị quản lý đơn hàng."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Trang portfolio trước đây của tôi được xây dựng với Next.js và Chakra UI, có giao diện tối và hiệu ứng mượt mà."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Bộ khởi đầu gồm Next.js, Chakra-UI, Framer-Motion bằng TypeScript. Có một vài component, đa ngôn ngữ, SEO và nhiều hơn nữa."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "Nền tảng giao bưu kiện được tạo cho dự án năm thứ nhất của DUT Mạng và Viễn thông."
+      }
+    },
+    "skillGroups": {
+      "languages": "Ngôn ngữ",
+      "frameworks": "Framework",
+      "uiStyling": "UI / Tạo kiểu",
+      "tooling": "Công cụ",
+      "databases": "Cơ sở dữ liệu",
+      "cloud": "Cloud",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Tự động hóa",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "Tiếng Pháp",
+      "en": "Tiếng Anh",
+      "ru": "Tiếng Nga",
+      "es": "Tiếng Tây Ban Nha"
+    },
+    "languageLevels": {
+      "native": "Tiếng mẹ đẻ",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Mô tô",
+      "cars": "Ô tô",
+      "weightlifting": "Cử tạ",
+      "calisthenics": "Calisthenics",
+      "traveling": "Du lịch",
+      "manga": "Manga",
+      "gaming": "Chơi game"
     }
   }
 }

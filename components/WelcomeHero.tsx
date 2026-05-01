@@ -2,7 +2,6 @@
 
 import { Code2, Dumbbell, GitFork } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { ShortcutRow, ShortcutSection } from "@/components/ShortcutSection";
 import { Shortcut } from "@/components/ui/Shortcut";
@@ -18,24 +17,23 @@ function WelcomeHero({
   isPreview?: boolean;
 }) {
   const t = useTranslations("Welcome");
-  const { name, employer } = SITE;
-  const { name: employerName, url: employerUrl } = employer;
+  const { name } = SITE;
   const firstName = name.split(" ")[0];
   const lastName = name.split(" ").slice(1).join(" ");
 
   return (
     <div className={cn("grid gap-4 font-normal tracking-tight", className)}>
       {/* ── Profile ── */}
-      <div className="flex flex-col items-start gap-4 sm:grid sm:grid-cols-[64px_1fr]">
+      <div className="flex flex-col items-start gap-4 sm:grid sm:grid-cols-[88px_1fr]">
         <Image
           src="/avatar.jpg"
           alt="Alexandre Gossard"
           className="aspect-square shrink-0 rounded-lg object-cover object-top shadow-sm ring-1 ring-border/60 dark:ring-overlay-medium"
           quality={75}
-          width={64}
-          height={64}
+          width={88}
+          height={88}
           fetchPriority="high"
-          sizes="64px"
+          sizes="88px"
           priority
         />
         <div className="grid gap-1.5">
@@ -56,7 +54,6 @@ function WelcomeHero({
           </h1>
           <p className="text-muted-foreground text-xs leading-relaxed">
             {t.rich("intro", {
-              employerName,
               tagline: (chunks) => (
                 <span className="font-semibold text-primary underline decoration-primary/50 underline-offset-4">
                   {chunks}
@@ -65,14 +62,8 @@ function WelcomeHero({
               job: (chunks) => (
                 <span className="font-semibold text-secondary">{chunks}</span>
               ),
-              employer: (chunks) => (
-                <Link
-                  href={employerUrl}
-                  className="font-semibold text-secondary transition-colors duration-200 hover:text-secondary/80"
-                  target="_blank"
-                >
-                  {chunks}
-                </Link>
+              freelance: (chunks) => (
+                <span className="font-semibold text-tertiary">{chunks}</span>
               ),
             })}
           </p>

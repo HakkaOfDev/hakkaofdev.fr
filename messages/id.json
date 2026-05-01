@@ -1,11 +1,10 @@
 {
   "_meta": {
-    "needsReview": true,
-    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+    "needsReview": true
   },
   "Metadata": {
     "title": "Alexandre Gossard | Pengelana digital & Software Engineer",
-    "description": "Pengelana digital dan software engineer @kabila.app. Pegiat open source, saya merancang pengalaman web berperforma tinggi dengan React dan Next.js.",
+    "description": "Pengelana digital dan software engineer freelance. Pegiat open source, saya merancang pengalaman web berperforma tinggi dengan React dan Next.js.",
     "jobTitle": "Software Engineer",
     "location": "Châlons-en-Champagne, Prancis",
     "ogImageAlt": "Alexandre Gossard",
@@ -27,7 +26,7 @@
   },
   "Welcome": {
     "greeting": "~ Selamat datang <wave>👋</wave>",
-    "intro": "<tagline>Pengelana digital</tagline> · <job>Software Engineer</job> di <employer>{employerName}</employer>",
+    "intro": "<tagline>Pengelana digital</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
     "tags": {
       "openSource": "Pendukung open source",
       "calisthenics": "Penggemar calisthenics",
@@ -89,7 +88,8 @@
       "scrollbackOption": "{count, plural, =0 {tidak ada perintah} other {# perintah}}",
       "darkSuffix": "gelap",
       "lightSuffix": "terang",
-      "themeOption": "{label} ({mode})"
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Bahasa"
     },
     "shortcutsHeading": "Pintasan keyboard",
     "shortcuts": {
@@ -238,6 +238,30 @@
     "switcher": {
       "ariaLabel": "Ubah bahasa",
       "title": "Ubah bahasa"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {
@@ -346,6 +370,241 @@
       "unknownAvailable": "Tema tidak dikenal: {name}. Tema yang tersedia:",
       "updated": "Tema diperbarui ke {label}.",
       "active": "Tema aktif: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Tema tidak dikenal: {name}.",
+      "runListHint": "Jalankan <link></link> untuk melihat tema yang tersedia.",
+      "previewing": "Pratinjau {label}",
+      "autoReverts": "— kembali otomatis dalam {seconds} detik",
+      "applyHintPrefix": "Gunakan",
+      "applyHintSuffix": "untuk menerapkan secara permanen."
+    },
+    "validate": {
+      "header": "Audit kontras WCAG AA untuk {name}:",
+      "passCount": "{count} lulus",
+      "failCount": "{count} gagal",
+      "totalChecked": "({count} pasang diperiksa)",
+      "skippedWarning": "⚠️ Beberapa warna dilewati (format tidak didukung)",
+      "allPass": "Semua pasangan memenuhi persyaratan WCAG AA.",
+      "someFail": "{count} pasangan di bawah rasio kontras yang diperlukan. Pertimbangkan untuk menyesuaikan nilai kecerahan warna.",
+      "pairs": {
+        "bodyText": "Teks isi",
+        "mutedOnBackground": "Teks redup pada latar",
+        "mutedOnMuted": "Teks redup pada latar redup",
+        "accentOnAccent": "Teks aksen pada latar aksen",
+        "destructive": "Teks destruktif",
+        "primary": "Aksen utama",
+        "secondary": "Aksen sekunder",
+        "tertiary": "Aksen tersier",
+        "quaternary": "Aksen kuaterner",
+        "quinary": "Aksen kuiner"
+      }
+    },
+    "create": {
+      "introPrefix": "Buat tema kustom menggunakan",
+      "introSuffix": ".",
+      "modeVisual": "editor visual",
+      "modeJson": "editor JSON",
+      "tabVisual": "Visual",
+      "tabJson": "JSON",
+      "themeIdLabel": "ID tema",
+      "displayNameLabel": "Nama tampilan",
+      "themeModeLabel": "Mode tema",
+      "darkTheme": "Tema gelap",
+      "lightTheme": "Tema terang",
+      "colorsHeading": "Warna",
+      "colorPickerAria": "Pemilih warna {label}",
+      "colorValueAria": "Nilai warna {label}",
+      "submit": "Buat tema",
+      "copyJson": "Salin JSON",
+      "copyJsonAria": "Salin JSON ke clipboard",
+      "resetColors": "Reset warna",
+      "resetColorsAria": "Reset warna ke default",
+      "jsonHint": "Mendukung OKLCH (disarankan), hex, rgb, hsl. Validasi kontras berfungsi untuk semua format.",
+      "jsonRequired": "Kunci wajib: name, label, isDark, colors ({count} token)",
+      "previewToggle": "Pratinjau langsung",
+      "successMessagePrefix": "Tema kustom",
+      "successMessageSuffix": "telah dibuat dan diterapkan.",
+      "successHint": "Akan disimpan di localStorage browser Anda.",
+      "tryAgain": "Coba lagi",
+      "errors": {
+        "nameAndLabelRequired": "Nama dan label tema wajib diisi.",
+        "missingNameField": "Field wajib \"name\" (string) tidak ada.",
+        "missingLabelField": "Field wajib \"label\" (string) tidak ada.",
+        "missingIsDarkField": "Field wajib \"isDark\" (boolean) tidak ada.",
+        "missingColorsField": "Field wajib \"colors\" (object) tidak ada.",
+        "missingColor": "Warna hilang atau tidak valid: \"{key}\".",
+        "invalidJson": "Input JSON tidak valid.",
+        "invalidData": "Data tema tidak valid."
+      },
+      "colors": {
+        "background": "Latar",
+        "foreground": "Depan",
+        "muted": "Redup",
+        "muted-foreground": "Depan redup",
+        "accent": "Aksen",
+        "accent-foreground": "Depan aksen",
+        "destructive": "Destruktif",
+        "border": "Garis tepi",
+        "input": "Input",
+        "ring": "Cincin",
+        "primary": "Utama",
+        "secondary": "Sekunder",
+        "tertiary": "Tersier",
+        "quaternary": "Kuaterner",
+        "quinary": "Kuiner"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "CV",
+    "subject": "CV",
+    "summary": "Software engineer dengan pengalaman hampir empat tahun. Saya bekerja freelance untuk klien sendiri, membangun aplikasi web dan mobile yang sampai ke pengguna nyata di App Store dan Google Play. React, Next.js, dan React Native adalah lapangan rumahku, dengan kelemahan untuk arsitektur yang bersih, loop umpan balik cepat, dan proyek sampingan open-source sesekali. Berbasis di Prancis, bekerja dari mana pun laptop bisa diletakkan.",
+    "sections": {
+      "summary": "Ringkasan profesional",
+      "experience": "Pengalaman",
+      "skills": "Keterampilan teknis",
+      "education": "Pendidikan",
+      "projects": "Proyek pilihan",
+      "languages": "Bahasa",
+      "links": "Tautan"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Software Engineer",
+        "company": "Kabila",
+        "location": "Madrid, Spanyol",
+        "period": "Sejak Juli 2022",
+        "descriptions": [
+          "Memimpin tim frontend yang membangun aplikasi web produksi dengan React dan Next.js",
+          "Bertanggung jawab atas peta jalan teknis, perencanaan sprint, dan keputusan arsitektur",
+          "Membimbing developer junior dan menjalankan code review",
+          "Membangun dan memelihara library komponen bersama serta sistem desain internal",
+          "Merilis aplikasi mobile pendamping dengan React Native dan Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Freelance",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, Prancis",
+        "period": "Sejak Juli 2022",
+        "descriptions": [
+          "Membangun aplikasi web full-stack dengan React dan Next.js untuk klien langsung",
+          "Merilis aplikasi mobile lintas platform ke App Store dan Google Play",
+          "Menyiapkan pipeline CI/CD dan alur deployment otomatis",
+          "Memberi konsultasi tentang arsitektur, pilihan teknologi, dan ruang lingkup proyek",
+          "Menangani komunikasi klien dan tenggat pengiriman di setiap proyek"
+        ]
+      },
+      "archeMC2": {
+        "name": "Magang",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, Prancis",
+        "period": "September 2022 — Agustus 2023",
+        "descriptions": [
+          "Membangun pipeline GitLab CI/CD untuk pengujian dan deployment otomatis",
+          "Mengontainerkan aplikasi dan layanan internal dengan Docker",
+          "Mengotomatiskan tugas sysadmin rutin dengan shell script",
+          "Memantau kesehatan sistem dan meningkatkan ketahanan infrastruktur"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Administrasi Sistem dan Keamanan (gelar profesional)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Prancis)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Jaringan dan Telekomunikasi (gelar teknis)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Prancis)",
+        "period": "2020–2022",
+        "descriptions": ["Peringkat kedua angkatan"]
+      },
+      "lyceeBac": {
+        "name": "Bakalaureat Sains (setara A-level)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Prancis)",
+        "period": "2019–2020",
+        "descriptions": [
+          "Spesialisasi ISN (Ilmu Komputer dan Digital)",
+          "Dengan predikat"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Platform sosial Web3 dan ekosistem NFT yang dibangun di Hedera, dengan marketplace NFT, plaza komunitas, launchpad, dan tools untuk creator."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Toolkit NFT all-in-one untuk creator dan komunitas di Hedera. Platform yang kuat dan mudah digunakan untuk membuat, meluncurkan, dan mengelola koleksi NFT dengan kontrol penuh."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Wallet non-custodial, sederhana, dan aman untuk jaringan Hedera. Kelola akun, token, NFT, dan terhubung dengan DApp sambil mempertahankan kontrol penuh atas aset Anda."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Website profesional untuk bisnis perbaikan otomotif, dengan layanan, harga transparan, dan informasi kontak."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Alat pengawasan DASAN OLT/ONU [open source]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Platform e-commerce kustom untuk studio ukir profesional, dengan katalog produk, pemesanan online, dan dashboard admin untuk manajemen pesanan."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Website portfolio saya sebelumnya yang dibangun dengan Next.js dan Chakra UI, dengan tema gelap dan animasi halus."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Starter kit dengan Next.js, Chakra-UI, Framer-Motion dalam TypeScript. Berisi beberapa komponen, internasionalisasi, SEO, dan lainnya."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "Platform paket yang dibuat untuk proyek tahun pertama DUT Jaringan dan Telekomunikasi."
+      }
+    },
+    "skillGroups": {
+      "languages": "Bahasa",
+      "frameworks": "Framework",
+      "uiStyling": "UI / Styling",
+      "tooling": "Tooling",
+      "databases": "Database",
+      "cloud": "Cloud",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Otomasi",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "Bahasa Prancis",
+      "en": "Bahasa Inggris",
+      "ru": "Bahasa Rusia",
+      "es": "Bahasa Spanyol"
+    },
+    "languageLevels": {
+      "native": "Bahasa ibu",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Sepeda motor",
+      "cars": "Mobil",
+      "weightlifting": "Angkat beban",
+      "calisthenics": "Calisthenics",
+      "traveling": "Bepergian",
+      "manga": "Manga",
+      "gaming": "Game"
     }
   }
 }

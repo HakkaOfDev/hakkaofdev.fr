@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Dijital göçebe ve yazılım mühendisi",
-    "description": "Dijital göçebe ve yazılım mühendisi @kabila.app. Open source tutkunuyum, React ve Next.js ile yüksek performanslı web deneyimleri tasarlıyorum.",
+    "description": "Dijital göçebe ve serbest çalışan yazılım mühendisi. Open source tutkunuyum, React ve Next.js ile yüksek performanslı web deneyimleri tasarlıyorum.",
     "jobTitle": "Yazılım mühendisi",
     "location": "Châlons-en-Champagne, Fransa",
     "ogImageAlt": "Alexandre Gossard",
@@ -23,7 +23,7 @@
   },
   "Welcome": {
     "greeting": "~ Hoş geldin <wave>👋</wave>",
-    "intro": "<tagline>Dijital göçebe</tagline> · <employer>{employerName}</employer> şirketinde <job>Yazılım mühendisi</job>",
+    "intro": "<tagline>Dijital göçebe</tagline> · <job>Yazılım mühendisi</job> · <freelance>Serbest çalışan</freelance>",
     "tags": {
       "openSource": "Open source savunucusu",
       "calisthenics": "Kalistenik tutkunu",
@@ -85,7 +85,8 @@
       "scrollbackOption": "{count, plural, =0 {komut yok} one {1 komut} other {# komut}}",
       "darkSuffix": "koyu",
       "lightSuffix": "açık",
-      "themeOption": "{label} ({mode})"
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Dil"
     },
     "shortcutsHeading": "Klavye kısayolları",
     "shortcuts": {
@@ -234,6 +235,30 @@
     "switcher": {
       "ariaLabel": "Dil değiştir",
       "title": "Dil değiştir"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {
@@ -342,6 +367,241 @@
       "unknownAvailable": "Bilinmeyen tema: {name}. Mevcut temalar:",
       "updated": "Tema {label} olarak güncellendi.",
       "active": "Aktif tema: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Bilinmeyen tema: {name}.",
+      "runListHint": "Mevcut temaları görmek için <link></link> komutunu çalıştırın.",
+      "previewing": "Önizleme: {label}",
+      "autoReverts": "— {seconds} sn sonra geri döner",
+      "applyHintPrefix": "Kalıcı uygulamak için",
+      "applyHintSuffix": "kullanın."
+    },
+    "validate": {
+      "header": "{name} için WCAG AA kontrast denetimi:",
+      "passCount": "{count} geçti",
+      "failCount": "{count} başarısız",
+      "totalChecked": "({count} çift kontrol edildi)",
+      "skippedWarning": "⚠️ Bazı renkler atlandı (desteklenmeyen format)",
+      "allPass": "Tüm çiftler WCAG AA gereksinimlerini karşılıyor.",
+      "someFail": "{count, plural, one {# çift} other {# çift}} gerekli kontrast oranının altında. Renk parlaklığını ayarlamayı düşünün.",
+      "pairs": {
+        "bodyText": "Ana metin",
+        "mutedOnBackground": "Arka planda soluk metin",
+        "mutedOnMuted": "Soluk arka planda soluk metin",
+        "accentOnAccent": "Vurgu arka planında vurgu metni",
+        "destructive": "Yıkıcı metin",
+        "primary": "Birincil vurgu",
+        "secondary": "İkincil vurgu",
+        "tertiary": "Üçüncül vurgu",
+        "quaternary": "Dördüncül vurgu",
+        "quinary": "Beşincil vurgu"
+      }
+    },
+    "create": {
+      "introPrefix": "Özel bir tema oluşturmak için",
+      "introSuffix": ".",
+      "modeVisual": "görsel düzenleyiciyi",
+      "modeJson": "JSON düzenleyiciyi",
+      "tabVisual": "Görsel",
+      "tabJson": "JSON",
+      "themeIdLabel": "Tema kimliği",
+      "displayNameLabel": "Görünen ad",
+      "themeModeLabel": "Tema modu",
+      "darkTheme": "Koyu tema",
+      "lightTheme": "Açık tema",
+      "colorsHeading": "Renkler",
+      "colorPickerAria": "{label} renk seçici",
+      "colorValueAria": "{label} renk değeri",
+      "submit": "Tema oluştur",
+      "copyJson": "JSON'u kopyala",
+      "copyJsonAria": "JSON'u panoya kopyala",
+      "resetColors": "Renkleri sıfırla",
+      "resetColorsAria": "Renkleri varsayılana sıfırla",
+      "jsonHint": "OKLCH (önerilen), hex, rgb, hsl destekler. Kontrast doğrulaması tüm formatlarda çalışır.",
+      "jsonRequired": "Gerekli anahtarlar: name, label, isDark, colors ({count} token)",
+      "previewToggle": "Canlı önizleme",
+      "successMessagePrefix": "Özel tema",
+      "successMessageSuffix": "oluşturuldu ve uygulandı.",
+      "successHint": "Tarayıcının localStorage'ında saklanacaktır.",
+      "tryAgain": "Tekrar dene",
+      "errors": {
+        "nameAndLabelRequired": "Tema adı ve etiketi gereklidir.",
+        "missingNameField": "Gerekli \"name\" alanı (string) eksik.",
+        "missingLabelField": "Gerekli \"label\" alanı (string) eksik.",
+        "missingIsDarkField": "Gerekli \"isDark\" alanı (boolean) eksik.",
+        "missingColorsField": "Gerekli \"colors\" alanı (object) eksik.",
+        "missingColor": "Eksik veya geçersiz renk: \"{key}\".",
+        "invalidJson": "Geçersiz JSON girişi.",
+        "invalidData": "Geçersiz tema verisi."
+      },
+      "colors": {
+        "background": "Arka plan",
+        "foreground": "Ön plan",
+        "muted": "Soluk",
+        "muted-foreground": "Soluk ön plan",
+        "accent": "Vurgu",
+        "accent-foreground": "Vurgu ön planı",
+        "destructive": "Yıkıcı",
+        "border": "Kenarlık",
+        "input": "Giriş",
+        "ring": "Halka",
+        "primary": "Birincil",
+        "secondary": "İkincil",
+        "tertiary": "Üçüncül",
+        "quaternary": "Dördüncül",
+        "quinary": "Beşincil"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "Özgeçmiş",
+    "subject": "Özgeçmiş",
+    "summary": "Yaklaşık dört yıllık deneyime sahip bir yazılım mühendisi. Kendi müşterilerim için freelance çalışıyor, App Store ve Google Play'de gerçek kullanıcılara ulaşan web ve mobil uygulamalar geliştiriyorum. React, Next.js ve React Native ana saham; temiz mimariye, hızlı geri bildirim döngülerine ve ara sıra yapılan açık kaynaklı yan projelere zaafım var. Fransa merkezli olarak laptopun sığdığı her yerden çalışıyorum.",
+    "sections": {
+      "summary": "Mesleki profil",
+      "experience": "Deneyim",
+      "skills": "Teknik yetkinlikler",
+      "education": "Eğitim",
+      "projects": "Seçilmiş projeler",
+      "languages": "Diller",
+      "links": "Bağlantılar"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Yazılım Mühendisi",
+        "company": "Kabila",
+        "location": "Madrid, İspanya",
+        "period": "Temmuz 2022'den itibaren",
+        "descriptions": [
+          "React ve Next.js ile üretim web uygulamaları geliştiren bir frontend ekibine liderlik ediyorum",
+          "Teknik yol haritası, sprint planlaması ve mimari kararlardan sorumluyum",
+          "Junior geliştiricilere mentorluk yapıyor ve kod incelemelerini yönetiyorum",
+          "Paylaşılan bileşen kütüphanesini ve dahili tasarım sistemini geliştirip sürdürüyorum",
+          "React Native ve Expo ile eşlik eden mobil uygulamalar yayınlıyorum"
+        ]
+      },
+      "freelance": {
+        "name": "Serbest Çalışan",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, Fransa",
+        "period": "Temmuz 2022'den itibaren",
+        "descriptions": [
+          "Doğrudan müşteriler için React ve Next.js ile full-stack web uygulamaları geliştiriyorum",
+          "App Store ve Google Play'e çapraz platform mobil uygulamalar yayınlıyorum",
+          "CI/CD pipeline'ları ve otomatik dağıtım iş akışları kuruyorum",
+          "Mimari, teknoloji seçimi ve proje kapsamı konularında danışmanlık veriyorum",
+          "Her projede müşteri iletişimini ve teslim sürelerini yönetiyorum"
+        ]
+      },
+      "archeMC2": {
+        "name": "Çıraklık",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, Fransa",
+        "period": "Eylül 2022 — Ağustos 2023",
+        "descriptions": [
+          "Otomatik test ve dağıtım için GitLab CI/CD pipeline'ları oluşturdum",
+          "İç uygulamaları ve servisleri Docker ile konteynerize ettim",
+          "Rutin sysadmin görevlerini shell scriptleri ile otomatikleştirdim",
+          "Sistem sağlığını izledim ve altyapı dayanıklılığını iyileştirdim"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Sistem Yönetimi ve Güvenlik (mesleki lisans)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Fransa)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Ağlar ve Telekomünikasyon (teknik diploma)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Fransa)",
+        "period": "2020–2022",
+        "descriptions": ["Mezuniyet ikincisi"]
+      },
+      "lyceeBac": {
+        "name": "Bilim Bakaloryası (A-level eşdeğeri)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Fransa)",
+        "period": "2019–2020",
+        "descriptions": [
+          "ISN uzmanlığı (Bilgisayar ve dijital bilimler)",
+          "Üstün başarıyla"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Hedera üzerinde inşa edilmiş bir Web3 sosyal platformu ve NFT ekosistemi; NFT pazaryeri, topluluk plazaları, launchpad'ler ve içerik üretici araçları içerir."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Hedera üzerindeki içerik üreticiler ve topluluklar için hepsi bir arada NFT araç seti. NFT koleksiyonlarınızı tam kontrol sahibi olarak oluşturmak, yayınlamak ve yönetmek için güçlü ve kullanımı kolay bir platform."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Hedera ağı için non-custodial, basit ve güvenli bir cüzdan. Hesaplarınızı, tokenlarınızı, NFT'lerinizi yönetin ve varlıklarınız üzerinde tam kontrolü korurken DApp'lerle bağlantı kurun."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Bir oto tamir işletmesi için profesyonel bir web sitesi; hizmetler, şeffaf fiyatlandırma ve iletişim bilgileri sunar."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "DASAN OLT/ONU denetim aracı [açık kaynak]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Profesyonel bir gravür stüdyosu için özel bir e-ticaret platformu; ürün kataloğu, çevrimiçi sipariş ve sipariş yönetimi için yönetici paneli içerir."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Önceki portfolyo web sitem; Next.js ve Chakra UI ile inşa edilmiş, koyu tema ve akıcı animasyonlar içeriyor."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "TypeScript'te Next.js, Chakra-UI ve Framer-Motion içeren bir başlangıç kiti. Birkaç bileşen, uluslararasılaştırma, SEO ve daha fazlası."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "DUT Ağlar ve Telekom ilk yıl projem için oluşturulmuş bir paket platformu."
+      }
+    },
+    "skillGroups": {
+      "languages": "Diller",
+      "frameworks": "Çatılar",
+      "uiStyling": "UI / Stil",
+      "tooling": "Araçlar",
+      "databases": "Veritabanları",
+      "cloud": "Bulut",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Otomasyon",
+      "ai": "Yapay Zeka"
+    },
+    "spokenLanguages": {
+      "fr": "Fransızca",
+      "en": "İngilizce",
+      "ru": "Rusça",
+      "es": "İspanyolca"
+    },
+    "languageLevels": {
+      "native": "Anadil",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Motosikletler",
+      "cars": "Arabalar",
+      "weightlifting": "Halter",
+      "calisthenics": "Calisthenics",
+      "traveling": "Seyahat",
+      "manga": "Manga",
+      "gaming": "Oyun"
     }
   }
 }

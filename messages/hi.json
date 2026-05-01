@@ -1,11 +1,10 @@
 {
   "_meta": {
-    "needsReview": true,
-    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+    "needsReview": true
   },
   "Metadata": {
     "title": "अलेक्जेंडर गोसार्ड | डिजिटल खानाबदोश और सॉफ्टवेयर इंजीनियर",
-    "description": "डिजिटल खानाबदोश और सॉफ्टवेयर इंजीनियर @kabila.app। ओपन सोर्स के शौकीन, React और Next.js के साथ बेहतरीन वेब अनुभव बनाता हूँ।",
+    "description": "डिजिटल खानाबदोश और फ्रीलांस सॉफ्टवेयर इंजीनियर। ओपन सोर्स के शौकीन, React और Next.js के साथ बेहतरीन वेब अनुभव बनाता हूँ।",
     "jobTitle": "सॉफ्टवेयर इंजीनियर",
     "location": "शालोन-आं-शोंपान्य, फ्रांस",
     "ogImageAlt": "Alexandre Gossard",
@@ -27,7 +26,7 @@
   },
   "Welcome": {
     "greeting": "~ स्वागत है <wave>👋</wave>",
-    "intro": "<tagline>डिजिटल खानाबदोश</tagline> · <employer>{employerName}</employer> में <job>सॉफ्टवेयर इंजीनियर</job>",
+    "intro": "<tagline>डिजिटल खानाबदोश</tagline> · <job>सॉफ्टवेयर इंजीनियर</job> · <freelance>फ्रीलांस</freelance>",
     "tags": {
       "openSource": "ओपन सोर्स समर्थक",
       "calisthenics": "कैलिस्थेनिक्स प्रेमी",
@@ -89,7 +88,8 @@
       "scrollbackOption": "{count, plural, =0 {कोई कमांड नहीं} one {1 कमांड} other {# कमांड}}",
       "darkSuffix": "डार्क",
       "lightSuffix": "लाइट",
-      "themeOption": "{label} ({mode})"
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "भाषा"
     },
     "shortcutsHeading": "कीबोर्ड शॉर्टकट",
     "shortcuts": {
@@ -238,6 +238,30 @@
     "switcher": {
       "ariaLabel": "भाषा बदलें",
       "title": "भाषा बदलें"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {
@@ -346,6 +370,241 @@
       "unknownAvailable": "अज्ञात थीम: {name}. उपलब्ध थीम:",
       "updated": "थीम {label} में अपडेट की गई।",
       "active": "सक्रिय थीम: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "अज्ञात थीम: {name}.",
+      "runListHint": "उपलब्ध थीम देखने के लिए <link></link> चलाएँ.",
+      "previewing": "{label} का पूर्वावलोकन",
+      "autoReverts": "— {seconds} सेकंड में स्वतः वापस होगा",
+      "applyHintPrefix": "स्थायी रूप से लागू करने के लिए",
+      "applyHintSuffix": "का उपयोग करें."
+    },
+    "validate": {
+      "header": "{name} के लिए WCAG AA कंट्रास्ट ऑडिट:",
+      "passCount": "{count} पास",
+      "failCount": "{count} फेल",
+      "totalChecked": "({count} जोड़े जाँचे गए)",
+      "skippedWarning": "⚠️ कुछ रंग छोड़ दिए गए (असमर्थित प्रारूप)",
+      "allPass": "सभी जोड़े WCAG AA आवश्यकताओं को पूरा करते हैं.",
+      "someFail": "{count, plural, one {# जोड़ा} other {# जोड़े}} आवश्यक कंट्रास्ट अनुपात से नीचे हैं. रंग की चमक मानों को समायोजित करने पर विचार करें.",
+      "pairs": {
+        "bodyText": "मुख्य पाठ",
+        "mutedOnBackground": "पृष्ठभूमि पर मद्धम पाठ",
+        "mutedOnMuted": "मद्धम पृष्ठभूमि पर मद्धम पाठ",
+        "accentOnAccent": "एक्सेंट पृष्ठभूमि पर एक्सेंट पाठ",
+        "destructive": "विनाशकारी पाठ",
+        "primary": "प्राथमिक एक्सेंट",
+        "secondary": "द्वितीयक एक्सेंट",
+        "tertiary": "तृतीयक एक्सेंट",
+        "quaternary": "चतुर्थक एक्सेंट",
+        "quinary": "पाँचवाँ एक्सेंट"
+      }
+    },
+    "create": {
+      "introPrefix": "एक कस्टम थीम बनाने के लिए",
+      "introSuffix": " का उपयोग करें.",
+      "modeVisual": "विज़ुअल एडिटर",
+      "modeJson": "JSON एडिटर",
+      "tabVisual": "विज़ुअल",
+      "tabJson": "JSON",
+      "themeIdLabel": "थीम ID",
+      "displayNameLabel": "प्रदर्शन नाम",
+      "themeModeLabel": "थीम मोड",
+      "darkTheme": "डार्क थीम",
+      "lightTheme": "लाइट थीम",
+      "colorsHeading": "रंग",
+      "colorPickerAria": "{label} रंग चयनकर्ता",
+      "colorValueAria": "{label} रंग मान",
+      "submit": "थीम बनाएँ",
+      "copyJson": "JSON कॉपी करें",
+      "copyJsonAria": "JSON को क्लिपबोर्ड पर कॉपी करें",
+      "resetColors": "रंग रीसेट करें",
+      "resetColorsAria": "रंगों को डिफ़ॉल्ट पर रीसेट करें",
+      "jsonHint": "OKLCH (अनुशंसित), hex, rgb, hsl समर्थित. कंट्रास्ट सत्यापन सभी प्रारूपों के लिए काम करता है.",
+      "jsonRequired": "आवश्यक कुंजियाँ: name, label, isDark, colors ({count} टोकन)",
+      "previewToggle": "लाइव पूर्वावलोकन",
+      "successMessagePrefix": "कस्टम थीम",
+      "successMessageSuffix": "बनाई और लागू की गई.",
+      "successHint": "यह आपके ब्राउज़र के localStorage में बनी रहेगी.",
+      "tryAgain": "पुनः प्रयास करें",
+      "errors": {
+        "nameAndLabelRequired": "थीम का नाम और लेबल आवश्यक हैं.",
+        "missingNameField": "आवश्यक फ़ील्ड \"name\" (string) अनुपस्थित.",
+        "missingLabelField": "आवश्यक फ़ील्ड \"label\" (string) अनुपस्थित.",
+        "missingIsDarkField": "आवश्यक फ़ील्ड \"isDark\" (boolean) अनुपस्थित.",
+        "missingColorsField": "आवश्यक फ़ील्ड \"colors\" (object) अनुपस्थित.",
+        "missingColor": "अनुपस्थित या अमान्य रंग: \"{key}\".",
+        "invalidJson": "अमान्य JSON इनपुट.",
+        "invalidData": "अमान्य थीम डेटा."
+      },
+      "colors": {
+        "background": "पृष्ठभूमि",
+        "foreground": "अग्रभूमि",
+        "muted": "मद्धम",
+        "muted-foreground": "मद्धम अग्रभूमि",
+        "accent": "एक्सेंट",
+        "accent-foreground": "एक्सेंट अग्रभूमि",
+        "destructive": "विनाशकारी",
+        "border": "सीमा",
+        "input": "इनपुट",
+        "ring": "रिंग",
+        "primary": "प्राथमिक",
+        "secondary": "द्वितीयक",
+        "tertiary": "तृतीयक",
+        "quaternary": "चतुर्थक",
+        "quinary": "पाँचवाँ"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "सीवी",
+    "subject": "सीवी",
+    "summary": "लगभग चार साल के अनुभव के साथ एक सॉफ़्टवेयर इंजीनियर. मैं अपने स्वयं के क्लाइंट्स के लिए फ्रीलांस करता हूँ और ऐसी वेब और मोबाइल ऐप्स बनाता हूँ जो App Store और Google Play पर असली उपयोगकर्ताओं तक पहुँचती हैं. React, Next.js और React Native मेरा घरेलू मैदान हैं—साफ-सुथरी आर्किटेक्चर, तेज़ फ़ीडबैक लूप और कभी-कभार के ओपन-सोर्स साइड प्रोजेक्ट्स के लिए विशेष लगाव. फ़्रांस में स्थित, जहाँ भी लैपटॉप समा सके, वहीं से काम करता हूँ.",
+    "sections": {
+      "summary": "व्यावसायिक प्रोफ़ाइल",
+      "experience": "अनुभव",
+      "skills": "तकनीकी कौशल",
+      "education": "शिक्षा",
+      "projects": "चयनित परियोजनाएँ",
+      "languages": "भाषाएँ",
+      "links": "लिंक"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "सॉफ़्टवेयर इंजीनियर",
+        "company": "Kabila",
+        "location": "मैड्रिड, स्पेन",
+        "period": "जुलाई 2022 से",
+        "descriptions": [
+          "React और Next.js के साथ प्रोडक्शन वेब ऐप्स बनाने वाली फ्रंटएंड टीम का नेतृत्व करता हूँ",
+          "तकनीकी रोडमैप, स्प्रिंट योजना और आर्किटेक्चर निर्णयों का स्वामित्व रखता हूँ",
+          "जूनियर डेवलपर्स को मेंटर करता हूँ और कोड रिव्यू चलाता हूँ",
+          "साझा कंपोनेंट लाइब्रेरी और आंतरिक डिज़ाइन सिस्टम बनाता और बनाए रखता हूँ",
+          "React Native और Expo के साथ साथी मोबाइल ऐप्स लॉन्च करता हूँ"
+        ]
+      },
+      "freelance": {
+        "name": "फ्रीलांस",
+        "company": "Alexandre GOSSARD",
+        "location": "शालों-ओं-शांपानी, फ़्रांस",
+        "period": "जुलाई 2022 से",
+        "descriptions": [
+          "प्रत्यक्ष क्लाइंट्स के लिए React और Next.js के साथ फुल-स्टैक वेब ऐप्स बनाता हूँ",
+          "App Store और Google Play पर क्रॉस-प्लेटफ़ॉर्म मोबाइल ऐप्स लॉन्च करता हूँ",
+          "CI/CD पाइपलाइन और स्वचालित डिप्लॉयमेंट वर्कफ़्लो सेट करता हूँ",
+          "आर्किटेक्चर, तकनीकी विकल्पों और प्रोजेक्ट स्कोप पर सलाह देता हूँ",
+          "हर प्रोजेक्ट में क्लाइंट संचार और डिलीवरी टाइमलाइन का प्रबंधन करता हूँ"
+        ]
+      },
+      "archeMC2": {
+        "name": "प्रशिक्षण (अप्रेंटिसशिप)",
+        "company": "Arche MC2",
+        "location": "शालों-ओं-शांपानी, फ़्रांस",
+        "period": "सितंबर 2022 — अगस्त 2023",
+        "descriptions": [
+          "स्वचालित परीक्षण और डिप्लॉयमेंट के लिए GitLab CI/CD पाइपलाइन बनाई",
+          "Docker के साथ आंतरिक ऐप्लिकेशन और सेवाओं को कंटेनराइज़ किया",
+          "नियमित sysadmin कार्यों को shell स्क्रिप्ट से स्वचालित किया",
+          "सिस्टम स्वास्थ्य की निगरानी की और इन्फ्रास्ट्रक्चर लचीलापन बेहतर किया"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "सिस्टम प्रशासन और सुरक्षा (व्यावसायिक स्नातक)",
+        "location": "IUT Châlons (शालों-ओं-शांपानी, फ़्रांस)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT नेटवर्क और दूरसंचार (तकनीकी डिग्री)",
+        "location": "IUT Châlons (शालों-ओं-शांपानी, फ़्रांस)",
+        "period": "2020–2022",
+        "descriptions": ["कक्षा में द्वितीय स्थान"]
+      },
+      "lyceeBac": {
+        "name": "वैज्ञानिक बैकलॉरीअट (A-level समतुल्य)",
+        "location": "Lycée Jean Talon (शालों-ओं-शांपानी, फ़्रांस)",
+        "period": "2019–2020",
+        "descriptions": [
+          "ISN विशेषज्ञता (कंप्यूटर और डिजिटल विज्ञान)",
+          "विशिष्टता के साथ"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Hedera पर निर्मित Web3 सोशल प्लेटफ़ॉर्म और NFT इकोसिस्टम, जिसमें NFT मार्केटप्लेस, सामुदायिक प्लाज़ा, लॉन्चपैड और क्रिएटर टूल्स शामिल हैं."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Hedera पर क्रिएटर्स और समुदायों के लिए ऑल-इन-वन NFT टूलकिट. NFT कलेक्शन को पूर्ण नियंत्रण के साथ बनाने, लॉन्च करने और प्रबंधित करने के लिए शक्तिशाली और उपयोग में आसान प्लेटफ़ॉर्म."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Hedera नेटवर्क के लिए नॉन-कस्टोडियल, सरल और सुरक्षित वॉलेट. खातों, टोकन्स, NFT का प्रबंधन करें और अपनी संपत्तियों पर पूर्ण नियंत्रण रखते हुए DApps से जुड़ें."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "एक ऑटोमोटिव मरम्मत व्यवसाय के लिए पेशेवर वेबसाइट, जिसमें सेवाएँ, पारदर्शी मूल्य निर्धारण और संपर्क जानकारी शामिल हैं."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "DASAN OLT/ONU पर्यवेक्षण उपकरण [ओपनसोर्स]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "एक पेशेवर उत्कीर्णन स्टूडियो के लिए कस्टम ई-कॉमर्स प्लेटफ़ॉर्म, जिसमें उत्पाद कैटलॉग, ऑनलाइन ऑर्डरिंग और ऑर्डर प्रबंधन के लिए एडमिन डैशबोर्ड शामिल है."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "मेरी पिछली पोर्टफ़ोलियो वेबसाइट जो Next.js और Chakra UI के साथ बनी थी, इसमें डार्क थीम और सहज एनिमेशन हैं."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "TypeScript में Next.js, Chakra-UI, Framer-Motion वाला स्टार्टर किट. कुछ कंपोनेंट, अंतरराष्ट्रीयकरण, SEO और बहुत कुछ शामिल."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "DUT नेटवर्क और दूरसंचार के पहले वर्ष की परियोजना के लिए बनाया गया पार्सल प्लेटफ़ॉर्म."
+      }
+    },
+    "skillGroups": {
+      "languages": "भाषाएँ",
+      "frameworks": "फ्रेमवर्क",
+      "uiStyling": "UI / स्टाइलिंग",
+      "tooling": "टूलिंग",
+      "databases": "डेटाबेस",
+      "cloud": "क्लाउड",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "स्वचालन",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "फ्रेंच",
+      "en": "अंग्रेज़ी",
+      "ru": "रूसी",
+      "es": "स्पेनिश"
+    },
+    "languageLevels": {
+      "native": "मातृभाषा",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "मोटरसाइकिलें",
+      "cars": "कारें",
+      "weightlifting": "वज़न उठाना",
+      "calisthenics": "कैलिस्थेनिक्स",
+      "traveling": "यात्रा",
+      "manga": "मंगा",
+      "gaming": "गेमिंग"
     }
   }
 }

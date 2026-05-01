@@ -1,11 +1,10 @@
 {
   "_meta": {
-    "needsReview": true,
-    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping. Note: site renders with dir=\"rtl\" but UI was originally built LTR; some terminal layout quirks expected."
+    "needsReview": true
   },
   "Metadata": {
     "title": "ألكسندر غوسار | رحالة رقمي ومهندس برمجيات",
-    "description": "رحالة رقمي ومهندس برمجيات @kabila.app. شغوف بالمصادر المفتوحة، أصمم تجارب ويب عالية الأداء بـ React و Next.js.",
+    "description": "رحالة رقمي ومهندس برمجيات مستقل. شغوف بالمصادر المفتوحة، أصمم تجارب ويب عالية الأداء بـ React و Next.js.",
     "jobTitle": "مهندس برمجيات",
     "location": "شالون أون شامباني، فرنسا",
     "ogImageAlt": "Alexandre Gossard",
@@ -27,7 +26,7 @@
   },
   "Welcome": {
     "greeting": "~ مرحبًا <wave>👋</wave>",
-    "intro": "<tagline>رحالة رقمي</tagline> · <job>مهندس برمجيات</job> في <employer>{employerName}</employer>",
+    "intro": "<tagline>رحالة رقمي</tagline> · <job>مهندس برمجيات</job> · <freelance>عمل حر</freelance>",
     "tags": {
       "openSource": "مناصر للمصادر المفتوحة",
       "calisthenics": "محب لتمارين الكاليستينك",
@@ -89,7 +88,8 @@
       "scrollbackOption": "{count, plural, =0 {لا أوامر} one {أمر واحد} two {أمران} few {# أوامر} many {# أمرًا} other {# أمر}}",
       "darkSuffix": "داكن",
       "lightSuffix": "فاتح",
-      "themeOption": "{label} ({mode})"
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "اللغة"
     },
     "shortcutsHeading": "اختصارات لوحة المفاتيح",
     "shortcuts": {
@@ -238,6 +238,30 @@
     "switcher": {
       "ariaLabel": "تغيير اللغة",
       "title": "تغيير اللغة"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {
@@ -346,6 +370,241 @@
       "unknownAvailable": "سمة غير معروفة: {name}. السمات المتاحة:",
       "updated": "تم تحديث السمة إلى {label}.",
       "active": "السمة النشطة: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "سمة غير معروفة: {name}.",
+      "runListHint": "نفّذ <link></link> لرؤية السمات المتاحة.",
+      "previewing": "معاينة {label}",
+      "autoReverts": "— يرجع تلقائيًا خلال {seconds} ثانية",
+      "applyHintPrefix": "استخدم",
+      "applyHintSuffix": "للتطبيق بشكل دائم."
+    },
+    "validate": {
+      "header": "تدقيق التباين WCAG AA لـ {name}:",
+      "passCount": "{count} نجاح",
+      "failCount": "{count} فشل",
+      "totalChecked": "(تم فحص {count} زوجًا)",
+      "skippedWarning": "⚠️ تم تخطي بعض الألوان (تنسيق غير مدعوم)",
+      "allPass": "كل الأزواج تستوفي متطلبات WCAG AA.",
+      "someFail": "{count} زوج تحت نسبة التباين المطلوبة. فكّر في تعديل قيم سطوع الألوان.",
+      "pairs": {
+        "bodyText": "نص المحتوى",
+        "mutedOnBackground": "نص خافت على الخلفية",
+        "mutedOnMuted": "نص خافت على خلفية خافتة",
+        "accentOnAccent": "نص لون مميز على خلفية مميزة",
+        "destructive": "نص تدميري",
+        "primary": "اللون المميز الأساسي",
+        "secondary": "اللون المميز الثانوي",
+        "tertiary": "اللون المميز الثالث",
+        "quaternary": "اللون المميز الرابع",
+        "quinary": "اللون المميز الخامس"
+      }
+    },
+    "create": {
+      "introPrefix": "أنشئ سمة مخصصة باستخدام",
+      "introSuffix": ".",
+      "modeVisual": "المحرّر المرئي",
+      "modeJson": "محرّر JSON",
+      "tabVisual": "مرئي",
+      "tabJson": "JSON",
+      "themeIdLabel": "معرّف السمة",
+      "displayNameLabel": "اسم العرض",
+      "themeModeLabel": "وضع السمة",
+      "darkTheme": "سمة داكنة",
+      "lightTheme": "سمة فاتحة",
+      "colorsHeading": "الألوان",
+      "colorPickerAria": "منتقي لون {label}",
+      "colorValueAria": "قيمة لون {label}",
+      "submit": "إنشاء السمة",
+      "copyJson": "نسخ JSON",
+      "copyJsonAria": "نسخ JSON إلى الحافظة",
+      "resetColors": "إعادة ضبط الألوان",
+      "resetColorsAria": "إعادة الألوان إلى القيم الافتراضية",
+      "jsonHint": "يدعم OKLCH (موصى به)، hex، rgb، hsl. التحقق من التباين يعمل لكل التنسيقات.",
+      "jsonRequired": "المفاتيح المطلوبة: name، label، isDark، colors ({count} رمز)",
+      "previewToggle": "معاينة مباشرة",
+      "successMessagePrefix": "السمة المخصصة",
+      "successMessageSuffix": "تم إنشاؤها وتطبيقها.",
+      "successHint": "ستظل محفوظة في localStorage لمتصفحك.",
+      "tryAgain": "حاول مرة أخرى",
+      "errors": {
+        "nameAndLabelRequired": "اسم السمة وتسميتها مطلوبان.",
+        "missingNameField": "الحقل المطلوب \"name\" (سلسلة) مفقود.",
+        "missingLabelField": "الحقل المطلوب \"label\" (سلسلة) مفقود.",
+        "missingIsDarkField": "الحقل المطلوب \"isDark\" (منطقي) مفقود.",
+        "missingColorsField": "الحقل المطلوب \"colors\" (كائن) مفقود.",
+        "missingColor": "لون مفقود أو غير صالح: \"{key}\".",
+        "invalidJson": "إدخال JSON غير صالح.",
+        "invalidData": "بيانات سمة غير صالحة."
+      },
+      "colors": {
+        "background": "الخلفية",
+        "foreground": "الواجهة",
+        "muted": "خافت",
+        "muted-foreground": "واجهة خافتة",
+        "accent": "اللون المميز",
+        "accent-foreground": "واجهة اللون المميز",
+        "destructive": "تدميري",
+        "border": "الحد",
+        "input": "إدخال",
+        "ring": "حلقة",
+        "primary": "أساسي",
+        "secondary": "ثانوي",
+        "tertiary": "ثالث",
+        "quaternary": "رابع",
+        "quinary": "خامس"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "السيرة الذاتية",
+    "subject": "السيرة الذاتية",
+    "summary": "مهندس برمجيات بخبرة تقارب أربع سنوات. أعمل بشكل مستقل لصالح عملائي الخاصين، أبني تطبيقات ويب وموبايل تصل إلى مستخدمين حقيقيين على App Store وGoogle Play. React وNext.js وReact Native هي مجال راحتي، مع شغف بالعمارة النظيفة وحلقات التغذية الراجعة السريعة ومشاريع مفتوحة المصدر جانبية بين الحين والآخر. مقيم في فرنسا، وأعمل من أي مكان يتسع للابتوب.",
+    "sections": {
+      "summary": "الملخص المهني",
+      "experience": "الخبرة",
+      "skills": "المهارات التقنية",
+      "education": "التعليم",
+      "projects": "مشاريع مختارة",
+      "languages": "اللغات",
+      "links": "روابط"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "مهندس برمجيات",
+        "company": "Kabila",
+        "location": "مدريد، إسبانيا",
+        "period": "منذ يوليو 2022",
+        "descriptions": [
+          "أقود فريق واجهات أمامية يبني تطبيقات ويب إنتاجية باستخدام React وNext.js",
+          "أتولى خارطة الطريق التقنية وتخطيط السباقات وقرارات العمارة",
+          "أرشد المطورين المبتدئين وأقود مراجعات الكود",
+          "أبني وأصون مكتبة المكونات المشتركة ونظام التصميم الداخلي",
+          "أُطلق تطبيقات موبايل مرافقة باستخدام React Native وExpo"
+        ]
+      },
+      "freelance": {
+        "name": "عمل حر",
+        "company": "Alexandre GOSSARD",
+        "location": "شالون-أون-شامبانيا، فرنسا",
+        "period": "منذ يوليو 2022",
+        "descriptions": [
+          "أبني تطبيقات ويب متكاملة باستخدام React وNext.js لعملاء مباشرين",
+          "أُطلق تطبيقات موبايل عابرة للمنصات على App Store وGoogle Play",
+          "أُعدّ خطوط CI/CD وسير عمل النشر الآلي",
+          "أقدّم استشارات في العمارة واختيار التقنيات وتحديد نطاق المشروع",
+          "أتولى التواصل مع العملاء والالتزام بمواعيد التسليم في كل مشروع"
+        ]
+      },
+      "archeMC2": {
+        "name": "تدريب مهني",
+        "company": "Arche MC2",
+        "location": "شالون-أون-شامبانيا، فرنسا",
+        "period": "سبتمبر 2022 — أغسطس 2023",
+        "descriptions": [
+          "بنيتُ خطوط GitLab CI/CD للاختبار والنشر الآلي",
+          "حوّلتُ التطبيقات والخدمات الداخلية إلى حاويات باستخدام Docker",
+          "أتمتتُ المهام الروتينية لإدارة الأنظمة عبر سكربتات شل",
+          "راقبتُ صحة الأنظمة وحسّنت من مرونة البنية التحتية"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "إدارة الأنظمة والأمن (إجازة مهنية)",
+        "location": "IUT Châlons (شالون-أون-شامبانيا، فرنسا)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT الشبكات والاتصالات (شهادة تقنية)",
+        "location": "IUT Châlons (شالون-أون-شامبانيا، فرنسا)",
+        "period": "2020–2022",
+        "descriptions": ["المرتبة الثانية على الدفعة"]
+      },
+      "lyceeBac": {
+        "name": "بكالوريا علمية (ما يعادل A-level)",
+        "location": "Lycée Jean Talon (شالون-أون-شامبانيا، فرنسا)",
+        "period": "2019–2020",
+        "descriptions": [
+          "تخصص ISN (علوم الحاسوب والعلوم الرقمية)",
+          "بمرتبة الشرف"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "منصة اجتماعية Web3 ونظام بيئي للـ NFT مبني على Hedera، يضم سوق NFT وساحات مجتمعات ومنصات إطلاق وأدوات للمبدعين."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "مجموعة أدوات NFT متكاملة للمبدعين والمجتمعات على Hedera. منصة قوية وسهلة الاستخدام لإنشاء وإطلاق وإدارة مجموعات NFT مع التحكم الكامل."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "محفظة بسيطة وآمنة وغير حافظة (non-custodial) لشبكة Hedera. أدِر الحسابات والرموز والـ NFT وتواصل مع تطبيقات DApps مع الإبقاء على التحكم الكامل بأصولك."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "موقع احترافي لورشة إصلاح سيارات يتضمن الخدمات وأسعارًا شفافة ومعلومات الاتصال."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "أداة مراقبة لـ DASAN OLT/ONU [مفتوحة المصدر]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "منصة تجارة إلكترونية مخصصة لاستوديو نقش احترافي، مع كتالوج للمنتجات وطلبات عبر الإنترنت ولوحة تحكم لإدارة الطلبات."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "موقع البورتفوليو السابق الخاص بي مبني بـ Next.js وChakra UI، بسمة داكنة وحركات سلسة."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "حزمة بدء تتضمن Next.js وChakra-UI وFramer-Motion بـ TypeScript. تحوي مكونات قليلة وتعدد لغات وSEO وأكثر."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "منصة طرود تم إنشاؤها لمشروع السنة الأولى في DUT الشبكات والاتصالات."
+      }
+    },
+    "skillGroups": {
+      "languages": "اللغات",
+      "frameworks": "أُطر العمل",
+      "uiStyling": "واجهة / تصميم",
+      "tooling": "الأدوات",
+      "databases": "قواعد البيانات",
+      "cloud": "السحابة",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "الأتمتة",
+      "ai": "الذكاء الاصطناعي"
+    },
+    "spokenLanguages": {
+      "fr": "الفرنسية",
+      "en": "الإنجليزية",
+      "ru": "الروسية",
+      "es": "الإسبانية"
+    },
+    "languageLevels": {
+      "native": "اللغة الأم",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "الدراجات النارية",
+      "cars": "السيارات",
+      "weightlifting": "رفع الأثقال",
+      "calisthenics": "تمارين الكاليستينك",
+      "traveling": "السفر",
+      "manga": "المانغا",
+      "gaming": "الألعاب"
     }
   }
 }

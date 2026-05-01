@@ -1,11 +1,10 @@
 {
   "_meta": {
-    "needsReview": true,
-    "comment": "Best-effort translation by an LLM — please have a native speaker review before shipping."
+    "needsReview": true
   },
   "Metadata": {
     "title": "Alexandre Gossard | Digitální nomád a softwarový inženýr",
-    "description": "Digitální nomád a softwarový inženýr @kabila.app. Nadšenec open source, tvořím výkonné webové aplikace v React a Next.js.",
+    "description": "Digitální nomád a softwarový inženýr na volné noze. Nadšenec open source, tvořím výkonné webové aplikace v React a Next.js.",
     "jobTitle": "Softwarový inženýr",
     "location": "Châlons-en-Champagne, Francie",
     "ogImageAlt": "Alexandre Gossard",
@@ -27,7 +26,7 @@
   },
   "Welcome": {
     "greeting": "~ Vítej <wave>👋</wave>",
-    "intro": "<tagline>Digitální nomád</tagline> · <job>Softwarový inženýr</job> v <employer>{employerName}</employer>",
+    "intro": "<tagline>Digitální nomád</tagline> · <job>Softwarový inženýr</job> · <freelance>Freelance</freelance>",
     "tags": {
       "openSource": "Zastánce open source",
       "calisthenics": "Příznivec kalisteniky",
@@ -89,7 +88,8 @@
       "scrollbackOption": "{count, plural, =0 {žádné příkazy} one {# příkaz} few {# příkazy} other {# příkazů}}",
       "darkSuffix": "tmavý",
       "lightSuffix": "světlý",
-      "themeOption": "{label} ({mode})"
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Jazyk"
     },
     "shortcutsHeading": "Klávesové zkratky",
     "shortcuts": {
@@ -238,6 +238,30 @@
     "switcher": {
       "ariaLabel": "Změnit jazyk",
       "title": "Změnit jazyk"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
     }
   },
   "OpenGraph": {
@@ -346,6 +370,241 @@
       "unknownAvailable": "Neznámý motiv: {name}. Dostupné motivy:",
       "updated": "Motiv změněn na {label}.",
       "active": "Aktivní motiv: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Neznámé téma: {name}.",
+      "runListHint": "Spusťte <link></link> pro zobrazení dostupných témat.",
+      "previewing": "Náhled {label}",
+      "autoReverts": "— vrátí se za {seconds} s",
+      "applyHintPrefix": "Použijte",
+      "applyHintSuffix": "pro trvalé použití."
+    },
+    "validate": {
+      "header": "Audit kontrastu WCAG AA pro {name}:",
+      "passCount": "{count} prošlo",
+      "failCount": "{count} neprošlo",
+      "totalChecked": "(zkontrolováno {count} párů)",
+      "skippedWarning": "⚠️ Některé barvy přeskočeny (nepodporovaný formát)",
+      "allPass": "Všechny páry splňují požadavky WCAG AA.",
+      "someFail": "{count, plural, one {# pár} few {# páry} other {# párů}} pod požadovaným kontrastním poměrem. Zvažte úpravu světlosti barev.",
+      "pairs": {
+        "bodyText": "Hlavní text",
+        "mutedOnBackground": "Tlumený text na pozadí",
+        "mutedOnMuted": "Tlumený text na tlumeném pozadí",
+        "accentOnAccent": "Zvýrazněný text na zvýrazněném pozadí",
+        "destructive": "Destruktivní text",
+        "primary": "Primární zvýraznění",
+        "secondary": "Sekundární zvýraznění",
+        "tertiary": "Terciární zvýraznění",
+        "quaternary": "Kvartérní zvýraznění",
+        "quinary": "Kvinární zvýraznění"
+      }
+    },
+    "create": {
+      "introPrefix": "Vytvořte vlastní téma pomocí",
+      "introSuffix": ".",
+      "modeVisual": "vizuálního editoru",
+      "modeJson": "JSON editoru",
+      "tabVisual": "Vizuální",
+      "tabJson": "JSON",
+      "themeIdLabel": "ID tématu",
+      "displayNameLabel": "Zobrazované jméno",
+      "themeModeLabel": "Režim tématu",
+      "darkTheme": "Tmavé téma",
+      "lightTheme": "Světlé téma",
+      "colorsHeading": "Barvy",
+      "colorPickerAria": "Výběr barvy {label}",
+      "colorValueAria": "Hodnota barvy {label}",
+      "submit": "Vytvořit téma",
+      "copyJson": "Kopírovat JSON",
+      "copyJsonAria": "Kopírovat JSON do schránky",
+      "resetColors": "Obnovit barvy",
+      "resetColorsAria": "Obnovit barvy na výchozí",
+      "jsonHint": "Podporuje OKLCH (doporučeno), hex, rgb, hsl. Validace kontrastu funguje pro všechny formáty.",
+      "jsonRequired": "Povinné klíče: name, label, isDark, colors ({count} tokenů)",
+      "previewToggle": "Živý náhled",
+      "successMessagePrefix": "Vlastní téma",
+      "successMessageSuffix": "vytvořeno a použito.",
+      "successHint": "Bude uchováno v localStorage prohlížeče.",
+      "tryAgain": "Zkusit znovu",
+      "errors": {
+        "nameAndLabelRequired": "Název a popisek tématu jsou povinné.",
+        "missingNameField": "Chybí povinné pole \"name\" (string).",
+        "missingLabelField": "Chybí povinné pole \"label\" (string).",
+        "missingIsDarkField": "Chybí povinné pole \"isDark\" (boolean).",
+        "missingColorsField": "Chybí povinné pole \"colors\" (object).",
+        "missingColor": "Chybí nebo neplatná barva: \"{key}\".",
+        "invalidJson": "Neplatný vstup JSON.",
+        "invalidData": "Neplatná data tématu."
+      },
+      "colors": {
+        "background": "Pozadí",
+        "foreground": "Popředí",
+        "muted": "Tlumená",
+        "muted-foreground": "Tlumené popředí",
+        "accent": "Zvýraznění",
+        "accent-foreground": "Popředí zvýraznění",
+        "destructive": "Destruktivní",
+        "border": "Okraj",
+        "input": "Vstup",
+        "ring": "Prstenec",
+        "primary": "Primární",
+        "secondary": "Sekundární",
+        "tertiary": "Terciární",
+        "quaternary": "Kvartérní",
+        "quinary": "Kvinární"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "Životopis",
+    "subject": "Životopis",
+    "summary": "Softwarový inženýr s téměř čtyřletou praxí. Pracuji jako freelancer pro vlastní klienty a vyvíjím webové i mobilní aplikace, které se dostávají k reálným uživatelům na App Store i Google Play. React, Next.js a React Native jsou můj domácí teritoriál — mám slabost pro čistou architekturu, rychlé zpětnovazební smyčky a občasné open-source vedlejší projekty. Žiji ve Francii a pracuji odkudkoliv, kam se vejde notebook.",
+    "sections": {
+      "summary": "Profesní profil",
+      "experience": "Praxe",
+      "skills": "Technické dovednosti",
+      "education": "Vzdělání",
+      "projects": "Vybrané projekty",
+      "languages": "Jazyky",
+      "links": "Odkazy"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Softwarový inženýr",
+        "company": "Kabila",
+        "location": "Madrid, Španělsko",
+        "period": "Od července 2022",
+        "descriptions": [
+          "Vedu frontendový tým, který staví produkční webové aplikace v Reactu a Next.js",
+          "Zodpovídám za technický plán, plánování sprintů a architektonická rozhodnutí",
+          "Mentoruji juniorní vývojáře a vedu code review",
+          "Stavím a udržuji sdílenou knihovnu komponent a interní design systém",
+          "Dodávám doprovodné mobilní aplikace v React Native a Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Freelancer",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, Francie",
+        "period": "Od července 2022",
+        "descriptions": [
+          "Stavím full-stack webové aplikace v Reactu a Next.js pro přímé klienty",
+          "Dodávám multiplatformní mobilní aplikace na App Store a Google Play",
+          "Nastavuji CI/CD pipeline a automatizované deployment workflow",
+          "Radím s architekturou, výběrem technologií a rozsahem projektu",
+          "Řeším komunikaci s klienty a termíny dodání u každého projektu"
+        ]
+      },
+      "archeMC2": {
+        "name": "Učební praxe",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, Francie",
+        "period": "Září 2022 — srpen 2023",
+        "descriptions": [
+          "Stavěl jsem GitLab CI/CD pipeline pro automatizované testování a nasazení",
+          "Kontejnerizoval interní aplikace a služby pomocí Dockeru",
+          "Automatizoval rutinní sysadmin úkoly pomocí shell skriptů",
+          "Sledoval stav systémů a zlepšoval odolnost infrastruktury"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Správa systémů a bezpečnost (profesní bakalář)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Francie)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Sítě a telekomunikace (vyšší odborné vzdělání)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Francie)",
+        "period": "2020–2022",
+        "descriptions": ["Druhé místo v ročníku"]
+      },
+      "lyceeBac": {
+        "name": "Vědecký bakalářát (středoškolská maturita)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Francie)",
+        "period": "2019–2020",
+        "descriptions": [
+          "Specializace ISN (Informatika a digitální vědy)",
+          "S vyznamenáním"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Web3 sociální platforma a NFT ekosystém na Hederě, s NFT marketplace, komunitními plazami, launchpady a nástroji pro tvůrce."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "All-in-one NFT toolkit pro tvůrce a komunity na Hederě. Výkonná a snadno použitelná platforma pro vytváření, spouštění a správu NFT kolekcí s plnou kontrolou."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Non-custodial, jednoduchá a bezpečná peněženka pro síť Hedera. Spravujte účty, tokeny, NFT a propojujte se s DApp aplikacemi při zachování plné kontroly nad svými aktivy."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Profesionální web pro autoservis se službami, transparentními cenami a kontaktními údaji."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Nástroj pro dohled DASAN OLT/ONU [open-source]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Custom e-commerce platforma pro profesionální gravírovací studio s katalogem produktů, online objednávkami a admin dashboardem pro správu zakázek."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Mé předchozí portfolio postavené na Next.js a Chakra UI s tmavým motivem a plynulými animacemi."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Starter kit s Next.js, Chakra-UI, Framer-Motion v TypeScriptu. Obsahuje pár komponent, internacionalizaci, SEO a další."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "Platforma pro doručování zásilek vytvořená pro projekt prvního ročníku DUT Sítě a telekomunikace."
+      }
+    },
+    "skillGroups": {
+      "languages": "Jazyky",
+      "frameworks": "Frameworky",
+      "uiStyling": "UI / Stylování",
+      "tooling": "Nástroje",
+      "databases": "Databáze",
+      "cloud": "Cloud",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Automatizace",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "Francouzština",
+      "en": "Angličtina",
+      "ru": "Ruština",
+      "es": "Španělština"
+    },
+    "languageLevels": {
+      "native": "Mateřský",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Motocykly",
+      "cars": "Auta",
+      "weightlifting": "Posilování",
+      "calisthenics": "Calisthenics",
+      "traveling": "Cestování",
+      "manga": "Manga",
+      "gaming": "Hraní her"
     }
   }
 }
