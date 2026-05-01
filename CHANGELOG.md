@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.6.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.6.0...v1.6.1) (2026-05-01)
+
+
+### Bug Fixes
+
+* **release-please:** make tagging round-trip with component-no-space ([6c1d849](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/6c1d849bfd56ed594856020d229095a99245d0fc))
+
+
+### Miscellaneous
+
+* sync develop → main (release-please fix + manifest bump to 1.6.0) ([d7f4aa7](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/d7f4aa72b7e21fcb3b9bb49163129d602076bb2d))
+
 ## [1.6.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.5.0...v1.6.0) (2026-05-01)
 
 
