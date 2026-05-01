@@ -1,5 +1,63 @@
 # Changelog
 
+## [1.5.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.4.0...v1.5.0) (2026-04-30)
+
+
+### Features
+
+* advanced theming - architecture foundation - documentation ([9c3b9ef](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/9c3b9efdfd2dd730b0ea39989761d0e17d315abe))
+* **cv:** link experiences to companies and refresh resume copy ([44594ef](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/44594efb2579257ee9b7accaecfb86a495ad819e))
+* **cv:** link experiences to companies and refresh resume copy ([c93a065](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c93a06548618f1bae492b65f6d6fe1373ee6cb1d))
+* **guestbook:** use Select component in FilterPopover country filter ([6a348ce](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/6a348cef0a31e13460a13bb0eb4a11ee35c329a8))
+* **terminal:** add stores, types, constants, and layout utils ([a719d45](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a719d45fa52c168d98fdca9ef00f9d6a800b7c10))
+* **terminal:** add terminal hooks and extend global shortcuts ([5a1d213](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/5a1d21335b29a6e93bd8af0e2325426fb6fb4c52))
+* **terminal:** add terminal module and remove legacy components ([cf72224](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/cf72224f3fdb4fa3810f5faf27902d087eeec8dd))
+* **terminal:** add TrafficLights actions, DeferredFontLoader, typography CSS ([4c5fed5](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/4c5fed53f91156b312995d93a3b16579275d210d))
+* **terminal:** integration and minor updates ([aeef05c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/aeef05c9e12fb7db88bec1faf72f4f39fc4a584e))
+* **terminal:** refactor providers for sessions/tabs, integrate new Terminal ([3808a03](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/3808a03e041660d611c352c5da3a8e8b4e0f67dd))
+* **theme:** add CycleTheme, migrate chart-* to semantic tokens, add useSortedClasses ([2d9b254](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/2d9b254ad0c61f476d9f91ca5969ce36cd56d179))
+* **theme:** add theme engine, commands, and provider restructure ([a0cbf01](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a0cbf01d99a3281ae389fad5b129b605790805a1))
+* **theme:** add Zustand theme store and refactor ThemeProvider ([fc83b46](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/fc83b4646f3f97bd74e52d2b0d2306b22c21c45c))
+* **ui:** add Select and Dialog components ([e72bc31](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e72bc31972ab78643051ce0789321bac33775189))
+
+
+### Documentation
+
+* update README and ROADMAP for terminal UX ([050e5c7](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/050e5c77aa3654e190c9a4c7b242b7dae60db21b))
+* update README with theme system, ROADMAP, release-please ([e813ab4](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e813ab4086fa3f63a4196d1e3879a833531a1e25))
+
+
+### Styles
+
+* **guestbook:** text-xs consistency in guestbook read components ([248e1e3](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/248e1e31db64c58d68e12111c9332ed38b649370))
+* import order and formatting in stores and storage ([9624ed2](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/9624ed23ea9c30bb36c0a682712e4fc3c030f2ce))
+* **terminal:** fix TrafficLights className and format DeferredFontLoader ([24c7966](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/24c79664dff69414aeb33b87b77a82bc5cf96dff))
+* **terminal:** import order and formatting ([c572ef4](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c572ef423e0c049d986b7eb13e332fcf73789ae7))
+* **ui:** apply useSortedClasses to remaining components ([5e3bbda](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/5e3bbda629e3e40b167fc9ffd9489ec6aa5c4ec6))
+* **ui:** import order and format Dialog component ([4ab9ba8](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/4ab9ba8f859bd46ef38ddf07896e4cf5cccb4d46))
+
+
+### Miscellaneous
+
+* **config:** update release-please, robots, next.config ([f21263c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/f21263ce204a2dbca85a9c8388cc28f62f7f23ec))
+* **constants:** add analytics, api, guestbook-client, suggestions constants ([d7bff89](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/d7bff896e98a4be1916b07658110f08907d77405))
+* **deps:** add zustand for state management ([e644af9](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e644af955efbdb21580042237e6aec795f4e84b4))
+* sync develop with main (release-please config) ([16094f0](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/16094f0622e124c06d973dcf0861a71eef9e1fb5))
+* **utils:** extract request, string, url, number, suggestions utils ([8e04312](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/8e04312230d1c1835d6a1936950cce41730a4f14))
+
+
+### Code Refactoring
+
+* **commands:** add async command registry modules ([85c55d3](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/85c55d3b37dd5969a93af89ec68dc5091da5e4ac))
+* **commands:** move command-descriptors to lib ([b8cac47](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/b8cac47df3b125758ff971ad172482f9430add23))
+* **commands:** remove old registry files ([c2f3691](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c2f3691f8f53bf5c5c02126baf1802a1c97a895a))
+* **commands:** update CommandItem and consumers for async registry ([e302cd1](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e302cd1366652ca512bc1f95c54f4865b6c121e1))
+* move scroll logic to CommandItem ([4bfccdb](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/4bfccdb47bfc0a6c99e75ff8da9c7963bd69e35a))
+* move scroll logic to CommandItem ([473580a](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/473580a024297edbac33351fa9f5cc45a4af913d))
+* move scroll logic to CommandItem ([693f16e](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/693f16e81c4c7b874e8345b89707b2a771cdddd0))
+* **services:** add barrel export and class-based API ([9abe09b](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/9abe09b8ca3533bad9594e982ef16b792b366a04))
+* **types:** consolidate lib/types to types/ directory ([7d7bce3](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/7d7bce3ad1d00c8d908515633e27ce26a09a4c54))
+
 ## [1.4.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.3.1...v1.4.0) (2026-02-18)
 
 
