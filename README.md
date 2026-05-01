@@ -11,6 +11,10 @@
 
 <br />
 
+<img src="public/preview.png" alt="hakkaofdev.fr preview" width="640" style="border-radius:8px;" />
+
+<br />
+
 [![Next.js](https://img.shields.io/badge/Next.js%2016-141414?style=flat-square&logo=next.js&logoColor=fff)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React%2019-61DAFB?style=flat-square&logo=react&logoColor=61DAFB&labelColor=141414)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=3178C6&labelColor=141414)](https://typescriptlang.org)
@@ -19,10 +23,6 @@
 [![Vercel](https://img.shields.io/badge/Vercel-141414?style=flat-square&logo=vercel&logoColor=fff)](https://vercel.com)
 [![Biome](https://img.shields.io/badge/Biome-60A5FA?style=flat-square&logo=biome&logoColor=60A5FA&labelColor=141414)](https://biomejs.dev)
 [![Spotify](https://img.shields.io/badge/Spotify%20API-1DB954?style=flat-square&logo=spotify&logoColor=1DB954&labelColor=141414)](https://developer.spotify.com)
-
-<br />
-
-<img src="public/preview.png" alt="hakkaofdev.fr preview" width="640" style="border-radius:8px;" />
 
 </div>
 
