@@ -72,7 +72,7 @@ function TerminalInput() {
   }, [activeSessionId, resetHistory, closePopover]);
 
   return (
-    <div className="relative">
+    <div className="relative" dir="ltr">
       {isOpen ? (
         <SuggestionList
           suggestions={suggestions}

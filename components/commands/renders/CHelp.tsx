@@ -62,7 +62,7 @@ function CHelp() {
               key={`${shortcut.slug}-${shortcut.keys.join("-")}`}
               className="grid grid-cols-[140px_1fr] items-center gap-3"
             >
-              <span className="inline-flex items-center gap-1">
+              <span className="inline-flex items-center gap-1" dir="ltr">
                 {shortcut.keys.map((key, i) => (
                   <span
                     key={`${shortcut.slug}-${key}`}

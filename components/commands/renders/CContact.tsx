@@ -20,6 +20,7 @@ function CContact() {
         {t("primaryEmail")}{" "}
         <Link
           href={`mailto:${SITE.email}`}
+          dir="ltr"
           className="font-semibold text-primary transition-colors duration-200 hover:text-primary/80"
         >
           {SITE.email}
@@ -33,7 +34,7 @@ function CContact() {
       </p>
 
       <p className="text-muted-foreground">{t("socialProfiles")}</p>
-      <ul className="grid list-disc gap-1 pl-4">
+      <ul className="grid list-disc gap-1 ps-4">
         {SOCIALS.map((social) => (
           <li key={social.name}>
             <Link
@@ -43,7 +44,7 @@ function CContact() {
             >
               {social.name}
             </Link>
-            <span className="text-muted-foreground">
+            <span className="text-muted-foreground" dir="ltr">
               {" "}
               · {getDisplayLink(social.url)}
             </span>

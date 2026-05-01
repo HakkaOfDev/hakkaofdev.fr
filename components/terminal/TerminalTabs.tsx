@@ -49,7 +49,10 @@ function TerminalTabs({
   }, [editingTabId]);
 
   return (
-    <div className="terminal-tabs-scrollbar flex items-center gap-1 overflow-x-auto border-border/40 border-b bg-muted/20 px-2 py-1 dark:border-overlay-subtle dark:bg-overlay-subtle/70">
+    <div
+      dir="ltr"
+      className="terminal-tabs-scrollbar flex items-center gap-1 overflow-x-auto border-border/40 border-b bg-muted/20 px-2 py-1 dark:border-overlay-subtle dark:bg-overlay-subtle/70"
+    >
       {sessionTabs.map((tab) => {
         const isActive = tab.id === activeSessionId;
         const isEditing = editingTabId === tab.id;

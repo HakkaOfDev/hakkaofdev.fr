@@ -21,11 +21,11 @@ function CExperiences() {
         return (
           <div
             key={experience.slug}
-            className={cn("relative border-l-2 pb-4 pl-4", isLast && "pb-1")}
+            className={cn("relative border-s-2 ps-4 pb-4", isLast && "pb-1")}
           >
-            <div className="absolute top-1 -left-[5px] z-[1] size-2 rounded-full bg-primary" />
+            <div className="absolute -start-[5px] top-1 z-[1] size-2 rounded-full bg-primary" />
             {period.toLowerCase().includes("since") && (
-              <div className="absolute top-1 -left-[5px] size-2 animate-ping rounded-full bg-primary opacity-75" />
+              <div className="absolute -start-[5px] top-1 size-2 animate-ping rounded-full bg-primary opacity-75" />
             )}
             <p className="text-muted-foreground">{period}</p>
             <p className="font-semibold text-sm">{name}</p>
@@ -45,7 +45,7 @@ function CExperiences() {
               · {location}
             </p>
             {descriptions.length > 0 && (
-              <ul className="mt-2 list-disc pl-4">
+              <ul className="mt-2 list-disc ps-4">
                 {descriptions.map((description) => (
                   <li key={description}>{description}</li>
                 ))}

@@ -30,7 +30,10 @@ function TerminalHeader({
 }: TerminalHeaderProps) {
   const t = useTranslations("Terminal");
   return (
-    <div className="grid h-11 shrink-0 select-none grid-cols-3 items-center gap-2 border-border/50 border-b bg-muted/40 px-2.5 sm:px-4 dark:border-overlay-subtle dark:bg-overlay-subtle">
+    <div
+      dir="ltr"
+      className="grid h-11 shrink-0 select-none grid-cols-3 items-center gap-2 border-border/50 border-b bg-muted/40 px-2.5 sm:px-4 dark:border-overlay-subtle dark:bg-overlay-subtle"
+    >
       <div className="flex min-w-0 items-center">
         <TrafficLights />
       </div>
