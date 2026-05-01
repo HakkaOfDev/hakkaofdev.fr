@@ -3,12 +3,14 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
+import { useId } from "react";
 import Footer from "@/components/Footer";
 import Providers from "@/components/providers/Providers";
 import { getScriptFontVariable } from "@/i18n/fonts";
@@ -29,6 +31,15 @@ const siteUrl = getSiteUrl();
 const twitterHandle = `@${SITE.handle}` as const;
 
 type Params = { locale: string };
+
+function PersonJsonLd({ data }: { data: object }) {
+  const id = useId();
+  return (
+    <Script id={id} type="application/ld+json" strategy="beforeInteractive">
+      {JSON.stringify(data).replace(/</g, "\\u003c")}
+    </Script>
+  );
+}
 
 function buildOpenGraphImagePath(locale: string) {
   return locale === routing.defaultLocale
@@ -170,10 +181,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
           "flex h-[100dvh] flex-col overflow-hidden antialiased",
         )}
       >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-        />
+        <PersonJsonLd data={personJsonLd} />
         <NextIntlClientProvider messages={messages}>
           <Providers>
             {children}

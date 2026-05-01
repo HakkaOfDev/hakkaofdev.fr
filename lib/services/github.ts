@@ -14,7 +14,7 @@ const REPOS_PER_PAGE = 100;
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
-/** Builds common GitHub REST API headers with optional Bearer auth. */
+/** Builds common GitHub REST API headers, attaching the token from env when present. */
 function githubHeaders(): HeadersInit {
   const token = process.env.GITHUB_TOKEN;
   return {
