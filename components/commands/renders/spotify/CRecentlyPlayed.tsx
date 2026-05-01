@@ -1,11 +1,18 @@
+"use client";
+
 import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import { getRecentlyPlayed } from "@/app/actions";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { dateLocaleMap } from "@/i18n/date-locales";
+import type { Locale } from "@/i18n/routing";
 import SpotifyQuery from "./SpotifyQuery";
 
 function CRecentlyPlayed() {
+  const t = useTranslations("Spotify");
+  const locale = useLocale() as Locale;
   return (
     <SpotifyQuery queryKey={["recently-played"]} queryFn={getRecentlyPlayed}>
       {(data) => (
@@ -15,7 +22,9 @@ function CRecentlyPlayed() {
               key={item.played_at}
               href={item.track.external_urls.spotify}
               target="_blank"
-              aria-label={`Open recently played track: ${item.track.name}`}
+              aria-label={t("openRecentlyPlayedAria", {
+                name: item.track.name,
+              })}
               className="group flex items-center gap-2 py-1"
             >
               <Image
@@ -37,6 +46,7 @@ function CRecentlyPlayed() {
                 <p className="text-muted-foreground text-xs">
                   {formatDistanceToNow(new Date(item.played_at), {
                     addSuffix: true,
+                    locale: dateLocaleMap[locale],
                   })}
                 </p>
               </div>

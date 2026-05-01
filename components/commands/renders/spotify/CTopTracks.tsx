@@ -1,10 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { getTopTracks } from "@/app/actions";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import SpotifyQuery from "./SpotifyQuery";
 
 function CTopTracks() {
+  const t = useTranslations("Spotify");
   return (
     <SpotifyQuery queryKey={["top-tracks"]} queryFn={getTopTracks}>
       {(data) => (
@@ -12,9 +16,9 @@ function CTopTracks() {
           <table className="max-w-full overflow-x-auto">
             <thead>
               <tr className="text-muted-foreground text-xs uppercase">
-                <th className="pb-2">Rank</th>
-                <th className="px-4 pb-2 text-left">Track</th>
-                <th className="pb-2 text-left">Album</th>
+                <th className="pb-2">{t("topTracks.rank")}</th>
+                <th className="px-4 pb-2 text-left">{t("topTracks.track")}</th>
+                <th className="pb-2 text-left">{t("topTracks.album")}</th>
               </tr>
             </thead>
             <tbody>
@@ -25,7 +29,7 @@ function CTopTracks() {
                     <Link
                       href={item.external_urls.spotify}
                       target="_blank"
-                      aria-label={`Open top track: ${item.name}`}
+                      aria-label={t("openTopTrackAria", { name: item.name })}
                       className="group flex items-center gap-2 py-1"
                     >
                       <Image
@@ -50,7 +54,9 @@ function CTopTracks() {
                       <Link
                         href={item.album.external_urls.spotify}
                         target="_blank"
-                        aria-label={`Open top album: ${item.album.name}`}
+                        aria-label={t("openTopAlbumAria", {
+                          name: item.album.name,
+                        })}
                         className="line-clamp-2 font-semibold text-sm leading-4 transition-colors duration-200 hover:text-primary"
                       >
                         {item.album.name}

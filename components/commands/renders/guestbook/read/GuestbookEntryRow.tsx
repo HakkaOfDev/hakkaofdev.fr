@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { useFormatter } from "next-intl";
 import { GuestbookClientService } from "@/lib/services";
-import { cn, formatEntryDate } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import type { GuestbookEntry } from "@/types/guestbook";
 
 export function GuestbookEntryRow({
@@ -12,6 +15,18 @@ export function GuestbookEntryRow({
   index: number;
   isLast: boolean;
 }) {
+  const format = useFormatter();
+  const date = new Date(entry.created_at);
+  const formattedDate = Number.isNaN(date.getTime())
+    ? entry.created_at
+    : format.dateTime(date, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
   const nameElement = entry.website ? (
     <Link
       href={entry.website}
@@ -29,11 +44,11 @@ export function GuestbookEntryRow({
   return (
     <div
       className={cn(
-        "relative ml-1 min-w-0 border-quinary/30 border-l-2 pl-4",
+        "relative ms-1 min-w-0 border-quinary/30 border-s-2 ps-4",
         isLast ? "pb-0" : "pb-3",
       )}
     >
-      <div className="absolute top-[5px] -left-[5px] size-2 rounded-full bg-quinary" />
+      <div className="absolute -start-[5px] top-[5px] size-2 rounded-full bg-quinary" />
 
       <div className="flex items-baseline gap-2">
         <span className="shrink-0 font-mono text-muted-foreground/50 text-xs">
@@ -45,8 +60,8 @@ export function GuestbookEntryRow({
             {GuestbookClientService.countryToFlag(entry.country)}
           </span>
         )}
-        <span className="ml-auto whitespace-nowrap font-mono text-muted-foreground/40 text-xs">
-          {formatEntryDate(entry.created_at)}
+        <span className="ms-auto whitespace-nowrap font-mono text-muted-foreground/40 text-xs">
+          {formattedDate}
         </span>
       </div>
 

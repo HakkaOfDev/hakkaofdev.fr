@@ -1,20 +1,18 @@
 import { Link, Text, View } from "@react-pdf/renderer";
-import type { CV_DATA } from "@/lib/cv/cv-pdf.data";
+import type { CvData } from "@/lib/cv/cv-pdf.data";
 import { styles } from "@/lib/cv/cv-pdf.styles";
 import { BulletItem, Section, Sep } from "./CVPrimitives";
 
-type CVData = typeof CV_DATA;
-
 /* ── Header ───────────────────────────────────── */
 
-export function Header({ data }: { data: CVData }) {
+export function Header({ data }: { data: CvData }) {
   const github = data.socials.find((s) => s.name === "GitHub");
   const linkedin = data.socials.find((s) => s.name === "LinkedIn");
 
   return (
     <View style={styles.header}>
       <Text style={styles.name}>{data.name}</Text>
-      <Text style={styles.jobTitle}>{data.title}</Text>
+      <Text style={styles.jobTitle}>{data.jobTitle}</Text>
 
       <View style={styles.contactRow}>
         <Text style={styles.contactItem}>{data.email}</Text>
@@ -50,9 +48,15 @@ export function Header({ data }: { data: CVData }) {
 
 /* ── Summary ──────────────────────────────────── */
 
-export function SummarySection({ summary }: { summary: string }) {
+export function SummarySection({
+  title,
+  summary,
+}: {
+  title: string;
+  summary: string;
+}) {
   return (
-    <Section title="Professional Summary">
+    <Section title={title}>
       <Text style={styles.summary}>{summary}</Text>
     </Section>
   );
@@ -61,14 +65,16 @@ export function SummarySection({ summary }: { summary: string }) {
 /* ── Experience ───────────────────────────────── */
 
 export function ExperienceSection({
+  title,
   experiences,
 }: {
-  experiences: CVData["experiences"];
+  title: string;
+  experiences: CvData["experiences"];
 }) {
   return (
-    <Section title="Experience">
+    <Section title={title}>
       {experiences.map((exp) => (
-        <View key={`${exp.title}-${exp.company}`} style={styles.item}>
+        <View key={exp.slug} style={styles.item}>
           <View style={styles.itemRow}>
             <Text style={styles.itemTitle}>{exp.title}</Text>
             <Text style={styles.itemPeriod}>{exp.period}</Text>
@@ -95,12 +101,18 @@ export function ExperienceSection({
 
 /* ── Technical Skills ─────────────────────────── */
 
-export function SkillsSection({ skills }: { skills: CVData["skills"] }) {
+export function SkillsSection({
+  title,
+  skills,
+}: {
+  title: string;
+  skills: CvData["skills"];
+}) {
   return (
-    <Section title="Technical Skills">
+    <Section title={title}>
       <View style={styles.skillsGrid}>
         {skills.map((group) => (
-          <View key={group.label} style={styles.skillRow}>
+          <View key={group.slug} style={styles.skillRow}>
             <Text style={styles.skillLabel}>{group.label}:</Text>
             <Text style={styles.skillValues}>{group.values.join(", ")}</Text>
           </View>
@@ -113,14 +125,16 @@ export function SkillsSection({ skills }: { skills: CVData["skills"] }) {
 /* ── Education ────────────────────────────────── */
 
 export function EducationSection({
+  title,
   education,
 }: {
-  education: CVData["education"];
+  title: string;
+  education: CvData["education"];
 }) {
   return (
-    <Section title="Education">
+    <Section title={title}>
       {education.map((edu) => (
-        <View key={`${edu.name}-${edu.period}`} style={styles.item}>
+        <View key={edu.slug} style={styles.item}>
           <View style={styles.itemRow}>
             <Text style={styles.itemTitle}>{edu.name}</Text>
             <Text style={styles.itemPeriod}>{edu.period}</Text>
@@ -138,14 +152,16 @@ export function EducationSection({
 /* ── Selected Projects ────────────────────────── */
 
 export function ProjectsSection({
+  title,
   projects,
 }: {
-  projects: CVData["projects"];
+  title: string;
+  projects: CvData["projects"];
 }) {
   return (
-    <Section title="Selected Projects">
+    <Section title={title}>
       {projects.map((project) => (
-        <View key={project.name} style={styles.projectItem}>
+        <View key={project.slug} style={styles.projectItem}>
           <View style={styles.projectHeader}>
             <Text style={styles.projectName}>{project.name}</Text>
             {project.url && (
@@ -165,25 +181,32 @@ export function ProjectsSection({
 /* ── Bottom: Languages + Links ────────────────── */
 
 export function BottomSection({
+  languagesTitle,
+  linksTitle,
   languages,
   socials,
 }: {
-  languages: CVData["languages"];
-  socials: CVData["socials"];
+  languagesTitle: string;
+  linksTitle: string;
+  languages: CvData["languages"];
+  socials: CvData["socials"];
 }) {
   return (
     <View style={styles.bottomRow}>
       <View style={styles.bottomCol}>
-        <Section title="Languages">
+        <Section title={languagesTitle}>
           {languages.map((lang) => (
-            <Text key={lang.lang} style={styles.langLine}>
-              <Text style={styles.langBold}>{lang.lang}</Text> - {lang.level}
+            <Text key={lang.code} style={styles.langLine}>
+              <Text style={styles.langBold}>
+                {lang.flag} {lang.name}
+              </Text>{" "}
+              - {lang.level}
             </Text>
           ))}
         </Section>
       </View>
       <View style={[styles.bottomCol, styles.bottomColRight]}>
-        <Section title="Links">
+        <Section title={linksTitle}>
           {socials.map((social) => (
             <View key={social.name} style={styles.socialLine}>
               <Text style={styles.socialLabel}>{social.name}:</Text>

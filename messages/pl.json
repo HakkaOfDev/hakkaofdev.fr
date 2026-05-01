@@ -1,0 +1,607 @@
+{
+  "Metadata": {
+    "title": "Alexandre Gossard | Cyfrowy nomada i inżynier oprogramowania",
+    "description": "Cyfrowy nomada i freelancerski inżynier oprogramowania. Pasjonat open source, tworzę wydajne aplikacje webowe w React i Next.js.",
+    "jobTitle": "Inżynier oprogramowania",
+    "location": "Châlons-en-Champagne, Francja",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Programista frontend",
+      "Cyfrowy nomada",
+      "Open source",
+      "Nowoczesne technologie",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Inżynier oprogramowania",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Zrobione z <heart></heart> przez <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Witaj <wave>👋</wave>",
+    "intro": "<tagline>Cyfrowy nomada</tagline> · <job>Inżynier oprogramowania</job> · <freelance>Freelance</freelance>",
+    "tags": {
+      "openSource": "Zwolennik open source",
+      "calisthenics": "Pasjonat kalisteniki",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Start",
+      "work": "Praca",
+      "profile": "Profil",
+      "extras": "Dodatki",
+      "utils": "Narzędzia"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Żadna komenda nie pasuje do „{query}\".",
+    "header": {
+      "resetTitle": "Resetuj terminal (Ctrl+R)",
+      "resetLabel": "Resetuj terminal",
+      "settingsTitle": "Ustawienia terminala",
+      "settingsLabel": "Ustawienia terminala"
+    },
+    "trafficLights": {
+      "close": "Zamknij terminal",
+      "minimize": "Minimalizuj terminal",
+      "restoreMinimize": "Przywróć terminal",
+      "expand": "Rozwiń terminal",
+      "restoreExpand": "Przywróć rozmiar terminala"
+    },
+    "tabs": {
+      "rename": "Zmień nazwę {name}",
+      "close": "Zamknij {name}",
+      "create": "Utwórz kartę",
+      "limitReached": "Osiągnięto limit sesji"
+    },
+    "search": {
+      "placeholder": "Filtruj historię komend…",
+      "hide": "Ukryj wyszukiwanie"
+    },
+    "input": {
+      "placeholder": "wpisz komendę…",
+      "submit": "Wykonaj komendę"
+    },
+    "fontSize": {
+      "label": "Rozmiar czcionki",
+      "decrease": "Zmniejsz czcionkę",
+      "decreaseTitle": "Zmniejsz czcionkę (Ctrl+-)",
+      "increase": "Zwiększ czcionkę",
+      "increaseTitle": "Zwiększ czcionkę (Ctrl++)"
+    },
+    "settings": {
+      "title": "Ustawienia terminala",
+      "resetAllTitle": "Zresetuj wszystkie ustawienia (w tym rozmiar)",
+      "resetAllLabel": "Zresetuj wszystko",
+      "closeTitle": "Zamknij ustawienia",
+      "closeLabel": "Zamknij ustawienia",
+      "themeLabel": "Motyw",
+      "fontLabel": "Czcionka terminala",
+      "scrollbackLabel": "Historia",
+      "scrollbackOption": "{count, plural, =0 {brak komend} one {# komenda} few {# komendy} other {# komend}}",
+      "darkSuffix": "ciemny",
+      "lightSuffix": "jasny",
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Język"
+    },
+    "shortcutsHeading": "Skróty klawiaturowe",
+    "shortcuts": {
+      "runCommand": "Wykonaj komendę",
+      "autocomplete": "Autouzupełnianie",
+      "history": "Historia i sugestie",
+      "clearOutput": "Wyczyść wyjście",
+      "resetTerminal": "Resetuj terminal",
+      "toggleSearch": "Przełącz wyszukiwanie",
+      "increaseFontSize": "Zwiększ czcionkę",
+      "decreaseFontSize": "Zmniejsz czcionkę"
+    },
+    "closeMessages": [
+      "Niezła próba! Nie możesz mnie zamknąć.",
+      "Nigdzie się nie wybieram. Spróbuj „help\"!",
+      "Nie. Ten terminal ma problemy z zaufaniem do przycisków zamknięcia.",
+      "Błąd 418: jestem czajnikiem, nie zamykanym oknem.",
+      "sudo rm -rf / ? Eee… nie.",
+      "Naprawdę myślałeś, że to zadziała?",
+      "Zamknąć mnie? W tych czasach?",
+      "Jestem inny. Spróbuj „contact\"."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Praca",
+      "Profile": "Profil",
+      "Guestbook": "Księga gości",
+      "Spotify": "Spotify",
+      "Theme": "Motyw",
+      "Terminal": "Terminal"
+    },
+    "descriptions": {
+      "projects": "Co zbudowałem, wydałem lub do czego się przyczyniłem",
+      "experiences": "Mój dorobek zawodowy i osiągnięcia",
+      "about": "Więcej o mnie, zainteresowaniach i celach",
+      "skills": "Umiejętności techniczne i stos",
+      "education": "Moje wykształcenie",
+      "contact": "Email, social media i sposoby kontaktu",
+      "guestbook": "Pomoc do podkomend księgi gości",
+      "cv": "Podgląd i pobranie mojego CV w PDF",
+      "spotify": "Pomoc do podkomend Spotify",
+      "theme": "Pokaż lub zmień motyw interfejsu",
+      "help": "Pokaż wszystkie dostępne komendy i opisy",
+      "clear": "Wyczyść wszystkie poprzednie komendy i wyjście",
+      "reset": "Zresetuj terminal do ekranu powitalnego",
+      "stats": "Aktywność programowania, GitHub i liczba odwiedzających",
+      "repo": "Otwórz kod źródłowy tego portfolio",
+      "echo": "Wypisz wiadomość w terminalu",
+      "spotifyNow": "Pokaż obecnie odtwarzaną piosenkę",
+      "spotifyTop": "Pokaż moje ulubione utwory",
+      "spotifyHistory": "Pokaż historię odtwarzania",
+      "guestbookRead": "Przeglądaj najnowsze wpisy księgi gości",
+      "guestbookSign": "Zostaw wpis w księdze gości",
+      "themeList": "Pokaż wszystkie dostępne motywy",
+      "themeSet": "Zastosuj motyw po nazwie (np. theme set dracula)",
+      "themePreview": "Podgląd motywu bez zastosowania",
+      "themeCreate": "Stwórz własny motyw za pomocą edytora wizualnego lub JSON",
+      "themeValidate": "Sprawdź kontrast aktualnego motywu",
+      "lang": "Pokaż lub zmień aktywny język",
+      "langSet": "Zmień język (np. lang set fr)",
+      "langAuto": "Włącz ponownie automatyczne wykrywanie języka"
+    },
+    "help": {
+      "available": "Dostępne komendy",
+      "tip": "Wskazówka: kliknij komendę powyżej lub wpisz ją, aby ją wykonać.",
+      "subCommands": "Podkomendy"
+    },
+    "notFound": {
+      "title": "zsh: nie znaleziono komendy: {input}",
+      "didYouMean": "Czy chodziło o {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Użycie:",
+      "examplePrefix": "Przykład:",
+      "tooManyArgs": "Zbyt wiele argumentów.",
+      "unknown": "Nieznana {label}: {sub}.",
+      "useOneOf": "Użyj jednej z: {options}.",
+      "subcommand": "podkomenda"
+    },
+    "about": {
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "age": "Wiek",
+      "yearsOld": "{years, plural, one {# rok} few {# lata} other {# lat}}",
+      "location": "Lokalizacja",
+      "email": "Email",
+      "languages": "Języki",
+      "hobbies": "Hobby"
+    },
+    "contact": {
+      "intro": "Email preferowany przy ofertach, zleceniach freelance lub współpracy technicznej.",
+      "primaryEmail": "Główny email:",
+      "location": "Lokalizacja:",
+      "socialProfiles": "Profile społecznościowe:"
+    },
+    "stats": {
+      "totalCodingTime": "Łączny czas programowania",
+      "topLanguage": "Główny język",
+      "githubStars": "Gwiazdki GitHub",
+      "contributions": "Wkłady ({year})",
+      "codingSince": "Programuję od",
+      "codingSinceValue": "{since} ({years} lat)",
+      "visitors": "Odwiedzający",
+      "failed": "Nie udało się pobrać statystyk. Spróbuj później.",
+      "na": "Brak"
+    },
+    "repo": {
+      "starsLabel": "Gwiazdki",
+      "forksLabel": "Forki",
+      "licenseLabel": "Licencja",
+      "copyAria": "Skopiuj do schowka",
+      "copy": "Kopiuj",
+      "copiedAria": "Skopiowano",
+      "copiedNotice": "Skopiowano!",
+      "copyFailedAria": "Błąd kopiowania",
+      "copyFailedNotice": "Spróbuj ponownie",
+      "fallback": "Kod źródłowy tego portfolio jest dostępny tutaj:"
+    },
+    "cv": {
+      "openPreview": "Otwórz podgląd PDF",
+      "downloadPdf": "Pobierz PDF",
+      "endpointsLabel": "Endpointy:",
+      "endpointsAnd": "i"
+    },
+    "projects": {
+      "openLabel": "Otwórz projekt: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "nawiguj",
+    "complete": "uzupełnij",
+    "run": "wykonaj"
+  },
+  "Lang": {
+    "subCommandsTitle": "Komendy językowe",
+    "currentLabel": "Aktualny język:",
+    "availablePrefix": "Dostępne:",
+    "usagePrefix": "Użycie:",
+    "switching": "Przełączanie na {locale}…",
+    "autoCleared": "Język zostanie wykryty automatycznie przy następnym ładowaniu.",
+    "missingCode": "Brak kodu języka.",
+    "unknownLocale": "Nieznany język: {code}.",
+    "unknownSubcommand": "Nieznana podkomenda: {sub}.",
+    "tooManyArgs": "Zbyt wiele argumentów.",
+    "switcher": {
+      "ariaLabel": "Zmień język",
+      "title": "Zmień język"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Cyfrowy nomada",
+      "nextjs": "Next.js",
+      "uiEngineering": "Inżynieria UI",
+      "openSource": "Open source"
+    },
+    "footer": "Portfolio"
+  },
+  "Guestbook": {
+    "title": "Komendy księgi gości",
+    "validation": {
+      "nameMin": "Imię musi mieć co najmniej {min} znaków.",
+      "nameMax": "Imię nie może przekraczać {max} znaków.",
+      "messageMin": "Wiadomość musi mieć co najmniej {min} znaków.",
+      "messageMax": "Wiadomość nie może przekraczać {max} znaków.",
+      "websiteMax": "Strona nie może przekraczać {max} znaków.",
+      "websiteInvalid": "Nieprawidłowy URL strony."
+    },
+    "sign": {
+      "intro": "Zostaw wpis w mojej księdze gości.",
+      "namePlaceholder": "Twoje imię",
+      "websitePlaceholder": "Strona (opcjonalnie)",
+      "messagePlaceholder": "Twoja wiadomość",
+      "submit": "Podpisz",
+      "submitPending": "Wpis wysłany i oczekuje moderacji.",
+      "submitPublishedPrefix": "Wpis opublikowany!",
+      "submitFailed": "Nie udało się wysłać wpisu."
+    },
+    "read": {
+      "headerLabel": "księga gości",
+      "entry": "{count, plural, =0 {0 wpisów} one {# wpis} few {# wpisy} other {# wpisów}}",
+      "unavailable": "niedostępne",
+      "refresh": "odśwież",
+      "refreshAria": "Odśwież wpisy księgi gości",
+      "errorPrefix": "błąd:",
+      "errorFallback": "Nie udało się załadować wpisów księgi gości.",
+      "noneFromCountryPrefix": "Brak wpisów z",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Brak wpisów. Uruchom",
+      "noneYetSuffix": "aby być pierwszym.",
+      "filter": {
+        "ariaLabel": "Filtruj wpisy księgi gości",
+        "label": "filtruj",
+        "sort": "sortuj",
+        "newest": "najnowsze",
+        "oldest": "najstarsze",
+        "country": "kraj",
+        "allCountries": "Wszystkie kraje",
+        "clearCountry": "Wyczyść filtr kraju"
+      }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Nieprawidłowy ładunek JSON.",
+        "schemaMissing": "Księga gości nie jest zainicjowana. Uruchom supabase/schema/guestbook.sql.",
+        "unavailable": "Usługa księgi gości jest niedostępna.",
+        "fetchEntriesFailed": "Nie udało się pobrać wpisów księgi gości.",
+        "fetchCountriesFailed": "Nie udało się pobrać krajów.",
+        "saveFailed": "Nie udało się zapisać wpisu w księdze gości.",
+        "rateLimitCheckFailed": "Sprawdzanie limitu zapytań nie powiodło się.",
+        "rateLimitExceeded": "Przekroczono limit zapytań. Spróbuj ponownie później.",
+        "nameTooShort": "Imię musi mieć co najmniej 2 znaki.",
+        "messageTooShort": "Wiadomość musi mieć co najmniej 2 znaki.",
+        "websiteInvalid": "Adres URL strony jest nieprawidłowy."
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Komendy Spotify",
+    "notPlaying": "Nic nie gra 😕",
+    "unavailable": "Spotify nie jest skonfigurowane lub niedostępne.",
+    "nowPlayingPrefix": "Teraz w Spotify:",
+    "openNowPlayingAria": "Otwórz aktualny utwór: {name}",
+    "openRecentlyPlayedAria": "Otwórz niedawno odtwarzany utwór: {name}",
+    "openTopTrackAria": "Otwórz ulubiony utwór: {name}",
+    "openTopAlbumAria": "Otwórz ulubiony album: {name}",
+    "topTracks": {
+      "rank": "Pozycja",
+      "track": "Utwór",
+      "album": "Album"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Aktualny motyw:",
+    "darkSuffix": "ciemny",
+    "lightSuffix": "jasny",
+    "usagePrefix": "Użycie:",
+    "themeCommandsTitle": "Komendy motywu",
+    "noArgs": "{command} nie przyjmuje argumentów.",
+    "missingName": "Brak nazwy motywu.",
+    "tooManyArgs": "Zbyt wiele argumentów.",
+    "usageSet": "Użycie: theme set <nazwa>",
+    "usagePreview": "Użycie: theme preview <nazwa>",
+    "unknownSubcommand": "Nieznana podkomenda: {sub}. Użyj jednej z: {commands}.",
+    "list": {
+      "available": "Dostępne motywy ({count}):",
+      "tip": "Kliknij motyw, aby go zastosować.",
+      "active": "(aktywny)",
+      "custom": "własny",
+      "deleteAria": "Usuń {label}"
+    },
+    "set": {
+      "unknownAvailable": "Nieznany motyw: {name}. Dostępne motywy:",
+      "updated": "Motyw zmieniony na {label}.",
+      "active": "Aktywny motyw: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Nieznany motyw: {name}.",
+      "runListHint": "Uruchom <link></link>, aby zobaczyć dostępne motywy.",
+      "previewing": "Podgląd {label}",
+      "autoReverts": "— powrót za {seconds} s",
+      "applyHintPrefix": "Użyj",
+      "applyHintSuffix": "aby zastosować na stałe."
+    },
+    "validate": {
+      "header": "Audyt kontrastu WCAG AA dla {name}:",
+      "passCount": "{count} zaliczonych",
+      "failCount": "{count} niezaliczonych",
+      "totalChecked": "(sprawdzono {count} par)",
+      "skippedWarning": "⚠️ Niektóre kolory pominięto (nieobsługiwany format)",
+      "allPass": "Wszystkie pary spełniają wymagania WCAG AA.",
+      "someFail": "{count, plural, one {# para} few {# pary} many {# par} other {# par}} poniżej wymaganego współczynnika kontrastu. Rozważ dostosowanie jasności kolorów.",
+      "pairs": {
+        "bodyText": "Tekst główny",
+        "mutedOnBackground": "Stłumiony tekst na tle",
+        "mutedOnMuted": "Stłumiony tekst na stłumionym tle",
+        "accentOnAccent": "Tekst akcentu na akcentowym tle",
+        "destructive": "Tekst destrukcyjny",
+        "primary": "Akcent podstawowy",
+        "secondary": "Akcent drugorzędny",
+        "tertiary": "Akcent trzeciorzędny",
+        "quaternary": "Akcent czwartorzędny",
+        "quinary": "Akcent piątorzędny"
+      }
+    },
+    "create": {
+      "introPrefix": "Utwórz własny motyw za pomocą",
+      "introSuffix": ".",
+      "modeVisual": "edytora wizualnego",
+      "modeJson": "edytora JSON",
+      "tabVisual": "Wizualny",
+      "tabJson": "JSON",
+      "themeIdLabel": "ID motywu",
+      "displayNameLabel": "Nazwa wyświetlana",
+      "themeModeLabel": "Tryb motywu",
+      "darkTheme": "Motyw ciemny",
+      "lightTheme": "Motyw jasny",
+      "colorsHeading": "Kolory",
+      "colorPickerAria": "Próbnik koloru {label}",
+      "colorValueAria": "Wartość koloru {label}",
+      "submit": "Utwórz motyw",
+      "copyJson": "Skopiuj JSON",
+      "copyJsonAria": "Skopiuj JSON do schowka",
+      "resetColors": "Resetuj kolory",
+      "resetColorsAria": "Przywróć domyślne kolory",
+      "jsonHint": "Obsługuje OKLCH (zalecane), hex, rgb, hsl. Walidacja kontrastu działa dla wszystkich formatów.",
+      "jsonRequired": "Wymagane klucze: name, label, isDark, colors ({count} tokenów)",
+      "previewToggle": "Podgląd na żywo",
+      "successMessagePrefix": "Własny motyw",
+      "successMessageSuffix": "utworzony i zastosowany.",
+      "successHint": "Zostanie zachowany w localStorage przeglądarki.",
+      "tryAgain": "Spróbuj ponownie",
+      "errors": {
+        "nameAndLabelRequired": "Nazwa i etykieta motywu są wymagane.",
+        "missingNameField": "Brakuje wymaganego pola \"name\" (string).",
+        "missingLabelField": "Brakuje wymaganego pola \"label\" (string).",
+        "missingIsDarkField": "Brakuje wymaganego pola \"isDark\" (boolean).",
+        "missingColorsField": "Brakuje wymaganego pola \"colors\" (object).",
+        "missingColor": "Brakujący lub nieprawidłowy kolor: \"{key}\".",
+        "invalidJson": "Nieprawidłowy JSON.",
+        "invalidData": "Nieprawidłowe dane motywu."
+      },
+      "colors": {
+        "background": "Tło",
+        "foreground": "Pierwszy plan",
+        "muted": "Stłumiony",
+        "muted-foreground": "Stłumiony pierwszy plan",
+        "accent": "Akcent",
+        "accent-foreground": "Pierwszy plan akcentu",
+        "destructive": "Destrukcyjny",
+        "border": "Ramka",
+        "input": "Wejście",
+        "ring": "Pierścień",
+        "primary": "Podstawowy",
+        "secondary": "Drugorzędny",
+        "tertiary": "Trzeciorzędny",
+        "quaternary": "Czwartorzędny",
+        "quinary": "Piątorzędny"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "CV",
+    "subject": "CV",
+    "summary": "Inżynier oprogramowania z prawie czteroletnim doświadczeniem. Pracuję jako freelancer dla własnych klientów, tworzę aplikacje webowe i mobilne dostarczane do realnych użytkowników w App Store i Google Play. React, Next.js i React Native to mój teren — z zamiłowaniem do czystej architektury, szybkich pętli zwrotnych i okazjonalnych projektów open source. Mieszkam we Francji i pracuję skądkolwiek, gdzie zmieści się laptop.",
+    "sections": {
+      "summary": "Profil zawodowy",
+      "experience": "Doświadczenie",
+      "skills": "Umiejętności techniczne",
+      "education": "Wykształcenie",
+      "projects": "Wybrane projekty",
+      "languages": "Języki",
+      "links": "Linki"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Inżynier oprogramowania",
+        "company": "Kabila",
+        "location": "Madryt, Hiszpania",
+        "period": "Od lipca 2022",
+        "descriptions": [
+          "Prowadzę zespół frontendowy budujący produkcyjne aplikacje webowe w React i Next.js",
+          "Odpowiadam za roadmapę techniczną, planowanie sprintów i decyzje architektoniczne",
+          "Mentoruję juniorów i prowadzę code review",
+          "Buduję i utrzymuję wspólną bibliotekę komponentów oraz wewnętrzny design system",
+          "Wdrażam towarzyszące aplikacje mobilne w React Native i Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Freelancer",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, Francja",
+        "period": "Od lipca 2022",
+        "descriptions": [
+          "Tworzę pełnostackowe aplikacje webowe w React i Next.js dla klientów bezpośrednich",
+          "Wdrażam aplikacje mobilne wieloplatformowe do App Store i Google Play",
+          "Konfiguruję pipeline'y CI/CD i automatyzowane procesy wdrożeń",
+          "Doradzam w zakresie architektury, wyboru technologii i zakresu projektu",
+          "Prowadzę komunikację z klientem i pilnuję terminów dostarczenia"
+        ]
+      },
+      "archeMC2": {
+        "name": "Praktyka zawodowa",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, Francja",
+        "period": "Wrzesień 2022 — sierpień 2023",
+        "descriptions": [
+          "Budowałem pipeline'y GitLab CI/CD do automatycznego testowania i wdrażania",
+          "Konteneryzowałem aplikacje wewnętrzne i usługi w Dockerze",
+          "Automatyzowałem rutynowe zadania administracyjne skryptami shellowymi",
+          "Monitorowałem stan systemów i poprawiałem odporność infrastruktury"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Administracja systemami i bezpieczeństwo (licencjat zawodowy)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Francja)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Sieci i telekomunikacja (dyplom techniczny)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Francja)",
+        "period": "2020–2022",
+        "descriptions": ["Drugie miejsce w roczniku"]
+      },
+      "lyceeBac": {
+        "name": "Matura naukowa (odpowiednik A-Level)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Francja)",
+        "period": "2019–2020",
+        "descriptions": [
+          "Specjalizacja ISN (Informatyka i nauki cyfrowe)",
+          "Z wyróżnieniem"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Społecznościowa platforma Web3 i ekosystem NFT zbudowane na Hederze, z marketplace NFT, plazami społeczności, launchpadami i narzędziami dla twórców."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Kompleksowy zestaw narzędzi NFT dla twórców i społeczności na Hederze. Wydajna i prosta w obsłudze platforma do tworzenia, uruchamiania i zarządzania kolekcjami NFT z pełną kontrolą."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Non-custodialny, prosty i bezpieczny portfel dla sieci Hedera. Zarządzaj kontami, tokenami, NFT i łącz się z DAppami przy zachowaniu pełnej kontroli nad swoimi aktywami."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Profesjonalna strona warsztatu samochodowego z usługami, przejrzystym cennikiem i informacjami kontaktowymi."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Narzędzie do nadzoru DASAN OLT/ONU [open source]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Niestandardowa platforma e-commerce dla profesjonalnego studia grawerskiego, z katalogiem produktów, zamówieniami online i panelem administracyjnym do zarządzania zamówieniami."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Moje poprzednie portfolio zbudowane w Next.js i Chakra UI, z ciemnym motywem i płynnymi animacjami."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Starter kit z Next.js, Chakra-UI, Framer-Motion w TypeScript. Zawiera komponenty, internacjonalizację, SEO i więcej."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "Platforma kurierska stworzona na potrzeby projektu pierwszego roku DUT Sieci i Telekomunikacji."
+      }
+    },
+    "skillGroups": {
+      "languages": "Języki",
+      "frameworks": "Frameworki",
+      "uiStyling": "UI / Stylizacja",
+      "tooling": "Narzędzia",
+      "databases": "Bazy danych",
+      "cloud": "Chmura",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Automatyzacja",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "Francuski",
+      "en": "Angielski",
+      "ru": "Rosyjski",
+      "es": "Hiszpański"
+    },
+    "languageLevels": {
+      "native": "Ojczysty",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Motocykle",
+      "cars": "Samochody",
+      "weightlifting": "Trening siłowy",
+      "calisthenics": "Kalistenika",
+      "traveling": "Podróże",
+      "manga": "Manga",
+      "gaming": "Gry"
+    }
+  }
+}

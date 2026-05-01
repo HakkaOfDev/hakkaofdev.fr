@@ -1,13 +1,14 @@
 "use client";
 
 import { Info } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { ShortcutSection } from "@/components/ShortcutSection";
 import { Shortcut, type ShortcutProps } from "@/components/ui/Shortcut";
 
 type Item = {
   command: string;
-  description: string;
+  slug: string;
 };
 
 export default function SubCommandHelp({
@@ -21,6 +22,7 @@ export default function SubCommandHelp({
   prefix?: string;
   variant?: ShortcutProps["variant"];
 }) {
+  const tCommands = useTranslations("Commands");
   return (
     <AnimatedSpan className="gap-4">
       <div className="flex items-center gap-2">
@@ -28,7 +30,7 @@ export default function SubCommandHelp({
         <p className="font-semibold text-primary">{title}</p>
       </div>
 
-      <ShortcutSection title="Sub-commands">
+      <ShortcutSection title={tCommands("help.subCommands")}>
         <div className="grid gap-1.5">
           {items.map((item) => (
             <div
@@ -41,7 +43,7 @@ export default function SubCommandHelp({
                 variant={variant}
               />
               <span className="text-muted-foreground text-xs leading-relaxed">
-                {item.description}
+                {tCommands(`descriptions.${item.slug}` as never)}
               </span>
             </div>
           ))}

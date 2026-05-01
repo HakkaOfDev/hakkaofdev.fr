@@ -2,6 +2,7 @@
 
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { RefreshCcw } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { Shortcut } from "@/components/ui/Shortcut";
@@ -13,6 +14,7 @@ import { GuestbookEntryRow } from "./GuestbookEntryRow";
 import { ReadSkeleton } from "./ReadSkeleton";
 
 function CGuestbookRead() {
+  const t = useTranslations("Guestbook.read");
   const queryClient = useQueryClient();
   const [filters, setFilters] = useState<GuestbookFilters>({
     sort: "desc",
@@ -33,11 +35,9 @@ function CGuestbookRead() {
       {/* Header */}
       <div className="flex items-center justify-between gap-3">
         <p className="font-mono text-muted-foreground text-xs">
-          <span className="font-semibold text-quinary">guestbook</span>
+          <span className="font-semibold text-quinary">{t("headerLabel")}</span>
           <span className="text-muted-foreground/40"> — </span>
-          {data
-            ? `${data.length} ${data.length === 1 ? "entry" : "entries"}`
-            : "unavailable"}
+          {data ? t("entry", { count: data.length }) : t("unavailable")}
         </p>
         <div className="flex items-center gap-1.5">
           <FilterPopover filters={filters} onChangeFilters={setFilters} />
@@ -50,12 +50,12 @@ function CGuestbookRead() {
             }
             disabled={isFetching}
             className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-quinary/10 px-2 py-0.5 font-semibold text-quinary text-xs ring-1 ring-quinary/20 ring-inset transition-colors duration-200 hover:bg-quinary/20 disabled:cursor-not-allowed disabled:opacity-50"
-            aria-label="Refresh guestbook entries"
+            aria-label={t("refreshAria")}
           >
             <RefreshCcw
               className={cn("h-2.5 w-2.5", isFetching && "animate-spin")}
             />
-            refresh
+            {t("refresh")}
           </button>
         </div>
       </div>
@@ -63,10 +63,8 @@ function CGuestbookRead() {
       {/* Error */}
       {isError && (
         <p className="font-mono text-destructive text-xs">
-          <span className="text-destructive/60">error:</span>{" "}
-          {error instanceof Error
-            ? error.message
-            : "Failed to load guestbook entries."}
+          <span className="text-destructive/60">{t("errorPrefix")}</span>{" "}
+          {error instanceof Error ? error.message : t("errorFallback")}
         </p>
       )}
 
@@ -76,23 +74,23 @@ function CGuestbookRead() {
           <span className="text-muted-foreground/40">~</span>
           {filters.country ? (
             <>
-              No entries from{" "}
+              {t("noneFromCountryPrefix")}{" "}
               <span className="font-semibold">
                 {GuestbookClientService.countryToFlag(filters.country)}{" "}
                 {filters.country}
               </span>
-              .
+              {t("noneFromCountrySuffix")}
             </>
           ) : (
             <>
-              No entries yet. Run
+              {t("noneYetPrefix")}{" "}
               <Shortcut
                 label="guestbook sign"
                 command="guestbook sign"
                 variant="pink"
                 className="px-1.5 py-0 text-xs"
               />{" "}
-              to be the first.
+              {t("noneYetSuffix")}
             </>
           )}
         </p>

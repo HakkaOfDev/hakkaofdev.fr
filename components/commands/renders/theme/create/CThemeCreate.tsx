@@ -1,6 +1,7 @@
 "use client";
 
 import { Code, Eye } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
@@ -22,6 +23,7 @@ import {
 import { ThemeCreateVisualForm } from "./ThemeCreateVisualForm";
 
 export function CThemeCreate() {
+  const t = useTranslations("Theme.create");
   const { setTheme } = useThemeEngine();
 
   const [mode, setMode] = useState<ThemeCreateMode>("visual");
@@ -62,7 +64,7 @@ export function CThemeCreate() {
 
       try {
         if (!themeName || !themeLabel) {
-          throw new Error("Theme name and label are required.");
+          throw new Error(t("errors.nameAndLabelRequired"));
         }
 
         const palette: ThemePalette = {
@@ -77,11 +79,13 @@ export function CThemeCreate() {
         setCreatedName(palette.label);
         setStep("success");
       } catch (err) {
-        setErrorMsg(err instanceof Error ? err.message : "Invalid theme data.");
+        setErrorMsg(
+          err instanceof Error ? err.message : t("errors.invalidData"),
+        );
         setStep("error");
       }
     },
-    [themeName, themeLabel, isDark, colors, setTheme],
+    [themeName, themeLabel, isDark, colors, setTheme, t],
   );
 
   const handleJSONSubmit = useCallback(
@@ -93,22 +97,22 @@ export function CThemeCreate() {
         const parsed = JSON.parse(raw) as Record<string, unknown>;
 
         if (!parsed.name || typeof parsed.name !== "string") {
-          throw new Error('Missing required field "name" (string).');
+          throw new Error(t("errors.missingNameField"));
         }
         if (!parsed.label || typeof parsed.label !== "string") {
-          throw new Error('Missing required field "label" (string).');
+          throw new Error(t("errors.missingLabelField"));
         }
         if (typeof parsed.isDark !== "boolean") {
-          throw new Error('Missing required field "isDark" (boolean).');
+          throw new Error(t("errors.missingIsDarkField"));
         }
         if (!parsed.colors || typeof parsed.colors !== "object") {
-          throw new Error('Missing required field "colors" (object).');
+          throw new Error(t("errors.missingColorsField"));
         }
 
         const colorsParsed = parsed.colors as Record<string, unknown>;
         for (const key of THEME_COLOR_KEYS) {
           if (!colorsParsed[key] || typeof colorsParsed[key] !== "string") {
-            throw new Error(`Missing or invalid color: "${key}".`);
+            throw new Error(t("errors.missingColor", { key }));
           }
         }
 
@@ -124,11 +128,13 @@ export function CThemeCreate() {
         setCreatedName(palette.label);
         setStep("success");
       } catch (err) {
-        setErrorMsg(err instanceof Error ? err.message : "Invalid JSON input.");
+        setErrorMsg(
+          err instanceof Error ? err.message : t("errors.invalidJson"),
+        );
         setStep("error");
       }
     },
-    [setTheme],
+    [setTheme, t],
   );
 
   if (step === "success") {
@@ -144,15 +150,15 @@ export function CThemeCreate() {
     );
   }
 
+  const modeLabel = mode === "visual" ? t("modeVisual") : t("modeJson");
+
   return (
     <AnimatedSpan className="gap-3">
       <div className="flex items-center justify-between">
         <p className="text-muted-foreground">
-          Create a custom theme using the{" "}
-          <span className="font-semibold text-foreground">
-            {mode === "visual" ? "visual editor" : "JSON editor"}
-          </span>
-          .
+          {t("introPrefix")}{" "}
+          <span className="font-semibold text-foreground">{modeLabel}</span>
+          {t("introSuffix")}
         </p>
         <div className="flex gap-1">
           <button
@@ -165,7 +171,7 @@ export function CThemeCreate() {
             }`}
           >
             <Eye className="h-3 w-3" />
-            Visual
+            {t("tabVisual")}
           </button>
           <button
             type="button"
@@ -177,7 +183,7 @@ export function CThemeCreate() {
             }`}
           >
             <Code className="h-3 w-3" />
-            JSON
+            {t("tabJson")}
           </button>
         </div>
       </div>

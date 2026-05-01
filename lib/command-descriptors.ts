@@ -3,6 +3,7 @@ import type {
   CommandGroup,
   CommandGroupMeta,
   GuestbookCommandDescriptor,
+  LangCommandDescriptor,
   SpotifyCommandDescriptor,
   ThemeCommandDescriptor,
 } from "@/types/command";
@@ -12,6 +13,7 @@ export type {
   CommandGroup,
   CommandGroupMeta,
   GuestbookCommandDescriptor,
+  LangCommandDescriptor,
   SpotifyCommandDescriptor,
   ThemeCommandDescriptor,
 } from "@/types/command";
@@ -34,121 +36,56 @@ export const GROUP_META = Object.fromEntries(
 // ─── Base commands ──────────────────────────────────────────────────────
 
 export const COMMANDS: CommandDescriptor[] = [
-  {
-    command: "projects",
-    description: "Things I've built, shipped, or contributed to",
-    group: "Work",
-  },
-  {
-    command: "experiences",
-    description: "Explore my professional work history and accomplishments",
-    group: "Work",
-  },
-  {
-    command: "about",
-    description: "Learn more about my background, interests and career goals",
-    group: "Profile",
-  },
-  {
-    command: "skills",
-    description: "View my technical skills, tools and technologies I work with",
-    group: "Profile",
-  },
-  {
-    command: "education",
-    description: "See my academic background and qualifications",
-    group: "Profile",
-  },
-  {
-    command: "contact",
-    description:
-      "Get my email address, social links and preferred contact paths",
-    group: "Terminal",
-  },
-  {
-    command: "guestbook",
-    description: "Display the help for the guestbook sub-commands",
-    group: "Guestbook",
-  },
-  {
-    command: "cv",
-    description: "Preview and download my generated PDF resume",
-    group: "Profile",
-  },
-  {
-    command: "spotify",
-    description: "Display the help for the spotify sub-commands",
-    group: "Spotify",
-  },
-  {
-    command: "theme",
-    description: "Show or switch the UI theme",
-    group: "Theme",
-  },
-  {
-    command: "help",
-    description: "Display all available commands and their descriptions",
-    group: "Terminal",
-  },
-  {
-    command: "clear",
-    description: "Clear all previous commands and output from the terminal",
-    group: "Terminal",
-  },
-  {
-    command: "reset",
-    description: "Reset the terminal to the welcome screen and clear history",
-    group: "Terminal",
-  },
-  {
-    command: "stats",
-    description:
-      "Display coding activity, GitHub metrics & unique visitor count",
-    group: "Profile",
-  },
-  {
-    command: "repo",
-    description: "Open the source code of this portfolio repository",
-    group: "Terminal",
-  },
-  {
-    command: "echo",
-    description: "Print a message to the terminal",
-    group: "Terminal",
-  },
+  { command: "projects", slug: "projects", group: "Work" },
+  { command: "experiences", slug: "experiences", group: "Work" },
+  { command: "about", slug: "about", group: "Profile" },
+  { command: "skills", slug: "skills", group: "Profile" },
+  { command: "education", slug: "education", group: "Profile" },
+  { command: "contact", slug: "contact", group: "Terminal" },
+  { command: "guestbook", slug: "guestbook", group: "Guestbook" },
+  { command: "cv", slug: "cv", group: "Profile" },
+  { command: "spotify", slug: "spotify", group: "Spotify" },
+  { command: "theme", slug: "theme", group: "Theme" },
+  { command: "help", slug: "help", group: "Terminal" },
+  { command: "clear", slug: "clear", group: "Terminal" },
+  { command: "reset", slug: "reset", group: "Terminal" },
+  { command: "stats", slug: "stats", group: "Profile" },
+  { command: "repo", slug: "repo", group: "Terminal" },
+  { command: "echo", slug: "echo", group: "Terminal" },
+  { command: "lang", slug: "lang", group: "Terminal" },
 ];
 
 // ─── Sub-commands ───────────────────────────────────────────────────────
 
 export const SPOTIFY_COMMANDS: SpotifyCommandDescriptor[] = [
-  { command: "now", description: "Display the currently playing song" },
-  { command: "top", description: "Display my top tracks" },
-  { command: "history", description: "Display my listening history" },
+  { command: "now", slug: "spotifyNow" },
+  { command: "top", slug: "spotifyTop" },
+  { command: "history", slug: "spotifyHistory" },
 ];
 export const GUESTBOOK_COMMANDS: GuestbookCommandDescriptor[] = [
-  { command: "read", description: "Browse the latest guestbook entries" },
-  { command: "sign", description: "Leave a message in the guestbook" },
+  { command: "read", slug: "guestbookRead" },
+  { command: "sign", slug: "guestbookSign" },
 ];
-1;
 export const THEME_COMMANDS: ThemeCommandDescriptor[] = [
-  { command: "list", description: "Show all available themes" },
-  {
-    command: "set",
-    description: "Apply a theme by name (e.g. theme set dracula)",
-  },
-  { command: "preview", description: "Preview a theme without applying it" },
-  {
-    command: "create",
-    description: "Create a custom theme with visual or JSON editor",
-  },
-  {
-    command: "validate",
-    description: "Check the current theme for contrast issues",
-  },
+  { command: "list", slug: "themeList" },
+  { command: "set", slug: "themeSet" },
+  { command: "preview", slug: "themePreview" },
+  { command: "create", slug: "themeCreate" },
+  { command: "validate", slug: "themeValidate" },
+];
+
+export const LANG_COMMANDS: LangCommandDescriptor[] = [
+  { command: "set", slug: "langSet" },
+  { command: "auto", slug: "langAuto" },
 ];
 
 /** Command names that act as namespaces for sub-commands. */
-export const SUBCOMMAND_PREFIXES = ["guestbook", "spotify", "theme"] as const;
+export const SUBCOMMAND_PREFIXES = [
+  "guestbook",
+  "spotify",
+  "theme",
+  "lang",
+] as const;
 
 // ─── Derived: every command including expanded sub-commands ─────────────
 
@@ -156,18 +93,23 @@ export const ALL_COMMANDS: CommandDescriptor[] = [
   ...COMMANDS,
   ...GUESTBOOK_COMMANDS.map((c) => ({
     command: `guestbook ${c.command}`,
-    description: c.description,
+    slug: c.slug,
     group: "Guestbook" as const,
   })),
   ...SPOTIFY_COMMANDS.map((c) => ({
     command: `spotify ${c.command}`,
-    description: c.description,
+    slug: c.slug,
     group: "Spotify" as const,
   })),
   ...THEME_COMMANDS.map((c) => ({
     command: `theme ${c.command}`,
-    description: c.description,
+    slug: c.slug,
     group: "Theme" as const,
+  })),
+  ...LANG_COMMANDS.map((c) => ({
+    command: `lang ${c.command}`,
+    slug: c.slug,
+    group: "Terminal" as const,
   })),
 ];
 

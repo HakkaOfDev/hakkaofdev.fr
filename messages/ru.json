@@ -1,0 +1,607 @@
+{
+  "Metadata": {
+    "title": "Александр Госсар | Цифровой кочевник и инженер-программист",
+    "description": "Цифровой кочевник и инженер-программист на фрилансе. Энтузиаст open source, создаю производительные веб-приложения на React и Next.js.",
+    "jobTitle": "Инженер-программист",
+    "location": "Шалон-ан-Шампань, Франция",
+    "ogImageAlt": "Александр Госсар",
+    "keywords": [
+      "Александр Госсар",
+      "Frontend-разработчик",
+      "Цифровой кочевник",
+      "Open source",
+      "Современные технологии",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Инженер-программист",
+      "Фриланс"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Сделано с <heart></heart> · <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Добро пожаловать <wave>👋</wave>",
+    "intro": "<tagline>Цифровой кочевник</tagline> · <job>Инженер-программист</job> · <freelance>Фриланс</freelance>",
+    "tags": {
+      "openSource": "Сторонник open source",
+      "calisthenics": "Любитель калистеники",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Начало",
+      "work": "Работа",
+      "profile": "Профиль",
+      "extras": "Дополнительно",
+      "utils": "Утилиты"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Ни одна команда не соответствует «{query}».",
+    "header": {
+      "resetTitle": "Сбросить терминал (Ctrl+R)",
+      "resetLabel": "Сбросить терминал",
+      "settingsTitle": "Настройки терминала",
+      "settingsLabel": "Настройки терминала"
+    },
+    "trafficLights": {
+      "close": "Закрыть терминал",
+      "minimize": "Свернуть терминал",
+      "restoreMinimize": "Восстановить терминал",
+      "expand": "Развернуть терминал",
+      "restoreExpand": "Восстановить размер терминала"
+    },
+    "tabs": {
+      "rename": "Переименовать {name}",
+      "close": "Закрыть {name}",
+      "create": "Создать вкладку",
+      "limitReached": "Достигнут лимит сессий"
+    },
+    "search": {
+      "placeholder": "Фильтр истории команд…",
+      "hide": "Скрыть поиск"
+    },
+    "input": {
+      "placeholder": "введите команду…",
+      "submit": "Выполнить команду"
+    },
+    "fontSize": {
+      "label": "Размер шрифта",
+      "decrease": "Уменьшить шрифт",
+      "decreaseTitle": "Уменьшить шрифт (Ctrl+-)",
+      "increase": "Увеличить шрифт",
+      "increaseTitle": "Увеличить шрифт (Ctrl++)"
+    },
+    "settings": {
+      "title": "Настройки терминала",
+      "resetAllTitle": "Сбросить все настройки (включая размер)",
+      "resetAllLabel": "Сбросить всё",
+      "closeTitle": "Закрыть настройки",
+      "closeLabel": "Закрыть настройки",
+      "themeLabel": "Тема",
+      "fontLabel": "Шрифт терминала",
+      "scrollbackLabel": "История",
+      "scrollbackOption": "{count, plural, =0 {нет команд} one {# команда} few {# команды} other {# команд}}",
+      "darkSuffix": "тёмная",
+      "lightSuffix": "светлая",
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Язык"
+    },
+    "shortcutsHeading": "Горячие клавиши",
+    "shortcuts": {
+      "runCommand": "Выполнить команду",
+      "autocomplete": "Автодополнение",
+      "history": "История и подсказки",
+      "clearOutput": "Очистить вывод",
+      "resetTerminal": "Сбросить терминал",
+      "toggleSearch": "Переключить поиск",
+      "increaseFontSize": "Увеличить шрифт",
+      "decreaseFontSize": "Уменьшить шрифт"
+    },
+    "closeMessages": [
+      "Хорошая попытка! Меня нельзя закрыть.",
+      "Я никуда не ухожу. Попробуй «help»!",
+      "Нет. У этого терминала проблемы с доверием к кнопкам закрытия.",
+      "Ошибка 418: я чайник, а не закрываемое окно.",
+      "sudo rm -rf / ? Хм… нет.",
+      "Ты правда думал, что это сработает?",
+      "Закрыть меня? В наше-то время?",
+      "Я устроен иначе. Попробуй «contact»."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Работа",
+      "Profile": "Профиль",
+      "Guestbook": "Гостевая",
+      "Spotify": "Spotify",
+      "Theme": "Тема",
+      "Terminal": "Терминал"
+    },
+    "descriptions": {
+      "projects": "Что я создал, выпустил или в чём участвовал",
+      "experiences": "Мой профессиональный опыт и достижения",
+      "about": "Подробнее обо мне, интересах и целях",
+      "skills": "Технические навыки и стек",
+      "education": "Моё образование",
+      "contact": "Email, соцсети и способы связи",
+      "guestbook": "Справка по подкомандам гостевой книги",
+      "cv": "Просмотр и скачивание моего PDF-резюме",
+      "spotify": "Справка по подкомандам Spotify",
+      "theme": "Показать или сменить тему интерфейса",
+      "help": "Все доступные команды и их описания",
+      "clear": "Очистить все предыдущие команды и вывод",
+      "reset": "Вернуть терминал к экрану приветствия",
+      "stats": "Активность по коду, GitHub и количество посетителей",
+      "repo": "Открыть исходный код этого портфолио",
+      "echo": "Вывести сообщение в терминал",
+      "spotifyNow": "Показать текущий трек",
+      "spotifyTop": "Показать любимые треки",
+      "spotifyHistory": "Показать историю прослушиваний",
+      "guestbookRead": "Просмотр последних записей в гостевой",
+      "guestbookSign": "Оставить запись в гостевой",
+      "themeList": "Показать все доступные темы",
+      "themeSet": "Применить тему по имени (например, theme set dracula)",
+      "themePreview": "Предпросмотр темы без применения",
+      "themeCreate": "Создать свою тему через визуальный или JSON-редактор",
+      "themeValidate": "Проверить контраст текущей темы",
+      "lang": "Показать или сменить активный язык",
+      "langSet": "Сменить язык (например, lang set fr)",
+      "langAuto": "Снова включить автоопределение языка"
+    },
+    "help": {
+      "available": "Доступные команды",
+      "tip": "Совет: кликни по команде или введи её, чтобы выполнить.",
+      "subCommands": "Подкоманды"
+    },
+    "notFound": {
+      "title": "zsh: команда не найдена: {input}",
+      "didYouMean": "Возможно, вы имели в виду {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Использование:",
+      "examplePrefix": "Пример:",
+      "tooManyArgs": "Слишком много аргументов.",
+      "unknown": "Неизвестная {label}: {sub}.",
+      "useOneOf": "Используйте одно из: {options}.",
+      "subcommand": "подкоманда"
+    },
+    "about": {
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "age": "Возраст",
+      "yearsOld": "{years, plural, one {# год} few {# года} other {# лет}}",
+      "location": "Местоположение",
+      "email": "Email",
+      "languages": "Языки",
+      "hobbies": "Увлечения"
+    },
+    "contact": {
+      "intro": "Для предложений, фриланса или техсотрудничества предпочитаю email.",
+      "primaryEmail": "Основной email:",
+      "location": "Местоположение:",
+      "socialProfiles": "Соцсети:"
+    },
+    "stats": {
+      "totalCodingTime": "Общее время кодинга",
+      "topLanguage": "Главный язык",
+      "githubStars": "Звёзды GitHub",
+      "contributions": "Вклады ({year})",
+      "codingSince": "Кодю с",
+      "codingSinceValue": "{since} ({years} лет)",
+      "visitors": "Посетители",
+      "failed": "Не удалось загрузить статистику. Попробуйте позже.",
+      "na": "Н/Д"
+    },
+    "repo": {
+      "starsLabel": "Звёзды",
+      "forksLabel": "Форки",
+      "licenseLabel": "Лицензия",
+      "copyAria": "Скопировать в буфер обмена",
+      "copy": "Копировать",
+      "copiedAria": "Скопировано",
+      "copiedNotice": "Скопировано!",
+      "copyFailedAria": "Ошибка копирования",
+      "copyFailedNotice": "Повторить",
+      "fallback": "Исходный код этого портфолио доступен здесь:"
+    },
+    "cv": {
+      "openPreview": "Открыть предпросмотр PDF",
+      "downloadPdf": "Скачать PDF",
+      "endpointsLabel": "Эндпоинты:",
+      "endpointsAnd": "и"
+    },
+    "projects": {
+      "openLabel": "Открыть проект: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "навигация",
+    "complete": "дополнить",
+    "run": "выполнить"
+  },
+  "Lang": {
+    "subCommandsTitle": "Команды языка",
+    "currentLabel": "Текущий язык:",
+    "availablePrefix": "Доступно:",
+    "usagePrefix": "Использование:",
+    "switching": "Переключение на {locale}…",
+    "autoCleared": "Язык будет определён автоматически при следующей загрузке.",
+    "missingCode": "Не указан код языка.",
+    "unknownLocale": "Неизвестный язык: {code}.",
+    "unknownSubcommand": "Неизвестная подкоманда: {sub}.",
+    "tooManyArgs": "Слишком много аргументов.",
+    "switcher": {
+      "ariaLabel": "Сменить язык",
+      "title": "Сменить язык"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Цифровой кочевник",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI-инжиниринг",
+      "openSource": "Open source"
+    },
+    "footer": "Портфолио"
+  },
+  "Guestbook": {
+    "title": "Команды гостевой книги",
+    "validation": {
+      "nameMin": "Имя должно содержать не менее {min} символов.",
+      "nameMax": "Имя должно содержать не более {max} символов.",
+      "messageMin": "Сообщение должно содержать не менее {min} символов.",
+      "messageMax": "Сообщение должно содержать не более {max} символов.",
+      "websiteMax": "Сайт не должен превышать {max} символов.",
+      "websiteInvalid": "Некорректный URL сайта."
+    },
+    "sign": {
+      "intro": "Оставьте запись в моей гостевой книге.",
+      "namePlaceholder": "Ваше имя",
+      "websitePlaceholder": "Сайт (необязательно)",
+      "messagePlaceholder": "Ваше сообщение",
+      "submit": "Подписать",
+      "submitPending": "Запись отправлена и ждёт модерации.",
+      "submitPublishedPrefix": "Запись опубликована!",
+      "submitFailed": "Не удалось отправить запись."
+    },
+    "read": {
+      "headerLabel": "гостевая",
+      "entry": "{count, plural, =0 {0 записей} one {# запись} few {# записи} other {# записей}}",
+      "unavailable": "недоступно",
+      "refresh": "обновить",
+      "refreshAria": "Обновить записи гостевой книги",
+      "errorPrefix": "ошибка:",
+      "errorFallback": "Не удалось загрузить записи гостевой книги.",
+      "noneFromCountryPrefix": "Нет записей из",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Записей пока нет. Запустите",
+      "noneYetSuffix": "чтобы быть первым.",
+      "filter": {
+        "ariaLabel": "Фильтр записей гостевой книги",
+        "label": "фильтр",
+        "sort": "сортировка",
+        "newest": "новые",
+        "oldest": "старые",
+        "country": "страна",
+        "allCountries": "Все страны",
+        "clearCountry": "Сбросить фильтр стран"
+      }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Недопустимая JSON-нагрузка.",
+        "schemaMissing": "Гостевая книга не инициализирована. Выполните supabase/schema/guestbook.sql.",
+        "unavailable": "Сервис гостевой книги недоступен.",
+        "fetchEntriesFailed": "Не удалось получить записи гостевой книги.",
+        "fetchCountriesFailed": "Не удалось получить список стран.",
+        "saveFailed": "Не удалось сохранить запись в гостевой книге.",
+        "rateLimitCheckFailed": "Не удалось проверить лимит частоты запросов.",
+        "rateLimitExceeded": "Превышен лимит частоты запросов. Попробуйте позже.",
+        "nameTooShort": "Имя должно содержать не менее 2 символов.",
+        "messageTooShort": "Сообщение должно содержать не менее 2 символов.",
+        "websiteInvalid": "URL веб-сайта недействителен."
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Команды Spotify",
+    "notPlaying": "Ничего не играет 😕",
+    "unavailable": "Spotify не настроен или недоступен.",
+    "nowPlayingPrefix": "Сейчас в Spotify:",
+    "openNowPlayingAria": "Открыть текущий трек: {name}",
+    "openRecentlyPlayedAria": "Открыть недавно прослушанный трек: {name}",
+    "openTopTrackAria": "Открыть любимый трек: {name}",
+    "openTopAlbumAria": "Открыть любимый альбом: {name}",
+    "topTracks": {
+      "rank": "Ранг",
+      "track": "Трек",
+      "album": "Альбом"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Текущая тема:",
+    "darkSuffix": "тёмная",
+    "lightSuffix": "светлая",
+    "usagePrefix": "Использование:",
+    "themeCommandsTitle": "Команды темы",
+    "noArgs": "{command} не принимает аргументов.",
+    "missingName": "Не указано имя темы.",
+    "tooManyArgs": "Слишком много аргументов.",
+    "usageSet": "Использование: theme set <имя>",
+    "usagePreview": "Использование: theme preview <имя>",
+    "unknownSubcommand": "Неизвестная подкоманда: {sub}. Используйте: {commands}.",
+    "list": {
+      "available": "Доступные темы ({count}):",
+      "tip": "Кликните по теме, чтобы её применить.",
+      "active": "(активна)",
+      "custom": "своя",
+      "deleteAria": "Удалить {label}"
+    },
+    "set": {
+      "unknownAvailable": "Неизвестная тема: {name}. Доступные темы:",
+      "updated": "Тема изменена на {label}.",
+      "active": "Активная тема: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Неизвестная тема: {name}.",
+      "runListHint": "Запустите <link></link>, чтобы увидеть доступные темы.",
+      "previewing": "Предпросмотр {label}",
+      "autoReverts": "— возврат через {seconds} с",
+      "applyHintPrefix": "Используйте",
+      "applyHintSuffix": "чтобы применить навсегда."
+    },
+    "validate": {
+      "header": "Аудит контраста WCAG AA для {name}:",
+      "passCount": "{count} прошло",
+      "failCount": "{count} не прошло",
+      "totalChecked": "(проверено {count} пар)",
+      "skippedWarning": "⚠️ Некоторые цвета пропущены (неподдерживаемый формат)",
+      "allPass": "Все пары соответствуют требованиям WCAG AA.",
+      "someFail": "{count, plural, one {# пара} few {# пары} many {# пар} other {# пар}} ниже требуемого коэффициента контраста. Рассмотрите корректировку светлоты цветов.",
+      "pairs": {
+        "bodyText": "Основной текст",
+        "mutedOnBackground": "Приглушённый текст на фоне",
+        "mutedOnMuted": "Приглушённый текст на приглушённом фоне",
+        "accentOnAccent": "Акцентный текст на акцентном фоне",
+        "destructive": "Деструктивный текст",
+        "primary": "Первичный акцент",
+        "secondary": "Вторичный акцент",
+        "tertiary": "Третичный акцент",
+        "quaternary": "Четвертичный акцент",
+        "quinary": "Пятеричный акцент"
+      }
+    },
+    "create": {
+      "introPrefix": "Создайте свою тему с помощью",
+      "introSuffix": ".",
+      "modeVisual": "визуального редактора",
+      "modeJson": "редактора JSON",
+      "tabVisual": "Визуально",
+      "tabJson": "JSON",
+      "themeIdLabel": "ID темы",
+      "displayNameLabel": "Отображаемое имя",
+      "themeModeLabel": "Режим темы",
+      "darkTheme": "Тёмная тема",
+      "lightTheme": "Светлая тема",
+      "colorsHeading": "Цвета",
+      "colorPickerAria": "Палитра цвета {label}",
+      "colorValueAria": "Значение цвета {label}",
+      "submit": "Создать тему",
+      "copyJson": "Копировать JSON",
+      "copyJsonAria": "Копировать JSON в буфер обмена",
+      "resetColors": "Сбросить цвета",
+      "resetColorsAria": "Сбросить цвета к значениям по умолчанию",
+      "jsonHint": "Поддерживается OKLCH (рекомендуется), hex, rgb, hsl. Валидация контраста работает для всех форматов.",
+      "jsonRequired": "Обязательные ключи: name, label, isDark, colors ({count} токенов)",
+      "previewToggle": "Живой предпросмотр",
+      "successMessagePrefix": "Своя тема",
+      "successMessageSuffix": "создана и применена.",
+      "successHint": "Будет сохранена в localStorage браузера.",
+      "tryAgain": "Попробовать снова",
+      "errors": {
+        "nameAndLabelRequired": "Имя и ярлык темы обязательны.",
+        "missingNameField": "Отсутствует обязательное поле \"name\" (string).",
+        "missingLabelField": "Отсутствует обязательное поле \"label\" (string).",
+        "missingIsDarkField": "Отсутствует обязательное поле \"isDark\" (boolean).",
+        "missingColorsField": "Отсутствует обязательное поле \"colors\" (object).",
+        "missingColor": "Отсутствует или некорректен цвет: \"{key}\".",
+        "invalidJson": "Некорректный JSON.",
+        "invalidData": "Некорректные данные темы."
+      },
+      "colors": {
+        "background": "Фон",
+        "foreground": "Передний план",
+        "muted": "Приглушённый",
+        "muted-foreground": "Приглушённый передний план",
+        "accent": "Акцент",
+        "accent-foreground": "Акцентный передний план",
+        "destructive": "Деструктивный",
+        "border": "Граница",
+        "input": "Ввод",
+        "ring": "Кольцо",
+        "primary": "Первичный",
+        "secondary": "Вторичный",
+        "tertiary": "Третичный",
+        "quaternary": "Четвертичный",
+        "quinary": "Пятеричный"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "Резюме",
+    "subject": "Резюме",
+    "summary": "Инженер-программист с почти четырёхлетним опытом. Работаю фрилансером с собственными клиентами — создаю веб- и мобильные приложения, которые попадают к реальным пользователям в App Store и Google Play. React, Next.js и React Native — моя родная территория, с особой любовью к чистой архитектуре, быстрым циклам обратной связи и редким open-source пет-проектам. Живу во Франции, работаю откуда угодно, куда умещается ноутбук.",
+    "sections": {
+      "summary": "Профессиональный профиль",
+      "experience": "Опыт работы",
+      "skills": "Технические навыки",
+      "education": "Образование",
+      "projects": "Избранные проекты",
+      "languages": "Языки",
+      "links": "Ссылки"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Инженер-программист",
+        "company": "Kabila",
+        "location": "Мадрид, Испания",
+        "period": "С июля 2022",
+        "descriptions": [
+          "Руковожу фронтенд-командой, создающей продакшен веб-приложения на React и Next.js",
+          "Отвечаю за технический roadmap, планирование спринтов и архитектурные решения",
+          "Менторю младших разработчиков и провожу код-ревью",
+          "Создаю и поддерживаю общую библиотеку компонентов и внутреннюю дизайн-систему",
+          "Выпускаю мобильные приложения-компаньоны на React Native и Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Фриланс",
+        "company": "Alexandre GOSSARD",
+        "location": "Шалон-ан-Шампань, Франция",
+        "period": "С июля 2022",
+        "descriptions": [
+          "Создаю full-stack веб-приложения на React и Next.js для прямых клиентов",
+          "Выпускаю кросс-платформенные мобильные приложения в App Store и Google Play",
+          "Настраиваю CI/CD-пайплайны и автоматизированные процессы деплоя",
+          "Консультирую по архитектуре, выбору технологий и оценке проектов",
+          "Веду коммуникацию с клиентами и слежу за сроками поставки в каждом проекте"
+        ]
+      },
+      "archeMC2": {
+        "name": "Стажировка по контракту",
+        "company": "Arche MC2",
+        "location": "Шалон-ан-Шампань, Франция",
+        "period": "Сентябрь 2022 — август 2023",
+        "descriptions": [
+          "Создавал GitLab CI/CD-пайплайны для автоматического тестирования и развёртывания",
+          "Контейнеризировал внутренние приложения и сервисы с помощью Docker",
+          "Автоматизировал рутинные задачи системного администрирования shell-скриптами",
+          "Мониторил состояние систем и повышал отказоустойчивость инфраструктуры"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Системное администрирование и безопасность (профессиональный бакалавриат)",
+        "location": "IUT Châlons (Шалон-ан-Шампань, Франция)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Сети и телекоммуникации (среднее техническое)",
+        "location": "IUT Châlons (Шалон-ан-Шампань, Франция)",
+        "period": "2020–2022",
+        "descriptions": ["Второе место в выпуске"]
+      },
+      "lyceeBac": {
+        "name": "Научный бакалавриат (аналог A-Level)",
+        "location": "Lycée Jean Talon (Шалон-ан-Шампань, Франция)",
+        "period": "2019–2020",
+        "descriptions": [
+          "Специализация ISN (Информатика и цифровые науки)",
+          "С отличием"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Web3 социальная платформа и NFT-экосистема на Hedera, с NFT-маркетплейсом, сообществами, лаунчпадами и инструментами для авторов."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Универсальный NFT-инструментарий для авторов и сообществ на Hedera. Мощная и простая платформа для создания, запуска и управления NFT-коллекциями с полным контролем."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Некастодиальный, простой и безопасный кошелёк для сети Hedera. Управляйте аккаунтами, токенами, NFT и подключайтесь к DApp, сохраняя полный контроль над активами."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Профессиональный сайт автосервиса с услугами, прозрачным прайсом и контактной информацией."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Инструмент мониторинга DASAN OLT/ONU [open-source]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Кастомная e-commerce платформа для профессиональной гравировальной студии с каталогом, онлайн-заказами и админ-панелью управления заказами."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Моё предыдущее портфолио на Next.js и Chakra UI с тёмной темой и плавными анимациями."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Стартовый набор с Next.js, Chakra-UI, Framer-Motion на TypeScript. Включает несколько компонентов, интернационализацию, SEO и больше."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "Платформа доставки посылок, созданная для проекта первого года DUT Сети и Телекоммуникации."
+      }
+    },
+    "skillGroups": {
+      "languages": "Языки",
+      "frameworks": "Фреймворки",
+      "uiStyling": "UI / Стилизация",
+      "tooling": "Инструменты",
+      "databases": "Базы данных",
+      "cloud": "Облако",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Автоматизация",
+      "ai": "ИИ"
+    },
+    "spokenLanguages": {
+      "fr": "Французский",
+      "en": "Английский",
+      "ru": "Русский",
+      "es": "Испанский"
+    },
+    "languageLevels": {
+      "native": "Родной",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Мотоциклы",
+      "cars": "Автомобили",
+      "weightlifting": "Силовые тренировки",
+      "calisthenics": "Калистеника",
+      "traveling": "Путешествия",
+      "manga": "Манга",
+      "gaming": "Видеоигры"
+    }
+  }
+}

@@ -76,7 +76,7 @@
   },
   "overrides": [
     {
-      "includes": ["app/opengraph-image.tsx"],
+      "includes": ["app/\\[locale\\]/opengraph-image.tsx"],
       "linter": {
         "rules": {
           "a11y": {
@@ -89,7 +89,7 @@
       }
     },
     {
-      "includes": ["app/layout.tsx"],
+      "includes": ["app/\\[locale\\]/layout.tsx"],
       "linter": {
         "rules": {
           "security": {

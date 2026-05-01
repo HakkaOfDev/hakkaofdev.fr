@@ -1,0 +1,607 @@
+{
+  "Metadata": {
+    "title": "Alexandre Gossard | Nomade numérique & Ingénieur logiciel",
+    "description": "Nomade numérique et ingénieur logiciel freelance. Passionné d'open source, je conçois des expériences web performantes avec React et Next.js.",
+    "jobTitle": "Ingénieur logiciel",
+    "location": "Châlons-en-Champagne, France",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Développeur frontend",
+      "Nomade numérique",
+      "Open source",
+      "Technologies modernes",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Ingénieur logiciel",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Conçu avec <heart></heart> par <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Bienvenue <wave>👋</wave>",
+    "intro": "<tagline>Nomade numérique</tagline> · <job>Ingénieur logiciel</job> · <freelance>Freelance</freelance>",
+    "tags": {
+      "openSource": "Adepte de l'open source",
+      "calisthenics": "Pratiquant de calisthénie",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Démarrer",
+      "work": "Travail",
+      "profile": "Profil",
+      "extras": "Extras",
+      "utils": "Outils"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Aucune commande ne correspond à « {query} ».",
+    "header": {
+      "resetTitle": "Réinitialiser le terminal (Ctrl+R)",
+      "resetLabel": "Réinitialiser le terminal",
+      "settingsTitle": "Réglages du terminal",
+      "settingsLabel": "Réglages du terminal"
+    },
+    "trafficLights": {
+      "close": "Fermer le terminal",
+      "minimize": "Réduire le terminal",
+      "restoreMinimize": "Restaurer le terminal",
+      "expand": "Agrandir le terminal",
+      "restoreExpand": "Restaurer la taille du terminal"
+    },
+    "tabs": {
+      "rename": "Renommer {name}",
+      "close": "Fermer {name}",
+      "create": "Créer un onglet",
+      "limitReached": "Limite de sessions atteinte"
+    },
+    "search": {
+      "placeholder": "Filtrer l'historique des commandes…",
+      "hide": "Masquer la recherche"
+    },
+    "input": {
+      "placeholder": "saisissez une commande…",
+      "submit": "Exécuter la commande"
+    },
+    "fontSize": {
+      "label": "Taille de police",
+      "decrease": "Réduire la taille de police",
+      "decreaseTitle": "Réduire la taille de police (Ctrl+-)",
+      "increase": "Augmenter la taille de police",
+      "increaseTitle": "Augmenter la taille de police (Ctrl++)"
+    },
+    "settings": {
+      "title": "Réglages du terminal",
+      "resetAllTitle": "Réinitialiser tous les réglages (taille incluse)",
+      "resetAllLabel": "Tout réinitialiser",
+      "closeTitle": "Fermer les réglages",
+      "closeLabel": "Fermer les réglages",
+      "themeLabel": "Thème",
+      "fontLabel": "Police du terminal",
+      "scrollbackLabel": "Historique",
+      "languageLabel": "Langue",
+      "scrollbackOption": "{count, plural, =0 {aucune commande} =1 {1 commande} other {# commandes}}",
+      "darkSuffix": "sombre",
+      "lightSuffix": "clair",
+      "themeOption": "{label} ({mode})"
+    },
+    "shortcutsHeading": "Raccourcis clavier",
+    "shortcuts": {
+      "runCommand": "Exécuter une commande",
+      "autocomplete": "Compléter la saisie",
+      "history": "Historique et suggestions",
+      "clearOutput": "Effacer la sortie",
+      "resetTerminal": "Réinitialiser le terminal",
+      "toggleSearch": "Basculer la recherche",
+      "increaseFontSize": "Augmenter la taille de police",
+      "decreaseFontSize": "Réduire la taille de police"
+    },
+    "closeMessages": [
+      "Bien essayé ! Tu ne peux pas me fermer.",
+      "Je ne bouge pas d'ici. Essaie « help » à la place !",
+      "Non. Ce terminal a des problèmes de confiance avec les boutons de fermeture.",
+      "Erreur 418 : je suis une théière, pas une fenêtre fermable.",
+      "sudo rm -rf / ? Heu… non.",
+      "Tu pensais vraiment que ça allait marcher ?",
+      "Me fermer ? Par ces temps qui courent ?",
+      "Je suis bâti différemment. Essaie « contact » à la place."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Travail",
+      "Profile": "Profil",
+      "Guestbook": "Livre d'or",
+      "Spotify": "Spotify",
+      "Theme": "Thème",
+      "Terminal": "Terminal"
+    },
+    "descriptions": {
+      "projects": "Ce que j'ai construit, livré ou auquel j'ai contribué",
+      "experiences": "Mes expériences professionnelles et accomplissements",
+      "about": "En savoir plus sur mon parcours, mes intérêts et mes objectifs",
+      "skills": "Compétences techniques, outils et technologies que j'utilise",
+      "education": "Mon parcours académique et mes diplômes",
+      "contact": "Mon adresse e-mail, mes liens sociaux et mes canaux de contact",
+      "guestbook": "Affiche l'aide pour les sous-commandes du livre d'or",
+      "cv": "Prévisualiser et télécharger mon CV au format PDF",
+      "spotify": "Affiche l'aide pour les sous-commandes Spotify",
+      "theme": "Afficher ou changer le thème de l'interface",
+      "help": "Afficher toutes les commandes disponibles avec leurs descriptions",
+      "clear": "Effacer toutes les commandes et sorties précédentes",
+      "reset": "Réinitialiser le terminal à l'écran d'accueil",
+      "stats": "Afficher mon activité de codage, GitHub et le nombre de visiteurs",
+      "repo": "Ouvrir le code source de ce portfolio",
+      "echo": "Afficher un message dans le terminal",
+      "spotifyNow": "Afficher le morceau en cours d'écoute",
+      "spotifyTop": "Afficher mes morceaux préférés",
+      "spotifyHistory": "Afficher mon historique d'écoute",
+      "guestbookRead": "Parcourir les dernières entrées du livre d'or",
+      "guestbookSign": "Laisser un message dans le livre d'or",
+      "themeList": "Afficher tous les thèmes disponibles",
+      "themeSet": "Appliquer un thème par son nom (ex. theme set dracula)",
+      "themePreview": "Prévisualiser un thème sans l'appliquer",
+      "themeCreate": "Créer un thème personnalisé via l'éditeur visuel ou JSON",
+      "themeValidate": "Vérifier le contraste du thème actuel",
+      "lang": "Afficher ou changer la langue active",
+      "langSet": "Changer de langue (ex. lang set fr)",
+      "langAuto": "Réactiver la détection automatique de la langue"
+    },
+    "help": {
+      "available": "Commandes disponibles",
+      "tip": "Astuce : cliquez sur une commande ci-dessus ou tapez-la dans l'invite pour l'exécuter.",
+      "subCommands": "Sous-commandes"
+    },
+    "notFound": {
+      "title": "zsh: commande introuvable : {input}",
+      "didYouMean": "Vouliez-vous dire {suggestions} ?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Utilisation :",
+      "examplePrefix": "Exemple :",
+      "tooManyArgs": "Trop d'arguments.",
+      "unknown": "{label} inconnue : {sub}.",
+      "useOneOf": "Utilisez une de ces options : {options}.",
+      "subcommand": "sous-commande"
+    },
+    "about": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "age": "Âge",
+      "yearsOld": "{years, plural, one {# an} other {# ans}}",
+      "location": "Localisation",
+      "email": "E-mail",
+      "languages": "Langues",
+      "hobbies": "Loisirs"
+    },
+    "contact": {
+      "intro": "Privilégiez l'e-mail pour les opportunités, demandes freelance ou collaborations techniques.",
+      "primaryEmail": "E-mail principal :",
+      "location": "Localisation :",
+      "socialProfiles": "Profils sociaux :"
+    },
+    "stats": {
+      "totalCodingTime": "Temps total de codage",
+      "topLanguage": "Langage principal",
+      "githubStars": "Étoiles GitHub",
+      "contributions": "Contributions ({year})",
+      "codingSince": "Code depuis",
+      "codingSinceValue": "{since} ({years} ans)",
+      "visitors": "Visiteurs",
+      "failed": "Impossible de récupérer les statistiques. Réessayez plus tard.",
+      "na": "N/D"
+    },
+    "repo": {
+      "starsLabel": "Étoiles",
+      "forksLabel": "Forks",
+      "licenseLabel": "Licence",
+      "copyAria": "Copier dans le presse-papiers",
+      "copy": "Copier",
+      "copiedAria": "Copié",
+      "copiedNotice": "Copié !",
+      "copyFailedAria": "Échec de la copie",
+      "copyFailedNotice": "Réessayer",
+      "fallback": "Le code source de ce portfolio est disponible ici :"
+    },
+    "cv": {
+      "openPreview": "Ouvrir la prévisualisation du PDF",
+      "downloadPdf": "Télécharger le PDF",
+      "endpointsLabel": "Points d'accès :",
+      "endpointsAnd": "et"
+    },
+    "projects": {
+      "openLabel": "Ouvrir le projet : {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "naviguer",
+    "complete": "compléter",
+    "run": "exécuter"
+  },
+  "Lang": {
+    "subCommandsTitle": "Commandes de langue",
+    "currentLabel": "Langue actuelle :",
+    "availablePrefix": "Disponibles :",
+    "usagePrefix": "Utilisation :",
+    "switching": "Passage en {locale}…",
+    "autoCleared": "La langue sera détectée automatiquement au prochain chargement.",
+    "missingCode": "Code de langue manquant.",
+    "unknownLocale": "Langue inconnue : {code}.",
+    "unknownSubcommand": "Sous-commande inconnue : {sub}.",
+    "tooManyArgs": "Trop d'arguments.",
+    "switcher": {
+      "ariaLabel": "Changer de langue",
+      "title": "Changer de langue"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Nomade numérique",
+      "nextjs": "Next.js",
+      "uiEngineering": "Ingénierie d'interface",
+      "openSource": "Open source"
+    },
+    "footer": "Portfolio"
+  },
+  "Guestbook": {
+    "title": "Commandes du livre d'or",
+    "validation": {
+      "nameMin": "Le nom doit contenir au moins {min} caractères.",
+      "nameMax": "Le nom doit contenir au maximum {max} caractères.",
+      "messageMin": "Le message doit contenir au moins {min} caractères.",
+      "messageMax": "Le message doit contenir au maximum {max} caractères.",
+      "websiteMax": "Le site web ne doit pas dépasser {max} caractères.",
+      "websiteInvalid": "L'URL du site web n'est pas valide."
+    },
+    "sign": {
+      "intro": "Laissez un message dans mon livre d'or.",
+      "namePlaceholder": "Votre nom",
+      "websitePlaceholder": "Site web (optionnel)",
+      "messagePlaceholder": "Votre message",
+      "submit": "Signer",
+      "submitPending": "Entrée envoyée et en attente de modération.",
+      "submitPublishedPrefix": "Entrée publiée !",
+      "submitFailed": "Impossible d'envoyer l'entrée du livre d'or."
+    },
+    "read": {
+      "headerLabel": "livre d'or",
+      "entry": "{count, plural, =0 {0 entrée} one {# entrée} other {# entrées}}",
+      "unavailable": "indisponible",
+      "refresh": "actualiser",
+      "refreshAria": "Actualiser les entrées du livre d'or",
+      "errorPrefix": "erreur :",
+      "errorFallback": "Impossible de charger les entrées du livre d'or.",
+      "noneFromCountryPrefix": "Aucune entrée depuis",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Aucune entrée pour le moment. Lancez",
+      "noneYetSuffix": "pour être le premier.",
+      "filter": {
+        "ariaLabel": "Filtrer les entrées du livre d'or",
+        "label": "filtrer",
+        "sort": "tri",
+        "newest": "plus récents",
+        "oldest": "plus anciens",
+        "country": "pays",
+        "allCountries": "Tous les pays",
+        "clearCountry": "Effacer le filtre pays"
+      }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Charge JSON invalide.",
+        "schemaMissing": "Le livre d'or n'est pas initialisé. Exécutez supabase/schema/guestbook.sql.",
+        "unavailable": "Le service du livre d'or est indisponible.",
+        "fetchEntriesFailed": "Impossible de récupérer les entrées du livre d'or.",
+        "fetchCountriesFailed": "Impossible de récupérer la liste des pays.",
+        "saveFailed": "Impossible d'enregistrer l'entrée du livre d'or.",
+        "rateLimitCheckFailed": "Échec de la vérification de la limite de débit.",
+        "rateLimitExceeded": "Limite de débit dépassée. Réessayez plus tard.",
+        "nameTooShort": "Le nom doit contenir au moins 2 caractères.",
+        "messageTooShort": "Le message doit contenir au moins 2 caractères.",
+        "websiteInvalid": "L'URL du site web n'est pas valide."
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Commandes Spotify",
+    "notPlaying": "Aucune lecture en cours 😕",
+    "unavailable": "Spotify n'est pas configuré ou est indisponible.",
+    "nowPlayingPrefix": "Lecture en cours sur Spotify :",
+    "openNowPlayingAria": "Ouvrir le morceau en cours : {name}",
+    "openRecentlyPlayedAria": "Ouvrir le morceau récemment écouté : {name}",
+    "openTopTrackAria": "Ouvrir le morceau préféré : {name}",
+    "openTopAlbumAria": "Ouvrir l'album préféré : {name}",
+    "topTracks": {
+      "rank": "Rang",
+      "track": "Morceau",
+      "album": "Album"
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "CV",
+    "subject": "CV",
+    "summary": "Ingénieur logiciel, presque quatre ans d'expérience. Je travaille en freelance pour mes propres clients, en concevant des applications web et mobiles déployées auprès d'utilisateurs réels sur l'App Store et Google Play. React, Next.js et React Native sont mon terrain de jeu, avec un faible pour l'architecture propre, les boucles de feedback rapides et les projets open source de temps en temps. Basé en France, je travaille de partout où l'ordinateur portable peut tenir.",
+    "sections": {
+      "summary": "Résumé professionnel",
+      "experience": "Expérience",
+      "skills": "Compétences techniques",
+      "education": "Formation",
+      "projects": "Projets sélectionnés",
+      "languages": "Langues",
+      "links": "Liens"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Ingénieur logiciel",
+        "company": "Kabila",
+        "location": "Madrid, Espagne",
+        "period": "Depuis juillet 2022",
+        "descriptions": [
+          "Encadre une équipe frontend qui développe des applications web en production avec React et Next.js",
+          "Pilote la feuille de route technique, la planification des sprints et les décisions d'architecture",
+          "Encadre les développeurs juniors et anime les revues de code",
+          "Construit et maintient la bibliothèque de composants partagés et le design system interne",
+          "Livre les applications mobiles compagnons avec React Native et Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Freelance",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, France",
+        "period": "Depuis juillet 2022",
+        "descriptions": [
+          "Développe des applications web full-stack avec React et Next.js pour des clients directs",
+          "Livre des applications mobiles multiplateformes sur l'App Store et Google Play",
+          "Met en place des pipelines CI/CD et des workflows de déploiement automatisés",
+          "Conseille sur l'architecture, les choix techniques et le cadrage de projet",
+          "Gère la communication client et les délais de livraison sur chaque projet"
+        ]
+      },
+      "archeMC2": {
+        "name": "Apprentissage",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, France",
+        "period": "Septembre 2022 — Août 2023",
+        "descriptions": [
+          "Construction de pipelines GitLab CI/CD pour les tests et déploiements automatisés",
+          "Conteneurisation des applications et services internes avec Docker",
+          "Automatisation des tâches sysadmin de routine via des scripts shell",
+          "Surveillance de la santé système et amélioration de la résilience d'infrastructure"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Administration et sécurité des systèmes (licence professionnelle)",
+        "location": "IUT Châlons (Châlons-en-Champagne, France)",
+        "period": "2022-2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Réseaux et Télécommunications",
+        "location": "IUT Châlons (Châlons-en-Champagne, France)",
+        "period": "2020-2022",
+        "descriptions": ["Major de promotion"]
+      },
+      "lyceeBac": {
+        "name": "Baccalauréat scientifique",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, France)",
+        "period": "2019-2020",
+        "descriptions": [
+          "Spécialité ISN (Informatique et sciences du numérique)",
+          "Mention bien"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Une plateforme sociale Web3 et un écosystème NFT bâtis sur Hedera, avec une marketplace NFT, des plazas communautaires, des launchpads et des outils créateurs."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Une boîte à outils NFT tout-en-un pour les créateurs et communautés sur Hedera. Une plateforme puissante et simple pour créer, lancer et gérer ses collections NFT en gardant un contrôle total."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Un portefeuille non-custodial, simple et sécurisé pour le réseau Hedera. Gérez vos comptes, jetons, NFT et connectez-vous aux DApps tout en gardant le contrôle total de vos actifs."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Un site professionnel pour un garage automobile, avec services, tarifs transparents et coordonnées."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Outil de supervision pour les OLT/ONU DASAN [Open source]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Une plateforme e-commerce sur mesure pour un studio de gravure professionnel, avec catalogue produit, commandes en ligne et tableau de bord admin pour la gestion des commandes."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Mon précédent portfolio construit avec Next.js et Chakra UI, en mode sombre avec des animations fluides."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Un starter kit comprenant Next.js, Chakra-UI et Framer-Motion en TypeScript. Quelques composants, internationalisation, SEO et plus encore."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "Une plateforme de gestion de colis créée pour le projet de première année de DUT Réseaux & Télécoms."
+      }
+    },
+    "skillGroups": {
+      "languages": "Langages",
+      "frameworks": "Frameworks",
+      "uiStyling": "UI / Mise en forme",
+      "tooling": "Outils",
+      "databases": "Bases de données",
+      "cloud": "Cloud",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Automatisation",
+      "ai": "IA"
+    },
+    "spokenLanguages": {
+      "fr": "Français",
+      "en": "Anglais",
+      "ru": "Russe",
+      "es": "Espagnol"
+    },
+    "languageLevels": {
+      "native": "Langue maternelle",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Motos",
+      "cars": "Voitures",
+      "weightlifting": "Musculation",
+      "calisthenics": "Calisthénie",
+      "traveling": "Voyage",
+      "manga": "Manga",
+      "gaming": "Jeux vidéo"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Thème actuel :",
+    "darkSuffix": "sombre",
+    "lightSuffix": "clair",
+    "usagePrefix": "Utilisation :",
+    "themeCommandsTitle": "Commandes de thème",
+    "noArgs": "{command} ne prend pas d'argument.",
+    "missingName": "Nom du thème manquant.",
+    "tooManyArgs": "Trop d'arguments.",
+    "usageSet": "Utilisation : theme set <nom>",
+    "usagePreview": "Utilisation : theme preview <nom>",
+    "unknownSubcommand": "Sous-commande inconnue : {sub}. Utilisez une de ces options : {commands}.",
+    "list": {
+      "available": "Thèmes disponibles ({count}) :",
+      "tip": "Touchez ou cliquez sur un thème pour l'appliquer.",
+      "active": "(actif)",
+      "custom": "personnalisé",
+      "deleteAria": "Supprimer {label}"
+    },
+    "preview": {
+      "unknown": "Thème inconnu : {name}.",
+      "runListHint": "Lancez <link></link> pour voir les thèmes disponibles.",
+      "previewing": "Prévisualisation de {label}",
+      "autoReverts": "— retour automatique dans {seconds}s",
+      "applyHintPrefix": "Utilisez",
+      "applyHintSuffix": "pour l'appliquer définitivement."
+    },
+    "set": {
+      "unknownAvailable": "Thème inconnu : {name}. Thèmes disponibles :",
+      "updated": "Thème mis à jour vers {label}.",
+      "active": "Thème actif : {label} ({mode})"
+    },
+    "validate": {
+      "header": "Audit de contraste WCAG AA pour {name} :",
+      "passCount": "{count} OK",
+      "failCount": "{count} échec",
+      "totalChecked": "({count} paires vérifiées)",
+      "skippedWarning": "⚠️ Certaines couleurs ignorées (format non supporté)",
+      "allPass": "Toutes les paires passent les exigences WCAG AA.",
+      "someFail": "{count, plural, one {# paire} other {# paires}} en dessous du ratio de contraste requis. Pensez à ajuster les valeurs de luminosité.",
+      "pairs": {
+        "bodyText": "Texte courant",
+        "mutedOnBackground": "Texte atténué sur fond",
+        "mutedOnMuted": "Texte atténué sur fond atténué",
+        "accentOnAccent": "Texte accentué sur fond accentué",
+        "destructive": "Texte destructif",
+        "primary": "Accent primaire",
+        "secondary": "Accent secondaire",
+        "tertiary": "Accent tertiaire",
+        "quaternary": "Accent quaternaire",
+        "quinary": "Accent quinaire"
+      }
+    },
+    "create": {
+      "introPrefix": "Créez un thème personnalisé via l'",
+      "introSuffix": ".",
+      "modeVisual": "éditeur visuel",
+      "modeJson": "éditeur JSON",
+      "tabVisual": "Visuel",
+      "tabJson": "JSON",
+      "themeIdLabel": "Identifiant du thème",
+      "displayNameLabel": "Nom d'affichage",
+      "themeModeLabel": "Mode du thème",
+      "darkTheme": "Thème sombre",
+      "lightTheme": "Thème clair",
+      "colorsHeading": "Couleurs",
+      "colorPickerAria": "Sélecteur de couleur {label}",
+      "colorValueAria": "Valeur de couleur {label}",
+      "submit": "Créer le thème",
+      "copyJson": "Copier le JSON",
+      "copyJsonAria": "Copier le JSON dans le presse-papiers",
+      "resetColors": "Réinitialiser les couleurs",
+      "resetColorsAria": "Réinitialiser les couleurs aux valeurs par défaut",
+      "jsonHint": "Supporte OKLCH (recommandé), hex, rgb, hsl. La validation du contraste fonctionne pour tous les formats.",
+      "jsonRequired": "Clés requises : name, label, isDark, colors ({count} jetons)",
+      "previewToggle": "Aperçu en direct",
+      "successMessagePrefix": "Le thème personnalisé",
+      "successMessageSuffix": "a été créé et appliqué.",
+      "successHint": "Il sera conservé dans le localStorage de votre navigateur.",
+      "tryAgain": "Réessayer",
+      "errors": {
+        "nameAndLabelRequired": "Le nom et le libellé du thème sont obligatoires.",
+        "missingNameField": "Champ « name » obligatoire manquant (chaîne).",
+        "missingLabelField": "Champ « label » obligatoire manquant (chaîne).",
+        "missingIsDarkField": "Champ « isDark » obligatoire manquant (booléen).",
+        "missingColorsField": "Champ « colors » obligatoire manquant (objet).",
+        "missingColor": "Couleur manquante ou invalide : « {key} ».",
+        "invalidJson": "Entrée JSON invalide.",
+        "invalidData": "Données de thème invalides."
+      },
+      "colors": {
+        "background": "Arrière-plan",
+        "foreground": "Premier plan",
+        "muted": "Atténué",
+        "muted-foreground": "Premier plan atténué",
+        "accent": "Accent",
+        "accent-foreground": "Premier plan accent",
+        "destructive": "Destructif",
+        "border": "Bordure",
+        "input": "Champ de saisie",
+        "ring": "Anneau",
+        "primary": "Primaire",
+        "secondary": "Secondaire",
+        "tertiary": "Tertiaire",
+        "quaternary": "Quaternaire",
+        "quinary": "Quinaire"
+      }
+    }
+  }
+}

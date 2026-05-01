@@ -96,8 +96,14 @@
 .terminal-shell button,
 .terminal-shell kbd,
 .terminal-shell code {
-  font-family: var(--terminal-font-family), ui-monospace, SFMono-Regular, Menlo,
-    Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* Script-specific fallbacks: each var only resolves on its own locale
+     (see i18n/fonts.ts). Browsers walk this stack per-glyph, so Latin /
+     Cyrillic / Greek stay in JetBrains Mono while CJK / Devanagari /
+     Arabic / Hebrew fall through to the matching Noto font. */
+  font-family: var(--terminal-font-family), var(--font-noto-sc),
+    var(--font-noto-jp), var(--font-noto-kr), var(--font-noto-deva),
+    var(--font-noto-ar), var(--font-noto-he), ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /* ── Terminal zoom controls ── */

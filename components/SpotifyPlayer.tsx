@@ -4,9 +4,11 @@ import { useQuery } from "@tanstack/react-query";
 import { m } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { getNowPlaying } from "@/app/actions";
 
 function SpotifyPlayer() {
+  const t = useTranslations("Spotify");
   const { data } = useQuery({
     queryKey: ["now-playing"],
     queryFn: () => getNowPlaying(),
@@ -28,7 +30,7 @@ function SpotifyPlayer() {
         target="_blank"
         className="group flex items-center gap-2.5 px-4 py-1.5 transition-colors duration-150 hover:bg-muted/30 dark:hover:bg-overlay-subtle"
       >
-        <span className="sr-only">Now playing on Spotify:</span>
+        <span className="sr-only">{t("nowPlayingPrefix")}</span>
         {/* Animated bars */}
         <div
           className="flex h-3.5 shrink-0 items-end gap-[2px]"

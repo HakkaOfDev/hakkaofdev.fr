@@ -1,7 +1,8 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 export default function SpotifyUnavailable() {
-  return (
-    <p className="text-destructive">
-      Spotify is not configured or is unavailable.
-    </p>
-  );
+  const t = useTranslations("Spotify");
+  return <p className="text-destructive">{t("unavailable")}</p>;
 }

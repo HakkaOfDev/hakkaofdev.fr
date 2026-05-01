@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useMemo } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { useCommands } from "@/components/providers/CommandsProvider";
@@ -27,6 +28,7 @@ function levenshtein(a: string, b: string) {
 const ALL_COMMAND_NAMES = ALL_COMMANDS.map((c) => c.command);
 
 function CNotFound({ input }: { input: string }) {
+  const t = useTranslations("Commands.notFound");
   const { addCommand } = useCommands();
 
   const suggestions = useMemo(() => {
@@ -53,24 +55,28 @@ function CNotFound({ input }: { input: string }) {
   return (
     <AnimatedSpan>
       <p className="font-mono text-destructive text-xs">
-        zsh: command not found: {input}
+        {t("title", { input })}
       </p>
       {suggestions.length > 0 && (
         <p className="mt-1 text-muted-foreground text-xs">
-          Did you mean{" "}
-          {suggestions.map((s, idx) => (
-            <span key={s}>
-              <button
-                type="button"
-                className="font-mono font-semibold text-primary transition-colors duration-200 hover:text-primary/80"
-                onClick={() => addCommand(s)}
-              >
-                {s}
-              </button>
-              {idx < suggestions.length - 1 ? ", " : ""}
-            </span>
-          ))}
-          ?
+          {t.rich("didYouMean", {
+            suggestions: () => (
+              <>
+                {suggestions.map((s, idx) => (
+                  <span key={s}>
+                    <button
+                      type="button"
+                      className="font-mono font-semibold text-primary transition-colors duration-200 hover:text-primary/80"
+                      onClick={() => addCommand(s)}
+                    >
+                      {s}
+                    </button>
+                    {idx < suggestions.length - 1 ? ", " : ""}
+                  </span>
+                ))}
+              </>
+            ),
+          })}
         </p>
       )}
     </AnimatedSpan>

@@ -64,59 +64,60 @@ export type ContrastPair = {
   fg: keyof ThemeColors;
   bg: keyof ThemeColors;
   level: "normal" | "large";
-  label: string;
+  /** Key under `Theme.validate.pairs.*` for the localized label. */
+  slug: string;
 };
 
 export const REQUIRED_CONTRAST_PAIRS: ContrastPair[] = [
-  { fg: "foreground", bg: "background", level: "normal", label: "Body text" },
+  { fg: "foreground", bg: "background", level: "normal", slug: "bodyText" },
   {
     fg: "muted-foreground",
     bg: "background",
     level: "normal",
-    label: "Muted text on background",
+    slug: "mutedOnBackground",
   },
   {
     fg: "muted-foreground",
     bg: "muted",
     level: "normal",
-    label: "Muted text on muted bg",
+    slug: "mutedOnMuted",
   },
   {
     fg: "accent-foreground",
     bg: "accent",
     level: "normal",
-    label: "Accent text on accent bg",
+    slug: "accentOnAccent",
   },
   {
     fg: "destructive",
     bg: "background",
     level: "normal",
-    label: "Destructive text",
+    slug: "destructive",
   },
-  { fg: "primary", bg: "background", level: "large", label: "Primary accent" },
+  { fg: "primary", bg: "background", level: "large", slug: "primary" },
   {
     fg: "secondary",
     bg: "background",
     level: "large",
-    label: "Secondary accent",
+    slug: "secondary",
   },
   {
     fg: "tertiary",
     bg: "background",
     level: "large",
-    label: "Tertiary accent",
+    slug: "tertiary",
   },
   {
     fg: "quaternary",
     bg: "background",
     level: "large",
-    label: "Quaternary accent",
+    slug: "quaternary",
   },
   {
     fg: "quinary",
     bg: "background",
     level: "large",
-    label: "Quinary accent",
+    slug: "quinary",
   },
 ];
 
