@@ -23,6 +23,8 @@ const config = {
     "subject-case": [2, "never", ["start-case", "pascal-case", "upper-case"]],
     "subject-empty": [2, "never"],
     "type-empty": [2, "never"],
+    "body-max-line-length": [0],
+    "footer-max-line-length": [0],
   },
 };
 
