@@ -1,7 +1,19 @@
 import Image from "next/image";
+import { notFound } from "next/navigation";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import MainScreen from "@/components/MainScreen";
+import { routing } from "@/i18n/routing";
 
-export default function Home() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
+  setRequestLocale(locale);
+
   return (
     <main className="container mx-auto flex flex-1 flex-col items-center justify-center gap-8 overflow-hidden px-4 py-6">
       <Image

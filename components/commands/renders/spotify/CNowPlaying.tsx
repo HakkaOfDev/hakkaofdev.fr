@@ -1,20 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { getNowPlaying } from "@/app/actions";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import SpotifyQuery from "./SpotifyQuery";
 
 function CNowPlaying() {
+  const t = useTranslations("Spotify");
   return (
     <SpotifyQuery queryKey={["now-playing"]} queryFn={getNowPlaying}>
       {(data) => {
-        if (!data.is_playing) return <p>Not playing 😕</p>;
+        if (!data.is_playing) return <p>{t("notPlaying")}</p>;
 
         return (
           <Link
             href={data.item.external_urls.spotify}
             target="_blank"
-            aria-label={`Open now playing track: ${data.item.name}`}
+            aria-label={t("openNowPlayingAria", { name: data.item.name })}
             className="group w-fit"
           >
             <AnimatedSpan className="flex w-fit items-center gap-3 rounded-lg border p-3">

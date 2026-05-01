@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useMemo } from "react";
 import { cn } from "@/lib/utils";
 import CommandItem from "./commands/CommandItem";
@@ -9,6 +10,7 @@ import { Terminal } from "./terminal/Terminal";
 import WelcomeHero from "./WelcomeHero";
 
 function MainScreenContent() {
+  const t = useTranslations("Terminal");
   const { commands, sessionSnapshots, activeSessionId } = useCommands();
   const { outputQuery } = useTerminal();
   const normalizedQuery = outputQuery.trim().toLowerCase();
@@ -41,7 +43,7 @@ function MainScreenContent() {
 
         {shouldFilter && session.commands.length > 0 && !hasMatch && (
           <p className="mb-3 pl-5 font-mono text-muted-foreground/70 text-xs">
-            No command matches "{normalizedQuery}".
+            {t("noMatch", { query: normalizedQuery })}
           </p>
         )}
 

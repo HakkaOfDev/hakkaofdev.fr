@@ -5,9 +5,13 @@
 ### Interactive terminal-style portfolio
 
 [![Live](https://img.shields.io/badge/%E2%96%B6%20Live-hakkaofdev.fr-22d3ee?style=for-the-badge&labelColor=141414)](https://hakkaofdev.fr)
-[![Version](https://img.shields.io/badge/v1.5.0?style=for-the-badge&logo=semver&logoColor=E8B931&labelColor=141414)](https://github.com/hakkaofdev/hakkaofdev.fr/releases) <!-- x-release-please-version -->
+[![Version](https://img.shields.io/static/v1?label=&message=v1.5.0&color=E8B931&style=for-the-badge&logo=semver&logoColor=E8B931&labelColor=141414)](https://github.com/hakkaofdev/hakkaofdev.fr/releases) <!-- x-release-please-version -->
 [![CI](https://img.shields.io/github/actions/workflow/status/hakkaofdev/hakkaofdev.fr/ci.yml?style=for-the-badge&logo=github-actions&logoColor=22d3ee&label=CI&labelColor=141414)](https://github.com/hakkaofdev/hakkaofdev.fr/actions)
 [![License](https://img.shields.io/badge/license-MIT-A855F7?style=for-the-badge&labelColor=141414)](LICENSE)
+
+<br />
+
+<img src="public/preview.png" alt="hakkaofdev.fr preview" width="640" style="border-radius:8px;" />
 
 <br />
 
@@ -19,10 +23,6 @@
 [![Vercel](https://img.shields.io/badge/Vercel-141414?style=flat-square&logo=vercel&logoColor=fff)](https://vercel.com)
 [![Biome](https://img.shields.io/badge/Biome-60A5FA?style=flat-square&logo=biome&logoColor=60A5FA&labelColor=141414)](https://biomejs.dev)
 [![Spotify](https://img.shields.io/badge/Spotify%20API-1DB954?style=flat-square&logo=spotify&logoColor=1DB954&labelColor=141414)](https://developer.spotify.com)
-
-<br />
-
-<img src="public/preview.png" alt="hakkaofdev.fr preview" width="640" style="border-radius:8px;" />
 
 </div>
 

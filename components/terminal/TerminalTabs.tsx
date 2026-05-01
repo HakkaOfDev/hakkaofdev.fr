@@ -1,6 +1,7 @@
 "use client";
 
 import { Plus, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import type { SessionTab } from "@/types/terminal";
@@ -34,6 +35,7 @@ function TerminalTabs({
   onCommitRename,
   onCancelRename,
 }: TerminalTabsProps) {
+  const t = useTranslations("Terminal");
   const renameInputRef = useRef<HTMLInputElement | null>(null);
   const shouldPreserveInputFocus = () =>
     typeof document !== "undefined" &&
@@ -47,7 +49,10 @@ function TerminalTabs({
   }, [editingTabId]);
 
   return (
-    <div className="terminal-tabs-scrollbar flex items-center gap-1 overflow-x-auto border-border/40 border-b bg-muted/20 px-2 py-1 dark:border-overlay-subtle dark:bg-overlay-subtle/70">
+    <div
+      dir="ltr"
+      className="terminal-tabs-scrollbar flex items-center gap-1 overflow-x-auto border-border/40 border-b bg-muted/20 px-2 py-1 dark:border-overlay-subtle dark:bg-overlay-subtle/70"
+    >
       {sessionTabs.map((tab) => {
         const isActive = tab.id === activeSessionId;
         const isEditing = editingTabId === tab.id;
@@ -79,7 +84,7 @@ function TerminalTabs({
                   }
                 }}
                 className="h-6 w-24 bg-transparent px-2 py-1 font-mono text-xs outline-none"
-                aria-label={`Rename ${tab.name}`}
+                aria-label={t("tabs.rename", { name: tab.name })}
               />
             ) : (
               <button
@@ -112,8 +117,8 @@ function TerminalTabs({
                   onCloseTab(tab.id);
                 }}
                 className="mr-1 flex h-4 w-4 cursor-pointer items-center justify-center rounded text-muted-foreground/70 transition-colors hover:text-foreground"
-                aria-label={`Close ${tab.name}`}
-                title={`Close ${tab.name}`}
+                aria-label={t("tabs.close", { name: tab.name })}
+                title={t("tabs.close", { name: tab.name })}
               >
                 <X size={10} />
               </button>
@@ -135,10 +140,8 @@ function TerminalTabs({
             ? "border-border/50 bg-background/60 text-muted-foreground hover:bg-muted/40 hover:text-foreground dark:border-overlay-medium dark:bg-overlay-subtle dark:hover:bg-overlay-medium"
             : "cursor-not-allowed border-border/40 bg-muted/20 text-muted-foreground/50 dark:border-overlay-subtle dark:bg-overlay-subtle/40",
         )}
-        aria-label="Create terminal tab"
-        title={
-          canCreateSession ? "Create terminal tab" : "Session limit reached"
-        }
+        aria-label={t("tabs.create")}
+        title={canCreateSession ? t("tabs.create") : t("tabs.limitReached")}
       >
         <Plus size={11} />
       </button>

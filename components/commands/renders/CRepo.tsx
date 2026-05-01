@@ -12,6 +12,7 @@ import {
   Star,
 } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 import { getGitHubRepo } from "@/app/actions";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
@@ -26,6 +27,7 @@ function formatCount(count: number): string {
 }
 
 function CopyButton({ text }: { text: string }) {
+  const t = useTranslations("Commands.repo");
   const [status, setStatus] = useState<"idle" | "copied" | "failed">("idle");
 
   const handleCopy = useCallback(async () => {
@@ -46,16 +48,16 @@ function CopyButton({ text }: { text: string }) {
       className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-primary/10 px-2 py-1 font-medium text-primary text-xs ring-1 ring-primary/20 ring-inset transition-colors duration-200 hover:bg-primary/20"
       aria-label={
         status === "copied"
-          ? "Copied"
+          ? t("copiedAria")
           : status === "failed"
-            ? "Copy failed"
-            : "Copy to clipboard"
+            ? t("copyFailedAria")
+            : t("copyAria")
       }
     >
       {status === "copied" ? <Check size={12} /> : <Copy size={12} />}
-      {status === "copied" && "Copied!"}
-      {status === "failed" && "Try again"}
-      {status === "idle" && "Copy"}
+      {status === "copied" && t("copiedNotice")}
+      {status === "failed" && t("copyFailedNotice")}
+      {status === "idle" && t("copy")}
     </button>
   );
 }
@@ -101,6 +103,7 @@ function LanguageDot({ language }: { language: string }) {
 }
 
 function RepoCard({ repo }: { repo: GitHubRepo }) {
+  const t = useTranslations("Commands.repo");
   const cloneUrl = `git clone ${SITE.repositoryUrl}.git`;
 
   return (
@@ -146,18 +149,18 @@ function RepoCard({ repo }: { repo: GitHubRepo }) {
           <Stat
             icon={<Star size={12} />}
             value={formatCount(repo.stargazers_count)}
-            label="Stars"
+            label={t("starsLabel")}
           />
           <Stat
             icon={<GitFork size={12} />}
             value={formatCount(repo.forks_count)}
-            label="Forks"
+            label={t("forksLabel")}
           />
           {repo.license && (
             <Stat
               icon={<Scale size={12} />}
               value={repo.license.spdx_id}
-              label="License"
+              label={t("licenseLabel")}
             />
           )}
         </div>
@@ -198,13 +201,12 @@ function RepoSkeleton() {
 }
 
 function RepoFallback() {
+  const t = useTranslations("Commands.repo");
   const cloneUrl = `git clone ${SITE.repositoryUrl}.git`;
 
   return (
     <AnimatedSpan className="gap-2">
-      <p className="text-muted-foreground">
-        Source code for this portfolio is available here:
-      </p>
+      <p className="text-muted-foreground">{t("fallback")}</p>
       <p>
         <Link
           href={SITE.repositoryUrl}

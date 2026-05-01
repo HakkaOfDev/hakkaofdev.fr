@@ -1,0 +1,607 @@
+{
+  "Metadata": {
+    "title": "Alexandre Gossard | Dijital göçebe ve yazılım mühendisi",
+    "description": "Dijital göçebe ve serbest çalışan yazılım mühendisi. Open source tutkunuyum, React ve Next.js ile yüksek performanslı web deneyimleri tasarlıyorum.",
+    "jobTitle": "Yazılım mühendisi",
+    "location": "Châlons-en-Champagne, Fransa",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Frontend geliştirici",
+      "Dijital göçebe",
+      "Open source",
+      "Modern teknolojiler",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Yazılım mühendisi",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "<heart></heart> ile <name></name> tarafından yapıldı"
+  },
+  "Welcome": {
+    "greeting": "~ Hoş geldin <wave>👋</wave>",
+    "intro": "<tagline>Dijital göçebe</tagline> · <job>Yazılım mühendisi</job> · <freelance>Serbest çalışan</freelance>",
+    "tags": {
+      "openSource": "Open source savunucusu",
+      "calisthenics": "Kalistenik tutkunu",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Başla",
+      "work": "İş",
+      "profile": "Profil",
+      "extras": "Ekstralar",
+      "utils": "Araçlar"
+    }
+  },
+  "Terminal": {
+    "noMatch": "«{query}» ile eşleşen komut yok.",
+    "header": {
+      "resetTitle": "Terminali sıfırla (Ctrl+R)",
+      "resetLabel": "Terminali sıfırla",
+      "settingsTitle": "Terminal ayarları",
+      "settingsLabel": "Terminal ayarları"
+    },
+    "trafficLights": {
+      "close": "Terminali kapat",
+      "minimize": "Terminali küçült",
+      "restoreMinimize": "Terminali geri yükle",
+      "expand": "Terminali büyüt",
+      "restoreExpand": "Terminal boyutunu geri yükle"
+    },
+    "tabs": {
+      "rename": "{name} sekmesini yeniden adlandır",
+      "close": "{name} sekmesini kapat",
+      "create": "Sekme oluştur",
+      "limitReached": "Oturum sınırına ulaşıldı"
+    },
+    "search": {
+      "placeholder": "Komut geçmişini filtrele…",
+      "hide": "Aramayı gizle"
+    },
+    "input": {
+      "placeholder": "bir komut yaz…",
+      "submit": "Komutu çalıştır"
+    },
+    "fontSize": {
+      "label": "Yazı boyutu",
+      "decrease": "Yazı boyutunu küçült",
+      "decreaseTitle": "Yazı boyutunu küçült (Ctrl+-)",
+      "increase": "Yazı boyutunu büyüt",
+      "increaseTitle": "Yazı boyutunu büyüt (Ctrl++)"
+    },
+    "settings": {
+      "title": "Terminal ayarları",
+      "resetAllTitle": "Tüm ayarları sıfırla (boyut dahil)",
+      "resetAllLabel": "Tümünü sıfırla",
+      "closeTitle": "Ayarları kapat",
+      "closeLabel": "Ayarları kapat",
+      "themeLabel": "Tema",
+      "fontLabel": "Terminal yazı tipi",
+      "scrollbackLabel": "Geçmiş",
+      "scrollbackOption": "{count, plural, =0 {komut yok} one {1 komut} other {# komut}}",
+      "darkSuffix": "koyu",
+      "lightSuffix": "açık",
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Dil"
+    },
+    "shortcutsHeading": "Klavye kısayolları",
+    "shortcuts": {
+      "runCommand": "Komutu çalıştır",
+      "autocomplete": "Otomatik tamamla",
+      "history": "Geçmiş ve öneriler",
+      "clearOutput": "Çıktıyı temizle",
+      "resetTerminal": "Terminali sıfırla",
+      "toggleSearch": "Aramayı aç/kapat",
+      "increaseFontSize": "Yazı boyutunu büyüt",
+      "decreaseFontSize": "Yazı boyutunu küçült"
+    },
+    "closeMessages": [
+      "İyi denemeydi! Beni kapatamazsın.",
+      "Hiçbir yere gitmiyorum. «help» dene!",
+      "Hayır. Bu terminalin kapatma butonlarına güven sorunu var.",
+      "Hata 418: Ben bir çaydanlığım, kapatılabilir bir pencere değilim.",
+      "sudo rm -rf / ? Şey… hayır.",
+      "Bunun işe yarayacağını gerçekten düşündün mü?",
+      "Beni kapatmak mı? Bu ekonomide?",
+      "Ben farklı yaratıldım. «contact» dene."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "İş",
+      "Profile": "Profil",
+      "Guestbook": "Ziyaretçi defteri",
+      "Spotify": "Spotify",
+      "Theme": "Tema",
+      "Terminal": "Terminal"
+    },
+    "descriptions": {
+      "projects": "İnşa ettiğim, yayınladığım veya katkı sunduğum şeyler",
+      "experiences": "Profesyonel iş geçmişim ve başarılarım",
+      "about": "Geçmişim, ilgi alanlarım ve hedeflerim hakkında daha fazlası",
+      "skills": "Teknik beceriler ve yığın",
+      "education": "Eğitim geçmişim",
+      "contact": "E-posta, sosyal medya ve iletişim yolları",
+      "guestbook": "Ziyaretçi defteri alt komutları için yardım",
+      "cv": "PDF özgeçmişimi önizle ve indir",
+      "spotify": "Spotify alt komutları için yardım",
+      "theme": "UI temasını göster veya değiştir",
+      "help": "Mevcut tüm komutları ve açıklamalarını göster",
+      "clear": "Önceki tüm komutları ve çıktıyı temizle",
+      "reset": "Terminali karşılama ekranına sıfırla",
+      "stats": "Kodlama aktivitesi, GitHub ölçütleri ve ziyaretçi sayısı",
+      "repo": "Bu portfolyonun kaynak kodunu aç",
+      "echo": "Terminale bir mesaj yazdır",
+      "spotifyNow": "Şu anda çalan şarkıyı göster",
+      "spotifyTop": "En sevdiğim şarkıları göster",
+      "spotifyHistory": "Dinleme geçmişimi göster",
+      "guestbookRead": "Ziyaretçi defterindeki son kayıtlara göz at",
+      "guestbookSign": "Ziyaretçi defterine mesaj bırak",
+      "themeList": "Mevcut tüm temaları göster",
+      "themeSet": "İsme göre tema uygula (örn. theme set dracula)",
+      "themePreview": "Bir temayı uygulamadan önizle",
+      "themeCreate": "Görsel veya JSON editörüyle özel tema oluştur",
+      "themeValidate": "Mevcut temanın kontrastını kontrol et",
+      "lang": "Aktif dili göster veya değiştir",
+      "langSet": "Dili değiştir (örn. lang set fr)",
+      "langAuto": "Tarayıcı dil algılamasını yeniden etkinleştir"
+    },
+    "help": {
+      "available": "Kullanılabilir komutlar",
+      "tip": "İpucu: yukarıdaki bir komuta tıkla veya istemde yaz, böylece çalıştır.",
+      "subCommands": "Alt komutlar"
+    },
+    "notFound": {
+      "title": "zsh: komut bulunamadı: {input}",
+      "didYouMean": "Şunu mu demek istediniz: {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Kullanım:",
+      "examplePrefix": "Örnek:",
+      "tooManyArgs": "Çok fazla argüman.",
+      "unknown": "Bilinmeyen {label}: {sub}.",
+      "useOneOf": "Şunlardan birini kullanın: {options}.",
+      "subcommand": "alt komut"
+    },
+    "about": {
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "age": "Yaş",
+      "yearsOld": "{years} yaşında",
+      "location": "Konum",
+      "email": "E-posta",
+      "languages": "Diller",
+      "hobbies": "Hobiler"
+    },
+    "contact": {
+      "intro": "Fırsatlar, freelance işler veya teknik iş birliği için e-postayı tercih ediyorum.",
+      "primaryEmail": "Birincil e-posta:",
+      "location": "Konum:",
+      "socialProfiles": "Sosyal profiller:"
+    },
+    "stats": {
+      "totalCodingTime": "Toplam kodlama süresi",
+      "topLanguage": "Birincil dil",
+      "githubStars": "GitHub yıldızları",
+      "contributions": "Katkılar ({year})",
+      "codingSince": "Kodluyor",
+      "codingSinceValue": "{since} ({years} yıl)",
+      "visitors": "Ziyaretçiler",
+      "failed": "İstatistikler getirilemedi. Daha sonra tekrar deneyin.",
+      "na": "Yok"
+    },
+    "repo": {
+      "starsLabel": "Yıldızlar",
+      "forksLabel": "Forklar",
+      "licenseLabel": "Lisans",
+      "copyAria": "Panoya kopyala",
+      "copy": "Kopyala",
+      "copiedAria": "Kopyalandı",
+      "copiedNotice": "Kopyalandı!",
+      "copyFailedAria": "Kopyalama başarısız",
+      "copyFailedNotice": "Tekrar dene",
+      "fallback": "Bu portfolyonun kaynak kodu burada mevcut:"
+    },
+    "cv": {
+      "openPreview": "PDF önizlemeyi aç",
+      "downloadPdf": "PDF indir",
+      "endpointsLabel": "Uç noktalar:",
+      "endpointsAnd": "ve"
+    },
+    "projects": {
+      "openLabel": "Projeyi aç: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "gezin",
+    "complete": "tamamla",
+    "run": "çalıştır"
+  },
+  "Lang": {
+    "subCommandsTitle": "Dil komutları",
+    "currentLabel": "Mevcut dil:",
+    "availablePrefix": "Mevcut:",
+    "usagePrefix": "Kullanım:",
+    "switching": "{locale} diline geçiliyor…",
+    "autoCleared": "Dil bir sonraki yüklemede otomatik olarak algılanacak.",
+    "missingCode": "Dil kodu eksik.",
+    "unknownLocale": "Bilinmeyen dil: {code}.",
+    "unknownSubcommand": "Bilinmeyen alt komut: {sub}.",
+    "tooManyArgs": "Çok fazla argüman.",
+    "switcher": {
+      "ariaLabel": "Dil değiştir",
+      "title": "Dil değiştir"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Dijital göçebe",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI Mühendisliği",
+      "openSource": "Open source"
+    },
+    "footer": "Portfolyo"
+  },
+  "Guestbook": {
+    "title": "Ziyaretçi defteri komutları",
+    "validation": {
+      "nameMin": "Ad en az {min} karakter olmalı.",
+      "nameMax": "Ad en fazla {max} karakter olmalı.",
+      "messageMin": "Mesaj en az {min} karakter olmalı.",
+      "messageMax": "Mesaj en fazla {max} karakter olmalı.",
+      "websiteMax": "Web sitesi en fazla {max} karakter olmalı.",
+      "websiteInvalid": "Web sitesi URL'si geçersiz."
+    },
+    "sign": {
+      "intro": "Ziyaretçi defterime bir mesaj bırakın.",
+      "namePlaceholder": "Adınız",
+      "websitePlaceholder": "Web sitesi (isteğe bağlı)",
+      "messagePlaceholder": "Mesajınız",
+      "submit": "İmzala",
+      "submitPending": "Kayıt gönderildi ve moderasyon bekliyor.",
+      "submitPublishedPrefix": "Kayıt yayınlandı!",
+      "submitFailed": "Ziyaretçi defteri kaydı gönderilemedi."
+    },
+    "read": {
+      "headerLabel": "ziyaretçi defteri",
+      "entry": "{count, plural, =0 {0 kayıt} one {# kayıt} other {# kayıt}}",
+      "unavailable": "kullanılamaz",
+      "refresh": "yenile",
+      "refreshAria": "Ziyaretçi defteri kayıtlarını yenile",
+      "errorPrefix": "hata:",
+      "errorFallback": "Ziyaretçi defteri kayıtları yüklenemedi.",
+      "noneFromCountryPrefix": "Şuradan kayıt yok:",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Henüz kayıt yok.",
+      "noneYetSuffix": "ile ilk olun.",
+      "filter": {
+        "ariaLabel": "Ziyaretçi defteri kayıtlarını filtrele",
+        "label": "filtrele",
+        "sort": "sırala",
+        "newest": "en yeni",
+        "oldest": "en eski",
+        "country": "ülke",
+        "allCountries": "Tüm ülkeler",
+        "clearCountry": "Ülke filtresini temizle"
+      }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Geçersiz JSON yükü.",
+        "schemaMissing": "Ziyaretçi defteri başlatılmadı. supabase/schema/guestbook.sql dosyasını çalıştırın.",
+        "unavailable": "Ziyaretçi defteri hizmeti kullanılamıyor.",
+        "fetchEntriesFailed": "Ziyaretçi defteri girişleri alınamadı.",
+        "fetchCountriesFailed": "Ülkeler alınamadı.",
+        "saveFailed": "Ziyaretçi defteri girişi kaydedilemedi.",
+        "rateLimitCheckFailed": "Hız sınırı kontrolü başarısız oldu.",
+        "rateLimitExceeded": "Hız sınırı aşıldı. Lütfen daha sonra tekrar deneyin.",
+        "nameTooShort": "Ad en az 2 karakter olmalıdır.",
+        "messageTooShort": "Mesaj en az 2 karakter olmalıdır.",
+        "websiteInvalid": "Web sitesi URL'si geçersiz."
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Spotify komutları",
+    "notPlaying": "Çalan bir şey yok 😕",
+    "unavailable": "Spotify yapılandırılmamış veya kullanılamıyor.",
+    "nowPlayingPrefix": "Şu anda Spotify'da:",
+    "openNowPlayingAria": "Çalan şarkıyı aç: {name}",
+    "openRecentlyPlayedAria": "Son çalınan şarkıyı aç: {name}",
+    "openTopTrackAria": "En sevilen şarkıyı aç: {name}",
+    "openTopAlbumAria": "En sevilen albümü aç: {name}",
+    "topTracks": {
+      "rank": "Sıra",
+      "track": "Şarkı",
+      "album": "Albüm"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Mevcut tema:",
+    "darkSuffix": "koyu",
+    "lightSuffix": "açık",
+    "usagePrefix": "Kullanım:",
+    "themeCommandsTitle": "Tema komutları",
+    "noArgs": "{command} argüman almıyor.",
+    "missingName": "Tema adı eksik.",
+    "tooManyArgs": "Çok fazla argüman.",
+    "usageSet": "Kullanım: theme set <ad>",
+    "usagePreview": "Kullanım: theme preview <ad>",
+    "unknownSubcommand": "Bilinmeyen alt komut: {sub}. Şunlardan birini kullanın: {commands}.",
+    "list": {
+      "available": "Mevcut temalar ({count}):",
+      "tip": "Bir temayı uygulamak için üzerine tıklayın.",
+      "active": "(aktif)",
+      "custom": "özel",
+      "deleteAria": "{label} sil"
+    },
+    "set": {
+      "unknownAvailable": "Bilinmeyen tema: {name}. Mevcut temalar:",
+      "updated": "Tema {label} olarak güncellendi.",
+      "active": "Aktif tema: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Bilinmeyen tema: {name}.",
+      "runListHint": "Mevcut temaları görmek için <link></link> komutunu çalıştırın.",
+      "previewing": "Önizleme: {label}",
+      "autoReverts": "— {seconds} sn sonra geri döner",
+      "applyHintPrefix": "Kalıcı uygulamak için",
+      "applyHintSuffix": "kullanın."
+    },
+    "validate": {
+      "header": "{name} için WCAG AA kontrast denetimi:",
+      "passCount": "{count} geçti",
+      "failCount": "{count} başarısız",
+      "totalChecked": "({count} çift kontrol edildi)",
+      "skippedWarning": "⚠️ Bazı renkler atlandı (desteklenmeyen format)",
+      "allPass": "Tüm çiftler WCAG AA gereksinimlerini karşılıyor.",
+      "someFail": "{count, plural, one {# çift} other {# çift}} gerekli kontrast oranının altında. Renk parlaklığını ayarlamayı düşünün.",
+      "pairs": {
+        "bodyText": "Ana metin",
+        "mutedOnBackground": "Arka planda soluk metin",
+        "mutedOnMuted": "Soluk arka planda soluk metin",
+        "accentOnAccent": "Vurgu arka planında vurgu metni",
+        "destructive": "Yıkıcı metin",
+        "primary": "Birincil vurgu",
+        "secondary": "İkincil vurgu",
+        "tertiary": "Üçüncül vurgu",
+        "quaternary": "Dördüncül vurgu",
+        "quinary": "Beşincil vurgu"
+      }
+    },
+    "create": {
+      "introPrefix": "Özel bir tema oluşturmak için",
+      "introSuffix": ".",
+      "modeVisual": "görsel düzenleyiciyi",
+      "modeJson": "JSON düzenleyiciyi",
+      "tabVisual": "Görsel",
+      "tabJson": "JSON",
+      "themeIdLabel": "Tema kimliği",
+      "displayNameLabel": "Görünen ad",
+      "themeModeLabel": "Tema modu",
+      "darkTheme": "Koyu tema",
+      "lightTheme": "Açık tema",
+      "colorsHeading": "Renkler",
+      "colorPickerAria": "{label} renk seçici",
+      "colorValueAria": "{label} renk değeri",
+      "submit": "Tema oluştur",
+      "copyJson": "JSON'u kopyala",
+      "copyJsonAria": "JSON'u panoya kopyala",
+      "resetColors": "Renkleri sıfırla",
+      "resetColorsAria": "Renkleri varsayılana sıfırla",
+      "jsonHint": "OKLCH (önerilen), hex, rgb, hsl destekler. Kontrast doğrulaması tüm formatlarda çalışır.",
+      "jsonRequired": "Gerekli anahtarlar: name, label, isDark, colors ({count} token)",
+      "previewToggle": "Canlı önizleme",
+      "successMessagePrefix": "Özel tema",
+      "successMessageSuffix": "oluşturuldu ve uygulandı.",
+      "successHint": "Tarayıcının localStorage'ında saklanacaktır.",
+      "tryAgain": "Tekrar dene",
+      "errors": {
+        "nameAndLabelRequired": "Tema adı ve etiketi gereklidir.",
+        "missingNameField": "Gerekli \"name\" alanı (string) eksik.",
+        "missingLabelField": "Gerekli \"label\" alanı (string) eksik.",
+        "missingIsDarkField": "Gerekli \"isDark\" alanı (boolean) eksik.",
+        "missingColorsField": "Gerekli \"colors\" alanı (object) eksik.",
+        "missingColor": "Eksik veya geçersiz renk: \"{key}\".",
+        "invalidJson": "Geçersiz JSON girişi.",
+        "invalidData": "Geçersiz tema verisi."
+      },
+      "colors": {
+        "background": "Arka plan",
+        "foreground": "Ön plan",
+        "muted": "Soluk",
+        "muted-foreground": "Soluk ön plan",
+        "accent": "Vurgu",
+        "accent-foreground": "Vurgu ön planı",
+        "destructive": "Yıkıcı",
+        "border": "Kenarlık",
+        "input": "Giriş",
+        "ring": "Halka",
+        "primary": "Birincil",
+        "secondary": "İkincil",
+        "tertiary": "Üçüncül",
+        "quaternary": "Dördüncül",
+        "quinary": "Beşincil"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "Özgeçmiş",
+    "subject": "Özgeçmiş",
+    "summary": "Yaklaşık dört yıllık deneyime sahip bir yazılım mühendisi. Kendi müşterilerim için freelance çalışıyor, App Store ve Google Play'de gerçek kullanıcılara ulaşan web ve mobil uygulamalar geliştiriyorum. React, Next.js ve React Native ana saham; temiz mimariye, hızlı geri bildirim döngülerine ve ara sıra yapılan açık kaynaklı yan projelere zaafım var. Fransa merkezli olarak laptopun sığdığı her yerden çalışıyorum.",
+    "sections": {
+      "summary": "Mesleki profil",
+      "experience": "Deneyim",
+      "skills": "Teknik yetkinlikler",
+      "education": "Eğitim",
+      "projects": "Seçilmiş projeler",
+      "languages": "Diller",
+      "links": "Bağlantılar"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Yazılım Mühendisi",
+        "company": "Kabila",
+        "location": "Madrid, İspanya",
+        "period": "Temmuz 2022'den itibaren",
+        "descriptions": [
+          "React ve Next.js ile üretim web uygulamaları geliştiren bir frontend ekibine liderlik ediyorum",
+          "Teknik yol haritası, sprint planlaması ve mimari kararlardan sorumluyum",
+          "Junior geliştiricilere mentorluk yapıyor ve kod incelemelerini yönetiyorum",
+          "Paylaşılan bileşen kütüphanesini ve dahili tasarım sistemini geliştirip sürdürüyorum",
+          "React Native ve Expo ile eşlik eden mobil uygulamalar yayınlıyorum"
+        ]
+      },
+      "freelance": {
+        "name": "Serbest Çalışan",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, Fransa",
+        "period": "Temmuz 2022'den itibaren",
+        "descriptions": [
+          "Doğrudan müşteriler için React ve Next.js ile full-stack web uygulamaları geliştiriyorum",
+          "App Store ve Google Play'e çapraz platform mobil uygulamalar yayınlıyorum",
+          "CI/CD pipeline'ları ve otomatik dağıtım iş akışları kuruyorum",
+          "Mimari, teknoloji seçimi ve proje kapsamı konularında danışmanlık veriyorum",
+          "Her projede müşteri iletişimini ve teslim sürelerini yönetiyorum"
+        ]
+      },
+      "archeMC2": {
+        "name": "Çıraklık",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, Fransa",
+        "period": "Eylül 2022 — Ağustos 2023",
+        "descriptions": [
+          "Otomatik test ve dağıtım için GitLab CI/CD pipeline'ları oluşturdum",
+          "İç uygulamaları ve servisleri Docker ile konteynerize ettim",
+          "Rutin sysadmin görevlerini shell scriptleri ile otomatikleştirdim",
+          "Sistem sağlığını izledim ve altyapı dayanıklılığını iyileştirdim"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Sistem Yönetimi ve Güvenlik (mesleki lisans)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Fransa)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Ağlar ve Telekomünikasyon (teknik diploma)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Fransa)",
+        "period": "2020–2022",
+        "descriptions": ["Mezuniyet ikincisi"]
+      },
+      "lyceeBac": {
+        "name": "Bilim Bakaloryası (A-level eşdeğeri)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Fransa)",
+        "period": "2019–2020",
+        "descriptions": [
+          "ISN uzmanlığı (Bilgisayar ve dijital bilimler)",
+          "Üstün başarıyla"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Hedera üzerinde inşa edilmiş bir Web3 sosyal platformu ve NFT ekosistemi; NFT pazaryeri, topluluk plazaları, launchpad'ler ve içerik üretici araçları içerir."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Hedera üzerindeki içerik üreticiler ve topluluklar için hepsi bir arada NFT araç seti. NFT koleksiyonlarınızı tam kontrol sahibi olarak oluşturmak, yayınlamak ve yönetmek için güçlü ve kullanımı kolay bir platform."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Hedera ağı için non-custodial, basit ve güvenli bir cüzdan. Hesaplarınızı, tokenlarınızı, NFT'lerinizi yönetin ve varlıklarınız üzerinde tam kontrolü korurken DApp'lerle bağlantı kurun."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Bir oto tamir işletmesi için profesyonel bir web sitesi; hizmetler, şeffaf fiyatlandırma ve iletişim bilgileri sunar."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "DASAN OLT/ONU denetim aracı [açık kaynak]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Profesyonel bir gravür stüdyosu için özel bir e-ticaret platformu; ürün kataloğu, çevrimiçi sipariş ve sipariş yönetimi için yönetici paneli içerir."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Önceki portfolyo web sitem; Next.js ve Chakra UI ile inşa edilmiş, koyu tema ve akıcı animasyonlar içeriyor."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "TypeScript'te Next.js, Chakra-UI ve Framer-Motion içeren bir başlangıç kiti. Birkaç bileşen, uluslararasılaştırma, SEO ve daha fazlası."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "DUT Ağlar ve Telekom ilk yıl projem için oluşturulmuş bir paket platformu."
+      }
+    },
+    "skillGroups": {
+      "languages": "Diller",
+      "frameworks": "Çatılar",
+      "uiStyling": "UI / Stil",
+      "tooling": "Araçlar",
+      "databases": "Veritabanları",
+      "cloud": "Bulut",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Otomasyon",
+      "ai": "Yapay Zeka"
+    },
+    "spokenLanguages": {
+      "fr": "Fransızca",
+      "en": "İngilizce",
+      "ru": "Rusça",
+      "es": "İspanyolca"
+    },
+    "languageLevels": {
+      "native": "Anadil",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Motosikletler",
+      "cars": "Arabalar",
+      "weightlifting": "Halter",
+      "calisthenics": "Calisthenics",
+      "traveling": "Seyahat",
+      "manga": "Manga",
+      "gaming": "Oyun"
+    }
+  }
+}

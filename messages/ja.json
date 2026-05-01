@@ -1,0 +1,607 @@
+{
+  "_meta": {
+    "needsReview": true
+  },
+  "Metadata": {
+    "title": "Alexandre Gossard | デジタルノマド & ソフトウェアエンジニア",
+    "description": "デジタルノマド兼フリーランスのソフトウェアエンジニア。オープンソース愛好家として、React と Next.js でパフォーマンスの高いウェブ体験を作っています。",
+    "jobTitle": "ソフトウェアエンジニア",
+    "location": "フランス、シャロン・アン・シャンパーニュ",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "フロントエンド開発者",
+      "デジタルノマド",
+      "オープンソース",
+      "モダン技術",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "ソフトウェアエンジニア",
+      "フリーランス"
+    ]
+  },
+  "Footer": {
+    "madeBy": "<heart></heart> を込めて <name></name> が制作"
+  },
+  "Welcome": {
+    "greeting": "~ ようこそ <wave>👋</wave>",
+    "intro": "<tagline>デジタルノマド</tagline> · <job>ソフトウェアエンジニア</job> · <freelance>フリーランス</freelance>",
+    "tags": {
+      "openSource": "オープンソース推進者",
+      "calisthenics": "自重トレーニング愛好者",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "はじめに",
+      "work": "仕事",
+      "profile": "プロフィール",
+      "extras": "その他",
+      "utils": "ユーティリティ"
+    }
+  },
+  "Terminal": {
+    "noMatch": "「{query}」に一致するコマンドはありません。",
+    "header": {
+      "resetTitle": "ターミナルをリセット (Ctrl+R)",
+      "resetLabel": "ターミナルをリセット",
+      "settingsTitle": "ターミナル設定",
+      "settingsLabel": "ターミナル設定"
+    },
+    "trafficLights": {
+      "close": "ターミナルを閉じる",
+      "minimize": "ターミナルを最小化",
+      "restoreMinimize": "ターミナルを元に戻す",
+      "expand": "ターミナルを最大化",
+      "restoreExpand": "ターミナルのサイズを元に戻す"
+    },
+    "tabs": {
+      "rename": "{name} の名前を変更",
+      "close": "{name} を閉じる",
+      "create": "タブを作成",
+      "limitReached": "セッション数の上限に達しました"
+    },
+    "search": {
+      "placeholder": "コマンド履歴を絞り込み…",
+      "hide": "検索を非表示"
+    },
+    "input": {
+      "placeholder": "コマンドを入力…",
+      "submit": "コマンドを実行"
+    },
+    "fontSize": {
+      "label": "フォントサイズ",
+      "decrease": "フォントサイズを小さく",
+      "decreaseTitle": "フォントサイズを小さく (Ctrl+-)",
+      "increase": "フォントサイズを大きく",
+      "increaseTitle": "フォントサイズを大きく (Ctrl++)"
+    },
+    "settings": {
+      "title": "ターミナル設定",
+      "resetAllTitle": "すべての設定をリセット(サイズも含む)",
+      "resetAllLabel": "すべてリセット",
+      "closeTitle": "設定を閉じる",
+      "closeLabel": "設定を閉じる",
+      "themeLabel": "テーマ",
+      "fontLabel": "ターミナルフォント",
+      "scrollbackLabel": "履歴",
+      "scrollbackOption": "{count, plural, =0 {コマンドなし} other {# コマンド}}",
+      "darkSuffix": "ダーク",
+      "lightSuffix": "ライト",
+      "themeOption": "{label}({mode})",
+      "languageLabel": "言語"
+    },
+    "shortcutsHeading": "キーボードショートカット",
+    "shortcuts": {
+      "runCommand": "コマンドを実行",
+      "autocomplete": "入力を補完",
+      "history": "履歴と候補",
+      "clearOutput": "出力をクリア",
+      "resetTerminal": "ターミナルをリセット",
+      "toggleSearch": "検索の切り替え",
+      "increaseFontSize": "フォントサイズを大きく",
+      "decreaseFontSize": "フォントサイズを小さく"
+    },
+    "closeMessages": [
+      "残念!私を閉じることはできません。",
+      "どこにも行きません。代わりに 'help' を試してみてください!",
+      "いいえ。このターミナルは閉じるボタンに不信感を抱いています。",
+      "エラー 418:私はティーポットであり、閉じられる窓ではありません。",
+      "sudo rm -rf / ?うーん…やめておきます。",
+      "本当にそれでうまくいくと思いましたか?",
+      "私を閉じる?この経済状況で?",
+      "私は違うんです。代わりに 'contact' を試してみてください。"
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "仕事",
+      "Profile": "プロフィール",
+      "Guestbook": "ゲストブック",
+      "Spotify": "Spotify",
+      "Theme": "テーマ",
+      "Terminal": "ターミナル"
+    },
+    "descriptions": {
+      "projects": "私が作った、リリースした、または貢献したもの",
+      "experiences": "私の職歴と実績を表示",
+      "about": "経歴、興味、目標について詳しく",
+      "skills": "技術スキル、ツール、技術スタックを表示",
+      "education": "私の学歴と資格",
+      "contact": "メールアドレス、SNSリンク、連絡方法",
+      "guestbook": "ゲストブックのサブコマンドのヘルプを表示",
+      "cv": "PDF履歴書をプレビュー・ダウンロード",
+      "spotify": "Spotifyのサブコマンドのヘルプを表示",
+      "theme": "UIテーマを表示または切り替え",
+      "help": "利用可能なすべてのコマンドと説明を表示",
+      "clear": "これまでのコマンドと出力をすべてクリア",
+      "reset": "ターミナルをウェルカム画面にリセット",
+      "stats": "コーディング活動、GitHubメトリクス、訪問者数を表示",
+      "repo": "このポートフォリオのソースコードを開く",
+      "echo": "ターミナルにメッセージを出力",
+      "spotifyNow": "現在再生中の曲を表示",
+      "spotifyTop": "私のトップトラックを表示",
+      "spotifyHistory": "再生履歴を表示",
+      "guestbookRead": "最新のゲストブックエントリを閲覧",
+      "guestbookSign": "ゲストブックにメッセージを残す",
+      "themeList": "利用可能なすべてのテーマを表示",
+      "themeSet": "名前でテーマを適用(例: theme set dracula)",
+      "themePreview": "テーマを適用せずにプレビュー",
+      "themeCreate": "ビジュアルまたはJSONエディタでカスタムテーマを作成",
+      "themeValidate": "現在のテーマのコントラストをチェック",
+      "lang": "現在の言語を表示または切り替え",
+      "langSet": "言語を切り替え(例: lang set fr)",
+      "langAuto": "ブラウザの言語自動検出を再有効化"
+    },
+    "help": {
+      "available": "利用可能なコマンド",
+      "tip": "ヒント:上のコマンドをクリックするか、プロンプトに入力して実行できます。",
+      "subCommands": "サブコマンド"
+    },
+    "notFound": {
+      "title": "zsh: コマンドが見つかりません: {input}",
+      "didYouMean": "もしかして {suggestions} ですか?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "使い方:",
+      "examplePrefix": "例:",
+      "tooManyArgs": "引数が多すぎます。",
+      "unknown": "不明な{label}: {sub}。",
+      "useOneOf": "次のいずれかを使用してください: {options}。",
+      "subcommand": "サブコマンド"
+    },
+    "about": {
+      "firstName": "名",
+      "lastName": "姓",
+      "age": "年齢",
+      "yearsOld": "{years} 歳",
+      "location": "所在地",
+      "email": "メール",
+      "languages": "言語",
+      "hobbies": "趣味"
+    },
+    "contact": {
+      "intro": "仕事の機会、フリーランス案件、技術コラボレーションはメールでのご連絡をお勧めします。",
+      "primaryEmail": "メインメール:",
+      "location": "所在地:",
+      "socialProfiles": "ソーシャルプロフィール:"
+    },
+    "stats": {
+      "totalCodingTime": "総コーディング時間",
+      "topLanguage": "主要言語",
+      "githubStars": "GitHubスター",
+      "contributions": "コントリビューション({year})",
+      "codingSince": "コーディング歴",
+      "codingSinceValue": "{since}({years} 年)",
+      "visitors": "訪問者",
+      "failed": "統計を取得できませんでした。後でもう一度お試しください。",
+      "na": "なし"
+    },
+    "repo": {
+      "starsLabel": "スター",
+      "forksLabel": "フォーク",
+      "licenseLabel": "ライセンス",
+      "copyAria": "クリップボードにコピー",
+      "copy": "コピー",
+      "copiedAria": "コピー済み",
+      "copiedNotice": "コピーしました!",
+      "copyFailedAria": "コピー失敗",
+      "copyFailedNotice": "再試行",
+      "fallback": "このポートフォリオのソースコードはこちら:"
+    },
+    "cv": {
+      "openPreview": "PDFプレビューを開く",
+      "downloadPdf": "PDFをダウンロード",
+      "endpointsLabel": "エンドポイント:",
+      "endpointsAnd": "と"
+    },
+    "projects": {
+      "openLabel": "プロジェクトを開く: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "移動",
+    "complete": "補完",
+    "run": "実行"
+  },
+  "Lang": {
+    "subCommandsTitle": "言語コマンド",
+    "currentLabel": "現在の言語:",
+    "availablePrefix": "利用可能:",
+    "usagePrefix": "使い方:",
+    "switching": "{locale} に切り替えています…",
+    "autoCleared": "次回読み込み時に言語が自動検出されます。",
+    "missingCode": "言語コードがありません。",
+    "unknownLocale": "不明な言語: {code}。",
+    "unknownSubcommand": "不明なサブコマンド: {sub}。",
+    "tooManyArgs": "引数が多すぎます。",
+    "switcher": {
+      "ariaLabel": "言語を切り替え",
+      "title": "言語を切り替え"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "デジタルノマド",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI エンジニアリング",
+      "openSource": "オープンソース"
+    },
+    "footer": "ポートフォリオ"
+  },
+  "Guestbook": {
+    "title": "ゲストブックコマンド",
+    "validation": {
+      "nameMin": "名前は {min} 文字以上必要です。",
+      "nameMax": "名前は {max} 文字以下にしてください。",
+      "messageMin": "メッセージは {min} 文字以上必要です。",
+      "messageMax": "メッセージは {max} 文字以下にしてください。",
+      "websiteMax": "ウェブサイトは {max} 文字以下にしてください。",
+      "websiteInvalid": "ウェブサイトのURLが無効です。"
+    },
+    "sign": {
+      "intro": "私のゲストブックにメッセージを残してください。",
+      "namePlaceholder": "お名前",
+      "websitePlaceholder": "ウェブサイト(任意)",
+      "messagePlaceholder": "メッセージ",
+      "submit": "署名する",
+      "submitPending": "エントリは送信され、モデレーション待ちです。",
+      "submitPublishedPrefix": "エントリが公開されました!",
+      "submitFailed": "ゲストブックエントリを送信できませんでした。"
+    },
+    "read": {
+      "headerLabel": "ゲストブック",
+      "entry": "{count} 件のエントリ",
+      "unavailable": "利用不可",
+      "refresh": "更新",
+      "refreshAria": "ゲストブックエントリを更新",
+      "errorPrefix": "エラー:",
+      "errorFallback": "ゲストブックエントリを読み込めませんでした。",
+      "noneFromCountryPrefix": "次の国からのエントリはありません:",
+      "noneFromCountrySuffix": "。",
+      "noneYetPrefix": "まだエントリはありません。",
+      "noneYetSuffix": "を実行して最初のエントリを残しましょう。",
+      "filter": {
+        "ariaLabel": "ゲストブックエントリを絞り込み",
+        "label": "絞り込み",
+        "sort": "並び順",
+        "newest": "新しい順",
+        "oldest": "古い順",
+        "country": "国",
+        "allCountries": "すべての国",
+        "clearCountry": "国フィルターをクリア"
+      }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "JSON ペイロードが無効です。",
+        "schemaMissing": "ゲストブックが初期化されていません。supabase/schema/guestbook.sql を実行してください。",
+        "unavailable": "ゲストブックサービスは利用できません。",
+        "fetchEntriesFailed": "ゲストブックのエントリを取得できませんでした。",
+        "fetchCountriesFailed": "国を取得できませんでした。",
+        "saveFailed": "ゲストブックのエントリを保存できませんでした。",
+        "rateLimitCheckFailed": "レート制限の確認に失敗しました。",
+        "rateLimitExceeded": "レート制限を超えました。後ほど再試行してください。",
+        "nameTooShort": "名前は 2 文字以上である必要があります。",
+        "messageTooShort": "メッセージは 2 文字以上である必要があります。",
+        "websiteInvalid": "ウェブサイトの URL が無効です。"
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Spotifyコマンド",
+    "notPlaying": "再生していません 😕",
+    "unavailable": "Spotifyが設定されていないか、利用できません。",
+    "nowPlayingPrefix": "Spotifyで再生中:",
+    "openNowPlayingAria": "再生中のトラックを開く: {name}",
+    "openRecentlyPlayedAria": "最近再生したトラックを開く: {name}",
+    "openTopTrackAria": "トップトラックを開く: {name}",
+    "openTopAlbumAria": "トップアルバムを開く: {name}",
+    "topTracks": {
+      "rank": "順位",
+      "track": "トラック",
+      "album": "アルバム"
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "履歴書",
+    "subject": "履歴書",
+    "summary": "ソフトウェアエンジニアとして約4年の経験。フリーランスとして自分のクライアントのためにウェブ・モバイルアプリを構築し、App Store と Google Play の実ユーザーに届けています。React、Next.js、React Native は得意分野で、クリーンなアーキテクチャ、素早いフィードバックループ、そして時折のオープンソースプロジェクトを大切にしています。フランスを拠点に、ノートPCが置けるどこからでも仕事をしています。",
+    "sections": {
+      "summary": "プロフィール",
+      "experience": "職務経歴",
+      "skills": "技術スキル",
+      "education": "学歴",
+      "projects": "主なプロジェクト",
+      "languages": "言語",
+      "links": "リンク"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "ソフトウェアエンジニア",
+        "company": "Kabila",
+        "location": "スペイン マドリード",
+        "period": "2022年7月〜",
+        "descriptions": [
+          "React と Next.js でプロダクションウェブアプリを構築するフロントエンドチームをリード",
+          "技術ロードマップ、スプリント計画、アーキテクチャ決定を担当",
+          "ジュニア開発者のメンタリングとコードレビューの実施",
+          "共有コンポーネントライブラリと社内デザインシステムの構築・保守",
+          "React Native と Expo でコンパニオンモバイルアプリをリリース"
+        ]
+      },
+      "freelance": {
+        "name": "フリーランス",
+        "company": "Alexandre GOSSARD",
+        "location": "フランス、シャロン・アン・シャンパーニュ",
+        "period": "2022年7月〜",
+        "descriptions": [
+          "直接クライアント向けに React と Next.js でフルスタックウェブアプリを構築",
+          "App Store と Google Play にクロスプラットフォームのモバイルアプリをリリース",
+          "CI/CDパイプラインと自動デプロイワークフローの構築",
+          "アーキテクチャ、技術選定、プロジェクトスコープの相談対応",
+          "全プロジェクトでクライアントとのコミュニケーションと納期管理を担当"
+        ]
+      },
+      "archeMC2": {
+        "name": "アプレンティスシップ",
+        "company": "Arche MC2",
+        "location": "フランス、シャロン・アン・シャンパーニュ",
+        "period": "2022年9月 — 2023年8月",
+        "descriptions": [
+          "自動テスト・デプロイ用の GitLab CI/CD パイプラインを構築",
+          "Docker で社内アプリケーションとサービスをコンテナ化",
+          "シェルスクリプトで定型的な sysadmin タスクを自動化",
+          "システムの健全性を監視し、インフラのレジリエンスを向上"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "システム管理とセキュリティ(職業学位)",
+        "location": "IUT Châlons(フランス、シャロン・アン・シャンパーニュ)",
+        "period": "2022-2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT ネットワーク・通信(技術学位)",
+        "location": "IUT Châlons(フランス、シャロン・アン・シャンパーニュ)",
+        "period": "2020-2022",
+        "descriptions": ["次席卒業"]
+      },
+      "lyceeBac": {
+        "name": "理系バカロレア",
+        "location": "Lycée Jean Talon(フランス、シャロン・アン・シャンパーニュ)",
+        "period": "2019-2020",
+        "descriptions": ["ISN(情報・デジタル科学)専攻", "優秀賞"]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Hedera 上に構築された Web3 ソーシャルプラットフォームと NFT エコシステム。NFTマーケットプレイス、コミュニティプラザ、ローンチパッド、クリエイターツールを備えています。"
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Hedera のクリエイターとコミュニティ向けのオールインワン NFT ツールキット。NFTコレクションを完全にコントロールしながら作成、ローンチ、管理できる強力で使いやすいプラットフォーム。"
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Hedera ネットワーク向けのノンカストディアル、シンプル、かつ安全なウォレット。アカウント、トークン、NFTを管理し、資産を完全に管理しながら DApp と連携できます。"
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "自動車修理ビジネスのプロフェッショナルなウェブサイト。サービス、透明な料金、連絡先情報を掲載。"
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "DASAN OLT/ONU 監視ツール [オープンソース]。"
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "プロの彫刻スタジオ向けのカスタム e コマースプラットフォーム。商品カタログ、オンライン注文、注文管理用の管理ダッシュボードを備えています。"
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Next.js と Chakra UI で構築した以前のポートフォリオサイト。ダークテーマと滑らかなアニメーションが特徴。"
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Next.js、Chakra-UI、Framer-Motion を TypeScript で組み合わせたスターターキット。少数のコンポーネント、国際化、SEO などを含むテンプレート。"
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "DUT ネットワーク・通信の1年目のプロジェクトとして作成した小包プラットフォーム。"
+      }
+    },
+    "skillGroups": {
+      "languages": "言語",
+      "frameworks": "フレームワーク",
+      "uiStyling": "UI / スタイリング",
+      "tooling": "ツール",
+      "databases": "データベース",
+      "cloud": "クラウド",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "自動化",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "フランス語",
+      "en": "英語",
+      "ru": "ロシア語",
+      "es": "スペイン語"
+    },
+    "languageLevels": {
+      "native": "ネイティブ",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "バイク",
+      "cars": "車",
+      "weightlifting": "ウェイトトレーニング",
+      "calisthenics": "自重トレーニング",
+      "traveling": "旅行",
+      "manga": "漫画",
+      "gaming": "ゲーム"
+    }
+  },
+  "Theme": {
+    "currentLabel": "現在のテーマ:",
+    "darkSuffix": "ダーク",
+    "lightSuffix": "ライト",
+    "usagePrefix": "使い方:",
+    "themeCommandsTitle": "テーマコマンド",
+    "noArgs": "{command} は引数を受け付けません。",
+    "missingName": "テーマ名がありません。",
+    "tooManyArgs": "引数が多すぎます。",
+    "usageSet": "使い方: theme set <名前>",
+    "usagePreview": "使い方: theme preview <名前>",
+    "unknownSubcommand": "不明なサブコマンド: {sub}。次のいずれかを使用してください: {commands}。",
+    "list": {
+      "available": "利用可能なテーマ({count}):",
+      "tip": "テーマをタップまたはクリックして適用します。",
+      "active": "(アクティブ)",
+      "custom": "カスタム",
+      "deleteAria": "{label} を削除"
+    },
+    "preview": {
+      "unknown": "不明なテーマ: {name}。",
+      "runListHint": "<link></link> を実行して利用可能なテーマを確認してください。",
+      "previewing": "{label} をプレビュー中",
+      "autoReverts": "— {seconds} 秒後に自動で元に戻ります",
+      "applyHintPrefix": "永続的に適用するには",
+      "applyHintSuffix": "を使用してください。"
+    },
+    "set": {
+      "unknownAvailable": "不明なテーマ: {name}。利用可能なテーマ:",
+      "updated": "テーマが {label} に更新されました。",
+      "active": "アクティブなテーマ: {label}({mode})"
+    },
+    "validate": {
+      "header": "{name} の WCAG AA コントラスト監査:",
+      "passCount": "{count} 合格",
+      "failCount": "{count} 失敗",
+      "totalChecked": "({count} ペアを確認)",
+      "skippedWarning": "⚠️ 一部の色をスキップしました(未対応のフォーマット)",
+      "allPass": "すべてのペアが WCAG AA 要件を満たしています。",
+      "someFail": "{count} ペアが必要なコントラスト比を下回っています。明度値の調整を検討してください。",
+      "pairs": {
+        "bodyText": "本文テキスト",
+        "mutedOnBackground": "背景上の弱いテキスト",
+        "mutedOnMuted": "弱い背景上の弱いテキスト",
+        "accentOnAccent": "アクセント背景上のアクセントテキスト",
+        "destructive": "破壊的テキスト",
+        "primary": "プライマリアクセント",
+        "secondary": "セカンダリアクセント",
+        "tertiary": "ターシャリアクセント",
+        "quaternary": "クォータナリアクセント",
+        "quinary": "クィナリアクセント"
+      }
+    },
+    "create": {
+      "introPrefix": "",
+      "introSuffix": "でカスタムテーマを作成します。",
+      "modeVisual": "ビジュアルエディタ",
+      "modeJson": "JSON エディタ",
+      "tabVisual": "ビジュアル",
+      "tabJson": "JSON",
+      "themeIdLabel": "テーマ ID",
+      "displayNameLabel": "表示名",
+      "themeModeLabel": "テーマモード",
+      "darkTheme": "ダークテーマ",
+      "lightTheme": "ライトテーマ",
+      "colorsHeading": "色",
+      "colorPickerAria": "{label} のカラーピッカー",
+      "colorValueAria": "{label} のカラー値",
+      "submit": "テーマを作成",
+      "copyJson": "JSON をコピー",
+      "copyJsonAria": "JSON をクリップボードにコピー",
+      "resetColors": "色をリセット",
+      "resetColorsAria": "色をデフォルトにリセット",
+      "jsonHint": "OKLCH(推奨)、hex、rgb、hsl をサポート。すべての形式でコントラスト検証が機能します。",
+      "jsonRequired": "必須キー: name、label、isDark、colors({count} トークン)",
+      "previewToggle": "ライブプレビュー",
+      "successMessagePrefix": "カスタムテーマ",
+      "successMessageSuffix": "が作成され、適用されました。",
+      "successHint": "ブラウザの localStorage に保持されます。",
+      "tryAgain": "再試行",
+      "errors": {
+        "nameAndLabelRequired": "テーマ名とラベルは必須です。",
+        "missingNameField": "必須フィールド「name」(文字列)がありません。",
+        "missingLabelField": "必須フィールド「label」(文字列)がありません。",
+        "missingIsDarkField": "必須フィールド「isDark」(真偽値)がありません。",
+        "missingColorsField": "必須フィールド「colors」(オブジェクト)がありません。",
+        "missingColor": "色が見つからないか無効です: 「{key}」。",
+        "invalidJson": "JSON 入力が無効です。",
+        "invalidData": "テーマデータが無効です。"
+      },
+      "colors": {
+        "background": "背景",
+        "foreground": "前景",
+        "muted": "弱化",
+        "muted-foreground": "弱化前景",
+        "accent": "アクセント",
+        "accent-foreground": "アクセント前景",
+        "destructive": "破壊的",
+        "border": "境界線",
+        "input": "入力",
+        "ring": "リング",
+        "primary": "プライマリ",
+        "secondary": "セカンダリ",
+        "tertiary": "ターシャリ",
+        "quaternary": "クォータナリ",
+        "quinary": "クィナリ"
+      }
+    }
+  }
+}

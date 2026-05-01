@@ -1,0 +1,610 @@
+{
+  "_meta": {
+    "needsReview": true
+  },
+  "Metadata": {
+    "title": "Alexandre Gossard | Digitální nomád a softwarový inženýr",
+    "description": "Digitální nomád a softwarový inženýr na volné noze. Nadšenec open source, tvořím výkonné webové aplikace v React a Next.js.",
+    "jobTitle": "Softwarový inženýr",
+    "location": "Châlons-en-Champagne, Francie",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Frontend vývojář",
+      "Digitální nomád",
+      "Open source",
+      "Moderní technologie",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Softwarový inženýr",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Vytvořeno s <heart></heart> autorem <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Vítej <wave>👋</wave>",
+    "intro": "<tagline>Digitální nomád</tagline> · <job>Softwarový inženýr</job> · <freelance>Freelance</freelance>",
+    "tags": {
+      "openSource": "Zastánce open source",
+      "calisthenics": "Příznivec kalisteniky",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Start",
+      "work": "Práce",
+      "profile": "Profil",
+      "extras": "Extra",
+      "utils": "Nástroje"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Žádný příkaz neodpovídá „{query}\".",
+    "header": {
+      "resetTitle": "Resetovat terminál (Ctrl+R)",
+      "resetLabel": "Resetovat terminál",
+      "settingsTitle": "Nastavení terminálu",
+      "settingsLabel": "Nastavení terminálu"
+    },
+    "trafficLights": {
+      "close": "Zavřít terminál",
+      "minimize": "Minimalizovat terminál",
+      "restoreMinimize": "Obnovit terminál",
+      "expand": "Maximalizovat terminál",
+      "restoreExpand": "Obnovit velikost terminálu"
+    },
+    "tabs": {
+      "rename": "Přejmenovat {name}",
+      "close": "Zavřít {name}",
+      "create": "Vytvořit kartu",
+      "limitReached": "Dosažen limit relací"
+    },
+    "search": {
+      "placeholder": "Filtrovat historii příkazů…",
+      "hide": "Skrýt vyhledávání"
+    },
+    "input": {
+      "placeholder": "zadejte příkaz…",
+      "submit": "Spustit příkaz"
+    },
+    "fontSize": {
+      "label": "Velikost písma",
+      "decrease": "Zmenšit písmo",
+      "decreaseTitle": "Zmenšit písmo (Ctrl+-)",
+      "increase": "Zvětšit písmo",
+      "increaseTitle": "Zvětšit písmo (Ctrl++)"
+    },
+    "settings": {
+      "title": "Nastavení terminálu",
+      "resetAllTitle": "Resetovat všechna nastavení (včetně velikosti)",
+      "resetAllLabel": "Resetovat vše",
+      "closeTitle": "Zavřít nastavení",
+      "closeLabel": "Zavřít nastavení",
+      "themeLabel": "Motiv",
+      "fontLabel": "Písmo terminálu",
+      "scrollbackLabel": "Historie",
+      "scrollbackOption": "{count, plural, =0 {žádné příkazy} one {# příkaz} few {# příkazy} other {# příkazů}}",
+      "darkSuffix": "tmavý",
+      "lightSuffix": "světlý",
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Jazyk"
+    },
+    "shortcutsHeading": "Klávesové zkratky",
+    "shortcuts": {
+      "runCommand": "Spustit příkaz",
+      "autocomplete": "Automatické dokončení",
+      "history": "Historie a návrhy",
+      "clearOutput": "Vyčistit výstup",
+      "resetTerminal": "Resetovat terminál",
+      "toggleSearch": "Přepnout vyhledávání",
+      "increaseFontSize": "Zvětšit písmo",
+      "decreaseFontSize": "Zmenšit písmo"
+    },
+    "closeMessages": [
+      "Hezký pokus! Nemůžeš mě zavřít.",
+      "Nikam nejdu. Zkus „help\"!",
+      "Ne. Tento terminál má problémy s důvěrou v tlačítka pro zavření.",
+      "Chyba 418: jsem konvička, ne zavíratelné okno.",
+      "sudo rm -rf / ? Hmm… ne.",
+      "Vážně sis myslel, že to bude fungovat?",
+      "Zavřít mě? V této době?",
+      "Jsem postaven jinak. Zkus „contact\"."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Práce",
+      "Profile": "Profil",
+      "Guestbook": "Návštěvní kniha",
+      "Spotify": "Spotify",
+      "Theme": "Motiv",
+      "Terminal": "Terminál"
+    },
+    "descriptions": {
+      "projects": "Co jsem postavil, vydal nebo k čemu jsem přispěl",
+      "experiences": "Moje profesní zkušenosti a úspěchy",
+      "about": "Více o mně, zájmech a cílech",
+      "skills": "Technické dovednosti a stack",
+      "education": "Moje vzdělání",
+      "contact": "E-mail, sociální sítě a kontaktní cesty",
+      "guestbook": "Nápověda k podpříkazům návštěvní knihy",
+      "cv": "Náhled a stažení mého životopisu v PDF",
+      "spotify": "Nápověda k podpříkazům Spotify",
+      "theme": "Zobrazit nebo přepnout motiv UI",
+      "help": "Zobrazit všechny dostupné příkazy a popisy",
+      "clear": "Vyčistit všechny předchozí příkazy a výstup",
+      "reset": "Resetovat terminál na uvítací obrazovku",
+      "stats": "Aktivita programování, GitHub a počet návštěvníků",
+      "repo": "Otevřít zdrojový kód tohoto portfolia",
+      "echo": "Vypsat zprávu do terminálu",
+      "spotifyNow": "Zobrazit aktuálně přehrávanou skladbu",
+      "spotifyTop": "Zobrazit mé oblíbené skladby",
+      "spotifyHistory": "Zobrazit historii poslechu",
+      "guestbookRead": "Procházet nejnovější záznamy v návštěvní knize",
+      "guestbookSign": "Zanechat zprávu v návštěvní knize",
+      "themeList": "Zobrazit všechny dostupné motivy",
+      "themeSet": "Použít motiv podle názvu (např. theme set dracula)",
+      "themePreview": "Náhled motivu bez aplikace",
+      "themeCreate": "Vytvořit vlastní motiv pomocí vizuálního nebo JSON editoru",
+      "themeValidate": "Zkontrolovat kontrast aktuálního motivu",
+      "lang": "Zobrazit nebo přepnout aktivní jazyk",
+      "langSet": "Přepnout jazyk (např. lang set fr)",
+      "langAuto": "Znovu povolit automatickou detekci jazyka"
+    },
+    "help": {
+      "available": "Dostupné příkazy",
+      "tip": "Tip: klikněte na příkaz nebo jej zadejte v promptu pro spuštění.",
+      "subCommands": "Podpříkazy"
+    },
+    "notFound": {
+      "title": "zsh: příkaz nenalezen: {input}",
+      "didYouMean": "Měli jste na mysli {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Použití:",
+      "examplePrefix": "Příklad:",
+      "tooManyArgs": "Příliš mnoho argumentů.",
+      "unknown": "Neznámý {label}: {sub}.",
+      "useOneOf": "Použijte jednu z: {options}.",
+      "subcommand": "podpříkaz"
+    },
+    "about": {
+      "firstName": "Jméno",
+      "lastName": "Příjmení",
+      "age": "Věk",
+      "yearsOld": "{years, plural, one {# rok} few {# roky} other {# let}}",
+      "location": "Lokace",
+      "email": "E-mail",
+      "languages": "Jazyky",
+      "hobbies": "Koníčky"
+    },
+    "contact": {
+      "intro": "Pro pracovní příležitosti, freelance zakázky nebo technickou spolupráci preferuji e-mail.",
+      "primaryEmail": "Hlavní e-mail:",
+      "location": "Lokace:",
+      "socialProfiles": "Sociální profily:"
+    },
+    "stats": {
+      "totalCodingTime": "Celkový čas kódování",
+      "topLanguage": "Hlavní jazyk",
+      "githubStars": "Hvězdičky GitHub",
+      "contributions": "Příspěvky ({year})",
+      "codingSince": "Programuji od",
+      "codingSinceValue": "{since} ({years} let)",
+      "visitors": "Návštěvníci",
+      "failed": "Nepodařilo se načíst statistiky. Zkuste to později.",
+      "na": "N/A"
+    },
+    "repo": {
+      "starsLabel": "Hvězdičky",
+      "forksLabel": "Forky",
+      "licenseLabel": "Licence",
+      "copyAria": "Kopírovat do schránky",
+      "copy": "Kopírovat",
+      "copiedAria": "Zkopírováno",
+      "copiedNotice": "Zkopírováno!",
+      "copyFailedAria": "Kopírování selhalo",
+      "copyFailedNotice": "Zkusit znovu",
+      "fallback": "Zdrojový kód tohoto portfolia je k dispozici zde:"
+    },
+    "cv": {
+      "openPreview": "Otevřít náhled PDF",
+      "downloadPdf": "Stáhnout PDF",
+      "endpointsLabel": "Endpointy:",
+      "endpointsAnd": "a"
+    },
+    "projects": {
+      "openLabel": "Otevřít projekt: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "navigovat",
+    "complete": "doplnit",
+    "run": "spustit"
+  },
+  "Lang": {
+    "subCommandsTitle": "Jazykové příkazy",
+    "currentLabel": "Aktuální jazyk:",
+    "availablePrefix": "Dostupné:",
+    "usagePrefix": "Použití:",
+    "switching": "Přepínání na {locale}…",
+    "autoCleared": "Jazyk bude detekován automaticky při dalším načtení.",
+    "missingCode": "Chybí kód jazyka.",
+    "unknownLocale": "Neznámý jazyk: {code}.",
+    "unknownSubcommand": "Neznámý podpříkaz: {sub}.",
+    "tooManyArgs": "Příliš mnoho argumentů.",
+    "switcher": {
+      "ariaLabel": "Změnit jazyk",
+      "title": "Změnit jazyk"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Digitální nomád",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI inženýrství",
+      "openSource": "Open source"
+    },
+    "footer": "Portfolio"
+  },
+  "Guestbook": {
+    "title": "Příkazy návštěvní knihy",
+    "validation": {
+      "nameMin": "Jméno musí mít alespoň {min} znaků.",
+      "nameMax": "Jméno smí mít nejvýše {max} znaků.",
+      "messageMin": "Zpráva musí mít alespoň {min} znaků.",
+      "messageMax": "Zpráva smí mít nejvýše {max} znaků.",
+      "websiteMax": "Web smí mít nejvýše {max} znaků.",
+      "websiteInvalid": "URL webu je neplatné."
+    },
+    "sign": {
+      "intro": "Zanechte vzkaz v mé návštěvní knize.",
+      "namePlaceholder": "Vaše jméno",
+      "websitePlaceholder": "Web (volitelně)",
+      "messagePlaceholder": "Vaše zpráva",
+      "submit": "Podepsat",
+      "submitPending": "Záznam odeslán a čeká na moderaci.",
+      "submitPublishedPrefix": "Záznam publikován!",
+      "submitFailed": "Záznam návštěvní knihy se nepodařilo odeslat."
+    },
+    "read": {
+      "headerLabel": "návštěvní kniha",
+      "entry": "{count, plural, =0 {0 záznamů} one {# záznam} few {# záznamy} other {# záznamů}}",
+      "unavailable": "nedostupné",
+      "refresh": "obnovit",
+      "refreshAria": "Obnovit záznamy návštěvní knihy",
+      "errorPrefix": "chyba:",
+      "errorFallback": "Záznamy návštěvní knihy se nepodařilo načíst.",
+      "noneFromCountryPrefix": "Žádné záznamy z",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Zatím žádné záznamy. Spusťte",
+      "noneYetSuffix": "abyste byli první.",
+      "filter": {
+        "ariaLabel": "Filtrovat záznamy návštěvní knihy",
+        "label": "filtr",
+        "sort": "řazení",
+        "newest": "nejnovější",
+        "oldest": "nejstarší",
+        "country": "země",
+        "allCountries": "Všechny země",
+        "clearCountry": "Vymazat filtr země"
+      }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Neplatný JSON payload.",
+        "schemaMissing": "Návštěvní kniha není inicializována. Spusťte supabase/schema/guestbook.sql.",
+        "unavailable": "Služba návštěvní knihy není dostupná.",
+        "fetchEntriesFailed": "Nepodařilo se načíst záznamy návštěvní knihy.",
+        "fetchCountriesFailed": "Nepodařilo se načíst země.",
+        "saveFailed": "Nepodařilo se uložit záznam návštěvní knihy.",
+        "rateLimitCheckFailed": "Kontrola limitu frekvence selhala.",
+        "rateLimitExceeded": "Limit frekvence překročen. Zkuste to prosím později.",
+        "nameTooShort": "Jméno musí mít alespoň 2 znaky.",
+        "messageTooShort": "Zpráva musí mít alespoň 2 znaky.",
+        "websiteInvalid": "URL adresa webu je neplatná."
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Příkazy Spotify",
+    "notPlaying": "Nic se nepřehrává 😕",
+    "unavailable": "Spotify není nakonfigurované nebo není dostupné.",
+    "nowPlayingPrefix": "Teď na Spotify:",
+    "openNowPlayingAria": "Otevřít aktuální skladbu: {name}",
+    "openRecentlyPlayedAria": "Otevřít nedávno přehranou skladbu: {name}",
+    "openTopTrackAria": "Otevřít oblíbenou skladbu: {name}",
+    "openTopAlbumAria": "Otevřít oblíbené album: {name}",
+    "topTracks": {
+      "rank": "Pořadí",
+      "track": "Skladba",
+      "album": "Album"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Aktuální motiv:",
+    "darkSuffix": "tmavý",
+    "lightSuffix": "světlý",
+    "usagePrefix": "Použití:",
+    "themeCommandsTitle": "Příkazy motivu",
+    "noArgs": "{command} nepřijímá argumenty.",
+    "missingName": "Chybí název motivu.",
+    "tooManyArgs": "Příliš mnoho argumentů.",
+    "usageSet": "Použití: theme set <název>",
+    "usagePreview": "Použití: theme preview <název>",
+    "unknownSubcommand": "Neznámý podpříkaz: {sub}. Použijte jednu z: {commands}.",
+    "list": {
+      "available": "Dostupné motivy ({count}):",
+      "tip": "Klikněte na motiv pro jeho aplikaci.",
+      "active": "(aktivní)",
+      "custom": "vlastní",
+      "deleteAria": "Smazat {label}"
+    },
+    "set": {
+      "unknownAvailable": "Neznámý motiv: {name}. Dostupné motivy:",
+      "updated": "Motiv změněn na {label}.",
+      "active": "Aktivní motiv: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Neznámé téma: {name}.",
+      "runListHint": "Spusťte <link></link> pro zobrazení dostupných témat.",
+      "previewing": "Náhled {label}",
+      "autoReverts": "— vrátí se za {seconds} s",
+      "applyHintPrefix": "Použijte",
+      "applyHintSuffix": "pro trvalé použití."
+    },
+    "validate": {
+      "header": "Audit kontrastu WCAG AA pro {name}:",
+      "passCount": "{count} prošlo",
+      "failCount": "{count} neprošlo",
+      "totalChecked": "(zkontrolováno {count} párů)",
+      "skippedWarning": "⚠️ Některé barvy přeskočeny (nepodporovaný formát)",
+      "allPass": "Všechny páry splňují požadavky WCAG AA.",
+      "someFail": "{count, plural, one {# pár} few {# páry} other {# párů}} pod požadovaným kontrastním poměrem. Zvažte úpravu světlosti barev.",
+      "pairs": {
+        "bodyText": "Hlavní text",
+        "mutedOnBackground": "Tlumený text na pozadí",
+        "mutedOnMuted": "Tlumený text na tlumeném pozadí",
+        "accentOnAccent": "Zvýrazněný text na zvýrazněném pozadí",
+        "destructive": "Destruktivní text",
+        "primary": "Primární zvýraznění",
+        "secondary": "Sekundární zvýraznění",
+        "tertiary": "Terciární zvýraznění",
+        "quaternary": "Kvartérní zvýraznění",
+        "quinary": "Kvinární zvýraznění"
+      }
+    },
+    "create": {
+      "introPrefix": "Vytvořte vlastní téma pomocí",
+      "introSuffix": ".",
+      "modeVisual": "vizuálního editoru",
+      "modeJson": "JSON editoru",
+      "tabVisual": "Vizuální",
+      "tabJson": "JSON",
+      "themeIdLabel": "ID tématu",
+      "displayNameLabel": "Zobrazované jméno",
+      "themeModeLabel": "Režim tématu",
+      "darkTheme": "Tmavé téma",
+      "lightTheme": "Světlé téma",
+      "colorsHeading": "Barvy",
+      "colorPickerAria": "Výběr barvy {label}",
+      "colorValueAria": "Hodnota barvy {label}",
+      "submit": "Vytvořit téma",
+      "copyJson": "Kopírovat JSON",
+      "copyJsonAria": "Kopírovat JSON do schránky",
+      "resetColors": "Obnovit barvy",
+      "resetColorsAria": "Obnovit barvy na výchozí",
+      "jsonHint": "Podporuje OKLCH (doporučeno), hex, rgb, hsl. Validace kontrastu funguje pro všechny formáty.",
+      "jsonRequired": "Povinné klíče: name, label, isDark, colors ({count} tokenů)",
+      "previewToggle": "Živý náhled",
+      "successMessagePrefix": "Vlastní téma",
+      "successMessageSuffix": "vytvořeno a použito.",
+      "successHint": "Bude uchováno v localStorage prohlížeče.",
+      "tryAgain": "Zkusit znovu",
+      "errors": {
+        "nameAndLabelRequired": "Název a popisek tématu jsou povinné.",
+        "missingNameField": "Chybí povinné pole \"name\" (string).",
+        "missingLabelField": "Chybí povinné pole \"label\" (string).",
+        "missingIsDarkField": "Chybí povinné pole \"isDark\" (boolean).",
+        "missingColorsField": "Chybí povinné pole \"colors\" (object).",
+        "missingColor": "Chybí nebo neplatná barva: \"{key}\".",
+        "invalidJson": "Neplatný vstup JSON.",
+        "invalidData": "Neplatná data tématu."
+      },
+      "colors": {
+        "background": "Pozadí",
+        "foreground": "Popředí",
+        "muted": "Tlumená",
+        "muted-foreground": "Tlumené popředí",
+        "accent": "Zvýraznění",
+        "accent-foreground": "Popředí zvýraznění",
+        "destructive": "Destruktivní",
+        "border": "Okraj",
+        "input": "Vstup",
+        "ring": "Prstenec",
+        "primary": "Primární",
+        "secondary": "Sekundární",
+        "tertiary": "Terciární",
+        "quaternary": "Kvartérní",
+        "quinary": "Kvinární"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "Životopis",
+    "subject": "Životopis",
+    "summary": "Softwarový inženýr s téměř čtyřletou praxí. Pracuji jako freelancer pro vlastní klienty a vyvíjím webové i mobilní aplikace, které se dostávají k reálným uživatelům na App Store i Google Play. React, Next.js a React Native jsou můj domácí teritoriál — mám slabost pro čistou architekturu, rychlé zpětnovazební smyčky a občasné open-source vedlejší projekty. Žiji ve Francii a pracuji odkudkoliv, kam se vejde notebook.",
+    "sections": {
+      "summary": "Profesní profil",
+      "experience": "Praxe",
+      "skills": "Technické dovednosti",
+      "education": "Vzdělání",
+      "projects": "Vybrané projekty",
+      "languages": "Jazyky",
+      "links": "Odkazy"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Softwarový inženýr",
+        "company": "Kabila",
+        "location": "Madrid, Španělsko",
+        "period": "Od července 2022",
+        "descriptions": [
+          "Vedu frontendový tým, který staví produkční webové aplikace v Reactu a Next.js",
+          "Zodpovídám za technický plán, plánování sprintů a architektonická rozhodnutí",
+          "Mentoruji juniorní vývojáře a vedu code review",
+          "Stavím a udržuji sdílenou knihovnu komponent a interní design systém",
+          "Dodávám doprovodné mobilní aplikace v React Native a Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Freelancer",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, Francie",
+        "period": "Od července 2022",
+        "descriptions": [
+          "Stavím full-stack webové aplikace v Reactu a Next.js pro přímé klienty",
+          "Dodávám multiplatformní mobilní aplikace na App Store a Google Play",
+          "Nastavuji CI/CD pipeline a automatizované deployment workflow",
+          "Radím s architekturou, výběrem technologií a rozsahem projektu",
+          "Řeším komunikaci s klienty a termíny dodání u každého projektu"
+        ]
+      },
+      "archeMC2": {
+        "name": "Učební praxe",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, Francie",
+        "period": "Září 2022 — srpen 2023",
+        "descriptions": [
+          "Stavěl jsem GitLab CI/CD pipeline pro automatizované testování a nasazení",
+          "Kontejnerizoval interní aplikace a služby pomocí Dockeru",
+          "Automatizoval rutinní sysadmin úkoly pomocí shell skriptů",
+          "Sledoval stav systémů a zlepšoval odolnost infrastruktury"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Správa systémů a bezpečnost (profesní bakalář)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Francie)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Sítě a telekomunikace (vyšší odborné vzdělání)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Francie)",
+        "period": "2020–2022",
+        "descriptions": ["Druhé místo v ročníku"]
+      },
+      "lyceeBac": {
+        "name": "Vědecký bakalářát (středoškolská maturita)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Francie)",
+        "period": "2019–2020",
+        "descriptions": [
+          "Specializace ISN (Informatika a digitální vědy)",
+          "S vyznamenáním"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Web3 sociální platforma a NFT ekosystém na Hederě, s NFT marketplace, komunitními plazami, launchpady a nástroji pro tvůrce."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "All-in-one NFT toolkit pro tvůrce a komunity na Hederě. Výkonná a snadno použitelná platforma pro vytváření, spouštění a správu NFT kolekcí s plnou kontrolou."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Non-custodial, jednoduchá a bezpečná peněženka pro síť Hedera. Spravujte účty, tokeny, NFT a propojujte se s DApp aplikacemi při zachování plné kontroly nad svými aktivy."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Profesionální web pro autoservis se službami, transparentními cenami a kontaktními údaji."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Nástroj pro dohled DASAN OLT/ONU [open-source]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Custom e-commerce platforma pro profesionální gravírovací studio s katalogem produktů, online objednávkami a admin dashboardem pro správu zakázek."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Mé předchozí portfolio postavené na Next.js a Chakra UI s tmavým motivem a plynulými animacemi."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Starter kit s Next.js, Chakra-UI, Framer-Motion v TypeScriptu. Obsahuje pár komponent, internacionalizaci, SEO a další."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "Platforma pro doručování zásilek vytvořená pro projekt prvního ročníku DUT Sítě a telekomunikace."
+      }
+    },
+    "skillGroups": {
+      "languages": "Jazyky",
+      "frameworks": "Frameworky",
+      "uiStyling": "UI / Stylování",
+      "tooling": "Nástroje",
+      "databases": "Databáze",
+      "cloud": "Cloud",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Automatizace",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "Francouzština",
+      "en": "Angličtina",
+      "ru": "Ruština",
+      "es": "Španělština"
+    },
+    "languageLevels": {
+      "native": "Mateřský",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Motocykly",
+      "cars": "Auta",
+      "weightlifting": "Posilování",
+      "calisthenics": "Calisthenics",
+      "traveling": "Cestování",
+      "manga": "Manga",
+      "gaming": "Hraní her"
+    }
+  }
+}

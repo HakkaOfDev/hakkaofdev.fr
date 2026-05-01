@@ -1,7 +1,7 @@
+import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { useCommands } from "@/components/providers/CommandsProvider";
-import { CLOSE_MESSAGES } from "@/lib/constants";
 import {
   getTerminalMinimums,
   isTerminalResizeEnabled,
@@ -19,6 +19,7 @@ import { useTerminalPreferencesStore } from "@/stores/terminal-preferences.store
 import { useTerminalSessionsStore } from "@/stores/terminal-sessions.store";
 
 export function useTerminalState() {
+  const t = useTranslations("Terminal");
   const { addCommand, commands } = useCommands();
   const [isMinimized, setIsMinimized] = useState(false);
   const [isMaximized, setIsMaximized] = useState(false);
@@ -63,10 +64,11 @@ export function useTerminalState() {
 
   const handleClose = useCallback(() => {
     if (isMinimized) setIsMinimized(false);
+    const closeMessages = t.raw("closeMessages") as string[];
     const message =
-      CLOSE_MESSAGES[Math.floor(Math.random() * CLOSE_MESSAGES.length)];
+      closeMessages[Math.floor(Math.random() * closeMessages.length)];
     addCommand(`echo "${message}"`);
-  }, [addCommand, isMinimized]);
+  }, [addCommand, isMinimized, t]);
 
   const handleMinimize = useCallback(() => {
     setIsMinimized((value) => {

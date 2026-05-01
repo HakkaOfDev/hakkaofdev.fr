@@ -1,0 +1,607 @@
+{
+  "Metadata": {
+    "title": "Alexandre Gossard | Digital Nomad & Software Engineer",
+    "description": "Digital nomad en freelance software engineer. Open source-enthousiasteling, ik bouw performante webervaringen met React en Next.js.",
+    "jobTitle": "Software Engineer",
+    "location": "Châlons-en-Champagne, Frankrijk",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Frontend ontwikkelaar",
+      "Digital Nomad",
+      "Open source",
+      "Moderne technologieën",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Software Engineer",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Gemaakt met <heart></heart> door <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Welkom <wave>👋</wave>",
+    "intro": "<tagline>Digital Nomad</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
+    "tags": {
+      "openSource": "Open source-pleitbezorger",
+      "calisthenics": "Calisthenics-liefhebber",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Start",
+      "work": "Werk",
+      "profile": "Profiel",
+      "extras": "Extra's",
+      "utils": "Hulpmiddelen"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Geen commando komt overeen met „{query}\".",
+    "header": {
+      "resetTitle": "Terminal resetten (Ctrl+R)",
+      "resetLabel": "Terminal resetten",
+      "settingsTitle": "Terminalinstellingen",
+      "settingsLabel": "Terminalinstellingen"
+    },
+    "trafficLights": {
+      "close": "Terminal sluiten",
+      "minimize": "Terminal minimaliseren",
+      "restoreMinimize": "Terminal herstellen",
+      "expand": "Terminal vergroten",
+      "restoreExpand": "Grootte van terminal herstellen"
+    },
+    "tabs": {
+      "rename": "{name} hernoemen",
+      "close": "{name} sluiten",
+      "create": "Tabblad maken",
+      "limitReached": "Sessielimiet bereikt"
+    },
+    "search": {
+      "placeholder": "Commandogeschiedenis filteren…",
+      "hide": "Zoeken verbergen"
+    },
+    "input": {
+      "placeholder": "voer een commando in…",
+      "submit": "Commando uitvoeren"
+    },
+    "fontSize": {
+      "label": "Lettergrootte",
+      "decrease": "Lettergrootte verkleinen",
+      "decreaseTitle": "Lettergrootte verkleinen (Ctrl+-)",
+      "increase": "Lettergrootte vergroten",
+      "increaseTitle": "Lettergrootte vergroten (Ctrl++)"
+    },
+    "settings": {
+      "title": "Terminalinstellingen",
+      "resetAllTitle": "Alle instellingen resetten (inclusief grootte)",
+      "resetAllLabel": "Alles resetten",
+      "closeTitle": "Instellingen sluiten",
+      "closeLabel": "Instellingen sluiten",
+      "themeLabel": "Thema",
+      "fontLabel": "Terminallettertype",
+      "scrollbackLabel": "Geschiedenis",
+      "scrollbackOption": "{count, plural, =0 {geen commando's} =1 {1 commando} other {# commando's}}",
+      "darkSuffix": "donker",
+      "lightSuffix": "licht",
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Taal"
+    },
+    "shortcutsHeading": "Sneltoetsen",
+    "shortcuts": {
+      "runCommand": "Commando uitvoeren",
+      "autocomplete": "Automatisch aanvullen",
+      "history": "Geschiedenis en suggesties",
+      "clearOutput": "Uitvoer wissen",
+      "resetTerminal": "Terminal resetten",
+      "toggleSearch": "Zoeken in/uitschakelen",
+      "increaseFontSize": "Lettergrootte vergroten",
+      "decreaseFontSize": "Lettergrootte verkleinen"
+    },
+    "closeMessages": [
+      "Mooie poging! Je kunt me niet sluiten.",
+      "Ik ga nergens heen. Probeer „help\"!",
+      "Nee. Deze terminal heeft vertrouwensproblemen met sluitknoppen.",
+      "Fout 418: ik ben een theepot, geen sluitbaar venster.",
+      "sudo rm -rf / ? Eh… nee.",
+      "Dacht je echt dat dat zou werken?",
+      "Mij sluiten? In deze tijd?",
+      "Ik ben anders gebouwd. Probeer „contact\"."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Werk",
+      "Profile": "Profiel",
+      "Guestbook": "Gastenboek",
+      "Spotify": "Spotify",
+      "Theme": "Thema",
+      "Terminal": "Terminal"
+    },
+    "descriptions": {
+      "projects": "Wat ik heb gebouwd, gelanceerd of aan heb bijgedragen",
+      "experiences": "Mijn professionele werkverleden en prestaties",
+      "about": "Meer over mijn achtergrond, interesses en doelen",
+      "skills": "Technische vaardigheden en stack",
+      "education": "Mijn opleiding en kwalificaties",
+      "contact": "E-mail, social media en contactvoorkeuren",
+      "guestbook": "Toon hulp voor de gastenboek-subcommando's",
+      "cv": "Bekijk en download mijn cv-PDF",
+      "spotify": "Toon hulp voor de Spotify-subcommando's",
+      "theme": "Toon of wissel het UI-thema",
+      "help": "Toon alle beschikbare commando's en hun beschrijvingen",
+      "clear": "Wis alle eerdere commando's en uitvoer",
+      "reset": "Reset de terminal naar het welkomstscherm",
+      "stats": "Toon programmeertijd, GitHub en bezoekersaantal",
+      "repo": "Open de broncode van dit portfolio",
+      "echo": "Print een bericht in de terminal",
+      "spotifyNow": "Toon het nu spelende nummer",
+      "spotifyTop": "Toon mijn favoriete nummers",
+      "spotifyHistory": "Toon mijn luistergeschiedenis",
+      "guestbookRead": "Bekijk de nieuwste gastenboekberichten",
+      "guestbookSign": "Laat een bericht achter in het gastenboek",
+      "themeList": "Toon alle beschikbare thema's",
+      "themeSet": "Pas een thema toe op naam (bijv. theme set dracula)",
+      "themePreview": "Bekijk een thema zonder het toe te passen",
+      "themeCreate": "Maak een aangepast thema met visuele of JSON-editor",
+      "themeValidate": "Controleer het contrast van het huidige thema",
+      "lang": "Toon of wijzig de actieve taal",
+      "langSet": "Wijzig taal (bijv. lang set fr)",
+      "langAuto": "Schakel automatische taaldetectie weer in"
+    },
+    "help": {
+      "available": "Beschikbare commando's",
+      "tip": "Tip: klik op een commando hierboven of typ het in de prompt om het uit te voeren.",
+      "subCommands": "Subcommando's"
+    },
+    "notFound": {
+      "title": "zsh: commando niet gevonden: {input}",
+      "didYouMean": "Bedoelde je {suggestions}?"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Gebruik:",
+      "examplePrefix": "Voorbeeld:",
+      "tooManyArgs": "Te veel argumenten.",
+      "unknown": "Onbekend {label}: {sub}.",
+      "useOneOf": "Gebruik een van: {options}.",
+      "subcommand": "subcommando"
+    },
+    "about": {
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "age": "Leeftijd",
+      "yearsOld": "{years, plural, one {# jaar} other {# jaar}}",
+      "location": "Locatie",
+      "email": "E-mail",
+      "languages": "Talen",
+      "hobbies": "Hobby's"
+    },
+    "contact": {
+      "intro": "Ik geef de voorkeur aan e-mail voor kansen, freelance-aanvragen of technische samenwerking.",
+      "primaryEmail": "Primaire e-mail:",
+      "location": "Locatie:",
+      "socialProfiles": "Sociale profielen:"
+    },
+    "stats": {
+      "totalCodingTime": "Totale programmeertijd",
+      "topLanguage": "Hoofdtaal",
+      "githubStars": "GitHub-sterren",
+      "contributions": "Bijdragen ({year})",
+      "codingSince": "Programmeren sinds",
+      "codingSinceValue": "{since} ({years} jaar)",
+      "visitors": "Bezoekers",
+      "failed": "Statistieken konden niet worden opgehaald. Probeer het later opnieuw.",
+      "na": "N.v.t."
+    },
+    "repo": {
+      "starsLabel": "Sterren",
+      "forksLabel": "Forks",
+      "licenseLabel": "Licentie",
+      "copyAria": "Naar klembord kopiëren",
+      "copy": "Kopiëren",
+      "copiedAria": "Gekopieerd",
+      "copiedNotice": "Gekopieerd!",
+      "copyFailedAria": "Kopiëren mislukt",
+      "copyFailedNotice": "Opnieuw proberen",
+      "fallback": "De broncode van dit portfolio is hier beschikbaar:"
+    },
+    "cv": {
+      "openPreview": "PDF-voorbeeld openen",
+      "downloadPdf": "PDF downloaden",
+      "endpointsLabel": "Endpoints:",
+      "endpointsAnd": "en"
+    },
+    "projects": {
+      "openLabel": "Project openen: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "navigeren",
+    "complete": "aanvullen",
+    "run": "uitvoeren"
+  },
+  "Lang": {
+    "subCommandsTitle": "Taalcommando's",
+    "currentLabel": "Huidige taal:",
+    "availablePrefix": "Beschikbaar:",
+    "usagePrefix": "Gebruik:",
+    "switching": "Overschakelen naar {locale}…",
+    "autoCleared": "Taal wordt automatisch gedetecteerd bij de volgende keer laden.",
+    "missingCode": "Taalcode ontbreekt.",
+    "unknownLocale": "Onbekende taal: {code}.",
+    "unknownSubcommand": "Onbekend subcommando: {sub}.",
+    "tooManyArgs": "Te veel argumenten.",
+    "switcher": {
+      "ariaLabel": "Taal wijzigen",
+      "title": "Taal wijzigen"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Digital Nomad",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI Engineering",
+      "openSource": "Open source"
+    },
+    "footer": "Portfolio"
+  },
+  "Guestbook": {
+    "title": "Gastenboek-commando's",
+    "validation": {
+      "nameMin": "Naam moet minstens {min} tekens bevatten.",
+      "nameMax": "Naam mag maximaal {max} tekens bevatten.",
+      "messageMin": "Bericht moet minstens {min} tekens bevatten.",
+      "messageMax": "Bericht mag maximaal {max} tekens bevatten.",
+      "websiteMax": "Website mag maximaal {max} tekens bevatten.",
+      "websiteInvalid": "URL van website is ongeldig."
+    },
+    "sign": {
+      "intro": "Laat een bericht achter in mijn gastenboek.",
+      "namePlaceholder": "Je naam",
+      "websitePlaceholder": "Website (optioneel)",
+      "messagePlaceholder": "Je bericht",
+      "submit": "Ondertekenen",
+      "submitPending": "Bericht ingediend en wacht op moderatie.",
+      "submitPublishedPrefix": "Bericht gepubliceerd!",
+      "submitFailed": "Het bericht kon niet worden verzonden."
+    },
+    "read": {
+      "headerLabel": "gastenboek",
+      "entry": "{count, plural, =0 {0 berichten} one {# bericht} other {# berichten}}",
+      "unavailable": "niet beschikbaar",
+      "refresh": "vernieuwen",
+      "refreshAria": "Gastenboekberichten vernieuwen",
+      "errorPrefix": "fout:",
+      "errorFallback": "Gastenboekberichten konden niet worden geladen.",
+      "noneFromCountryPrefix": "Geen berichten uit",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Nog geen berichten. Voer",
+      "noneYetSuffix": "uit om de eerste te zijn.",
+      "filter": {
+        "ariaLabel": "Gastenboekberichten filteren",
+        "label": "filteren",
+        "sort": "sorteren",
+        "newest": "nieuwste",
+        "oldest": "oudste",
+        "country": "land",
+        "allCountries": "Alle landen",
+        "clearCountry": "Landfilter wissen"
+      }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Ongeldige JSON-payload.",
+        "schemaMissing": "Gastenboek is niet geïnitialiseerd. Voer supabase/schema/guestbook.sql uit.",
+        "unavailable": "Gastenboekservice is niet beschikbaar.",
+        "fetchEntriesFailed": "Kan gastenboekvermeldingen niet ophalen.",
+        "fetchCountriesFailed": "Kan landen niet ophalen.",
+        "saveFailed": "Kan gastenboekvermelding niet opslaan.",
+        "rateLimitCheckFailed": "Controle van ratelimiet mislukt.",
+        "rateLimitExceeded": "Ratelimiet overschreden. Probeer het later opnieuw.",
+        "nameTooShort": "Naam moet minimaal 2 tekens bevatten.",
+        "messageTooShort": "Bericht moet minimaal 2 tekens bevatten.",
+        "websiteInvalid": "Website-URL is ongeldig."
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Spotify-commando's",
+    "notPlaying": "Niets aan het spelen 😕",
+    "unavailable": "Spotify is niet geconfigureerd of niet beschikbaar.",
+    "nowPlayingPrefix": "Speelt nu op Spotify:",
+    "openNowPlayingAria": "Open nu spelend nummer: {name}",
+    "openRecentlyPlayedAria": "Open recent gespeeld nummer: {name}",
+    "openTopTrackAria": "Open favoriet nummer: {name}",
+    "openTopAlbumAria": "Open favoriet album: {name}",
+    "topTracks": {
+      "rank": "Positie",
+      "track": "Nummer",
+      "album": "Album"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Huidig thema:",
+    "darkSuffix": "donker",
+    "lightSuffix": "licht",
+    "usagePrefix": "Gebruik:",
+    "themeCommandsTitle": "Thema-commando's",
+    "noArgs": "{command} accepteert geen argumenten.",
+    "missingName": "Themanaam ontbreekt.",
+    "tooManyArgs": "Te veel argumenten.",
+    "usageSet": "Gebruik: theme set <naam>",
+    "usagePreview": "Gebruik: theme preview <naam>",
+    "unknownSubcommand": "Onbekend subcommando: {sub}. Gebruik een van: {commands}.",
+    "list": {
+      "available": "Beschikbare thema's ({count}):",
+      "tip": "Klik op een thema om het toe te passen.",
+      "active": "(actief)",
+      "custom": "aangepast",
+      "deleteAria": "{label} verwijderen"
+    },
+    "set": {
+      "unknownAvailable": "Onbekend thema: {name}. Beschikbare thema's:",
+      "updated": "Thema gewijzigd naar {label}.",
+      "active": "Actief thema: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Onbekend thema: {name}.",
+      "runListHint": "Voer <link></link> uit om beschikbare thema's te zien.",
+      "previewing": "Voorbeeld van {label}",
+      "autoReverts": "— terug in {seconds} s",
+      "applyHintPrefix": "Gebruik",
+      "applyHintSuffix": "om permanent toe te passen."
+    },
+    "validate": {
+      "header": "WCAG AA contrastaudit voor {name}:",
+      "passCount": "{count} geslaagd",
+      "failCount": "{count} mislukt",
+      "totalChecked": "({count} paren gecontroleerd)",
+      "skippedWarning": "⚠️ Sommige kleuren overgeslagen (niet-ondersteund formaat)",
+      "allPass": "Alle paren voldoen aan WCAG AA-vereisten.",
+      "someFail": "{count, plural, one {# paar} other {# paren}} onder de vereiste contrastverhouding. Overweeg de helderheid van kleuren aan te passen.",
+      "pairs": {
+        "bodyText": "Tekstinhoud",
+        "mutedOnBackground": "Gedempte tekst op achtergrond",
+        "mutedOnMuted": "Gedempte tekst op gedempte achtergrond",
+        "accentOnAccent": "Accenttekst op accentachtergrond",
+        "destructive": "Destructieve tekst",
+        "primary": "Primair accent",
+        "secondary": "Secundair accent",
+        "tertiary": "Tertiair accent",
+        "quaternary": "Quaternair accent",
+        "quinary": "Quinair accent"
+      }
+    },
+    "create": {
+      "introPrefix": "Maak een aangepast thema met de",
+      "introSuffix": ".",
+      "modeVisual": "visuele editor",
+      "modeJson": "JSON-editor",
+      "tabVisual": "Visueel",
+      "tabJson": "JSON",
+      "themeIdLabel": "Thema-ID",
+      "displayNameLabel": "Weergavenaam",
+      "themeModeLabel": "Themamodus",
+      "darkTheme": "Donker thema",
+      "lightTheme": "Licht thema",
+      "colorsHeading": "Kleuren",
+      "colorPickerAria": "{label} kleurkiezer",
+      "colorValueAria": "{label} kleurwaarde",
+      "submit": "Thema aanmaken",
+      "copyJson": "JSON kopiëren",
+      "copyJsonAria": "JSON naar klembord kopiëren",
+      "resetColors": "Kleuren resetten",
+      "resetColorsAria": "Kleuren herstellen naar standaard",
+      "jsonHint": "Ondersteunt OKLCH (aanbevolen), hex, rgb, hsl. Contrastvalidatie werkt voor alle formaten.",
+      "jsonRequired": "Vereiste sleutels: name, label, isDark, colors ({count} tokens)",
+      "previewToggle": "Live voorbeeld",
+      "successMessagePrefix": "Aangepast thema",
+      "successMessageSuffix": "aangemaakt en toegepast.",
+      "successHint": "Wordt bewaard in localStorage van de browser.",
+      "tryAgain": "Opnieuw proberen",
+      "errors": {
+        "nameAndLabelRequired": "Themanaam en -label zijn vereist.",
+        "missingNameField": "Ontbrekend verplicht veld \"name\" (string).",
+        "missingLabelField": "Ontbrekend verplicht veld \"label\" (string).",
+        "missingIsDarkField": "Ontbrekend verplicht veld \"isDark\" (boolean).",
+        "missingColorsField": "Ontbrekend verplicht veld \"colors\" (object).",
+        "missingColor": "Ontbrekende of ongeldige kleur: \"{key}\".",
+        "invalidJson": "Ongeldige JSON-invoer.",
+        "invalidData": "Ongeldige themagegevens."
+      },
+      "colors": {
+        "background": "Achtergrond",
+        "foreground": "Voorgrond",
+        "muted": "Gedempt",
+        "muted-foreground": "Gedempte voorgrond",
+        "accent": "Accent",
+        "accent-foreground": "Accentvoorgrond",
+        "destructive": "Destructief",
+        "border": "Rand",
+        "input": "Invoer",
+        "ring": "Ring",
+        "primary": "Primair",
+        "secondary": "Secundair",
+        "tertiary": "Tertiair",
+        "quaternary": "Quaternair",
+        "quinary": "Quinair"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "CV",
+    "subject": "CV",
+    "summary": "Software-engineer met bijna vier jaar ervaring. Ik werk freelance voor mijn eigen klanten en bouw web- en mobiele apps die echte gebruikers bereiken in de App Store en Google Play. React, Next.js en React Native zijn mijn thuisbasis, met een zwak voor schone architectuur, snelle feedbackloops en af en toe een open-source nevenproject. Gevestigd in Frankrijk, werkend vanaf waar de laptop maar past.",
+    "sections": {
+      "summary": "Professioneel profiel",
+      "experience": "Ervaring",
+      "skills": "Technische vaardigheden",
+      "education": "Opleiding",
+      "projects": "Geselecteerde projecten",
+      "languages": "Talen",
+      "links": "Links"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Software-engineer",
+        "company": "Kabila",
+        "location": "Madrid, Spanje",
+        "period": "Sinds juli 2022",
+        "descriptions": [
+          "Leid een frontend-team dat productie-webapps bouwt met React en Next.js",
+          "Verantwoordelijk voor technische roadmap, sprintplanning en architectuurkeuzes",
+          "Mentor junior-ontwikkelaars en voer code reviews uit",
+          "Bouw en onderhoud de gedeelde componentenbibliotheek en het interne designsysteem",
+          "Lever begeleidende mobiele apps op met React Native en Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Freelance",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, Frankrijk",
+        "period": "Sinds juli 2022",
+        "descriptions": [
+          "Bouw full-stack webapps met React en Next.js voor directe klanten",
+          "Lever cross-platform mobiele apps in de App Store en Google Play",
+          "Stel CI/CD-pipelines en geautomatiseerde deployment-workflows in",
+          "Adviseer over architectuur, technologische keuzes en projectomvang",
+          "Behandel klantcommunicatie en levertermijnen in elk project"
+        ]
+      },
+      "archeMC2": {
+        "name": "Leerbaan",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, Frankrijk",
+        "period": "September 2022 — augustus 2023",
+        "descriptions": [
+          "Bouwde GitLab CI/CD-pipelines voor geautomatiseerd testen en deployen",
+          "Containeriseerde interne applicaties en services met Docker",
+          "Automatiseerde routinematige sysadmin-taken met shellscripts",
+          "Monitorde de gezondheid van systemen en verbeterde infrastructuurveerkracht"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Systeembeheer en beveiliging (beroepsdiploma)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Frankrijk)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Netwerken en Telecommunicatie (technisch diploma)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Frankrijk)",
+        "period": "2020–2022",
+        "descriptions": ["Tweede in het cohort"]
+      },
+      "lyceeBac": {
+        "name": "Wetenschappelijk baccalaureaat (A-level equivalent)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Frankrijk)",
+        "period": "2019–2020",
+        "descriptions": [
+          "Specialisatie ISN (Informatica en digitale wetenschappen)",
+          "Met onderscheiding"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Een Web3 sociaal platform en NFT-ecosysteem op Hedera, met een NFT-marktplaats, community-plaza's, launchpads en tools voor makers."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Een complete NFT-toolkit voor makers en communities op Hedera. Een krachtig en eenvoudig te gebruiken platform om NFT-collecties te creëren, lanceren en beheren met volledige controle."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Een non-custodiale, eenvoudige en veilige wallet voor het Hedera-netwerk. Beheer accounts, tokens, NFT's en verbind met DApps terwijl je volledige controle over je activa houdt."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Een professionele website voor een autoreparatiebedrijf, met diensten, transparante prijzen en contactinformatie."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Toezichtstool voor DASAN OLT/ONU's [open source]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Een aangepast e-commerceplatform voor een professionele graveerstudio, met productcatalogus, online bestellingen en admin-dashboard voor orderbeheer."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Mijn vorige portfolio gebouwd met Next.js en Chakra UI, met donker thema en vloeiende animaties."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Een starterkit met Next.js, Chakra-UI, Framer-Motion in TypeScript. Bevat enkele componenten, internationalisatie, SEO en meer."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "Een pakketplatform gebouwd voor het eerstejaarsproject van mijn DUT Netwerken & Telecom (technische graad)."
+      }
+    },
+    "skillGroups": {
+      "languages": "Talen",
+      "frameworks": "Frameworks",
+      "uiStyling": "UI / Styling",
+      "tooling": "Tooling",
+      "databases": "Databases",
+      "cloud": "Cloud",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Automatisering",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "Frans",
+      "en": "Engels",
+      "ru": "Russisch",
+      "es": "Spaans"
+    },
+    "languageLevels": {
+      "native": "Moedertaal",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Motoren",
+      "cars": "Auto's",
+      "weightlifting": "Krachttraining",
+      "calisthenics": "Calisthenics",
+      "traveling": "Reizen",
+      "manga": "Manga",
+      "gaming": "Gamen"
+    }
+  }
+}

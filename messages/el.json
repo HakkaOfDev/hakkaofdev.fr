@@ -1,0 +1,610 @@
+{
+  "_meta": {
+    "needsReview": true
+  },
+  "Metadata": {
+    "title": "Alexandre Gossard | Ψηφιακός νομάδας & μηχανικός λογισμικού",
+    "description": "Ψηφιακός νομάδας και freelance μηχανικός λογισμικού. Λάτρης του open source, δημιουργώ γρήγορες εμπειρίες ιστού με React και Next.js.",
+    "jobTitle": "Μηχανικός λογισμικού",
+    "location": "Châlons-en-Champagne, Γαλλία",
+    "ogImageAlt": "Alexandre Gossard",
+    "keywords": [
+      "Alexandre Gossard",
+      "Frontend developer",
+      "Ψηφιακός νομάδας",
+      "Open source",
+      "Σύγχρονες τεχνολογίες",
+      "hakkaofdev",
+      "kabila.app",
+      "Kabila",
+      "Μηχανικός λογισμικού",
+      "Freelance"
+    ]
+  },
+  "Footer": {
+    "madeBy": "Φτιαγμένο με <heart></heart> από <name></name>"
+  },
+  "Welcome": {
+    "greeting": "~ Καλώς ήρθες <wave>👋</wave>",
+    "intro": "<tagline>Ψηφιακός νομάδας</tagline> · <job>Μηχανικός λογισμικού</job> · <freelance>Freelance</freelance>",
+    "tags": {
+      "openSource": "Υπέρμαχος του open source",
+      "calisthenics": "Λάτρης της καλισθενικής",
+      "stack": "React · Next.js"
+    },
+    "sections": {
+      "start": "Έναρξη",
+      "work": "Δουλειά",
+      "profile": "Προφίλ",
+      "extras": "Επιπλέον",
+      "utils": "Εργαλεία"
+    }
+  },
+  "Terminal": {
+    "noMatch": "Καμία εντολή δεν ταιριάζει με «{query}».",
+    "header": {
+      "resetTitle": "Επαναφορά τερματικού (Ctrl+R)",
+      "resetLabel": "Επαναφορά τερματικού",
+      "settingsTitle": "Ρυθμίσεις τερματικού",
+      "settingsLabel": "Ρυθμίσεις τερματικού"
+    },
+    "trafficLights": {
+      "close": "Κλείσιμο τερματικού",
+      "minimize": "Ελαχιστοποίηση τερματικού",
+      "restoreMinimize": "Επαναφορά τερματικού",
+      "expand": "Μεγιστοποίηση τερματικού",
+      "restoreExpand": "Επαναφορά μεγέθους τερματικού"
+    },
+    "tabs": {
+      "rename": "Μετονομασία {name}",
+      "close": "Κλείσιμο {name}",
+      "create": "Δημιουργία καρτέλας",
+      "limitReached": "Επιτεύχθηκε το όριο συνεδριών"
+    },
+    "search": {
+      "placeholder": "Φιλτράρισμα ιστορικού εντολών…",
+      "hide": "Απόκρυψη αναζήτησης"
+    },
+    "input": {
+      "placeholder": "πληκτρολογήστε μια εντολή…",
+      "submit": "Εκτέλεση εντολής"
+    },
+    "fontSize": {
+      "label": "Μέγεθος γραμματοσειράς",
+      "decrease": "Μείωση μεγέθους",
+      "decreaseTitle": "Μείωση μεγέθους (Ctrl+-)",
+      "increase": "Αύξηση μεγέθους",
+      "increaseTitle": "Αύξηση μεγέθους (Ctrl++)"
+    },
+    "settings": {
+      "title": "Ρυθμίσεις τερματικού",
+      "resetAllTitle": "Επαναφορά όλων των ρυθμίσεων (περιλαμβάνει το μέγεθος)",
+      "resetAllLabel": "Επαναφορά όλων",
+      "closeTitle": "Κλείσιμο ρυθμίσεων",
+      "closeLabel": "Κλείσιμο ρυθμίσεων",
+      "themeLabel": "Θέμα",
+      "fontLabel": "Γραμματοσειρά τερματικού",
+      "scrollbackLabel": "Ιστορικό",
+      "scrollbackOption": "{count, plural, =0 {καμία εντολή} one {1 εντολή} other {# εντολές}}",
+      "darkSuffix": "σκοτεινό",
+      "lightSuffix": "ανοιχτό",
+      "themeOption": "{label} ({mode})",
+      "languageLabel": "Γλώσσα"
+    },
+    "shortcutsHeading": "Συντομεύσεις πληκτρολογίου",
+    "shortcuts": {
+      "runCommand": "Εκτέλεση εντολής",
+      "autocomplete": "Αυτόματη συμπλήρωση",
+      "history": "Ιστορικό και προτάσεις",
+      "clearOutput": "Καθαρισμός εξόδου",
+      "resetTerminal": "Επαναφορά τερματικού",
+      "toggleSearch": "Εναλλαγή αναζήτησης",
+      "increaseFontSize": "Αύξηση μεγέθους",
+      "decreaseFontSize": "Μείωση μεγέθους"
+    },
+    "closeMessages": [
+      "Καλή προσπάθεια! Δεν μπορείς να με κλείσεις.",
+      "Δεν πάω πουθενά. Δοκίμασε «help»!",
+      "Όχι. Αυτό το τερματικό έχει θέματα εμπιστοσύνης με τα κουμπιά κλεισίματος.",
+      "Σφάλμα 418: είμαι τσαγιέρα, όχι κλεινόμενο παράθυρο.",
+      "sudo rm -rf / ? Ε… όχι.",
+      "Πραγματικά νόμιζες ότι θα δούλευε;",
+      "Να με κλείσεις; Σε αυτή τη συγκυρία;",
+      "Είμαι φτιαγμένος αλλιώς. Δοκίμασε «contact»."
+    ]
+  },
+  "Commands": {
+    "groups": {
+      "Work": "Δουλειά",
+      "Profile": "Προφίλ",
+      "Guestbook": "Βιβλίο επισκεπτών",
+      "Spotify": "Spotify",
+      "Theme": "Θέμα",
+      "Terminal": "Τερματικό"
+    },
+    "descriptions": {
+      "projects": "Τι έχω φτιάξει, λανσάρει ή σε τι έχω συνεισφέρει",
+      "experiences": "Η επαγγελματική μου εμπειρία και τα επιτεύγματα",
+      "about": "Περισσότερα για εμένα, ενδιαφέροντα και στόχους",
+      "skills": "Τεχνικές δεξιότητες και stack",
+      "education": "Η εκπαίδευσή μου",
+      "contact": "Email, μέσα κοινωνικής δικτύωσης και τρόποι επικοινωνίας",
+      "guestbook": "Εμφάνιση βοήθειας για τις υποεντολές του βιβλίου επισκεπτών",
+      "cv": "Προεπισκόπηση και λήψη του βιογραφικού μου σε PDF",
+      "spotify": "Εμφάνιση βοήθειας για τις υποεντολές Spotify",
+      "theme": "Εμφάνιση ή αλλαγή θέματος UI",
+      "help": "Εμφάνιση όλων των διαθέσιμων εντολών και περιγραφών",
+      "clear": "Καθαρισμός όλων των προηγούμενων εντολών και εξόδου",
+      "reset": "Επαναφορά τερματικού στην οθόνη υποδοχής",
+      "stats": "Δραστηριότητα προγραμματισμού, GitHub και μοναδικοί επισκέπτες",
+      "repo": "Άνοιγμα του πηγαίου κώδικα αυτού του portfolio",
+      "echo": "Εμφάνιση μηνύματος στο τερματικό",
+      "spotifyNow": "Εμφάνιση του τραγουδιού που παίζει τώρα",
+      "spotifyTop": "Εμφάνιση των αγαπημένων μου τραγουδιών",
+      "spotifyHistory": "Εμφάνιση ιστορικού ακρόασης",
+      "guestbookRead": "Περιήγηση των τελευταίων καταχωρήσεων του βιβλίου επισκεπτών",
+      "guestbookSign": "Αφήστε ένα μήνυμα στο βιβλίο επισκεπτών",
+      "themeList": "Εμφάνιση όλων των διαθέσιμων θεμάτων",
+      "themeSet": "Εφαρμογή θέματος βάσει ονόματος (π.χ. theme set dracula)",
+      "themePreview": "Προεπισκόπηση θέματος χωρίς εφαρμογή",
+      "themeCreate": "Δημιουργία προσαρμοσμένου θέματος με οπτικό ή JSON editor",
+      "themeValidate": "Έλεγχος αντίθεσης τρέχοντος θέματος",
+      "lang": "Εμφάνιση ή αλλαγή ενεργής γλώσσας",
+      "langSet": "Αλλαγή γλώσσας (π.χ. lang set fr)",
+      "langAuto": "Επανενεργοποίηση αυτόματης ανίχνευσης γλώσσας"
+    },
+    "help": {
+      "available": "Διαθέσιμες εντολές",
+      "tip": "Συμβουλή: κάντε κλικ σε μια εντολή ή πληκτρολογήστε την στο prompt για εκτέλεση.",
+      "subCommands": "Υποεντολές"
+    },
+    "notFound": {
+      "title": "zsh: η εντολή δεν βρέθηκε: {input}",
+      "didYouMean": "Μήπως εννοούσατε {suggestions};"
+    },
+    "subCommandRouter": {
+      "usagePrefix": "Χρήση:",
+      "examplePrefix": "Παράδειγμα:",
+      "tooManyArgs": "Πάρα πολλά ορίσματα.",
+      "unknown": "Άγνωστη {label}: {sub}.",
+      "useOneOf": "Χρησιμοποιήστε ένα από: {options}.",
+      "subcommand": "υποεντολή"
+    },
+    "about": {
+      "firstName": "Όνομα",
+      "lastName": "Επώνυμο",
+      "age": "Ηλικία",
+      "yearsOld": "{years, plural, one {# χρόνος} other {# χρόνια}}",
+      "location": "Τοποθεσία",
+      "email": "Email",
+      "languages": "Γλώσσες",
+      "hobbies": "Χόμπι"
+    },
+    "contact": {
+      "intro": "Προτιμώ το email για ευκαιρίες, αιτήματα freelance ή τεχνική συνεργασία.",
+      "primaryEmail": "Κύριο email:",
+      "location": "Τοποθεσία:",
+      "socialProfiles": "Κοινωνικά προφίλ:"
+    },
+    "stats": {
+      "totalCodingTime": "Συνολικός χρόνος κώδικα",
+      "topLanguage": "Κύρια γλώσσα",
+      "githubStars": "Αστέρια GitHub",
+      "contributions": "Συνεισφορές ({year})",
+      "codingSince": "Κωδικοποιώ από",
+      "codingSinceValue": "{since} ({years} χρόνια)",
+      "visitors": "Επισκέπτες",
+      "failed": "Δεν ήταν δυνατή η ανάκτηση των στατιστικών. Δοκιμάστε ξανά αργότερα.",
+      "na": "Μ/Δ"
+    },
+    "repo": {
+      "starsLabel": "Αστέρια",
+      "forksLabel": "Forks",
+      "licenseLabel": "Άδεια",
+      "copyAria": "Αντιγραφή στο πρόχειρο",
+      "copy": "Αντιγραφή",
+      "copiedAria": "Αντιγράφηκε",
+      "copiedNotice": "Αντιγράφηκε!",
+      "copyFailedAria": "Αποτυχία αντιγραφής",
+      "copyFailedNotice": "Επανάληψη",
+      "fallback": "Ο πηγαίος κώδικας αυτού του portfolio είναι διαθέσιμος εδώ:"
+    },
+    "cv": {
+      "openPreview": "Άνοιγμα προεπισκόπησης PDF",
+      "downloadPdf": "Λήψη PDF",
+      "endpointsLabel": "Endpoints:",
+      "endpointsAnd": "και"
+    },
+    "projects": {
+      "openLabel": "Άνοιγμα έργου: {name}"
+    }
+  },
+  "Suggestions": {
+    "navigate": "πλοήγηση",
+    "complete": "συμπλήρωση",
+    "run": "εκτέλεση"
+  },
+  "Lang": {
+    "subCommandsTitle": "Εντολές γλώσσας",
+    "currentLabel": "Τρέχουσα γλώσσα:",
+    "availablePrefix": "Διαθέσιμες:",
+    "usagePrefix": "Χρήση:",
+    "switching": "Μετάβαση σε {locale}…",
+    "autoCleared": "Η γλώσσα θα ανιχνευθεί αυτόματα στην επόμενη φόρτωση.",
+    "missingCode": "Λείπει ο κωδικός γλώσσας.",
+    "unknownLocale": "Άγνωστη γλώσσα: {code}.",
+    "unknownSubcommand": "Άγνωστη υποεντολή: {sub}.",
+    "tooManyArgs": "Πάρα πολλά ορίσματα.",
+    "switcher": {
+      "ariaLabel": "Αλλαγή γλώσσας",
+      "title": "Αλλαγή γλώσσας"
+    },
+    "names": {
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "pt": "Português",
+      "it": "Italiano",
+      "zh": "中文",
+      "ja": "日本語",
+      "ru": "Русский",
+      "uk": "Українська",
+      "pl": "Polski",
+      "cs": "Čeština",
+      "nl": "Nederlands",
+      "ro": "Română",
+      "el": "Ελληνικά",
+      "tr": "Türkçe",
+      "ko": "한국어",
+      "hi": "हिन्दी",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ar": "العربية",
+      "he": "עברית"
+    }
+  },
+  "OpenGraph": {
+    "tags": {
+      "digitalNomad": "Ψηφιακός νομάδας",
+      "nextjs": "Next.js",
+      "uiEngineering": "UI Engineering",
+      "openSource": "Open source"
+    },
+    "footer": "Portfolio"
+  },
+  "Guestbook": {
+    "title": "Εντολές βιβλίου επισκεπτών",
+    "validation": {
+      "nameMin": "Το όνομα πρέπει να έχει τουλάχιστον {min} χαρακτήρες.",
+      "nameMax": "Το όνομα δεν μπορεί να υπερβαίνει τους {max} χαρακτήρες.",
+      "messageMin": "Το μήνυμα πρέπει να έχει τουλάχιστον {min} χαρακτήρες.",
+      "messageMax": "Το μήνυμα δεν μπορεί να υπερβαίνει τους {max} χαρακτήρες.",
+      "websiteMax": "Ο ιστότοπος δεν μπορεί να υπερβαίνει τους {max} χαρακτήρες.",
+      "websiteInvalid": "Το URL του ιστότοπου είναι μη έγκυρο."
+    },
+    "sign": {
+      "intro": "Αφήστε ένα μήνυμα στο βιβλίο επισκεπτών μου.",
+      "namePlaceholder": "Το όνομά σας",
+      "websitePlaceholder": "Ιστότοπος (προαιρετικό)",
+      "messagePlaceholder": "Το μήνυμά σας",
+      "submit": "Υπογραφή",
+      "submitPending": "Η καταχώρηση υποβλήθηκε και αναμένει έγκριση.",
+      "submitPublishedPrefix": "Η καταχώρηση δημοσιεύτηκε!",
+      "submitFailed": "Δεν ήταν δυνατή η υποβολή της καταχώρησης."
+    },
+    "read": {
+      "headerLabel": "βιβλίο επισκεπτών",
+      "entry": "{count, plural, =0 {0 καταχωρήσεις} one {# καταχώρηση} other {# καταχωρήσεις}}",
+      "unavailable": "μη διαθέσιμο",
+      "refresh": "ανανέωση",
+      "refreshAria": "Ανανέωση καταχωρήσεων βιβλίου επισκεπτών",
+      "errorPrefix": "σφάλμα:",
+      "errorFallback": "Δεν ήταν δυνατή η φόρτωση των καταχωρήσεων.",
+      "noneFromCountryPrefix": "Δεν υπάρχουν καταχωρήσεις από",
+      "noneFromCountrySuffix": ".",
+      "noneYetPrefix": "Δεν υπάρχουν καταχωρήσεις ακόμα. Εκτελέστε",
+      "noneYetSuffix": "για να γίνετε ο πρώτος.",
+      "filter": {
+        "ariaLabel": "Φιλτράρισμα καταχωρήσεων βιβλίου επισκεπτών",
+        "label": "φίλτρο",
+        "sort": "ταξινόμηση",
+        "newest": "νεότερα",
+        "oldest": "παλαιότερα",
+        "country": "χώρα",
+        "allCountries": "Όλες οι χώρες",
+        "clearCountry": "Καθαρισμός φίλτρου χώρας"
+      }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Μη έγκυρο φορτίο JSON.",
+        "schemaMissing": "Το βιβλίο επισκεπτών δεν έχει αρχικοποιηθεί. Εκτελέστε το supabase/schema/guestbook.sql.",
+        "unavailable": "Η υπηρεσία βιβλίου επισκεπτών δεν είναι διαθέσιμη.",
+        "fetchEntriesFailed": "Αποτυχία ανάκτησης καταχωρήσεων βιβλίου επισκεπτών.",
+        "fetchCountriesFailed": "Αποτυχία ανάκτησης χωρών.",
+        "saveFailed": "Αποτυχία αποθήκευσης καταχώρησης στο βιβλίο επισκεπτών.",
+        "rateLimitCheckFailed": "Αποτυχία ελέγχου ορίου ρυθμού.",
+        "rateLimitExceeded": "Υπέρβαση ορίου ρυθμού. Δοκιμάστε ξανά αργότερα.",
+        "nameTooShort": "Το όνομα πρέπει να έχει τουλάχιστον 2 χαρακτήρες.",
+        "messageTooShort": "Το μήνυμα πρέπει να έχει τουλάχιστον 2 χαρακτήρες.",
+        "websiteInvalid": "Η διεύθυνση URL του ιστότοπου δεν είναι έγκυρη."
+      }
+    }
+  },
+  "Spotify": {
+    "title": "Εντολές Spotify",
+    "notPlaying": "Δεν παίζει τίποτα 😕",
+    "unavailable": "Το Spotify δεν είναι διαμορφωμένο ή δεν είναι διαθέσιμο.",
+    "nowPlayingPrefix": "Παίζει τώρα στο Spotify:",
+    "openNowPlayingAria": "Άνοιγμα τρέχοντος τραγουδιού: {name}",
+    "openRecentlyPlayedAria": "Άνοιγμα πρόσφατου τραγουδιού: {name}",
+    "openTopTrackAria": "Άνοιγμα αγαπημένου τραγουδιού: {name}",
+    "openTopAlbumAria": "Άνοιγμα αγαπημένου άλμπουμ: {name}",
+    "topTracks": {
+      "rank": "Θέση",
+      "track": "Τραγούδι",
+      "album": "Άλμπουμ"
+    }
+  },
+  "Theme": {
+    "currentLabel": "Τρέχον θέμα:",
+    "darkSuffix": "σκοτεινό",
+    "lightSuffix": "ανοιχτό",
+    "usagePrefix": "Χρήση:",
+    "themeCommandsTitle": "Εντολές θέματος",
+    "noArgs": "Η {command} δεν δέχεται ορίσματα.",
+    "missingName": "Λείπει το όνομα του θέματος.",
+    "tooManyArgs": "Πάρα πολλά ορίσματα.",
+    "usageSet": "Χρήση: theme set <όνομα>",
+    "usagePreview": "Χρήση: theme preview <όνομα>",
+    "unknownSubcommand": "Άγνωστη υποεντολή: {sub}. Χρησιμοποιήστε μία από: {commands}.",
+    "list": {
+      "available": "Διαθέσιμα θέματα ({count}):",
+      "tip": "Κάντε κλικ σε ένα θέμα για να το εφαρμόσετε.",
+      "active": "(ενεργό)",
+      "custom": "προσαρμοσμένο",
+      "deleteAria": "Διαγραφή {label}"
+    },
+    "set": {
+      "unknownAvailable": "Άγνωστο θέμα: {name}. Διαθέσιμα θέματα:",
+      "updated": "Το θέμα άλλαξε σε {label}.",
+      "active": "Ενεργό θέμα: {label} ({mode})"
+    },
+    "preview": {
+      "unknown": "Άγνωστο θέμα: {name}.",
+      "runListHint": "Εκτελέστε <link></link> για να δείτε τα διαθέσιμα θέματα.",
+      "previewing": "Προεπισκόπηση {label}",
+      "autoReverts": "— επιστροφή σε {seconds} δ.",
+      "applyHintPrefix": "Χρησιμοποιήστε",
+      "applyHintSuffix": "για μόνιμη εφαρμογή."
+    },
+    "validate": {
+      "header": "Έλεγχος αντίθεσης WCAG AA για {name}:",
+      "passCount": "{count} επιτυχία",
+      "failCount": "{count} αποτυχία",
+      "totalChecked": "(ελέγχθηκαν {count} ζεύγη)",
+      "skippedWarning": "⚠️ Παρακάμφθηκαν ορισμένα χρώματα (μη υποστηριζόμενη μορφή)",
+      "allPass": "Όλα τα ζεύγη πληρούν τις απαιτήσεις WCAG AA.",
+      "someFail": "{count, plural, one {# ζεύγος} other {# ζεύγη}} κάτω από τον απαιτούμενο λόγο αντίθεσης. Σκεφτείτε να προσαρμόσετε τη φωτεινότητα των χρωμάτων.",
+      "pairs": {
+        "bodyText": "Κύριο κείμενο",
+        "mutedOnBackground": "Απαλό κείμενο σε φόντο",
+        "mutedOnMuted": "Απαλό κείμενο σε απαλό φόντο",
+        "accentOnAccent": "Κείμενο τόνου σε φόντο τόνου",
+        "destructive": "Καταστροφικό κείμενο",
+        "primary": "Κύριος τόνος",
+        "secondary": "Δευτερεύων τόνος",
+        "tertiary": "Τριτεύων τόνος",
+        "quaternary": "Τέταρτος τόνος",
+        "quinary": "Πέμπτος τόνος"
+      }
+    },
+    "create": {
+      "introPrefix": "Δημιουργήστε ένα προσαρμοσμένο θέμα χρησιμοποιώντας τον",
+      "introSuffix": ".",
+      "modeVisual": "οπτικό επεξεργαστή",
+      "modeJson": "επεξεργαστή JSON",
+      "tabVisual": "Οπτικός",
+      "tabJson": "JSON",
+      "themeIdLabel": "ID θέματος",
+      "displayNameLabel": "Όνομα εμφάνισης",
+      "themeModeLabel": "Λειτουργία θέματος",
+      "darkTheme": "Σκούρο θέμα",
+      "lightTheme": "Φωτεινό θέμα",
+      "colorsHeading": "Χρώματα",
+      "colorPickerAria": "Επιλογέας χρώματος {label}",
+      "colorValueAria": "Τιμή χρώματος {label}",
+      "submit": "Δημιουργία θέματος",
+      "copyJson": "Αντιγραφή JSON",
+      "copyJsonAria": "Αντιγραφή JSON στο πρόχειρο",
+      "resetColors": "Επαναφορά χρωμάτων",
+      "resetColorsAria": "Επαναφορά χρωμάτων στις προεπιλογές",
+      "jsonHint": "Υποστηρίζει OKLCH (συνιστάται), hex, rgb, hsl. Η επικύρωση αντίθεσης λειτουργεί για όλες τις μορφές.",
+      "jsonRequired": "Απαιτούμενα κλειδιά: name, label, isDark, colors ({count} tokens)",
+      "previewToggle": "Ζωντανή προεπισκόπηση",
+      "successMessagePrefix": "Το προσαρμοσμένο θέμα",
+      "successMessageSuffix": "δημιουργήθηκε και εφαρμόστηκε.",
+      "successHint": "Θα διατηρηθεί στο localStorage του προγράμματος περιήγησης.",
+      "tryAgain": "Δοκιμάστε ξανά",
+      "errors": {
+        "nameAndLabelRequired": "Το όνομα και η ετικέτα του θέματος είναι υποχρεωτικά.",
+        "missingNameField": "Λείπει το υποχρεωτικό πεδίο \"name\" (string).",
+        "missingLabelField": "Λείπει το υποχρεωτικό πεδίο \"label\" (string).",
+        "missingIsDarkField": "Λείπει το υποχρεωτικό πεδίο \"isDark\" (boolean).",
+        "missingColorsField": "Λείπει το υποχρεωτικό πεδίο \"colors\" (object).",
+        "missingColor": "Λείπει ή είναι μη έγκυρο χρώμα: \"{key}\".",
+        "invalidJson": "Μη έγκυρη είσοδος JSON.",
+        "invalidData": "Μη έγκυρα δεδομένα θέματος."
+      },
+      "colors": {
+        "background": "Φόντο",
+        "foreground": "Προσκήνιο",
+        "muted": "Απαλό",
+        "muted-foreground": "Απαλό προσκήνιο",
+        "accent": "Τόνος",
+        "accent-foreground": "Προσκήνιο τόνου",
+        "destructive": "Καταστροφικό",
+        "border": "Περίγραμμα",
+        "input": "Είσοδος",
+        "ring": "Δακτύλιος",
+        "primary": "Κύριο",
+        "secondary": "Δευτερεύον",
+        "tertiary": "Τριτεύον",
+        "quaternary": "Τέταρτο",
+        "quinary": "Πέμπτο"
+      }
+    }
+  },
+  "CV": {
+    "documentTitleSuffix": "Βιογραφικό",
+    "subject": "Βιογραφικό",
+    "summary": "Μηχανικός λογισμικού με σχεδόν τέσσερα χρόνια εμπειρίας. Εργάζομαι ως freelancer για δικούς μου πελάτες, χτίζοντας web και mobile εφαρμογές που φτάνουν σε πραγματικούς χρήστες στο App Store και στο Google Play. React, Next.js και React Native είναι το έδαφός μου, με αδυναμία στην καθαρή αρχιτεκτονική, τους γρήγορους κύκλους ανατροφοδότησης και τα περιστασιακά open-source παράπλευρα έργα. Έδρα στη Γαλλία, εργάζομαι από όπου χωράει το λάπτοπ.",
+    "sections": {
+      "summary": "Επαγγελματικό προφίλ",
+      "experience": "Εμπειρία",
+      "skills": "Τεχνικές δεξιότητες",
+      "education": "Εκπαίδευση",
+      "projects": "Επιλεγμένα έργα",
+      "languages": "Γλώσσες",
+      "links": "Σύνδεσμοι"
+    },
+    "experiences": {
+      "kabila": {
+        "name": "Μηχανικός λογισμικού",
+        "company": "Kabila",
+        "location": "Μαδρίτη, Ισπανία",
+        "period": "Από τον Ιούλιο 2022",
+        "descriptions": [
+          "Ηγούμαι ομάδας frontend που χτίζει εφαρμογές παραγωγής με React και Next.js",
+          "Έχω την ευθύνη του τεχνικού roadmap, του προγραμματισμού sprint και των αρχιτεκτονικών αποφάσεων",
+          "Καθοδηγώ junior developers και διεξάγω code reviews",
+          "Χτίζω και συντηρώ τη βιβλιοθήκη κοινών component και το εσωτερικό σύστημα σχεδίασης",
+          "Παραδίδω συνοδευτικές mobile εφαρμογές με React Native και Expo"
+        ]
+      },
+      "freelance": {
+        "name": "Freelance",
+        "company": "Alexandre GOSSARD",
+        "location": "Châlons-en-Champagne, Γαλλία",
+        "period": "Από τον Ιούλιο 2022",
+        "descriptions": [
+          "Χτίζω full-stack web εφαρμογές με React και Next.js για άμεσους πελάτες",
+          "Παραδίδω cross-platform mobile εφαρμογές στο App Store και στο Google Play",
+          "Στήνω CI/CD pipelines και αυτοματοποιημένες ροές deployment",
+          "Συμβουλεύω σε αρχιτεκτονική, επιλογές τεχνολογίας και εκτίμηση έργων",
+          "Διαχειρίζομαι την επικοινωνία με τον πελάτη και τα χρονοδιαγράμματα παράδοσης"
+        ]
+      },
+      "archeMC2": {
+        "name": "Πρακτική άσκηση",
+        "company": "Arche MC2",
+        "location": "Châlons-en-Champagne, Γαλλία",
+        "period": "Σεπτέμβριος 2022 — Αύγουστος 2023",
+        "descriptions": [
+          "Έχτισα GitLab CI/CD pipelines για αυτοματοποιημένες δοκιμές και deployment",
+          "Δοχειροποίησα εσωτερικές εφαρμογές και υπηρεσίες με Docker",
+          "Αυτοματοποίησα ρουτίνες sysadmin με shell scripts",
+          "Παρακολουθούσα την υγεία των συστημάτων και βελτίωσα την ανθεκτικότητα της υποδομής"
+        ]
+      }
+    },
+    "education": {
+      "iutSecurity": {
+        "name": "Διαχείριση συστημάτων και ασφάλεια (επαγγελματικό πτυχίο)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Γαλλία)",
+        "period": "2022–2023",
+        "descriptions": []
+      },
+      "iutNetworks": {
+        "name": "DUT Δίκτυα και Τηλεπικοινωνίες (τεχνικό πτυχίο)",
+        "location": "IUT Châlons (Châlons-en-Champagne, Γαλλία)",
+        "period": "2020–2022",
+        "descriptions": ["Δεύτερος του έτους"]
+      },
+      "lyceeBac": {
+        "name": "Επιστημονικό απολυτήριο (αντίστοιχο A-level)",
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Γαλλία)",
+        "period": "2019–2020",
+        "descriptions": [
+          "Ειδίκευση ISN (Πληροφορική και ψηφιακές επιστήμες)",
+          "Με διάκριση"
+        ]
+      }
+    },
+    "projects": {
+      "kabilaApp": {
+        "name": "Kabila App",
+        "description": "Μια κοινωνική πλατφόρμα Web3 και οικοσύστημα NFT στο Hedera, με NFT marketplace, πλαζ κοινοτήτων, launchpads και εργαλεία για δημιουργούς."
+      },
+      "kabilaTools": {
+        "name": "Kabila Tools",
+        "description": "Ένα πλήρες NFT toolkit για δημιουργούς και κοινότητες στο Hedera. Μια ισχυρή και εύχρηστη πλατφόρμα για δημιουργία, εκκίνηση και διαχείριση συλλογών NFT με πλήρη έλεγχο."
+      },
+      "kabilaWallet": {
+        "name": "Kabila Wallet",
+        "description": "Ένα non-custodial, απλό και ασφαλές πορτοφόλι για το δίκτυο Hedera. Διαχειριστείτε λογαριασμούς, tokens, NFT και συνδεθείτε με DApps διατηρώντας πλήρη έλεγχο των περιουσιακών σας στοιχείων."
+      },
+      "ferreiraBorges": {
+        "name": "Ferreira Borges Thomas",
+        "description": "Επαγγελματικός ιστότοπος για επιχείρηση επισκευής αυτοκινήτων, με υπηρεσίες, διαφανείς τιμές και στοιχεία επικοινωνίας."
+      },
+      "acVision": {
+        "name": "AC-Vision",
+        "description": "Εργαλείο εποπτείας DASAN OLT/ONU [open source]."
+      },
+      "brianGravure": {
+        "name": "Brian Grav&Style",
+        "description": "Μια προσαρμοσμένη πλατφόρμα ηλεκτρονικού εμπορίου για ένα επαγγελματικό στούντιο χάραξης, με κατάλογο προϊόντων, παραγγελίες online και dashboard διαχείρισης παραγγελιών."
+      },
+      "portfolioV1": {
+        "name": "Portfolio V1",
+        "description": "Το προηγούμενο πορτφόλιο μου, χτισμένο με Next.js και Chakra UI, με σκούρο θέμα και ομαλά animations."
+      },
+      "tsNextKit": {
+        "name": "ts-next-chakra-motion-kit",
+        "description": "Ένα starter kit με Next.js, Chakra-UI, Framer-Motion σε TypeScript. Περιέχει κάποια components, διεθνοποίηση, SEO και πολλά άλλα."
+      },
+      "rtransport": {
+        "name": "RT'ransport",
+        "description": "Πλατφόρμα δεμάτων που δημιουργήθηκε για το έργο του πρώτου έτους στο DUT Δίκτυα & Τηλεπικοινωνίες."
+      }
+    },
+    "skillGroups": {
+      "languages": "Γλώσσες",
+      "frameworks": "Frameworks",
+      "uiStyling": "UI / Στυλ",
+      "tooling": "Εργαλεία",
+      "databases": "Βάσεις δεδομένων",
+      "cloud": "Cloud",
+      "vcs": "VCS",
+      "orm": "ORM",
+      "devops": "DevOps",
+      "automation": "Αυτοματισμός",
+      "ai": "AI"
+    },
+    "spokenLanguages": {
+      "fr": "Γαλλικά",
+      "en": "Αγγλικά",
+      "ru": "Ρωσικά",
+      "es": "Ισπανικά"
+    },
+    "languageLevels": {
+      "native": "Μητρική",
+      "C1": "C1",
+      "B2": "B2",
+      "B1": "B1",
+      "A2": "A2",
+      "A1": "A1"
+    },
+    "hobbies": {
+      "motorcycles": "Μοτοσικλέτες",
+      "cars": "Αυτοκίνητα",
+      "weightlifting": "Άρση βαρών",
+      "calisthenics": "Calisthenics",
+      "traveling": "Ταξίδια",
+      "manga": "Manga",
+      "gaming": "Gaming"
+    }
+  }
+}

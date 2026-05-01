@@ -1,8 +1,8 @@
 "use client";
 
 import { RotateCcw } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useId } from "react";
-import { COLOR_LABELS } from "@/lib/constants/theme.constants";
 import type { ThemeColors } from "@/types/theme";
 import { THEME_COLOR_KEYS } from "@/types/theme";
 
@@ -33,6 +33,8 @@ export function ThemeCreateVisualForm({
   onResetColors,
   onSubmit,
 }: ThemeCreateVisualFormProps) {
+  const t = useTranslations("Theme.create");
+  const tColors = useTranslations("Theme.create.colors");
   const isDarkCheckboxId = useId();
 
   return (
@@ -40,7 +42,7 @@ export function ThemeCreateVisualForm({
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
         <label className="grid gap-1.5">
           <span className="font-semibold text-muted-foreground text-xs uppercase tracking-wide">
-            Theme ID
+            {t("themeIdLabel")}
           </span>
           <input
             type="text"
@@ -57,7 +59,7 @@ export function ThemeCreateVisualForm({
         </label>
         <label className="grid gap-1.5">
           <span className="font-semibold text-muted-foreground text-xs uppercase tracking-wide">
-            Display Name
+            {t("displayNameLabel")}
           </span>
           <input
             type="text"
@@ -76,10 +78,10 @@ export function ThemeCreateVisualForm({
             htmlFor={isDarkCheckboxId}
             className="block cursor-pointer select-none font-medium text-foreground text-sm"
           >
-            Theme Mode
+            {t("themeModeLabel")}
           </label>
           <p className="mt-0.5 text-muted-foreground text-xs">
-            {isDark ? "Dark theme" : "Light theme"}
+            {isDark ? t("darkTheme") : t("lightTheme")}
           </p>
         </div>
         <button
@@ -126,32 +128,35 @@ export function ThemeCreateVisualForm({
 
       <div className="border-border border-t pt-2">
         <p className="mb-2 font-semibold text-muted-foreground text-xs uppercase tracking-wide">
-          Colors
+          {t("colorsHeading")}
         </p>
         <div className="terminal-scrollbar grid max-h-80 grid-cols-1 gap-2 overflow-y-auto pr-2 sm:grid-cols-2 lg:grid-cols-3">
-          {THEME_COLOR_KEYS.map((key) => (
-            <label key={key} className="group flex items-center gap-2">
-              <input
-                type="color"
-                value={colors[key]}
-                onChange={(e) => onColorChange(key, e.target.value)}
-                className="h-8 w-8 shrink-0 cursor-pointer"
-                aria-label={`${COLOR_LABELS[key]} color picker`}
-              />
-              <div className="flex min-w-0 flex-1 flex-col">
-                <span className="truncate font-medium text-foreground text-xs">
-                  {COLOR_LABELS[key]}
-                </span>
+          {THEME_COLOR_KEYS.map((key) => {
+            const colorLabel = tColors(key as never);
+            return (
+              <label key={key} className="group flex items-center gap-2">
                 <input
-                  type="text"
+                  type="color"
                   value={colors[key]}
                   onChange={(e) => onColorChange(key, e.target.value)}
-                  className="w-full bg-transparent font-mono text-[9px] text-muted-foreground outline-none focus:text-foreground"
-                  aria-label={`${COLOR_LABELS[key]} color value`}
+                  className="h-8 w-8 shrink-0 cursor-pointer"
+                  aria-label={t("colorPickerAria", { label: colorLabel })}
                 />
-              </div>
-            </label>
-          ))}
+                <div className="flex min-w-0 flex-1 flex-col">
+                  <span className="truncate font-medium text-foreground text-xs">
+                    {colorLabel}
+                  </span>
+                  <input
+                    type="text"
+                    value={colors[key]}
+                    onChange={(e) => onColorChange(key, e.target.value)}
+                    className="w-full bg-transparent font-mono text-[9px] text-muted-foreground outline-none focus:text-foreground"
+                    aria-label={t("colorValueAria", { label: colorLabel })}
+                  />
+                </div>
+              </label>
+            );
+          })}
         </div>
       </div>
 
@@ -160,25 +165,25 @@ export function ThemeCreateVisualForm({
           type="submit"
           className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-primary/10 px-4 py-1.5 font-semibold text-primary text-xs ring-1 ring-primary/20 ring-inset transition-colors hover:bg-primary/20"
         >
-          Create Theme
+          {t("submit")}
         </button>
         <button
           type="button"
           onClick={onCopyJSON}
           className="inline-flex cursor-pointer items-center gap-1 rounded-md px-3 py-1.5 font-semibold text-muted-foreground text-xs transition-colors hover:bg-accent/50 hover:text-foreground"
-          aria-label="Copy JSON to clipboard"
+          aria-label={t("copyJsonAria")}
         >
-          Copy JSON
+          {t("copyJson")}
         </button>
         <button
           type="button"
           onClick={onResetColors}
           className="inline-flex cursor-pointer items-center gap-1.5 rounded-md px-3 py-1.5 font-semibold text-muted-foreground text-xs transition-colors hover:bg-accent/50 hover:text-foreground"
-          aria-label="Reset colors to defaults"
-          title="Reset colors to defaults"
+          aria-label={t("resetColorsAria")}
+          title={t("resetColorsAria")}
         >
           <RotateCcw className="h-3 w-3" />
-          Reset Colors
+          {t("resetColors")}
         </button>
       </div>
     </form>

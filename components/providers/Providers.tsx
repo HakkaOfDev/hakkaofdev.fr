@@ -6,7 +6,8 @@ import { DeferredFontLoader } from "@/components/DeferredFontLoader";
 import { ThemeEngineProvider } from "@/components/providers/ThemeProvider";
 import { CommandsProvider } from "./CommandsProvider";
 
-// Import theme registry to register dynamic param commands
+// Import registries to register dynamic param commands
+import "@/components/commands/registries/lang.registry";
 import "@/components/commands/registries/theme.registry";
 
 const queryClient = new QueryClient();

@@ -3,15 +3,16 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { Shortcut } from "@/components/ui/Shortcut";
 import { GUESTBOOK_CONFIG } from "@/lib/constants/guestbook.constants";
 import {
+  buildGuestbookFormSchema,
   type GuestbookFormValues,
-  guestbookFormSchema,
 } from "@/lib/schemas/guestbook.schema";
 import { cn } from "@/lib/utils";
 
@@ -24,7 +25,10 @@ type GuestbookApiError = {
   error?: string;
 };
 
-async function createGuestbookEntry(payload: GuestbookFormValues) {
+async function createGuestbookEntry(
+  payload: GuestbookFormValues,
+  fallbackError: string,
+) {
   const response = await fetch("/api/guestbook", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -35,20 +39,41 @@ async function createGuestbookEntry(payload: GuestbookFormValues) {
     | GuestbookCreateResponse
     | GuestbookApiError;
   if (!response.ok) {
-    throw new Error(
-      "error" in json && json.error
-        ? json.error
-        : "Failed to submit guestbook entry.",
-    );
+    throw new Error("error" in json && json.error ? json.error : fallbackError);
   }
 
   return json as GuestbookCreateResponse;
 }
 
 function CGuestbookSign() {
+  const t = useTranslations("Guestbook.sign");
+  const tValidation = useTranslations("Guestbook.validation");
   const queryClient = useQueryClient();
   const [submitMessage, setSubmitMessage] = useState<ReactNode | null>(null);
   const honeypotRef = useRef<HTMLInputElement>(null);
+
+  const schema = useMemo(
+    () =>
+      buildGuestbookFormSchema({
+        nameMin: tValidation("nameMin", {
+          min: GUESTBOOK_CONFIG.MIN_NAME_LENGTH,
+        }),
+        nameMax: tValidation("nameMax", {
+          max: GUESTBOOK_CONFIG.MAX_NAME_LENGTH,
+        }),
+        messageMin: tValidation("messageMin", {
+          min: GUESTBOOK_CONFIG.MIN_MESSAGE_LENGTH,
+        }),
+        messageMax: tValidation("messageMax", {
+          max: GUESTBOOK_CONFIG.MAX_MESSAGE_LENGTH,
+        }),
+        websiteMax: tValidation("websiteMax", {
+          max: GUESTBOOK_CONFIG.MAX_WEBSITE_LENGTH,
+        }),
+        websiteInvalid: tValidation("websiteInvalid"),
+      }),
+    [tValidation],
+  );
 
   const {
     register,
@@ -57,7 +82,7 @@ function CGuestbookSign() {
     watch,
     formState: { errors, isValid },
   } = useForm<GuestbookFormValues>({
-    resolver: zodResolver(guestbookFormSchema),
+    resolver: zodResolver(schema),
     defaultValues: { name: "", message: "", website: "", company: "" },
     mode: "onChange",
   });
@@ -66,14 +91,15 @@ function CGuestbookSign() {
   const messageLength = [...(messageValue ?? "")].length;
 
   const createMutation = useMutation({
-    mutationFn: createGuestbookEntry,
+    mutationFn: (values: GuestbookFormValues) =>
+      createGuestbookEntry(values, t("submitFailed")),
     onSuccess: (result) => {
       setSubmitMessage(
         result.status === "pending_moderation" ? (
-          "Entry submitted and pending moderation."
+          t("submitPending")
         ) : (
           <span className="inline-flex flex-wrap items-center gap-1.5">
-            Entry published!
+            {t("submitPublishedPrefix")}
             <Shortcut
               label="guestbook read"
               command="guestbook read"
@@ -88,9 +114,7 @@ function CGuestbookSign() {
     },
     onError: (error) => {
       setSubmitMessage(
-        error instanceof Error
-          ? error.message
-          : "Failed to submit guestbook entry.",
+        error instanceof Error ? error.message : t("submitFailed"),
       );
     },
   });
@@ -108,9 +132,7 @@ function CGuestbookSign() {
 
   return (
     <AnimatedSpan className="gap-3">
-      <p className="text-muted-foreground text-xs">
-        Leave a message in my guestbook.
-      </p>
+      <p className="text-muted-foreground text-xs">{t("intro")}</p>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -120,7 +142,7 @@ function CGuestbookSign() {
           <input
             {...register("name")}
             type="text"
-            placeholder="Your name"
+            placeholder={t("namePlaceholder")}
             className={cn(
               "h-8 rounded-md border bg-transparent px-2 text-xs outline-none focus-visible:ring-1 focus-visible:ring-primary/60",
               errors.name ? "border-destructive/60" : "border-border",
@@ -130,7 +152,7 @@ function CGuestbookSign() {
           <input
             {...register("website")}
             type="text"
-            placeholder="Website (optional)"
+            placeholder={t("websitePlaceholder")}
             className={cn(
               "h-8 rounded-md border bg-transparent px-2 text-xs outline-none focus-visible:ring-1 focus-visible:ring-primary/60",
               errors.website ? "border-destructive/60" : "border-border",
@@ -141,7 +163,7 @@ function CGuestbookSign() {
 
         <textarea
           {...register("message")}
-          placeholder="Your message"
+          placeholder={t("messagePlaceholder")}
           className={cn(
             "min-h-20 resize-y rounded-md border bg-transparent px-2 py-1.5 text-xs outline-none focus-visible:ring-1 focus-visible:ring-primary/60",
             errors.message ? "border-destructive/60" : "border-border",
@@ -193,7 +215,7 @@ function CGuestbookSign() {
             {createMutation.isPending && (
               <Loader2 className="h-3 w-3 animate-spin" />
             )}
-            Sign guestbook
+            {t("submit")}
           </button>
         </div>
       </form>

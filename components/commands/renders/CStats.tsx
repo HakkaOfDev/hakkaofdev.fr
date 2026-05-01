@@ -9,6 +9,7 @@ import {
   GitCommitHorizontal,
   Star,
 } from "lucide-react";
+import { useFormatter, useTranslations } from "next-intl";
 import { getStats } from "@/app/actions";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { cn } from "@/lib/utils";
@@ -45,6 +46,7 @@ const COLOR_MAP: Record<string, { bg: string; ring: string; icon: string }> = {
 };
 
 function StatCard({ icon, label, value, color }: StatCardProps) {
+  const t = useTranslations("Commands.stats");
   const c = COLOR_MAP[color] ?? COLOR_MAP.teal;
 
   return (
@@ -59,15 +61,11 @@ function StatCard({ icon, label, value, color }: StatCardProps) {
       <div className="min-w-0 flex-1">
         <p className="text-muted-foreground text-xs leading-none">{label}</p>
         <p className="mt-0.5 truncate font-semibold text-foreground text-xs">
-          {value ?? "N/A"}
+          {value ?? t("na")}
         </p>
       </div>
     </div>
   );
-}
-
-function formatNumber(n: number): string {
-  return n.toLocaleString("en-US");
 }
 
 function StatsSkeleton() {
@@ -92,47 +90,52 @@ function StatsSkeleton() {
 }
 
 function StatsContent({ data }: { data: StatsData }) {
+  const t = useTranslations("Commands.stats");
+  const format = useFormatter();
   const year = new Date().getFullYear();
   const yearsOfCoding = data.codingSince
-    ? `${data.codingSince} (${year - data.codingSince} yrs)`
+    ? t("codingSinceValue", {
+        since: data.codingSince,
+        years: year - data.codingSince,
+      })
     : null;
 
   const stats: StatCardProps[] = [
     {
       icon: <Clock size={16} />,
-      label: "Total Coding Time",
+      label: t("totalCodingTime"),
       value: data.wakatime.codingTime,
       color: "teal",
     },
     {
       icon: <Code size={16} />,
-      label: "Top Language",
+      label: t("topLanguage"),
       value: data.wakatime.topLanguage,
       color: "purple",
     },
     {
       icon: <Star size={16} />,
-      label: "GitHub Stars",
-      value: data.totalStars !== null ? formatNumber(data.totalStars) : null,
+      label: t("githubStars"),
+      value: data.totalStars !== null ? format.number(data.totalStars) : null,
       color: "gold",
     },
     {
       icon: <GitCommitHorizontal size={16} />,
-      label: `Contributions (${year})`,
+      label: t("contributions", { year }),
       value:
-        data.contributions !== null ? formatNumber(data.contributions) : null,
+        data.contributions !== null ? format.number(data.contributions) : null,
       color: "gold",
     },
     {
       icon: <Calendar size={16} />,
-      label: "Coding Since",
+      label: t("codingSince"),
       value: yearsOfCoding,
       color: "orange",
     },
     {
       icon: <Eye size={16} />,
-      label: "Visitors",
-      value: data.visitors !== null ? formatNumber(data.visitors) : null,
+      label: t("visitors"),
+      value: data.visitors !== null ? format.number(data.visitors) : null,
       color: "orange",
     },
   ];
@@ -149,6 +152,7 @@ function StatsContent({ data }: { data: StatsData }) {
 }
 
 function CStats() {
+  const t = useTranslations("Commands.stats");
   const { data, isLoading } = useQuery({
     queryKey: ["stats"],
     queryFn: () => getStats(),
@@ -160,9 +164,7 @@ function CStats() {
   if (!data)
     return (
       <AnimatedSpan className="gap-1">
-        <p className="text-destructive">
-          Failed to fetch stats. Try again later.
-        </p>
+        <p className="text-destructive">{t("failed")}</p>
       </AnimatedSpan>
     );
 

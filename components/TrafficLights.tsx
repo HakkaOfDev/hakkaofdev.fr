@@ -1,6 +1,7 @@
 "use client";
 
 import { Maximize2, Minimize2, Minus, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useTerminal } from "./providers/TerminalProvider";
 
 const TRAFFIC_LIGHT_COLORS = {
@@ -46,6 +47,7 @@ function TrafficLightDot({
 // ─── Interactive (terminal header) ──────────────────────────────────────────
 
 function TrafficLights() {
+  const t = useTranslations("Terminal");
   const {
     isMinimized,
     isMaximized,
@@ -59,7 +61,7 @@ function TrafficLights() {
       <button
         type="button"
         onClick={handleClose}
-        aria-label="Close terminal"
+        aria-label={t("trafficLights.close")}
         className="group/btn relative flex h-6 w-6 cursor-pointer items-center justify-center"
       >
         <TrafficLightDot color="red" icon={X} />
@@ -68,7 +70,11 @@ function TrafficLights() {
       <button
         type="button"
         onClick={handleMinimize}
-        aria-label={isMinimized ? "Restore terminal" : "Minimize terminal"}
+        aria-label={
+          isMinimized
+            ? t("trafficLights.restoreMinimize")
+            : t("trafficLights.minimize")
+        }
         className="group/btn relative flex h-6 w-6 cursor-pointer items-center justify-center"
       >
         <TrafficLightDot color="yellow" icon={Minus} />
@@ -77,7 +83,11 @@ function TrafficLights() {
       <button
         type="button"
         onClick={handleMaximize}
-        aria-label={isMaximized ? "Restore terminal size" : "Expand terminal"}
+        aria-label={
+          isMaximized
+            ? t("trafficLights.restoreExpand")
+            : t("trafficLights.expand")
+        }
         className="group/btn relative flex h-6 w-6 cursor-pointer items-center justify-center"
       >
         <TrafficLightDot

@@ -8,7 +8,8 @@ import {
 
 export type Suggestion = {
   value: string;
-  description?: string;
+  /** Key under `Commands.descriptions.*` for the localized description, if any. */
+  slug?: string;
   group: CommandGroup;
 };
 

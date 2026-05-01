@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { Shortcut } from "@/components/ui/Shortcut";
@@ -8,6 +9,7 @@ import { useThemeEngine } from "@/hooks/useThemeEngine";
 const PREVIEW_DURATION_MS = 10_000;
 
 export function CThemePreview({ name }: { name: string }) {
+  const t = useTranslations("Theme.preview");
   const { previewTheme, themes, isPreview } = useThemeEngine();
 
   const aliases: Record<string, string> = {
@@ -16,7 +18,7 @@ export function CThemePreview({ name }: { name: string }) {
   };
 
   const resolvedName = aliases[name] ?? name;
-  const target = themes.find((t) => t.name === resolvedName);
+  const target = themes.find((th) => th.name === resolvedName);
 
   useEffect(() => {
     if (target) previewTheme(target.name, PREVIEW_DURATION_MS);
@@ -25,18 +27,18 @@ export function CThemePreview({ name }: { name: string }) {
   if (!target) {
     return (
       <AnimatedSpan className="gap-2">
-        <p className="text-destructive">
-          Unknown theme: <span className="font-semibold">{name}</span>.
-        </p>
+        <p className="text-destructive">{t("unknown", { name })}</p>
         <p className="text-muted-foreground">
-          Run{" "}
-          <Shortcut
-            label="theme list"
-            command="theme list"
-            variant="orange"
-            className="px-1.5 py-0 text-xs"
-          />{" "}
-          to see available themes.
+          {t.rich("runListHint", {
+            link: () => (
+              <Shortcut
+                label="theme list"
+                command="theme list"
+                variant="orange"
+                className="px-1.5 py-0 text-xs"
+              />
+            ),
+          })}
         </p>
       </AnimatedSpan>
     );
@@ -45,12 +47,11 @@ export function CThemePreview({ name }: { name: string }) {
   return (
     <AnimatedSpan className="gap-1">
       <p className="text-muted-foreground">
-        Previewing{" "}
-        <span className="font-semibold text-foreground">{target.label}</span>
+        {t("previewing", { label: target.label })}
         {isPreview && (
           <span className="text-quaternary">
             {" "}
-            — auto-reverts in {PREVIEW_DURATION_MS / 1000}s
+            {t("autoReverts", { seconds: PREVIEW_DURATION_MS / 1000 })}
           </span>
         )}
       </p>
@@ -78,11 +79,11 @@ export function CThemePreview({ name }: { name: string }) {
         ))}
       </div>
       <p className="mt-1 text-muted-foreground/50 text-xs">
-        Use{" "}
+        {t("applyHintPrefix")}{" "}
         <span className="font-mono font-semibold text-foreground">
           theme set {target.name}
         </span>{" "}
-        to apply permanently.
+        {t("applyHintSuffix")}
       </p>
     </AnimatedSpan>
   );

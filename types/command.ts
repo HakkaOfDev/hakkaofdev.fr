@@ -23,7 +23,8 @@ export type CommandGroupMeta = {
 
 export type CommandDescriptor = {
   command: string;
-  description: string;
+  /** Key under `Commands.descriptions.*` for the localized description. */
+  slug: string;
   group: CommandGroup;
 };
 
@@ -31,17 +32,22 @@ export type CommandDescriptor = {
 
 export type SpotifyCommandDescriptor = {
   command: "now" | "top" | "history";
-  description: string;
+  slug: string;
 };
 
 export type GuestbookCommandDescriptor = {
   command: "read" | "sign";
-  description: string;
+  slug: string;
 };
 
 export type ThemeCommandDescriptor = {
   command: "list" | "set" | "preview" | "create" | "validate";
-  description: string;
+  slug: string;
+};
+
+export type LangCommandDescriptor = {
+  command: "set" | "auto";
+  slug: string;
 };
 
 // ─── Dynamic commands ───────────────────────────────────────────────────

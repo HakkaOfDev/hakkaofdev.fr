@@ -1,46 +1,35 @@
 "use client";
 
 import { Check, Trash2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
 import { BUILTIN_THEME_MAP } from "@/lib/themes/palettes";
 import { cn } from "@/lib/utils";
 import type { ThemePalette } from "@/types/theme";
-
-const SWATCH_KEYS = [
-  "background",
-  "foreground",
-  "muted",
-  "primary",
-  "secondary",
-  "tertiary",
-  "quaternary",
-  "quinary",
-] as const;
-
-interface ColorSwatchesProps {
-  colors: ThemePalette["colors"];
-}
+import { ColorSwatches } from "./ThemeColorSwatches";
 
 export function CThemeList() {
+  const t = useTranslations("Theme");
   const { theme, themes, setTheme, deleteCustomTheme } = useThemeEngine();
 
   return (
     <AnimatedSpan className="gap-3">
       <p className="text-muted-foreground">
-        Available themes (
-        <span className="font-semibold text-foreground">{themes.length}</span>):
+        {t.rich("list.available", {
+          count: themes.length,
+        })}
       </p>
 
       <div className="terminal-scrollbar grid max-h-60 overflow-y-auto overflow-x-hidden border-y py-2 pr-2">
-        {themes.map((t) => {
-          const isActive = t.name === theme;
-          const isCustom = !BUILTIN_THEME_MAP.has(t.name);
+        {themes.map((th) => {
+          const isActive = th.name === theme;
+          const isCustom = !BUILTIN_THEME_MAP.has(th.name);
 
           return (
             <ThemeRow
-              key={t.name}
-              theme={t}
+              key={th.name}
+              theme={th}
               isActive={isActive}
               isCustom={isCustom}
               onSetTheme={setTheme}
@@ -50,24 +39,8 @@ export function CThemeList() {
         })}
       </div>
 
-      <p className="text-muted-foreground/60 text-xs">
-        Tap or click on a theme to apply it.
-      </p>
+      <p className="text-muted-foreground/60 text-xs">{t("list.tip")}</p>
     </AnimatedSpan>
-  );
-}
-
-function ColorSwatches({ colors }: ColorSwatchesProps) {
-  return (
-    <div className="flex shrink-0 gap-px overflow-hidden rounded-full border">
-      {SWATCH_KEYS.map((key) => (
-        <span
-          key={key}
-          className="h-4 w-2 first:rounded-l-sm last:rounded-r-sm"
-          style={{ backgroundColor: colors[key] }}
-        />
-      ))}
-    </div>
   );
 }
 
@@ -79,6 +52,7 @@ interface ThemeInfoProps {
 }
 
 function ThemeInfo({ label, isActive, isCustom, isDark }: ThemeInfoProps) {
+  const t = useTranslations("Theme");
   return (
     <>
       {/* Theme name */}
@@ -93,19 +67,19 @@ function ThemeInfo({ label, isActive, isCustom, isDark }: ThemeInfoProps) {
         </span>
         {isActive && (
           <span className="hidden shrink-0 text-muted-foreground/50 text-xs md:inline">
-            (active)
+            {t("list.active")}
           </span>
         )}
         {isCustom && (
           <span className="shrink-0 font-semibold text-tertiary/80 text-xs">
-            custom
+            {t("list.custom")}
           </span>
         )}
       </span>
 
       {/* Dark/light badge */}
       <span className="shrink-0 font-mono text-muted-foreground/50 text-xs">
-        {isDark ? "dark" : "light"}
+        {isDark ? t("darkSuffix") : t("lightSuffix")}
       </span>
     </>
   );
@@ -118,6 +92,7 @@ interface DeleteButtonProps {
 }
 
 function DeleteButton({ themeName, themeLabel, onDelete }: DeleteButtonProps) {
+  const t = useTranslations("Theme");
   return (
     <button
       type="button"
@@ -126,7 +101,7 @@ function DeleteButton({ themeName, themeLabel, onDelete }: DeleteButtonProps) {
         onDelete(themeName);
       }}
       className="shrink-0 cursor-pointer rounded p-1.5 text-destructive/70 transition-colors hover:bg-destructive/10 hover:text-destructive"
-      title={`Delete ${themeLabel}`}
+      title={t("list.deleteAria", { label: themeLabel })}
     >
       <Trash2 className="h-3.5 w-3.5" />
     </button>

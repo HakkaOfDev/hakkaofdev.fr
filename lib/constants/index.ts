@@ -3,7 +3,4 @@ export { PROJECTS } from "./projects.constants";
 export { EDUCATION, EXPERIENCES, HOBBIES, LANGUAGES } from "./resume.constants";
 export { GITHUB_URL, SITE, SOCIALS } from "./site.constants";
 export { SKILLS } from "./skills.constants";
-export {
-  CLOSE_MESSAGES,
-  TERMINAL_KEYBOARD_SHORTCUTS,
-} from "./terminal.constants";
+export { TERMINAL_KEYBOARD_SHORTCUTS } from "./terminal.constants";

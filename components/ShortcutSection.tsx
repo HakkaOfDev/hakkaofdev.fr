@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-/* ─── Section wrapper (heading + divider + rows) ─── */
+/* ─── Section wrapper (heading + divider) ─── */
 
 function ShortcutSection({
   title,
@@ -25,21 +25,17 @@ function ShortcutSection({
   );
 }
 
-/* ─── Single row (label + content) ─── */
+/* ─── Single row (label + shortcuts) ─── */
 
 function ShortcutRow({
   label,
   children,
-  className,
 }: {
   label: string;
   children: React.ReactNode;
-  className?: string;
 }) {
   return (
-    <div
-      className={cn("grid grid-cols-[64px_1fr] items-start gap-4", className)}
-    >
+    <div className="grid grid-cols-[88px_1fr] items-start gap-4">
       <p className="pt-0.5 font-medium text-[11px] text-muted-foreground/80">
         {label}
       </p>
