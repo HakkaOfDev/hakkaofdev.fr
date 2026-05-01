@@ -291,6 +291,21 @@
         "allCountries": "सभी देश",
         "clearCountry": "देश फ़िल्टर साफ़ करें"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "अमान्य JSON पेलोड।",
+        "schemaMissing": "अतिथि पुस्तिका आरंभ नहीं हुई है। supabase/schema/guestbook.sql चलाएँ।",
+        "unavailable": "अतिथि पुस्तिका सेवा अनुपलब्ध है।",
+        "fetchEntriesFailed": "अतिथि पुस्तिका प्रविष्टियाँ प्राप्त करने में विफल।",
+        "fetchCountriesFailed": "देश प्राप्त करने में विफल।",
+        "saveFailed": "अतिथि पुस्तिका प्रविष्टि सहेजने में विफल।",
+        "rateLimitCheckFailed": "दर सीमा जाँच विफल।",
+        "rateLimitExceeded": "दर सीमा पार। कृपया बाद में पुनः प्रयास करें।",
+        "nameTooShort": "नाम कम से कम 2 अक्षरों का होना चाहिए।",
+        "messageTooShort": "संदेश कम से कम 2 अक्षरों का होना चाहिए।",
+        "websiteInvalid": "वेबसाइट URL अमान्य है।"
+      }
     }
   },
   "Spotify": {

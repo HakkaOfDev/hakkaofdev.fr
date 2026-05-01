@@ -287,6 +287,21 @@
         "allCountries": "Tüm ülkeler",
         "clearCountry": "Ülke filtresini temizle"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Geçersiz JSON yükü.",
+        "schemaMissing": "Ziyaretçi defteri başlatılmadı. supabase/schema/guestbook.sql dosyasını çalıştırın.",
+        "unavailable": "Ziyaretçi defteri hizmeti kullanılamıyor.",
+        "fetchEntriesFailed": "Ziyaretçi defteri girişleri alınamadı.",
+        "fetchCountriesFailed": "Ülkeler alınamadı.",
+        "saveFailed": "Ziyaretçi defteri girişi kaydedilemedi.",
+        "rateLimitCheckFailed": "Hız sınırı kontrolü başarısız oldu.",
+        "rateLimitExceeded": "Hız sınırı aşıldı. Lütfen daha sonra tekrar deneyin.",
+        "nameTooShort": "Ad en az 2 karakter olmalıdır.",
+        "messageTooShort": "Mesaj en az 2 karakter olmalıdır.",
+        "websiteInvalid": "Web sitesi URL'si geçersiz."
+      }
     }
   },
   "Spotify": {

@@ -291,6 +291,21 @@
         "allCountries": "Semua negara",
         "clearCountry": "Hapus filter negara"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Muatan JSON tidak valid.",
+        "schemaMissing": "Buku tamu belum diinisialisasi. Jalankan supabase/schema/guestbook.sql.",
+        "unavailable": "Layanan buku tamu tidak tersedia.",
+        "fetchEntriesFailed": "Gagal memuat entri buku tamu.",
+        "fetchCountriesFailed": "Gagal memuat negara.",
+        "saveFailed": "Gagal menyimpan entri buku tamu.",
+        "rateLimitCheckFailed": "Pemeriksaan batas laju gagal.",
+        "rateLimitExceeded": "Batas laju terlampaui. Silakan coba lagi nanti.",
+        "nameTooShort": "Nama minimal 2 karakter.",
+        "messageTooShort": "Pesan minimal 2 karakter.",
+        "websiteInvalid": "URL situs web tidak valid."
+      }
     }
   },
   "Spotify": {

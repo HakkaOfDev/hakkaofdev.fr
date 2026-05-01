@@ -287,6 +287,21 @@
         "allCountries": "Alle landen",
         "clearCountry": "Landfilter wissen"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Ongeldige JSON-payload.",
+        "schemaMissing": "Gastenboek is niet geïnitialiseerd. Voer supabase/schema/guestbook.sql uit.",
+        "unavailable": "Gastenboekservice is niet beschikbaar.",
+        "fetchEntriesFailed": "Kan gastenboekvermeldingen niet ophalen.",
+        "fetchCountriesFailed": "Kan landen niet ophalen.",
+        "saveFailed": "Kan gastenboekvermelding niet opslaan.",
+        "rateLimitCheckFailed": "Controle van ratelimiet mislukt.",
+        "rateLimitExceeded": "Ratelimiet overschreden. Probeer het later opnieuw.",
+        "nameTooShort": "Naam moet minimaal 2 tekens bevatten.",
+        "messageTooShort": "Bericht moet minimaal 2 tekens bevatten.",
+        "websiteInvalid": "Website-URL is ongeldig."
+      }
     }
   },
   "Spotify": {

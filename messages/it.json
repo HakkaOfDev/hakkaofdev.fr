@@ -297,6 +297,21 @@
         "allCountries": "Tutti i paesi",
         "clearCountry": "Rimuovi filtro paese"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Payload JSON non valido.",
+        "schemaMissing": "Il guestbook non è inizializzato. Esegui supabase/schema/guestbook.sql.",
+        "unavailable": "Il servizio guestbook non è disponibile.",
+        "fetchEntriesFailed": "Impossibile recuperare le voci del guestbook.",
+        "fetchCountriesFailed": "Impossibile recuperare i paesi.",
+        "saveFailed": "Impossibile salvare la voce del guestbook.",
+        "rateLimitCheckFailed": "Verifica del limite di frequenza non riuscita.",
+        "rateLimitExceeded": "Limite di frequenza superato. Riprova più tardi.",
+        "nameTooShort": "Il nome deve contenere almeno 2 caratteri.",
+        "messageTooShort": "Il messaggio deve contenere almeno 2 caratteri.",
+        "websiteInvalid": "L'URL del sito web non è valido."
+      }
     }
   },
   "Spotify": {
@@ -378,7 +393,9 @@
         "name": "DUT Reti e Telecomunicazioni",
         "location": "IUT Châlons (Châlons-en-Champagne, Francia)",
         "period": "2020-2022",
-        "descriptions": ["Salutatorian"]
+        "descriptions": [
+          "Salutatorian"
+        ]
       },
       "lyceeBac": {
         "name": "Maturità scientifica (equivalente)",

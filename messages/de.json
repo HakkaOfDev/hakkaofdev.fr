@@ -297,6 +297,21 @@
         "allCountries": "Alle Länder",
         "clearCountry": "Land-Filter zurücksetzen"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Ungültige JSON-Nutzdaten.",
+        "schemaMissing": "Gästebuch ist nicht initialisiert. Führe supabase/schema/guestbook.sql aus.",
+        "unavailable": "Gästebuch-Dienst ist nicht verfügbar.",
+        "fetchEntriesFailed": "Gästebucheinträge konnten nicht abgerufen werden.",
+        "fetchCountriesFailed": "Länder konnten nicht abgerufen werden.",
+        "saveFailed": "Gästebucheintrag konnte nicht gespeichert werden.",
+        "rateLimitCheckFailed": "Prüfung des Ratenlimits fehlgeschlagen.",
+        "rateLimitExceeded": "Ratenlimit überschritten. Bitte versuche es später erneut.",
+        "nameTooShort": "Der Name muss mindestens 2 Zeichen lang sein.",
+        "messageTooShort": "Die Nachricht muss mindestens 2 Zeichen lang sein.",
+        "websiteInvalid": "Die Website-URL ist ungültig."
+      }
     }
   },
   "Spotify": {
@@ -378,7 +393,9 @@
         "name": "DUT Netzwerke und Telekommunikation (Hochschulabschluss)",
         "location": "IUT Châlons (Châlons-en-Champagne, Frankreich)",
         "period": "2020-2022",
-        "descriptions": ["Salutatorian"]
+        "descriptions": [
+          "Salutatorian"
+        ]
       },
       "lyceeBac": {
         "name": "Wissenschaftliches Abitur",

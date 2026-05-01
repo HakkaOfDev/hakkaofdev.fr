@@ -291,6 +291,21 @@
         "allCountries": "Toate țările",
         "clearCountry": "Șterge filtrul de țară"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Payload JSON invalid.",
+        "schemaMissing": "Cartea de oaspeți nu este inițializată. Rulează supabase/schema/guestbook.sql.",
+        "unavailable": "Serviciul cărții de oaspeți este indisponibil.",
+        "fetchEntriesFailed": "Nu s-au putut prelua intrările cărții de oaspeți.",
+        "fetchCountriesFailed": "Nu s-au putut prelua țările.",
+        "saveFailed": "Nu s-a putut salva intrarea cărții de oaspeți.",
+        "rateLimitCheckFailed": "Verificarea limitei de rată a eșuat.",
+        "rateLimitExceeded": "Limita de rată depășită. Încearcă din nou mai târziu.",
+        "nameTooShort": "Numele trebuie să aibă cel puțin 2 caractere.",
+        "messageTooShort": "Mesajul trebuie să aibă cel puțin 2 caractere.",
+        "websiteInvalid": "URL-ul site-ului este invalid."
+      }
     }
   },
   "Spotify": {

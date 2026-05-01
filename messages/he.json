@@ -291,6 +291,21 @@
         "allCountries": "כל המדינות",
         "clearCountry": "נקה סינון מדינה"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "מטען JSON לא תקין.",
+        "schemaMissing": "ספר האורחים לא אותחל. הרץ את supabase/schema/guestbook.sql.",
+        "unavailable": "שירות ספר האורחים אינו זמין.",
+        "fetchEntriesFailed": "טעינת ערכי ספר האורחים נכשלה.",
+        "fetchCountriesFailed": "טעינת הארצות נכשלה.",
+        "saveFailed": "שמירת רשומת ספר האורחים נכשלה.",
+        "rateLimitCheckFailed": "בדיקת הגבלת קצב נכשלה.",
+        "rateLimitExceeded": "חרגת ממגבלת הקצב. נסה שוב מאוחר יותר.",
+        "nameTooShort": "השם חייב לכלול לפחות 2 תווים.",
+        "messageTooShort": "ההודעה חייבת לכלול לפחות 2 תווים.",
+        "websiteInvalid": "כתובת ה־URL של האתר אינה תקינה."
+      }
     }
   },
   "Spotify": {

@@ -291,6 +291,21 @@
         "allCountries": "جميع البلدان",
         "clearCountry": "مسح فلتر البلد"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "حمولة JSON غير صالحة.",
+        "schemaMissing": "لم تتم تهيئة سجل الزوار. شغّل supabase/schema/guestbook.sql.",
+        "unavailable": "خدمة سجل الزوار غير متوفرة.",
+        "fetchEntriesFailed": "تعذّر جلب مدخلات سجل الزوار.",
+        "fetchCountriesFailed": "تعذّر جلب الدول.",
+        "saveFailed": "تعذّر حفظ مدخل سجل الزوار.",
+        "rateLimitCheckFailed": "فشل التحقق من حد المعدل.",
+        "rateLimitExceeded": "تم تجاوز حد المعدل. يرجى المحاولة لاحقًا.",
+        "nameTooShort": "يجب أن يحتوي الاسم على حرفين على الأقل.",
+        "messageTooShort": "يجب أن تحتوي الرسالة على حرفين على الأقل.",
+        "websiteInvalid": "عنوان URL للموقع غير صالح."
+      }
     }
   },
   "Spotify": {

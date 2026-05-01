@@ -291,6 +291,21 @@
         "allCountries": "Všechny země",
         "clearCountry": "Vymazat filtr země"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Neplatný JSON payload.",
+        "schemaMissing": "Návštěvní kniha není inicializována. Spusťte supabase/schema/guestbook.sql.",
+        "unavailable": "Služba návštěvní knihy není dostupná.",
+        "fetchEntriesFailed": "Nepodařilo se načíst záznamy návštěvní knihy.",
+        "fetchCountriesFailed": "Nepodařilo se načíst země.",
+        "saveFailed": "Nepodařilo se uložit záznam návštěvní knihy.",
+        "rateLimitCheckFailed": "Kontrola limitu frekvence selhala.",
+        "rateLimitExceeded": "Limit frekvence překročen. Zkuste to prosím později.",
+        "nameTooShort": "Jméno musí mít alespoň 2 znaky.",
+        "messageTooShort": "Zpráva musí mít alespoň 2 znaky.",
+        "websiteInvalid": "URL adresa webu je neplatná."
+      }
     }
   },
   "Spotify": {

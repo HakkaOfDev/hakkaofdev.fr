@@ -287,6 +287,21 @@
         "allCountries": "Wszystkie kraje",
         "clearCountry": "Wyczyść filtr kraju"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Nieprawidłowy ładunek JSON.",
+        "schemaMissing": "Księga gości nie jest zainicjowana. Uruchom supabase/schema/guestbook.sql.",
+        "unavailable": "Usługa księgi gości jest niedostępna.",
+        "fetchEntriesFailed": "Nie udało się pobrać wpisów księgi gości.",
+        "fetchCountriesFailed": "Nie udało się pobrać krajów.",
+        "saveFailed": "Nie udało się zapisać wpisu w księdze gości.",
+        "rateLimitCheckFailed": "Sprawdzanie limitu zapytań nie powiodło się.",
+        "rateLimitExceeded": "Przekroczono limit zapytań. Spróbuj ponownie później.",
+        "nameTooShort": "Imię musi mieć co najmniej 2 znaki.",
+        "messageTooShort": "Wiadomość musi mieć co najmniej 2 znaki.",
+        "websiteInvalid": "Adres URL strony jest nieprawidłowy."
+      }
     }
   },
   "Spotify": {

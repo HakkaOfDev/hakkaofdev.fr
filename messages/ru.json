@@ -287,6 +287,21 @@
         "allCountries": "Все страны",
         "clearCountry": "Сбросить фильтр стран"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Недопустимая JSON-нагрузка.",
+        "schemaMissing": "Гостевая книга не инициализирована. Выполните supabase/schema/guestbook.sql.",
+        "unavailable": "Сервис гостевой книги недоступен.",
+        "fetchEntriesFailed": "Не удалось получить записи гостевой книги.",
+        "fetchCountriesFailed": "Не удалось получить список стран.",
+        "saveFailed": "Не удалось сохранить запись в гостевой книге.",
+        "rateLimitCheckFailed": "Не удалось проверить лимит частоты запросов.",
+        "rateLimitExceeded": "Превышен лимит частоты запросов. Попробуйте позже.",
+        "nameTooShort": "Имя должно содержать не менее 2 символов.",
+        "messageTooShort": "Сообщение должно содержать не менее 2 символов.",
+        "websiteInvalid": "URL веб-сайта недействителен."
+      }
     }
   },
   "Spotify": {

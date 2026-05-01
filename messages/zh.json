@@ -301,6 +301,21 @@
         "allCountries": "所有国家",
         "clearCountry": "清除国家筛选"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "JSON 负载无效。",
+        "schemaMissing": "留言簿未初始化。请运行 supabase/schema/guestbook.sql。",
+        "unavailable": "留言簿服务不可用。",
+        "fetchEntriesFailed": "无法获取留言簿条目。",
+        "fetchCountriesFailed": "无法获取国家列表。",
+        "saveFailed": "无法保存留言簿条目。",
+        "rateLimitCheckFailed": "速率限制检查失败。",
+        "rateLimitExceeded": "已超出速率限制。请稍后重试。",
+        "nameTooShort": "姓名至少需要 2 个字符。",
+        "messageTooShort": "留言至少需要 2 个字符。",
+        "websiteInvalid": "网站 URL 无效。"
+      }
     }
   },
   "Spotify": {
@@ -382,13 +397,18 @@
         "name": "DUT 网络与电信(技术学位)",
         "location": "IUT Châlons(法国 沙隆昂尚帕涅)",
         "period": "2020-2022",
-        "descriptions": ["榜眼"]
+        "descriptions": [
+          "榜眼"
+        ]
       },
       "lyceeBac": {
         "name": "理科业士(高考等同)",
         "location": "Lycée Jean Talon(法国 沙隆昂尚帕涅)",
         "period": "2019-2020",
-        "descriptions": ["专业 ISN(信息与数字科学)", "优等"]
+        "descriptions": [
+          "专业 ISN(信息与数字科学)",
+          "优等"
+        ]
       }
     },
     "projects": {

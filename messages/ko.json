@@ -291,6 +291,21 @@
         "allCountries": "모든 국가",
         "clearCountry": "국가 필터 지우기"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "잘못된 JSON 페이로드입니다.",
+        "schemaMissing": "방명록이 초기화되지 않았습니다. supabase/schema/guestbook.sql을 실행하세요.",
+        "unavailable": "방명록 서비스를 사용할 수 없습니다.",
+        "fetchEntriesFailed": "방명록 항목을 가져오지 못했습니다.",
+        "fetchCountriesFailed": "국가를 가져오지 못했습니다.",
+        "saveFailed": "방명록 항목을 저장하지 못했습니다.",
+        "rateLimitCheckFailed": "속도 제한 확인에 실패했습니다.",
+        "rateLimitExceeded": "속도 제한을 초과했습니다. 나중에 다시 시도해 주세요.",
+        "nameTooShort": "이름은 2자 이상이어야 합니다.",
+        "messageTooShort": "메시지는 2자 이상이어야 합니다.",
+        "websiteInvalid": "웹사이트 URL이 유효하지 않습니다."
+      }
     }
   },
   "Spotify": {

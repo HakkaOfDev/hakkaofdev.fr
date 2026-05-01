@@ -291,6 +291,21 @@
         "allCountries": "Tất cả quốc gia",
         "clearCountry": "Xóa bộ lọc quốc gia"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Payload JSON không hợp lệ.",
+        "schemaMissing": "Sổ lưu bút chưa được khởi tạo. Hãy chạy supabase/schema/guestbook.sql.",
+        "unavailable": "Dịch vụ sổ lưu bút không khả dụng.",
+        "fetchEntriesFailed": "Không thể tải các mục sổ lưu bút.",
+        "fetchCountriesFailed": "Không thể tải danh sách quốc gia.",
+        "saveFailed": "Không thể lưu mục sổ lưu bút.",
+        "rateLimitCheckFailed": "Kiểm tra giới hạn tốc độ thất bại.",
+        "rateLimitExceeded": "Đã vượt quá giới hạn tốc độ. Vui lòng thử lại sau.",
+        "nameTooShort": "Tên phải có ít nhất 2 ký tự.",
+        "messageTooShort": "Tin nhắn phải có ít nhất 2 ký tự.",
+        "websiteInvalid": "URL trang web không hợp lệ."
+      }
     }
   },
   "Spotify": {

@@ -297,6 +297,21 @@
         "allCountries": "Todos os países",
         "clearCountry": "Limpar filtro de país"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Carga JSON inválida.",
+        "schemaMissing": "O livro de visitas não está inicializado. Execute supabase/schema/guestbook.sql.",
+        "unavailable": "O serviço do livro de visitas está indisponível.",
+        "fetchEntriesFailed": "Falha ao buscar as entradas do livro de visitas.",
+        "fetchCountriesFailed": "Falha ao buscar os países.",
+        "saveFailed": "Falha ao salvar a entrada do livro de visitas.",
+        "rateLimitCheckFailed": "Falha na verificação do limite de taxa.",
+        "rateLimitExceeded": "Limite de taxa excedido. Tente novamente mais tarde.",
+        "nameTooShort": "O nome deve ter pelo menos 2 caracteres.",
+        "messageTooShort": "A mensagem deve ter pelo menos 2 caracteres.",
+        "websiteInvalid": "A URL do site é inválida."
+      }
     }
   },
   "Spotify": {
@@ -378,7 +393,9 @@
         "name": "DUT Redes e Telecomunicações",
         "location": "IUT Châlons (Châlons-en-Champagne, França)",
         "period": "2020-2022",
-        "descriptions": ["Salutatorian"]
+        "descriptions": [
+          "Salutatorian"
+        ]
       },
       "lyceeBac": {
         "name": "Bacharelato científico (equivalente)",

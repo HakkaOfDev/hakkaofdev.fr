@@ -301,6 +301,21 @@
         "allCountries": "すべての国",
         "clearCountry": "国フィルターをクリア"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "JSON ペイロードが無効です。",
+        "schemaMissing": "ゲストブックが初期化されていません。supabase/schema/guestbook.sql を実行してください。",
+        "unavailable": "ゲストブックサービスは利用できません。",
+        "fetchEntriesFailed": "ゲストブックのエントリを取得できませんでした。",
+        "fetchCountriesFailed": "国を取得できませんでした。",
+        "saveFailed": "ゲストブックのエントリを保存できませんでした。",
+        "rateLimitCheckFailed": "レート制限の確認に失敗しました。",
+        "rateLimitExceeded": "レート制限を超えました。後ほど再試行してください。",
+        "nameTooShort": "名前は 2 文字以上である必要があります。",
+        "messageTooShort": "メッセージは 2 文字以上である必要があります。",
+        "websiteInvalid": "ウェブサイトの URL が無効です。"
+      }
     }
   },
   "Spotify": {
@@ -382,13 +397,18 @@
         "name": "DUT ネットワーク・通信(技術学位)",
         "location": "IUT Châlons(フランス、シャロン・アン・シャンパーニュ)",
         "period": "2020-2022",
-        "descriptions": ["次席卒業"]
+        "descriptions": [
+          "次席卒業"
+        ]
       },
       "lyceeBac": {
         "name": "理系バカロレア",
         "location": "Lycée Jean Talon(フランス、シャロン・アン・シャンパーニュ)",
         "period": "2019-2020",
-        "descriptions": ["ISN(情報・デジタル科学)専攻", "優秀賞"]
+        "descriptions": [
+          "ISN(情報・デジタル科学)専攻",
+          "優秀賞"
+        ]
       }
     },
     "projects": {

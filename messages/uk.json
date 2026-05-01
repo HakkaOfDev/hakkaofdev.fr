@@ -287,6 +287,21 @@
         "allCountries": "Усі країни",
         "clearCountry": "Скинути фільтр країни"
       }
+    },
+    "api": {
+      "errors": {
+        "invalidJsonPayload": "Недійсне корисне навантаження JSON.",
+        "schemaMissing": "Гостьову книгу не ініціалізовано. Виконайте supabase/schema/guestbook.sql.",
+        "unavailable": "Сервіс гостьової книги недоступний.",
+        "fetchEntriesFailed": "Не вдалося отримати записи гостьової книги.",
+        "fetchCountriesFailed": "Не вдалося отримати країни.",
+        "saveFailed": "Не вдалося зберегти запис у гостьовій книзі.",
+        "rateLimitCheckFailed": "Не вдалося перевірити обмеження частоти.",
+        "rateLimitExceeded": "Перевищено обмеження частоти. Спробуйте пізніше.",
+        "nameTooShort": "Ім'я має містити щонайменше 2 символи.",
+        "messageTooShort": "Повідомлення має містити щонайменше 2 символи.",
+        "websiteInvalid": "URL-адреса сайту недійсна."
+      }
     }
   },
   "Spotify": {
