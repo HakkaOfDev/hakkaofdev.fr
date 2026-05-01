@@ -21,6 +21,7 @@ const cspDirectives = [
 
 const nextConfig: NextConfig = {
   productionBrowserSourceMaps: true,
+  poweredByHeader: false,
   experimental: {
     inlineCss: true,
     optimizePackageImports: ["lucide-react", "date-fns"],
@@ -43,6 +44,10 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Security-Policy",
             value: cspDirectives,
+          },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
           },
           {
             key: "Referrer-Policy",
