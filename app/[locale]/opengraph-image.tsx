@@ -183,27 +183,36 @@ const SCRIPT_FONT_FAMILY: Partial<Record<Locale, string>> = {
  * Pulls a single weight of a Google Font subset to just the glyphs we need
  * (`text=` param). Returns the binary woff2 buffer or `null` on any failure;
  * Satori falls back to its default font in that case rather than throwing.
+ *
+ * Retries on transient failures so parallel build-time prerendering across
+ * 22 locales doesn't fail the whole build when Google Fonts rate-limits or
+ * blips on a single request.
  */
 async function loadGoogleFont(
   family: string,
   weight: 400 | 700 | 800,
   text: string,
 ): Promise<ArrayBuffer | null> {
-  try {
-    const url = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(
-      family,
-    )}:wght@${weight}&text=${encodeURIComponent(text)}`;
-    const css = await fetch(url, { cache: "force-cache" }).then((r) =>
-      r.text(),
-    );
-    const fontUrl = css.match(/src:\s*url\(([^)]+)\)/)?.[1];
-    if (!fontUrl) return null;
-    return await fetch(fontUrl, { cache: "force-cache" }).then((r) =>
-      r.arrayBuffer(),
-    );
-  } catch {
-    return null;
+  const url = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(
+    family,
+  )}:wght@${weight}&text=${encodeURIComponent(text)}`;
+
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const cssRes = await fetch(url, { cache: "force-cache" });
+      if (!cssRes.ok) throw new Error(`css ${cssRes.status}`);
+      const css = await cssRes.text();
+      const fontUrl = css.match(/src:\s*url\(([^)]+)\)/)?.[1];
+      if (!fontUrl) throw new Error("no src url in css");
+      const fontRes = await fetch(fontUrl, { cache: "force-cache" });
+      if (!fontRes.ok) throw new Error(`font ${fontRes.status}`);
+      return await fontRes.arrayBuffer();
+    } catch {
+      if (attempt === 2) return null;
+      await new Promise((r) => setTimeout(r, 250 * 2 ** attempt));
+    }
   }
+  return null;
 }
 
 // ---------------------------------------------------------------------------
