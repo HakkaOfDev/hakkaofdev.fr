@@ -53,7 +53,25 @@ function CGuestbookSign() {
   const honeypotRef = useRef<HTMLInputElement>(null);
 
   const schema = useMemo(
-    () => buildGuestbookFormSchema(tValidation),
+    () =>
+      buildGuestbookFormSchema({
+        nameMin: tValidation("nameMin", {
+          min: GUESTBOOK_CONFIG.MIN_NAME_LENGTH,
+        }),
+        nameMax: tValidation("nameMax", {
+          max: GUESTBOOK_CONFIG.MAX_NAME_LENGTH,
+        }),
+        messageMin: tValidation("messageMin", {
+          min: GUESTBOOK_CONFIG.MIN_MESSAGE_LENGTH,
+        }),
+        messageMax: tValidation("messageMax", {
+          max: GUESTBOOK_CONFIG.MAX_MESSAGE_LENGTH,
+        }),
+        websiteMax: tValidation("websiteMax", {
+          max: GUESTBOOK_CONFIG.MAX_WEBSITE_LENGTH,
+        }),
+        websiteInvalid: tValidation("websiteInvalid"),
+      }),
     [tValidation],
   );
 
