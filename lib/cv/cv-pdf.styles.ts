@@ -1,4 +1,5 @@
 import { StyleSheet } from "@react-pdf/renderer";
+import { CV_FONT_FAMILY } from "./cv-pdf.fonts";
 
 export const COLORS = {
   black: "#111827",
@@ -17,7 +18,7 @@ export const styles = StyleSheet.create({
     paddingBottom: 28,
     paddingLeft: 36,
     fontSize: 10,
-    fontFamily: "Helvetica",
+    fontFamily: CV_FONT_FAMILY,
     color: COLORS.black,
     lineHeight: 1.35,
   },
@@ -29,7 +30,8 @@ export const styles = StyleSheet.create({
   },
   name: {
     fontSize: 22,
-    fontFamily: "Helvetica-Bold",
+    fontFamily: CV_FONT_FAMILY,
+    fontWeight: 700,
     letterSpacing: 1.2,
     textTransform: "uppercase",
     color: COLORS.black,
@@ -72,7 +74,8 @@ export const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 11,
-    fontFamily: "Helvetica-Bold",
+    fontFamily: CV_FONT_FAMILY,
+    fontWeight: 700,
     textTransform: "uppercase",
     letterSpacing: 1,
     color: COLORS.black,
@@ -101,14 +104,16 @@ export const styles = StyleSheet.create({
     alignItems: "baseline",
   },
   itemTitle: {
-    fontFamily: "Helvetica-Bold",
+    fontFamily: CV_FONT_FAMILY,
+    fontWeight: 700,
     fontSize: 10.5,
     color: COLORS.black,
   },
   itemPeriod: {
     fontSize: 9,
     color: COLORS.muted,
-    fontFamily: "Helvetica-Oblique",
+    fontFamily: CV_FONT_FAMILY,
+    fontStyle: "italic",
   },
   itemSubRow: {
     flexDirection: "row",
@@ -124,7 +129,8 @@ export const styles = StyleSheet.create({
   itemCompany: {
     fontSize: 9.5,
     color: COLORS.dark,
-    fontFamily: "Helvetica-Oblique",
+    fontFamily: CV_FONT_FAMILY,
+    fontStyle: "italic",
   },
   itemCompanyLink: {
     fontSize: 8.5,
@@ -164,10 +170,11 @@ export const styles = StyleSheet.create({
     paddingRight: 8,
   },
   skillLabel: {
-    fontFamily: "Helvetica-Bold",
+    fontFamily: CV_FONT_FAMILY,
+    fontWeight: 700,
     fontSize: 9.5,
     color: COLORS.black,
-    width: 76,
+    width: 96,
   },
   skillValues: {
     flex: 1,
@@ -185,7 +192,8 @@ export const styles = StyleSheet.create({
     gap: 6,
   },
   projectName: {
-    fontFamily: "Helvetica-Bold",
+    fontFamily: CV_FONT_FAMILY,
+    fontWeight: 700,
     fontSize: 10,
     color: COLORS.black,
   },
@@ -197,7 +205,8 @@ export const styles = StyleSheet.create({
   projectTags: {
     fontSize: 8.5,
     color: COLORS.muted,
-    fontFamily: "Helvetica-Oblique",
+    fontFamily: CV_FONT_FAMILY,
+    fontStyle: "italic",
     marginBottom: 1,
   },
   projectDesc: {
@@ -222,7 +231,8 @@ export const styles = StyleSheet.create({
     marginBottom: 1.5,
   },
   langBold: {
-    fontFamily: "Helvetica-Bold",
+    fontFamily: CV_FONT_FAMILY,
+    fontWeight: 700,
     color: COLORS.black,
   },
   socialLine: {
@@ -231,7 +241,8 @@ export const styles = StyleSheet.create({
     alignItems: "baseline",
   },
   socialLabel: {
-    fontFamily: "Helvetica-Bold",
+    fontFamily: CV_FONT_FAMILY,
+    fontWeight: 700,
     fontSize: 9.5,
     color: COLORS.black,
     marginRight: 4,

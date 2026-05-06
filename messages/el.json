@@ -1,7 +1,4 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "Alexandre Gossard | Ψηφιακός νομάδας & μηχανικός λογισμικού",
     "description": "Ψηφιακός νομάδας και freelance μηχανικός λογισμικού. Λάτρης του open source, δημιουργώ γρήγορες εμπειρίες ιστού με React και Next.js.",
@@ -210,10 +207,9 @@
       "fallback": "Ο πηγαίος κώδικας αυτού του portfolio είναι διαθέσιμος εδώ:"
     },
     "cv": {
-      "openPreview": "Άνοιγμα προεπισκόπησης PDF",
-      "downloadPdf": "Λήψη PDF",
-      "endpointsLabel": "Endpoints:",
-      "endpointsAnd": "και"
+      "description": "Το βιογραφικό μου σε PDF",
+      "openPreview": "Δοκιμάστε το",
+      "downloadPdf": "Λήψη"
     },
     "projects": {
       "openLabel": "Άνοιγμα έργου: {name}"
@@ -356,8 +352,8 @@
     "noArgs": "Η {command} δεν δέχεται ορίσματα.",
     "missingName": "Λείπει το όνομα του θέματος.",
     "tooManyArgs": "Πάρα πολλά ορίσματα.",
-    "usageSet": "Χρήση: theme set <όνομα>",
-    "usagePreview": "Χρήση: theme preview <όνομα>",
+    "usageSet": "Χρήση: theme set '<name>'",
+    "usagePreview": "Χρήση: theme preview '<name>'",
     "unknownSubcommand": "Άγνωστη υποεντολή: {sub}. Χρησιμοποιήστε μία από: {commands}.",
     "list": {
       "available": "Διαθέσιμα θέματα ({count}):",
@@ -375,7 +371,7 @@
       "unknown": "Άγνωστο θέμα: {name}.",
       "runListHint": "Εκτελέστε <link></link> για να δείτε τα διαθέσιμα θέματα.",
       "previewing": "Προεπισκόπηση {label}",
-      "autoReverts": "— επιστροφή σε {seconds} δ.",
+      "autoReverts": "- επιστροφή σε {seconds} δ.",
       "applyHintPrefix": "Χρησιμοποιήστε",
       "applyHintSuffix": "για μόνιμη εφαρμογή."
     },
@@ -459,7 +455,7 @@
   "CV": {
     "documentTitleSuffix": "Βιογραφικό",
     "subject": "Βιογραφικό",
-    "summary": "Μηχανικός λογισμικού με σχεδόν τέσσερα χρόνια εμπειρίας. Εργάζομαι ως freelancer για δικούς μου πελάτες, χτίζοντας web και mobile εφαρμογές που φτάνουν σε πραγματικούς χρήστες στο App Store και στο Google Play. React, Next.js και React Native είναι το έδαφός μου, με αδυναμία στην καθαρή αρχιτεκτονική, τους γρήγορους κύκλους ανατροφοδότησης και τα περιστασιακά open-source παράπλευρα έργα. Έδρα στη Γαλλία, εργάζομαι από όπου χωράει το λάπτοπ.",
+    "summary": "Μηχανικός λογισμικού με πάνω από 4 χρόνια εμπειρίας στην ανάπτυξη web και mobile εφαρμογών για πελάτες και ομάδες. Ηγούμαι frontend έργων χρησιμοποιώντας React, Next.js, React Native και Expo, με έμφαση σε καθαρό UI, ομαλό UX, responsive design, προσβασιμότητα και φιλικά προς τον χρήστη προϊόντα. Μου αρέσει επίσης να συνεισφέρω σε open-source έργα και να εργάζομαι εξ αποστάσεως ως ψηφιακός νομάς, συνεργαζόμενος με ομάδες και πελάτες από οποιοδήποτε σημείο του κόσμου.",
     "sections": {
       "summary": "Επαγγελματικό προφίλ",
       "experience": "Εμπειρία",
@@ -500,7 +496,7 @@
         "name": "Πρακτική άσκηση",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Γαλλία",
-        "period": "Σεπτέμβριος 2022 — Αύγουστος 2023",
+        "period": "Σεπτέμβριος 2022 - Αύγουστος 2023",
         "descriptions": [
           "Έχτισα GitLab CI/CD pipelines για αυτοματοποιημένες δοκιμές και deployment",
           "Δοχειροποίησα εσωτερικές εφαρμογές και υπηρεσίες με Docker",
@@ -513,19 +509,19 @@
       "iutSecurity": {
         "name": "Διαχείριση συστημάτων και ασφάλεια (επαγγελματικό πτυχίο)",
         "location": "IUT Châlons (Châlons-en-Champagne, Γαλλία)",
-        "period": "2022–2023",
+        "period": "2022-2023",
         "descriptions": []
       },
       "iutNetworks": {
         "name": "DUT Δίκτυα και Τηλεπικοινωνίες (τεχνικό πτυχίο)",
         "location": "IUT Châlons (Châlons-en-Champagne, Γαλλία)",
-        "period": "2020–2022",
+        "period": "2020-2022",
         "descriptions": ["Δεύτερος του έτους"]
       },
       "lyceeBac": {
         "name": "Επιστημονικό απολυτήριο (αντίστοιχο A-level)",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Γαλλία)",
-        "period": "2019–2020",
+        "period": "2019-2020",
         "descriptions": [
           "Ειδίκευση ISN (Πληροφορική και ψηφιακές επιστήμες)",
           "Με διάκριση"
@@ -543,7 +539,7 @@
       },
       "kabilaWallet": {
         "name": "Kabila Wallet",
-        "description": "Ένα non-custodial, απλό και ασφαλές πορτοφόλι για το δίκτυο Hedera. Διαχειριστείτε λογαριασμούς, tokens, NFT και συνδεθείτε με DApps διατηρώντας πλήρη έλεγχο των περιουσιακών σας στοιχείων."
+        "description": "Ένα απλό και ασφαλές πορτοφόλι χωρίς θεματοφυλακή για το δίκτυο Hedera. Διαχειριστείτε λογαριασμούς, tokens, NFT και συνδεθείτε με DApps διατηρώντας πλήρη έλεγχο των περιουσιακών σας στοιχείων."
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",

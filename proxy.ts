@@ -7,6 +7,7 @@ import {
   extractCountry,
   extractIpAddress,
   hashIpAddress,
+  isBotUserAgent,
 } from "@/lib/utils/request.utils";
 
 const intlMiddleware = createMiddleware(routing);
@@ -32,7 +33,7 @@ export function proxy(request: NextRequest) {
         request.headers.get("user-agent")?.slice(0, 255) ?? null;
 
       after(async () => {
-        if (!ipHash) return;
+        if (!ipHash || isBotUserAgent(userAgent)) return;
 
         const supabase = createClient(url, key);
         try {

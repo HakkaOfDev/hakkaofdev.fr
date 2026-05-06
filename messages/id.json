@@ -1,7 +1,4 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "Alexandre Gossard | Pengelana digital & Software Engineer",
     "description": "Pengelana digital dan software engineer freelance. Pegiat open source, saya merancang pengalaman web berperforma tinggi dengan React dan Next.js.",
@@ -210,10 +207,9 @@
       "fallback": "Kode sumber portfolio ini tersedia di sini:"
     },
     "cv": {
-      "openPreview": "Buka pratinjau PDF",
-      "downloadPdf": "Unduh PDF",
-      "endpointsLabel": "Endpoint:",
-      "endpointsAnd": "dan"
+      "description": "CV saya sebagai PDF",
+      "openPreview": "Coba",
+      "downloadPdf": "Unduh"
     },
     "projects": {
       "openLabel": "Buka proyek: {name}"
@@ -356,8 +352,8 @@
     "noArgs": "{command} tidak menerima argumen.",
     "missingName": "Nama tema hilang.",
     "tooManyArgs": "Terlalu banyak argumen.",
-    "usageSet": "Penggunaan: theme set <nama>",
-    "usagePreview": "Penggunaan: theme preview <nama>",
+    "usageSet": "Penggunaan: theme set '<name>'",
+    "usagePreview": "Penggunaan: theme preview '<name>'",
     "unknownSubcommand": "Subperintah tidak dikenal: {sub}. Gunakan salah satu: {commands}.",
     "list": {
       "available": "Tema tersedia ({count}):",
@@ -375,7 +371,7 @@
       "unknown": "Tema tidak dikenal: {name}.",
       "runListHint": "Jalankan <link></link> untuk melihat tema yang tersedia.",
       "previewing": "Pratinjau {label}",
-      "autoReverts": "— kembali otomatis dalam {seconds} detik",
+      "autoReverts": "- kembali otomatis dalam {seconds} detik",
       "applyHintPrefix": "Gunakan",
       "applyHintSuffix": "untuk menerapkan secara permanen."
     },
@@ -459,7 +455,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software engineer dengan pengalaman hampir empat tahun. Saya bekerja freelance untuk klien sendiri, membangun aplikasi web dan mobile yang sampai ke pengguna nyata di App Store dan Google Play. React, Next.js, dan React Native adalah lapangan rumahku, dengan kelemahan untuk arsitektur yang bersih, loop umpan balik cepat, dan proyek sampingan open-source sesekali. Berbasis di Prancis, bekerja dari mana pun laptop bisa diletakkan.",
+    "summary": "Software engineer dengan pengalaman lebih dari 4 tahun membangun aplikasi web dan mobile untuk klien dan tim. Saya memimpin proyek frontend menggunakan React, Next.js, React Native, dan Expo, dengan fokus pada UI yang bersih, UX yang mulus, desain responsif, aksesibilitas, dan produk yang ramah pengguna. Saya juga senang berkontribusi pada proyek open-source dan bekerja secara remote sebagai digital nomad, berkolaborasi dengan tim dan klien dari mana pun di dunia.",
     "sections": {
       "summary": "Ringkasan profesional",
       "experience": "Pengalaman",
@@ -500,7 +496,7 @@
         "name": "Magang",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Prancis",
-        "period": "September 2022 — Agustus 2023",
+        "period": "September 2022 - Agustus 2023",
         "descriptions": [
           "Membangun pipeline GitLab CI/CD untuk pengujian dan deployment otomatis",
           "Mengontainerkan aplikasi dan layanan internal dengan Docker",
@@ -513,19 +509,19 @@
       "iutSecurity": {
         "name": "Administrasi Sistem dan Keamanan (gelar profesional)",
         "location": "IUT Châlons (Châlons-en-Champagne, Prancis)",
-        "period": "2022–2023",
+        "period": "2022-2023",
         "descriptions": []
       },
       "iutNetworks": {
         "name": "DUT Jaringan dan Telekomunikasi (gelar teknis)",
         "location": "IUT Châlons (Châlons-en-Champagne, Prancis)",
-        "period": "2020–2022",
+        "period": "2020-2022",
         "descriptions": ["Peringkat kedua angkatan"]
       },
       "lyceeBac": {
         "name": "Bakalaureat Sains (setara A-level)",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Prancis)",
-        "period": "2019–2020",
+        "period": "2019-2020",
         "descriptions": [
           "Spesialisasi ISN (Ilmu Komputer dan Digital)",
           "Dengan predikat"
@@ -535,7 +531,7 @@
     "projects": {
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Platform sosial Web3 dan ekosistem NFT yang dibangun di Hedera, dengan marketplace NFT, plaza komunitas, launchpad, dan tools untuk creator."
+        "description": "Platform sosial Web3 dan ekosistem NFT yang dibangun di Hedera, dengan marketplace NFT, ruang komunitas, launchpad, dan alat untuk kreator."
       },
       "kabilaTools": {
         "name": "Kabila Tools",
@@ -543,7 +539,7 @@
       },
       "kabilaWallet": {
         "name": "Kabila Wallet",
-        "description": "Wallet non-custodial, sederhana, dan aman untuk jaringan Hedera. Kelola akun, token, NFT, dan terhubung dengan DApp sambil mempertahankan kontrol penuh atas aset Anda."
+        "description": "Wallet non-kustodial yang sederhana dan aman untuk jaringan Hedera. Kelola akun, token, NFT, dan terhubung dengan DApp sambil mempertahankan kontrol penuh atas aset Anda."
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",

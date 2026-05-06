@@ -26,3 +26,12 @@ export function extractCountry(request: Request): string | null {
     null
   );
 }
+
+const BOT_USER_AGENT_PATTERN =
+  /bot|crawl(?:er|ing)?|spider|slurp|mediapartners|facebookexternalhit|whatsapp|telegram|discord|slack|linkedin|twitter|pinterest|embedly|preview|fetch|monitor|pingdom|gtmetrix|lighthouse|pagespeed|chrome-lighthouse|headless|phantomjs|puppeteer|playwright|selenium|axios|curl|wget|python-requests|node-fetch|go-http-client|java\/|okhttp/i;
+
+/** Returns true when the User-Agent looks like a bot, crawler, or automated client. */
+export function isBotUserAgent(userAgent: string | null | undefined): boolean {
+  if (!userAgent) return true;
+  return BOT_USER_AGENT_PATTERN.test(userAgent);
+}

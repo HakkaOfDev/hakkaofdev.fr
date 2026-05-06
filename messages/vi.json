@@ -1,7 +1,4 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "Alexandre Gossard | Du mục số & Kỹ sư phần mềm",
     "description": "Du mục số và kỹ sư phần mềm freelance. Đam mê mã nguồn mở, tôi tạo trải nghiệm web hiệu năng cao với React và Next.js.",
@@ -210,10 +207,9 @@
       "fallback": "Mã nguồn portfolio này có sẵn tại đây:"
     },
     "cv": {
-      "openPreview": "Mở xem trước PDF",
-      "downloadPdf": "Tải xuống PDF",
-      "endpointsLabel": "Endpoints:",
-      "endpointsAnd": "và"
+      "description": "CV của tôi dạng PDF",
+      "openPreview": "Thử ngay",
+      "downloadPdf": "Tải xuống"
     },
     "projects": {
       "openLabel": "Mở dự án: {name}"
@@ -356,8 +352,8 @@
     "noArgs": "{command} không nhận đối số.",
     "missingName": "Thiếu tên chủ đề.",
     "tooManyArgs": "Quá nhiều đối số.",
-    "usageSet": "Cách dùng: theme set <tên>",
-    "usagePreview": "Cách dùng: theme preview <tên>",
+    "usageSet": "Cách dùng: theme set '<name>'",
+    "usagePreview": "Cách dùng: theme preview '<name>'",
     "unknownSubcommand": "Lệnh con không xác định: {sub}. Sử dụng một trong: {commands}.",
     "list": {
       "available": "Chủ đề khả dụng ({count}):",
@@ -375,7 +371,7 @@
       "unknown": "Chủ đề không xác định: {name}.",
       "runListHint": "Chạy <link></link> để xem các chủ đề khả dụng.",
       "previewing": "Đang xem trước {label}",
-      "autoReverts": "— tự khôi phục sau {seconds} giây",
+      "autoReverts": "- tự khôi phục sau {seconds} giây",
       "applyHintPrefix": "Dùng",
       "applyHintSuffix": "để áp dụng vĩnh viễn."
     },
@@ -459,7 +455,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Kỹ sư phần mềm với gần bốn năm kinh nghiệm. Tôi làm freelance cho các khách hàng riêng, xây dựng các ứng dụng web và di động đến tay người dùng thực trên App Store và Google Play. React, Next.js và React Native là sân nhà, với một niềm yêu thích đặc biệt dành cho kiến trúc gọn gàng, vòng phản hồi nhanh và những dự án phụ open-source thỉnh thoảng. Có trụ sở tại Pháp, làm việc từ bất cứ nơi nào laptop có thể đặt vừa.",
+    "summary": "Kỹ sư phần mềm với hơn 4 năm kinh nghiệm xây dựng các ứng dụng web và di động cho khách hàng và đội nhóm. Tôi dẫn dắt các dự án frontend với React, Next.js, React Native và Expo, tập trung vào UI gọn gàng, UX mượt mà, thiết kế responsive, khả năng tiếp cận và sản phẩm thân thiện với người dùng. Tôi cũng thích đóng góp cho các dự án open-source và làm việc từ xa như một digital nomad, hợp tác với các đội nhóm và khách hàng từ bất cứ đâu trên thế giới.",
     "sections": {
       "summary": "Hồ sơ chuyên môn",
       "experience": "Kinh nghiệm",
@@ -500,7 +496,7 @@
         "name": "Thực tập học nghề",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Pháp",
-        "period": "Tháng 9 năm 2022 — Tháng 8 năm 2023",
+        "period": "Tháng 9 năm 2022 - Tháng 8 năm 2023",
         "descriptions": [
           "Xây dựng pipeline GitLab CI/CD cho kiểm thử và triển khai tự động",
           "Đóng gói container các ứng dụng và dịch vụ nội bộ với Docker",
@@ -513,19 +509,19 @@
       "iutSecurity": {
         "name": "Quản trị Hệ thống và An ninh (cử nhân nghề)",
         "location": "IUT Châlons (Châlons-en-Champagne, Pháp)",
-        "period": "2022–2023",
+        "period": "2022-2023",
         "descriptions": []
       },
       "iutNetworks": {
         "name": "DUT Mạng và Viễn thông (bằng kỹ thuật)",
         "location": "IUT Châlons (Châlons-en-Champagne, Pháp)",
-        "period": "2020–2022",
+        "period": "2020-2022",
         "descriptions": ["Á khoa khóa"]
       },
       "lyceeBac": {
         "name": "Tú tài Khoa học (tương đương A-level)",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Pháp)",
-        "period": "2019–2020",
+        "period": "2019-2020",
         "descriptions": [
           "Chuyên ngành ISN (Tin học và Khoa học Số)",
           "Đạt loại Giỏi"
@@ -543,7 +539,7 @@
       },
       "kabilaWallet": {
         "name": "Kabila Wallet",
-        "description": "Một ví non-custodial, đơn giản và an toàn cho mạng Hedera. Quản lý tài khoản, token, NFT và kết nối với các DApp trong khi vẫn giữ toàn quyền kiểm soát tài sản của bạn."
+        "description": "Một ví không lưu ký, đơn giản và an toàn cho mạng Hedera. Quản lý tài khoản, token, NFT và kết nối với các DApp trong khi vẫn giữ toàn quyền kiểm soát tài sản của bạn."
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",

@@ -38,7 +38,7 @@
     }
   },
   "Terminal": {
-    "noMatch": "Żadna komenda nie pasuje do „{query}\".",
+    "noMatch": "Żadna komenda nie pasuje do „{query}“.",
     "header": {
       "resetTitle": "Resetuj terminal (Ctrl+R)",
       "resetLabel": "Resetuj terminal",
@@ -101,13 +101,13 @@
     },
     "closeMessages": [
       "Niezła próba! Nie możesz mnie zamknąć.",
-      "Nigdzie się nie wybieram. Spróbuj „help\"!",
+      "Nigdzie się nie wybieram. Spróbuj „help“!",
       "Nie. Ten terminal ma problemy z zaufaniem do przycisków zamknięcia.",
       "Błąd 418: jestem czajnikiem, nie zamykanym oknem.",
       "sudo rm -rf / ? Eee… nie.",
       "Naprawdę myślałeś, że to zadziała?",
       "Zamknąć mnie? W tych czasach?",
-      "Jestem inny. Spróbuj „contact\"."
+      "Jestem po prostu z innej gliny. Spróbuj „contact“."
     ]
   },
   "Commands": {
@@ -207,10 +207,9 @@
       "fallback": "Kod źródłowy tego portfolio jest dostępny tutaj:"
     },
     "cv": {
-      "openPreview": "Otwórz podgląd PDF",
-      "downloadPdf": "Pobierz PDF",
-      "endpointsLabel": "Endpointy:",
-      "endpointsAnd": "i"
+      "description": "Moje CV w PDF",
+      "openPreview": "Wypróbuj",
+      "downloadPdf": "Pobierz"
     },
     "projects": {
       "openLabel": "Otwórz projekt: {name}"
@@ -353,8 +352,8 @@
     "noArgs": "{command} nie przyjmuje argumentów.",
     "missingName": "Brak nazwy motywu.",
     "tooManyArgs": "Zbyt wiele argumentów.",
-    "usageSet": "Użycie: theme set <nazwa>",
-    "usagePreview": "Użycie: theme preview <nazwa>",
+    "usageSet": "Użycie: theme set '<name>'",
+    "usagePreview": "Użycie: theme preview '<name>'",
     "unknownSubcommand": "Nieznana podkomenda: {sub}. Użyj jednej z: {commands}.",
     "list": {
       "available": "Dostępne motywy ({count}):",
@@ -372,7 +371,7 @@
       "unknown": "Nieznany motyw: {name}.",
       "runListHint": "Uruchom <link></link>, aby zobaczyć dostępne motywy.",
       "previewing": "Podgląd {label}",
-      "autoReverts": "— powrót za {seconds} s",
+      "autoReverts": "- powrót za {seconds} s",
       "applyHintPrefix": "Użyj",
       "applyHintSuffix": "aby zastosować na stałe."
     },
@@ -456,7 +455,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Inżynier oprogramowania z prawie czteroletnim doświadczeniem. Pracuję jako freelancer dla własnych klientów, tworzę aplikacje webowe i mobilne dostarczane do realnych użytkowników w App Store i Google Play. React, Next.js i React Native to mój teren — z zamiłowaniem do czystej architektury, szybkich pętli zwrotnych i okazjonalnych projektów open source. Mieszkam we Francji i pracuję skądkolwiek, gdzie zmieści się laptop.",
+    "summary": "Inżynier oprogramowania z ponad 4-letnim doświadczeniem w tworzeniu aplikacji webowych i mobilnych dla klientów i zespołów. Prowadzę projekty frontendowe z wykorzystaniem React, Next.js, React Native i Expo, ze szczególnym naciskiem na czyste UI, płynne UX, responsywny design, dostępność i produkty przyjazne użytkownikowi. Lubię również współtworzyć projekty open-source i pracować zdalnie jako cyfrowy nomada, współpracując z zespołami i klientami z dowolnego miejsca na świecie.",
     "sections": {
       "summary": "Profil zawodowy",
       "experience": "Doświadczenie",
@@ -497,7 +496,7 @@
         "name": "Praktyka zawodowa",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Francja",
-        "period": "Wrzesień 2022 — sierpień 2023",
+        "period": "Wrzesień 2022 - sierpień 2023",
         "descriptions": [
           "Budowałem pipeline'y GitLab CI/CD do automatycznego testowania i wdrażania",
           "Konteneryzowałem aplikacje wewnętrzne i usługi w Dockerze",
@@ -510,19 +509,19 @@
       "iutSecurity": {
         "name": "Administracja systemami i bezpieczeństwo (licencjat zawodowy)",
         "location": "IUT Châlons (Châlons-en-Champagne, Francja)",
-        "period": "2022–2023",
+        "period": "2022-2023",
         "descriptions": []
       },
       "iutNetworks": {
         "name": "DUT Sieci i telekomunikacja (dyplom techniczny)",
         "location": "IUT Châlons (Châlons-en-Champagne, Francja)",
-        "period": "2020–2022",
+        "period": "2020-2022",
         "descriptions": ["Drugie miejsce w roczniku"]
       },
       "lyceeBac": {
         "name": "Matura naukowa (odpowiednik A-Level)",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Francja)",
-        "period": "2019–2020",
+        "period": "2019-2020",
         "descriptions": [
           "Specjalizacja ISN (Informatyka i nauki cyfrowe)",
           "Z wyróżnieniem"
@@ -532,7 +531,7 @@
     "projects": {
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Społecznościowa platforma Web3 i ekosystem NFT zbudowane na Hederze, z marketplace NFT, plazami społeczności, launchpadami i narzędziami dla twórców."
+        "description": "Społecznościowa platforma Web3 i ekosystem NFT zbudowane na Hederze, z marketplace NFT, przestrzeniami społecznościowymi, launchpadami i narzędziami dla twórców."
       },
       "kabilaTools": {
         "name": "Kabila Tools",

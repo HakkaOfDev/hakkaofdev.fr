@@ -1,12 +1,9 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "Alexandre Gossard | 数字游民 & 软件工程师",
-    "description": "数字游民和自由职业软件工程师。开源爱好者,使用 React 和 Next.js 打造高性能的网络体验。",
+    "description": "数字游民和自由职业软件工程师。作为开源爱好者，我使用 React 和 Next.js 打造高性能 Web 体验。",
     "jobTitle": "软件工程师",
-    "location": "法国 沙隆昂尚帕涅",
+    "location": "法国沙隆昂香槟",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
@@ -35,13 +32,13 @@
     "sections": {
       "start": "开始",
       "work": "工作",
-      "profile": "资料",
+      "profile": "个人资料",
       "extras": "扩展",
       "utils": "工具"
     }
   },
   "Terminal": {
-    "noMatch": "没有命令匹配 \"{query}\"。",
+    "noMatch": "没有命令匹配“{query}”。",
     "header": {
       "resetTitle": "重置终端 (Ctrl+R)",
       "resetLabel": "重置终端",
@@ -78,7 +75,7 @@
     },
     "settings": {
       "title": "终端设置",
-      "resetAllTitle": "重置所有设置(包括尺寸)",
+      "resetAllTitle": "重置所有设置（包括尺寸）",
       "resetAllLabel": "全部重置",
       "closeTitle": "关闭设置",
       "closeLabel": "关闭设置",
@@ -88,7 +85,7 @@
       "scrollbackOption": "{count, plural, =0 {无命令} other {# 条命令}}",
       "darkSuffix": "深色",
       "lightSuffix": "浅色",
-      "themeOption": "{label}({mode})",
+      "themeOption": "{label}（{mode}）",
       "languageLabel": "语言"
     },
     "shortcutsHeading": "键盘快捷键",
@@ -103,20 +100,20 @@
       "decreaseFontSize": "减小字体"
     },
     "closeMessages": [
-      "好尝试!但你关不掉我。",
-      "我哪儿也不去。试试 'help' 吧!",
+      "不错的尝试！但你关不掉我。",
+      "我哪儿也不去。试试 'help' 吧！",
       "不行。这个终端对关闭按钮有信任问题。",
-      "错误 418:我是个茶壶,不是可关闭的窗口。",
-      "sudo rm -rf / ?嗯…还是算了。",
-      "你真的觉得这能行得通?",
-      "关掉我?在这个时代?",
-      "我与众不同。试试 'contact' 吧。"
+      "错误 418：我是个茶壶，不是可以关闭的窗口。",
+      "sudo rm -rf /？嗯…还是算了。",
+      "你真的觉得这能行得通？",
+      "关掉我？都这个年代了？",
+      "我可不一样。试试 'contact' 吧。"
     ]
   },
   "Commands": {
     "groups": {
       "Work": "工作",
-      "Profile": "资料",
+      "Profile": "个人资料",
       "Guestbook": "留言板",
       "Spotify": "Spotify",
       "Theme": "主题",
@@ -128,7 +125,7 @@
       "about": "了解我的背景、兴趣和职业目标",
       "skills": "查看我使用的技术栈、工具和技能",
       "education": "我的学历和教育背景",
-      "contact": "邮箱、社交媒体和联系方式",
+      "contact": "邮箱、社交链接和首选联系方式",
       "guestbook": "显示留言板子命令的帮助",
       "cv": "预览并下载我的 PDF 简历",
       "spotify": "显示 Spotify 子命令的帮助",
@@ -136,7 +133,7 @@
       "help": "显示所有可用命令及其说明",
       "clear": "清除所有之前的命令和输出",
       "reset": "重置终端到欢迎屏幕",
-      "stats": "显示编程活动、GitHub 数据和访客数",
+      "stats": "显示编程活动、GitHub 指标和独立访客数",
       "repo": "打开此作品集的源代码仓库",
       "echo": "在终端中打印一条消息",
       "spotifyNow": "显示当前正在播放的歌曲",
@@ -175,13 +172,13 @@
       "lastName": "姓",
       "age": "年龄",
       "yearsOld": "{years} 岁",
-      "location": "位置",
+      "location": "所在地",
       "email": "邮箱",
       "languages": "语言",
       "hobbies": "爱好"
     },
     "contact": {
-      "intro": "对于工作机会、自由职业请求或技术合作,我更喜欢通过邮件联系。",
+      "intro": "如有工作机会、自由职业委托或技术合作，我更喜欢通过邮件联系。",
       "primaryEmail": "主邮箱:",
       "location": "位置:",
       "socialProfiles": "社交资料:"
@@ -207,16 +204,15 @@
       "copiedNotice": "已复制!",
       "copyFailedAria": "复制失败",
       "copyFailedNotice": "重试",
-      "fallback": "此作品集的源代码可在此查看:"
+      "fallback": "此作品集的源代码可在此查看："
     },
     "cv": {
-      "openPreview": "打开 PDF 预览",
-      "downloadPdf": "下载 PDF",
-      "endpointsLabel": "接口:",
-      "endpointsAnd": "和"
+      "description": "我的简历 PDF",
+      "openPreview": "试一试",
+      "downloadPdf": "下载"
     },
     "projects": {
-      "openLabel": "打开项目: {name}"
+      "openLabel": "打开项目：{name}"
     }
   },
   "Suggestions": {
@@ -350,7 +346,7 @@
   "CV": {
     "documentTitleSuffix": "简历",
     "subject": "简历",
-    "summary": "软件工程师,近四年经验。我以自由职业者身份为自己的客户工作,构建发布到 App Store 和 Google Play 的网页和移动应用。React、Next.js 和 React Native 是我的主场,我钟爱整洁的架构、快速的反馈循环以及偶尔的开源副业。常驻法国,从笔记本能放下的任何地方工作。",
+    "summary": "拥有 4 年以上经验的软件工程师,为客户和团队构建网页和移动应用。我使用 React、Next.js、React Native 和 Expo 主导前端项目,专注于简洁的 UI、流畅的 UX、响应式设计、无障碍体验以及对用户友好的产品。我也喜欢为开源项目做贡献,作为数字游民远程办公,与世界各地的团队和客户协作。",
     "sections": {
       "summary": "职业概要",
       "experience": "工作经历",
@@ -377,7 +373,7 @@
       "freelance": {
         "name": "自由职业",
         "company": "Alexandre GOSSARD",
-        "location": "法国 沙隆昂尚帕涅",
+        "location": "法国沙隆昂香槟",
         "period": "2022 年 7 月至今",
         "descriptions": [
           "为直接客户使用 React 和 Next.js 构建全栈网页应用",
@@ -390,8 +386,8 @@
       "archeMC2": {
         "name": "学徒制",
         "company": "Arche MC2",
-        "location": "法国 沙隆昂尚帕涅",
-        "period": "2022 年 9 月 — 2023 年 8 月",
+        "location": "法国沙隆昂香槟",
+        "period": "2022 年 9 月 - 2023 年 8 月",
         "descriptions": [
           "构建 GitLab CI/CD 流水线用于自动化测试和部署",
           "使用 Docker 容器化内部应用和服务",
@@ -403,19 +399,19 @@
     "education": {
       "iutSecurity": {
         "name": "系统管理与安全(职业学士)",
-        "location": "IUT Châlons(法国 沙隆昂尚帕涅)",
+        "location": "IUT Châlons(法国沙隆昂香槟)",
         "period": "2022-2023",
         "descriptions": []
       },
       "iutNetworks": {
         "name": "DUT 网络与电信(技术学位)",
-        "location": "IUT Châlons(法国 沙隆昂尚帕涅)",
+        "location": "IUT Châlons(法国沙隆昂香槟)",
         "period": "2020-2022",
         "descriptions": ["榜眼"]
       },
       "lyceeBac": {
         "name": "理科业士(高考等同)",
-        "location": "Lycée Jean Talon(法国 沙隆昂尚帕涅)",
+        "location": "Lycée Jean Talon(法国沙隆昂香槟)",
         "period": "2019-2020",
         "descriptions": ["专业 ISN(信息与数字科学)", "优等"]
       }
@@ -504,8 +500,8 @@
     "noArgs": "{command} 不接受参数。",
     "missingName": "缺少主题名称。",
     "tooManyArgs": "参数过多。",
-    "usageSet": "用法: theme set <名称>",
-    "usagePreview": "用法: theme preview <名称>",
+    "usageSet": "用法: theme set '<name>'",
+    "usagePreview": "用法: theme preview '<name>'",
     "unknownSubcommand": "未知子命令: {sub}。请使用其中之一: {commands}。",
     "list": {
       "available": "可用主题({count}):",
@@ -518,14 +514,14 @@
       "unknown": "未知主题: {name}。",
       "runListHint": "运行 <link></link> 查看可用主题。",
       "previewing": "预览 {label}",
-      "autoReverts": "— {seconds} 秒后自动还原",
+      "autoReverts": "- {seconds} 秒后自动还原",
       "applyHintPrefix": "使用",
       "applyHintSuffix": "永久应用。"
     },
     "set": {
       "unknownAvailable": "未知主题: {name}。可用主题:",
       "updated": "主题已更新为 {label}。",
-      "active": "当前主题: {label}({mode})"
+      "active": "当前主题: {label}（{mode}）"
     },
     "validate": {
       "header": "{name} 的 WCAG AA 对比度审计:",

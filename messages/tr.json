@@ -207,10 +207,9 @@
       "fallback": "Bu portfolyonun kaynak kodu burada mevcut:"
     },
     "cv": {
-      "openPreview": "PDF önizlemeyi aç",
-      "downloadPdf": "PDF indir",
-      "endpointsLabel": "Uç noktalar:",
-      "endpointsAnd": "ve"
+      "description": "CV'm PDF olarak",
+      "openPreview": "Dene",
+      "downloadPdf": "İndir"
     },
     "projects": {
       "openLabel": "Projeyi aç: {name}"
@@ -353,8 +352,8 @@
     "noArgs": "{command} argüman almıyor.",
     "missingName": "Tema adı eksik.",
     "tooManyArgs": "Çok fazla argüman.",
-    "usageSet": "Kullanım: theme set <ad>",
-    "usagePreview": "Kullanım: theme preview <ad>",
+    "usageSet": "Kullanım: theme set '<name>'",
+    "usagePreview": "Kullanım: theme preview '<name>'",
     "unknownSubcommand": "Bilinmeyen alt komut: {sub}. Şunlardan birini kullanın: {commands}.",
     "list": {
       "available": "Mevcut temalar ({count}):",
@@ -372,7 +371,7 @@
       "unknown": "Bilinmeyen tema: {name}.",
       "runListHint": "Mevcut temaları görmek için <link></link> komutunu çalıştırın.",
       "previewing": "Önizleme: {label}",
-      "autoReverts": "— {seconds} sn sonra geri döner",
+      "autoReverts": "- {seconds} sn sonra geri döner",
       "applyHintPrefix": "Kalıcı uygulamak için",
       "applyHintSuffix": "kullanın."
     },
@@ -456,7 +455,7 @@
   "CV": {
     "documentTitleSuffix": "Özgeçmiş",
     "subject": "Özgeçmiş",
-    "summary": "Yaklaşık dört yıllık deneyime sahip bir yazılım mühendisi. Kendi müşterilerim için freelance çalışıyor, App Store ve Google Play'de gerçek kullanıcılara ulaşan web ve mobil uygulamalar geliştiriyorum. React, Next.js ve React Native ana saham; temiz mimariye, hızlı geri bildirim döngülerine ve ara sıra yapılan açık kaynaklı yan projelere zaafım var. Fransa merkezli olarak laptopun sığdığı her yerden çalışıyorum.",
+    "summary": "Müşteriler ve ekipler için web ve mobil uygulamalar geliştirme konusunda 4+ yıl deneyime sahip bir yazılım mühendisi. React, Next.js, React Native ve Expo kullanarak frontend projelerine liderlik ediyor; temiz bir UI, akıcı bir UX, duyarlı tasarım, erişilebilirlik ve kullanıcı dostu ürünlere odaklanıyorum. Ayrıca açık kaynak projelere katkıda bulunmayı ve dijital göçebe olarak uzaktan çalışmayı seviyor, dünyanın her yerinden ekipler ve müşterilerle iş birliği yapıyorum.",
     "sections": {
       "summary": "Mesleki profil",
       "experience": "Deneyim",
@@ -497,7 +496,7 @@
         "name": "Çıraklık",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Fransa",
-        "period": "Eylül 2022 — Ağustos 2023",
+        "period": "Eylül 2022 - Ağustos 2023",
         "descriptions": [
           "Otomatik test ve dağıtım için GitLab CI/CD pipeline'ları oluşturdum",
           "İç uygulamaları ve servisleri Docker ile konteynerize ettim",
@@ -510,19 +509,19 @@
       "iutSecurity": {
         "name": "Sistem Yönetimi ve Güvenlik (mesleki lisans)",
         "location": "IUT Châlons (Châlons-en-Champagne, Fransa)",
-        "period": "2022–2023",
+        "period": "2022-2023",
         "descriptions": []
       },
       "iutNetworks": {
         "name": "DUT Ağlar ve Telekomünikasyon (teknik diploma)",
         "location": "IUT Châlons (Châlons-en-Champagne, Fransa)",
-        "period": "2020–2022",
+        "period": "2020-2022",
         "descriptions": ["Mezuniyet ikincisi"]
       },
       "lyceeBac": {
         "name": "Bilim Bakaloryası (A-level eşdeğeri)",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Fransa)",
-        "period": "2019–2020",
+        "period": "2019-2020",
         "descriptions": [
           "ISN uzmanlığı (Bilgisayar ve dijital bilimler)",
           "Üstün başarıyla"
@@ -532,7 +531,7 @@
     "projects": {
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Hedera üzerinde inşa edilmiş bir Web3 sosyal platformu ve NFT ekosistemi; NFT pazaryeri, topluluk plazaları, launchpad'ler ve içerik üretici araçları içerir."
+        "description": "Hedera üzerinde inşa edilmiş bir Web3 sosyal platformu ve NFT ekosistemi; NFT pazaryeri, topluluk alanları, launchpad'ler ve içerik üretici araçları içerir."
       },
       "kabilaTools": {
         "name": "Kabila Tools",
@@ -540,7 +539,7 @@
       },
       "kabilaWallet": {
         "name": "Kabila Wallet",
-        "description": "Hedera ağı için non-custodial, basit ve güvenli bir cüzdan. Hesaplarınızı, tokenlarınızı, NFT'lerinizi yönetin ve varlıklarınız üzerinde tam kontrolü korurken DApp'lerle bağlantı kurun."
+        "description": "Hedera ağı için saklamasız, basit ve güvenli bir cüzdan. Hesaplarınızı, tokenlarınızı, NFT'lerinizi yönetin ve varlıklarınız üzerinde tam kontrolü korurken DApp'lerle bağlantı kurun."
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",

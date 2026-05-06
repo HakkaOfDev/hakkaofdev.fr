@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Nomade numérique & Ingénieur logiciel",
+    "title": "Alexandre Gossard | Nomade numérique & ingénieur logiciel",
     "description": "Nomade numérique et ingénieur logiciel freelance. Passionné d'open source, je conçois des expériences web performantes avec React et Next.js.",
     "jobTitle": "Ingénieur logiciel",
     "location": "Châlons-en-Champagne, France",
@@ -19,14 +19,14 @@
     ]
   },
   "Footer": {
-    "madeBy": "Conçu avec <heart></heart> par <name></name>"
+    "madeBy": "Fait avec <heart></heart> par <name></name>"
   },
   "Welcome": {
     "greeting": "~ Bienvenue <wave>👋</wave>",
     "intro": "<tagline>Nomade numérique</tagline> · <job>Ingénieur logiciel</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Adepte de l'open source",
-      "calisthenics": "Pratiquant de calisthénie",
+      "openSource": "Passionné d'open source",
+      "calisthenics": "Passionné de calisthénie",
       "stack": "React · Next.js"
     },
     "sections": {
@@ -63,7 +63,7 @@
       "hide": "Masquer la recherche"
     },
     "input": {
-      "placeholder": "saisissez une commande…",
+      "placeholder": "tapez une commande…",
       "submit": "Exécuter la commande"
     },
     "fontSize": {
@@ -107,7 +107,7 @@
       "sudo rm -rf / ? Heu… non.",
       "Tu pensais vraiment que ça allait marcher ?",
       "Me fermer ? Par ces temps qui courent ?",
-      "Je suis bâti différemment. Essaie « contact » à la place."
+      "Je ne suis pas fait comme les autres. Essaie « contact » à la place."
     ]
   },
   "Commands": {
@@ -121,11 +121,11 @@
     },
     "descriptions": {
       "projects": "Ce que j'ai construit, livré ou auquel j'ai contribué",
-      "experiences": "Mes expériences professionnelles et accomplissements",
+      "experiences": "Mon parcours professionnel et mes réalisations",
       "about": "En savoir plus sur mon parcours, mes intérêts et mes objectifs",
       "skills": "Compétences techniques, outils et technologies que j'utilise",
       "education": "Mon parcours académique et mes diplômes",
-      "contact": "Mon adresse e-mail, mes liens sociaux et mes canaux de contact",
+      "contact": "Mon adresse e-mail, mes liens sociaux et mes contacts",
       "guestbook": "Affiche l'aide pour les sous-commandes du livre d'or",
       "cv": "Prévisualiser et télécharger mon CV au format PDF",
       "spotify": "Affiche l'aide pour les sous-commandes Spotify",
@@ -133,7 +133,7 @@
       "help": "Afficher toutes les commandes disponibles avec leurs descriptions",
       "clear": "Effacer toutes les commandes et sorties précédentes",
       "reset": "Réinitialiser le terminal à l'écran d'accueil",
-      "stats": "Afficher mon activité de codage, GitHub et le nombre de visiteurs",
+      "stats": "Afficher l'activité de codage, les métriques GitHub et les visiteurs uniques",
       "repo": "Ouvrir le code source de ce portfolio",
       "echo": "Afficher un message dans le terminal",
       "spotifyNow": "Afficher le morceau en cours d'écoute",
@@ -207,10 +207,9 @@
       "fallback": "Le code source de ce portfolio est disponible ici :"
     },
     "cv": {
-      "openPreview": "Ouvrir la prévisualisation du PDF",
-      "downloadPdf": "Télécharger le PDF",
-      "endpointsLabel": "Points d'accès :",
-      "endpointsAnd": "et"
+      "description": "Mon CV en PDF",
+      "openPreview": "Essayer",
+      "downloadPdf": "Télécharger"
     },
     "projects": {
       "openLabel": "Ouvrir le projet : {name}"
@@ -347,7 +346,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Ingénieur logiciel, presque quatre ans d'expérience. Je travaille en freelance pour mes propres clients, en concevant des applications web et mobiles déployées auprès d'utilisateurs réels sur l'App Store et Google Play. React, Next.js et React Native sont mon terrain de jeu, avec un faible pour l'architecture propre, les boucles de feedback rapides et les projets open source de temps en temps. Basé en France, je travaille de partout où l'ordinateur portable peut tenir.",
+    "summary": "Ingénieur logiciel avec plus de 4 ans d'expérience dans la création d'applications web et mobiles pour des clients et des équipes. Je dirige des projets frontend avec React, Next.js, React Native et Expo, en portant une attention particulière à une UI soignée, une UX fluide, un design responsive, l'accessibilité et des produits agréables à utiliser. J'aime aussi contribuer à des projets open-source et travailler à distance en tant que nomade numérique, en collaborant avec des équipes et des clients partout dans le monde.",
     "sections": {
       "summary": "Résumé professionnel",
       "experience": "Expérience",
@@ -366,9 +365,9 @@
         "descriptions": [
           "Encadre une équipe frontend qui développe des applications web en production avec React et Next.js",
           "Pilote la feuille de route technique, la planification des sprints et les décisions d'architecture",
-          "Encadre les développeurs juniors et anime les revues de code",
-          "Construit et maintient la bibliothèque de composants partagés et le design system interne",
-          "Livre les applications mobiles compagnons avec React Native et Expo"
+          "Accompagne les développeurs juniors et anime les revues de code",
+          "Construit et maintient la bibliothèque de composants et le design system interne",
+          "Livre des applications mobiles avec React Native et Expo"
         ]
       },
       "freelance": {
@@ -388,12 +387,12 @@
         "name": "Apprentissage",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, France",
-        "period": "Septembre 2022 — Août 2023",
+        "period": "Septembre 2022 - Août 2023",
         "descriptions": [
-          "Construction de pipelines GitLab CI/CD pour les tests et déploiements automatisés",
+          "Mise en place de pipelines GitLab CI/CD pour automatiser les tests et les déploiements",
           "Conteneurisation des applications et services internes avec Docker",
           "Automatisation des tâches sysadmin de routine via des scripts shell",
-          "Surveillance de la santé système et amélioration de la résilience d'infrastructure"
+          "Suivi de l'état des systèmes et amélioration de la résilience de l'infrastructure"
         ]
       }
     },
@@ -423,7 +422,7 @@
     "projects": {
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Une plateforme sociale Web3 et un écosystème NFT bâtis sur Hedera, avec une marketplace NFT, des plazas communautaires, des launchpads et des outils créateurs."
+        "description": "Une plateforme sociale Web3 et un écosystème NFT construits sur Hedera, avec une place de marché NFT, des espaces communautaires, des launchpads et des outils pour créateurs."
       },
       "kabilaTools": {
         "name": "Kabila Tools",
@@ -431,7 +430,7 @@
       },
       "kabilaWallet": {
         "name": "Kabila Wallet",
-        "description": "Un portefeuille non-custodial, simple et sécurisé pour le réseau Hedera. Gérez vos comptes, jetons, NFT et connectez-vous aux DApps tout en gardant le contrôle total de vos actifs."
+        "description": "Un portefeuille non custodial, simple et sécurisé pour le réseau Hedera. Gérez vos comptes, jetons, NFT et connectez-vous aux DApps tout en gardant le contrôle total de vos actifs."
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
@@ -451,7 +450,7 @@
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "Un starter kit comprenant Next.js, Chakra-UI et Framer-Motion en TypeScript. Quelques composants, internationalisation, SEO et plus encore."
+        "description": "Un kit de démarrage avec Next.js, Chakra UI et Framer Motion en TypeScript. Il inclut quelques composants, l’internationalisation, le SEO et plus encore."
       },
       "rtransport": {
         "name": "RT'ransport",
@@ -461,7 +460,7 @@
     "skillGroups": {
       "languages": "Langages",
       "frameworks": "Frameworks",
-      "uiStyling": "UI / Mise en forme",
+      "uiStyling": "UI / Styles",
       "tooling": "Outils",
       "databases": "Bases de données",
       "cloud": "Cloud",
@@ -504,8 +503,8 @@
     "noArgs": "{command} ne prend pas d'argument.",
     "missingName": "Nom du thème manquant.",
     "tooManyArgs": "Trop d'arguments.",
-    "usageSet": "Utilisation : theme set <nom>",
-    "usagePreview": "Utilisation : theme preview <nom>",
+    "usageSet": "Utilisation : theme set '<name>'",
+    "usagePreview": "Utilisation : theme preview '<name>'",
     "unknownSubcommand": "Sous-commande inconnue : {sub}. Utilisez une de ces options : {commands}.",
     "list": {
       "available": "Thèmes disponibles ({count}) :",
@@ -518,7 +517,7 @@
       "unknown": "Thème inconnu : {name}.",
       "runListHint": "Lancez <link></link> pour voir les thèmes disponibles.",
       "previewing": "Prévisualisation de {label}",
-      "autoReverts": "— retour automatique dans {seconds}s",
+      "autoReverts": "- retour automatique dans {seconds}s",
       "applyHintPrefix": "Utilisez",
       "applyHintSuffix": "pour l'appliquer définitivement."
     },
@@ -595,7 +594,7 @@
         "destructive": "Destructif",
         "border": "Bordure",
         "input": "Champ de saisie",
-        "ring": "Anneau",
+        "ring": "Contour de focus",
         "primary": "Primaire",
         "secondary": "Secondaire",
         "tertiary": "Tertiaire",
