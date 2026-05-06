@@ -36,7 +36,7 @@ function CGuestbookRead() {
       <div className="flex items-center justify-between gap-3">
         <p className="font-mono text-muted-foreground text-xs">
           <span className="font-semibold text-quinary">{t("headerLabel")}</span>
-          <span className="text-muted-foreground/40"> — </span>
+          <span className="text-muted-foreground/40"> - </span>
           {data ? t("entry", { count: data.length }) : t("unavailable")}
         </p>
         <div className="flex items-center gap-1.5">

@@ -26,7 +26,7 @@
     "intro": "<tagline>Nómada digital</tagline> · <job>Engenheiro de software</job> · <freelance>Freelancer</freelance>",
     "tags": {
       "openSource": "Defensor do open source",
-      "calisthenics": "Devoto de calistenia",
+      "calisthenics": "Apaixonado por calistenia",
       "stack": "React · Next.js"
     },
     "sections": {
@@ -107,7 +107,7 @@
       "sudo rm -rf / ? Pois… não.",
       "Achavas mesmo que ia funcionar?",
       "Fechar-me? Nestes tempos?",
-      "Sou diferente. Experimenta «contact»."
+      "Sou de outra fibra. Experimenta «contact»."
     ]
   },
   "Commands": {
@@ -504,8 +504,8 @@
     "noArgs": "{command} não aceita argumentos.",
     "missingName": "Falta o nome do tema.",
     "tooManyArgs": "Demasiados argumentos.",
-    "usageSet": "Utilização: theme set <nome>",
-    "usagePreview": "Utilização: theme preview <nome>",
+    "usageSet": "Utilização: theme set '<name>'",
+    "usagePreview": "Utilização: theme preview '<name>'",
     "unknownSubcommand": "Subcomando desconhecido: {sub}. Usa uma destas opções: {commands}.",
     "list": {
       "available": "Temas disponíveis ({count}):",
@@ -518,7 +518,7 @@
       "unknown": "Tema desconhecido: {name}.",
       "runListHint": "Executa <link></link> para ver os temas disponíveis.",
       "previewing": "Pré-visualização de {label}",
-      "autoReverts": "— reverte automaticamente em {seconds}s",
+      "autoReverts": "- reverte automaticamente em {seconds}s",
       "applyHintPrefix": "Usa",
       "applyHintSuffix": "para aplicar permanentemente."
     },

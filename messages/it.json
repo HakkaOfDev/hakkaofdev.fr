@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Nomade digitale & Software Engineer",
-    "description": "Nomade digitale e software engineer freelance. Appassionato di open source, creo esperienze web performanti con React e Next.js.",
-    "jobTitle": "Software Engineer",
+    "title": "Alexandre Gossard | Nomade digitale & ingegnere software",
+    "description": "Nomade digitale e ingegnere software freelance. Appassionato di open source, creo esperienze web performanti con React e Next.js.",
+    "jobTitle": "Ingegnere software",
     "location": "Châlons-en-Champagne, Francia",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
@@ -23,10 +23,10 @@
   },
   "Welcome": {
     "greeting": "~ Benvenuto <wave>👋</wave>",
-    "intro": "<tagline>Nomade digitale</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
+    "intro": "<tagline>Nomade digitale</tagline> · <job>Ingegnere software</job> · <freelance>Freelance</freelance>",
     "tags": {
       "openSource": "Sostenitore dell'open source",
-      "calisthenics": "Devoto della calisthenics",
+      "calisthenics": "Appassionato di calistenia",
       "stack": "React · Next.js"
     },
     "sections": {
@@ -107,7 +107,7 @@
       "sudo rm -rf / ? Eh… no.",
       "Pensavi davvero che avrebbe funzionato?",
       "Chiudermi? In questa congiuntura?",
-      "Sono fatto diversamente. Prova «contact»."
+      "Sono fatto a modo mio. Prova «contact»."
     ]
   },
   "Commands": {
@@ -126,9 +126,9 @@
       "skills": "Competenze tecniche, strumenti e tecnologie che uso",
       "education": "Il mio percorso accademico",
       "contact": "Email, social e canali di contatto preferiti",
-      "guestbook": "Mostra l'aiuto per i sotto-comandi del libro degli ospiti",
+      "guestbook": "Mostra l'aiuto per i sottocomandi del libro degli ospiti",
       "cv": "Anteprima e download del mio CV in PDF",
-      "spotify": "Mostra l'aiuto per i sotto-comandi Spotify",
+      "spotify": "Mostra l'aiuto per i sottocomandi Spotify",
       "theme": "Mostra o cambia il tema dell'interfaccia",
       "help": "Mostra tutti i comandi disponibili e le rispettive descrizioni",
       "clear": "Cancella tutti i comandi e gli output precedenti",
@@ -153,7 +153,7 @@
     "help": {
       "available": "Comandi disponibili",
       "tip": "Suggerimento: clicca su un comando o digitalo nel prompt per eseguirlo.",
-      "subCommands": "Sotto-comandi"
+      "subCommands": "Sottocomandi"
     },
     "notFound": {
       "title": "zsh: comando non trovato: {input}",
@@ -504,8 +504,8 @@
     "noArgs": "{command} non accetta argomenti.",
     "missingName": "Manca il nome del tema.",
     "tooManyArgs": "Troppi argomenti.",
-    "usageSet": "Uso: theme set <nome>",
-    "usagePreview": "Uso: theme preview <nome>",
+    "usageSet": "Uso: theme set '<name>'",
+    "usagePreview": "Uso: theme preview '<name>'",
     "unknownSubcommand": "Sotto-comando sconosciuto: {sub}. Usa una di queste opzioni: {commands}.",
     "list": {
       "available": "Temi disponibili ({count}):",
@@ -518,7 +518,7 @@
       "unknown": "Tema sconosciuto: {name}.",
       "runListHint": "Esegui <link></link> per vedere i temi disponibili.",
       "previewing": "Anteprima di {label}",
-      "autoReverts": "— ripristino automatico tra {seconds}s",
+      "autoReverts": "- ripristino automatico tra {seconds}s",
       "applyHintPrefix": "Usa",
       "applyHintSuffix": "per applicarlo definitivamente."
     },
@@ -530,7 +530,7 @@
     "validate": {
       "header": "Audit di contrasto WCAG AA per {name}:",
       "passCount": "{count} OK",
-      "failCount": "{count} fallimento",
+      "failCount": "{count} KO",
       "totalChecked": "({count} coppie controllate)",
       "skippedWarning": "⚠️ Alcuni colori saltati (formato non supportato)",
       "allPass": "Tutte le coppie soddisfano i requisiti WCAG AA.",

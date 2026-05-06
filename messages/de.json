@@ -38,7 +38,7 @@
     }
   },
   "Terminal": {
-    "noMatch": "Kein Befehl entspricht „{query}\".",
+    "noMatch": "Kein Befehl entspricht „{query}“.",
     "header": {
       "resetTitle": "Terminal zurücksetzen (Strg+R)",
       "resetLabel": "Terminal zurücksetzen",
@@ -101,13 +101,13 @@
     },
     "closeMessages": [
       "Netter Versuch! Du kannst mich nicht schließen.",
-      "Ich gehe nirgendwohin. Versuch's mal mit „help\"!",
-      "Nope. Dieses Terminal hat Vertrauensprobleme mit Schließen-Buttons.",
+      "Ich gehe nirgendwohin. Versuch's mal mit „help“!",
+      "Nö. Dieses Terminal traut Schließen-Buttons nicht.",
       "Fehler 418: Ich bin eine Teekanne, kein schließbares Fenster.",
       "sudo rm -rf / ? Ähm… nein.",
       "Hast du wirklich gedacht, das funktioniert?",
-      "Mich schließen? In dieser Wirtschaftslage?",
-      "Ich bin anders gebaut. Versuch's mal mit „contact\"."
+      "Mich schließen? Bei der Wirtschaftslage?",
+      "Ich bin anders gebaut. Versuch's mal mit „contact“."
     ]
   },
   "Commands": {
@@ -504,8 +504,8 @@
     "noArgs": "{command} akzeptiert keine Argumente.",
     "missingName": "Theme-Name fehlt.",
     "tooManyArgs": "Zu viele Argumente.",
-    "usageSet": "Verwendung: theme set <Name>",
-    "usagePreview": "Verwendung: theme preview <Name>",
+    "usageSet": "Verwendung: theme set '<name>'",
+    "usagePreview": "Verwendung: theme preview '<name>'",
     "unknownSubcommand": "Unbekannter Unterbefehl: {sub}. Verwende eine dieser Optionen: {commands}.",
     "list": {
       "available": "Verfügbare Themes ({count}):",
@@ -518,7 +518,7 @@
       "unknown": "Unbekanntes Theme: {name}.",
       "runListHint": "Führe <link></link> aus, um verfügbare Themes zu sehen.",
       "previewing": "Vorschau für {label}",
-      "autoReverts": "— wird in {seconds}s automatisch zurückgesetzt",
+      "autoReverts": "- wird in {seconds}s automatisch zurückgesetzt",
       "applyHintPrefix": "Verwende",
       "applyHintSuffix": "zum dauerhaften Anwenden."
     },
@@ -577,11 +577,11 @@
       "tryAgain": "Erneut versuchen",
       "errors": {
         "nameAndLabelRequired": "Theme-Name und -Label sind Pflicht.",
-        "missingNameField": "Pflichtfeld „name\" (string) fehlt.",
-        "missingLabelField": "Pflichtfeld „label\" (string) fehlt.",
-        "missingIsDarkField": "Pflichtfeld „isDark\" (boolean) fehlt.",
-        "missingColorsField": "Pflichtfeld „colors\" (object) fehlt.",
-        "missingColor": "Fehlende oder ungültige Farbe: „{key}\".",
+        "missingNameField": "Pflichtfeld „name“ (string) fehlt.",
+        "missingLabelField": "Pflichtfeld „label“ (string) fehlt.",
+        "missingIsDarkField": "Pflichtfeld „isDark“ (boolean) fehlt.",
+        "missingColorsField": "Pflichtfeld „colors“ (object) fehlt.",
+        "missingColor": "Fehlende oder ungültige Farbe: „{key}“.",
         "invalidJson": "Ungültige JSON-Eingabe.",
         "invalidData": "Ungültige Theme-Daten."
       },

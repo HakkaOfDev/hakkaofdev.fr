@@ -1,7 +1,4 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "Alexandre Gossard | Du mục số & Kỹ sư phần mềm",
     "description": "Du mục số và kỹ sư phần mềm freelance. Đam mê mã nguồn mở, tôi tạo trải nghiệm web hiệu năng cao với React và Next.js.",
@@ -356,8 +353,8 @@
     "noArgs": "{command} không nhận đối số.",
     "missingName": "Thiếu tên chủ đề.",
     "tooManyArgs": "Quá nhiều đối số.",
-    "usageSet": "Cách dùng: theme set <tên>",
-    "usagePreview": "Cách dùng: theme preview <tên>",
+    "usageSet": "Cách dùng: theme set '<name>'",
+    "usagePreview": "Cách dùng: theme preview '<name>'",
     "unknownSubcommand": "Lệnh con không xác định: {sub}. Sử dụng một trong: {commands}.",
     "list": {
       "available": "Chủ đề khả dụng ({count}):",
@@ -375,7 +372,7 @@
       "unknown": "Chủ đề không xác định: {name}.",
       "runListHint": "Chạy <link></link> để xem các chủ đề khả dụng.",
       "previewing": "Đang xem trước {label}",
-      "autoReverts": "— tự khôi phục sau {seconds} giây",
+      "autoReverts": "- tự khôi phục sau {seconds} giây",
       "applyHintPrefix": "Dùng",
       "applyHintSuffix": "để áp dụng vĩnh viễn."
     },

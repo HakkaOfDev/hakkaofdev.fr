@@ -1,20 +1,20 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Digital Nomad & Software Engineer",
-    "description": "Digital nomad en freelance software engineer. Open source-enthousiasteling, ik bouw performante webervaringen met React en Next.js.",
-    "jobTitle": "Software Engineer",
+    "title": "Alexandre Gossard | Digitale nomade & software-engineer",
+    "description": "Digitale nomade en freelance software-engineer. Als opensource-enthousiast bouw ik snelle webervaringen met React en Next.js.",
+    "jobTitle": "Software-engineer",
     "location": "Châlons-en-Champagne, Frankrijk",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
-      "Frontend ontwikkelaar",
-      "Digital Nomad",
+      "Frontendontwikkelaar",
+      "Digitale nomade",
       "Open source",
       "Moderne technologieën",
       "hakkaofdev",
       "kabila.app",
       "Kabila",
-      "Software Engineer",
+      "Software-engineer",
       "Freelance"
     ]
   },
@@ -23,9 +23,9 @@
   },
   "Welcome": {
     "greeting": "~ Welkom <wave>👋</wave>",
-    "intro": "<tagline>Digital Nomad</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
+    "intro": "<tagline>Digitale nomade</tagline> · <job>Software-engineer</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Open source-pleitbezorger",
+      "openSource": "Voorvechter van open source",
       "calisthenics": "Calisthenics-liefhebber",
       "stack": "React · Next.js"
     },
@@ -38,7 +38,7 @@
     }
   },
   "Terminal": {
-    "noMatch": "Geen commando komt overeen met „{query}\".",
+    "noMatch": "Geen commando komt overeen met “{query}”.",
     "header": {
       "resetTitle": "Terminal resetten (Ctrl+R)",
       "resetLabel": "Terminal resetten",
@@ -50,7 +50,7 @@
       "minimize": "Terminal minimaliseren",
       "restoreMinimize": "Terminal herstellen",
       "expand": "Terminal vergroten",
-      "restoreExpand": "Grootte van terminal herstellen"
+      "restoreExpand": "Terminalgrootte herstellen"
     },
     "tabs": {
       "rename": "{name} hernoemen",
@@ -101,13 +101,13 @@
     },
     "closeMessages": [
       "Mooie poging! Je kunt me niet sluiten.",
-      "Ik ga nergens heen. Probeer „help\"!",
+      "Ik ga nergens heen. Probeer 'help'!",
       "Nee. Deze terminal heeft vertrouwensproblemen met sluitknoppen.",
       "Fout 418: ik ben een theepot, geen sluitbaar venster.",
       "sudo rm -rf / ? Eh… nee.",
       "Dacht je echt dat dat zou werken?",
       "Mij sluiten? In deze tijd?",
-      "Ik ben anders gebouwd. Probeer „contact\"."
+      "Ik ben gewoon anders gebouwd. Probeer 'contact'."
     ]
   },
   "Commands": {
@@ -263,9 +263,9 @@
   },
   "OpenGraph": {
     "tags": {
-      "digitalNomad": "Digital Nomad",
+      "digitalNomad": "Digitale nomade",
       "nextjs": "Next.js",
-      "uiEngineering": "UI Engineering",
+      "uiEngineering": "UI-engineering",
       "openSource": "Open source"
     },
     "footer": "Portfolio"
@@ -353,8 +353,8 @@
     "noArgs": "{command} accepteert geen argumenten.",
     "missingName": "Themanaam ontbreekt.",
     "tooManyArgs": "Te veel argumenten.",
-    "usageSet": "Gebruik: theme set <naam>",
-    "usagePreview": "Gebruik: theme preview <naam>",
+    "usageSet": "Gebruik: theme set '<name>'",
+    "usagePreview": "Gebruik: theme preview '<name>'",
     "unknownSubcommand": "Onbekend subcommando: {sub}. Gebruik een van: {commands}.",
     "list": {
       "available": "Beschikbare thema's ({count}):",
@@ -365,14 +365,14 @@
     },
     "set": {
       "unknownAvailable": "Onbekend thema: {name}. Beschikbare thema's:",
-      "updated": "Thema gewijzigd naar {label}.",
+      "updated": "Thema ingesteld op {label}.",
       "active": "Actief thema: {label} ({mode})"
     },
     "preview": {
       "unknown": "Onbekend thema: {name}.",
       "runListHint": "Voer <link></link> uit om beschikbare thema's te zien.",
       "previewing": "Voorbeeld van {label}",
-      "autoReverts": "— terug in {seconds} s",
+      "autoReverts": "- terug in {seconds} s",
       "applyHintPrefix": "Gebruik",
       "applyHintSuffix": "om permanent toe te passen."
     },
@@ -419,7 +419,7 @@
       "resetColorsAria": "Kleuren herstellen naar standaard",
       "jsonHint": "Ondersteunt OKLCH (aanbevolen), hex, rgb, hsl. Contrastvalidatie werkt voor alle formaten.",
       "jsonRequired": "Vereiste sleutels: name, label, isDark, colors ({count} tokens)",
-      "previewToggle": "Live voorbeeld",
+      "previewToggle": "Livevoorbeeld",
       "successMessagePrefix": "Aangepast thema",
       "successMessageSuffix": "aangemaakt en toegepast.",
       "successHint": "Wordt bewaard in localStorage van de browser.",

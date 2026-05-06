@@ -26,7 +26,7 @@
     "intro": "<tagline>Nómada digital</tagline> · <job>Ingeniero de software</job> · <freelance>Freelance</freelance>",
     "tags": {
       "openSource": "Defensor del open source",
-      "calisthenics": "Devoto de la calistenia",
+      "calisthenics": "Apasionado de la calistenia",
       "stack": "React · Next.js"
     },
     "sections": {
@@ -107,7 +107,7 @@
       "sudo rm -rf / ? Pues… no.",
       "¿De verdad creías que iba a funcionar?",
       "¿Cerrarme? ¿En esta época?",
-      "Estoy hecho diferente. Prueba 'contact' mejor."
+      "Soy de otra pasta. Prueba 'contact' mejor."
     ]
   },
   "Commands": {
@@ -321,8 +321,8 @@
         "fetchEntriesFailed": "No se pudieron recuperar las entradas del libro de visitas.",
         "fetchCountriesFailed": "No se pudieron recuperar los países.",
         "saveFailed": "No se pudo guardar la entrada del libro de visitas.",
-        "rateLimitCheckFailed": "Falló la comprobación del límite de tasa.",
-        "rateLimitExceeded": "Límite de tasa superado. Vuelve a intentarlo más tarde.",
+        "rateLimitCheckFailed": "Falló la comprobación del límite de frecuencia.",
+        "rateLimitExceeded": "Has superado el límite de frecuencia. Vuelve a intentarlo más tarde.",
         "nameTooShort": "El nombre debe tener al menos 2 caracteres.",
         "messageTooShort": "El mensaje debe tener al menos 2 caracteres.",
         "websiteInvalid": "La URL del sitio web no es válida."
@@ -337,7 +337,7 @@
     "openNowPlayingAria": "Abrir canción en reproducción: {name}",
     "openRecentlyPlayedAria": "Abrir canción reciente: {name}",
     "openTopTrackAria": "Abrir canción favorita: {name}",
-    "openTopAlbumAria": "Abrir álbum favorito: {name}",
+    "openTopAlbumAria": "Abrir álbum destacado: {name}",
     "topTracks": {
       "rank": "Posición",
       "track": "Canción",
@@ -504,8 +504,8 @@
     "noArgs": "{command} no acepta argumentos.",
     "missingName": "Falta el nombre del tema.",
     "tooManyArgs": "Demasiados argumentos.",
-    "usageSet": "Uso: theme set <nombre>",
-    "usagePreview": "Uso: theme preview <nombre>",
+    "usageSet": "Uso: theme set '<name>'",
+    "usagePreview": "Uso: theme preview '<name>'",
     "unknownSubcommand": "Subcomando desconocido: {sub}. Usa una de estas opciones: {commands}.",
     "list": {
       "available": "Temas disponibles ({count}):",
@@ -518,7 +518,7 @@
       "unknown": "Tema desconocido: {name}.",
       "runListHint": "Ejecuta <link></link> para ver los temas disponibles.",
       "previewing": "Vista previa de {label}",
-      "autoReverts": "— se revierte automáticamente en {seconds}s",
+      "autoReverts": "- se revierte automáticamente en {seconds}s",
       "applyHintPrefix": "Usa",
       "applyHintSuffix": "para aplicarlo de forma permanente."
     },

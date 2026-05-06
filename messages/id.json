@@ -1,7 +1,4 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "Alexandre Gossard | Pengelana digital & Software Engineer",
     "description": "Pengelana digital dan software engineer freelance. Pegiat open source, saya merancang pengalaman web berperforma tinggi dengan React dan Next.js.",
@@ -356,8 +353,8 @@
     "noArgs": "{command} tidak menerima argumen.",
     "missingName": "Nama tema hilang.",
     "tooManyArgs": "Terlalu banyak argumen.",
-    "usageSet": "Penggunaan: theme set <nama>",
-    "usagePreview": "Penggunaan: theme preview <nama>",
+    "usageSet": "Penggunaan: theme set '<name>'",
+    "usagePreview": "Penggunaan: theme preview '<name>'",
     "unknownSubcommand": "Subperintah tidak dikenal: {sub}. Gunakan salah satu: {commands}.",
     "list": {
       "available": "Tema tersedia ({count}):",
@@ -375,7 +372,7 @@
       "unknown": "Tema tidak dikenal: {name}.",
       "runListHint": "Jalankan <link></link> untuk melihat tema yang tersedia.",
       "previewing": "Pratinjau {label}",
-      "autoReverts": "— kembali otomatis dalam {seconds} detik",
+      "autoReverts": "- kembali otomatis dalam {seconds} detik",
       "applyHintPrefix": "Gunakan",
       "applyHintSuffix": "untuk menerapkan secara permanen."
     },

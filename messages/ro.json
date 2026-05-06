@@ -1,7 +1,4 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "Alexandre Gossard | Nomad digital și inginer software",
     "description": "Nomad digital și inginer software freelance. Pasionat de open source, creez experiențe web performante cu React și Next.js.",
@@ -41,7 +38,7 @@
     }
   },
   "Terminal": {
-    "noMatch": "Nicio comandă nu corespunde cu „{query}\".",
+    "noMatch": "Nicio comandă nu corespunde cu „{query}“.",
     "header": {
       "resetTitle": "Resetează terminalul (Ctrl+R)",
       "resetLabel": "Resetează terminalul",
@@ -104,13 +101,13 @@
     },
     "closeMessages": [
       "Bună încercare! Nu mă poți închide.",
-      "Nu plec nicăieri. Încearcă „help\"!",
+      "Nu plec nicăieri. Încearcă „help“!",
       "Nu. Acest terminal are probleme de încredere cu butoanele de închidere.",
       "Eroare 418: sunt un ceainic, nu o fereastră închidere.",
       "sudo rm -rf / ? Hmm… nu.",
       "Chiar credeai că va funcționa?",
       "Să mă închizi? În aceste vremuri?",
-      "Sunt construit altfel. Încearcă „contact\"."
+      "Sunt făcut altfel. Încearcă „contact“."
     ]
   },
   "Commands": {
@@ -356,8 +353,8 @@
     "noArgs": "{command} nu acceptă argumente.",
     "missingName": "Lipsește numele temei.",
     "tooManyArgs": "Prea multe argumente.",
-    "usageSet": "Utilizare: theme set <nume>",
-    "usagePreview": "Utilizare: theme preview <nume>",
+    "usageSet": "Utilizare: theme set '<name>'",
+    "usagePreview": "Utilizare: theme preview '<name>'",
     "unknownSubcommand": "Subcomandă necunoscută: {sub}. Folosește una din: {commands}.",
     "list": {
       "available": "Teme disponibile ({count}):",
@@ -375,7 +372,7 @@
       "unknown": "Temă necunoscută: {name}.",
       "runListHint": "Rulează <link></link> pentru a vedea temele disponibile.",
       "previewing": "Previzualizare {label}",
-      "autoReverts": "— revine în {seconds} s",
+      "autoReverts": "- revine în {seconds} s",
       "applyHintPrefix": "Folosește",
       "applyHintSuffix": "pentru a aplica permanent."
     },

@@ -353,8 +353,8 @@
     "noArgs": "{command} не принимает аргументов.",
     "missingName": "Не указано имя темы.",
     "tooManyArgs": "Слишком много аргументов.",
-    "usageSet": "Использование: theme set <имя>",
-    "usagePreview": "Использование: theme preview <имя>",
+    "usageSet": "Использование: theme set '<name>'",
+    "usagePreview": "Использование: theme preview '<name>'",
     "unknownSubcommand": "Неизвестная подкоманда: {sub}. Используйте: {commands}.",
     "list": {
       "available": "Доступные темы ({count}):",
@@ -372,7 +372,7 @@
       "unknown": "Неизвестная тема: {name}.",
       "runListHint": "Запустите <link></link>, чтобы увидеть доступные темы.",
       "previewing": "Предпросмотр {label}",
-      "autoReverts": "— возврат через {seconds} с",
+      "autoReverts": "- возврат через {seconds} с",
       "applyHintPrefix": "Используйте",
       "applyHintSuffix": "чтобы применить навсегда."
     },

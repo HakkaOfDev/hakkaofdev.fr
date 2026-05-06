@@ -1,7 +1,4 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "Alexandre Gossard | Ψηφιακός νομάδας & μηχανικός λογισμικού",
     "description": "Ψηφιακός νομάδας και freelance μηχανικός λογισμικού. Λάτρης του open source, δημιουργώ γρήγορες εμπειρίες ιστού με React και Next.js.",
@@ -356,8 +353,8 @@
     "noArgs": "Η {command} δεν δέχεται ορίσματα.",
     "missingName": "Λείπει το όνομα του θέματος.",
     "tooManyArgs": "Πάρα πολλά ορίσματα.",
-    "usageSet": "Χρήση: theme set <όνομα>",
-    "usagePreview": "Χρήση: theme preview <όνομα>",
+    "usageSet": "Χρήση: theme set '<name>'",
+    "usagePreview": "Χρήση: theme preview '<name>'",
     "unknownSubcommand": "Άγνωστη υποεντολή: {sub}. Χρησιμοποιήστε μία από: {commands}.",
     "list": {
       "available": "Διαθέσιμα θέματα ({count}):",
@@ -375,7 +372,7 @@
       "unknown": "Άγνωστο θέμα: {name}.",
       "runListHint": "Εκτελέστε <link></link> για να δείτε τα διαθέσιμα θέματα.",
       "previewing": "Προεπισκόπηση {label}",
-      "autoReverts": "— επιστροφή σε {seconds} δ.",
+      "autoReverts": "- επιστροφή σε {seconds} δ.",
       "applyHintPrefix": "Χρησιμοποιήστε",
       "applyHintSuffix": "για μόνιμη εφαρμογή."
     },

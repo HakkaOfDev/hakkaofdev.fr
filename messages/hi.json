@@ -1,7 +1,4 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "अलेक्जेंडर गोसार्ड | डिजिटल खानाबदोश और सॉफ्टवेयर इंजीनियर",
     "description": "डिजिटल खानाबदोश और फ्रीलांस सॉफ्टवेयर इंजीनियर। ओपन सोर्स के शौकीन, React और Next.js के साथ बेहतरीन वेब अनुभव बनाता हूँ।",
@@ -356,8 +353,8 @@
     "noArgs": "{command} तर्क स्वीकार नहीं करता।",
     "missingName": "थीम का नाम गायब है।",
     "tooManyArgs": "बहुत अधिक तर्क।",
-    "usageSet": "उपयोग: theme set <नाम>",
-    "usagePreview": "उपयोग: theme preview <नाम>",
+    "usageSet": "उपयोग: theme set '<name>'",
+    "usagePreview": "उपयोग: theme preview '<name>'",
     "unknownSubcommand": "अज्ञात सब-कमांड: {sub}. इनमें से एक का उपयोग करें: {commands}.",
     "list": {
       "available": "उपलब्ध थीम ({count}):",
@@ -375,7 +372,7 @@
       "unknown": "अज्ञात थीम: {name}.",
       "runListHint": "उपलब्ध थीम देखने के लिए <link></link> चलाएँ.",
       "previewing": "{label} का पूर्वावलोकन",
-      "autoReverts": "— {seconds} सेकंड में स्वतः वापस होगा",
+      "autoReverts": "- {seconds} सेकंड में स्वतः वापस होगा",
       "applyHintPrefix": "स्थायी रूप से लागू करने के लिए",
       "applyHintSuffix": "का उपयोग करें."
     },
