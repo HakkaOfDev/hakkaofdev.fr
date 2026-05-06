@@ -4,6 +4,7 @@ import {
   extractCountry,
   extractIpAddress,
   hashIpAddress,
+  isBotUserAgent,
 } from "@/lib/utils/request.utils";
 
 export const runtime = "nodejs";
@@ -25,9 +26,14 @@ export async function POST(request: Request) {
     return Response.json({ error: "Analytics unavailable." }, { status: 503 });
   }
 
+  const userAgent = request.headers.get("user-agent")?.slice(0, 255) ?? null;
+
+  if (isBotUserAgent(userAgent)) {
+    return Response.json({ ok: true, is_new: false });
+  }
+
   const ipHash = hashIpAddress(extractIpAddress(request)) ?? "unknown";
   const country = extractCountry(request);
-  const userAgent = request.headers.get("user-agent")?.slice(0, 255) ?? null;
 
   const { data, error } = await supabase.rpc("record_visit", {
     p_slug: HOME_SLUG,
