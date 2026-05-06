@@ -38,7 +38,7 @@
     }
   },
   "Terminal": {
-    "noMatch": "Żadna komenda nie pasuje do „{query}\".",
+    "noMatch": "Żadna komenda nie pasuje do „{query}“.",
     "header": {
       "resetTitle": "Resetuj terminal (Ctrl+R)",
       "resetLabel": "Resetuj terminal",
@@ -101,13 +101,13 @@
     },
     "closeMessages": [
       "Niezła próba! Nie możesz mnie zamknąć.",
-      "Nigdzie się nie wybieram. Spróbuj „help\"!",
+      "Nigdzie się nie wybieram. Spróbuj „help“!",
       "Nie. Ten terminal ma problemy z zaufaniem do przycisków zamknięcia.",
       "Błąd 418: jestem czajnikiem, nie zamykanym oknem.",
       "sudo rm -rf / ? Eee… nie.",
       "Naprawdę myślałeś, że to zadziała?",
       "Zamknąć mnie? W tych czasach?",
-      "Jestem inny. Spróbuj „contact\"."
+      "Jestem po prostu z innej gliny. Spróbuj „contact“."
     ]
   },
   "Commands": {
@@ -352,8 +352,8 @@
     "noArgs": "{command} nie przyjmuje argumentów.",
     "missingName": "Brak nazwy motywu.",
     "tooManyArgs": "Zbyt wiele argumentów.",
-    "usageSet": "Użycie: theme set <nazwa>",
-    "usagePreview": "Użycie: theme preview <nazwa>",
+    "usageSet": "Użycie: theme set '<name>'",
+    "usagePreview": "Użycie: theme preview '<name>'",
     "unknownSubcommand": "Nieznana podkomenda: {sub}. Użyj jednej z: {commands}.",
     "list": {
       "available": "Dostępne motywy ({count}):",
@@ -371,7 +371,7 @@
       "unknown": "Nieznany motyw: {name}.",
       "runListHint": "Uruchom <link></link>, aby zobaczyć dostępne motywy.",
       "previewing": "Podgląd {label}",
-      "autoReverts": "— powrót za {seconds} s",
+      "autoReverts": "- powrót za {seconds} s",
       "applyHintPrefix": "Użyj",
       "applyHintSuffix": "aby zastosować na stałe."
     },

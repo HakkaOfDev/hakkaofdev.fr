@@ -1,7 +1,4 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "Alexandre Gossard | デジタルノマド & ソフトウェアエンジニア",
     "description": "デジタルノマド兼フリーランスのソフトウェアエンジニア。オープンソース愛好家として、React と Next.js でパフォーマンスの高いウェブ体験を作っています。",
@@ -78,7 +75,7 @@
     },
     "settings": {
       "title": "ターミナル設定",
-      "resetAllTitle": "すべての設定をリセット(サイズも含む)",
+      "resetAllTitle": "すべての設定をリセット（サイズも含む）",
       "resetAllLabel": "すべてリセット",
       "closeTitle": "設定を閉じる",
       "closeLabel": "設定を閉じる",
@@ -88,7 +85,7 @@
       "scrollbackOption": "{count, plural, =0 {コマンドなし} other {# コマンド}}",
       "darkSuffix": "ダーク",
       "lightSuffix": "ライト",
-      "themeOption": "{label}({mode})",
+      "themeOption": "{label}（{mode}）",
       "languageLabel": "言語"
     },
     "shortcutsHeading": "キーボードショートカット",
@@ -103,14 +100,14 @@
       "decreaseFontSize": "フォントサイズを小さく"
     },
     "closeMessages": [
-      "残念!私を閉じることはできません。",
-      "どこにも行きません。代わりに 'help' を試してみてください!",
-      "いいえ。このターミナルは閉じるボタンに不信感を抱いています。",
-      "エラー 418:私はティーポットであり、閉じられる窓ではありません。",
-      "sudo rm -rf / ?うーん…やめておきます。",
-      "本当にそれでうまくいくと思いましたか?",
-      "私を閉じる?この経済状況で?",
-      "私は違うんです。代わりに 'contact' を試してみてください。"
+      "惜しい！でも、私を閉じることはできません。",
+      "どこにも行きません。代わりに 'help' を試してみてください！",
+      "いいえ。このターミナルは閉じるボタンを信用していません。",
+      "エラー 418：私はティーポットであって、閉じられるウィンドウではありません。",
+      "sudo rm -rf /？うーん…やめておきます。",
+      "本当にそれでうまくいくと思いましたか？",
+      "私を閉じる？このご時世に？",
+      "私はひと味違います。代わりに 'contact' を試してください。"
     ]
   },
   "Commands": {
@@ -503,8 +500,8 @@
     "noArgs": "{command} は引数を受け付けません。",
     "missingName": "テーマ名がありません。",
     "tooManyArgs": "引数が多すぎます。",
-    "usageSet": "使い方: theme set <名前>",
-    "usagePreview": "使い方: theme preview <名前>",
+    "usageSet": "使い方: theme set '<name>'",
+    "usagePreview": "使い方: theme preview '<name>'",
     "unknownSubcommand": "不明なサブコマンド: {sub}。次のいずれかを使用してください: {commands}。",
     "list": {
       "available": "利用可能なテーマ({count}):",
@@ -517,14 +514,14 @@
       "unknown": "不明なテーマ: {name}。",
       "runListHint": "<link></link> を実行して利用可能なテーマを確認してください。",
       "previewing": "{label} をプレビュー中",
-      "autoReverts": "— {seconds} 秒後に自動で元に戻ります",
+      "autoReverts": "- {seconds} 秒後に自動で元に戻ります",
       "applyHintPrefix": "永続的に適用するには",
       "applyHintSuffix": "を使用してください。"
     },
     "set": {
       "unknownAvailable": "不明なテーマ: {name}。利用可能なテーマ:",
       "updated": "テーマが {label} に更新されました。",
-      "active": "アクティブなテーマ: {label}({mode})"
+      "active": "アクティブなテーマ: {label}（{mode}）"
     },
     "validate": {
       "header": "{name} の WCAG AA コントラスト監査:",

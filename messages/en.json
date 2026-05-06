@@ -59,11 +59,11 @@
       "limitReached": "Session limit reached"
     },
     "search": {
-      "placeholder": "Filter command history...",
+      "placeholder": "Filter command history…",
       "hide": "Hide search"
     },
     "input": {
-      "placeholder": "type a command...",
+      "placeholder": "type a command…",
       "submit": "Submit command"
     },
     "fontSize": {
@@ -104,7 +104,7 @@
       "I'm not going anywhere. Try 'help' instead!",
       "Nope. This terminal has trust issues with close buttons.",
       "Error 418: I'm a teapot, not a closable window.",
-      "sudo rm -rf / ? Yeah... no.",
+      "sudo rm -rf / ? Yeah… no.",
       "You really thought that would work?",
       "Close me? In this economy?",
       "I'm built different. Try 'contact' instead."
@@ -503,8 +503,8 @@
     "noArgs": "{command} takes no arguments.",
     "missingName": "Missing theme name.",
     "tooManyArgs": "Too many arguments.",
-    "usageSet": "Usage: theme set <name>",
-    "usagePreview": "Usage: theme preview <name>",
+    "usageSet": "Usage: theme set '<name>'",
+    "usagePreview": "Usage: theme preview '<name>'",
     "unknownSubcommand": "Unknown sub-command: {sub}. Use one of: {commands}.",
     "list": {
       "available": "Available themes ({count}):",
@@ -517,7 +517,7 @@
       "unknown": "Unknown theme: {name}.",
       "runListHint": "Run <link></link> to see available themes.",
       "previewing": "Previewing {label}",
-      "autoReverts": "— auto-reverts in {seconds}s",
+      "autoReverts": "- auto-reverts in {seconds}s",
       "applyHintPrefix": "Use",
       "applyHintSuffix": "to apply permanently."
     },

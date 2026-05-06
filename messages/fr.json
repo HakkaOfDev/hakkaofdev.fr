@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Nomade numérique & Ingénieur logiciel",
+    "title": "Alexandre Gossard | Nomade numérique & ingénieur logiciel",
     "description": "Nomade numérique et ingénieur logiciel freelance. Passionné d'open source, je conçois des expériences web performantes avec React et Next.js.",
     "jobTitle": "Ingénieur logiciel",
     "location": "Châlons-en-Champagne, France",
@@ -19,14 +19,14 @@
     ]
   },
   "Footer": {
-    "madeBy": "Conçu avec <heart></heart> par <name></name>"
+    "madeBy": "Fait avec <heart></heart> par <name></name>"
   },
   "Welcome": {
     "greeting": "~ Bienvenue <wave>👋</wave>",
     "intro": "<tagline>Nomade numérique</tagline> · <job>Ingénieur logiciel</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Adepte de l'open source",
-      "calisthenics": "Pratiquant de calisthénie",
+      "openSource": "Passionné d'open source",
+      "calisthenics": "Passionné de calisthénie",
       "stack": "React · Next.js"
     },
     "sections": {
@@ -63,7 +63,7 @@
       "hide": "Masquer la recherche"
     },
     "input": {
-      "placeholder": "saisissez une commande…",
+      "placeholder": "tapez une commande…",
       "submit": "Exécuter la commande"
     },
     "fontSize": {
@@ -107,7 +107,7 @@
       "sudo rm -rf / ? Heu… non.",
       "Tu pensais vraiment que ça allait marcher ?",
       "Me fermer ? Par ces temps qui courent ?",
-      "Je suis bâti différemment. Essaie « contact » à la place."
+      "Je ne suis pas fait comme les autres. Essaie « contact » à la place."
     ]
   },
   "Commands": {
@@ -121,11 +121,11 @@
     },
     "descriptions": {
       "projects": "Ce que j'ai construit, livré ou auquel j'ai contribué",
-      "experiences": "Mes expériences professionnelles et accomplissements",
+      "experiences": "Mon parcours professionnel et mes réalisations",
       "about": "En savoir plus sur mon parcours, mes intérêts et mes objectifs",
       "skills": "Compétences techniques, outils et technologies que j'utilise",
       "education": "Mon parcours académique et mes diplômes",
-      "contact": "Mon adresse e-mail, mes liens sociaux et mes canaux de contact",
+      "contact": "Mon adresse e-mail, mes liens sociaux et mes contacts",
       "guestbook": "Affiche l'aide pour les sous-commandes du livre d'or",
       "cv": "Prévisualiser et télécharger mon CV au format PDF",
       "spotify": "Affiche l'aide pour les sous-commandes Spotify",
@@ -133,7 +133,7 @@
       "help": "Afficher toutes les commandes disponibles avec leurs descriptions",
       "clear": "Effacer toutes les commandes et sorties précédentes",
       "reset": "Réinitialiser le terminal à l'écran d'accueil",
-      "stats": "Afficher mon activité de codage, GitHub et le nombre de visiteurs",
+      "stats": "Afficher l'activité de codage, les métriques GitHub et les visiteurs uniques",
       "repo": "Ouvrir le code source de ce portfolio",
       "echo": "Afficher un message dans le terminal",
       "spotifyNow": "Afficher le morceau en cours d'écoute",
@@ -503,8 +503,8 @@
     "noArgs": "{command} ne prend pas d'argument.",
     "missingName": "Nom du thème manquant.",
     "tooManyArgs": "Trop d'arguments.",
-    "usageSet": "Utilisation : theme set <nom>",
-    "usagePreview": "Utilisation : theme preview <nom>",
+    "usageSet": "Utilisation : theme set '<name>'",
+    "usagePreview": "Utilisation : theme preview '<name>'",
     "unknownSubcommand": "Sous-commande inconnue : {sub}. Utilisez une de ces options : {commands}.",
     "list": {
       "available": "Thèmes disponibles ({count}) :",
@@ -517,7 +517,7 @@
       "unknown": "Thème inconnu : {name}.",
       "runListHint": "Lancez <link></link> pour voir les thèmes disponibles.",
       "previewing": "Prévisualisation de {label}",
-      "autoReverts": "— retour automatique dans {seconds}s",
+      "autoReverts": "- retour automatique dans {seconds}s",
       "applyHintPrefix": "Utilisez",
       "applyHintSuffix": "pour l'appliquer définitivement."
     },
@@ -594,7 +594,7 @@
         "destructive": "Destructif",
         "border": "Bordure",
         "input": "Champ de saisie",
-        "ring": "Anneau",
+        "ring": "Contour de focus",
         "primary": "Primaire",
         "secondary": "Secondaire",
         "tertiary": "Tertiaire",

@@ -352,8 +352,8 @@
     "noArgs": "{command} argüman almıyor.",
     "missingName": "Tema adı eksik.",
     "tooManyArgs": "Çok fazla argüman.",
-    "usageSet": "Kullanım: theme set <ad>",
-    "usagePreview": "Kullanım: theme preview <ad>",
+    "usageSet": "Kullanım: theme set '<name>'",
+    "usagePreview": "Kullanım: theme preview '<name>'",
     "unknownSubcommand": "Bilinmeyen alt komut: {sub}. Şunlardan birini kullanın: {commands}.",
     "list": {
       "available": "Mevcut temalar ({count}):",
@@ -371,7 +371,7 @@
       "unknown": "Bilinmeyen tema: {name}.",
       "runListHint": "Mevcut temaları görmek için <link></link> komutunu çalıştırın.",
       "previewing": "Önizleme: {label}",
-      "autoReverts": "— {seconds} sn sonra geri döner",
+      "autoReverts": "- {seconds} sn sonra geri döner",
       "applyHintPrefix": "Kalıcı uygulamak için",
       "applyHintSuffix": "kullanın."
     },

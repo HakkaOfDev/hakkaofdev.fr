@@ -1,7 +1,4 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "אלכסנדר גוסארד | נווד דיגיטלי ומהנדס תוכנה",
     "description": "נווד דיגיטלי ומהנדס תוכנה פרילנס. חובב קוד פתוח, יוצר חוויות ווב מהירות עם React ו-Next.js.",
@@ -355,8 +352,8 @@
     "noArgs": "{command} לא מקבל ארגומנטים.",
     "missingName": "חסר שם ערכת נושא.",
     "tooManyArgs": "יותר מדי ארגומנטים.",
-    "usageSet": "שימוש: theme set <שם>",
-    "usagePreview": "שימוש: theme preview <שם>",
+    "usageSet": "שימוש: theme set '<name>'",
+    "usagePreview": "שימוש: theme preview '<name>'",
     "unknownSubcommand": "פקודת משנה לא ידועה: {sub}. השתמש באחד מ: {commands}.",
     "list": {
       "available": "ערכות נושא זמינות ({count}):",
@@ -374,7 +371,7 @@
       "unknown": "ערכת נושא לא ידועה: {name}.",
       "runListHint": "הריצו <link></link> כדי לראות ערכות זמינות.",
       "previewing": "תצוגה מקדימה של {label}",
-      "autoReverts": "— חוזרת אוטומטית בעוד {seconds} שניות",
+      "autoReverts": "- חוזרת אוטומטית בעוד {seconds} שניות",
       "applyHintPrefix": "השתמשו ב",
       "applyHintSuffix": "כדי להחיל לצמיתות."
     },

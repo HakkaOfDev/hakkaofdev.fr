@@ -1,7 +1,4 @@
 {
-  "_meta": {
-    "needsReview": true
-  },
   "Metadata": {
     "title": "ألكسندر غوسار | رحالة رقمي ومهندس برمجيات",
     "description": "رحالة رقمي ومهندس برمجيات مستقل. شغوف بالمصادر المفتوحة، أصمم تجارب ويب عالية الأداء بـ React و Next.js.",
@@ -26,10 +23,10 @@
   },
   "Welcome": {
     "greeting": "~ مرحبًا <wave>👋</wave>",
-    "intro": "<tagline>رحالة رقمي</tagline> · <job>مهندس برمجيات</job> · <freelance>عمل حر</freelance>",
+    "intro": "<tagline>رحالة رقمي</tagline> · <job>مهندس برمجيات</job> · <freelance>مستقل</freelance>",
     "tags": {
       "openSource": "مناصر للمصادر المفتوحة",
-      "calisthenics": "محب لتمارين الكاليستينك",
+      "calisthenics": "محب لتمارين الكاليستنكس",
       "stack": "React · Next.js"
     },
     "sections": {
@@ -110,7 +107,7 @@
       "sudo rm -rf / ؟ مم… لا.",
       "هل ظننت حقًا أن ذلك سينجح؟",
       "إغلاقي؟ في هذا الزمن؟",
-      "لقد صُنعت بشكل مختلف. جرّب «contact»."
+      "أنا من طينة مختلفة. جرّب «contact»."
     ]
   },
   "Commands": {
@@ -137,7 +134,7 @@
       "clear": "مسح جميع الأوامر والمخرجات السابقة",
       "reset": "إعادة الطرفية إلى شاشة الترحيب",
       "stats": "نشاط البرمجة، GitHub وعدد الزوار",
-      "repo": "فتح الكود المصدري لهذه المعرض",
+      "repo": "فتح الكود المصدري لمعرض الأعمال هذا",
       "echo": "طباعة رسالة في الطرفية",
       "spotifyNow": "عرض الأغنية المُشغّلة الآن",
       "spotifyTop": "عرض المقطوعات المفضلة",
@@ -199,7 +196,7 @@
     },
     "repo": {
       "starsLabel": "النجوم",
-      "forksLabel": "Forks",
+      "forksLabel": "التفرعات",
       "licenseLabel": "الترخيص",
       "copyAria": "نسخ إلى الحافظة",
       "copy": "نسخ",
@@ -207,7 +204,7 @@
       "copiedNotice": "تم النسخ!",
       "copyFailedAria": "فشل النسخ",
       "copyFailedNotice": "حاول مجددًا",
-      "fallback": "الكود المصدري لهذه المحفظة متاح هنا:"
+      "fallback": "الكود المصدري لمعرض الأعمال هذا متاح هنا:"
     },
     "cv": {
       "description": "سيرتي الذاتية بصيغة PDF",
@@ -355,8 +352,8 @@
     "noArgs": "{command} لا يقبل وسائط.",
     "missingName": "اسم السمة مفقود.",
     "tooManyArgs": "وسائط كثيرة جدًا.",
-    "usageSet": "الاستخدام: theme set <اسم>",
-    "usagePreview": "الاستخدام: theme preview <اسم>",
+    "usageSet": "الاستخدام: theme set '<name>'",
+    "usagePreview": "الاستخدام: theme preview '<name>'",
     "unknownSubcommand": "أمر فرعي غير معروف: {sub}. استخدم واحدًا من: {commands}.",
     "list": {
       "available": "السمات المتاحة ({count}):",
@@ -374,7 +371,7 @@
       "unknown": "سمة غير معروفة: {name}.",
       "runListHint": "نفّذ <link></link> لرؤية السمات المتاحة.",
       "previewing": "معاينة {label}",
-      "autoReverts": "— يرجع تلقائيًا خلال {seconds} ثانية",
+      "autoReverts": "- يرجع تلقائيًا خلال {seconds} ثانية",
       "applyHintPrefix": "استخدم",
       "applyHintSuffix": "للتطبيق بشكل دائم."
     },
