@@ -16,6 +16,7 @@ const TOKEN_ALIASES: Record<string, string> = {
   cls: "clear",
   dir: "help",
   ls: "help",
+  resume: "cv",
 };
 
 const rendererCache = new Map<string, StaticRenderer | InputRenderer>();

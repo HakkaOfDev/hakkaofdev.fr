@@ -207,10 +207,9 @@
       "fallback": "Le code source de ce portfolio est disponible ici :"
     },
     "cv": {
-      "openPreview": "Ouvrir la prévisualisation du PDF",
-      "downloadPdf": "Télécharger le PDF",
-      "endpointsLabel": "Points d'accès :",
-      "endpointsAnd": "et"
+      "description": "Mon CV en PDF",
+      "openPreview": "Essayer",
+      "downloadPdf": "Télécharger"
     },
     "projects": {
       "openLabel": "Ouvrir le projet : {name}"
@@ -347,7 +346,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Ingénieur logiciel, presque quatre ans d'expérience. Je travaille en freelance pour mes propres clients, en concevant des applications web et mobiles déployées auprès d'utilisateurs réels sur l'App Store et Google Play. React, Next.js et React Native sont mon terrain de jeu, avec un faible pour l'architecture propre, les boucles de feedback rapides et les projets open source de temps en temps. Basé en France, je travaille de partout où l'ordinateur portable peut tenir.",
+    "summary": "Ingénieur logiciel avec plus de 4 ans d'expérience dans la création d'applications web et mobiles pour des clients et des équipes. Je dirige des projets frontend avec React, Next.js, React Native et Expo, en portant une attention particulière à une UI soignée, une UX fluide, un design responsive, l'accessibilité et des produits agréables à utiliser. J'aime aussi contribuer à des projets open-source et travailler à distance en tant que nomade numérique, en collaborant avec des équipes et des clients partout dans le monde.",
     "sections": {
       "summary": "Résumé professionnel",
       "experience": "Expérience",
@@ -366,9 +365,9 @@
         "descriptions": [
           "Encadre une équipe frontend qui développe des applications web en production avec React et Next.js",
           "Pilote la feuille de route technique, la planification des sprints et les décisions d'architecture",
-          "Encadre les développeurs juniors et anime les revues de code",
-          "Construit et maintient la bibliothèque de composants partagés et le design system interne",
-          "Livre les applications mobiles compagnons avec React Native et Expo"
+          "Accompagne les développeurs juniors et anime les revues de code",
+          "Construit et maintient la bibliothèque de composants et le design system interne",
+          "Livre des applications mobiles avec React Native et Expo"
         ]
       },
       "freelance": {
@@ -388,12 +387,12 @@
         "name": "Apprentissage",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, France",
-        "period": "Septembre 2022 — Août 2023",
+        "period": "Septembre 2022 - Août 2023",
         "descriptions": [
-          "Construction de pipelines GitLab CI/CD pour les tests et déploiements automatisés",
+          "Mise en place de pipelines GitLab CI/CD pour automatiser les tests et les déploiements",
           "Conteneurisation des applications et services internes avec Docker",
           "Automatisation des tâches sysadmin de routine via des scripts shell",
-          "Surveillance de la santé système et amélioration de la résilience d'infrastructure"
+          "Suivi de l'état des systèmes et amélioration de la résilience de l'infrastructure"
         ]
       }
     },
@@ -423,7 +422,7 @@
     "projects": {
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Une plateforme sociale Web3 et un écosystème NFT bâtis sur Hedera, avec une marketplace NFT, des plazas communautaires, des launchpads et des outils créateurs."
+        "description": "Une plateforme sociale Web3 et un écosystème NFT construits sur Hedera, avec une place de marché NFT, des espaces communautaires, des launchpads et des outils pour créateurs."
       },
       "kabilaTools": {
         "name": "Kabila Tools",
@@ -431,7 +430,7 @@
       },
       "kabilaWallet": {
         "name": "Kabila Wallet",
-        "description": "Un portefeuille non-custodial, simple et sécurisé pour le réseau Hedera. Gérez vos comptes, jetons, NFT et connectez-vous aux DApps tout en gardant le contrôle total de vos actifs."
+        "description": "Un portefeuille non custodial, simple et sécurisé pour le réseau Hedera. Gérez vos comptes, jetons, NFT et connectez-vous aux DApps tout en gardant le contrôle total de vos actifs."
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
@@ -451,7 +450,7 @@
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "Un starter kit comprenant Next.js, Chakra-UI et Framer-Motion en TypeScript. Quelques composants, internationalisation, SEO et plus encore."
+        "description": "Un kit de démarrage avec Next.js, Chakra UI et Framer Motion en TypeScript. Il inclut quelques composants, l’internationalisation, le SEO et plus encore."
       },
       "rtransport": {
         "name": "RT'ransport",
@@ -461,7 +460,7 @@
     "skillGroups": {
       "languages": "Langages",
       "frameworks": "Frameworks",
-      "uiStyling": "UI / Mise en forme",
+      "uiStyling": "UI / Styles",
       "tooling": "Outils",
       "databases": "Bases de données",
       "cloud": "Cloud",

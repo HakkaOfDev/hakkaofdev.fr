@@ -207,10 +207,9 @@
       "fallback": "Il codice sorgente di questo portfolio è disponibile qui:"
     },
     "cv": {
-      "openPreview": "Apri anteprima PDF",
-      "downloadPdf": "Scarica PDF",
-      "endpointsLabel": "Endpoint:",
-      "endpointsAnd": "e"
+      "description": "Il mio CV in PDF",
+      "openPreview": "Provalo",
+      "downloadPdf": "Scarica"
     },
     "projects": {
       "openLabel": "Apri progetto: {name}"
@@ -347,7 +346,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software engineer con quasi quattro anni di esperienza. Lavoro come freelance per i miei clienti, costruendo applicazioni web e mobile che arrivano a utenti reali su App Store e Google Play. React, Next.js e React Native sono il mio campo, con un debole per architetture pulite, cicli di feedback rapidi e qualche progetto open source di tanto in tanto. Con base in Francia, lavoro da ovunque ci sia spazio per il portatile.",
+    "summary": "Software engineer con oltre 4 anni di esperienza nello sviluppo di applicazioni web e mobile per clienti e team. Guido progetti frontend con React, Next.js, React Native ed Expo, con attenzione a UI pulite, UX fluide, design responsive, accessibilità e prodotti facili da usare. Mi piace anche contribuire a progetti open-source e lavorare da remoto come nomade digitale, collaborando con team e clienti da ogni parte del mondo.",
     "sections": {
       "summary": "Riepilogo professionale",
       "experience": "Esperienza",
@@ -359,14 +358,14 @@
     },
     "experiences": {
       "kabila": {
-        "name": "Software Engineer",
+        "name": "Ingegnere software",
         "company": "Kabila",
         "location": "Madrid, Spagna",
         "period": "Da luglio 2022",
         "descriptions": [
           "Guido un team frontend che sviluppa applicazioni web in produzione con React e Next.js",
           "Curo la roadmap tecnica, la pianificazione degli sprint e le decisioni di architettura",
-          "Faccio mentoring agli sviluppatori junior e conduco le code review",
+          "Affianco gli sviluppatori junior e guido le code review",
           "Costruisco e mantengo la libreria di componenti condivisi e il design system interno",
           "Pubblico le app mobile companion con React Native e Expo"
         ]
@@ -380,7 +379,7 @@
           "Costruisco app web full-stack con React e Next.js per clienti diretti",
           "Pubblico app mobile multipiattaforma su App Store e Google Play",
           "Configuro pipeline CI/CD e flussi di deployment automatizzati",
-          "Consulenza su architettura, scelte tecniche e scoping di progetto",
+          "Offro consulenza su architettura, scelte tecniche e definizione del progetto",
           "Gestisco la comunicazione con il cliente e i tempi di consegna su ogni progetto"
         ]
       },
@@ -388,10 +387,10 @@
         "name": "Apprendistato",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Francia",
-        "period": "Settembre 2022 — Agosto 2023",
+        "period": "Settembre 2022 - Agosto 2023",
         "descriptions": [
-          "Costruzione di pipeline GitLab CI/CD per test e deployment automatizzati",
-          "Containerizzazione di applicazioni e servizi interni con Docker",
+          "Ho creato pipeline GitLab CI/CD per test e deployment automatizzati",
+          "Ho containerizzato applicazioni e servizi interni con Docker",
           "Automazione di task sysadmin di routine con script shell",
           "Monitoraggio della salute del sistema e miglioramento della resilienza dell'infrastruttura"
         ]
@@ -408,7 +407,7 @@
         "name": "DUT Reti e Telecomunicazioni",
         "location": "IUT Châlons (Châlons-en-Champagne, Francia)",
         "period": "2020-2022",
-        "descriptions": ["Salutatorian"]
+        "descriptions": ["Secondo del corso"]
       },
       "lyceeBac": {
         "name": "Maturità scientifica (equivalente)",
@@ -423,7 +422,7 @@
     "projects": {
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Una piattaforma social Web3 e un ecosistema NFT su Hedera, con marketplace NFT, plaza comunitarie, launchpad e strumenti per i creator."
+        "description": "Una piattaforma social Web3 e un ecosistema NFT su Hedera, con marketplace NFT, spazi community, launchpad e strumenti per i creator."
       },
       "kabilaTools": {
         "name": "Kabila Tools",
@@ -431,7 +430,7 @@
       },
       "kabilaWallet": {
         "name": "Kabila Wallet",
-        "description": "Un wallet non-custodial, semplice e sicuro per la rete Hedera. Gestisci account, token, NFT e collegati ai DApp mantenendo il pieno controllo dei tuoi asset."
+        "description": "Un wallet non custodial, semplice e sicuro per la rete Hedera. Gestisci account, token, NFT e collegati ai DApp mantenendo il pieno controllo dei tuoi asset."
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
@@ -451,7 +450,7 @@
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "Uno starter kit con Next.js, Chakra-UI, Framer-Motion in TypeScript. Pochi componenti, internazionalizzazione, SEO e altro."
+        "description": "Uno starter kit con Next.js, Chakra UI e Framer Motion in TypeScript. Include alcuni componenti, internazionalizzazione, SEO e altro."
       },
       "rtransport": {
         "name": "RT'ransport",

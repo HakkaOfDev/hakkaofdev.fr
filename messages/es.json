@@ -207,10 +207,9 @@
       "fallback": "El código fuente de este portfolio está disponible aquí:"
     },
     "cv": {
-      "openPreview": "Abrir vista previa del PDF",
-      "downloadPdf": "Descargar PDF",
-      "endpointsLabel": "Endpoints:",
-      "endpointsAnd": "y"
+      "description": "Mi CV en PDF",
+      "openPreview": "Probar",
+      "downloadPdf": "Descargar"
     },
     "projects": {
       "openLabel": "Abrir proyecto: {name}"
@@ -347,7 +346,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Ingeniero de software con casi cuatro años de experiencia. Trabajo como freelance para mis propios clientes, creando aplicaciones web y móviles que llegan a usuarios reales en App Store y Google Play. React, Next.js y React Native son mi terreno favorito, con debilidad por la arquitectura limpia, los ciclos de feedback rápidos y los proyectos open source de vez en cuando. Basado en Francia, trabajando desde donde quepa el portátil.",
+    "summary": "Ingeniero de software con más de 4 años de experiencia creando aplicaciones web y móviles para clientes y equipos. Lidero proyectos frontend usando React, Next.js, React Native y Expo, con foco en una UI limpia, una UX fluida, diseño responsive, accesibilidad y productos fáciles de usar. También disfruto contribuyendo a proyectos open-source y trabajando en remoto como nómada digital, colaborando con equipos y clientes desde cualquier parte del mundo.",
     "sections": {
       "summary": "Resumen profesional",
       "experience": "Experiencia",
@@ -388,10 +387,10 @@
         "name": "Aprendizaje",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Francia",
-        "period": "Septiembre 2022 — Agosto 2023",
+        "period": "Septiembre 2022 - Agosto 2023",
         "descriptions": [
           "Construí pipelines GitLab CI/CD para tests y despliegues automatizados",
-          "Containericé aplicaciones y servicios internos con Docker",
+          "Empaqueté aplicaciones y servicios internos en contenedores con Docker",
           "Automaticé tareas rutinarias de sysadmin con scripts shell",
           "Monitoricé la salud del sistema y mejoré la resiliencia de la infraestructura"
         ]
@@ -423,7 +422,7 @@
     "projects": {
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Una plataforma social Web3 y ecosistema NFT construido sobre Hedera, con marketplace NFT, plazas comunitarias, launchpads y herramientas para creadores."
+        "description": "Una plataforma social Web3 y un ecosistema NFT construidos sobre Hedera, con marketplace NFT, espacios comunitarios, launchpads y herramientas para creadores."
       },
       "kabilaTools": {
         "name": "Kabila Tools",
@@ -431,7 +430,7 @@
       },
       "kabilaWallet": {
         "name": "Kabila Wallet",
-        "description": "Un monedero non-custodial, simple y seguro para la red Hedera. Gestiona tus cuentas, tokens, NFTs y conéctate con DApps manteniendo el control total de tus activos."
+        "description": "Un monedero sin custodia, simple y seguro para la red Hedera. Gestiona tus cuentas, tokens, NFTs y conéctate con DApps manteniendo el control total de tus activos."
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
@@ -439,7 +438,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Herramienta de supervisión para OLT/ONUs DASAN [Open source]."
+        "description": "Herramienta de supervisión para OLT/ONU DASAN [código abierto]."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -451,7 +450,7 @@
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "Un starter kit que incluye Next.js, Chakra-UI, Framer-Motion en TypeScript. Pocos componentes, internacionalización, SEO y más en esta plantilla."
+        "description": "Un starter kit con Next.js, Chakra UI y Framer Motion en TypeScript. Incluye algunos componentes, internacionalización, SEO y más."
       },
       "rtransport": {
         "name": "RT'ransport",

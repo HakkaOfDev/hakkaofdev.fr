@@ -4,6 +4,7 @@ import { CVDocument } from "@/components/cv-pdf/CVDocument";
 import type { Locale } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import { buildCvFileName, getCvData } from "@/lib/cv/cv-pdf.data";
+import { renderWithCvFonts } from "@/lib/cv/cv-pdf.fonts";
 
 export const runtime = "nodejs";
 
@@ -27,7 +28,9 @@ export async function GET(request: Request) {
   const locale = pickLocale(request);
 
   const data = await getCvData(locale);
-  const pdfBuffer = await renderToBuffer(<CVDocument data={data} />);
+  const pdfBuffer = await renderWithCvFonts(locale, data, () =>
+    renderToBuffer(<CVDocument data={data} />),
+  );
   const body = new Uint8Array(pdfBuffer);
 
   return new Response(body, {

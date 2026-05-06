@@ -210,10 +210,9 @@
       "fallback": "此作品集的源代码可在此查看:"
     },
     "cv": {
-      "openPreview": "打开 PDF 预览",
-      "downloadPdf": "下载 PDF",
-      "endpointsLabel": "接口:",
-      "endpointsAnd": "和"
+      "description": "我的简历 PDF",
+      "openPreview": "试一试",
+      "downloadPdf": "下载"
     },
     "projects": {
       "openLabel": "打开项目: {name}"
@@ -350,7 +349,7 @@
   "CV": {
     "documentTitleSuffix": "简历",
     "subject": "简历",
-    "summary": "软件工程师,近四年经验。我以自由职业者身份为自己的客户工作,构建发布到 App Store 和 Google Play 的网页和移动应用。React、Next.js 和 React Native 是我的主场,我钟爱整洁的架构、快速的反馈循环以及偶尔的开源副业。常驻法国,从笔记本能放下的任何地方工作。",
+    "summary": "拥有 4 年以上经验的软件工程师,为客户和团队构建网页和移动应用。我使用 React、Next.js、React Native 和 Expo 主导前端项目,专注于简洁的 UI、流畅的 UX、响应式设计、无障碍体验以及对用户友好的产品。我也喜欢为开源项目做贡献,作为数字游民远程办公,与世界各地的团队和客户协作。",
     "sections": {
       "summary": "职业概要",
       "experience": "工作经历",
@@ -377,7 +376,7 @@
       "freelance": {
         "name": "自由职业",
         "company": "Alexandre GOSSARD",
-        "location": "法国 沙隆昂尚帕涅",
+        "location": "法国沙隆昂香槟",
         "period": "2022 年 7 月至今",
         "descriptions": [
           "为直接客户使用 React 和 Next.js 构建全栈网页应用",
@@ -390,8 +389,8 @@
       "archeMC2": {
         "name": "学徒制",
         "company": "Arche MC2",
-        "location": "法国 沙隆昂尚帕涅",
-        "period": "2022 年 9 月 — 2023 年 8 月",
+        "location": "法国沙隆昂香槟",
+        "period": "2022 年 9 月 - 2023 年 8 月",
         "descriptions": [
           "构建 GitLab CI/CD 流水线用于自动化测试和部署",
           "使用 Docker 容器化内部应用和服务",
@@ -403,19 +402,19 @@
     "education": {
       "iutSecurity": {
         "name": "系统管理与安全(职业学士)",
-        "location": "IUT Châlons(法国 沙隆昂尚帕涅)",
+        "location": "IUT Châlons(法国沙隆昂香槟)",
         "period": "2022-2023",
         "descriptions": []
       },
       "iutNetworks": {
         "name": "DUT 网络与电信(技术学位)",
-        "location": "IUT Châlons(法国 沙隆昂尚帕涅)",
+        "location": "IUT Châlons(法国沙隆昂香槟)",
         "period": "2020-2022",
         "descriptions": ["榜眼"]
       },
       "lyceeBac": {
         "name": "理科业士(高考等同)",
-        "location": "Lycée Jean Talon(法国 沙隆昂尚帕涅)",
+        "location": "Lycée Jean Talon(法国沙隆昂香槟)",
         "period": "2019-2020",
         "descriptions": ["专业 ISN(信息与数字科学)", "优等"]
       }
