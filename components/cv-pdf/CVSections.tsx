@@ -197,10 +197,7 @@ export function BottomSection({
         <Section title={languagesTitle}>
           {languages.map((lang) => (
             <Text key={lang.code} style={styles.langLine}>
-              <Text style={styles.langBold}>
-                {lang.flag} {lang.name}
-              </Text>{" "}
-              - {lang.level}
+              <Text style={styles.langBold}>{lang.name}</Text> - {lang.level}
             </Text>
           ))}
         </Section>

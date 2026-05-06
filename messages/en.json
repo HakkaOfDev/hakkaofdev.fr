@@ -207,10 +207,9 @@
       "fallback": "Source code for this portfolio is available here:"
     },
     "cv": {
-      "openPreview": "Open PDF preview",
-      "downloadPdf": "Download PDF",
-      "endpointsLabel": "Endpoints:",
-      "endpointsAnd": "and"
+      "description": "My CV as a PDF",
+      "openPreview": "Try it out",
+      "downloadPdf": "Download"
     },
     "projects": {
       "openLabel": "Open project: {name}"
@@ -347,7 +346,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software Engineer, nearly four years in. I freelance for my own clients, building web and mobile apps that ship to real users on the App Store and Google Play. React, Next.js and React Native are home turf, with a soft spot for clean architecture, quick feedback loops, and the occasional open-source side project. Based in France, working from wherever the laptop fits.",
+    "summary": "Software Engineer with 4+ years of experience building web and mobile apps for clients and teams. I lead frontend projects using React, Next.js, React Native, and Expo, with a focus on clean UI, smooth UX, responsive design, accessibility, and user-friendly products. I also enjoy contributing to open-source projects and working remotely as a digital nomad, collaborating with teams and clients from anywhere in the world.",
     "sections": {
       "summary": "Professional Summary",
       "experience": "Experience",
@@ -415,7 +414,7 @@
         "location": "Lycée Jean Talon (Châlons-en-Champagne, France)",
         "period": "2019-2020",
         "descriptions": [
-          "Specialised in ISN (Computer and digital sicences)",
+          "Specialised in ISN (Computer and digital sciences)",
           "With distinctions"
         ]
       }

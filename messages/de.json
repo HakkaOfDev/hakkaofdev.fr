@@ -207,10 +207,9 @@
       "fallback": "Quellcode dieses Portfolios ist hier verfügbar:"
     },
     "cv": {
-      "openPreview": "PDF-Vorschau öffnen",
-      "downloadPdf": "PDF herunterladen",
-      "endpointsLabel": "Endpunkte:",
-      "endpointsAnd": "und"
+      "description": "Mein Lebenslauf als PDF",
+      "openPreview": "Ausprobieren",
+      "downloadPdf": "Herunterladen"
     },
     "projects": {
       "openLabel": "Projekt öffnen: {name}"
@@ -347,7 +346,7 @@
   "CV": {
     "documentTitleSuffix": "Lebenslauf",
     "subject": "Lebenslauf",
-    "summary": "Software-Ingenieur mit fast vier Jahren Erfahrung. Ich arbeite freelance für meine eigenen Kunden, baue Web- und Mobile-Apps, die echten Nutzerinnen und Nutzern im App Store und auf Google Play zur Verfügung stehen. React, Next.js und React Native sind mein Heimspiel, mit einem Faible für saubere Architektur, schnelle Feedback-Schleifen und gelegentliche Open-Source-Nebenprojekte. Wohnsitz Frankreich, arbeitend von dort, wo der Laptop hinpasst.",
+    "summary": "Software-Ingenieur mit über 4 Jahren Erfahrung in der Entwicklung von Web- und Mobile-Apps für Kunden und Teams. Ich leite Frontend-Projekte mit React, Next.js, React Native und Expo, mit Fokus auf eine saubere UI, eine flüssige UX, responsives Design, Barrierefreiheit und benutzerfreundliche Produkte. Außerdem trage ich gerne zu Open-Source-Projekten bei und arbeite remote als digitaler Nomade, in Zusammenarbeit mit Teams und Kunden von überall auf der Welt.",
     "sections": {
       "summary": "Kurzprofil",
       "experience": "Erfahrung",
@@ -366,9 +365,9 @@
         "descriptions": [
           "Leite ein Frontend-Team beim Bau produktiver Web-Apps mit React und Next.js",
           "Verantworte technische Roadmap, Sprint-Planung und Architekturentscheidungen",
-          "Mentore Junior-Entwickler und führe Code-Reviews durch",
-          "Baue und pflege die geteilte Komponentenbibliothek und das interne Design-System",
-          "Veröffentliche Begleit-Mobile-Apps mit React Native und Expo"
+          "Betreue Junior-Entwickler und führe Code-Reviews durch",
+          "Baue und pflege die gemeinsame Komponentenbibliothek und das interne Design-System",
+          "Veröffentliche begleitende mobile Apps mit React Native und Expo"
         ]
       },
       "freelance": {
@@ -380,15 +379,15 @@
           "Baue Full-Stack-Web-Apps mit React und Next.js für Direktkunden",
           "Veröffentliche plattformübergreifende Mobile-Apps im App Store und Google Play",
           "Richte CI/CD-Pipelines und automatisierte Deployment-Workflows ein",
-          "Berate zu Architektur, Tech-Auswahl und Projekt-Scoping",
+          "Berate zu Architektur, Tech-Auswahl und Projektumfang",
           "Übernehme Kundenkommunikation und Liefertermine in jedem Projekt"
         ]
       },
       "archeMC2": {
-        "name": "Lehre",
+        "name": "Ausbildung",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Frankreich",
-        "period": "September 2022 — August 2023",
+        "period": "September 2022 - August 2023",
         "descriptions": [
           "Aufbau von GitLab-CI/CD-Pipelines für automatisiertes Testen und Deployment",
           "Containerisierung interner Anwendungen und Dienste mit Docker",
@@ -408,14 +407,14 @@
         "name": "DUT Netzwerke und Telekommunikation (Hochschulabschluss)",
         "location": "IUT Châlons (Châlons-en-Champagne, Frankreich)",
         "period": "2020-2022",
-        "descriptions": ["Salutatorian"]
+        "descriptions": ["Jahrgangszweiter"]
       },
       "lyceeBac": {
         "name": "Wissenschaftliches Abitur",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Frankreich)",
         "period": "2019-2020",
         "descriptions": [
-          "Spezialisierung ISN (Informatik und digitale Wissenschaften)",
+          "Spezialisierung ISN (Informatik und digitale Technologien)",
           "Mit Auszeichnung"
         ]
       }
@@ -427,11 +426,11 @@
       },
       "kabilaTools": {
         "name": "Kabila Tools",
-        "description": "Ein All-in-One-NFT-Toolkit für Creator und Communities auf Hedera. Eine starke und einfach zu nutzende Plattform, um NFT-Sammlungen zu erstellen, zu launchen und zu verwalten – mit voller Kontrolle."
+        "description": "Ein All-in-One-NFT-Toolkit für Creator und Communities auf Hedera. Eine starke und einfach zu nutzende Plattform, um NFT-Sammlungen zu erstellen, zu launchen und zu verwalten - mit voller Kontrolle."
       },
       "kabilaWallet": {
         "name": "Kabila Wallet",
-        "description": "Eine non-custodial, einfache und sichere Wallet für das Hedera-Netzwerk. Verwalte Konten, Tokens, NFTs und verbinde dich mit DApps – die volle Kontrolle bleibt bei dir."
+        "description": "Eine einfache, sichere Non-Custodial-Wallet für das Hedera-Netzwerk. Verwalte Konten, Tokens und NFTs und verbinde dich mit DApps, ohne die Kontrolle über deine Assets abzugeben."
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
@@ -455,7 +454,7 @@
       },
       "rtransport": {
         "name": "RT'ransport",
-        "description": "Eine Paket-Plattform, erstellt für das Erstjahres-Projekt im DUT Netzwerke & Telekommunikation."
+        "description": "Eine Paketplattform, erstellt für das Erstjahresprojekt im DUT Netzwerke & Telekommunikation."
       }
     },
     "skillGroups": {

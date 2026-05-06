@@ -210,10 +210,9 @@
       "fallback": "Codul sursă al acestui portofoliu este disponibil aici:"
     },
     "cv": {
-      "openPreview": "Deschide previzualizarea PDF",
-      "downloadPdf": "Descarcă PDF",
-      "endpointsLabel": "Endpoints:",
-      "endpointsAnd": "și"
+      "description": "CV-ul meu în PDF",
+      "openPreview": "Încearcă",
+      "downloadPdf": "Descarcă"
     },
     "projects": {
       "openLabel": "Deschide proiectul: {name}"
@@ -459,7 +458,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Inginer software cu aproape patru ani de experiență. Lucrez ca freelancer pentru proprii clienți, construind aplicații web și mobile care ajung la utilizatori reali pe App Store și Google Play. React, Next.js și React Native sunt teritoriul meu, cu o slăbiciune pentru arhitectura curată, bucle rapide de feedback și ocazional proiecte open source secundare. Bazat în Franța, lucrez de oriunde încape laptopul.",
+    "summary": "Inginer software cu peste 4 ani de experiență în construirea de aplicații web și mobile pentru clienți și echipe. Conduc proiecte frontend folosind React, Next.js, React Native și Expo, cu accent pe o interfață curată, UX fluid, design responsive, accesibilitate și produse ușor de utilizat. De asemenea, îmi place să contribui la proiecte open-source și să lucrez de la distanță ca nomad digital, colaborând cu echipe și clienți din orice parte a lumii.",
     "sections": {
       "summary": "Profil profesional",
       "experience": "Experiență",
@@ -500,7 +499,7 @@
         "name": "Stagiu de ucenicie",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Franța",
-        "period": "Septembrie 2022 — august 2023",
+        "period": "Septembrie 2022 - august 2023",
         "descriptions": [
           "Am construit pipeline-uri GitLab CI/CD pentru testare și deployment automate",
           "Am containerizat aplicații și servicii interne cu Docker",
@@ -513,19 +512,19 @@
       "iutSecurity": {
         "name": "Administrare de sistem și securitate (licență profesională)",
         "location": "IUT Châlons (Châlons-en-Champagne, Franța)",
-        "period": "2022–2023",
+        "period": "2022-2023",
         "descriptions": []
       },
       "iutNetworks": {
         "name": "DUT Rețele și telecomunicații (diplomă tehnică)",
         "location": "IUT Châlons (Châlons-en-Champagne, Franța)",
-        "period": "2020–2022",
+        "period": "2020-2022",
         "descriptions": ["Locul al doilea pe promoție"]
       },
       "lyceeBac": {
         "name": "Bacalaureat științific (echivalent A-level)",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Franța)",
-        "period": "2019–2020",
+        "period": "2019-2020",
         "descriptions": [
           "Specializare ISN (Informatică și științe digitale)",
           "Cu mențiune"
@@ -543,7 +542,7 @@
       },
       "kabilaWallet": {
         "name": "Kabila Wallet",
-        "description": "Un wallet non-custodial, simplu și sigur pentru rețeaua Hedera. Gestionează conturi, tokenuri, NFT-uri și conectează-te la DApp-uri menținând controlul total asupra activelor tale."
+        "description": "Un portofel fără custodie, simplu și sigur pentru rețeaua Hedera. Gestionează conturi, tokenuri, NFT-uri și conectează-te la DApp-uri menținând controlul total asupra activelor tale."
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",

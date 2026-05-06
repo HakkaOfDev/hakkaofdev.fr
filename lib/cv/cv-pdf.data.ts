@@ -12,7 +12,6 @@ import {
 
 export const CV_FILE_NAME_BASE = "alexandre-gossard-cv";
 export const CV_PREVIEW_URL = "/api/cv";
-export const CV_DOWNLOAD_URL = "/api/cv?download=1";
 
 export function buildCvFileName(locale: Locale) {
   return `${CV_FILE_NAME_BASE}-${locale}.pdf`;

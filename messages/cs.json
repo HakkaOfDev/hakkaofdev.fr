@@ -210,10 +210,9 @@
       "fallback": "Zdrojový kód tohoto portfolia je k dispozici zde:"
     },
     "cv": {
-      "openPreview": "Otevřít náhled PDF",
-      "downloadPdf": "Stáhnout PDF",
-      "endpointsLabel": "Endpointy:",
-      "endpointsAnd": "a"
+      "description": "Moje CV v PDF",
+      "openPreview": "Vyzkoušet",
+      "downloadPdf": "Stáhnout"
     },
     "projects": {
       "openLabel": "Otevřít projekt: {name}"
@@ -459,7 +458,7 @@
   "CV": {
     "documentTitleSuffix": "Životopis",
     "subject": "Životopis",
-    "summary": "Softwarový inženýr s téměř čtyřletou praxí. Pracuji jako freelancer pro vlastní klienty a vyvíjím webové i mobilní aplikace, které se dostávají k reálným uživatelům na App Store i Google Play. React, Next.js a React Native jsou můj domácí teritoriál — mám slabost pro čistou architekturu, rychlé zpětnovazební smyčky a občasné open-source vedlejší projekty. Žiji ve Francii a pracuji odkudkoliv, kam se vejde notebook.",
+    "summary": "Softwarový inženýr s více než 4 lety zkušeností s vývojem webových a mobilních aplikací pro klienty a týmy. Vedu frontendové projekty s využitím React, Next.js, React Native a Expo, s důrazem na čisté UI, plynulé UX, responzivní design, přístupnost a uživatelsky přívětivé produkty. Rád také přispívám do open-source projektů a pracuji vzdáleně jako digitální nomád, spolupracuji s týmy a klienty odkudkoli na světě.",
     "sections": {
       "summary": "Profesní profil",
       "experience": "Praxe",
@@ -500,7 +499,7 @@
         "name": "Učební praxe",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Francie",
-        "period": "Září 2022 — srpen 2023",
+        "period": "Září 2022 - srpen 2023",
         "descriptions": [
           "Stavěl jsem GitLab CI/CD pipeline pro automatizované testování a nasazení",
           "Kontejnerizoval interní aplikace a služby pomocí Dockeru",
@@ -513,19 +512,19 @@
       "iutSecurity": {
         "name": "Správa systémů a bezpečnost (profesní bakalář)",
         "location": "IUT Châlons (Châlons-en-Champagne, Francie)",
-        "period": "2022–2023",
+        "period": "2022-2023",
         "descriptions": []
       },
       "iutNetworks": {
         "name": "DUT Sítě a telekomunikace (vyšší odborné vzdělání)",
         "location": "IUT Châlons (Châlons-en-Champagne, Francie)",
-        "period": "2020–2022",
+        "period": "2020-2022",
         "descriptions": ["Druhé místo v ročníku"]
       },
       "lyceeBac": {
         "name": "Vědecký bakalářát (středoškolská maturita)",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Francie)",
-        "period": "2019–2020",
+        "period": "2019-2020",
         "descriptions": [
           "Specializace ISN (Informatika a digitální vědy)",
           "S vyznamenáním"
@@ -535,7 +534,7 @@
     "projects": {
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Web3 sociální platforma a NFT ekosystém na Hederě, s NFT marketplace, komunitními plazami, launchpady a nástroji pro tvůrce."
+        "description": "Web3 sociální platforma a NFT ekosystém na Hederě, s NFT marketplace, komunitními prostory, launchpady a nástroji pro tvůrce."
       },
       "kabilaTools": {
         "name": "Kabila Tools",

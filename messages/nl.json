@@ -207,10 +207,9 @@
       "fallback": "De broncode van dit portfolio is hier beschikbaar:"
     },
     "cv": {
-      "openPreview": "PDF-voorbeeld openen",
-      "downloadPdf": "PDF downloaden",
-      "endpointsLabel": "Endpoints:",
-      "endpointsAnd": "en"
+      "description": "Mijn cv als pdf",
+      "openPreview": "Uitproberen",
+      "downloadPdf": "Downloaden"
     },
     "projects": {
       "openLabel": "Project openen: {name}"
@@ -456,7 +455,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software-engineer met bijna vier jaar ervaring. Ik werk freelance voor mijn eigen klanten en bouw web- en mobiele apps die echte gebruikers bereiken in de App Store en Google Play. React, Next.js en React Native zijn mijn thuisbasis, met een zwak voor schone architectuur, snelle feedbackloops en af en toe een open-source nevenproject. Gevestigd in Frankrijk, werkend vanaf waar de laptop maar past.",
+    "summary": "Software-engineer met meer dan 4 jaar ervaring in het bouwen van web- en mobiele apps voor klanten en teams. Ik leid frontend-projecten met React, Next.js, React Native en Expo, met focus op een strakke UI, soepele UX, responsive design, toegankelijkheid en gebruiksvriendelijke producten. Ik draag ook graag bij aan open-source projecten en werk op afstand als digitale nomade, in samenwerking met teams en klanten waar ook ter wereld.",
     "sections": {
       "summary": "Professioneel profiel",
       "experience": "Ervaring",
@@ -475,7 +474,7 @@
         "descriptions": [
           "Leid een frontend-team dat productie-webapps bouwt met React en Next.js",
           "Verantwoordelijk voor technische roadmap, sprintplanning en architectuurkeuzes",
-          "Mentor junior-ontwikkelaars en voer code reviews uit",
+          "Begeleid junior ontwikkelaars en voer codereviews uit",
           "Bouw en onderhoud de gedeelde componentenbibliotheek en het interne designsysteem",
           "Lever begeleidende mobiele apps op met React Native en Expo"
         ]
@@ -497,7 +496,7 @@
         "name": "Leerbaan",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Frankrijk",
-        "period": "September 2022 — augustus 2023",
+        "period": "September 2022 - augustus 2023",
         "descriptions": [
           "Bouwde GitLab CI/CD-pipelines voor geautomatiseerd testen en deployen",
           "Containeriseerde interne applicaties en services met Docker",
@@ -510,19 +509,19 @@
       "iutSecurity": {
         "name": "Systeembeheer en beveiliging (beroepsdiploma)",
         "location": "IUT Châlons (Châlons-en-Champagne, Frankrijk)",
-        "period": "2022–2023",
+        "period": "2022-2023",
         "descriptions": []
       },
       "iutNetworks": {
         "name": "DUT Netwerken en Telecommunicatie (technisch diploma)",
         "location": "IUT Châlons (Châlons-en-Champagne, Frankrijk)",
-        "period": "2020–2022",
+        "period": "2020-2022",
         "descriptions": ["Tweede in het cohort"]
       },
       "lyceeBac": {
         "name": "Wetenschappelijk baccalaureaat (A-level equivalent)",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Frankrijk)",
-        "period": "2019–2020",
+        "period": "2019-2020",
         "descriptions": [
           "Specialisatie ISN (Informatica en digitale wetenschappen)",
           "Met onderscheiding"
@@ -532,7 +531,7 @@
     "projects": {
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Een Web3 sociaal platform en NFT-ecosysteem op Hedera, met een NFT-marktplaats, community-plaza's, launchpads en tools voor makers."
+        "description": "Een Web3 sociaal platform en NFT-ecosysteem op Hedera, met een NFT-marktplaats, communityruimtes, launchpads en tools voor makers."
       },
       "kabilaTools": {
         "name": "Kabila Tools",
