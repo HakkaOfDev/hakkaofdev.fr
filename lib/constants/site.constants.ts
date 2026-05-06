@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 export const SITE = {
-  version: "1.5.0", // x-release-please-version
+  version: "1.6.1", // x-release-please-version
   url: "https://hakkaofdev.fr",
   repositoryUrl: "https://github.com/hakkaofdev/hakkaofdev.fr",
   title: "Alexandre Gossard | Digital Nomad & Software Engineer",

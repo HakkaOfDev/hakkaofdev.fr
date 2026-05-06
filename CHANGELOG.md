@@ -1,5 +1,55 @@
 # Changelog
 
+## [1.6.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.6.0...v1.6.1) (2026-05-01)
+
+
+### Bug Fixes
+
+* **release-please:** make tagging round-trip with component-no-space ([6c1d849](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/6c1d849bfd56ed594856020d229095a99245d0fc))
+
+
+### Miscellaneous
+
+* sync develop → main (release-please fix + manifest bump to 1.6.0) ([d7f4aa7](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/d7f4aa72b7e21fcb3b9bb49163129d602076bb2d))
+
+## [1.6.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.5.0...v1.6.0) (2026-05-01)
+
+
+### Features
+
+* **i18n:** next-intl across 22 locales - full UI, CV, OG, RTL ([c3e61d2](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c3e61d2c91f014035a53e176add4e6054eba47bc))
+* **i18n:** switch to freelance positioning + complete language picker ([382b9e2](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/382b9e2bcdfc103c6dd60fd4f658267f45fcdc2e))
+
+
+### Bug Fixes
+
+* **og:** retry Google Fonts requests so flaky builds don't fail ([a779d33](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a779d3386299aaa68e59a6a8ed7f51eeee4065f6))
+* **readme:** preserve version badge color across release-please bumps ([a0e2303](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a0e2303030f1c466bad8a4d1b25ce528fd44b60a))
+* **security:** CSP, HSTS, hardened headers, prod source maps ([7fb21f8](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/7fb21f8070d468d9fa6a578b0bc92520315f8042))
+* **welcome:** align shortcut rows on a shared label column ([315a915](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/315a915de102dddfdc7da2a8dce7f580758ff141))
+
+
+### Performance
+
+* **og:** pre-render OG images at build time, drop edge runtime ([826ff70](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/826ff70d4ebd37809dd9b349be860f424ac73930))
+
+
+### Documentation
+
+* **readme:** move preview image above tech stack badges ([c266fbb](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c266fbb956703d0895ef78422cdd90ac6f271956))
+
+
+### Miscellaneous
+
+* **security:** add CSP + security headers, enable prod source maps ([488d439](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/488d439995fe2718be91830b9bd8e2b054097f0f))
+* **security:** harden headers and JSON-LD script ([327e025](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/327e02506798cf5f9c0cdb9873a783054fcba853))
+
+
+### Code Refactoring
+
+* **guestbook:** pass resolved messages to schema builder ([a359363](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a359363162ecfffa0015bf399a9eb901715842f8))
+* **i18n:** clear locale cookie via server action ([1b0dfe2](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/1b0dfe2c7875e4df64134f8d7a9cfeb9546be947))
+
 ## [1.5.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.4.0...v1.5.0) (2026-04-30)
 
 
