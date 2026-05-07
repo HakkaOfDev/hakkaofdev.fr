@@ -1,4 +1,6 @@
 import type { ComponentType } from "react";
+import { expandAlias, useAliasesStore } from "@/stores/aliases.store";
+import type { Pipeline } from "@/types/command";
 
 type StaticRenderer = ComponentType<Record<string, never>>;
 type InputRenderer = ComponentType<{ input: string }>;
@@ -84,13 +86,31 @@ const ENTRIES: ReadonlyArray<RendererEntry> = [
     true,
     () => import("@/components/commands/renders/CLang"),
   ),
+  prefix(
+    "alias",
+    "alias",
+    true,
+    () => import("@/components/commands/renders/CAlias"),
+  ),
+  exact(
+    "history",
+    "history",
+    () => import("@/components/commands/renders/CHistory"),
+  ),
+  prefix(
+    "man",
+    "man",
+    true,
+    () => import("@/components/commands/renders/CMan"),
+  ),
 ];
 
 export async function resolveTerminalRenderer(input: string) {
-  const normalizedInput = normalizeInput(input);
-  if (!normalizedInput) return null;
+  const normalized = normalizeInput(input);
+  if (!normalized) return null;
 
-  const entry = ENTRIES.find((candidate) => candidate.match(normalizedInput));
+  const { baseInput, pipeline } = splitPipeline(normalized);
+  const entry = ENTRIES.find((candidate) => candidate.match(baseInput));
   if (!entry) return null;
 
   const cachedComponent = rendererCache.get(entry.key);
@@ -98,7 +118,8 @@ export async function resolveTerminalRenderer(input: string) {
     return {
       Component: cachedComponent,
       needsInput: entry.needsInput,
-      normalizedInput,
+      normalizedInput: baseInput,
+      pipeline,
     };
   }
 
@@ -108,16 +129,73 @@ export async function resolveTerminalRenderer(input: string) {
   return {
     Component: loadedModule.default,
     needsInput: entry.needsInput,
-    normalizedInput,
+    normalizedInput: baseInput,
+    pipeline,
   };
 }
 
+/**
+ * Normalize the raw input:
+ * - lowercase + trim
+ * - apply built-in token aliases (`?` → `help`, `cls` → `clear`, …)
+ * - expand user-defined aliases via the aliases store
+ * Pipeline operators are preserved.
+ */
 function normalizeInput(raw: string) {
   const normalized = raw.trim().toLowerCase();
   if (!normalized) return "";
-  const token = normalized.split(/\s+/, 1)[0];
-  const alias = TOKEN_ALIASES[token];
-  return alias ?? normalized;
+
+  const userAliases = readUserAliases();
+  const expanded = expandAlias(normalized, userAliases);
+
+  const token = expanded.split(/\s+/, 1)[0];
+  const builtinAlias = TOKEN_ALIASES[token];
+  if (!builtinAlias) return expanded;
+
+  const remainder = expanded.slice(token.length);
+  return `${builtinAlias}${remainder}`;
+}
+
+function readUserAliases() {
+  if (typeof window === "undefined") return {};
+  try {
+    return useAliasesStore.getState().aliases;
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Parse `cmd args... | grep pattern` into its base command and pipeline plan.
+ * Only the `grep` filter is supported for now.
+ */
+function splitPipeline(input: string): {
+  baseInput: string;
+  pipeline?: Pipeline;
+} {
+  const pipeIndex = input.indexOf("|");
+  if (pipeIndex === -1) return { baseInput: input };
+
+  const left = input.slice(0, pipeIndex).trim();
+  const right = input.slice(pipeIndex + 1).trim();
+  if (!right.startsWith("grep")) {
+    return { baseInput: left || input };
+  }
+
+  const pattern = right.slice(4).trim();
+  if (!pattern) return { baseInput: left || input };
+
+  return { baseInput: left, pipeline: { grep: stripQuotes(pattern) } };
+}
+
+function stripQuotes(raw: string) {
+  if (
+    (raw.startsWith('"') && raw.endsWith('"')) ||
+    (raw.startsWith("'") && raw.endsWith("'"))
+  ) {
+    return raw.slice(1, -1);
+  }
+  return raw;
 }
 
 function exact(

@@ -3,43 +3,57 @@
 import { Check, Trash2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
 import { BUILTIN_THEME_MAP } from "@/lib/themes/palettes";
 import { cn } from "@/lib/utils";
+import { filterByGrep } from "@/lib/utils/grep.utils";
 import type { ThemePalette } from "@/types/theme";
 import { ColorSwatches } from "./ThemeColorSwatches";
 
 export function CThemeList() {
   const t = useTranslations("Theme");
   const { theme, themes, setTheme, deleteCustomTheme } = useThemeEngine();
+  const grep = useGrep();
+  const grepRaw = useGrepRaw();
+
+  const visibleThemes = filterByGrep(themes, grep, (th) => [th.name, th.label]);
 
   return (
     <AnimatedSpan className="gap-3">
       <p className="text-muted-foreground">
         {t.rich("list.available", {
-          count: themes.length,
+          count: visibleThemes.length,
         })}
       </p>
 
-      <div className="terminal-scrollbar grid max-h-60 overflow-y-auto overflow-x-hidden border-y py-2 pr-2">
-        {themes.map((th) => {
-          const isActive = th.name === theme;
-          const isCustom = !BUILTIN_THEME_MAP.has(th.name);
+      {grep && visibleThemes.length === 0 ? (
+        <p className="text-muted-foreground text-xs">
+          {t("list.noMatches", { pattern: grepRaw })}
+        </p>
+      ) : (
+        <div className="terminal-scrollbar grid max-h-60 overflow-y-auto overflow-x-hidden border-y py-2 pr-2">
+          {visibleThemes.map((th) => {
+            const isActive = th.name === theme;
+            const isCustom = !BUILTIN_THEME_MAP.has(th.name);
 
-          return (
-            <ThemeRow
-              key={th.name}
-              theme={th}
-              isActive={isActive}
-              isCustom={isCustom}
-              onSetTheme={setTheme}
-              onDeleteTheme={deleteCustomTheme}
-            />
-          );
-        })}
-      </div>
+            return (
+              <ThemeRow
+                key={th.name}
+                theme={th}
+                isActive={isActive}
+                isCustom={isCustom}
+                onSetTheme={setTheme}
+                onDeleteTheme={deleteCustomTheme}
+              />
+            );
+          })}
+        </div>
+      )}
 
-      <p className="text-muted-foreground/60 text-xs">{t("list.tip")}</p>
+      {!grep && (
+        <p className="text-muted-foreground/60 text-xs">{t("list.tip")}</p>
+      )}
     </AnimatedSpan>
   );
 }

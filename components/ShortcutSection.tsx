@@ -44,4 +44,4 @@ function ShortcutRow({
   );
 }
 
-export { ShortcutSection, ShortcutRow };
+export { ShortcutRow, ShortcutSection };

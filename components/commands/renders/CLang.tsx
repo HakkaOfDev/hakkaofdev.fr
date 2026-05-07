@@ -5,6 +5,7 @@ import { useEffect, useMemo } from "react";
 import { clearLocaleCookieAction } from "@/app/actions/locale";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { LANG_COMMANDS } from "@/components/commands/registries/lang.registry";
+import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { Shortcut } from "@/components/ui/Shortcut";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { type Locale, routing } from "@/i18n/routing";
@@ -20,6 +21,8 @@ function CLang({ input }: { input: string }) {
   const locale = useLocale() as Locale;
   const router = useRouter();
   const pathname = usePathname();
+  const grep = useGrep();
+  const grepRaw = useGrepRaw();
 
   const parsed = useMemo(() => {
     const parts = input.trim().split(/\s+/).filter(Boolean);
@@ -49,35 +52,58 @@ function CLang({ input }: { input: string }) {
   }, [parsed.sub, parsed.arg, parsed.hasExtra]);
 
   if (!parsed.sub) {
+    const localesShown = grep
+      ? routing.locales.filter((code) => {
+          const name = (tNames(code as never) as string).toLowerCase();
+          return code.toLowerCase().includes(grep) || name.includes(grep);
+        })
+      : routing.locales;
+
+    if (grep && localesShown.length === 0) {
+      return (
+        <AnimatedSpan>
+          <p className="text-muted-foreground text-xs">
+            {t("noMatches", { pattern: grepRaw })}
+          </p>
+        </AnimatedSpan>
+      );
+    }
+
     return (
       <AnimatedSpan className="gap-2">
-        <p className="text-muted-foreground">
-          {t("currentLabel")}{" "}
-          <span className="font-semibold text-foreground">
-            {tNames(locale as never)} ({locale})
-          </span>
-        </p>
+        {!grep && (
+          <p className="text-muted-foreground">
+            {t("currentLabel")}{" "}
+            <span className="font-semibold text-foreground">
+              {tNames(locale as never)} ({locale})
+            </span>
+          </p>
+        )}
         <p className="text-muted-foreground">
           {t("availablePrefix")}{" "}
-          {routing.locales.map((code, idx) => (
+          {localesShown.map((code, idx) => (
             <span key={code}>
               <span className="font-mono text-foreground">{code}</span>
-              {idx < routing.locales.length - 1 ? ", " : ""}
+              {idx < localesShown.length - 1 ? ", " : ""}
             </span>
           ))}
         </p>
-        <p className="mb-2 text-muted-foreground">
-          {t("usagePrefix")}{" "}
-          <span className="font-semibold text-foreground">
-            lang set | lang auto
-          </span>
-        </p>
-        <SubCommandHelp
-          title={t("subCommandsTitle")}
-          items={LANG_COMMANDS}
-          prefix="lang "
-          variant="default"
-        />
+        {!grep && (
+          <p className="mb-2 text-muted-foreground">
+            {t("usagePrefix")}{" "}
+            <span className="font-semibold text-foreground">
+              lang set | lang auto
+            </span>
+          </p>
+        )}
+        {!grep && (
+          <SubCommandHelp
+            title={t("subCommandsTitle")}
+            items={LANG_COMMANDS}
+            prefix="lang "
+            variant="default"
+          />
+        )}
       </AnimatedSpan>
     );
   }

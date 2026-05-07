@@ -148,16 +148,23 @@
       "themeValidate": "فحص تباين السمة الحالية",
       "lang": "عرض أو تغيير اللغة النشطة",
       "langSet": "تغيير اللغة (مثل lang set fr)",
-      "langAuto": "إعادة تفعيل الكشف التلقائي عن اللغة"
+      "langAuto": "إعادة تفعيل الكشف التلقائي عن اللغة",
+      "alias": "تعريف وعرض وإزالة اختصارات الأوامر",
+      "aliasRemove": "إزالة اختصار بالاسم",
+      "aliasClear": "إزالة جميع الاختصارات",
+      "history": "عرض سجل أوامر هذه الجلسة مع الطوابع الزمنية",
+      "man": "عرض صفحة الدليل لأمر معين"
     },
     "help": {
       "available": "الأوامر المتاحة",
       "tip": "نصيحة: انقر على أي أمر أعلاه أو اكتبه في موجه الأوامر لتنفيذه.",
-      "subCommands": "الأوامر الفرعية"
+      "subCommands": "الأوامر الفرعية",
+      "noMatches": "لا توجد أوامر تطابق «{pattern}»."
     },
     "notFound": {
       "title": "zsh: لم يتم العثور على الأمر: {input}",
-      "didYouMean": "هل قصدت {suggestions}؟"
+      "didYouMean": "هل تقصد <suggestions></suggestions>؟",
+      "pipeOnlyHint": "{cmd} هو فلتر أنابيب. جرب <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "الاستخدام:",
@@ -212,8 +219,10 @@
       "downloadPdf": "تنزيل"
     },
     "projects": {
-      "openLabel": "فتح المشروع: {name}"
-    }
+      "openLabel": "فتح المشروع: {name}",
+      "noMatches": "لا توجد مشاريع تطابق «{pattern}»."
+    },
+    "noMatches": "لا توجد نتائج لـ «{pattern}»."
   },
   "Suggestions": {
     "navigate": "تنقّل",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "لا توجد لغات تطابق «{pattern}»."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "البلد",
         "allCountries": "جميع البلدان",
         "clearCountry": "مسح فلتر البلد"
-      }
+      },
+      "noMatches": "لا توجد إدخالات تطابق «{pattern}»."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "الترتيب",
       "track": "المقطع",
       "album": "الألبوم"
-    }
+    },
+    "noMatches": "لا توجد مقاطع تطابق «{pattern}»."
   },
   "Theme": {
     "currentLabel": "السمة الحالية:",
@@ -360,7 +372,8 @@
       "tip": "اضغط على سمة لتطبيقها.",
       "active": "(نشطة)",
       "custom": "مخصصة",
-      "deleteAria": "حذف {label}"
+      "deleteAria": "حذف {label}",
+      "noMatches": "لا توجد سمات تطابق «{pattern}»."
     },
     "set": {
       "unknownAvailable": "سمة غير معروفة: {name}. السمات المتاحة:",
@@ -601,6 +614,47 @@
       "traveling": "السفر",
       "manga": "المانغا",
       "gaming": "الألعاب"
+    }
+  },
+  "Alias": {
+    "title": "الاختصارات",
+    "subCommandsTitle": "أوامر الاختصارات",
+    "usagePrefix": "الاستخدام:",
+    "tip": "نصيحة: عرّف اختصارًا باستخدام <example></example>، ثم استخدمه مثل أي أمر آخر.",
+    "empty": "لا توجد اختصارات بعد. جرّب alias hi=about.",
+    "noMatches": "لا توجد اختصارات تطابق «{pattern}».",
+    "created": "تم إنشاء الاختصار: {name} → {value}",
+    "removed": "تمت إزالة الاختصار: {name}",
+    "notFound": "لا يوجد اختصار باسم {name}.",
+    "cleared": "تمت إزالة جميع الاختصارات.",
+    "noneToClear": "لا توجد اختصارات لإزالتها.",
+    "removeAria": "إزالة الاختصار {name}",
+    "errors": {
+      "missing-equals": "علامة «=» مفقودة بين الاسم والأمر.",
+      "invalid-name": "اسم اختصار غير صالح. ابدأ بحرف واستخدم حروفًا وأرقامًا وشرطة سفلية أو شرطة فقط.",
+      "reserved-name": "هذا الاسم محجوز لأمر مدمج.",
+      "empty-value": "لا يمكن أن تكون قيمة الاختصار فارغة.",
+      "value-too-long": "قيمة الاختصار طويلة جدًا (الحد الأقصى 200 حرف).",
+      "limit-reached": "تم بلوغ حد الاختصارات (الحد الأقصى 32). أزل واحدًا قبل إضافة آخر.",
+      "self-reference": "لا يمكن لاختصار أن يشير إلى نفسه."
+    }
+  },
+  "History": {
+    "title": "سجل الأوامر",
+    "empty": "لا توجد أوامر في هذه الجلسة بعد.",
+    "noMatches": "لا توجد أوامر تطابق «{pattern}»."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "اسم الأمر مفقود.",
+    "usagePrefix": "الاستخدام:",
+    "notFound": "لا يوجد دليل لـ «{name}».",
+    "sections": {
+      "name": "الاسم",
+      "synopsis": "نبذة",
+      "description": "الوصف",
+      "examples": "أمثلة",
+      "seeAlso": "انظر أيضًا"
     }
   }
 }
