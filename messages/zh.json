@@ -477,7 +477,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "自动化",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "状态与数据",
+      "softSkills": "软技能"
     },
     "spokenLanguages": {
       "fr": "法语",

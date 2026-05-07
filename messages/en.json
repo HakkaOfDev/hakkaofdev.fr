@@ -521,7 +521,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Automation",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "State & Data",
+      "softSkills": "Soft Skills"
     },
     "spokenLanguages": {
       "fr": "French",

@@ -590,7 +590,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Otomasyon",
-      "ai": "Yapay Zeka"
+      "ai": "Yapay Zeka",
+      "stateData": "Durum ve Veri",
+      "softSkills": "Kişisel Beceriler"
     },
     "spokenLanguages": {
       "fr": "Fransızca",

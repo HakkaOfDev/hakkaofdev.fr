@@ -5,6 +5,17 @@ export type SkillGroup = {
 };
 
 export const SKILLS: ReadonlyArray<SkillGroup> = [
+  {
+    slug: "softSkills",
+    values: [
+      "Technical Leadership",
+      "Mentoring",
+      "Ownership",
+      "Project Planning",
+      "Decision-Making",
+      "Critical Thinking",
+    ],
+  },
   { slug: "languages", values: ["Javascript", "Typescript", "Python"] },
   {
     slug: "frameworks",
@@ -18,7 +29,8 @@ export const SKILLS: ReadonlyArray<SkillGroup> = [
       "Django",
     ],
   },
-  { slug: "uiStyling", values: ["Tailwind", "shadcn/ui", "Motion"] },
+  { slug: "stateData", values: ["TanStack Query", "Zustand", "Redux"] },
+  { slug: "uiStyling", values: ["Tailwind", "shadcn/ui", "Motion", "Figma"] },
   { slug: "tooling", values: ["Biome", "Bun"] },
   { slug: "databases", values: ["PostgreSQL", "Supabase", "MongoDB", "Redis"] },
   { slug: "cloud", values: ["Vercel", "AWS"] },

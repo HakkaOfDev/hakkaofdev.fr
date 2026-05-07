@@ -590,7 +590,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "الأتمتة",
-      "ai": "الذكاء الاصطناعي"
+      "ai": "الذكاء الاصطناعي",
+      "stateData": "الحالة والبيانات",
+      "softSkills": "المهارات الشخصية"
     },
     "spokenLanguages": {
       "fr": "الفرنسية",

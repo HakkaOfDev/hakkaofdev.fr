@@ -587,7 +587,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "자동화",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "상태 및 데이터",
+      "softSkills": "소프트 스킬"
     },
     "spokenLanguages": {
       "fr": "프랑스어",
