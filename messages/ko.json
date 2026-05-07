@@ -148,16 +148,23 @@
       "themeValidate": "현재 테마의 대비 확인",
       "lang": "활성 언어 표시 또는 변경",
       "langSet": "언어 변경 (예: lang set fr)",
-      "langAuto": "브라우저 언어 자동 감지 다시 활성화"
+      "langAuto": "브라우저 언어 자동 감지 다시 활성화",
+      "alias": "명령 단축키를 정의하고, 나열하고, 삭제합니다",
+      "aliasRemove": "이름으로 별칭을 삭제합니다",
+      "aliasClear": "모든 별칭을 삭제합니다",
+      "history": "현재 세션의 명령 기록을 타임스탬프와 함께 표시합니다",
+      "man": "명령의 매뉴얼 페이지를 표시합니다"
     },
     "help": {
       "available": "사용 가능한 명령",
       "tip": "팁: 위의 명령을 클릭하거나 프롬프트에 입력해 실행하세요.",
-      "subCommands": "하위 명령"
+      "subCommands": "하위 명령",
+      "noMatches": "“{pattern}”과 일치하는 명령이 없습니다."
     },
     "notFound": {
       "title": "zsh: 명령을 찾을 수 없음: {input}",
-      "didYouMean": "혹시 {suggestions}을(를) 의미하셨나요?"
+      "didYouMean": "혹시 <suggestions></suggestions>를 찾으셨나요?",
+      "pipeOnlyHint": "{cmd}는 파이프 필터입니다. <example></example>를 시도해 보세요."
     },
     "subCommandRouter": {
       "usagePrefix": "사용법:",
@@ -212,8 +219,10 @@
       "downloadPdf": "다운로드"
     },
     "projects": {
-      "openLabel": "프로젝트 열기: {name}"
-    }
+      "openLabel": "프로젝트 열기: {name}",
+      "noMatches": "“{pattern}”과 일치하는 프로젝트가 없습니다."
+    },
+    "noMatches": "“{pattern}”에 대한 결과가 없습니다."
   },
   "Suggestions": {
     "navigate": "이동",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "“{pattern}”과 일치하는 언어가 없습니다."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "국가",
         "allCountries": "모든 국가",
         "clearCountry": "국가 필터 지우기"
-      }
+      },
+      "noMatches": "“{pattern}”과 일치하는 항목이 없습니다."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "순위",
       "track": "트랙",
       "album": "앨범"
-    }
+    },
+    "noMatches": "“{pattern}”과 일치하는 트랙이 없습니다."
   },
   "Theme": {
     "currentLabel": "현재 테마:",
@@ -360,7 +372,8 @@
       "tip": "테마를 클릭해 적용하세요.",
       "active": "(활성)",
       "custom": "사용자 지정",
-      "deleteAria": "{label} 삭제"
+      "deleteAria": "{label} 삭제",
+      "noMatches": "“{pattern}”과 일치하는 테마가 없습니다."
     },
     "set": {
       "unknownAvailable": "알 수 없는 테마: {name}. 사용 가능한 테마:",
@@ -598,6 +611,47 @@
       "traveling": "여행",
       "manga": "만화",
       "gaming": "게임"
+    }
+  },
+  "Alias": {
+    "title": "별칭",
+    "subCommandsTitle": "별칭 명령",
+    "usagePrefix": "사용법:",
+    "tip": "팁: <example></example>로 단축키를 정의한 다음 일반 명령처럼 실행하세요.",
+    "empty": "아직 별칭이 없습니다. alias hi=about을 시도해 보세요.",
+    "noMatches": "“{pattern}”과 일치하는 별칭이 없습니다.",
+    "created": "별칭이 생성되었습니다: {name} → {value}",
+    "removed": "별칭이 삭제되었습니다: {name}",
+    "notFound": "{name}이라는 별칭이 없습니다.",
+    "cleared": "모든 별칭이 삭제되었습니다.",
+    "noneToClear": "삭제할 별칭이 없습니다.",
+    "removeAria": "별칭 {name} 삭제",
+    "errors": {
+      "missing-equals": "이름과 명령 사이에 “=”이 없습니다.",
+      "invalid-name": "유효하지 않은 별칭 이름입니다. 문자로 시작하고 문자, 숫자, 밑줄 또는 하이픈을 사용하세요.",
+      "reserved-name": "이 이름은 내장 명령에 의해 예약되어 있습니다.",
+      "empty-value": "별칭 값은 비워 둘 수 없습니다.",
+      "value-too-long": "별칭 값이 너무 깁니다 (최대 200자).",
+      "limit-reached": "별칭 한도에 도달했습니다 (최대 32개). 새로 추가하기 전에 하나를 삭제하세요.",
+      "self-reference": "별칭은 자기 자신을 참조할 수 없습니다."
+    }
+  },
+  "History": {
+    "title": "명령 기록",
+    "empty": "이 세션에는 아직 명령이 없습니다.",
+    "noMatches": "“{pattern}”과 일치하는 명령이 없습니다."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "명령 이름이 누락되었습니다.",
+    "usagePrefix": "사용법:",
+    "notFound": "“{name}”에 대한 매뉴얼 항목이 없습니다.",
+    "sections": {
+      "name": "이름",
+      "synopsis": "개요",
+      "description": "설명",
+      "examples": "예시",
+      "seeAlso": "관련 항목"
     }
   }
 }

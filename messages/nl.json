@@ -148,16 +148,23 @@
       "themeValidate": "Controleer het contrast van het huidige thema",
       "lang": "Toon of wijzig de actieve taal",
       "langSet": "Wijzig taal (bijv. lang set fr)",
-      "langAuto": "Schakel automatische taaldetectie weer in"
+      "langAuto": "Schakel automatische taaldetectie weer in",
+      "alias": "Snelkoppelingen voor commando's definiëren, tonen en verwijderen",
+      "aliasRemove": "Een alias op naam verwijderen",
+      "aliasClear": "Alle aliassen verwijderen",
+      "history": "Toon de commandogeschiedenis van deze sessie met tijdstempels",
+      "man": "Toon de man-pagina van een commando"
     },
     "help": {
       "available": "Beschikbare commando's",
       "tip": "Tip: klik op een commando hierboven of typ het in de prompt om het uit te voeren.",
-      "subCommands": "Subcommando's"
+      "subCommands": "Subcommando's",
+      "noMatches": "Geen commando's komen overeen met “{pattern}”."
     },
     "notFound": {
       "title": "zsh: commando niet gevonden: {input}",
-      "didYouMean": "Bedoelde je {suggestions}?"
+      "didYouMean": "Bedoelde je <suggestions></suggestions>?",
+      "pipeOnlyHint": "{cmd} is een pipe-filter. Probeer <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "Gebruik:",
@@ -212,8 +219,10 @@
       "downloadPdf": "Downloaden"
     },
     "projects": {
-      "openLabel": "Project openen: {name}"
-    }
+      "openLabel": "Project openen: {name}",
+      "noMatches": "Geen projecten komen overeen met “{pattern}”."
+    },
+    "noMatches": "Geen treffers voor “{pattern}”."
   },
   "Suggestions": {
     "navigate": "navigeren",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "Geen talen komen overeen met “{pattern}”."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "land",
         "allCountries": "Alle landen",
         "clearCountry": "Landfilter wissen"
-      }
+      },
+      "noMatches": "Geen berichten komen overeen met “{pattern}”."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "Positie",
       "track": "Nummer",
       "album": "Album"
-    }
+    },
+    "noMatches": "Geen tracks komen overeen met “{pattern}”."
   },
   "Theme": {
     "currentLabel": "Huidig thema:",
@@ -360,7 +372,8 @@
       "tip": "Klik op een thema om het toe te passen.",
       "active": "(actief)",
       "custom": "aangepast",
-      "deleteAria": "{label} verwijderen"
+      "deleteAria": "{label} verwijderen",
+      "noMatches": "Geen thema's komen overeen met “{pattern}”."
     },
     "set": {
       "unknownAvailable": "Onbekend thema: {name}. Beschikbare thema's:",
@@ -601,6 +614,47 @@
       "traveling": "Reizen",
       "manga": "Manga",
       "gaming": "Gamen"
+    }
+  },
+  "Alias": {
+    "title": "Aliassen",
+    "subCommandsTitle": "Alias-commando's",
+    "usagePrefix": "Gebruik:",
+    "tip": "Tip: definieer een snelkoppeling met <example></example> en gebruik hem zoals elk commando.",
+    "empty": "Nog geen aliassen. Probeer alias hi=about.",
+    "noMatches": "Geen aliassen komen overeen met “{pattern}”.",
+    "created": "Alias aangemaakt: {name} → {value}",
+    "removed": "Alias verwijderd: {name}",
+    "notFound": "Geen alias met de naam {name}.",
+    "cleared": "Alle aliassen zijn verwijderd.",
+    "noneToClear": "Geen aliassen om te verwijderen.",
+    "removeAria": "Alias {name} verwijderen",
+    "errors": {
+      "missing-equals": "“=” tussen naam en commando ontbreekt.",
+      "invalid-name": "Ongeldige aliasnaam. Gebruik letters, cijfers, underscore of streepje en begin met een letter.",
+      "reserved-name": "Die naam is gereserveerd voor een ingebouwd commando.",
+      "empty-value": "De waarde van een alias kan niet leeg zijn.",
+      "value-too-long": "Aliaswaarde te lang (max. 200 tekens).",
+      "limit-reached": "Aliaslimiet bereikt (max. 32). Verwijder er een voordat je een nieuwe toevoegt.",
+      "self-reference": "Een alias kan niet naar zichzelf verwijzen."
+    }
+  },
+  "History": {
+    "title": "Commandogeschiedenis",
+    "empty": "Nog geen commando's in deze sessie.",
+    "noMatches": "Geen commando's komen overeen met “{pattern}”."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "Commandonaam ontbreekt.",
+    "usagePrefix": "Gebruik:",
+    "notFound": "Geen man-pagina voor “{name}”.",
+    "sections": {
+      "name": "Naam",
+      "synopsis": "Synopsis",
+      "description": "Beschrijving",
+      "examples": "Voorbeelden",
+      "seeAlso": "Zie ook"
     }
   }
 }

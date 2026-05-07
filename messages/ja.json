@@ -148,16 +148,23 @@
       "themeValidate": "現在のテーマのコントラストをチェック",
       "lang": "現在の言語を表示または切り替え",
       "langSet": "言語を切り替え(例: lang set fr)",
-      "langAuto": "ブラウザの言語自動検出を再有効化"
+      "langAuto": "ブラウザの言語自動検出を再有効化",
+      "alias": "コマンドエイリアスを定義・一覧表示・削除します",
+      "aliasRemove": "エイリアスを名前で削除します",
+      "aliasClear": "すべてのエイリアスを削除します",
+      "history": "このセッションのコマンド履歴をタイムスタンプ付きで表示します",
+      "man": "コマンドのマニュアルページを表示します"
     },
     "help": {
       "available": "利用可能なコマンド",
       "tip": "ヒント:上のコマンドをクリックするか、プロンプトに入力して実行できます。",
-      "subCommands": "サブコマンド"
+      "subCommands": "サブコマンド",
+      "noMatches": "「{pattern}」に一致するコマンドはありません。"
     },
     "notFound": {
       "title": "zsh: コマンドが見つかりません: {input}",
-      "didYouMean": "もしかして {suggestions} ですか?"
+      "didYouMean": "もしかして <suggestions></suggestions> ですか？",
+      "pipeOnlyHint": "{cmd} はパイプフィルターです。<example></example> を試してください。"
     },
     "subCommandRouter": {
       "usagePrefix": "使い方:",
@@ -212,8 +219,10 @@
       "downloadPdf": "ダウンロード"
     },
     "projects": {
-      "openLabel": "プロジェクトを開く: {name}"
-    }
+      "openLabel": "プロジェクトを開く: {name}",
+      "noMatches": "「{pattern}」に一致するプロジェクトはありません。"
+    },
+    "noMatches": "「{pattern}」に一致する項目はありません。"
   },
   "Suggestions": {
     "navigate": "移動",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "「{pattern}」に一致するロケールはありません。"
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "国",
         "allCountries": "すべての国",
         "clearCountry": "国フィルターをクリア"
-      }
+      },
+      "noMatches": "「{pattern}」に一致するエントリはありません。"
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "順位",
       "track": "トラック",
       "album": "アルバム"
-    }
+    },
+    "noMatches": "「{pattern}」に一致する曲はありません。"
   },
   "CV": {
     "documentTitleSuffix": "履歴書",
@@ -508,7 +520,8 @@
       "tip": "テーマをタップまたはクリックして適用します。",
       "active": "(アクティブ)",
       "custom": "カスタム",
-      "deleteAria": "{label} を削除"
+      "deleteAria": "{label} を削除",
+      "noMatches": "「{pattern}」に一致するテーマはありません。"
     },
     "preview": {
       "unknown": "不明なテーマ: {name}。",
@@ -598,6 +611,47 @@
         "quaternary": "クォータナリ",
         "quinary": "クィナリ"
       }
+    }
+  },
+  "Alias": {
+    "title": "エイリアス",
+    "subCommandsTitle": "エイリアスコマンド",
+    "usagePrefix": "使い方：",
+    "tip": "ヒント：<example></example> でショートカットを定義し、通常のコマンドのように実行できます。",
+    "empty": "まだエイリアスはありません。alias hi=about を試してみてください。",
+    "noMatches": "「{pattern}」に一致するエイリアスはありません。",
+    "created": "エイリアスを作成しました：{name} → {value}",
+    "removed": "エイリアスを削除しました：{name}",
+    "notFound": "{name} という名前のエイリアスはありません。",
+    "cleared": "すべてのエイリアスを削除しました。",
+    "noneToClear": "削除するエイリアスがありません。",
+    "removeAria": "エイリアス {name} を削除",
+    "errors": {
+      "missing-equals": "名前とコマンドの間に「=」がありません。",
+      "invalid-name": "エイリアス名が無効です。先頭は文字で、以降は文字・数字・アンダースコア・ハイフンのみ使用できます。",
+      "reserved-name": "その名前は組み込みコマンドにより予約されています。",
+      "empty-value": "エイリアスの値を空にすることはできません。",
+      "value-too-long": "エイリアスの値が長すぎます（最大200文字）。",
+      "limit-reached": "エイリアスの上限に達しました（最大32個）。追加する前にひとつ削除してください。",
+      "self-reference": "エイリアスは自分自身を参照できません。"
+    }
+  },
+  "History": {
+    "title": "コマンド履歴",
+    "empty": "このセッションにはまだコマンドがありません。",
+    "noMatches": "「{pattern}」に一致するコマンドはありません。"
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "コマンド名がありません。",
+    "usagePrefix": "使い方：",
+    "notFound": "「{name}」のマニュアルエントリはありません。",
+    "sections": {
+      "name": "名前",
+      "synopsis": "概要",
+      "description": "説明",
+      "examples": "例",
+      "seeAlso": "関連項目"
     }
   }
 }

@@ -148,16 +148,23 @@
       "themeValidate": "Zkontrolovat kontrast aktuálního motivu",
       "lang": "Zobrazit nebo přepnout aktivní jazyk",
       "langSet": "Přepnout jazyk (např. lang set fr)",
-      "langAuto": "Znovu povolit automatickou detekci jazyka"
+      "langAuto": "Znovu povolit automatickou detekci jazyka",
+      "alias": "Definovat, vypsat a odstranit aliasy příkazů",
+      "aliasRemove": "Odstranit alias podle názvu",
+      "aliasClear": "Odstranit všechny aliasy",
+      "history": "Zobrazit historii příkazů této relace s časovými razítky",
+      "man": "Zobrazit manuálovou stránku pro příkaz"
     },
     "help": {
       "available": "Dostupné příkazy",
       "tip": "Tip: klikněte na příkaz nebo jej zadejte v promptu pro spuštění.",
-      "subCommands": "Podpříkazy"
+      "subCommands": "Podpříkazy",
+      "noMatches": "Žádné příkazy neodpovídají „{pattern}“."
     },
     "notFound": {
       "title": "zsh: příkaz nenalezen: {input}",
-      "didYouMean": "Měli jste na mysli {suggestions}?"
+      "didYouMean": "Nemyslel jsi <suggestions></suggestions>?",
+      "pipeOnlyHint": "{cmd} je filtr v rouře. Zkuste <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "Použití:",
@@ -212,8 +219,10 @@
       "downloadPdf": "Stáhnout"
     },
     "projects": {
-      "openLabel": "Otevřít projekt: {name}"
-    }
+      "openLabel": "Otevřít projekt: {name}",
+      "noMatches": "Žádné projekty neodpovídají „{pattern}“."
+    },
+    "noMatches": "Žádné shody pro „{pattern}“."
   },
   "Suggestions": {
     "navigate": "navigovat",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "Žádné jazyky neodpovídají „{pattern}“."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "země",
         "allCountries": "Všechny země",
         "clearCountry": "Vymazat filtr země"
-      }
+      },
+      "noMatches": "Žádné záznamy neodpovídají „{pattern}“."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "Pořadí",
       "track": "Skladba",
       "album": "Album"
-    }
+    },
+    "noMatches": "Žádné skladby neodpovídají „{pattern}“."
   },
   "Theme": {
     "currentLabel": "Aktuální motiv:",
@@ -360,7 +372,8 @@
       "tip": "Klikněte na motiv pro jeho aplikaci.",
       "active": "(aktivní)",
       "custom": "vlastní",
-      "deleteAria": "Smazat {label}"
+      "deleteAria": "Smazat {label}",
+      "noMatches": "Žádné motivy neodpovídají „{pattern}“."
     },
     "set": {
       "unknownAvailable": "Neznámý motiv: {name}. Dostupné motivy:",
@@ -601,6 +614,47 @@
       "traveling": "Cestování",
       "manga": "Manga",
       "gaming": "Hraní her"
+    }
+  },
+  "Alias": {
+    "title": "Aliasy",
+    "subCommandsTitle": "Příkazy aliasů",
+    "usagePrefix": "Použití:",
+    "tip": "Tip: definuj zkratku pomocí <example></example> a používej ji jako kterýkoliv příkaz.",
+    "empty": "Zatím žádné aliasy. Zkus alias hi=about.",
+    "noMatches": "Žádný alias neodpovídá „{pattern}“.",
+    "created": "Alias vytvořen: {name} → {value}",
+    "removed": "Alias odstraněn: {name}",
+    "notFound": "Alias se jménem {name} neexistuje.",
+    "cleared": "Všechny aliasy byly odstraněny.",
+    "noneToClear": "Žádné aliasy k odstranění.",
+    "removeAria": "Odstranit alias {name}",
+    "errors": {
+      "missing-equals": "Mezi jménem a příkazem chybí „=“.",
+      "invalid-name": "Neplatný název aliasu. Použij písmena, číslice, podtržítko nebo pomlčku, začni písmenem.",
+      "reserved-name": "Tento název je vyhrazen vestavěným příkazem.",
+      "empty-value": "Hodnota aliasu nemůže být prázdná.",
+      "value-too-long": "Hodnota aliasu je příliš dlouhá (max. 200 znaků).",
+      "limit-reached": "Dosažen limit aliasů (max. 32). Před přidáním dalšího některý odstraň.",
+      "self-reference": "Alias nemůže odkazovat sám na sebe."
+    }
+  },
+  "History": {
+    "title": "Historie příkazů",
+    "empty": "V této relaci zatím nejsou žádné příkazy.",
+    "noMatches": "Žádný příkaz neodpovídá „{pattern}“."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "Chybí název příkazu.",
+    "usagePrefix": "Použití:",
+    "notFound": "Pro „{name}“ neexistuje manuálová stránka.",
+    "sections": {
+      "name": "Název",
+      "synopsis": "Syntaxe",
+      "description": "Popis",
+      "examples": "Příklady",
+      "seeAlso": "Viz také"
     }
   }
 }

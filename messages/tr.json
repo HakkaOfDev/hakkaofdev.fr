@@ -148,16 +148,23 @@
       "themeValidate": "Mevcut temanın kontrastını kontrol et",
       "lang": "Aktif dili göster veya değiştir",
       "langSet": "Dili değiştir (örn. lang set fr)",
-      "langAuto": "Tarayıcı dil algılamasını yeniden etkinleştir"
+      "langAuto": "Tarayıcı dil algılamasını yeniden etkinleştir",
+      "alias": "Komut kısayollarını tanımla, listele ve kaldır",
+      "aliasRemove": "Bir takma adı isme göre kaldır",
+      "aliasClear": "Tüm takma adları kaldır",
+      "history": "Bu oturumun komut geçmişini zaman damgalarıyla göster",
+      "man": "Bir komutun kılavuz sayfasını göster"
     },
     "help": {
       "available": "Kullanılabilir komutlar",
       "tip": "İpucu: yukarıdaki bir komuta tıkla veya istemde yaz, böylece çalıştır.",
-      "subCommands": "Alt komutlar"
+      "subCommands": "Alt komutlar",
+      "noMatches": "“{pattern}” ile eşleşen komut yok."
     },
     "notFound": {
       "title": "zsh: komut bulunamadı: {input}",
-      "didYouMean": "Şunu mu demek istediniz: {suggestions}?"
+      "didYouMean": "Şunu mu demek istediniz: <suggestions></suggestions>?",
+      "pipeOnlyHint": "{cmd} bir pipe filtresidir. Şunu deneyin: <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "Kullanım:",
@@ -212,8 +219,10 @@
       "downloadPdf": "İndir"
     },
     "projects": {
-      "openLabel": "Projeyi aç: {name}"
-    }
+      "openLabel": "Projeyi aç: {name}",
+      "noMatches": "“{pattern}” ile eşleşen proje yok."
+    },
+    "noMatches": "“{pattern}” için eşleşme yok."
   },
   "Suggestions": {
     "navigate": "gezin",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "“{pattern}” ile eşleşen dil yok."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "ülke",
         "allCountries": "Tüm ülkeler",
         "clearCountry": "Ülke filtresini temizle"
-      }
+      },
+      "noMatches": "“{pattern}” ile eşleşen kayıt yok."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "Sıra",
       "track": "Şarkı",
       "album": "Albüm"
-    }
+    },
+    "noMatches": "“{pattern}” ile eşleşen parça yok."
   },
   "Theme": {
     "currentLabel": "Mevcut tema:",
@@ -360,7 +372,8 @@
       "tip": "Bir temayı uygulamak için üzerine tıklayın.",
       "active": "(aktif)",
       "custom": "özel",
-      "deleteAria": "{label} sil"
+      "deleteAria": "{label} sil",
+      "noMatches": "“{pattern}” ile eşleşen tema yok."
     },
     "set": {
       "unknownAvailable": "Bilinmeyen tema: {name}. Mevcut temalar:",
@@ -601,6 +614,47 @@
       "traveling": "Seyahat",
       "manga": "Manga",
       "gaming": "Oyun"
+    }
+  },
+  "Alias": {
+    "title": "Takma adlar",
+    "subCommandsTitle": "Takma ad komutları",
+    "usagePrefix": "Kullanım:",
+    "tip": "İpucu: <example></example> ile bir kısayol tanımla ve onu herhangi bir komut gibi çalıştır.",
+    "empty": "Henüz takma ad yok. alias hi=about deneyin.",
+    "noMatches": "“{pattern}” ile eşleşen takma ad yok.",
+    "created": "Takma ad oluşturuldu: {name} → {value}",
+    "removed": "Takma ad kaldırıldı: {name}",
+    "notFound": "{name} adında takma ad yok.",
+    "cleared": "Tüm takma adlar temizlendi.",
+    "noneToClear": "Temizlenecek takma ad yok.",
+    "removeAria": "{name} takma adını kaldır",
+    "errors": {
+      "missing-equals": "Ad ile komut arasında “=” eksik.",
+      "invalid-name": "Geçersiz takma ad. Harf ile başlayıp harf, rakam, alt çizgi veya tire kullanın.",
+      "reserved-name": "Bu ad yerleşik bir komut tarafından ayrılmış.",
+      "empty-value": "Takma ad değeri boş olamaz.",
+      "value-too-long": "Takma ad değeri çok uzun (en fazla 200 karakter).",
+      "limit-reached": "Takma ad sınırına ulaşıldı (en fazla 32). Yenisini eklemeden önce birini kaldırın.",
+      "self-reference": "Bir takma ad kendisine başvuramaz."
+    }
+  },
+  "History": {
+    "title": "Komut geçmişi",
+    "empty": "Bu oturumda henüz komut yok.",
+    "noMatches": "“{pattern}” ile eşleşen komut yok."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "Komut adı eksik.",
+    "usagePrefix": "Kullanım:",
+    "notFound": "“{name}” için kılavuz girdisi yok.",
+    "sections": {
+      "name": "Ad",
+      "synopsis": "Özet",
+      "description": "Açıklama",
+      "examples": "Örnekler",
+      "seeAlso": "Ayrıca bakınız"
     }
   }
 }
