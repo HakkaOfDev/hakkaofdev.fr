@@ -16,7 +16,7 @@ function SpotifyPlayer() {
     retry: false,
   });
 
-  if (!data || !data.is_playing) return null;
+  if (!data?.is_playing) return null;
 
   return (
     <m.div

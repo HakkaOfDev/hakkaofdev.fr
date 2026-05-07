@@ -50,6 +50,21 @@ export type LangCommandDescriptor = {
   slug: string;
 };
 
+export type AliasCommandDescriptor = {
+  command: "remove" | "clear";
+  slug: string;
+};
+
+// ─── Pipelines ──────────────────────────────────────────────────────────
+
+/**
+ * Plan describing pipeline operators applied after the base command.
+ * Currently only the `grep` text filter is supported.
+ */
+export type Pipeline = {
+  grep?: string;
+};
+
 // ─── Dynamic commands ───────────────────────────────────────────────────
 
 /**

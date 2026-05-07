@@ -4,14 +4,39 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { PROJECTS } from "@/lib/constants";
+import { matchesGrep } from "@/lib/utils/grep.utils";
 
 function CProjects() {
   const tProjects = useTranslations("CV.projects");
   const tCommands = useTranslations("Commands.projects");
+  const grep = useGrep();
+  const grepRaw = useGrepRaw();
+
+  const visibleProjects = PROJECTS.filter((project) => {
+    if (!grep) return true;
+    const name = tProjects(`${project.slug}.name` as never) as string;
+    const description = tProjects(
+      `${project.slug}.description` as never,
+    ) as string;
+    const haystack = [name, description, ...project.tags].join("   ");
+    return matchesGrep(haystack, grep);
+  });
+
+  if (grep && visibleProjects.length === 0) {
+    return (
+      <AnimatedSpan>
+        <p className="text-muted-foreground text-xs">
+          {tCommands("noMatches", { pattern: grepRaw })}
+        </p>
+      </AnimatedSpan>
+    );
+  }
+
   return (
     <AnimatedSpan className="grid grid-cols-1 gap-4 md:grid-cols-2">
-      {PROJECTS.map((project) => {
+      {visibleProjects.map((project) => {
         const name = tProjects(`${project.slug}.name` as never);
         const description = tProjects(`${project.slug}.description` as never);
         const content = (

@@ -3,21 +3,51 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { EXPERIENCES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { matchesGrep } from "@/lib/utils/grep.utils";
 
 function CExperiences() {
   const t = useTranslations("CV.experiences");
+  const tCommands = useTranslations("Commands");
+  const grep = useGrep();
+  const grepRaw = useGrepRaw();
+
+  const visible = EXPERIENCES.filter((experience) => {
+    if (!grep) return true;
+    const period = t(`${experience.slug}.period` as never) as string;
+    const name = t(`${experience.slug}.name` as never) as string;
+    const company = t(`${experience.slug}.company` as never) as string;
+    const location = t(`${experience.slug}.location` as never) as string;
+    const descriptionsKey = `${experience.slug}.descriptions` as never;
+    const descriptions = (t.raw(descriptionsKey) as string[]) ?? [];
+    return matchesGrep(
+      [period, name, company, location, ...descriptions].join("   "),
+      grep,
+    );
+  });
+
+  if (grep && visible.length === 0) {
+    return (
+      <AnimatedSpan>
+        <p className="text-muted-foreground text-xs">
+          {tCommands("noMatches", { pattern: grepRaw })}
+        </p>
+      </AnimatedSpan>
+    );
+  }
+
   return (
     <AnimatedSpan>
-      {EXPERIENCES.map((experience, idx) => {
+      {visible.map((experience, idx) => {
         const period = t(`${experience.slug}.period` as never);
         const name = t(`${experience.slug}.name` as never);
         const company = t(`${experience.slug}.company` as never);
         const location = t(`${experience.slug}.location` as never);
-        const descriptions =
-          (t.raw(`${experience.slug}.descriptions` as never) as string[]) ?? [];
-        const isLast = idx === EXPERIENCES.length - 1;
+        const descriptionsKey = `${experience.slug}.descriptions` as never;
+        const descriptions = (t.raw(descriptionsKey) as string[]) ?? [];
+        const isLast = idx === visible.length - 1;
         return (
           <div
             key={experience.slug}

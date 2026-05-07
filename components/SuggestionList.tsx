@@ -59,7 +59,7 @@ function SuggestionList({
 
           return (
             <button
-              key={`${s.value}-${idx}`}
+              key={s.value}
               ref={(el) => {
                 if (el) itemRefs.current.set(idx, el);
                 else itemRefs.current.delete(idx);

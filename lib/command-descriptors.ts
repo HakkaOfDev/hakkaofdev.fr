@@ -1,4 +1,5 @@
 import type {
+  AliasCommandDescriptor,
   CommandDescriptor,
   CommandGroup,
   CommandGroupMeta,
@@ -9,6 +10,7 @@ import type {
 } from "@/types/command";
 
 export type {
+  AliasCommandDescriptor,
   CommandDescriptor,
   CommandGroup,
   CommandGroupMeta,
@@ -53,6 +55,9 @@ export const COMMANDS: CommandDescriptor[] = [
   { command: "repo", slug: "repo", group: "Terminal" },
   { command: "echo", slug: "echo", group: "Terminal" },
   { command: "lang", slug: "lang", group: "Terminal" },
+  { command: "alias", slug: "alias", group: "Terminal" },
+  { command: "history", slug: "history", group: "Terminal" },
+  { command: "man", slug: "man", group: "Terminal" },
 ];
 
 // ─── Sub-commands ───────────────────────────────────────────────────────
@@ -79,12 +84,18 @@ export const LANG_COMMANDS: LangCommandDescriptor[] = [
   { command: "auto", slug: "langAuto" },
 ];
 
+export const ALIAS_COMMANDS: AliasCommandDescriptor[] = [
+  { command: "remove", slug: "aliasRemove" },
+  { command: "clear", slug: "aliasClear" },
+];
+
 /** Command names that act as namespaces for sub-commands. */
 export const SUBCOMMAND_PREFIXES = [
   "guestbook",
   "spotify",
   "theme",
   "lang",
+  "alias",
 ] as const;
 
 // ─── Derived: every command including expanded sub-commands ─────────────
@@ -111,15 +122,24 @@ export const ALL_COMMANDS: CommandDescriptor[] = [
     slug: c.slug,
     group: "Terminal" as const,
   })),
+  ...ALIAS_COMMANDS.map((c) => ({
+    command: `alias ${c.command}`,
+    slug: c.slug,
+    group: "Terminal" as const,
+  })),
 ];
 
 // ─── Helpers ────────────────────────────────────────────────────────────
 
-/** Commands grouped by their group, in COMMAND_GROUPS order, sorted alphabetically within each group. */
+/**
+ * Base commands grouped by their group, in COMMAND_GROUPS order and sorted
+ * alphabetically within each group. Excludes expanded sub-commands
+ * (e.g. `lang set`, `alias remove`) — `help` only lists the entry points.
+ */
 export function getCommandsByGroup() {
   return COMMAND_GROUPS.map((meta) => ({
     meta,
-    commands: ALL_COMMANDS.filter((c) => c.group === meta.group).sort((a, b) =>
+    commands: COMMANDS.filter((c) => c.group === meta.group).sort((a, b) =>
       a.command.localeCompare(b.command),
     ),
   }));
