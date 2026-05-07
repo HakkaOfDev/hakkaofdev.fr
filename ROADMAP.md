@@ -9,12 +9,12 @@
 ### Core Terminal Interface
 
 - [x] Terminal UI with macOS-style traffic lights, scrollable output, and input prompt
-- [x] Command routing with subcommand support (`guestbook read`, `spotify now`, `theme dark`, etc.)
+- [x] Command routing with subcommand support (`guestbook read`, `spotify now`, `theme dark`, `lang set`, etc.)
 - [x] Autocomplete suggestions with tab completion and longest common prefix
 - [x] Command history navigation (arrow keys, Ctrl-P/N)
 - [x] Did-you-mean suggestions on unknown commands (Levenshtein distance)
 - [x] Global keyboard shortcuts — Ctrl/Cmd+L (clear), Ctrl/Cmd+R (reset), Ctrl/Cmd+F (search), Ctrl/Cmd+/- (font zoom)
-- [x] 16 base commands across 6 groups: Work, Profile, Guestbook, Spotify, Theme, Terminal
+- [x] 20 base commands across 6 groups: Work, Profile, Guestbook, Spotify, Theme, Terminal
 
 ### Terminal UX Enhancements
 
@@ -33,7 +33,7 @@
 
 - [x] Extracted all tokens into centralized theme definitions (`types/theme.ts`)
 - [x] Runtime theme engine that injects CSS custom properties from active palette
-- [x] Built-in terminal themes: **Dracula**, **Nord**, **Solarized Dark/Light**, **Monokai**, **Gruvbox Dark/Light**, **Tokyo Night**, **GitHub Dark/Light**, **Catppuccin Mocha/Latte**, **One Dark**, **Material**, **Synthwave '84**
+- [x] Built-in terminal themes: **Default (dark)**, **Daylight**, **Dracula**, **Nord**, **Solarized**, **Monokai**, **Gruvbox**, **Tokyo Night**, **GitHub Light**, **Catppuccin Latte**, **Rosé Pine Dawn**
 - [x] Extended `theme` command suite:
   - `theme` — Show current theme info and quick actions
   - `theme list` — Browse all available themes with color previews
@@ -77,6 +77,7 @@
 - [x] Page view tracking via `record_visit` Supabase RPC
 - [x] Unique visitors (total, last 30 days, today) via materialized view
 - [x] Top 20 visitor countries
+- [x] Bot user-agent filter excluded from unique-visitor counts
 - [x] `stats` command displaying coding time, top language, GitHub stars, contributions, and visitors
 
 ### Spotify
@@ -91,13 +92,35 @@
 - [x] PDF generation with `@react-pdf/renderer`
 - [x] Inline preview and `?download=1` attachment mode
 - [x] 1-hour cache headers
+- [x] Subsetted Noto fonts per locale for full Unicode coverage (CJK, Arabic, Cyrillic, etc.)
+- [x] Interactive command panel inside the CV preview overlay
+
+### Internationalization (i18n)
+
+- [x] `next-intl` integration with locale-aware routing (`localePrefix: as-needed`)
+- [x] 22 locales — English, French, Spanish, German, Portuguese, Italian, Chinese, Japanese, Russian, Ukrainian, Polish, Czech, Dutch, Romanian, Greek, Turkish, Korean, Hindi, Vietnamese, Indonesian, Arabic, Hebrew
+- [x] Right-to-left (RTL) support for Arabic and Hebrew
+- [x] Browser-locale detection with cookie persistence
+- [x] Translated command outputs, welcome message, error messages, and meta tags
+- [x] `lang` command suite — `lang`, `lang set <locale>`, `lang auto`
+- [x] Language picker UI in the terminal header
+- [x] Standardised typography across locales (em-dashes, ellipses, smart punctuation)
+
+### Security
+
+- [x] Content Security Policy with locked-down `default-src`, `frame-ancestors 'none'`, `object-src 'none'`
+- [x] HSTS (2-year max-age, includeSubDomains, preload)
+- [x] Hardened headers — `Referrer-Policy`, `X-Content-Type-Options`, `X-Frame-Options: DENY`, `Permissions-Policy`
+- [x] Hardened JSON-LD script injection (no inline `dangerouslySetInnerHTML` of unescaped data)
+- [x] `poweredByHeader: false` and production source maps for stack-trace debugging
 
 ### SEO & Metadata
 
-- [x] Dynamic Open Graph image (1200x630, Satori)
+- [x] Dynamic Open Graph image (1200x630, Satori), pre-rendered at build time
 - [x] `sitemap.xml` and `robots.txt` generation
 - [x] Person JSON-LD structured data
 - [x] Full metadata: title, description, canonical, OpenGraph, Twitter cards, keywords
+- [x] Locale-aware `alternate` hreflang links
 
 ### CI/CD
 
@@ -135,6 +158,13 @@
 - [x] Supabase schema for `guestbook_entries` with indexes and RLS policies
 - [x] Supabase schema for `page_views`, `visitors`, views, and `record_visit()` RPC
 
+### Command System Enhancements
+
+- [x] `alias` command — visitors can define custom shortcuts (`alias hi=about`), persisted in `localStorage`, with `alias remove <name>` and `alias clear` sub-commands
+- [x] `history` command — display the active session's command history with timestamps; supports `history | grep <pattern>`
+- [x] `man <command>` — detailed man pages with NAME, SYNOPSIS, DESCRIPTION, EXAMPLES, SEE ALSO; clickable cross-references and tab autocomplete on the command argument
+- [x] Pipe/chain support — `help | grep spotify`, `history | grep theme`, `man theme | grep set`, `alias | grep gh` all filter their text output
+
 ---
 
 ## Planned
@@ -151,21 +181,6 @@ There is currently no testing infrastructure. This is the highest-priority gap.
 - [ ] Set up **Playwright** for E2E tests (typing commands, suggestions, theme switching, guestbook flow)
 - [ ] Integrate test runs into CI as a required check on PRs
 - [ ] Add coverage reporting with a minimum threshold
-
-### Internationalization (i18n)
-
-- [ ] Integrate `next-intl` or a lightweight i18n solution
-- [ ] Translate command outputs, welcome message, error messages, and meta tags
-- [ ] Add a `lang` command to switch locale from the terminal
-- [ ] Detect browser locale for a sensible default
-
-### Command System Enhancements
-
-- [ ] `alias` command — let visitors define custom shortcuts (e.g. `alias hi=about`)
-- [ ] `history` command — display session command history with timestamps
-- [ ] `man <command>` — show detailed help/usage for a specific command
-- [ ] Pipe/chain support (`help | grep spotify`) for a more authentic shell feel
-- [ ] `fortune` / `motd` — display a random dev quote or tip on session start
 
 ### Guestbook Improvements
 
@@ -217,4 +232,4 @@ There is currently no testing infrastructure. This is the highest-priority gap.
 
 ---
 
-*Last updated: February 2026*
+*Last updated: May 2026*

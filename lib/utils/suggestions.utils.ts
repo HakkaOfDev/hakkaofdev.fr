@@ -1,6 +1,7 @@
 import { DYNAMIC_PARAM_COMMANDS } from "@/components/commands/registries/dynamic-param.registry";
 import type { Suggestion } from "@/hooks/useSuggestions";
 import { ALL_COMMANDS, SUBCOMMAND_PREFIXES } from "@/lib/command-descriptors";
+import type { AliasMap } from "@/stores/aliases.store";
 import type { TabCompletionResult } from "@/types/suggestions";
 import { MAX_SUGGESTIONS } from "../constants/suggestions.constants";
 
@@ -18,7 +19,7 @@ export function longestCommonPrefix(items: string[]): string {
   return prefix;
 }
 
-export function buildSuggestionPool(): Suggestion[] {
+export function buildSuggestionPool(aliases?: AliasMap): Suggestion[] {
   const map = new Map<string, Suggestion>();
   for (const c of ALL_COMMANDS) {
     map.set(c.command, {
@@ -26,6 +27,18 @@ export function buildSuggestionPool(): Suggestion[] {
       slug: c.slug,
       group: c.group,
     });
+  }
+
+  if (aliases) {
+    for (const [name, value] of Object.entries(aliases)) {
+      // Built-ins always win — never let an alias replace a real command.
+      if (map.has(name)) continue;
+      map.set(name, {
+        value: name,
+        group: "Terminal",
+        description: `→ ${value}`,
+      });
+    }
   }
 
   return Array.from(map.values()).sort((a, b) =>

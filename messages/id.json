@@ -148,16 +148,23 @@
       "themeValidate": "Periksa kontras tema saat ini",
       "lang": "Tampilkan atau ubah bahasa aktif",
       "langSet": "Ubah bahasa (mis. lang set fr)",
-      "langAuto": "Aktifkan kembali deteksi bahasa otomatis"
+      "langAuto": "Aktifkan kembali deteksi bahasa otomatis",
+      "alias": "Tentukan, daftar, dan hapus pintasan perintah",
+      "aliasRemove": "Hapus alias berdasarkan nama",
+      "aliasClear": "Hapus semua alias",
+      "history": "Tampilkan riwayat perintah sesi ini beserta stempel waktu",
+      "man": "Tampilkan halaman manual untuk sebuah perintah"
     },
     "help": {
       "available": "Perintah yang tersedia",
       "tip": "Tip: klik perintah di atas atau ketik di prompt untuk menjalankannya.",
-      "subCommands": "Subperintah"
+      "subCommands": "Subperintah",
+      "noMatches": "Tidak ada perintah yang cocok dengan \"{pattern}\"."
     },
     "notFound": {
       "title": "zsh: perintah tidak ditemukan: {input}",
-      "didYouMean": "Apakah maksud Anda {suggestions}?"
+      "didYouMean": "Apakah maksud Anda <suggestions></suggestions>?",
+      "pipeOnlyHint": "{cmd} adalah filter pipe. Coba <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "Penggunaan:",
@@ -212,8 +219,10 @@
       "downloadPdf": "Unduh"
     },
     "projects": {
-      "openLabel": "Buka proyek: {name}"
-    }
+      "openLabel": "Buka proyek: {name}",
+      "noMatches": "Tidak ada proyek yang cocok dengan \"{pattern}\"."
+    },
+    "noMatches": "Tidak ada hasil untuk \"{pattern}\"."
   },
   "Suggestions": {
     "navigate": "navigasi",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "Tidak ada bahasa yang cocok dengan \"{pattern}\"."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "negara",
         "allCountries": "Semua negara",
         "clearCountry": "Hapus filter negara"
-      }
+      },
+      "noMatches": "Tidak ada entri yang cocok dengan \"{pattern}\"."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "Peringkat",
       "track": "Lagu",
       "album": "Album"
-    }
+    },
+    "noMatches": "Tidak ada lagu yang cocok dengan \"{pattern}\"."
   },
   "Theme": {
     "currentLabel": "Tema saat ini:",
@@ -360,7 +372,8 @@
       "tip": "Klik tema untuk menerapkannya.",
       "active": "(aktif)",
       "custom": "kustom",
-      "deleteAria": "Hapus {label}"
+      "deleteAria": "Hapus {label}",
+      "noMatches": "Tidak ada tema yang cocok dengan \"{pattern}\"."
     },
     "set": {
       "unknownAvailable": "Tema tidak dikenal: {name}. Tema yang tersedia:",
@@ -577,7 +590,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Otomasi",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "Status & Data",
+      "softSkills": "Soft Skills"
     },
     "spokenLanguages": {
       "fr": "Bahasa Prancis",
@@ -601,6 +616,47 @@
       "traveling": "Bepergian",
       "manga": "Manga",
       "gaming": "Game"
+    }
+  },
+  "Alias": {
+    "title": "Alias",
+    "subCommandsTitle": "Perintah alias",
+    "usagePrefix": "Penggunaan:",
+    "tip": "Tip: definisikan pintasan dengan <example></example>, lalu gunakan seperti perintah biasa.",
+    "empty": "Belum ada alias. Coba alias hi=about.",
+    "noMatches": "Tidak ada alias yang cocok dengan \"{pattern}\".",
+    "created": "Alias dibuat: {name} → {value}",
+    "removed": "Alias dihapus: {name}",
+    "notFound": "Tidak ada alias bernama {name}.",
+    "cleared": "Semua alias telah dihapus.",
+    "noneToClear": "Tidak ada alias untuk dihapus.",
+    "removeAria": "Hapus alias {name}",
+    "errors": {
+      "missing-equals": "Tanda \"=\" antara nama dan perintah hilang.",
+      "invalid-name": "Nama alias tidak valid. Mulai dengan huruf, lalu gunakan huruf, angka, garis bawah, atau tanda hubung.",
+      "reserved-name": "Nama itu sudah digunakan oleh perintah bawaan.",
+      "empty-value": "Nilai alias tidak boleh kosong.",
+      "value-too-long": "Nilai alias terlalu panjang (maks. 200 karakter).",
+      "limit-reached": "Batas alias tercapai (maks. 32). Hapus salah satu sebelum menambahkan yang baru.",
+      "self-reference": "Sebuah alias tidak boleh merujuk pada dirinya sendiri."
+    }
+  },
+  "History": {
+    "title": "Riwayat perintah",
+    "empty": "Belum ada perintah di sesi ini.",
+    "noMatches": "Tidak ada perintah yang cocok dengan \"{pattern}\"."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "Nama perintah tidak ada.",
+    "usagePrefix": "Penggunaan:",
+    "notFound": "Tidak ada entri manual untuk \"{name}\".",
+    "sections": {
+      "name": "Nama",
+      "synopsis": "Sinopsis",
+      "description": "Deskripsi",
+      "examples": "Contoh",
+      "seeAlso": "Lihat juga"
     }
   }
 }

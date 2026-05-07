@@ -1,10 +1,10 @@
 import {
-  Github,
-  Instagram,
-  Linkedin,
-  type LucideIcon,
-  Twitter,
-} from "lucide-react";
+  type BrandIcon,
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon,
+} from "@/components/icons/brand";
 
 export const SITE = {
   version: "1.7.0", // x-release-please-version
@@ -38,25 +38,25 @@ export const SITE = {
 
 export const GITHUB_URL = "https://github.com/hakkaofdev";
 
-export const SOCIALS: { name: string; url: string; icon: LucideIcon }[] = [
+export const SOCIALS: { name: string; url: string; icon: BrandIcon }[] = [
   {
     name: "GitHub",
     url: GITHUB_URL,
-    icon: Github,
+    icon: GithubIcon,
   },
   {
     name: "LinkedIn",
     url: "https://linkedin.com/in/hakkaofdev",
-    icon: Linkedin,
+    icon: LinkedinIcon,
   },
   {
     name: "Instagram",
     url: "https://instagram.com/hakkaofdev",
-    icon: Instagram,
+    icon: InstagramIcon,
   },
   {
     name: "Twitter",
     url: "https://x.com/hakkaofdev",
-    icon: Twitter,
+    icon: TwitterIcon,
   },
 ];

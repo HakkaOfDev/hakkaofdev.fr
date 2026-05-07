@@ -55,11 +55,12 @@ function SuggestionList({
           const matchLen = query.length;
           const matched = s.value.slice(0, matchLen);
           const rest = s.value.slice(matchLen);
-          const description = s.slug ? tCommands(s.slug as never) : undefined;
+          const description =
+            s.description ?? (s.slug ? tCommands(s.slug as never) : undefined);
 
           return (
             <button
-              key={`${s.value}-${idx}`}
+              key={s.value}
               ref={(el) => {
                 if (el) itemRefs.current.set(idx, el);
                 else itemRefs.current.delete(idx);

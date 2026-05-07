@@ -148,16 +148,23 @@
       "themeValidate": "检查当前主题的对比度",
       "lang": "显示或切换当前语言",
       "langSet": "切换语言(如 lang set fr)",
-      "langAuto": "重新启用浏览器语言自动检测"
+      "langAuto": "重新启用浏览器语言自动检测",
+      "alias": "定义、列出和删除命令快捷方式",
+      "aliasRemove": "按名称删除别名",
+      "aliasClear": "删除所有别名",
+      "history": "显示本次会话的命令历史及时间戳",
+      "man": "显示某条命令的手册页"
     },
     "help": {
       "available": "可用命令",
       "tip": "提示:点击上方的命令或在提示符中输入即可执行。",
-      "subCommands": "子命令"
+      "subCommands": "子命令",
+      "noMatches": "没有命令匹配 “{pattern}”。"
     },
     "notFound": {
       "title": "zsh: 未找到命令: {input}",
-      "didYouMean": "你是不是想输入 {suggestions}?"
+      "didYouMean": "你是想说 <suggestions></suggestions> 吗？",
+      "pipeOnlyHint": "{cmd} 是一个管道过滤器。试试 <example></example>。"
     },
     "subCommandRouter": {
       "usagePrefix": "用法:",
@@ -212,8 +219,10 @@
       "downloadPdf": "下载"
     },
     "projects": {
-      "openLabel": "打开项目：{name}"
-    }
+      "openLabel": "打开项目：{name}",
+      "noMatches": "没有项目匹配 “{pattern}”。"
+    },
+    "noMatches": "没有匹配 “{pattern}” 的结果。"
   },
   "Suggestions": {
     "navigate": "导航",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "没有语言匹配 “{pattern}”。"
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "国家",
         "allCountries": "所有国家",
         "clearCountry": "清除国家筛选"
-      }
+      },
+      "noMatches": "没有留言匹配 “{pattern}”。"
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "排名",
       "track": "歌曲",
       "album": "专辑"
-    }
+    },
+    "noMatches": "没有曲目匹配 “{pattern}”。"
   },
   "CV": {
     "documentTitleSuffix": "简历",
@@ -465,7 +477,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "自动化",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "状态与数据",
+      "softSkills": "软技能"
     },
     "spokenLanguages": {
       "fr": "法语",
@@ -508,7 +522,8 @@
       "tip": "点击或轻触主题即可应用。",
       "active": "(当前)",
       "custom": "自定义",
-      "deleteAria": "删除 {label}"
+      "deleteAria": "删除 {label}",
+      "noMatches": "没有主题匹配 “{pattern}”。"
     },
     "preview": {
       "unknown": "未知主题: {name}。",
@@ -598,6 +613,47 @@
         "quaternary": "第四",
         "quinary": "第五"
       }
+    }
+  },
+  "Alias": {
+    "title": "别名",
+    "subCommandsTitle": "别名命令",
+    "usagePrefix": "用法：",
+    "tip": "提示：用 <example></example> 定义一个快捷方式，然后像普通命令一样使用它。",
+    "empty": "暂无别名。试试 alias hi=about。",
+    "noMatches": "没有别名匹配 “{pattern}”。",
+    "created": "已创建别名：{name} → {value}",
+    "removed": "已删除别名：{name}",
+    "notFound": "不存在名为 {name} 的别名。",
+    "cleared": "所有别名已清除。",
+    "noneToClear": "没有可清除的别名。",
+    "removeAria": "删除别名 {name}",
+    "errors": {
+      "missing-equals": "名称和命令之间缺少 “=”。",
+      "invalid-name": "别名名称无效。请以字母开头，仅使用字母、数字、下划线或连字符。",
+      "reserved-name": "该名称已被内置命令保留。",
+      "empty-value": "别名的值不能为空。",
+      "value-too-long": "别名值过长（最多 200 个字符）。",
+      "limit-reached": "已达别名上限（最多 32 个），请先删除一个再添加。",
+      "self-reference": "别名不能引用自身。"
+    }
+  },
+  "History": {
+    "title": "命令历史",
+    "empty": "本次会话暂无命令。",
+    "noMatches": "没有命令匹配 “{pattern}”。"
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "缺少命令名称。",
+    "usagePrefix": "用法：",
+    "notFound": "找不到 “{name}” 的手册条目。",
+    "sections": {
+      "name": "名称",
+      "synopsis": "概要",
+      "description": "说明",
+      "examples": "示例",
+      "seeAlso": "另见"
     }
   }
 }

@@ -7,7 +7,6 @@ import {
   Copy,
   ExternalLink,
   GitFork,
-  Github,
   Scale,
   Star,
 } from "lucide-react";
@@ -16,6 +15,7 @@ import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 import { getGitHubRepo } from "@/app/actions";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { GithubIcon } from "@/components/icons/brand";
 import { Tag } from "@/components/ui/Tag";
 import { SITE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -116,7 +116,7 @@ function RepoCard({ repo }: { repo: GitHubRepo }) {
             target="_blank"
             className="group inline-flex min-w-0 items-center gap-2"
           >
-            <Github size={16} className="shrink-0 text-muted-foreground" />
+            <GithubIcon size={16} className="shrink-0 text-muted-foreground" />
             <span className="truncate font-semibold text-secondary transition-colors duration-200 group-hover:text-secondary/80">
               {repo.full_name}
             </span>

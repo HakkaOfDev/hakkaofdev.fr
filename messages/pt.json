@@ -148,16 +148,23 @@
       "themeValidate": "Verificar o contraste do tema atual",
       "lang": "Mostrar ou mudar o idioma ativo",
       "langSet": "Mudar de idioma (ex.: lang set fr)",
-      "langAuto": "Reativar a deteção automática de idioma"
+      "langAuto": "Reativar a deteção automática de idioma",
+      "alias": "Definir, listar e remover atalhos de comandos",
+      "aliasRemove": "Remover um alias pelo nome",
+      "aliasClear": "Remover todos os aliases",
+      "history": "Mostrar o histórico de comandos desta sessão com data e hora",
+      "man": "Mostrar a página do manual de um comando"
     },
     "help": {
       "available": "Comandos disponíveis",
       "tip": "Dica: clica num comando ou escreve-o na linha de comandos para o executar.",
-      "subCommands": "Subcomandos"
+      "subCommands": "Subcomandos",
+      "noMatches": "Nenhum comando corresponde a «{pattern}»."
     },
     "notFound": {
       "title": "zsh: comando não encontrado: {input}",
-      "didYouMean": "Quiseste dizer {suggestions}?"
+      "didYouMean": "Quis dizer <suggestions></suggestions>?",
+      "pipeOnlyHint": "{cmd} é um filtro de pipe. Experimente <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "Utilização:",
@@ -212,8 +219,10 @@
       "downloadPdf": "Descarregar"
     },
     "projects": {
-      "openLabel": "Abrir projeto: {name}"
-    }
+      "openLabel": "Abrir projeto: {name}",
+      "noMatches": "Nenhum projeto corresponde a «{pattern}»."
+    },
+    "noMatches": "Sem correspondências para «{pattern}»."
   },
   "Suggestions": {
     "navigate": "navegar",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "Nenhum idioma corresponde a «{pattern}»."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "país",
         "allCountries": "Todos os países",
         "clearCountry": "Limpar filtro de país"
-      }
+      },
+      "noMatches": "Nenhuma entrada corresponde a «{pattern}»."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "Posição",
       "track": "Música",
       "album": "Álbum"
-    }
+    },
+    "noMatches": "Nenhuma faixa corresponde a «{pattern}»."
   },
   "CV": {
     "documentTitleSuffix": "CV",
@@ -468,7 +480,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Automação",
-      "ai": "IA"
+      "ai": "IA",
+      "stateData": "Estado e Dados",
+      "softSkills": "Soft skills"
     },
     "spokenLanguages": {
       "fr": "Francês",
@@ -511,7 +525,8 @@
       "tip": "Toca ou clica num tema para o aplicar.",
       "active": "(ativo)",
       "custom": "personalizado",
-      "deleteAria": "Eliminar {label}"
+      "deleteAria": "Eliminar {label}",
+      "noMatches": "Nenhum tema corresponde a «{pattern}»."
     },
     "preview": {
       "unknown": "Tema desconhecido: {name}.",
@@ -601,6 +616,47 @@
         "quaternary": "Quaternário",
         "quinary": "Quinário"
       }
+    }
+  },
+  "Alias": {
+    "title": "Aliases",
+    "subCommandsTitle": "Comandos de alias",
+    "usagePrefix": "Uso:",
+    "tip": "Dica: defina um atalho com <example></example> e use-o como qualquer comando.",
+    "empty": "Ainda não há aliases. Experimente alias hi=about.",
+    "noMatches": "Nenhum alias corresponde a «{pattern}».",
+    "created": "Alias criado: {name} → {value}",
+    "removed": "Alias removido: {name}",
+    "notFound": "Não há nenhum alias chamado {name}.",
+    "cleared": "Todos os aliases foram removidos.",
+    "noneToClear": "Não há aliases para remover.",
+    "removeAria": "Remover alias {name}",
+    "errors": {
+      "missing-equals": "Falta o «=» entre o nome e o comando.",
+      "invalid-name": "Nome de alias inválido. Use letras, dígitos, sublinhado ou hífen, começando por uma letra.",
+      "reserved-name": "Esse nome está reservado por um comando integrado.",
+      "empty-value": "O valor do alias não pode estar vazio.",
+      "value-too-long": "Valor do alias muito longo (máx. 200 caracteres).",
+      "limit-reached": "Limite de aliases atingido (máx. 32). Remova um antes de adicionar outro.",
+      "self-reference": "Um alias não pode referenciar a si mesmo."
+    }
+  },
+  "History": {
+    "title": "Histórico de comandos",
+    "empty": "Ainda não há comandos nesta sessão.",
+    "noMatches": "Nenhum comando corresponde a «{pattern}»."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "Falta o nome do comando.",
+    "usagePrefix": "Uso:",
+    "notFound": "Não há entrada de manual para «{name}».",
+    "sections": {
+      "name": "Nome",
+      "synopsis": "Sinopse",
+      "description": "Descrição",
+      "examples": "Exemplos",
+      "seeAlso": "Ver também"
     }
   }
 }

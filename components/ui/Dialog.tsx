@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, m, useIsPresent } from "motion/react";
+import { AnimatePresence, cubicBezier, m, useIsPresent } from "motion/react";
 import { useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils";
@@ -16,7 +16,10 @@ interface DialogProps {
   children: React.ReactNode;
 }
 
-const DIALOG_TRANSITION = { duration: 0.18, ease: [0.25, 0.1, 0.25, 1] };
+const DIALOG_TRANSITION = {
+  duration: 0.18,
+  ease: cubicBezier(0.25, 0.1, 0.25, 1),
+};
 
 function Dialog({
   open,
@@ -101,10 +104,7 @@ function DialogOverlay({
 
   return (
     <m.div
-      className={cn(
-        "fixed inset-0 z-[100]",
-        !isPresent && "pointer-events-none",
-      )}
+      className={cn("fixed inset-0 z-100", !isPresent && "pointer-events-none")}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -128,7 +128,7 @@ function DialogOverlay({
           aria-labelledby={titleId}
           aria-describedby={description ? descriptionId : undefined}
           className={cn(
-            "pointer-events-auto w-full max-w-md rounded-2xl border border-border/50 bg-background p-4 shadow-2xl dark:border-overlay-medium dark:bg-background",
+            "terminal-scrollbar pointer-events-auto max-h-[calc(100dvh-4rem)] w-full max-w-md overflow-auto rounded-2xl border border-border/50 bg-background p-4 shadow-2xl dark:border-overlay-medium dark:bg-background",
             className,
           )}
           style={style}

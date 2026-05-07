@@ -8,6 +8,7 @@ import { CommandsProvider } from "./CommandsProvider";
 
 // Import registries to register dynamic param commands
 import "@/components/commands/registries/lang.registry";
+import "@/components/commands/registries/man.registry";
 import "@/components/commands/registries/theme.registry";
 
 const queryClient = new QueryClient();

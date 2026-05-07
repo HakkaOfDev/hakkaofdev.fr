@@ -148,16 +148,23 @@
       "themeValidate": "Έλεγχος αντίθεσης τρέχοντος θέματος",
       "lang": "Εμφάνιση ή αλλαγή ενεργής γλώσσας",
       "langSet": "Αλλαγή γλώσσας (π.χ. lang set fr)",
-      "langAuto": "Επανενεργοποίηση αυτόματης ανίχνευσης γλώσσας"
+      "langAuto": "Επανενεργοποίηση αυτόματης ανίχνευσης γλώσσας",
+      "alias": "Ορισμός, εμφάνιση και διαγραφή συντομεύσεων εντολών",
+      "aliasRemove": "Διαγραφή ενός alias με βάση το όνομα",
+      "aliasClear": "Διαγραφή όλων των alias",
+      "history": "Εμφάνιση του ιστορικού εντολών της συνεδρίας με χρονικές σημάνσεις",
+      "man": "Εμφάνιση της σελίδας εγχειριδίου για μια εντολή"
     },
     "help": {
       "available": "Διαθέσιμες εντολές",
       "tip": "Συμβουλή: κάντε κλικ σε μια εντολή ή πληκτρολογήστε την στο prompt για εκτέλεση.",
-      "subCommands": "Υποεντολές"
+      "subCommands": "Υποεντολές",
+      "noMatches": "Καμία εντολή δεν ταιριάζει με «{pattern}»."
     },
     "notFound": {
       "title": "zsh: η εντολή δεν βρέθηκε: {input}",
-      "didYouMean": "Μήπως εννοούσατε {suggestions};"
+      "didYouMean": "Μήπως εννοούσατε <suggestions></suggestions>;",
+      "pipeOnlyHint": "{cmd} είναι φίλτρο σωλήνωσης. Δοκιμάστε <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "Χρήση:",
@@ -212,8 +219,10 @@
       "downloadPdf": "Λήψη"
     },
     "projects": {
-      "openLabel": "Άνοιγμα έργου: {name}"
-    }
+      "openLabel": "Άνοιγμα έργου: {name}",
+      "noMatches": "Κανένα έργο δεν ταιριάζει με «{pattern}»."
+    },
+    "noMatches": "Δεν βρέθηκαν αποτελέσματα για «{pattern}»."
   },
   "Suggestions": {
     "navigate": "πλοήγηση",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "Καμία γλώσσα δεν ταιριάζει με «{pattern}»."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "χώρα",
         "allCountries": "Όλες οι χώρες",
         "clearCountry": "Καθαρισμός φίλτρου χώρας"
-      }
+      },
+      "noMatches": "Καμία καταχώρηση δεν ταιριάζει με «{pattern}»."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "Θέση",
       "track": "Τραγούδι",
       "album": "Άλμπουμ"
-    }
+    },
+    "noMatches": "Κανένα κομμάτι δεν ταιριάζει με «{pattern}»."
   },
   "Theme": {
     "currentLabel": "Τρέχον θέμα:",
@@ -360,7 +372,8 @@
       "tip": "Κάντε κλικ σε ένα θέμα για να το εφαρμόσετε.",
       "active": "(ενεργό)",
       "custom": "προσαρμοσμένο",
-      "deleteAria": "Διαγραφή {label}"
+      "deleteAria": "Διαγραφή {label}",
+      "noMatches": "Κανένα θέμα δεν ταιριάζει με «{pattern}»."
     },
     "set": {
       "unknownAvailable": "Άγνωστο θέμα: {name}. Διαθέσιμα θέματα:",
@@ -577,7 +590,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Αυτοματισμός",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "Κατάσταση & Δεδομένα",
+      "softSkills": "Διαπροσωπικές Δεξιότητες"
     },
     "spokenLanguages": {
       "fr": "Γαλλικά",
@@ -601,6 +616,47 @@
       "traveling": "Ταξίδια",
       "manga": "Manga",
       "gaming": "Gaming"
+    }
+  },
+  "Alias": {
+    "title": "Alias",
+    "subCommandsTitle": "Εντολές alias",
+    "usagePrefix": "Χρήση:",
+    "tip": "Συμβουλή: ορίστε μια συντόμευση με <example></example> και χρησιμοποιήστε τη σαν οποιαδήποτε εντολή.",
+    "empty": "Δεν υπάρχουν alias ακόμη. Δοκιμάστε alias hi=about.",
+    "noMatches": "Κανένα alias δεν ταιριάζει με «{pattern}».",
+    "created": "Δημιουργήθηκε alias: {name} → {value}",
+    "removed": "Διαγράφηκε alias: {name}",
+    "notFound": "Δεν υπάρχει alias με όνομα {name}.",
+    "cleared": "Όλα τα alias διαγράφηκαν.",
+    "noneToClear": "Δεν υπάρχουν alias για διαγραφή.",
+    "removeAria": "Διαγραφή του alias {name}",
+    "errors": {
+      "missing-equals": "Λείπει το «=» ανάμεσα στο όνομα και την εντολή.",
+      "invalid-name": "Μη έγκυρο όνομα alias. Χρησιμοποιήστε γράμματα, ψηφία, κάτω παύλα ή παύλα, ξεκινώντας με γράμμα.",
+      "reserved-name": "Αυτό το όνομα είναι δεσμευμένο από ενσωματωμένη εντολή.",
+      "empty-value": "Η τιμή του alias δεν μπορεί να είναι κενή.",
+      "value-too-long": "Η τιμή του alias είναι πολύ μεγάλη (μέγιστο 200 χαρακτήρες).",
+      "limit-reached": "Έφτασε το όριο των alias (μέγιστο 32). Διαγράψτε κάποιο πριν προσθέσετε νέο.",
+      "self-reference": "Ένα alias δεν μπορεί να αναφέρεται στον εαυτό του."
+    }
+  },
+  "History": {
+    "title": "Ιστορικό εντολών",
+    "empty": "Δεν υπάρχουν εντολές σε αυτή τη συνεδρία ακόμη.",
+    "noMatches": "Καμία εντολή δεν ταιριάζει με «{pattern}»."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "Λείπει το όνομα της εντολής.",
+    "usagePrefix": "Χρήση:",
+    "notFound": "Δεν υπάρχει σελίδα εγχειριδίου για «{name}».",
+    "sections": {
+      "name": "Όνομα",
+      "synopsis": "Σύνοψη",
+      "description": "Περιγραφή",
+      "examples": "Παραδείγματα",
+      "seeAlso": "Δείτε επίσης"
     }
   }
 }

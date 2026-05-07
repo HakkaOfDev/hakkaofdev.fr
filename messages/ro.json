@@ -148,16 +148,23 @@
       "themeValidate": "Verifică contrastul temei curente",
       "lang": "Afișează sau schimbă limba activă",
       "langSet": "Schimbă limba (ex. lang set fr)",
-      "langAuto": "Reactivează detectarea automată a limbii"
+      "langAuto": "Reactivează detectarea automată a limbii",
+      "alias": "Definește, listează și elimină aliasuri de comenzi",
+      "aliasRemove": "Elimină un alias după nume",
+      "aliasClear": "Elimină toate aliasurile",
+      "history": "Afișează istoricul comenzilor acestei sesiuni cu marcaje temporale",
+      "man": "Afișează pagina de manual a unei comenzi"
     },
     "help": {
       "available": "Comenzi disponibile",
       "tip": "Sfat: dă clic pe o comandă sau scrie-o în prompt pentru a o executa.",
-      "subCommands": "Subcomenzi"
+      "subCommands": "Subcomenzi",
+      "noMatches": "Nicio comandă nu corespunde „{pattern}”."
     },
     "notFound": {
       "title": "zsh: comandă negăsită: {input}",
-      "didYouMean": "Ai vrut să spui {suggestions}?"
+      "didYouMean": "Ai vrut să spui <suggestions></suggestions>?",
+      "pipeOnlyHint": "{cmd} este un filtru pipe. Încercați <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "Utilizare:",
@@ -212,8 +219,10 @@
       "downloadPdf": "Descarcă"
     },
     "projects": {
-      "openLabel": "Deschide proiectul: {name}"
-    }
+      "openLabel": "Deschide proiectul: {name}",
+      "noMatches": "Niciun proiect nu corespunde „{pattern}”."
+    },
+    "noMatches": "Nicio potrivire pentru „{pattern}”."
   },
   "Suggestions": {
     "navigate": "navighează",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "Nicio limbă nu corespunde „{pattern}”."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "țară",
         "allCountries": "Toate țările",
         "clearCountry": "Șterge filtrul de țară"
-      }
+      },
+      "noMatches": "Nicio intrare nu corespunde „{pattern}”."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "Loc",
       "track": "Melodie",
       "album": "Album"
-    }
+    },
+    "noMatches": "Nicio piesă nu corespunde „{pattern}”."
   },
   "Theme": {
     "currentLabel": "Tema curentă:",
@@ -360,7 +372,8 @@
       "tip": "Dă clic pe o temă pentru a o aplica.",
       "active": "(activă)",
       "custom": "personalizată",
-      "deleteAria": "Șterge {label}"
+      "deleteAria": "Șterge {label}",
+      "noMatches": "Nicio temă nu corespunde „{pattern}”."
     },
     "set": {
       "unknownAvailable": "Temă necunoscută: {name}. Teme disponibile:",
@@ -577,7 +590,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Automatizare",
-      "ai": "IA"
+      "ai": "IA",
+      "stateData": "Stare și Date",
+      "softSkills": "Soft skills"
     },
     "spokenLanguages": {
       "fr": "Franceză",
@@ -601,6 +616,47 @@
       "traveling": "Călătorii",
       "manga": "Manga",
       "gaming": "Gaming"
+    }
+  },
+  "Alias": {
+    "title": "Aliasuri",
+    "subCommandsTitle": "Comenzi de alias",
+    "usagePrefix": "Utilizare:",
+    "tip": "Sfat: definește o scurtătură cu <example></example> și apoi folosește-o ca pe orice comandă.",
+    "empty": "Niciun alias deocamdată. Încearcă alias hi=about.",
+    "noMatches": "Niciun alias nu corespunde „{pattern}”.",
+    "created": "Alias creat: {name} → {value}",
+    "removed": "Alias eliminat: {name}",
+    "notFound": "Nu există niciun alias numit {name}.",
+    "cleared": "Toate aliasurile au fost eliminate.",
+    "noneToClear": "Nu există aliasuri de eliminat.",
+    "removeAria": "Elimină aliasul {name}",
+    "errors": {
+      "missing-equals": "Lipsește „=” între nume și comandă.",
+      "invalid-name": "Nume de alias invalid. Folosește litere, cifre, liniuță de subliniere sau cratimă și începe cu o literă.",
+      "reserved-name": "Acel nume este rezervat unei comenzi încorporate.",
+      "empty-value": "Valoarea aliasului nu poate fi goală.",
+      "value-too-long": "Valoarea aliasului este prea lungă (max. 200 caractere).",
+      "limit-reached": "Limită de aliasuri atinsă (max. 32). Elimină unul înainte de a adăuga altul.",
+      "self-reference": "Un alias nu se poate referi la el însuși."
+    }
+  },
+  "History": {
+    "title": "Istoricul comenzilor",
+    "empty": "Încă nu există comenzi în această sesiune.",
+    "noMatches": "Nicio comandă nu corespunde „{pattern}”."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "Lipsește numele comenzii.",
+    "usagePrefix": "Utilizare:",
+    "notFound": "Nu există intrare de manual pentru „{name}”.",
+    "sections": {
+      "name": "Nume",
+      "synopsis": "Sinopsis",
+      "description": "Descriere",
+      "examples": "Exemple",
+      "seeAlso": "A se vedea și"
     }
   }
 }

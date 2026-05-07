@@ -2,7 +2,8 @@
 
 import { memo, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { resolveTerminalRenderer } from "@/components/commands/registries/commands.registry";
-import type { Command } from "@/types";
+import { PipelineProvider } from "@/components/providers/PipelineProvider";
+import type { Command, Pipeline } from "@/types";
 import CommandBash from "./CommandBash";
 import CNotFound from "./renders/CNotFound";
 
@@ -13,6 +14,7 @@ type CommandResolutionState =
       status: "ready";
       needsInput: boolean;
       normalizedInput: string;
+      pipeline?: Pipeline;
       Component:
         | React.ComponentType<{ input: string }>
         | React.ComponentType<Record<string, never>>;
@@ -80,6 +82,7 @@ function CommandItem({ id, input, timestamp }: Command) {
         status: "ready",
         needsInput: renderer.needsInput,
         normalizedInput: renderer.normalizedInput,
+        pipeline: renderer.pipeline,
         Component: renderer.Component,
       });
     };
@@ -89,6 +92,8 @@ function CommandItem({ id, input, timestamp }: Command) {
       cancelled = true;
     };
   }, [input]);
+
+  const pipeline = resolution.status === "ready" ? resolution.pipeline : null;
 
   const content = (() => {
     if (resolution.status === "loading") {
@@ -118,7 +123,7 @@ function CommandItem({ id, input, timestamp }: Command) {
 
   return (
     <CommandWrapper id={id} input={input} timestamp={timestamp}>
-      {content}
+      <PipelineProvider pipeline={pipeline}>{content}</PipelineProvider>
     </CommandWrapper>
   );
 }

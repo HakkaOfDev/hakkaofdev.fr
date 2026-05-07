@@ -77,27 +77,29 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     tags: [...p.tags],
   }));
 
-  const experiences = EXPERIENCES.map((e) => ({
-    slug: e.slug,
-    period: tCv(`experiences.${e.slug}.period` as never),
-    title: tCv(`experiences.${e.slug}.name` as never),
-    company: tCv(`experiences.${e.slug}.company` as never),
-    companyUrl: e.companyUrl,
-    location: tCv(`experiences.${e.slug}.location` as never),
-    descriptions: tCv.raw(
-      `experiences.${e.slug}.descriptions` as never,
-    ) as string[],
-  }));
+  const experiences = EXPERIENCES.map((e) => {
+    const descriptionsKey = `experiences.${e.slug}.descriptions` as never;
+    return {
+      slug: e.slug,
+      period: tCv(`experiences.${e.slug}.period` as never),
+      title: tCv(`experiences.${e.slug}.name` as never),
+      company: tCv(`experiences.${e.slug}.company` as never),
+      companyUrl: e.companyUrl,
+      location: tCv(`experiences.${e.slug}.location` as never),
+      descriptions: tCv.raw(descriptionsKey) as string[],
+    };
+  });
 
-  const education = EDUCATION.map((edu) => ({
-    slug: edu.slug,
-    period: tCv(`education.${edu.slug}.period` as never),
-    name: tCv(`education.${edu.slug}.name` as never),
-    location: tCv(`education.${edu.slug}.location` as never),
-    descriptions:
-      (tCv.raw(`education.${edu.slug}.descriptions` as never) as string[]) ??
-      [],
-  }));
+  const education = EDUCATION.map((edu) => {
+    const descriptionsKey = `education.${edu.slug}.descriptions` as never;
+    return {
+      slug: edu.slug,
+      period: tCv(`education.${edu.slug}.period` as never),
+      name: tCv(`education.${edu.slug}.name` as never),
+      location: tCv(`education.${edu.slug}.location` as never),
+      descriptions: (tCv.raw(descriptionsKey) as string[]) ?? [],
+    };
+  });
 
   const skills = SKILLS.map((s) => ({
     slug: s.slug,

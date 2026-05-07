@@ -12,7 +12,9 @@ import {
 import { useFormatter, useTranslations } from "next-intl";
 import { getStats } from "@/app/actions";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { cn } from "@/lib/utils";
+import { filterByGrep } from "@/lib/utils/grep.utils";
 import type { StatsData } from "@/types/stats";
 
 type StatCardProps = {
@@ -91,7 +93,10 @@ function StatsSkeleton() {
 
 function StatsContent({ data }: { data: StatsData }) {
   const t = useTranslations("Commands.stats");
+  const tCommands = useTranslations("Commands");
   const format = useFormatter();
+  const grep = useGrep();
+  const grepRaw = useGrepRaw();
   const year = new Date().getFullYear();
   const yearsOfCoding = data.codingSince
     ? t("codingSinceValue", {
@@ -140,10 +145,22 @@ function StatsContent({ data }: { data: StatsData }) {
     },
   ];
 
+  const visible = filterByGrep(stats, grep, (s) => [s.label, s.value ?? ""]);
+
+  if (grep && visible.length === 0) {
+    return (
+      <AnimatedSpan>
+        <p className="text-muted-foreground text-xs">
+          {tCommands("noMatches", { pattern: grepRaw })}
+        </p>
+      </AnimatedSpan>
+    );
+  }
+
   return (
     <AnimatedSpan className="gap-2">
       <div className="grid max-w-md grid-cols-2 gap-2">
-        {stats.map((stat) => (
+        {visible.map((stat) => (
           <StatCard key={stat.label} {...stat} />
         ))}
       </div>

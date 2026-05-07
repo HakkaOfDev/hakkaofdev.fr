@@ -148,16 +148,23 @@
       "themeValidate": "Sprawdź kontrast aktualnego motywu",
       "lang": "Pokaż lub zmień aktywny język",
       "langSet": "Zmień język (np. lang set fr)",
-      "langAuto": "Włącz ponownie automatyczne wykrywanie języka"
+      "langAuto": "Włącz ponownie automatyczne wykrywanie języka",
+      "alias": "Definiowanie, wyświetlanie i usuwanie skrótów poleceń",
+      "aliasRemove": "Usuń alias po nazwie",
+      "aliasClear": "Usuń wszystkie aliasy",
+      "history": "Pokaż historię poleceń bieżącej sesji ze znacznikami czasu",
+      "man": "Pokaż stronę podręcznika dla polecenia"
     },
     "help": {
       "available": "Dostępne komendy",
       "tip": "Wskazówka: kliknij komendę powyżej lub wpisz ją, aby ją wykonać.",
-      "subCommands": "Podkomendy"
+      "subCommands": "Podkomendy",
+      "noMatches": "Żadne polecenie nie pasuje do „{pattern}”."
     },
     "notFound": {
       "title": "zsh: nie znaleziono komendy: {input}",
-      "didYouMean": "Czy chodziło o {suggestions}?"
+      "didYouMean": "Czy chodziło Ci o <suggestions></suggestions>?",
+      "pipeOnlyHint": "{cmd} to filtr potoku. Spróbuj <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "Użycie:",
@@ -212,8 +219,10 @@
       "downloadPdf": "Pobierz"
     },
     "projects": {
-      "openLabel": "Otwórz projekt: {name}"
-    }
+      "openLabel": "Otwórz projekt: {name}",
+      "noMatches": "Żaden projekt nie pasuje do „{pattern}”."
+    },
+    "noMatches": "Brak dopasowań dla „{pattern}”."
   },
   "Suggestions": {
     "navigate": "nawiguj",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "Żaden język nie pasuje do „{pattern}”."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "kraj",
         "allCountries": "Wszystkie kraje",
         "clearCountry": "Wyczyść filtr kraju"
-      }
+      },
+      "noMatches": "Żaden wpis nie pasuje do „{pattern}”."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "Pozycja",
       "track": "Utwór",
       "album": "Album"
-    }
+    },
+    "noMatches": "Żaden utwór nie pasuje do „{pattern}”."
   },
   "Theme": {
     "currentLabel": "Aktualny motyw:",
@@ -360,7 +372,8 @@
       "tip": "Kliknij motyw, aby go zastosować.",
       "active": "(aktywny)",
       "custom": "własny",
-      "deleteAria": "Usuń {label}"
+      "deleteAria": "Usuń {label}",
+      "noMatches": "Żaden motyw nie pasuje do „{pattern}”."
     },
     "set": {
       "unknownAvailable": "Nieznany motyw: {name}. Dostępne motywy:",
@@ -577,7 +590,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Automatyzacja",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "Stan i Dane",
+      "softSkills": "Umiejętności miękkie"
     },
     "spokenLanguages": {
       "fr": "Francuski",
@@ -601,6 +616,47 @@
       "traveling": "Podróże",
       "manga": "Manga",
       "gaming": "Gry"
+    }
+  },
+  "Alias": {
+    "title": "Aliasy",
+    "subCommandsTitle": "Polecenia aliasów",
+    "usagePrefix": "Użycie:",
+    "tip": "Wskazówka: zdefiniuj skrót za pomocą <example></example>, a potem używaj go jak każdego polecenia.",
+    "empty": "Brak aliasów. Spróbuj alias hi=about.",
+    "noMatches": "Żaden alias nie pasuje do „{pattern}”.",
+    "created": "Alias utworzony: {name} → {value}",
+    "removed": "Alias usunięty: {name}",
+    "notFound": "Brak aliasu o nazwie {name}.",
+    "cleared": "Wszystkie aliasy usunięto.",
+    "noneToClear": "Brak aliasów do usunięcia.",
+    "removeAria": "Usuń alias {name}",
+    "errors": {
+      "missing-equals": "Brak „=” między nazwą a poleceniem.",
+      "invalid-name": "Nieprawidłowa nazwa aliasu. Użyj liter, cyfr, podkreślenia lub myślnika, zaczynając od litery.",
+      "reserved-name": "Ta nazwa jest zarezerwowana przez wbudowane polecenie.",
+      "empty-value": "Wartość aliasu nie może być pusta.",
+      "value-too-long": "Wartość aliasu jest za długa (maks. 200 znaków).",
+      "limit-reached": "Osiągnięto limit aliasów (maks. 32). Usuń jeden, zanim dodasz kolejny.",
+      "self-reference": "Alias nie może odwoływać się do samego siebie."
+    }
+  },
+  "History": {
+    "title": "Historia poleceń",
+    "empty": "W tej sesji nie ma jeszcze poleceń.",
+    "noMatches": "Żadne polecenie nie pasuje do „{pattern}”."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "Brak nazwy polecenia.",
+    "usagePrefix": "Użycie:",
+    "notFound": "Brak wpisu podręcznika dla „{name}”.",
+    "sections": {
+      "name": "Nazwa",
+      "synopsis": "Składnia",
+      "description": "Opis",
+      "examples": "Przykłady",
+      "seeAlso": "Zobacz też"
     }
   }
 }

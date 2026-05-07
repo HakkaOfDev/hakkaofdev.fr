@@ -148,16 +148,23 @@
       "themeValidate": "בדוק ניגודיות של ערכת הנושא הנוכחית",
       "lang": "הצג או החלף את השפה הפעילה",
       "langSet": "שנה שפה (לדוגמה lang set fr)",
-      "langAuto": "הפעל מחדש זיהוי שפה אוטומטי"
+      "langAuto": "הפעל מחדש זיהוי שפה אוטומטי",
+      "alias": "הגדרה, הצגה והסרה של קיצורי דרך לפקודות",
+      "aliasRemove": "הסרת קיצור לפי שם",
+      "aliasClear": "הסרת כל הקיצורים",
+      "history": "הצגת היסטוריית הפקודות של הסשן הנוכחי עם חותמות זמן",
+      "man": "הצגת דף המדריך עבור פקודה"
     },
     "help": {
       "available": "פקודות זמינות",
       "tip": "טיפ: לחץ על פקודה למעלה או הקלד אותה בשורת הפקודה כדי להריץ אותה.",
-      "subCommands": "פקודות משנה"
+      "subCommands": "פקודות משנה",
+      "noMatches": "אין פקודות התואמות ל-\"{pattern}\"."
     },
     "notFound": {
       "title": "zsh: פקודה לא נמצאה: {input}",
-      "didYouMean": "האם התכוונת ל-{suggestions}?"
+      "didYouMean": "התכוונת ל-<suggestions></suggestions>?",
+      "pipeOnlyHint": "{cmd} הוא פילטר צינור. נסה <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "שימוש:",
@@ -212,8 +219,10 @@
       "downloadPdf": "הורד"
     },
     "projects": {
-      "openLabel": "פתח פרויקט: {name}"
-    }
+      "openLabel": "פתח פרויקט: {name}",
+      "noMatches": "אין פרויקטים התואמים ל-\"{pattern}\"."
+    },
+    "noMatches": "אין התאמות עבור \"{pattern}\"."
   },
   "Suggestions": {
     "navigate": "ניווט",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "אין שפות התואמות ל-\"{pattern}\"."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "מדינה",
         "allCountries": "כל המדינות",
         "clearCountry": "נקה סינון מדינה"
-      }
+      },
+      "noMatches": "אין רשומות התואמות ל-\"{pattern}\"."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "דירוג",
       "track": "שיר",
       "album": "אלבום"
-    }
+    },
+    "noMatches": "אין רצועות התואמות ל-\"{pattern}\"."
   },
   "Theme": {
     "currentLabel": "ערכת נושא נוכחית:",
@@ -360,7 +372,8 @@
       "tip": "לחץ על ערכת נושא כדי להחיל אותה.",
       "active": "(פעילה)",
       "custom": "מותאמת",
-      "deleteAria": "מחק {label}"
+      "deleteAria": "מחק {label}",
+      "noMatches": "אין ערכות נושא התואמות ל-\"{pattern}\"."
     },
     "set": {
       "unknownAvailable": "ערכת נושא לא ידועה: {name}. ערכות נושא זמינות:",
@@ -574,7 +587,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "אוטומציה",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "מצב ונתונים",
+      "softSkills": "כישורים רכים"
     },
     "spokenLanguages": {
       "fr": "צרפתית",
@@ -598,6 +613,47 @@
       "traveling": "טיולים",
       "manga": "מנגה",
       "gaming": "גיימינג"
+    }
+  },
+  "Alias": {
+    "title": "קיצורים",
+    "subCommandsTitle": "פקודות קיצור",
+    "usagePrefix": "שימוש:",
+    "tip": "טיפ: הגדר קיצור באמצעות <example></example> ולאחר מכן הרץ אותו כמו כל פקודה אחרת.",
+    "empty": "אין עדיין קיצורים. נסה alias hi=about.",
+    "noMatches": "אין קיצורים התואמים ל-\"{pattern}\".",
+    "created": "קיצור נוצר: {name} ← {value}",
+    "removed": "קיצור הוסר: {name}",
+    "notFound": "אין קיצור בשם {name}.",
+    "cleared": "כל הקיצורים הוסרו.",
+    "noneToClear": "אין קיצורים להסרה.",
+    "removeAria": "הסר את הקיצור {name}",
+    "errors": {
+      "missing-equals": "חסר \"=\" בין השם לפקודה.",
+      "invalid-name": "שם קיצור לא חוקי. התחל באות והשתמש באותיות, ספרות, קו תחתון או מקף.",
+      "reserved-name": "השם הזה שמור עבור פקודה מובנית.",
+      "empty-value": "ערך הקיצור אינו יכול להיות ריק.",
+      "value-too-long": "ערך הקיצור ארוך מדי (עד 200 תווים).",
+      "limit-reached": "הגעת למגבלת הקיצורים (עד 32). הסר אחד לפני שתוסיף חדש.",
+      "self-reference": "קיצור לא יכול להפנות לעצמו."
+    }
+  },
+  "History": {
+    "title": "היסטוריית פקודות",
+    "empty": "אין עדיין פקודות בסשן הזה.",
+    "noMatches": "אין פקודות התואמות ל-\"{pattern}\"."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "חסר שם פקודה.",
+    "usagePrefix": "שימוש:",
+    "notFound": "אין ערך מדריך עבור \"{name}\".",
+    "sections": {
+      "name": "שם",
+      "synopsis": "תקציר",
+      "description": "תיאור",
+      "examples": "דוגמאות",
+      "seeAlso": "ראו גם"
     }
   }
 }

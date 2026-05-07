@@ -107,7 +107,7 @@ function TerminalSettingsDialog({
       }
     >
       <div className="space-y-4 [&_select]:truncate [&_select]:whitespace-nowrap">
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-2 gap-3">
           <div className="grid gap-1 text-muted-foreground text-xs">
             <label htmlFor={languageSelectId}>
               {t("settings.languageLabel")}

@@ -5,11 +5,14 @@ import {
   calculateTabCompletion,
   filterSuggestions,
 } from "@/lib/utils/suggestions.utils";
+import { useAliasesStore } from "@/stores/aliases.store";
 
 export type Suggestion = {
   value: string;
   /** Key under `Commands.descriptions.*` for the localized description, if any. */
   slug?: string;
+  /** Pre-resolved description (e.g. an alias target). Takes priority over `slug`. */
+  description?: string;
   group: CommandGroup;
 };
 
@@ -21,8 +24,9 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Build the pool of all available suggestions once
-  const allSuggestions = useMemo(() => buildSuggestionPool(), []);
+  // Build the pool of all available suggestions, including user-defined aliases.
+  const aliases = useAliasesStore((s) => s.aliases);
+  const allSuggestions = useMemo(() => buildSuggestionPool(aliases), [aliases]);
 
   // Filter suggestions based on current input
   const suggestions = useMemo(() => {

@@ -148,16 +148,23 @@
       "themeValidate": "Check the current theme for contrast issues",
       "lang": "Show or switch the active language",
       "langSet": "Switch language (e.g. lang set fr)",
-      "langAuto": "Re-enable browser language detection"
+      "langAuto": "Re-enable browser language detection",
+      "alias": "Define, list and remove command shortcuts",
+      "aliasRemove": "Remove an alias by name",
+      "aliasClear": "Remove all aliases",
+      "history": "Show this session's command history with timestamps",
+      "man": "Show the manual page for a command"
     },
     "help": {
       "available": "Available commands",
-      "tip": "Tip: Click any command above or type it in the prompt to run it.",
-      "subCommands": "Sub-commands"
+      "tip": "Tip: Click any command above, type it in the prompt, or pipe with | grep …",
+      "subCommands": "Sub-commands",
+      "noMatches": "No commands match \"{pattern}\"."
     },
     "notFound": {
       "title": "zsh: command not found: {input}",
-      "didYouMean": "Did you mean {suggestions}?"
+      "didYouMean": "Did you mean <suggestions></suggestions>?",
+      "pipeOnlyHint": "{cmd} is a pipe filter. Try <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "Usage:",
@@ -212,8 +219,10 @@
       "downloadPdf": "Download"
     },
     "projects": {
-      "openLabel": "Open project: {name}"
-    }
+      "openLabel": "Open project: {name}",
+      "noMatches": "No projects match \"{pattern}\"."
+    },
+    "noMatches": "No matches for \"{pattern}\"."
   },
   "Suggestions": {
     "navigate": "navigate",
@@ -227,6 +236,7 @@
     "usagePrefix": "Usage:",
     "switching": "Switching to {locale}…",
     "autoCleared": "Locale will be auto-detected on the next page load.",
+    "noMatches": "No locales match \"{pattern}\".",
     "missingCode": "Missing locale code.",
     "unknownLocale": "Unknown locale: {code}.",
     "unknownSubcommand": "Unknown sub-command: {sub}.",
@@ -258,6 +268,47 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
+    }
+  },
+  "Alias": {
+    "title": "Aliases",
+    "subCommandsTitle": "Alias commands",
+    "usagePrefix": "Usage:",
+    "tip": "Tip: define a shortcut with <example></example>, then run it like any command.",
+    "empty": "No aliases yet. Try alias hi=about.",
+    "noMatches": "No aliases match \"{pattern}\".",
+    "created": "Alias created: {name} → {value}",
+    "removed": "Alias removed: {name}",
+    "notFound": "No alias named {name}.",
+    "cleared": "All aliases cleared.",
+    "noneToClear": "No aliases to clear.",
+    "removeAria": "Remove alias {name}",
+    "errors": {
+      "missing-equals": "Missing \"=\" between name and command.",
+      "invalid-name": "Invalid alias name. Use letters, digits, underscore or hyphen, starting with a letter.",
+      "reserved-name": "That name is reserved by a built-in command.",
+      "empty-value": "Alias value cannot be empty.",
+      "value-too-long": "Alias value is too long (max 200 chars).",
+      "limit-reached": "Alias limit reached (32 max). Remove one before adding another.",
+      "self-reference": "An alias cannot reference itself."
+    }
+  },
+  "History": {
+    "title": "Command history",
+    "empty": "No commands in this session yet.",
+    "noMatches": "No commands match \"{pattern}\"."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "Missing command name.",
+    "usagePrefix": "Usage:",
+    "notFound": "No manual entry for \"{name}\".",
+    "sections": {
+      "name": "Name",
+      "synopsis": "Synopsis",
+      "description": "Description",
+      "examples": "Examples",
+      "seeAlso": "See also"
     }
   },
   "OpenGraph": {
@@ -297,6 +348,7 @@
       "refreshAria": "Refresh guestbook entries",
       "errorPrefix": "error:",
       "errorFallback": "Failed to load guestbook entries.",
+      "noMatches": "No entries match \"{pattern}\".",
       "noneFromCountryPrefix": "No entries from",
       "noneFromCountrySuffix": ".",
       "noneYetPrefix": "No entries yet. Run",
@@ -332,6 +384,7 @@
     "title": "Spotify commands",
     "notPlaying": "Not playing 😕",
     "unavailable": "Spotify is not configured or is unavailable.",
+    "noMatches": "No tracks match \"{pattern}\".",
     "nowPlayingPrefix": "Now playing on Spotify:",
     "openNowPlayingAria": "Open now playing track: {name}",
     "openRecentlyPlayedAria": "Open recently played track: {name}",
@@ -468,7 +521,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Automation",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "State & Data",
+      "softSkills": "Soft Skills"
     },
     "spokenLanguages": {
       "fr": "French",
@@ -511,7 +566,8 @@
       "tip": "Tap or click on a theme to apply it.",
       "active": "(active)",
       "custom": "custom",
-      "deleteAria": "Delete {label}"
+      "deleteAria": "Delete {label}",
+      "noMatches": "No themes match \"{pattern}\"."
     },
     "preview": {
       "unknown": "Unknown theme: {name}.",

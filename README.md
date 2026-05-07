@@ -19,6 +19,7 @@
 [![React](https://img.shields.io/badge/React%2019-61DAFB?style=flat-square&logo=react&logoColor=61DAFB&labelColor=141414)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=3178C6&labelColor=141414)](https://typescriptlang.org)
 [![Tailwind](https://img.shields.io/badge/Tailwind%20v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=06B6D4&labelColor=141414)](https://tailwindcss.com)
+[![next-intl](https://img.shields.io/badge/next--intl-5B9BD5?style=flat-square&logo=googletranslate&logoColor=fff&labelColor=141414)](https://next-intl.dev)
 [![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=3FCF8E&labelColor=141414)](https://supabase.com)
 [![Vercel](https://img.shields.io/badge/Vercel-141414?style=flat-square&logo=vercel&logoColor=fff)](https://vercel.com)
 [![Biome](https://img.shields.io/badge/Biome-60A5FA?style=flat-square&logo=biome&logoColor=60A5FA&labelColor=141414)](https://biomejs.dev)
@@ -39,14 +40,16 @@ Type commands, explore projects, browse skills, sign the guestbook, and even che
 
 | | Feature | Details |
 |---|---|---|
-| **`>`** | Terminal UI | Command input, history navigation, autocomplete, fuzzy did-you-mean |
-| **`>`** | 18+ commands | `help` `projects` `skills` `experiences` `education` `about` `contact` `guestbook` `cv` `repo` `theme` `stats` `echo` `clear` `reset` `spotify` |
+| **`>`** | Terminal UI | Command input, history navigation, autocomplete, fuzzy did-you-mean, pipe-style filters (`help \| grep spotify`) |
+| **`>`** | 20 base commands | `help` `projects` `skills` `experiences` `education` `about` `contact` `guestbook` `cv` `repo` `theme` `stats` `echo` `clear` `reset` `spotify` `lang` `alias` `history` `man` |
+| **`>`** | i18n (22 locales) | `next-intl` with locale-aware routing, RTL support (Arabic, Hebrew), browser detection, `lang` command |
 | **`>`** | Spotify integration | "Now Playing" header widget + `spotify now` / `spotify top` / `spotify history` |
 | **`>`** | Guestbook | Public sign & read, honeypot + per-IP rate-limiting, moderation-ready |
-| **`>`** | Dynamic CV | Server-rendered PDF via `@react-pdf/renderer` — preview or download |
-| **`>`** | Advanced Theming | 8+ built-in terminal themes (Dracula, Nord, Solarized, etc.) + custom theme support with preview & WCAG validation |
-| **`>`** | SEO | Sitemap, robots.txt, JSON-LD, dynamic OG image |
-| **`>`** | Analytics | Vercel Speed Insights + Supabase page-view tracking |
+| **`>`** | Dynamic CV | Server-rendered PDF via `@react-pdf/renderer` — locale-subsetted Noto fonts, preview or download |
+| **`>`** | Advanced Theming | 11 built-in terminal themes (Dracula, Nord, Solarized, Tokyo Night, Catppuccin Latte, …) + custom theme support with preview & WCAG validation |
+| **`>`** | Hardened security | Strict CSP, HSTS, `X-Frame-Options: DENY`, `Permissions-Policy`, `frame-ancestors 'none'` |
+| **`>`** | SEO | Sitemap, robots.txt, JSON-LD, build-time OG image, hreflang `alternate` links |
+| **`>`** | Analytics | Vercel Speed Insights + Supabase page-view tracking with bot-UA filter |
 
 <br />
 
@@ -102,7 +105,7 @@ GUESTBOOK_RATE_LIMIT_MAX_PER_HOUR=3
 | `contact` | Contact methods & social profiles |
 | `cv` | Open CV preview / download |
 | `repo` | Repository details & clone command |
-| `theme` | Manage themes: `theme list`, `theme set <name>`, `theme preview <name>`, `theme create`, `theme delete <name>` |
+| `theme` | Manage themes: `theme list`, `theme set <name>`, `theme preview <name>`, `theme create`, `theme validate` |
 | `stats` | Coding & GitHub activity stats |
 | `echo <msg>` | Print custom text |
 | `clear` | Clear terminal output |
@@ -111,6 +114,16 @@ GUESTBOOK_RATE_LIMIT_MAX_PER_HOUR=3
 | `spotify now` | Currently playing track |
 | `spotify top` | Top tracks |
 | `spotify history` | Recently played tracks |
+| `lang` | Show current locale and list supported locales |
+| `lang set <locale>` | Switch UI language (e.g. `lang set fr`) |
+| `lang auto` | Restore browser-locale auto-detection |
+| `alias` | List defined aliases |
+| `alias <name>=<command>` | Define a shortcut (e.g. `alias hi=about`) |
+| `alias remove <name>` | Remove a single alias |
+| `alias clear` | Remove all aliases |
+| `history` | Show this session's command history with timestamps |
+| `man <command>` | Show the manual page (synopsis, description, examples) |
+| `<cmd> \| grep <pat>` | Filter the output of `help`, `history`, `man`, `alias` |
 
 <br />
 
@@ -145,9 +158,25 @@ supabase/
 
 <br />
 
+## Internationalization
+
+Powered by [`next-intl`](https://next-intl.dev) with locale-aware routing (`localePrefix: as-needed`) and 22 supported locales:
+
+| Region | Locales |
+|---|---|
+| Western European | `en` `fr` `es` `de` `pt` `it` `nl` `ro` |
+| Slavic | `ru` `uk` `pl` `cs` |
+| Other European | `el` `tr` |
+| Asian / Indic | `zh` `ja` `ko` `hi` `vi` `id` |
+| Right-to-left | `ar` `he` |
+
+The default locale is detected from the browser; visitors can override it with the `lang` command or the language picker in the terminal header. The choice persists in a cookie. Translations live in `messages/<locale>.json`; routing & RTL helpers in `i18n/routing.ts`.
+
+<br />
+
 ## Theme System
 
-The portfolio features a fully customizable theme engine with 8 built-in terminal-inspired themes and support for custom palettes.
+The portfolio features a fully customizable theme engine with 11 built-in terminal-inspired themes and support for custom palettes.
 
 **Built-in Themes:**
 - `default` — Clean dark theme with cyan accents
@@ -158,6 +187,9 @@ The portfolio features a fully customizable theme engine with 8 built-in termina
 - `monokai` — Vibrant syntax highlighting colors
 - `gruvbox` — Retro groove with warm earth tones
 - `tokyo-night` — Deep blue night theme
+- `github-light` — GitHub's clean light palette
+- `catppuccin-latte` — Soothing pastel light theme
+- `rose-pine-dawn` — Soft, warm light palette
 
 **Theme Commands:**
 ```bash
@@ -165,7 +197,7 @@ theme list              # Show all available themes with color swatches
 theme set dracula       # Apply a theme instantly
 theme preview nord      # Preview for 10s, then revert
 theme create            # Interactive custom theme builder
-theme delete <name>     # Remove a custom theme
+theme validate          # WCAG AA contrast audit for the active theme
 ```
 
 **Custom Themes:**

@@ -148,16 +148,23 @@
       "themeValidate": "Kiểm tra độ tương phản của chủ đề hiện tại",
       "lang": "Hiển thị hoặc thay đổi ngôn ngữ hoạt động",
       "langSet": "Đổi ngôn ngữ (ví dụ: lang set fr)",
-      "langAuto": "Bật lại tự động phát hiện ngôn ngữ"
+      "langAuto": "Bật lại tự động phát hiện ngôn ngữ",
+      "alias": "Định nghĩa, liệt kê và xoá các phím tắt lệnh",
+      "aliasRemove": "Xoá một bí danh theo tên",
+      "aliasClear": "Xoá tất cả bí danh",
+      "history": "Hiển thị lịch sử lệnh của phiên này kèm dấu thời gian",
+      "man": "Hiển thị trang hướng dẫn cho một lệnh"
     },
     "help": {
       "available": "Lệnh khả dụng",
       "tip": "Mẹo: nhấp vào lệnh ở trên hoặc nhập vào dấu nhắc để chạy.",
-      "subCommands": "Lệnh con"
+      "subCommands": "Lệnh con",
+      "noMatches": "Không có lệnh nào khớp với “{pattern}”."
     },
     "notFound": {
       "title": "zsh: không tìm thấy lệnh: {input}",
-      "didYouMean": "Bạn có ý định {suggestions}?"
+      "didYouMean": "Có phải bạn muốn nói <suggestions></suggestions>?",
+      "pipeOnlyHint": "{cmd} là một bộ lọc pipe. Thử <example></example>."
     },
     "subCommandRouter": {
       "usagePrefix": "Cách dùng:",
@@ -212,8 +219,10 @@
       "downloadPdf": "Tải xuống"
     },
     "projects": {
-      "openLabel": "Mở dự án: {name}"
-    }
+      "openLabel": "Mở dự án: {name}",
+      "noMatches": "Không có dự án nào khớp với “{pattern}”."
+    },
+    "noMatches": "Không có kết quả khớp với “{pattern}”."
   },
   "Suggestions": {
     "navigate": "điều hướng",
@@ -258,7 +267,8 @@
       "id": "Bahasa Indonesia",
       "ar": "العربية",
       "he": "עברית"
-    }
+    },
+    "noMatches": "Không có ngôn ngữ nào khớp với “{pattern}”."
   },
   "OpenGraph": {
     "tags": {
@@ -310,7 +320,8 @@
         "country": "quốc gia",
         "allCountries": "Tất cả quốc gia",
         "clearCountry": "Xóa bộ lọc quốc gia"
-      }
+      },
+      "noMatches": "Không có mục nào khớp với “{pattern}”."
     },
     "api": {
       "errors": {
@@ -341,7 +352,8 @@
       "rank": "Hạng",
       "track": "Bài hát",
       "album": "Album"
-    }
+    },
+    "noMatches": "Không có bài hát nào khớp với “{pattern}”."
   },
   "Theme": {
     "currentLabel": "Chủ đề hiện tại:",
@@ -360,7 +372,8 @@
       "tip": "Nhấp vào chủ đề để áp dụng.",
       "active": "(đang dùng)",
       "custom": "tùy chỉnh",
-      "deleteAria": "Xóa {label}"
+      "deleteAria": "Xóa {label}",
+      "noMatches": "Không có chủ đề nào khớp với “{pattern}”."
     },
     "set": {
       "unknownAvailable": "Chủ đề không xác định: {name}. Chủ đề khả dụng:",
@@ -577,7 +590,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Tự động hóa",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "Trạng thái & Dữ liệu",
+      "softSkills": "Kỹ năng mềm"
     },
     "spokenLanguages": {
       "fr": "Tiếng Pháp",
@@ -601,6 +616,47 @@
       "traveling": "Du lịch",
       "manga": "Manga",
       "gaming": "Chơi game"
+    }
+  },
+  "Alias": {
+    "title": "Bí danh",
+    "subCommandsTitle": "Lệnh bí danh",
+    "usagePrefix": "Cú pháp:",
+    "tip": "Mẹo: định nghĩa phím tắt với <example></example>, rồi dùng như mọi lệnh khác.",
+    "empty": "Chưa có bí danh nào. Thử alias hi=about.",
+    "noMatches": "Không có bí danh nào khớp với “{pattern}”.",
+    "created": "Đã tạo bí danh: {name} → {value}",
+    "removed": "Đã xoá bí danh: {name}",
+    "notFound": "Không có bí danh nào tên là {name}.",
+    "cleared": "Đã xoá tất cả bí danh.",
+    "noneToClear": "Không có bí danh nào để xoá.",
+    "removeAria": "Xoá bí danh {name}",
+    "errors": {
+      "missing-equals": "Thiếu “=” giữa tên và lệnh.",
+      "invalid-name": "Tên bí danh không hợp lệ. Bắt đầu bằng một chữ cái và chỉ dùng chữ, số, dấu gạch dưới hoặc gạch ngang.",
+      "reserved-name": "Tên này đã được lệnh dựng sẵn giữ chỗ.",
+      "empty-value": "Giá trị bí danh không được để trống.",
+      "value-too-long": "Giá trị bí danh quá dài (tối đa 200 ký tự).",
+      "limit-reached": "Đã đạt giới hạn bí danh (tối đa 32). Hãy xoá bớt một cái trước khi thêm.",
+      "self-reference": "Bí danh không thể tham chiếu chính nó."
+    }
+  },
+  "History": {
+    "title": "Lịch sử lệnh",
+    "empty": "Phiên này chưa có lệnh nào.",
+    "noMatches": "Không có lệnh nào khớp với “{pattern}”."
+  },
+  "Man": {
+    "title": "MAN — {name}",
+    "missingArg": "Thiếu tên lệnh.",
+    "usagePrefix": "Cú pháp:",
+    "notFound": "Không có trang hướng dẫn cho “{name}”.",
+    "sections": {
+      "name": "Tên",
+      "synopsis": "Cú pháp",
+      "description": "Mô tả",
+      "examples": "Ví dụ",
+      "seeAlso": "Xem thêm"
     }
   }
 }
