@@ -587,7 +587,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "אוטומציה",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "מצב ונתונים",
+      "softSkills": "כישורים רכים"
     },
     "spokenLanguages": {
       "fr": "צרפתית",

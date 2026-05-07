@@ -590,7 +590,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Αυτοματισμός",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "Κατάσταση & Δεδομένα",
+      "softSkills": "Διαπροσωπικές Δεξιότητες"
     },
     "spokenLanguages": {
       "fr": "Γαλλικά",

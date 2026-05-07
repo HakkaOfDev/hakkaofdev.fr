@@ -590,7 +590,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Automatizare",
-      "ai": "IA"
+      "ai": "IA",
+      "stateData": "Stare și Date",
+      "softSkills": "Soft skills"
     },
     "spokenLanguages": {
       "fr": "Franceză",

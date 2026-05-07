@@ -590,7 +590,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Автоматизация",
-      "ai": "ИИ"
+      "ai": "ИИ",
+      "stateData": "Состояние и данные",
+      "softSkills": "Гибкие навыки"
     },
     "spokenLanguages": {
       "fr": "Французский",

@@ -590,7 +590,9 @@
       "orm": "ORM",
       "devops": "DevOps",
       "automation": "Tự động hóa",
-      "ai": "AI"
+      "ai": "AI",
+      "stateData": "Trạng thái & Dữ liệu",
+      "softSkills": "Kỹ năng mềm"
     },
     "spokenLanguages": {
       "fr": "Tiếng Pháp",
