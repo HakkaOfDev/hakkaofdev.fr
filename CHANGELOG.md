@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.7.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.6.1...v1.7.0) (2026-05-07)
+
+
+### Features
+
+* **analytics:** exclude bot user-agents from unique-visitor counts ([3a3377f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/3a3377f7d67c7fd8179451bdaf783029d1ac16cd))
+* **analytics:** exclude bot user-agents from unique-visitor counts ([7fae1f3](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/7fae1f3a8efe2391ac74a84ad05f3cec5f99fe6d))
+* **cv:** subset Noto fonts per locale and add interactive command panel ([042a776](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/042a776036fe1bbbb1f077c32d1fbd442ac0256c))
+* **cv:** subset Noto fonts per locale and add interactive command panel ([70b9779](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/70b97796076c18e81a919f3a9ac567159a724dce))
+
+
+### Miscellaneous
+
+* **deps:** bump next from 16.1.6 to 16.2.4 ([25a8062](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/25a80623d192f98c2caeaef46e3cc53e2277dff5))
+* **deps:** bump next from 16.1.6 to 16.2.4 ([2640274](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/2640274230acdf44d83e8b48192ad22ab8d61566))
+* **i18n:** standardise ellipsis and em-dash, polish copy ([f4b65bb](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/f4b65bbeec840c0864f80f4a879560c2096e4b6a))
+* **i18n:** standardise ellipsis and em-dash, polish copy ([81da6a3](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/81da6a3d257ce0d4b0c966f58e690be9fd4524d5))
+* **main:** release 1.6.1 ([98e7e94](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/98e7e94cc12f08c1f59745aaad5a71d90a8dd17f))
+* sync main into develop (release 1.6.1 release-please bumps) ([8484ace](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/8484ace2be27a8c3e43b90943896fc3e2ee9fda3))
+
 ## [1.6.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.6.0...v1.6.1) (2026-05-01)
 
 
