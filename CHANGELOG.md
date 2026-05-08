@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.8.0...v1.8.1) (2026-05-08)
+
+
+### Bug Fixes
+
+* **ci:** release-please title pattern was eating the version space ([18c3ce5](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/18c3ce55c2677ce5087bdc18f58afe59612ea7ba))
+* **release-please:** drop ${component} from title pattern (eats version space) ([6ac2632](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/6ac26324efab0e9e6809521f962dfbe6858f45d1))
+
 ## [1.8.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.7.0...v1.8.0) (2026-05-08)
 
 
