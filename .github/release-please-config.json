@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
-  "group-pull-request-title-pattern": "chore${scope}: release${component} ${version}",
+  "group-pull-request-title-pattern": "chore${scope}: release ${version}",
   "include-component-in-tag": false,
   "component-no-space": true,
   "separate-pull-requests": false,
@@ -11,7 +11,7 @@
       "release-type": "node",
       "component": "",
       "package-name": "",
-      "pull-request-title-pattern": "chore${scope}: release${component} ${version}",
+      "pull-request-title-pattern": "chore${scope}: release ${version}",
       "changelog-path": "CHANGELOG.md",
       "changelog-sections": [
         { "type": "feat", "section": "Features" },
