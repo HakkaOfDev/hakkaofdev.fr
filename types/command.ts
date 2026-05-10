@@ -55,6 +55,11 @@ export type AliasCommandDescriptor = {
   slug: string;
 };
 
+export type StatsCommandDescriptor = {
+  command: "countries" | "browsers" | "referrers" | "trend";
+  slug: string;
+};
+
 // ─── Pipelines ──────────────────────────────────────────────────────────
 
 /**

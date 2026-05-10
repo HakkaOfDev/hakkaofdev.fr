@@ -3,6 +3,7 @@ import { supabase } from "@/lib/supabase";
 import {
   extractCountry,
   extractIpAddress,
+  extractReferrer,
   hashIpAddress,
   isBotUserAgent,
 } from "@/lib/utils/request.utils";
@@ -12,13 +13,12 @@ export const runtime = "nodejs";
 export async function GET() {
   if (!supabase) return Response.json({ visitors: null }, { status: 503 });
 
-  const { data } = await supabase
-    .from("unique_visitors")
-    .select("total")
-    .eq("slug", HOME_SLUG)
-    .single();
+  const { data } = await supabase.rpc("get_unique_visitors_site_range", {
+    p_days: null,
+  });
+  const row = Array.isArray(data) ? data[0] : data;
 
-  return Response.json({ visitors: data?.total ?? 0 });
+  return Response.json({ visitors: row?.total ?? 0 });
 }
 
 export async function POST(request: Request) {
@@ -34,12 +34,14 @@ export async function POST(request: Request) {
 
   const ipHash = hashIpAddress(extractIpAddress(request)) ?? "unknown";
   const country = extractCountry(request);
+  const referrer = extractReferrer(request);
 
   const { data, error } = await supabase.rpc("record_visit", {
     p_slug: HOME_SLUG,
     p_ip_hash: ipHash,
     p_country: country,
     p_user_agent: userAgent,
+    p_referrer: referrer,
   });
 
   if (error) {

@@ -92,14 +92,14 @@ function WelcomeHero({
       <ShortcutSection title={t("sections.start")}>
         <ShortcutRow label={t("sections.work")}>
           <Shortcut
-            label="projects"
-            command="projects"
+            label="experiences"
+            command="experiences"
             variant="primary"
             disabled={isPreview}
           />
           <Shortcut
-            label="experiences"
-            command="experiences"
+            label="projects"
+            command="projects"
             variant="primary"
             disabled={isPreview}
           />
@@ -107,14 +107,14 @@ function WelcomeHero({
 
         <ShortcutRow label={t("sections.profile")}>
           <Shortcut
-            label="skills"
-            command="skills"
+            label="about"
+            command="about"
             variant="secondary"
             disabled={isPreview}
           />
           <Shortcut
-            label="about"
-            command="about"
+            label="cv"
+            command="cv"
             variant="secondary"
             disabled={isPreview}
           />
@@ -125,20 +125,26 @@ function WelcomeHero({
             disabled={isPreview}
           />
           <Shortcut
-            label="stats"
-            command="stats"
+            label="skills"
+            command="skills"
             variant="secondary"
             disabled={isPreview}
           />
           <Shortcut
-            label="cv"
-            command="cv"
+            label="stats"
+            command="stats"
             variant="secondary"
             disabled={isPreview}
           />
         </ShortcutRow>
 
         <ShortcutRow label={t("sections.extras")}>
+          <Shortcut
+            label="guestbook"
+            command="guestbook"
+            variant="pink"
+            disabled={isPreview}
+          />
           <Shortcut
             label="spotify"
             command="spotify"
@@ -151,17 +157,12 @@ function WelcomeHero({
             variant="orange"
             disabled={isPreview}
           />
-          <Shortcut
-            label="guestbook"
-            command="guestbook"
-            variant="pink"
-            disabled={isPreview}
-          />
         </ShortcutRow>
 
         <ShortcutRow label={t("sections.utils")}>
           <Shortcut label="contact" command="contact" disabled={isPreview} />
           <Shortcut label="help" command="help" disabled={isPreview} />
+          <Shortcut label="lang" command="lang" disabled={isPreview} />
           <Shortcut label="repo" command="repo" disabled={isPreview} />
         </ShortcutRow>
       </ShortcutSection>

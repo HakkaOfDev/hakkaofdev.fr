@@ -24,6 +24,8 @@
 [![Vercel](https://img.shields.io/badge/Vercel-141414?style=flat-square&logo=vercel&logoColor=fff)](https://vercel.com)
 [![Biome](https://img.shields.io/badge/Biome-60A5FA?style=flat-square&logo=biome&logoColor=60A5FA&labelColor=141414)](https://biomejs.dev)
 [![Spotify](https://img.shields.io/badge/Spotify%20API-1DB954?style=flat-square&logo=spotify&logoColor=1DB954&labelColor=141414)](https://developer.spotify.com)
+[![Vitest](https://img.shields.io/badge/Vitest-FCC72B?style=flat-square&logo=vitest&logoColor=FCC72B&labelColor=141414)](https://vitest.dev)
+[![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=2EAD33&labelColor=141414)](https://playwright.dev)
 
 </div>
 
@@ -50,6 +52,7 @@ Type commands, explore projects, browse skills, sign the guestbook, and even che
 | **`>`** | Hardened security | Strict CSP, HSTS, `X-Frame-Options: DENY`, `Permissions-Policy`, `frame-ancestors 'none'` |
 | **`>`** | SEO | Sitemap, robots.txt, JSON-LD, build-time OG image, hreflang `alternate` links |
 | **`>`** | Analytics | Vercel Speed Insights + Supabase page-view tracking with bot-UA filter |
+| **`>`** | Tested | 240+ unit / integration tests (Vitest + RTL) + E2E suite (Playwright, Chromium + Firefox), coverage gating in CI |
 
 <br />
 
@@ -106,7 +109,8 @@ GUESTBOOK_RATE_LIMIT_MAX_PER_HOUR=3
 | `cv` | Open CV preview / download |
 | `repo` | Repository details & clone command |
 | `theme` | Manage themes: `theme list`, `theme set <name>`, `theme preview <name>`, `theme create`, `theme validate` |
-| `stats` | Coding & GitHub activity stats |
+| `stats` | Coding, GitHub & visitor analytics — sub-commands: `stats countries`, `stats browsers`, `stats referrers`, `stats trend` |
+| `stats --last <range>` | Filter any `stats` view by time range — `24h`, `7d`, `30d`, `90d`, `all` (also accepts `--7d`, `--month`, etc.) |
 | `echo <msg>` | Print custom text |
 | `clear` | Clear terminal output |
 | `reset` | Reset to the welcome screen |
@@ -154,6 +158,12 @@ lib/
 
 supabase/
 └── schema/         # SQL migrations (guestbook table, RLS policies)
+
+tests/
+├── e2e/            # Playwright end-to-end specs
+├── unit/           # Vitest unit & integration tests (lib, hooks, components, api)
+├── setup.ts        # jest-dom + RTL cleanup + jsdom polyfills
+└── test-utils.tsx  # `withIntl()` provider for component tests
 ```
 
 <br />
@@ -275,11 +285,46 @@ export const useTerminalSessionsStore = create<TerminalSessionsStore>()(
 
 <br />
 
+## Testing
+
+The codebase ships with a full test suite covering pure logic, hooks, components, API routes, and end-to-end flows.
+
+**Stack** — [Vitest](https://vitest.dev) (jsdom) · [@testing-library/react](https://testing-library.com/react) · [@testing-library/user-event](https://testing-library.com/user-event) · [Playwright](https://playwright.dev) · [`@vitest/coverage-v8`](https://vitest.dev/guide/coverage.html)
+
+**Layout**
+
+| Layer | Where | What's covered |
+|---|---|---|
+| Pure logic | `tests/unit/lib/**` | Utils (string / number / url / grep / request / terminal), command descriptors + registry, theme contrast & WCAG validation, zod schemas, guestbook service |
+| Stores | `tests/unit/stores/**` | `aliases.store` CRUD + `expandAlias` cycle protection |
+| Hooks | `tests/unit/hooks/**` | `useSuggestions`, `useCommandHistory`, `useInputHandlers` (full key matrix), `useGlobalShortcuts` |
+| Components | `tests/unit/components/**` | `Terminal`, `TerminalInput`, `SuggestionList`, `CommandItem` |
+| API routes | `tests/unit/api/**` | `/api/views`, `/api/guestbook`, `/api/guestbook/countries`, `/api/cv` |
+| E2E | `tests/e2e/**` | Typing flows, autocomplete, theme switching, Ctrl+L, guestbook navigation — Chromium + Firefox |
+
+**Running tests**
+
+```bash
+pnpm test             # Run unit & integration tests (CI mode)
+pnpm test:watch       # Watch mode for development
+pnpm test:ui          # Vitest UI dashboard
+pnpm test:coverage    # Generate coverage report (text + HTML + lcov)
+
+pnpm test:e2e         # Run Playwright E2E across all browsers
+pnpm test:e2e:ui      # Playwright UI mode
+```
+
+Coverage is gated in CI by baseline thresholds (`vitest.config.ts`) — meant as a regression floor that ratchets up over time, not a target percentage.
+
+<br />
+
 ## CI / CD
 
 | Workflow | Trigger | What it does |
 |---|---|---|
-| `ci.yml` | PR / push to `main` | Lint, typecheck, build |
+| `ci.yml` → `quality` | PR / push to `main` | Lint, typecheck, build |
+| `ci.yml` → `test` | PR / push to `main` | `pnpm test:coverage` + uploads coverage report artifact |
+| `ci.yml` → `e2e` | PR / push to `main` | Installs Playwright browsers, runs `pnpm test:e2e`, uploads HTML report on failure |
 | `dependency-audit.yml` | PR / weekly | `pnpm audit --prod --audit-level=high` |
 | `release.yml` | Push to `main` | Release-please automated versioning |
 
@@ -290,10 +335,13 @@ Deployed on **Vercel** — push to `main` and it ships.
 ## Quality Scripts
 
 ```bash
-pnpm lint          # Biome lint
-pnpm format        # Biome format
-pnpm typecheck     # tsc --noEmit
-pnpm audit         # Dependency audit
+pnpm lint              # Biome lint
+pnpm format            # Biome format
+pnpm typecheck         # tsc --noEmit
+pnpm audit             # Dependency audit
+pnpm test              # Vitest unit & integration suite
+pnpm test:coverage     # Vitest with v8 coverage
+pnpm test:e2e          # Playwright end-to-end suite
 ```
 
 <br />

@@ -15,7 +15,9 @@ import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { cn } from "@/lib/utils";
 import { filterByGrep } from "@/lib/utils/grep.utils";
+import type { StatsRange } from "@/types/analytics";
 import type { StatsData } from "@/types/stats";
+import { RangeIndicator } from "./RangeIndicator";
 
 type StatCardProps = {
   icon: React.ReactNode;
@@ -91,7 +93,15 @@ function StatsSkeleton() {
   );
 }
 
-function StatsContent({ data }: { data: StatsData }) {
+function StatsContent({
+  data,
+  range,
+  unknown,
+}: {
+  data: StatsData;
+  range: StatsRange;
+  unknown: string[];
+}) {
   const t = useTranslations("Commands.stats");
   const tCommands = useTranslations("Commands");
   const format = useFormatter();
@@ -104,6 +114,7 @@ function StatsContent({ data }: { data: StatsData }) {
         years: year - data.codingSince,
       })
     : null;
+  const visitorsLabel = range === "all" ? t("visitors") : t("visitorsRanged");
 
   const stats: StatCardProps[] = [
     {
@@ -139,7 +150,7 @@ function StatsContent({ data }: { data: StatsData }) {
     },
     {
       icon: <Eye size={16} />,
-      label: t("visitors"),
+      label: visitorsLabel,
       value: data.visitors !== null ? format.number(data.visitors) : null,
       color: "orange",
     },
@@ -159,6 +170,7 @@ function StatsContent({ data }: { data: StatsData }) {
 
   return (
     <AnimatedSpan className="gap-2">
+      <RangeIndicator range={range} unknown={unknown} />
       <div className="grid max-w-md grid-cols-2 gap-2">
         {visible.map((stat) => (
           <StatCard key={stat.label} {...stat} />
@@ -168,11 +180,17 @@ function StatsContent({ data }: { data: StatsData }) {
   );
 }
 
-function CStats() {
+export function CStatsOverview({
+  range = "all",
+  unknown = [],
+}: {
+  range?: StatsRange;
+  unknown?: string[];
+}) {
   const t = useTranslations("Commands.stats");
   const { data, isLoading } = useQuery({
-    queryKey: ["stats"],
-    queryFn: () => getStats(),
+    queryKey: ["stats", range],
+    queryFn: () => getStats(range),
     staleTime: 5 * 60 * 1000,
     retry: false,
   });
@@ -185,7 +203,5 @@ function CStats() {
       </AnimatedSpan>
     );
 
-  return <StatsContent data={data} />;
+  return <StatsContent data={data} range={range} unknown={unknown} />;
 }
-
-export default CStats;

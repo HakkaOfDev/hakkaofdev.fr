@@ -165,22 +165,33 @@
 - [x] `man <command>` — detailed man pages with NAME, SYNOPSIS, DESCRIPTION, EXAMPLES, SEE ALSO; clickable cross-references and tab autocomplete on the command argument
 - [x] Pipe/chain support — `help | grep spotify`, `history | grep theme`, `man theme | grep set`, `alias | grep gh` all filter their text output
 
----
+### Analytics Dashboard
 
-## Planned
+- [x] Site-wide visitor tracking — proxy now records every routed path (locale-normalized) with country, user-agent, and referrer host
+- [x] Schema: `referrer` column on `visitors`, `classify_browser` / `parse_referrer_host` SQL helpers, `top_pages` / `visitor_browsers` / `visitor_referrers` views
+- [x] Time-bounded RPCs — `get_unique_visitors_site_range`, `get_top_pages_range`, `get_visitor_countries_range`, `get_visitor_browsers_range`, `get_visitor_referrers_range`, `get_visitor_trend` (zero-filled daily series)
+- [x] `stats` command sub-commands — `stats countries`, `stats browsers`, `stats referrers`, `stats trend`
+- [x] `--last` flag on every `stats` view — uniform short labels `24h`, `7d`, `30d`, `90d`, `all` (also accepts shorthand like `--7d`, `--month`, `--1m`)
+- [x] Country breakdown with regional flag emojis and locale-aware country names (`Intl.DisplayNames`)
+- [x] Browser breakdown with SQL-side classification (Chrome / Safari / Firefox / Edge / Opera / Other)
+- [x] Daily visitor area chart with mini stats card (total / peak / average) — built on shadcn/ui charts (recharts)
+- [x] Country bar chart, browser donut chart — same shadcn/ui chart primitives, theme-aware colors
+- [x] Translated to all 22 locales — descriptions for the new sub-commands plus all UI strings
 
 ### Testing
 
-There is currently no testing infrastructure. This is the highest-priority gap.
+- [x] **Vitest** configured as the unit/integration test runner with `jsdom`, RTL, `@testing-library/jest-dom`, and `@/`-path alias resolution
+- [x] Unit tests for pure logic — `lib/utils.ts`, `lib/utils/*` (string, number, url, grep, request, terminal, suggestions), `lib/services/guestbook`, `lib/themes/contrast`, `lib/schemas/guestbook`, `lib/command-descriptors`, command parsing/routing via `commands.registry`, and the `aliases.store` Zustand slice (incl. `expandAlias` cycle handling)
+- [x] Component tests with **React Testing Library** for `Terminal`, `TerminalInput` (typing, autocompletion, suggestion popover, Escape, Enter, lowercase enforcement), `SuggestionList` (active highlight, descriptions, click selection), `CommandItem` (loading state, prompt header, not-found suggestions)
+- [x] Hook tests for `useSuggestions`, `useCommandHistory` (draft restoration, clamping), `useInputHandlers` (full key matrix), `useGlobalShortcuts` (Ctrl+L/R/F/+/-)
+- [x] API route tests for `/api/views` (GET + POST, bot filter, RPC invocation), `/api/guestbook` (GET, POST, locale negotiation, error pass-through), `/api/guestbook/countries`, and `/api/cv` (download disposition, locale resolution, file naming)
+- [x] **Playwright** E2E suite (`tests/e2e/terminal.spec.ts`) covering typing flows, suggestions, Tab completion, theme switching, Ctrl+L, and guestbook navigation across Chromium and Firefox
+- [x] Tests integrated into CI as required `test` and `e2e` jobs on PRs (runs `test:coverage` and `test:e2e` with Playwright browser caching, uploads coverage and Playwright reports)
+- [x] Coverage reporting with `@vitest/coverage-v8` (text + HTML + lcov + json-summary) gated by baseline thresholds — meant as a regression floor that ratchets up over time
 
-- [ ] Set up **Vitest** as the unit/integration test runner
-- [ ] Add unit tests for pure logic: `lib/utils.ts`, `lib/services/*`, command parsing/routing
-- [ ] Add component tests with **React Testing Library** for `Terminal`, `TerminalInput`, `SuggestionList`, `CommandItem`
-- [ ] Add hook tests for `useSuggestions`, `useCommandHistory`, `useInputHandlers`, `useGlobalShortcuts`
-- [ ] Add API route tests for `/api/views`, `/api/guestbook`, `/api/guestbook/countries`, `/api/cv`
-- [ ] Set up **Playwright** for E2E tests (typing commands, suggestions, theme switching, guestbook flow)
-- [ ] Integrate test runs into CI as a required check on PRs
-- [ ] Add coverage reporting with a minimum threshold
+---
+
+## Planned
 
 ### Guestbook Improvements
 
@@ -189,12 +200,6 @@ There is currently no testing infrastructure. This is the highest-priority gap.
 - [ ] Pagination or infinite scroll for large entry lists
 - [ ] Optional GitHub OAuth for signed entries
 - [ ] Markdown support in guestbook messages
-
-### Analytics Dashboard
-
-- [ ] Richer `stats` output: top pages, referrers, browser breakdown
-- [ ] Time-range filtering (`stats --last 7d`, `stats --month`)
-- [ ] Inline ASCII/sparkline charts in terminal output
 
 ### Spotify Enhancements
 
@@ -232,4 +237,4 @@ There is currently no testing infrastructure. This is the highest-priority gap.
 
 ---
 
-*Last updated: May 2026*
+*Last updated: May 8, 2026*
