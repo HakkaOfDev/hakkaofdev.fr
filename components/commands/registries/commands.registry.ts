@@ -55,7 +55,12 @@ const ENTRIES: ReadonlyArray<RendererEntry> = [
     "experiences",
     () => import("@/components/commands/renders/CExperiences"),
   ),
-  exact("stats", "stats", () => import("@/components/commands/renders/CStats")),
+  prefix(
+    "stats",
+    "stats",
+    true,
+    () => import("@/components/commands/renders/stats/CStats"),
+  ),
   prefix(
     "echo",
     "echo",
