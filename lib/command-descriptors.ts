@@ -6,6 +6,7 @@ import type {
   GuestbookCommandDescriptor,
   LangCommandDescriptor,
   SpotifyCommandDescriptor,
+  StatsCommandDescriptor,
   ThemeCommandDescriptor,
 } from "@/types/command";
 
@@ -17,6 +18,7 @@ export type {
   GuestbookCommandDescriptor,
   LangCommandDescriptor,
   SpotifyCommandDescriptor,
+  StatsCommandDescriptor,
   ThemeCommandDescriptor,
 } from "@/types/command";
 
@@ -89,6 +91,13 @@ export const ALIAS_COMMANDS: AliasCommandDescriptor[] = [
   { command: "clear", slug: "aliasClear" },
 ];
 
+export const STATS_COMMANDS: StatsCommandDescriptor[] = [
+  { command: "countries", slug: "statsCountries" },
+  { command: "browsers", slug: "statsBrowsers" },
+  { command: "referrers", slug: "statsReferrers" },
+  { command: "trend", slug: "statsTrend" },
+];
+
 /** Command names that act as namespaces for sub-commands. */
 export const SUBCOMMAND_PREFIXES = [
   "guestbook",
@@ -96,6 +105,7 @@ export const SUBCOMMAND_PREFIXES = [
   "theme",
   "lang",
   "alias",
+  "stats",
 ] as const;
 
 // ─── Derived: every command including expanded sub-commands ─────────────
@@ -126,6 +136,11 @@ export const ALL_COMMANDS: CommandDescriptor[] = [
     command: `alias ${c.command}`,
     slug: c.slug,
     group: "Terminal" as const,
+  })),
+  ...STATS_COMMANDS.map((c) => ({
+    command: `stats ${c.command}`,
+    slug: c.slug,
+    group: "Profile" as const,
   })),
 ];
 
