@@ -10,6 +10,7 @@
     ".": {
       "release-type": "node",
       "component": "",
+      "package-name": "",
       "pull-request-title-pattern": "chore${scope}: release ${version}",
       "changelog-path": "CHANGELOG.md",
       "changelog-sections": [
