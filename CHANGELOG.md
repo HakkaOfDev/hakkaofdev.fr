@@ -1,5 +1,41 @@
 # Changelog
 
+## [1.9.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.8.1...v1.9.0) (2026-05-10)
+
+
+### Features
+
+* **actions:** expose analytics breakdowns as server actions ([a268235](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a2682359bf4f13e12eba828dc34009f4990028ac))
+* **analytics:** add range types and stats utilities ([ad60c9f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/ad60c9fafa4e9072e48222a7a3a269179f9ff589))
+* **analytics:** extend schema with referrer and time-bounded RPCs ([f0263cb](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/f0263cb7af1b7886969dc834cef530bd78e50217))
+* **analytics:** extend services for time-bounded breakdowns ([69666d0](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/69666d00d6ba0845da41e309a39deb496ec0121d))
+* **analytics:** visitor analytics dashboard with stats sub-commands ([2c2c90b](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/2c2c90bb91e997698365aaa8eb964104fefb101c))
+* **commands:** replace stats render with sub-command set ([929d324](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/929d32483f2231d8b3186b753a50a1f5d6edae60))
+* **i18n:** translate stats analytics across 22 locales ([d946b63](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/d946b63a9409fc7942050ad6432601bae297b291))
+* **proxy:** track all routed paths with locale-normalized slugs ([1c60bea](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/1c60bea5198e3dd793502ebb36655b2916b3335e))
+* **test:** add Vitest + Playwright testing infrastructure ([bb73066](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/bb73066edead8e2ff982e49b94caa211c5106b6a))
+* **ui:** add Card and Chart shadcn primitives ([a67c259](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a67c25926af860b30a4a802d496bb5e7b6cef252))
+
+
+### Documentation
+
+* document stats analytics in README and ROADMAP ([061a6f5](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/061a6f5787b8742e75aeba8eb22ec896f5bd8d27))
+* document testing infrastructure in README and ROADMAP ([8562f28](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/8562f28a1765317819542e7827e0f20bbbbb0286))
+
+
+### Miscellaneous
+
+* **deps:** add recharts for analytics charts ([823d5c0](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/823d5c0aa7bfe42620546c3b9305a1e7bb30d85e))
+* **deps:** add Vitest, Playwright, and Testing Library dev deps ([c39c142](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c39c142be8c7466b62d273f064119542e57e1a82))
+* **deps:** migrate package manager from pnpm to bun ([2d49f61](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/2d49f6170060bc7dc4fadc9c2050853dcf958162))
+* **deps:** migrate package manager from pnpm to bun ([12127c4](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/12127c40255e1d51192c5e4fe6df55dc4fabdef5))
+* sync main back into develop ([11f9fa6](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/11f9fa6656496429ebde6d287997d5a43d9ccb25))
+
+
+### Code Refactoring
+
+* **home:** rebalance WelcomeHero shortcut layout ([7be491d](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/7be491d46cc7791dc238fcdd5a38402da8012750))
+
 ## [1.8.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.8.0...v1.8.1) (2026-05-08)
 
 

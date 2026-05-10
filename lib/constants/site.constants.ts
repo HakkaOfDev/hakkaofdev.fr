@@ -7,7 +7,7 @@ import {
 } from "@/components/icons/brand";
 
 export const SITE = {
-  version: "1.8.1", // x-release-please-version
+  version: "1.9.0", // x-release-please-version
   url: "https://hakkaofdev.fr",
   repositoryUrl: "https://github.com/hakkaofdev/hakkaofdev.fr",
   title: "Alexandre Gossard | Digital Nomad & Software Engineer",
