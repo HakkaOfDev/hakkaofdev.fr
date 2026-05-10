@@ -165,6 +165,19 @@
 - [x] `man <command>` — detailed man pages with NAME, SYNOPSIS, DESCRIPTION, EXAMPLES, SEE ALSO; clickable cross-references and tab autocomplete on the command argument
 - [x] Pipe/chain support — `help | grep spotify`, `history | grep theme`, `man theme | grep set`, `alias | grep gh` all filter their text output
 
+### Analytics Dashboard
+
+- [x] Site-wide visitor tracking — proxy now records every routed path (locale-normalized) with country, user-agent, and referrer host
+- [x] Schema: `referrer` column on `visitors`, `classify_browser` / `parse_referrer_host` SQL helpers, `top_pages` / `visitor_browsers` / `visitor_referrers` views
+- [x] Time-bounded RPCs — `get_unique_visitors_site_range`, `get_top_pages_range`, `get_visitor_countries_range`, `get_visitor_browsers_range`, `get_visitor_referrers_range`, `get_visitor_trend` (zero-filled daily series)
+- [x] `stats` command sub-commands — `stats countries`, `stats browsers`, `stats referrers`, `stats trend`
+- [x] `--last` flag on every `stats` view — uniform short labels `24h`, `7d`, `30d`, `90d`, `all` (also accepts shorthand like `--7d`, `--month`, `--1m`)
+- [x] Country breakdown with regional flag emojis and locale-aware country names (`Intl.DisplayNames`)
+- [x] Browser breakdown with SQL-side classification (Chrome / Safari / Firefox / Edge / Opera / Other)
+- [x] Daily visitor area chart with mini stats card (total / peak / average) — built on shadcn/ui charts (recharts)
+- [x] Country bar chart, browser donut chart — same shadcn/ui chart primitives, theme-aware colors
+- [x] Translated to all 22 locales — descriptions for the new sub-commands plus all UI strings
+
 ---
 
 ## Planned
@@ -189,12 +202,6 @@ There is currently no testing infrastructure. This is the highest-priority gap.
 - [ ] Pagination or infinite scroll for large entry lists
 - [ ] Optional GitHub OAuth for signed entries
 - [ ] Markdown support in guestbook messages
-
-### Analytics Dashboard
-
-- [ ] Richer `stats` output: top pages, referrers, browser breakdown
-- [ ] Time-range filtering (`stats --last 7d`, `stats --month`)
-- [ ] Inline ASCII/sparkline charts in terminal output
 
 ### Spotify Enhancements
 
@@ -232,4 +239,4 @@ There is currently no testing infrastructure. This is the highest-priority gap.
 
 ---
 
-*Last updated: May 2026*
+*Last updated: May 8, 2026*

@@ -106,7 +106,8 @@ GUESTBOOK_RATE_LIMIT_MAX_PER_HOUR=3
 | `cv` | Open CV preview / download |
 | `repo` | Repository details & clone command |
 | `theme` | Manage themes: `theme list`, `theme set <name>`, `theme preview <name>`, `theme create`, `theme validate` |
-| `stats` | Coding & GitHub activity stats |
+| `stats` | Coding, GitHub & visitor analytics — sub-commands: `stats countries`, `stats browsers`, `stats referrers`, `stats trend` |
+| `stats --last <range>` | Filter any `stats` view by time range — `24h`, `7d`, `30d`, `90d`, `all` (also accepts `--7d`, `--month`, etc.) |
 | `echo <msg>` | Print custom text |
 | `clear` | Clear terminal output |
 | `reset` | Reset to the welcome screen |
