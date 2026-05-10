@@ -56,45 +56,6 @@ export function useTerminalResize({
     return () => window.removeEventListener("resize", updateViewportMode);
   }, []);
 
-  const getBounds = useCallback(
-    () => getTerminalSizeBounds(terminalRef),
-    [terminalRef],
-  );
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const clampLayoutToBounds = () => {
-      if (!isDesktopViewport || isMaximized || isMinimized) return;
-      if (terminalWidth === null && terminalHeight === null) return;
-
-      const { maxWidth, maxHeight } = getBounds();
-      const nextLayout: { terminalWidth?: number; terminalHeight?: number } =
-        {};
-
-      if (typeof terminalWidth === "number" && terminalWidth > maxWidth) {
-        nextLayout.terminalWidth = Math.round(maxWidth);
-      }
-      if (typeof terminalHeight === "number" && terminalHeight > maxHeight) {
-        nextLayout.terminalHeight = Math.round(maxHeight);
-      }
-      if (!nextLayout.terminalWidth && !nextLayout.terminalHeight) return;
-      setTerminalLayout(nextLayout);
-    };
-
-    clampLayoutToBounds();
-    window.addEventListener("resize", clampLayoutToBounds);
-    return () => window.removeEventListener("resize", clampLayoutToBounds);
-  }, [
-    getBounds,
-    isDesktopViewport,
-    isMaximized,
-    isMinimized,
-    setTerminalLayout,
-    terminalHeight,
-    terminalWidth,
-  ]);
-
   const containerStyle = useMemo(() => {
     const nextStyle = {
       "--terminal-font-family": fontFamilyStack,
@@ -103,19 +64,25 @@ export function useTerminalResize({
 
     const minimums = getTerminalMinimums();
     const viewportMaxHeight = `calc(100dvh - ${TERMINAL_LAYOUT.maxViewportHeightOffset}px)`;
+    const parentMaxWidth = `calc(100% - ${TERMINAL_LAYOUT.viewportMargin * 2}px)`;
 
     if (isDesktopViewport) nextStyle.minWidth = `${minimums.width}px`;
     if (!isMinimized && isDesktopViewport)
       nextStyle.minHeight = `${minimums.height}px`;
-    if (!isMinimized && (isMaximized || terminalHeight !== null)) {
-      nextStyle.maxHeight = viewportMaxHeight;
-    }
     if (isMaximized) {
-      nextStyle.width = `calc(100% - ${TERMINAL_LAYOUT.viewportMargin * 2}px)`;
+      nextStyle.width = parentMaxWidth;
       nextStyle.height = viewportMaxHeight;
+      nextStyle.maxWidth = parentMaxWidth;
+      nextStyle.maxHeight = viewportMaxHeight;
     } else if (isDesktopViewport) {
-      if (terminalWidth) nextStyle.width = `${terminalWidth}px`;
-      if (terminalHeight) nextStyle.height = `${terminalHeight}px`;
+      if (terminalWidth) {
+        nextStyle.width = `${terminalWidth}px`;
+        nextStyle.maxWidth = parentMaxWidth;
+      }
+      if (terminalHeight) {
+        nextStyle.height = `${terminalHeight}px`;
+        nextStyle.maxHeight = viewportMaxHeight;
+      }
     }
 
     return nextStyle;
@@ -140,11 +107,12 @@ export function useTerminalResize({
         const startRect = terminalEl.getBoundingClientRect();
         const startX = event.clientX;
         const startY = event.clientY;
+        const sessionBounds = getTerminalSizeBounds(terminalRef);
 
         beginPointerSession((moveEvent) => {
           const deltaX = moveEvent.clientX - startX;
           const deltaY = moveEvent.clientY - startY;
-          const { minWidth, minHeight, maxWidth, maxHeight } = getBounds();
+          const { minWidth, minHeight, maxWidth, maxHeight } = sessionBounds;
 
           let nextWidth = startRect.width;
           let nextHeight = startRect.height;
@@ -161,13 +129,7 @@ export function useTerminalResize({
 
         event.preventDefault();
       },
-    [
-      getBounds,
-      isDesktopViewport,
-      isLayoutInteractive,
-      setTerminalLayout,
-      terminalRef,
-    ],
+    [isDesktopViewport, isLayoutInteractive, setTerminalLayout, terminalRef],
   );
 
   return {
