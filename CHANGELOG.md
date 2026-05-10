@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.9.0...v1.9.1) (2026-05-10)
+
+
+### Performance
+
+* enhance page load and runtime performance ([96cbc86](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/96cbc8648e16d1a3d4db832f633950a048432e59))
+
 ## [1.9.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.8.1...v1.9.0) (2026-05-10)
 
 

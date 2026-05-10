@@ -5,7 +5,7 @@
 ### Interactive terminal-style portfolio
 
 [![Live](https://img.shields.io/badge/%E2%96%B6%20Live-hakkaofdev.fr-22d3ee?style=for-the-badge&labelColor=141414)](https://hakkaofdev.fr)
-[![Version](https://img.shields.io/static/v1?label=&message=v1.9.0&color=E8B931&style=for-the-badge&logo=semver&logoColor=E8B931&labelColor=141414)](https://github.com/hakkaofdev/hakkaofdev.fr/releases) <!-- x-release-please-version -->
+[![Version](https://img.shields.io/static/v1?label=&message=v1.9.1&color=E8B931&style=for-the-badge&logo=semver&logoColor=E8B931&labelColor=141414)](https://github.com/hakkaofdev/hakkaofdev.fr/releases) <!-- x-release-please-version -->
 [![CI](https://img.shields.io/github/actions/workflow/status/hakkaofdev/hakkaofdev.fr/ci.yml?style=for-the-badge&logo=github-actions&logoColor=22d3ee&label=CI&labelColor=141414)](https://github.com/hakkaofdev/hakkaofdev.fr/actions)
 [![License](https://img.shields.io/badge/license-MIT-A855F7?style=for-the-badge&labelColor=141414)](LICENSE)
 
