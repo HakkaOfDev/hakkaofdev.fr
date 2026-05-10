@@ -178,22 +178,20 @@
 - [x] Country bar chart, browser donut chart — same shadcn/ui chart primitives, theme-aware colors
 - [x] Translated to all 22 locales — descriptions for the new sub-commands plus all UI strings
 
+### Testing
+
+- [x] **Vitest** configured as the unit/integration test runner with `jsdom`, RTL, `@testing-library/jest-dom`, and `@/`-path alias resolution
+- [x] Unit tests for pure logic — `lib/utils.ts`, `lib/utils/*` (string, number, url, grep, request, terminal, suggestions), `lib/services/guestbook`, `lib/themes/contrast`, `lib/schemas/guestbook`, `lib/command-descriptors`, command parsing/routing via `commands.registry`, and the `aliases.store` Zustand slice (incl. `expandAlias` cycle handling)
+- [x] Component tests with **React Testing Library** for `Terminal`, `TerminalInput` (typing, autocompletion, suggestion popover, Escape, Enter, lowercase enforcement), `SuggestionList` (active highlight, descriptions, click selection), `CommandItem` (loading state, prompt header, not-found suggestions)
+- [x] Hook tests for `useSuggestions`, `useCommandHistory` (draft restoration, clamping), `useInputHandlers` (full key matrix), `useGlobalShortcuts` (Ctrl+L/R/F/+/-)
+- [x] API route tests for `/api/views` (GET + POST, bot filter, RPC invocation), `/api/guestbook` (GET, POST, locale negotiation, error pass-through), `/api/guestbook/countries`, and `/api/cv` (download disposition, locale resolution, file naming)
+- [x] **Playwright** E2E suite (`tests/e2e/terminal.spec.ts`) covering typing flows, suggestions, Tab completion, theme switching, Ctrl+L, and guestbook navigation across Chromium and Firefox
+- [x] Tests integrated into CI as required `test` and `e2e` jobs on PRs (runs `test:coverage` and `test:e2e` with Playwright browser caching, uploads coverage and Playwright reports)
+- [x] Coverage reporting with `@vitest/coverage-v8` (text + HTML + lcov + json-summary) gated by baseline thresholds — meant as a regression floor that ratchets up over time
+
 ---
 
 ## Planned
-
-### Testing
-
-There is currently no testing infrastructure. This is the highest-priority gap.
-
-- [ ] Set up **Vitest** as the unit/integration test runner
-- [ ] Add unit tests for pure logic: `lib/utils.ts`, `lib/services/*`, command parsing/routing
-- [ ] Add component tests with **React Testing Library** for `Terminal`, `TerminalInput`, `SuggestionList`, `CommandItem`
-- [ ] Add hook tests for `useSuggestions`, `useCommandHistory`, `useInputHandlers`, `useGlobalShortcuts`
-- [ ] Add API route tests for `/api/views`, `/api/guestbook`, `/api/guestbook/countries`, `/api/cv`
-- [ ] Set up **Playwright** for E2E tests (typing commands, suggestions, theme switching, guestbook flow)
-- [ ] Integrate test runs into CI as a required check on PRs
-- [ ] Add coverage reporting with a minimum threshold
 
 ### Guestbook Improvements
 
