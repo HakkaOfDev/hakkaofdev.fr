@@ -518,6 +518,7 @@
       "frameworks": "Framework",
       "uiStyling": "UI / Stili",
       "tooling": "Strumenti",
+      "testing": "Test",
       "databases": "Database",
       "cloud": "Cloud",
       "vcs": "VCS",

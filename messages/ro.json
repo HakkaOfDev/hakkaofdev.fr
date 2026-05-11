@@ -628,6 +628,7 @@
       "frameworks": "Framework-uri",
       "uiStyling": "UI / Stilizare",
       "tooling": "Unelte",
+      "testing": "Testare",
       "databases": "Baze de date",
       "cloud": "Cloud",
       "vcs": "VCS",

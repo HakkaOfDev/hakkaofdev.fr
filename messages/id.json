@@ -628,6 +628,7 @@
       "frameworks": "Framework",
       "uiStyling": "UI / Styling",
       "tooling": "Tooling",
+      "testing": "Pengujian",
       "databases": "Database",
       "cloud": "Cloud",
       "vcs": "VCS",
