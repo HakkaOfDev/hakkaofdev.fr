@@ -390,6 +390,7 @@
     "documentTitleSuffix": "Lebenslauf",
     "subject": "Lebenslauf",
     "summary": "Software-Ingenieur mit über 4 Jahren Erfahrung in der Entwicklung von Web- und Mobile-Apps für Kunden und Teams. Ich leite Frontend-Projekte mit React, Next.js, React Native und Expo, mit Fokus auf eine saubere UI, eine flüssige UX, responsives Design, Barrierefreiheit und benutzerfreundliche Produkte. Außerdem trage ich gerne zu Open-Source-Projekten bei und arbeite remote als digitaler Nomade, in Zusammenarbeit mit Teams und Kunden von überall auf der Welt.",
+    "location": "Remote · Weltweit",
     "sections": {
       "summary": "Kurzprofil",
       "experience": "Erfahrung",
@@ -437,6 +438,18 @@
           "Automatisierung routinemäßiger Sysadmin-Aufgaben mit Shell-Skripten",
           "Überwachung der Systemgesundheit und Verbesserung der Infrastruktur-Resilienz"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Praktikant Systemadministration",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, Frankreich",
+        "period": "März 2022 - Juni 2022",
+        "descriptions": [
+          "Verwaltung von Windows-Servern und Unterstützung des täglichen IT-Betriebs",
+          "Implementierung und Pflege von Backup-Strategien für geschäftskritische Daten",
+          "Einrichtung und Verwaltung der Hyper-V-Virtualisierung in der internen Infrastruktur",
+          "Support für ERP-Systeme (SAP und Sage), die von Finanz- und Operations-Teams genutzt werden"
+        ]
       }
     },
     "education": {
@@ -444,7 +457,7 @@
         "name": "Systemadministration und Sicherheit (Berufsabschluss)",
         "location": "IUT Châlons (Châlons-en-Champagne, Frankreich)",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Jahrgangsbester"]
       },
       "iutNetworks": {
         "name": "DUT Netzwerke und Telekommunikation (Hochschulabschluss)",

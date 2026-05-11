@@ -123,7 +123,7 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     jobTitle: tMeta("jobTitle"),
     website: SITE.url,
     email: SITE.email,
-    location: tMeta("location"),
+    location: tCv("location"),
     summary: tCv("summary"),
     sections: {
       summary: tCv("sections.summary"),

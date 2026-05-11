@@ -500,10 +500,11 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Kỹ sư phần mềm với hơn 4 năm kinh nghiệm xây dựng các ứng dụng web và di động cho khách hàng và đội nhóm. Tôi dẫn dắt các dự án frontend với React, Next.js, React Native và Expo, tập trung vào UI gọn gàng, UX mượt mà, thiết kế responsive, khả năng tiếp cận và sản phẩm thân thiện với người dùng. Tôi cũng thích đóng góp cho các dự án open-source và làm việc từ xa như một digital nomad, hợp tác với các đội nhóm và khách hàng từ bất cứ đâu trên thế giới.",
+    "location": "Từ xa · Toàn cầu",
     "sections": {
       "summary": "Hồ sơ chuyên môn",
       "experience": "Kinh nghiệm",
-      "skills": "Kỹ năng kỹ thuật",
+      "skills": "Kỹ năng",
       "education": "Học vấn",
       "projects": "Dự án tiêu biểu",
       "languages": "Ngôn ngữ",
@@ -537,7 +538,7 @@
         ]
       },
       "archeMC2": {
-        "name": "Thực tập học nghề",
+        "name": "Học Việc Kỹ Sư DevOps",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Pháp",
         "period": "Tháng 9 năm 2022 - Tháng 8 năm 2023",
@@ -547,24 +548,36 @@
           "Tự động hóa các tác vụ sysadmin định kỳ bằng shell script",
           "Giám sát tình trạng hệ thống và cải thiện khả năng phục hồi hạ tầng"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Thực Tập Sinh Quản Trị Hệ Thống",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, Pháp",
+        "period": "Tháng 3 năm 2022 - Tháng 6 năm 2022",
+        "descriptions": [
+          "Quản trị máy chủ Windows và hỗ trợ vận hành CNTT hàng ngày",
+          "Triển khai và duy trì các chiến lược sao lưu dữ liệu kinh doanh quan trọng",
+          "Cài đặt và quản lý ảo hóa Hyper-V trên hạ tầng nội bộ",
+          "Hỗ trợ các hệ thống ERP (SAP và Sage) được nhóm tài chính và vận hành sử dụng"
+        ]
       }
     },
     "education": {
       "iutSecurity": {
-        "name": "Quản trị Hệ thống và An ninh (cử nhân nghề)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Pháp)",
+        "name": "Cử nhân, Quản trị Hệ thống và An ninh",
+        "location": "IUT Châlons · Châlons-en-Champagne, Pháp",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Thủ khoa"]
       },
       "iutNetworks": {
-        "name": "DUT Mạng và Viễn thông (bằng kỹ thuật)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Pháp)",
+        "name": "Cao đẳng, Mạng và Viễn thông",
+        "location": "IUT Châlons · Châlons-en-Champagne, Pháp",
         "period": "2020-2022",
         "descriptions": ["Á khoa khóa"]
       },
       "lyceeBac": {
-        "name": "Tú tài Khoa học (tương đương A-level)",
-        "location": "Lycée Jean Talon (Châlons-en-Champagne, Pháp)",
+        "name": "Tốt nghiệp THPT, Khối Khoa học Tự nhiên",
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, Pháp",
         "period": "2019-2020",
         "descriptions": [
           "Chuyên ngành ISN (Tin học và Khoa học Số)",

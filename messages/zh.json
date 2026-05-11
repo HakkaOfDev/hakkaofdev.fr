@@ -390,10 +390,11 @@
     "documentTitleSuffix": "简历",
     "subject": "简历",
     "summary": "拥有 4 年以上经验的软件工程师,为客户和团队构建网页和移动应用。我使用 React、Next.js、React Native 和 Expo 主导前端项目,专注于简洁的 UI、流畅的 UX、响应式设计、无障碍体验以及对用户友好的产品。我也喜欢为开源项目做贡献,作为数字游民远程办公,与世界各地的团队和客户协作。",
+    "location": "远程 · 全球",
     "sections": {
       "summary": "职业概要",
       "experience": "工作经历",
-      "skills": "技术能力",
+      "skills": "技能",
       "education": "教育背景",
       "projects": "精选项目",
       "languages": "语言",
@@ -427,7 +428,7 @@
         ]
       },
       "archeMC2": {
-        "name": "学徒制",
+        "name": "学徒 DevOps 工程师",
         "company": "Arche MC2",
         "location": "法国沙隆昂香槟",
         "period": "2022 年 9 月 - 2023 年 8 月",
@@ -437,24 +438,36 @@
           "通过 Shell 脚本自动化日常系统管理任务",
           "监控系统健康并改进基础设施韧性"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "系统管理员实习生",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François，法国",
+        "period": "2022年3月 - 2022年6月",
+        "descriptions": [
+          "管理 Windows 服务器并支持日常 IT 运营",
+          "为关键业务数据实施和维护备份策略",
+          "在内部基础架构中设置和管理 Hyper-V 虚拟化",
+          "为财务和运营团队使用的 ERP 系统（SAP 和 Sage）提供支持"
+        ]
       }
     },
     "education": {
       "iutSecurity": {
-        "name": "系统管理与安全(职业学士)",
-        "location": "IUT Châlons(法国沙隆昂香槟)",
+        "name": "学士学位, 系统管理与安全",
+        "location": "IUT Châlons · 法国沙隆昂香槟",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["毕业生第一名"]
       },
       "iutNetworks": {
-        "name": "DUT 网络与电信(技术学位)",
-        "location": "IUT Châlons(法国沙隆昂香槟)",
+        "name": "副学士学位, 网络与电信",
+        "location": "IUT Châlons · 法国沙隆昂香槟",
         "period": "2020-2022",
         "descriptions": ["榜眼"]
       },
       "lyceeBac": {
-        "name": "理科业士(高考等同)",
-        "location": "Lycée Jean Talon(法国沙隆昂香槟)",
+        "name": "高中文凭, 理科方向",
+        "location": "Lycée Jean Talon · 法国沙隆昂香槟",
         "period": "2019-2020",
         "descriptions": ["专业 ISN(信息与数字科学)", "优等"]
       }

@@ -500,10 +500,11 @@
     "documentTitleSuffix": "Životopis",
     "subject": "Životopis",
     "summary": "Softwarový inženýr s více než 4 lety zkušeností s vývojem webových a mobilních aplikací pro klienty a týmy. Vedu frontendové projekty s využitím React, Next.js, React Native a Expo, s důrazem na čisté UI, plynulé UX, responzivní design, přístupnost a uživatelsky přívětivé produkty. Rád také přispívám do open-source projektů a pracuji vzdáleně jako digitální nomád, spolupracuji s týmy a klienty odkudkoli na světě.",
+    "location": "Vzdáleně · Celosvětově",
     "sections": {
       "summary": "Profesní profil",
       "experience": "Praxe",
-      "skills": "Technické dovednosti",
+      "skills": "Dovednosti",
       "education": "Vzdělání",
       "projects": "Vybrané projekty",
       "languages": "Jazyky",
@@ -537,7 +538,7 @@
         ]
       },
       "archeMC2": {
-        "name": "Učební praxe",
+        "name": "Učeň DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Francie",
         "period": "Září 2022 - srpen 2023",
@@ -547,24 +548,36 @@
           "Automatizoval rutinní sysadmin úkoly pomocí shell skriptů",
           "Sledoval stav systémů a zlepšoval odolnost infrastruktury"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Stážista Správce Systému",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, Francie",
+        "period": "Březen 2022 - Červen 2022",
+        "descriptions": [
+          "Správa Windows serverů a podpora každodenního IT provozu",
+          "Zavedení a údržba záložních strategií pro kritická firemní data",
+          "Nastavení a správa Hyper-V virtualizace v interní infrastruktuře",
+          "Podpora ERP systémů (SAP a Sage) využívaných finančním a provozním týmem"
+        ]
       }
     },
     "education": {
       "iutSecurity": {
-        "name": "Správa systémů a bezpečnost (profesní bakalář)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Francie)",
+        "name": "Bakalářský titul, Správa systémů a bezpečnost",
+        "location": "IUT Châlons · Châlons-en-Champagne, Francie",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Nejlepší absolvent"]
       },
       "iutNetworks": {
-        "name": "DUT Sítě a telekomunikace (vyšší odborné vzdělání)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Francie)",
+        "name": "Vyšší odborné vzdělání, Sítě a telekomunikace",
+        "location": "IUT Châlons · Châlons-en-Champagne, Francie",
         "period": "2020-2022",
         "descriptions": ["Druhé místo v ročníku"]
       },
       "lyceeBac": {
-        "name": "Vědecký bakalářát (středoškolská maturita)",
-        "location": "Lycée Jean Talon (Châlons-en-Champagne, Francie)",
+        "name": "Maturita, Vědecké zaměření",
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, Francie",
         "period": "2019-2020",
         "descriptions": [
           "Specializace ISN (Informatika a digitální vědy)",

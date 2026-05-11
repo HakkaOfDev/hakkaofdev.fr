@@ -38,9 +38,10 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   jobTitle: {
-    fontSize: 11,
+    fontSize: 13,
     color: COLORS.muted,
-    marginBottom: 8,
+    marginTop: 2,
+    marginBottom: 10,
   },
   contactRow: {
     flexDirection: "row",
@@ -98,10 +99,10 @@ export const styles = StyleSheet.create({
   item: {
     marginBottom: 7,
   },
-  itemRow: {
+  itemHeader: {
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "baseline",
+    gap: 6,
   },
   itemTitle: {
     fontFamily: CV_FONT_FAMILY,
@@ -109,53 +110,24 @@ export const styles = StyleSheet.create({
     fontSize: 10.5,
     color: COLORS.black,
   },
-  itemPeriod: {
-    fontSize: 9,
-    color: COLORS.muted,
-    fontFamily: CV_FONT_FAMILY,
-    fontStyle: "italic",
-  },
-  itemSubRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "baseline",
-    marginBottom: 2,
-  },
-  itemCompanyGroup: {
-    flexDirection: "row",
-    alignItems: "baseline",
-    gap: 6,
-  },
-  itemCompany: {
-    fontSize: 9.5,
-    color: COLORS.dark,
-    fontFamily: CV_FONT_FAMILY,
-    fontStyle: "italic",
-  },
-  itemCompanyLink: {
+  itemLink: {
     fontSize: 8.5,
     color: COLORS.accent,
     textDecoration: "none",
   },
-  itemLocation: {
-    fontSize: 9,
-    color: COLORS.muted,
-  },
-  bullet: {
-    flexDirection: "row",
-    marginBottom: 1,
-    paddingLeft: 6,
-  },
-  bulletDot: {
-    width: 8,
+  itemMeta: {
     fontSize: 9.5,
     color: COLORS.dark,
+    fontFamily: CV_FONT_FAMILY,
+    fontStyle: "italic",
+    marginBottom: 2,
   },
   bulletText: {
-    flex: 1,
     fontSize: 9.5,
     color: COLORS.dark,
     lineHeight: 1.4,
+    paddingLeft: 6,
+    marginBottom: 1,
   },
 
   /* ── Skills ─────────────────────────────────── */

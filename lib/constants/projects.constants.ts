@@ -11,14 +11,7 @@ export const PROJECTS: ReadonlyArray<ProjectEntry> = [
     slug: "kabilaApp",
     url: "https://kabila.app",
     imageUrl: "/projects/kabila-app.png",
-    tags: [
-      "Next.js",
-      "Tailwind",
-      "Typescript",
-      "Blockchain",
-      "Marketplace",
-      "Web3 Social",
-    ],
+    tags: ["Next.js", "Tailwind", "Typescript", "Blockchain", "Marketplace"],
   },
   {
     slug: "kabilaTools",

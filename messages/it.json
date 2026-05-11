@@ -390,6 +390,7 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Software engineer con oltre 4 anni di esperienza nello sviluppo di applicazioni web e mobile per clienti e team. Guido progetti frontend con React, Next.js, React Native ed Expo, con attenzione a UI pulite, UX fluide, design responsive, accessibilità e prodotti facili da usare. Mi piace anche contribuire a progetti open-source e lavorare da remoto come nomade digitale, collaborando con team e clienti da ogni parte del mondo.",
+    "location": "Remoto · In tutto il mondo",
     "sections": {
       "summary": "Riepilogo professionale",
       "experience": "Esperienza",
@@ -437,6 +438,18 @@
           "Automazione di task sysadmin di routine con script shell",
           "Monitoraggio della salute del sistema e miglioramento della resilienza dell'infrastruttura"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Tirocinante Amministrazione di Sistemi",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, Francia",
+        "period": "Marzo 2022 - Giugno 2022",
+        "descriptions": [
+          "Amministrazione di server Windows e supporto quotidiano alle operazioni IT",
+          "Implementazione e manutenzione di strategie di backup per dati aziendali critici",
+          "Configurazione e gestione della virtualizzazione Hyper-V nell'infrastruttura interna",
+          "Supporto ai sistemi ERP (SAP e Sage) utilizzati dai team finanza e operazioni"
+        ]
       }
     },
     "education": {
@@ -444,7 +457,7 @@
         "name": "Amministrazione e sicurezza dei sistemi (Licence professionnelle)",
         "location": "IUT Châlons (Châlons-en-Champagne, Francia)",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Migliore del corso"]
       },
       "iutNetworks": {
         "name": "DUT Reti e Telecomunicazioni",
