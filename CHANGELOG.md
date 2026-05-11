@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.10.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.9.1...v1.10.0) (2026-05-11)
+
+
+### Features
+
+* **cv:** redesign PDF layout and add internship entry ([e9391a4](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e9391a430e26f094d80820f5558c818a78fdc303))
+* **cv:** redesign PDF layout and add internship entry ([4d8d41e](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/4d8d41e932435243ccb0588ad56c91aa451db9dd))
+* **i18n:** translate CV content for the new layout ([8263e60](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/8263e6096cda83f773bb5df6b45a16aad6cbc4d9))
+* **skills:** add testing group with Vitest and Playwright, list Zod under state & data ([375763f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/375763f589b20a4db627847c0ff3a995c5641ddd))
+
+
+### Miscellaneous
+
+* **projects:** drop redundant Web3 Social tag from kabila.app ([853952c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/853952cb10b6f6c8b35d6636e5aa73c5b6a140b3))
+
 ## [1.9.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.9.0...v1.9.1) (2026-05-10)
 
 
