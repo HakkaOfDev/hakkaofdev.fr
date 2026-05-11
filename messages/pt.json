@@ -390,6 +390,7 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Engenheiro de software com mais de 4 anos de experiência a desenvolver aplicações web e móveis para clientes e equipas. Lidero projetos frontend usando React, Next.js, React Native e Expo, com foco numa UI limpa, UX fluida, design responsivo, acessibilidade e produtos fáceis de utilizar. Também gosto de contribuir para projetos open-source e de trabalhar remotamente como nómada digital, colaborando com equipas e clientes a partir de qualquer parte do mundo.",
+    "location": "Remoto · Global",
     "sections": {
       "summary": "Resumo profissional",
       "experience": "Experiência",
@@ -437,6 +438,18 @@
           "Automatizei tarefas rotineiras de sysadmin com scripts shell",
           "Monitorizei a saúde do sistema e melhorei a resiliência da infraestrutura"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Estagiário de Administração de Sistemas",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, França",
+        "period": "Março 2022 - Junho 2022",
+        "descriptions": [
+          "Administração de servidores Windows e suporte diário a operações de TI",
+          "Implementação e manutenção de estratégias de backup para dados críticos do negócio",
+          "Configuração e gestão de virtualização Hyper-V na infraestrutura interna",
+          "Suporte a sistemas ERP (SAP e Sage) utilizados pelas equipas de finanças e operações"
+        ]
       }
     },
     "education": {
@@ -444,7 +457,7 @@
         "name": "Administração e segurança de sistemas (Licence professionnelle)",
         "location": "IUT Châlons (Châlons-en-Champagne, França)",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Melhor aluno da turma"]
       },
       "iutNetworks": {
         "name": "DUT Redes e Telecomunicações",
@@ -505,6 +518,7 @@
       "frameworks": "Frameworks",
       "uiStyling": "UI / Estilos",
       "tooling": "Ferramentas",
+      "testing": "Testes",
       "databases": "Bases de dados",
       "cloud": "Cloud",
       "vcs": "VCS",

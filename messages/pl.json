@@ -500,10 +500,11 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Inżynier oprogramowania z ponad 4-letnim doświadczeniem w tworzeniu aplikacji webowych i mobilnych dla klientów i zespołów. Prowadzę projekty frontendowe z wykorzystaniem React, Next.js, React Native i Expo, ze szczególnym naciskiem na czyste UI, płynne UX, responsywny design, dostępność i produkty przyjazne użytkownikowi. Lubię również współtworzyć projekty open-source i pracować zdalnie jako cyfrowy nomada, współpracując z zespołami i klientami z dowolnego miejsca na świecie.",
+    "location": "Zdalnie · Globalnie",
     "sections": {
       "summary": "Profil zawodowy",
       "experience": "Doświadczenie",
-      "skills": "Umiejętności techniczne",
+      "skills": "Umiejętności",
       "education": "Wykształcenie",
       "projects": "Wybrane projekty",
       "languages": "Języki",
@@ -537,7 +538,7 @@
         ]
       },
       "archeMC2": {
-        "name": "Praktyka zawodowa",
+        "name": "Praktykant DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Francja",
         "period": "Wrzesień 2022 - sierpień 2023",
@@ -547,24 +548,36 @@
           "Automatyzowałem rutynowe zadania administracyjne skryptami shellowymi",
           "Monitorowałem stan systemów i poprawiałem odporność infrastruktury"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Stażysta Administrator Systemu",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, Francja",
+        "period": "Marzec 2022 - Czerwiec 2022",
+        "descriptions": [
+          "Administracja serwerami Windows i wsparcie codziennej działalności IT",
+          "Wdrożenie i utrzymanie strategii kopii zapasowych krytycznych danych firmowych",
+          "Konfiguracja i zarządzanie wirtualizacją Hyper-V w infrastrukturze wewnętrznej",
+          "Wsparcie systemów ERP (SAP i Sage) używanych przez działy finansów i operacji"
+        ]
       }
     },
     "education": {
       "iutSecurity": {
-        "name": "Administracja systemami i bezpieczeństwo (licencjat zawodowy)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Francja)",
+        "name": "Licencjat, Administracja Systemami i Bezpieczeństwo",
+        "location": "IUT Châlons · Châlons-en-Champagne, Francja",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Najlepszy absolwent"]
       },
       "iutNetworks": {
-        "name": "DUT Sieci i telekomunikacja (dyplom techniczny)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Francja)",
+        "name": "Studium, Sieci i Telekomunikacja",
+        "location": "IUT Châlons · Châlons-en-Champagne, Francja",
         "period": "2020-2022",
         "descriptions": ["Drugie miejsce w roczniku"]
       },
       "lyceeBac": {
-        "name": "Matura naukowa (odpowiednik A-Level)",
-        "location": "Lycée Jean Talon (Châlons-en-Champagne, Francja)",
+        "name": "Świadectwo Maturalne, Profil Naukowy",
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, Francja",
         "period": "2019-2020",
         "descriptions": [
           "Specjalizacja ISN (Informatyka i nauki cyfrowe)",
@@ -615,6 +628,7 @@
       "frameworks": "Frameworki",
       "uiStyling": "UI / Stylizacja",
       "tooling": "Narzędzia",
+      "testing": "Testowanie",
       "databases": "Bazy danych",
       "cloud": "Chmura",
       "vcs": "VCS",

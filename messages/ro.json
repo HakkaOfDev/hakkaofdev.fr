@@ -500,6 +500,7 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Inginer software cu peste 4 ani de experiență în construirea de aplicații web și mobile pentru clienți și echipe. Conduc proiecte frontend folosind React, Next.js, React Native și Expo, cu accent pe o interfață curată, UX fluid, design responsive, accesibilitate și produse ușor de utilizat. De asemenea, îmi place să contribui la proiecte open-source și să lucrez de la distanță ca nomad digital, colaborând cu echipe și clienți din orice parte a lumii.",
+    "location": "Remote · Global",
     "sections": {
       "summary": "Profil profesional",
       "experience": "Experiență",
@@ -547,6 +548,18 @@
           "Am automatizat sarcini de rutină de sysadmin cu scripturi shell",
           "Am monitorizat starea sistemelor și am îmbunătățit reziliența infrastructurii"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Stagiar Administrator de Sistem",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, Franța",
+        "period": "Martie 2022 - Iunie 2022",
+        "descriptions": [
+          "Administrare servere Windows și suport zilnic pentru operațiuni IT",
+          "Implementare și mentenanță strategii de backup pentru date critice de business",
+          "Configurare și gestionare virtualizare Hyper-V în infrastructura internă",
+          "Suport pentru sisteme ERP (SAP și Sage) utilizate de echipele de finanțe și operațiuni"
+        ]
       }
     },
     "education": {
@@ -554,7 +567,7 @@
         "name": "Administrare de sistem și securitate (licență profesională)",
         "location": "IUT Châlons (Châlons-en-Champagne, Franța)",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Șef de promoție"]
       },
       "iutNetworks": {
         "name": "DUT Rețele și telecomunicații (diplomă tehnică)",
@@ -615,6 +628,7 @@
       "frameworks": "Framework-uri",
       "uiStyling": "UI / Stilizare",
       "tooling": "Unelte",
+      "testing": "Testare",
       "databases": "Baze de date",
       "cloud": "Cloud",
       "vcs": "VCS",

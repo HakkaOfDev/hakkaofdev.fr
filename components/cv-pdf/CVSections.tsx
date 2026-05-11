@@ -6,8 +6,7 @@ import { BulletItem, Section, Sep } from "./CVPrimitives";
 /* ── Header ───────────────────────────────────── */
 
 export function Header({ data }: { data: CvData }) {
-  const github = data.socials.find((s) => s.name === "GitHub");
-  const linkedin = data.socials.find((s) => s.name === "LinkedIn");
+  const websiteText = data.website.replace(/^https?:\/\//, "");
 
   return (
     <View style={styles.header}>
@@ -18,30 +17,10 @@ export function Header({ data }: { data: CvData }) {
         <Text style={styles.contactItem}>{data.email}</Text>
         <Sep />
         <Text style={styles.contactItem}>{data.location}</Text>
-        <Sep />
-        <Link
-          src={`https://${data.website.replace(/^https?:\/\//, "")}`}
-          style={styles.contactLink}
-        >
-          {data.website.replace(/^https?:\/\//, "")}
-        </Link>
-        {linkedin && (
-          <>
-            <Sep />
-            <Link src={linkedin.url} style={styles.contactLink}>
-              {linkedin.url.replace(/^https?:\/\/(www\.)?/, "")}
-            </Link>
-          </>
-        )}
-        {github && (
-          <>
-            <Sep />
-            <Link src={github.url} style={styles.contactLink}>
-              {github.url.replace(/^https?:\/\/(www\.)?/, "")}
-            </Link>
-          </>
-        )}
       </View>
+      <Link src={`https://${websiteText}`} style={styles.contactLink}>
+        {websiteText}
+      </Link>
     </View>
   );
 }
@@ -75,21 +54,17 @@ export function ExperienceSection({
     <Section title={title}>
       {experiences.map((exp) => (
         <View key={exp.slug} style={styles.item}>
-          <View style={styles.itemRow}>
+          <View style={styles.itemHeader}>
             <Text style={styles.itemTitle}>{exp.title}</Text>
-            <Text style={styles.itemPeriod}>{exp.period}</Text>
+            {exp.companyUrl && (
+              <Link src={exp.companyUrl} style={styles.itemLink}>
+                {exp.companyUrl.replace(/^https?:\/\/(www\.)?/, "")}
+              </Link>
+            )}
           </View>
-          <View style={styles.itemSubRow}>
-            <View style={styles.itemCompanyGroup}>
-              <Text style={styles.itemCompany}>{exp.company}</Text>
-              {exp.companyUrl && (
-                <Link src={exp.companyUrl} style={styles.itemCompanyLink}>
-                  {exp.companyUrl.replace(/^https?:\/\/(www\.)?/, "")}
-                </Link>
-              )}
-            </View>
-            <Text style={styles.itemLocation}>{exp.location}</Text>
-          </View>
+          <Text style={styles.itemMeta}>
+            {`${exp.company} · ${exp.location} · ${exp.period}`}
+          </Text>
           {exp.descriptions.map((desc) => (
             <BulletItem key={desc} text={desc} />
           ))}
@@ -99,7 +74,7 @@ export function ExperienceSection({
   );
 }
 
-/* ── Technical Skills ─────────────────────────── */
+/* ── Skills ───────────────────────────────────── */
 
 export function SkillsSection({
   title,
@@ -135,11 +110,10 @@ export function EducationSection({
     <Section title={title}>
       {education.map((edu) => (
         <View key={edu.slug} style={styles.item}>
-          <View style={styles.itemRow}>
-            <Text style={styles.itemTitle}>{edu.name}</Text>
-            <Text style={styles.itemPeriod}>{edu.period}</Text>
-          </View>
-          <Text style={styles.itemCompany}>{edu.location}</Text>
+          <Text style={styles.itemTitle}>{edu.name}</Text>
+          <Text style={styles.itemMeta}>
+            {`${edu.location} · ${edu.period}`}
+          </Text>
           {edu.descriptions.map((desc) => (
             <BulletItem key={desc} text={desc} />
           ))}

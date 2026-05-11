@@ -390,6 +390,7 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Ingeniero de software con más de 4 años de experiencia creando aplicaciones web y móviles para clientes y equipos. Lidero proyectos frontend usando React, Next.js, React Native y Expo, con foco en una UI limpia, una UX fluida, diseño responsive, accesibilidad y productos fáciles de usar. También disfruto contribuyendo a proyectos open-source y trabajando en remoto como nómada digital, colaborando con equipos y clientes desde cualquier parte del mundo.",
+    "location": "Remoto · Global",
     "sections": {
       "summary": "Resumen profesional",
       "experience": "Experiencia",
@@ -437,6 +438,18 @@
           "Automaticé tareas rutinarias de sysadmin con scripts shell",
           "Monitoricé la salud del sistema y mejoré la resiliencia de la infraestructura"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Becario de Administración de Sistemas",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, Francia",
+        "period": "Marzo 2022 - Junio 2022",
+        "descriptions": [
+          "Administración de servidores Windows y soporte diario de operaciones de TI",
+          "Implementación y mantenimiento de estrategias de copia de seguridad para datos críticos del negocio",
+          "Configuración y gestión de virtualización Hyper-V en la infraestructura interna",
+          "Soporte de sistemas ERP (SAP y Sage) usados por los equipos de finanzas y operaciones"
+        ]
       }
     },
     "education": {
@@ -444,7 +457,7 @@
         "name": "Administración de sistemas y seguridad (Licence professionnelle)",
         "location": "IUT Châlons (Châlons-en-Champagne, Francia)",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Primero de promoción"]
       },
       "iutNetworks": {
         "name": "DUT Redes y Telecomunicaciones",
@@ -505,6 +518,7 @@
       "frameworks": "Frameworks",
       "uiStyling": "UI / Estilos",
       "tooling": "Herramientas",
+      "testing": "Pruebas",
       "databases": "Bases de datos",
       "cloud": "Cloud",
       "vcs": "VCS",

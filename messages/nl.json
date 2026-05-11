@@ -500,10 +500,11 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Software-engineer met meer dan 4 jaar ervaring in het bouwen van web- en mobiele apps voor klanten en teams. Ik leid frontend-projecten met React, Next.js, React Native en Expo, met focus op een strakke UI, soepele UX, responsive design, toegankelijkheid en gebruiksvriendelijke producten. Ik draag ook graag bij aan open-source projecten en werk op afstand als digitale nomade, in samenwerking met teams en klanten waar ook ter wereld.",
+    "location": "Op afstand · Wereldwijd",
     "sections": {
       "summary": "Professioneel profiel",
       "experience": "Ervaring",
-      "skills": "Technische vaardigheden",
+      "skills": "Vaardigheden",
       "education": "Opleiding",
       "projects": "Geselecteerde projecten",
       "languages": "Talen",
@@ -537,7 +538,7 @@
         ]
       },
       "archeMC2": {
-        "name": "Leerbaan",
+        "name": "Leerling DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Frankrijk",
         "period": "September 2022 - augustus 2023",
@@ -547,24 +548,36 @@
           "Automatiseerde routinematige sysadmin-taken met shellscripts",
           "Monitorde de gezondheid van systemen en verbeterde infrastructuurveerkracht"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Stagiair Systeembeheerder",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, Frankrijk",
+        "period": "Maart 2022 - Juni 2022",
+        "descriptions": [
+          "Beheer van Windows-servers en ondersteuning van dagelijkse IT-operaties",
+          "Implementatie en onderhoud van back-upstrategieën voor bedrijfskritische data",
+          "Opzetten en beheren van Hyper-V-virtualisatie voor de interne infrastructuur",
+          "Ondersteuning van ERP-systemen (SAP en Sage) voor finance- en operations-teams"
+        ]
       }
     },
     "education": {
       "iutSecurity": {
-        "name": "Systeembeheer en beveiliging (beroepsdiploma)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Frankrijk)",
+        "name": "Bachelor, Systeembeheer en Beveiliging",
+        "location": "IUT Châlons · Châlons-en-Champagne, Frankrijk",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Beste van het jaar"]
       },
       "iutNetworks": {
-        "name": "DUT Netwerken en Telecommunicatie (technisch diploma)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Frankrijk)",
+        "name": "Associate Degree, Netwerken en Telecommunicatie",
+        "location": "IUT Châlons · Châlons-en-Champagne, Frankrijk",
         "period": "2020-2022",
         "descriptions": ["Tweede in het cohort"]
       },
       "lyceeBac": {
-        "name": "Wetenschappelijk baccalaureaat (A-level equivalent)",
-        "location": "Lycée Jean Talon (Châlons-en-Champagne, Frankrijk)",
+        "name": "Middelbare School Diploma, Wetenschappelijk Profiel",
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, Frankrijk",
         "period": "2019-2020",
         "descriptions": [
           "Specialisatie ISN (Informatica en digitale wetenschappen)",
@@ -615,6 +628,7 @@
       "frameworks": "Frameworks",
       "uiStyling": "UI / Styling",
       "tooling": "Tooling",
+      "testing": "Testen",
       "databases": "Databases",
       "cloud": "Cloud",
       "vcs": "VCS",

@@ -24,10 +24,5 @@ export function Sep() {
 }
 
 export function BulletItem({ text }: { text: string }) {
-  return (
-    <View style={styles.bullet}>
-      <Text style={styles.bulletDot}>•</Text>
-      <Text style={styles.bulletText}>{text}</Text>
-    </View>
-  );
+  return <Text style={styles.bulletText}>{`•  ${text}`}</Text>;
 }

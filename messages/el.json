@@ -500,10 +500,11 @@
     "documentTitleSuffix": "Βιογραφικό",
     "subject": "Βιογραφικό",
     "summary": "Μηχανικός λογισμικού με πάνω από 4 χρόνια εμπειρίας στην ανάπτυξη web και mobile εφαρμογών για πελάτες και ομάδες. Ηγούμαι frontend έργων χρησιμοποιώντας React, Next.js, React Native και Expo, με έμφαση σε καθαρό UI, ομαλό UX, responsive design, προσβασιμότητα και φιλικά προς τον χρήστη προϊόντα. Μου αρέσει επίσης να συνεισφέρω σε open-source έργα και να εργάζομαι εξ αποστάσεως ως ψηφιακός νομάς, συνεργαζόμενος με ομάδες και πελάτες από οποιοδήποτε σημείο του κόσμου.",
+    "location": "Εξ αποστάσεως · Παγκόσμια",
     "sections": {
       "summary": "Επαγγελματικό προφίλ",
       "experience": "Εμπειρία",
-      "skills": "Τεχνικές δεξιότητες",
+      "skills": "Δεξιότητες",
       "education": "Εκπαίδευση",
       "projects": "Επιλεγμένα έργα",
       "languages": "Γλώσσες",
@@ -537,7 +538,7 @@
         ]
       },
       "archeMC2": {
-        "name": "Πρακτική άσκηση",
+        "name": "Μαθητευόμενος DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Γαλλία",
         "period": "Σεπτέμβριος 2022 - Αύγουστος 2023",
@@ -547,24 +548,36 @@
           "Αυτοματοποίησα ρουτίνες sysadmin με shell scripts",
           "Παρακολουθούσα την υγεία των συστημάτων και βελτίωσα την ανθεκτικότητα της υποδομής"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Πρακτικάριος Διαχειριστής Συστημάτων",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, Γαλλία",
+        "period": "Μάρτιος 2022 - Ιούνιος 2022",
+        "descriptions": [
+          "Διαχείριση Windows servers και υποστήριξη καθημερινών IT λειτουργιών",
+          "Σχεδιασμός και συντήρηση στρατηγικών backup για κρίσιμα εταιρικά δεδομένα",
+          "Εγκατάσταση και διαχείριση Hyper-V virtualization στην εσωτερική υποδομή",
+          "Υποστήριξη συστημάτων ERP (SAP και Sage) για τις ομάδες οικονομικών και λειτουργιών"
+        ]
       }
     },
     "education": {
       "iutSecurity": {
-        "name": "Διαχείριση συστημάτων και ασφάλεια (επαγγελματικό πτυχίο)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Γαλλία)",
+        "name": "Πτυχίο, Διαχείριση Συστημάτων και Ασφάλεια",
+        "location": "IUT Châlons · Châlons-en-Champagne, Γαλλία",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Πρωτεύσας"]
       },
       "iutNetworks": {
-        "name": "DUT Δίκτυα και Τηλεπικοινωνίες (τεχνικό πτυχίο)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Γαλλία)",
+        "name": "Δίπλωμα Τεχνολόγου, Δίκτυα και Τηλεπικοινωνίες",
+        "location": "IUT Châlons · Châlons-en-Champagne, Γαλλία",
         "period": "2020-2022",
         "descriptions": ["Δεύτερος του έτους"]
       },
       "lyceeBac": {
-        "name": "Επιστημονικό απολυτήριο (αντίστοιχο A-level)",
-        "location": "Lycée Jean Talon (Châlons-en-Champagne, Γαλλία)",
+        "name": "Απολυτήριο Λυκείου, Επιστημονική Κατεύθυνση",
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, Γαλλία",
         "period": "2019-2020",
         "descriptions": [
           "Ειδίκευση ISN (Πληροφορική και ψηφιακές επιστήμες)",
@@ -615,6 +628,7 @@
       "frameworks": "Frameworks",
       "uiStyling": "UI / Στυλ",
       "tooling": "Εργαλεία",
+      "testing": "Δοκιμές",
       "databases": "Βάσεις δεδομένων",
       "cloud": "Cloud",
       "vcs": "VCS",

@@ -390,10 +390,11 @@
     "documentTitleSuffix": "履歴書",
     "subject": "履歴書",
     "summary": "ウェブ・モバイルアプリの開発で4年以上の経験を持つソフトウェアエンジニア。クライアントやチーム向けに、React、Next.js、React Native、Expo を用いてフロントエンドプロジェクトを率い、クリーンな UI、滑らかな UX、レスポンシブデザイン、アクセシビリティ、そして使いやすいプロダクトを重視しています。オープンソースへの貢献や、デジタルノマドとしてリモートで働くことも楽しんでおり、世界中のどこからでもチームやクライアントと協働しています。",
+    "location": "リモート · ワールドワイド",
     "sections": {
       "summary": "プロフィール",
       "experience": "職務経歴",
-      "skills": "技術スキル",
+      "skills": "スキル",
       "education": "学歴",
       "projects": "主なプロジェクト",
       "languages": "言語",
@@ -427,7 +428,7 @@
         ]
       },
       "archeMC2": {
-        "name": "アプレンティスシップ",
+        "name": "見習い DevOps エンジニア",
         "company": "Arche MC2",
         "location": "フランス、シャロン・アン・シャンパーニュ",
         "period": "2022年9月 - 2023年8月",
@@ -437,24 +438,36 @@
           "シェルスクリプトで定型的な sysadmin タスクを自動化",
           "システムの健全性を監視し、インフラのレジリエンスを向上"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "システム管理者インターン",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François、フランス",
+        "period": "2022年3月 - 2022年6月",
+        "descriptions": [
+          "Windowsサーバーの管理および日常的なIT運用のサポート",
+          "重要なビジネスデータのためのバックアップ戦略の実装と保守",
+          "社内インフラ全体におけるHyper-V仮想化の構築および管理",
+          "財務および運用チームが使用するERPシステム（SAPおよびSage）のサポート"
+        ]
       }
     },
     "education": {
       "iutSecurity": {
-        "name": "システム管理とセキュリティ(職業学位)",
-        "location": "IUT Châlons(フランス、シャロン・アン・シャンパーニュ)",
+        "name": "学士号, システム管理とセキュリティ",
+        "location": "IUT Châlons · フランス、シャロン・アン・シャンパーニュ",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["首席卒業"]
       },
       "iutNetworks": {
-        "name": "DUT ネットワーク・通信(技術学位)",
-        "location": "IUT Châlons(フランス、シャロン・アン・シャンパーニュ)",
+        "name": "短期大学士, ネットワークと通信",
+        "location": "IUT Châlons · フランス、シャロン・アン・シャンパーニュ",
         "period": "2020-2022",
         "descriptions": ["次席卒業"]
       },
       "lyceeBac": {
-        "name": "理系バカロレア",
-        "location": "Lycée Jean Talon(フランス、シャロン・アン・シャンパーニュ)",
+        "name": "高等学校卒業証書, 理系コース",
+        "location": "Lycée Jean Talon · フランス、シャロン・アン・シャンパーニュ",
         "period": "2019-2020",
         "descriptions": ["ISN(情報・デジタル科学)専攻", "優秀賞"]
       }
@@ -502,6 +515,7 @@
       "frameworks": "フレームワーク",
       "uiStyling": "UI / スタイリング",
       "tooling": "ツール",
+      "testing": "テスト",
       "databases": "データベース",
       "cloud": "クラウド",
       "vcs": "VCS",
