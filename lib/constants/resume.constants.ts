@@ -30,6 +30,10 @@ export const EXPERIENCES: ReadonlyArray<ExperienceEntry> = [
   { slug: "kabila", companyUrl: "https://kabila.app" },
   { slug: "freelance", companyUrl: SITE.url },
   { slug: "archeMC2", companyUrl: "https://arche-mc2.fr" },
+  {
+    slug: "efficienceInformatique",
+    companyUrl: "https://www.efficience-informatique.net",
+  },
 ];
 
 export const LANGUAGES: ReadonlyArray<SpokenLanguageEntry> = [
