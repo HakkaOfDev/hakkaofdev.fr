@@ -500,10 +500,11 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Software engineer dengan pengalaman lebih dari 4 tahun membangun aplikasi web dan mobile untuk klien dan tim. Saya memimpin proyek frontend menggunakan React, Next.js, React Native, dan Expo, dengan fokus pada UI yang bersih, UX yang mulus, desain responsif, aksesibilitas, dan produk yang ramah pengguna. Saya juga senang berkontribusi pada proyek open-source dan bekerja secara remote sebagai digital nomad, berkolaborasi dengan tim dan klien dari mana pun di dunia.",
+    "location": "Remote · Global",
     "sections": {
       "summary": "Ringkasan profesional",
       "experience": "Pengalaman",
-      "skills": "Keterampilan teknis",
+      "skills": "Keterampilan",
       "education": "Pendidikan",
       "projects": "Proyek pilihan",
       "languages": "Bahasa",
@@ -537,7 +538,7 @@
         ]
       },
       "archeMC2": {
-        "name": "Magang",
+        "name": "Magang DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Prancis",
         "period": "September 2022 - Agustus 2023",
@@ -547,24 +548,36 @@
           "Mengotomatiskan tugas sysadmin rutin dengan shell script",
           "Memantau kesehatan sistem dan meningkatkan ketahanan infrastruktur"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Magang Administrator Sistem",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, Prancis",
+        "period": "Maret 2022 - Juni 2022",
+        "descriptions": [
+          "Mengadministrasi server Windows dan mendukung operasi TI harian",
+          "Mengimplementasikan dan memelihara strategi backup untuk data bisnis kritis",
+          "Menyiapkan dan mengelola virtualisasi Hyper-V di infrastruktur internal",
+          "Mendukung sistem ERP (SAP dan Sage) yang digunakan tim finance dan operations"
+        ]
       }
     },
     "education": {
       "iutSecurity": {
-        "name": "Administrasi Sistem dan Keamanan (gelar profesional)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Prancis)",
+        "name": "Sarjana, Administrasi Sistem dan Keamanan",
+        "location": "IUT Châlons · Châlons-en-Champagne, Prancis",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Lulusan terbaik"]
       },
       "iutNetworks": {
-        "name": "DUT Jaringan dan Telekomunikasi (gelar teknis)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Prancis)",
+        "name": "Diploma III, Jaringan dan Telekomunikasi",
+        "location": "IUT Châlons · Châlons-en-Champagne, Prancis",
         "period": "2020-2022",
         "descriptions": ["Peringkat kedua angkatan"]
       },
       "lyceeBac": {
-        "name": "Bakalaureat Sains (setara A-level)",
-        "location": "Lycée Jean Talon (Châlons-en-Champagne, Prancis)",
+        "name": "Ijazah SMA, Jurusan IPA",
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, Prancis",
         "period": "2019-2020",
         "descriptions": [
           "Spesialisasi ISN (Ilmu Komputer dan Digital)",

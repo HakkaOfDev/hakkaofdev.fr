@@ -390,10 +390,11 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Ingénieur logiciel avec plus de 4 ans d'expérience dans la création d'applications web et mobiles pour des clients et des équipes. Je dirige des projets frontend avec React, Next.js, React Native et Expo, en portant une attention particulière à une UI soignée, une UX fluide, un design responsive, l'accessibilité et des produits agréables à utiliser. J'aime aussi contribuer à des projets open-source et travailler à distance en tant que nomade numérique, en collaborant avec des équipes et des clients partout dans le monde.",
+    "location": "Télétravail · Mondial",
     "sections": {
       "summary": "Résumé professionnel",
       "experience": "Expérience",
-      "skills": "Compétences techniques",
+      "skills": "Compétences",
       "education": "Formation",
       "projects": "Projets sélectionnés",
       "languages": "Langues",
@@ -427,7 +428,7 @@
         ]
       },
       "archeMC2": {
-        "name": "Apprentissage",
+        "name": "Alternant DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, France",
         "period": "Septembre 2022 - Août 2023",
@@ -437,24 +438,36 @@
           "Automatisation des tâches sysadmin de routine via des scripts shell",
           "Suivi de l'état des systèmes et amélioration de la résilience de l'infrastructure"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Stagiaire Administrateur Système",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, France",
+        "period": "Mars 2022 - Juin 2022",
+        "descriptions": [
+          "Administration de serveurs Windows et support quotidien des opérations IT",
+          "Mise en place et maintenance de stratégies de sauvegarde des données critiques",
+          "Déploiement et gestion de la virtualisation Hyper-V sur l'infrastructure interne",
+          "Support des ERP (SAP et Sage) utilisés par les équipes finance et opérations"
+        ]
       }
     },
     "education": {
       "iutSecurity": {
-        "name": "Administration et sécurité des systèmes (licence professionnelle)",
-        "location": "IUT Châlons (Châlons-en-Champagne, France)",
+        "name": "Licence Professionnelle, Administration et Sécurité des Systèmes",
+        "location": "IUT Châlons · Châlons-en-Champagne, France",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Major de promotion"]
       },
       "iutNetworks": {
-        "name": "DUT Réseaux et Télécommunications",
-        "location": "IUT Châlons (Châlons-en-Champagne, France)",
+        "name": "DUT, Réseaux et Télécommunications",
+        "location": "IUT Châlons · Châlons-en-Champagne, France",
         "period": "2020-2022",
         "descriptions": ["Major de promotion"]
       },
       "lyceeBac": {
-        "name": "Baccalauréat scientifique",
-        "location": "Lycée Jean Talon (Châlons-en-Champagne, France)",
+        "name": "Baccalauréat, Série Scientifique",
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, France",
         "period": "2019-2020",
         "descriptions": [
           "Spécialité ISN (Informatique et sciences du numérique)",

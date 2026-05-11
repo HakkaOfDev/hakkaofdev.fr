@@ -500,10 +500,11 @@
     "documentTitleSuffix": "이력서",
     "subject": "이력서",
     "summary": "4년 이상의 경력을 가진 소프트웨어 엔지니어로, 클라이언트와 팀을 위해 웹·모바일 앱을 개발합니다. React, Next.js, React Native, Expo를 사용해 프런트엔드 프로젝트를 이끌며, 깔끔한 UI, 매끄러운 UX, 반응형 디자인, 접근성, 그리고 사용자 친화적인 제품에 중점을 둡니다. 오픈소스 프로젝트에 기여하고, 디지털 노마드로 원격 근무하며 세계 어디에서든 팀 및 클라이언트와 협업하는 것을 즐깁니다.",
+    "location": "원격 · 글로벌",
     "sections": {
       "summary": "직무 소개",
       "experience": "경력",
-      "skills": "기술 역량",
+      "skills": "역량",
       "education": "학력",
       "projects": "주요 프로젝트",
       "languages": "언어",
@@ -537,7 +538,7 @@
         ]
       },
       "archeMC2": {
-        "name": "현장 실습",
+        "name": "견습 DevOps 엔지니어",
         "company": "Arche MC2",
         "location": "샬롱앙샹파뉴, 프랑스",
         "period": "2022년 9월 - 2023년 8월",
@@ -547,24 +548,36 @@
           "Shell 스크립트로 일상적인 시스템 관리 자동화",
           "시스템 상태 모니터링 및 인프라 회복력 개선"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "시스템 관리자 인턴",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, 프랑스",
+        "period": "2022년 3월 - 2022년 6월",
+        "descriptions": [
+          "Windows 서버 관리 및 일일 IT 운영 지원",
+          "중요 비즈니스 데이터를 위한 백업 전략 구현 및 유지 관리",
+          "내부 인프라 전반의 Hyper-V 가상화 구축 및 관리",
+          "재무 및 운영 팀이 사용하는 ERP 시스템(SAP 및 Sage) 지원"
+        ]
       }
     },
     "education": {
       "iutSecurity": {
-        "name": "시스템 관리 및 보안 (직업 학사)",
-        "location": "IUT Châlons (샬롱앙샹파뉴, 프랑스)",
+        "name": "학사, 시스템 관리 및 보안",
+        "location": "IUT Châlons · 샬롱앙샹파뉴, 프랑스",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["수석 졸업"]
       },
       "iutNetworks": {
-        "name": "DUT 네트워크와 텔레커뮤니케이션 (기술 학위)",
-        "location": "IUT Châlons (샬롱앙샹파뉴, 프랑스)",
+        "name": "전문학사, 네트워크와 텔레커뮤니케이션",
+        "location": "IUT Châlons · 샬롱앙샹파뉴, 프랑스",
         "period": "2020-2022",
         "descriptions": ["차석 졸업"]
       },
       "lyceeBac": {
-        "name": "이공계 바칼로레아 (A-level 동등)",
-        "location": "Lycée Jean Talon (샬롱앙샹파뉴, 프랑스)",
+        "name": "고등학교 졸업장, 자연계",
+        "location": "Lycée Jean Talon · 샬롱앙샹파뉴, 프랑스",
         "period": "2019-2020",
         "descriptions": ["ISN 전공 (컴퓨터·디지털 과학)", "우수 성적"]
       }

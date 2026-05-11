@@ -500,6 +500,7 @@
     "documentTitleSuffix": "Özgeçmiş",
     "subject": "Özgeçmiş",
     "summary": "Müşteriler ve ekipler için web ve mobil uygulamalar geliştirme konusunda 4+ yıl deneyime sahip bir yazılım mühendisi. React, Next.js, React Native ve Expo kullanarak frontend projelerine liderlik ediyor; temiz bir UI, akıcı bir UX, duyarlı tasarım, erişilebilirlik ve kullanıcı dostu ürünlere odaklanıyorum. Ayrıca açık kaynak projelere katkıda bulunmayı ve dijital göçebe olarak uzaktan çalışmayı seviyor, dünyanın her yerinden ekipler ve müşterilerle iş birliği yapıyorum.",
+    "location": "Uzaktan · Dünya çapında",
     "sections": {
       "summary": "Mesleki profil",
       "experience": "Deneyim",
@@ -547,6 +548,18 @@
           "Rutin sysadmin görevlerini shell scriptleri ile otomatikleştirdim",
           "Sistem sağlığını izledim ve altyapı dayanıklılığını iyileştirdim"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "Sistem Yöneticisi Stajyeri",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, Fransa",
+        "period": "Mart 2022 - Haziran 2022",
+        "descriptions": [
+          "Windows sunucularının yönetimi ve günlük BT operasyonlarının desteklenmesi",
+          "Kritik iş verileri için yedekleme stratejilerinin uygulanması ve sürdürülmesi",
+          "Dahili altyapıda Hyper-V sanallaştırmasının kurulumu ve yönetimi",
+          "Finans ve operasyon ekiplerinin kullandığı ERP sistemlerine (SAP ve Sage) destek"
+        ]
       }
     },
     "education": {
@@ -554,7 +567,7 @@
         "name": "Sistem Yönetimi ve Güvenlik (mesleki lisans)",
         "location": "IUT Châlons (Châlons-en-Champagne, Fransa)",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Sınıf birincisi"]
       },
       "iutNetworks": {
         "name": "DUT Ağlar ve Telekomünikasyon (teknik diploma)",

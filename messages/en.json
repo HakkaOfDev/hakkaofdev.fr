@@ -431,10 +431,11 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Software Engineer with 4+ years of experience building web and mobile apps for clients and teams. I lead frontend projects using React, Next.js, React Native, and Expo, with a focus on clean UI, smooth UX, responsive design, accessibility, and user-friendly products. I also enjoy contributing to open-source projects and working remotely as a digital nomad, collaborating with teams and clients from anywhere in the world.",
+    "location": "Remote · Worldwide",
     "sections": {
       "summary": "Professional Summary",
       "experience": "Experience",
-      "skills": "Technical Skills",
+      "skills": "Skills",
       "education": "Education",
       "projects": "Selected Projects",
       "languages": "Languages",
@@ -468,7 +469,7 @@
         ]
       },
       "archeMC2": {
-        "name": "Apprenticeship",
+        "name": "DevOps Engineer Apprentice",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, France",
         "period": "September 2022 - August 2023",
@@ -478,24 +479,36 @@
           "Automated routine sysadmin tasks with shell scripts",
           "Monitored system health and improved infrastructure resilience"
         ]
+      },
+      "efficienceInformatique": {
+        "name": "System Administrator Intern",
+        "company": "Efficience Informatique",
+        "location": "Vitry-le-François, France",
+        "period": "March 2022 - June 2022",
+        "descriptions": [
+          "Administered Windows servers and supported day-to-day IT operations",
+          "Implemented and maintained backup strategies for critical business data",
+          "Set up and managed Hyper-V virtualization across the internal infrastructure",
+          "Supported ERP systems (SAP and Sage) used by finance and operations teams"
+        ]
       }
     },
     "education": {
       "iutSecurity": {
-        "name": "System Administration and Security (vocational degree)",
-        "location": "IUT Châlons (Châlons-en-Champagne, France)",
+        "name": "Bachelor's Degree, System Administration and Security",
+        "location": "IUT Châlons · Châlons-en-Champagne, France",
         "period": "2022-2023",
-        "descriptions": []
+        "descriptions": ["Valedictorian"]
       },
       "iutNetworks": {
-        "name": "DUT Networks and Telecommunications (technical degree)",
-        "location": "IUT Châlons (Châlons-en-Champagne, France)",
+        "name": "Associate Degree, Networks and Telecommunications",
+        "location": "IUT Châlons · Châlons-en-Champagne, France",
         "period": "2020-2022",
         "descriptions": ["Salutatorian"]
       },
       "lyceeBac": {
-        "name": "Scientific Baccalaureate (A level equivalent)",
-        "location": "Lycée Jean Talon (Châlons-en-Champagne, France)",
+        "name": "High School Diploma, Scientific Track",
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, France",
         "period": "2019-2020",
         "descriptions": [
           "Specialised in ISN (Computer and digital sciences)",
