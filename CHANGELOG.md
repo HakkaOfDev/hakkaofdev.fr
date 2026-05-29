@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.11.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.10.0...v1.11.0) (2026-05-29)
+
+
+### Features
+
+* **projects:** add Bravalta as latest project ([9fd9c04](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/9fd9c0461394a43d0ed339216b7afe2cc3c7f4a7))
+* **projects:** add Bravalta to projects + Astro framework skill ([b16a11c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/b16a11c56600ef962b04ab42dc517ff3ab6a4526))
+
+
+### Miscellaneous
+
+* **deps:** align bun.lock dependency ranges ([f4825af](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/f4825af0d20e35fd58d5ae33549a8421393f4315))
+* **deps:** bump non-major dependencies ([24df641](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/24df64189823af3f3ed8f85b0452c7bdc0c246ce))
+* sync main back into develop ([a9cab5d](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a9cab5d30cb8f1eb5f1a0a88748feb36f9647204))
+
 ## [1.10.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.9.1...v1.10.0) (2026-05-11)
 
 
