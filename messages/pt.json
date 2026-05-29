@@ -476,6 +476,10 @@
       }
     },
     "projects": {
+      "bravalta": {
+        "name": "Bravalta",
+        "description": "Uma consultoria empresarial especializada em arquitetura DLT e IA, entregando integração de blockchain e IA com conformidade regulatória integrada — da estratégia à produção."
+      },
       "kabilaApp": {
         "name": "Kabila App",
         "description": "Uma plataforma social Web3 e ecossistema NFT construído em Hedera, com marketplace NFT, espaços comunitários, launchpads e ferramentas para criadores."

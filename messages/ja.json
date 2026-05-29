@@ -473,6 +473,10 @@
       }
     },
     "projects": {
+      "bravalta": {
+        "name": "Bravalta",
+        "description": "DLT および AI アーキテクチャを専門とするエンタープライズ向けコンサルティング。規制コンプライアンスを組み込んだブロックチェーンと AI の統合を、戦略からプロダクションまで提供します。"
+      },
       "kabilaApp": {
         "name": "Kabila App",
         "description": "Hedera 上に構築された Web3 ソーシャルプラットフォームと NFT エコシステム。NFTマーケットプレイス、コミュニティプラザ、ローンチパッド、クリエイターツールを備えています。"

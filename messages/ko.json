@@ -583,6 +583,10 @@
       }
     },
     "projects": {
+      "bravalta": {
+        "name": "Bravalta",
+        "description": "DLT 및 AI 아키텍처를 전문으로 하는 엔터프라이즈 컨설팅. 규제 준수가 내장된 블록체인 및 AI 통합을 전략부터 프로덕션까지 제공합니다."
+      },
       "kabilaApp": {
         "name": "Kabila App",
         "description": "Hedera 위에 구축된 Web3 소셜 플랫폼이자 NFT 생태계로, NFT 마켓플레이스, 커뮤니티 플라자, 런치패드, 크리에이터 도구를 제공합니다."

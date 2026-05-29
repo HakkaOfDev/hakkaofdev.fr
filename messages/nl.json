@@ -586,6 +586,10 @@
       }
     },
     "projects": {
+      "bravalta": {
+        "name": "Bravalta",
+        "description": "Een enterprise-adviesbureau gespecialiseerd in DLT- en AI-architectuur, met blockchain- en AI-integratie en ingebouwde wettelijke compliance — van strategie tot productie."
+      },
       "kabilaApp": {
         "name": "Kabila App",
         "description": "Een Web3 sociaal platform en NFT-ecosysteem op Hedera, met een NFT-marktplaats, communityruimtes, launchpads en tools voor makers."

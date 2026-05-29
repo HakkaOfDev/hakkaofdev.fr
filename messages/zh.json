@@ -473,6 +473,10 @@
       }
     },
     "projects": {
+      "bravalta": {
+        "name": "Bravalta",
+        "description": "专注于 DLT 与 AI 架构的企业咨询公司,提供内置监管合规的区块链与 AI 集成 —— 从战略到生产。"
+      },
       "kabilaApp": {
         "name": "Kabila App",
         "description": "基于 Hedera 构建的 Web3 社交平台和 NFT 生态系统,具备 NFT 市场、社区广场、发射台和创作者工具。"

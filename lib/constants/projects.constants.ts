@@ -8,6 +8,12 @@ export type ProjectEntry = {
 
 export const PROJECTS: ReadonlyArray<ProjectEntry> = [
   {
+    slug: "bravalta",
+    url: "https://bravalta.com",
+    imageUrl: "/projects/bravalta.png",
+    tags: ["Astro", "React", "Tailwind", "Typescript"],
+  },
+  {
     slug: "kabilaApp",
     url: "https://kabila.app",
     imageUrl: "/projects/kabila-app.png",
