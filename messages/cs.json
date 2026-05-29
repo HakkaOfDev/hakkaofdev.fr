@@ -586,6 +586,10 @@
       }
     },
     "projects": {
+      "bravalta": {
+        "name": "Bravalta",
+        "description": "Podniková poradenská společnost specializovaná na architekturu DLT a AI, dodávající integraci blockchainu a AI s vestavěnou regulační shodou — od strategie po produkci."
+      },
       "kabilaApp": {
         "name": "Kabila App",
         "description": "Web3 sociální platforma a NFT ekosystém na Hederě, s NFT marketplace, komunitními prostory, launchpady a nástroji pro tvůrce."

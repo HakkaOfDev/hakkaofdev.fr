@@ -586,6 +586,10 @@
       }
     },
     "projects": {
+      "bravalta": {
+        "name": "Bravalta",
+        "description": "Konsultan enterprise yang berfokus pada arsitektur DLT dan AI, menghadirkan integrasi blockchain dan AI dengan kepatuhan regulasi bawaan — dari strategi hingga produksi."
+      },
       "kabilaApp": {
         "name": "Kabila App",
         "description": "Platform sosial Web3 dan ekosistem NFT yang dibangun di Hedera, dengan marketplace NFT, ruang komunitas, launchpad, dan alat untuk kreator."

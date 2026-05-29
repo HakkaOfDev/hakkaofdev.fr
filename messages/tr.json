@@ -586,6 +586,10 @@
       }
     },
     "projects": {
+      "bravalta": {
+        "name": "Bravalta",
+        "description": "DLT ve AI mimarisinde uzmanlaşmış bir kurumsal danışmanlık şirketi; blockchain ve AI entegrasyonunu yerleşik düzenleyici uyumlulukla sunar — stratejiden üretime."
+      },
       "kabilaApp": {
         "name": "Kabila App",
         "description": "Hedera üzerinde inşa edilmiş bir Web3 sosyal platformu ve NFT ekosistemi; NFT pazaryeri, topluluk alanları, launchpad'ler ve içerik üretici araçları içerir."
