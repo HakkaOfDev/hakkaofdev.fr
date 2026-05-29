@@ -25,6 +25,7 @@ export const SKILLS: ReadonlyArray<SkillGroup> = [
       "React",
       "React Native",
       "Expo",
+      "Astro",
       "Flask",
       "Django",
     ],

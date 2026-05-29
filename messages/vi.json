@@ -586,6 +586,10 @@
       }
     },
     "projects": {
+      "bravalta": {
+        "name": "Bravalta",
+        "description": "Một công ty tư vấn doanh nghiệp chuyên về kiến trúc DLT và AI, cung cấp tích hợp blockchain và AI với tuân thủ quy định tích hợp sẵn — từ chiến lược đến sản xuất."
+      },
       "kabilaApp": {
         "name": "Kabila App",
         "description": "Một nền tảng xã hội Web3 và hệ sinh thái NFT được xây dựng trên Hedera, bao gồm chợ NFT, quảng trường cộng đồng, launchpad và công cụ cho creator."
