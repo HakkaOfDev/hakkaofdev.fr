@@ -103,6 +103,12 @@ function WelcomeHero({
             variant="primary"
             disabled={isPreview}
           />
+          <Shortcut
+            label="recommendations"
+            command="recommendations"
+            variant="primary"
+            disabled={isPreview}
+          />
         </ShortcutRow>
 
         <ShortcutRow label={t("sections.profile")}>

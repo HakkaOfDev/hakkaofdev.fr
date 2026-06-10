@@ -42,6 +42,7 @@ export const GROUP_META = Object.fromEntries(
 export const COMMANDS: CommandDescriptor[] = [
   { command: "projects", slug: "projects", group: "Work" },
   { command: "experiences", slug: "experiences", group: "Work" },
+  { command: "recommendations", slug: "recommendations", group: "Work" },
   { command: "about", slug: "about", group: "Profile" },
   { command: "skills", slug: "skills", group: "Profile" },
   { command: "education", slug: "education", group: "Profile" },
