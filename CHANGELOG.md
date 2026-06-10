@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.12.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.11.0...v1.12.0) (2026-06-10)
+
+
+### Features
+
+* **commands:** add recommendations command ([36d6983](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/36d6983c40c1fae59b8c520e1fbee958790bb40f))
+* **commands:** add recommendations command bound to experience ([5099b30](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/5099b30e9d8a09857a04ee9aed563ebdfbd9a3b2))
+* **i18n:** translate recommendations command strings ([003c012](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/003c012d6ede2c6c94ceee49771c34d37fb90652))
+
+
+### Documentation
+
+* **plans:** add recommendations command implementation plan ([b09291d](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/b09291de0564d65cff7e9e131a78a2461aab010a))
+
+
+### Miscellaneous
+
+* **deps:** bump non-major dependencies ([0c04572](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/0c04572c13070f43be003e6aa5b687e7f08a49b5))
+* **deps:** bump non-major dependencies ([f3e3470](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/f3e34700e640f198847073eefa51e3db93994731))
+
 ## [1.11.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.10.0...v1.11.0) (2026-05-29)
 
 
