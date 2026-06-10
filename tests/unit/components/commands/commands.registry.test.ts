@@ -26,6 +26,13 @@ describe("resolveTerminalRenderer", { timeout: 30_000 }, () => {
     expect(result?.needsInput).toBe(false);
   });
 
+  it("resolves the recommendations command", async () => {
+    const result = await resolveTerminalRenderer("recommendations");
+    expect(result).not.toBeNull();
+    expect(result?.normalizedInput).toBe("recommendations");
+    expect(result?.needsInput).toBe(false);
+  });
+
   it("resolves prefix commands and keeps the full normalized input", async () => {
     const result = await resolveTerminalRenderer("spotify now");
     expect(result).not.toBeNull();

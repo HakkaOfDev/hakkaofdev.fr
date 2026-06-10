@@ -128,6 +128,7 @@
       "contact": "Email, social media și căi de contact",
       "guestbook": "Afișează ajutorul pentru subcomenzile cărții de oaspeți",
       "cv": "Previzualizează și descarcă CV-ul meu PDF",
+      "recommendations": "Citește recomandări și referințe profesionale",
       "spotify": "Afișează ajutorul pentru subcomenzile Spotify",
       "theme": "Afișează sau schimbă tema interfeței",
       "help": "Afișează toate comenzile disponibile și descrierile",
@@ -248,6 +249,11 @@
       "description": "CV-ul meu în PDF",
       "openPreview": "Încearcă",
       "downloadPdf": "Descarcă"
+    },
+    "recommendations": {
+      "recommendedBy": "Recomandat de",
+      "readLetter": "Citește scrisoarea completă",
+      "download": "Descarcă"
     },
     "projects": {
       "openLabel": "Deschide proiectul: {name}",

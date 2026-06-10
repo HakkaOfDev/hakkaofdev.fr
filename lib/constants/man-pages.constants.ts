@@ -62,7 +62,7 @@ export const MAN_PAGES: Record<string, ManPage> = {
     usage: "cv",
     examples: ["cv"],
     descriptionSlug: "cv",
-    seeAlso: ["about", "experiences"],
+    seeAlso: ["about", "experiences", "recommendations"],
   },
   echo: {
     name: "echo",
@@ -85,7 +85,7 @@ export const MAN_PAGES: Record<string, ManPage> = {
     usage: "experiences",
     examples: ["experiences"],
     descriptionSlug: "experiences",
-    seeAlso: ["projects", "skills"],
+    seeAlso: ["projects", "skills", "recommendations"],
   },
   guestbook: {
     name: "guestbook",
@@ -131,6 +131,14 @@ export const MAN_PAGES: Record<string, ManPage> = {
     examples: ["projects"],
     descriptionSlug: "projects",
     seeAlso: ["repo", "experiences"],
+  },
+  recommendations: {
+    name: "recommendations",
+    synopsis: "Professional recommendations and references",
+    usage: "recommendations",
+    examples: ["recommendations"],
+    descriptionSlug: "recommendations",
+    seeAlso: ["experiences", "cv"],
   },
   repo: {
     name: "repo",

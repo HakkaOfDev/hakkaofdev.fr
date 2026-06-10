@@ -128,6 +128,7 @@
       "contact": "E-Mail, soziale Profile und bevorzugte Kontaktwege",
       "guestbook": "Hilfe für die Gästebuch-Unterbefehle",
       "cv": "PDF-Lebenslauf vorschauen und herunterladen",
+      "recommendations": "Berufliche Empfehlungen und Referenzen lesen",
       "spotify": "Hilfe für die Spotify-Unterbefehle",
       "theme": "Aktuelles Theme zeigen oder wechseln",
       "help": "Alle verfügbaren Befehle mit Beschreibungen anzeigen",
@@ -248,6 +249,11 @@
       "description": "Mein Lebenslauf als PDF",
       "openPreview": "Ausprobieren",
       "downloadPdf": "Herunterladen"
+    },
+    "recommendations": {
+      "recommendedBy": "Empfohlen von",
+      "readLetter": "Vollständiges Schreiben lesen",
+      "download": "Herunterladen"
     },
     "projects": {
       "openLabel": "Projekt öffnen: {name}",
