@@ -22,6 +22,7 @@ describe("command descriptors", () => {
       "reset",
       "about",
       "skills",
+      "recommendations",
       "guestbook",
       "spotify",
       "theme",
