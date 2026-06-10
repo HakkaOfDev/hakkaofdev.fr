@@ -10,6 +10,22 @@ export type ExperienceEntry = {
   companyUrl?: string;
 };
 
+export type RecommendationEntry = {
+  /** Experience slug this recommendation is bound to (must exist in EXPERIENCES). */
+  experienceSlug: string;
+  /** PDF filename under `public/recommendations/`. */
+  file: string;
+  /** Recommender identity (proper nouns; not localized). */
+  recommender: {
+    name: string;
+    role: string;
+    company: string;
+    url?: string;
+  };
+  /** Verbatim pull-quote from the letter (kept in the letter's language as a citation). */
+  quote: string;
+};
+
 export type SpokenLanguageEntry = {
   /** Key under `CV.spokenLanguages.{code}` for the translated language name. */
   code: string;
@@ -33,6 +49,27 @@ export const EXPERIENCES: ReadonlyArray<ExperienceEntry> = [
   {
     slug: "efficienceInformatique",
     companyUrl: "https://www.efficience-informatique.net",
+  },
+];
+
+/**
+ * Recommendation letters surfaced by the `recommendations` command.
+ * Each entry is bound to a real experience via `experienceSlug` (enforced by
+ * `tests/unit/lib/recommendations.test.ts`). The PDF lives under
+ * `public/recommendations/{file}`.
+ */
+export const RECOMMENDATIONS: ReadonlyArray<RecommendationEntry> = [
+  {
+    experienceSlug: "kabila",
+    file: "kabila.pdf",
+    recommender: {
+      name: "Manu Cabrera",
+      role: "CEO & Co-Founder",
+      company: "BRAVALTA & Kabila",
+      url: "https://bravalta.com",
+    },
+    quote:
+      "I recommend Alex without reservation to any company facing significant software and software-architecture challenges. If you are looking for a young, highly capable engineer with great attitude, energy, a strong technical foundation, an ability to keep learning, and excellent teamwork, Alex will be a fundamental piece of your team.",
   },
 ];
 

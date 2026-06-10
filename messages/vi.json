@@ -128,6 +128,7 @@
       "contact": "Email, mạng xã hội và cách liên hệ",
       "guestbook": "Hiển thị trợ giúp các lệnh con sổ lưu bút",
       "cv": "Xem trước và tải xuống CV PDF",
+      "recommendations": "Đọc các thư giới thiệu và tham chiếu chuyên môn",
       "spotify": "Hiển thị trợ giúp các lệnh con Spotify",
       "theme": "Hiển thị hoặc thay đổi chủ đề giao diện",
       "help": "Hiển thị tất cả lệnh khả dụng và mô tả",
@@ -248,6 +249,11 @@
       "description": "CV của tôi dạng PDF",
       "openPreview": "Thử ngay",
       "downloadPdf": "Tải xuống"
+    },
+    "recommendations": {
+      "recommendedBy": "Được giới thiệu bởi",
+      "readLetter": "Đọc toàn bộ thư",
+      "download": "Tải xuống"
     },
     "projects": {
       "openLabel": "Mở dự án: {name}",
