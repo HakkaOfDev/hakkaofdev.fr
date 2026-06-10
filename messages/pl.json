@@ -128,6 +128,7 @@
       "contact": "Email, social media i sposoby kontaktu",
       "guestbook": "Pomoc do podkomend księgi gości",
       "cv": "Podgląd i pobranie mojego CV w PDF",
+      "recommendations": "Przeczytaj profesjonalne rekomendacje i referencje",
       "spotify": "Pomoc do podkomend Spotify",
       "theme": "Pokaż lub zmień motyw interfejsu",
       "help": "Pokaż wszystkie dostępne komendy i opisy",
@@ -248,6 +249,11 @@
       "description": "Moje CV w PDF",
       "openPreview": "Wypróbuj",
       "downloadPdf": "Pobierz"
+    },
+    "recommendations": {
+      "recommendedBy": "Polecone przez",
+      "readLetter": "Przeczytaj cały list",
+      "download": "Pobierz"
     },
     "projects": {
       "openLabel": "Otwórz projekt: {name}",
