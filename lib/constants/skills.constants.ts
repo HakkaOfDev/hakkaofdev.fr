@@ -30,7 +30,10 @@ export const SKILLS: ReadonlyArray<SkillGroup> = [
       "Django",
     ],
   },
-  { slug: "stateData", values: ["TanStack Query", "Zustand", "Redux", "Zod"] },
+  {
+    slug: "stateData",
+    values: ["TanStack Query", "GraphQL", "Zustand", "Redux", "Zod"],
+  },
   { slug: "uiStyling", values: ["Tailwind", "shadcn/ui", "Motion", "Figma"] },
   { slug: "tooling", values: ["Biome", "Bun"] },
   { slug: "testing", values: ["Vitest", "Playwright"] },
