@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Digital Nomad & Software Engineer",
-    "description": "Digital nomad & Freelance Software Engineer. Open-source enthusiast crafting performant web experiences with React and Next.js.",
+    "description": "Digital nomad & Freelance Software Engineer with {years}+ years of experience. Open-source enthusiast crafting performant web experiences with React and Next.js.",
     "jobTitle": "Software Engineer",
     "location": "Châlons-en-Champagne, France",
     "ogImageAlt": "Alexandre Gossard",
@@ -25,9 +25,9 @@
     "greeting": "~ Welcome <wave>👋</wave>",
     "intro": "<tagline>Digital Nomad</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Open-source advocate",
-      "calisthenics": "Calisthenics devotee",
-      "stack": "React · Next.js"
+      "rate": "€600/day",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "Start",
@@ -436,7 +436,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software Engineer with 4+ years of experience building web and mobile apps for clients and teams. I lead frontend projects using React, Next.js, React Native, and Expo, with a focus on clean UI, smooth UX, responsive design, accessibility, and user-friendly products. I also enjoy contributing to open-source projects and working remotely as a digital nomad, collaborating with teams and clients from anywhere in the world.",
+    "summary": "Software Engineer with {years}+ years of experience building web and mobile apps for clients and teams. I lead frontend projects using React, Next.js, React Native, and Expo, with a focus on clean UI, smooth UX, responsive design, accessibility, and user-friendly products. I also enjoy contributing to open-source projects and working remotely as a digital nomad, collaborating with teams and clients from anywhere in the world.",
     "location": "Remote · Worldwide",
     "sections": {
       "summary": "Professional Summary",
@@ -447,12 +447,14 @@
       "languages": "Languages",
       "links": "Links"
     },
+    "period": {
+      "since": "Since {date}"
+    },
     "experiences": {
       "kabila": {
         "name": "Software Engineer",
         "company": "Kabila",
         "location": "Madrid, Spain",
-        "period": "Since July 2022",
         "descriptions": [
           "Lead a frontend team building production web apps with React and Next.js",
           "Own the technical roadmap, sprint planning, and architecture decisions",
@@ -465,7 +467,6 @@
         "name": "Freelance",
         "company": "Alexandre GOSSARD",
         "location": "Châlons-en-Champagne, France",
-        "period": "Since July 2022",
         "descriptions": [
           "Build full-stack web apps with React and Next.js for direct clients",
           "Ship cross-platform mobile apps to the App Store and Google Play",
@@ -478,7 +479,6 @@
         "name": "DevOps Engineer Apprentice",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, France",
-        "period": "September 2022 - August 2023",
         "descriptions": [
           "Built GitLab CI/CD pipelines for automated testing and deployment",
           "Containerized internal applications and services with Docker",
@@ -490,7 +490,6 @@
         "name": "System Administrator Intern",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, France",
-        "period": "March 2022 - June 2022",
         "descriptions": [
           "Administered Windows servers and supported day-to-day IT operations",
           "Implemented and maintained backup strategies for critical business data",
@@ -503,19 +502,16 @@
       "iutSecurity": {
         "name": "Bachelor's Degree, System Administration and Security",
         "location": "IUT Châlons · Châlons-en-Champagne, France",
-        "period": "2022-2023",
         "descriptions": ["Valedictorian"]
       },
       "iutNetworks": {
         "name": "Associate Degree, Networks and Telecommunications",
         "location": "IUT Châlons · Châlons-en-Champagne, France",
-        "period": "2020-2022",
         "descriptions": ["Salutatorian"]
       },
       "lyceeBac": {
         "name": "High School Diploma, Scientific Track",
         "location": "Lycée Jean Talon · Châlons-en-Champagne, France",
-        "period": "2019-2020",
         "descriptions": [
           "Specialised in ISN (Computer and digital sciences)",
           "With distinctions"

@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Digitale nomade & software-engineer",
-    "description": "Digitale nomade en freelance software-engineer. Als opensource-enthousiast bouw ik snelle webervaringen met React en Next.js.",
+    "description": "Digitale nomade en freelance software-engineer met meer dan {years} jaar ervaring. Als opensource-enthousiast bouw ik snelle webervaringen met React en Next.js.",
     "jobTitle": "Software-engineer",
     "location": "Châlons-en-Champagne, Frankrijk",
     "ogImageAlt": "Alexandre Gossard",
@@ -25,9 +25,9 @@
     "greeting": "~ Welkom <wave>👋</wave>",
     "intro": "<tagline>Digitale nomade</tagline> · <job>Software-engineer</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Voorvechter van open source",
-      "calisthenics": "Calisthenics-liefhebber",
-      "stack": "React · Next.js"
+      "rate": "€600/dag",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "Start",
@@ -505,7 +505,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software-engineer met meer dan 4 jaar ervaring in het bouwen van web- en mobiele apps voor klanten en teams. Ik leid frontend-projecten met React, Next.js, React Native en Expo, met focus op een strakke UI, soepele UX, responsive design, toegankelijkheid en gebruiksvriendelijke producten. Ik draag ook graag bij aan open-source projecten en werk op afstand als digitale nomade, in samenwerking met teams en klanten waar ook ter wereld.",
+    "summary": "Software-engineer met meer dan {years} jaar ervaring in het bouwen van web- en mobiele apps voor klanten en teams. Ik leid frontend-projecten met React, Next.js, React Native en Expo, met focus op een strakke UI, soepele UX, responsive design, toegankelijkheid en gebruiksvriendelijke producten. Ik draag ook graag bij aan open-source projecten en werk op afstand als digitale nomade, in samenwerking met teams en klanten waar ook ter wereld.",
     "location": "Op afstand · Wereldwijd",
     "sections": {
       "summary": "Professioneel profiel",
@@ -516,12 +516,14 @@
       "languages": "Talen",
       "links": "Links"
     },
+    "period": {
+      "since": "Sinds {date}"
+    },
     "experiences": {
       "kabila": {
         "name": "Software-engineer",
         "company": "Kabila",
         "location": "Madrid, Spanje",
-        "period": "Sinds juli 2022",
         "descriptions": [
           "Leid een frontend-team dat productie-webapps bouwt met React en Next.js",
           "Verantwoordelijk voor technische roadmap, sprintplanning en architectuurkeuzes",
@@ -534,7 +536,6 @@
         "name": "Freelance",
         "company": "Alexandre GOSSARD",
         "location": "Châlons-en-Champagne, Frankrijk",
-        "period": "Sinds juli 2022",
         "descriptions": [
           "Bouw full-stack webapps met React en Next.js voor directe klanten",
           "Lever cross-platform mobiele apps in de App Store en Google Play",
@@ -547,7 +548,6 @@
         "name": "Leerling DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Frankrijk",
-        "period": "September 2022 - augustus 2023",
         "descriptions": [
           "Bouwde GitLab CI/CD-pipelines voor geautomatiseerd testen en deployen",
           "Containeriseerde interne applicaties en services met Docker",
@@ -559,7 +559,6 @@
         "name": "Stagiair Systeembeheerder",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Frankrijk",
-        "period": "Maart 2022 - Juni 2022",
         "descriptions": [
           "Beheer van Windows-servers en ondersteuning van dagelijkse IT-operaties",
           "Implementatie en onderhoud van back-upstrategieën voor bedrijfskritische data",
@@ -572,19 +571,16 @@
       "iutSecurity": {
         "name": "Bachelor, Systeembeheer en Beveiliging",
         "location": "IUT Châlons · Châlons-en-Champagne, Frankrijk",
-        "period": "2022-2023",
         "descriptions": ["Beste van het jaar"]
       },
       "iutNetworks": {
         "name": "Associate Degree, Netwerken en Telecommunicatie",
         "location": "IUT Châlons · Châlons-en-Champagne, Frankrijk",
-        "period": "2020-2022",
         "descriptions": ["Tweede in het cohort"]
       },
       "lyceeBac": {
         "name": "Middelbare School Diploma, Wetenschappelijk Profiel",
         "location": "Lycée Jean Talon · Châlons-en-Champagne, Frankrijk",
-        "period": "2019-2020",
         "descriptions": [
           "Specialisatie ISN (Informatica en digitale wetenschappen)",
           "Met onderscheiding"

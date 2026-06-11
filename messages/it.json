@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Nomade digitale & ingegnere software",
-    "description": "Nomade digitale e ingegnere software freelance. Appassionato di open source, creo esperienze web performanti con React e Next.js.",
+    "description": "Nomade digitale e ingegnere software freelance con oltre {years} anni di esperienza. Appassionato di open source, creo esperienze web performanti con React e Next.js.",
     "jobTitle": "Ingegnere software",
     "location": "Châlons-en-Champagne, Francia",
     "ogImageAlt": "Alexandre Gossard",
@@ -25,9 +25,9 @@
     "greeting": "~ Benvenuto <wave>👋</wave>",
     "intro": "<tagline>Nomade digitale</tagline> · <job>Ingegnere software</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Sostenitore dell'open source",
-      "calisthenics": "Appassionato di calistenia",
-      "stack": "React · Next.js"
+      "rate": "600 €/giorno",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "Inizia",
@@ -395,7 +395,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software engineer con oltre 4 anni di esperienza nello sviluppo di applicazioni web e mobile per clienti e team. Guido progetti frontend con React, Next.js, React Native ed Expo, con attenzione a UI pulite, UX fluide, design responsive, accessibilità e prodotti facili da usare. Mi piace anche contribuire a progetti open-source e lavorare da remoto come nomade digitale, collaborando con team e clienti da ogni parte del mondo.",
+    "summary": "Software engineer con oltre {years} anni di esperienza nello sviluppo di applicazioni web e mobile per clienti e team. Guido progetti frontend con React, Next.js, React Native ed Expo, con attenzione a UI pulite, UX fluide, design responsive, accessibilità e prodotti facili da usare. Mi piace anche contribuire a progetti open-source e lavorare da remoto come nomade digitale, collaborando con team e clienti da ogni parte del mondo.",
     "location": "Remoto · In tutto il mondo",
     "sections": {
       "summary": "Riepilogo professionale",
@@ -406,12 +406,14 @@
       "languages": "Lingue",
       "links": "Link"
     },
+    "period": {
+      "since": "Da {date}"
+    },
     "experiences": {
       "kabila": {
         "name": "Ingegnere software",
         "company": "Kabila",
         "location": "Madrid, Spagna",
-        "period": "Da luglio 2022",
         "descriptions": [
           "Guido un team frontend che sviluppa applicazioni web in produzione con React e Next.js",
           "Curo la roadmap tecnica, la pianificazione degli sprint e le decisioni di architettura",
@@ -424,7 +426,6 @@
         "name": "Freelance",
         "company": "Alexandre GOSSARD",
         "location": "Châlons-en-Champagne, Francia",
-        "period": "Da luglio 2022",
         "descriptions": [
           "Costruisco app web full-stack con React e Next.js per clienti diretti",
           "Pubblico app mobile multipiattaforma su App Store e Google Play",
@@ -437,7 +438,6 @@
         "name": "Apprendistato",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Francia",
-        "period": "Settembre 2022 - Agosto 2023",
         "descriptions": [
           "Ho creato pipeline GitLab CI/CD per test e deployment automatizzati",
           "Ho containerizzato applicazioni e servizi interni con Docker",
@@ -449,7 +449,6 @@
         "name": "Tirocinante Amministrazione di Sistemi",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Francia",
-        "period": "Marzo 2022 - Giugno 2022",
         "descriptions": [
           "Amministrazione di server Windows e supporto quotidiano alle operazioni IT",
           "Implementazione e manutenzione di strategie di backup per dati aziendali critici",
@@ -462,19 +461,16 @@
       "iutSecurity": {
         "name": "Amministrazione e sicurezza dei sistemi (Licence professionnelle)",
         "location": "IUT Châlons (Châlons-en-Champagne, Francia)",
-        "period": "2022-2023",
         "descriptions": ["Migliore del corso"]
       },
       "iutNetworks": {
         "name": "DUT Reti e Telecomunicazioni",
         "location": "IUT Châlons (Châlons-en-Champagne, Francia)",
-        "period": "2020-2022",
         "descriptions": ["Secondo del corso"]
       },
       "lyceeBac": {
         "name": "Maturità scientifica (equivalente)",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Francia)",
-        "period": "2019-2020",
         "descriptions": [
           "Specializzazione ISN (Informatica e scienze digitali)",
           "Con lode"

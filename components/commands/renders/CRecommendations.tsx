@@ -2,11 +2,12 @@
 
 import { Briefcase, Download, Play, Quote } from "lucide-react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useFormatter, useTranslations } from "next-intl";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { EXPERIENCES, RECOMMENDATIONS } from "@/lib/constants";
 import { matchesGrep } from "@/lib/utils/grep.utils";
+import { formatPeriod } from "@/lib/utils/period.utils";
 
 const EXPERIENCE_BY_SLUG = new Map(EXPERIENCES.map((e) => [e.slug, e]));
 
@@ -14,6 +15,8 @@ function CRecommendations() {
   const t = useTranslations("Commands.recommendations");
   const tCommands = useTranslations("Commands");
   const tExp = useTranslations("CV.experiences");
+  const tPeriod = useTranslations("CV.period");
+  const format = useFormatter();
   const grep = useGrep();
   const grepRaw = useGrepRaw();
 
@@ -48,7 +51,9 @@ function CRecommendations() {
         const experience = EXPERIENCE_BY_SLUG.get(rec.experienceSlug);
         const company = tExp(`${rec.experienceSlug}.company` as never);
         const role = tExp(`${rec.experienceSlug}.name` as never);
-        const period = tExp(`${rec.experienceSlug}.period` as never);
+        const period = experience
+          ? formatPeriod(experience, format, tPeriod)
+          : null;
         const pdfUrl = `/recommendations/${rec.file}`;
 
         return (
@@ -105,9 +110,11 @@ function CRecommendations() {
                   )}
                   <span className="text-primary/70">· {role}</span>
                 </span>
-                <span className="text-[10px] text-muted-foreground/70">
-                  {period}
-                </span>
+                {period && (
+                  <span className="text-[10px] text-muted-foreground/70">
+                    {period}
+                  </span>
+                )}
               </div>
             </div>
 
