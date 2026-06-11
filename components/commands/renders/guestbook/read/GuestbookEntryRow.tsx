@@ -48,7 +48,7 @@ export function GuestbookEntryRow({
         isLast ? "pb-0" : "pb-3",
       )}
     >
-      <div className="absolute -start-[5px] top-[5px] size-2 rounded-full bg-quinary" />
+      <div className="absolute inset-s-[-5px] top-[5px] size-2 rounded-full bg-quinary" />
 
       <div className="flex items-baseline gap-2">
         <span className="shrink-0 font-mono text-muted-foreground/50 text-xs">

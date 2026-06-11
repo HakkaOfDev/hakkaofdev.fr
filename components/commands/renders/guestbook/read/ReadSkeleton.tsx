@@ -8,7 +8,7 @@ export function ReadSkeleton() {
           key={i}
           className="relative animate-pulse border-muted/40 border-s-2 ps-4 pb-3"
         >
-          <div className="absolute -start-[5px] top-[5px] size-2 rounded-full bg-muted" />
+          <div className="absolute inset-s-[-5px] top-[5px] size-2 rounded-full bg-muted" />
           <div className="flex items-center gap-2">
             <div className="h-2.5 w-6 rounded bg-muted" />
             <div className="h-3 w-24 rounded bg-muted" />
