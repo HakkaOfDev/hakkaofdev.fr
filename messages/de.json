@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Digitaler Nomade & Software-Ingenieur",
-    "description": "Digitaler Nomade & freiberuflicher Software-Ingenieur. Open-Source-Begeisterter, der performante Web-Erlebnisse mit React und Next.js gestaltet.",
+    "description": "Digitaler Nomade & freiberuflicher Software-Ingenieur mit über {years} Jahren Erfahrung. Open-Source-Begeisterter, der performante Web-Erlebnisse mit React und Next.js gestaltet.",
     "jobTitle": "Software-Ingenieur",
     "location": "Châlons-en-Champagne, Frankreich",
     "ogImageAlt": "Alexandre Gossard",
@@ -25,9 +25,9 @@
     "greeting": "~ Willkommen <wave>👋</wave>",
     "intro": "<tagline>Digitaler Nomade</tagline> · <job>Software-Ingenieur</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Open-Source-Verfechter",
-      "calisthenics": "Calisthenics-Enthusiast",
-      "stack": "React · Next.js"
+      "rate": "600 €/Tag",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "Start",
@@ -395,7 +395,7 @@
   "CV": {
     "documentTitleSuffix": "Lebenslauf",
     "subject": "Lebenslauf",
-    "summary": "Software-Ingenieur mit über 4 Jahren Erfahrung in der Entwicklung von Web- und Mobile-Apps für Kunden und Teams. Ich leite Frontend-Projekte mit React, Next.js, React Native und Expo, mit Fokus auf eine saubere UI, eine flüssige UX, responsives Design, Barrierefreiheit und benutzerfreundliche Produkte. Außerdem trage ich gerne zu Open-Source-Projekten bei und arbeite remote als digitaler Nomade, in Zusammenarbeit mit Teams und Kunden von überall auf der Welt.",
+    "summary": "Software-Ingenieur mit über {years} Jahren Erfahrung in der Entwicklung von Web- und Mobile-Apps für Kunden und Teams. Ich leite Frontend-Projekte mit React, Next.js, React Native und Expo, mit Fokus auf eine saubere UI, eine flüssige UX, responsives Design, Barrierefreiheit und benutzerfreundliche Produkte. Außerdem trage ich gerne zu Open-Source-Projekten bei und arbeite remote als digitaler Nomade, in Zusammenarbeit mit Teams und Kunden von überall auf der Welt.",
     "location": "Remote · Weltweit",
     "sections": {
       "summary": "Kurzprofil",
@@ -406,12 +406,14 @@
       "languages": "Sprachen",
       "links": "Links"
     },
+    "period": {
+      "since": "Seit {date}"
+    },
     "experiences": {
       "kabila": {
         "name": "Software-Ingenieur",
         "company": "Kabila",
         "location": "Madrid, Spanien",
-        "period": "Seit Juli 2022",
         "descriptions": [
           "Leite ein Frontend-Team beim Bau produktiver Web-Apps mit React und Next.js",
           "Verantworte technische Roadmap, Sprint-Planung und Architekturentscheidungen",
@@ -424,7 +426,6 @@
         "name": "Freelance",
         "company": "Alexandre GOSSARD",
         "location": "Châlons-en-Champagne, Frankreich",
-        "period": "Seit Juli 2022",
         "descriptions": [
           "Baue Full-Stack-Web-Apps mit React und Next.js für Direktkunden",
           "Veröffentliche plattformübergreifende Mobile-Apps im App Store und Google Play",
@@ -437,7 +438,6 @@
         "name": "Ausbildung",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Frankreich",
-        "period": "September 2022 - August 2023",
         "descriptions": [
           "Aufbau von GitLab-CI/CD-Pipelines für automatisiertes Testen und Deployment",
           "Containerisierung interner Anwendungen und Dienste mit Docker",
@@ -449,7 +449,6 @@
         "name": "Praktikant Systemadministration",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Frankreich",
-        "period": "März 2022 - Juni 2022",
         "descriptions": [
           "Verwaltung von Windows-Servern und Unterstützung des täglichen IT-Betriebs",
           "Implementierung und Pflege von Backup-Strategien für geschäftskritische Daten",
@@ -462,19 +461,16 @@
       "iutSecurity": {
         "name": "Systemadministration und Sicherheit (Berufsabschluss)",
         "location": "IUT Châlons (Châlons-en-Champagne, Frankreich)",
-        "period": "2022-2023",
         "descriptions": ["Jahrgangsbester"]
       },
       "iutNetworks": {
         "name": "DUT Netzwerke und Telekommunikation (Hochschulabschluss)",
         "location": "IUT Châlons (Châlons-en-Champagne, Frankreich)",
-        "period": "2020-2022",
         "descriptions": ["Jahrgangszweiter"]
       },
       "lyceeBac": {
         "name": "Wissenschaftliches Abitur",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Frankreich)",
-        "period": "2019-2020",
         "descriptions": [
           "Spezialisierung ISN (Informatik und digitale Technologien)",
           "Mit Auszeichnung"

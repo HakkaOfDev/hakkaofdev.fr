@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Ψηφιακός νομάδας & μηχανικός λογισμικού",
-    "description": "Ψηφιακός νομάδας και freelance μηχανικός λογισμικού. Λάτρης του open source, δημιουργώ γρήγορες εμπειρίες ιστού με React και Next.js.",
+    "description": "Ψηφιακός νομάδας και freelance μηχανικός λογισμικού με πάνω από {years} χρόνια εμπειρίας. Λάτρης του open source, δημιουργώ γρήγορες εμπειρίες ιστού με React και Next.js.",
     "jobTitle": "Μηχανικός λογισμικού",
     "location": "Châlons-en-Champagne, Γαλλία",
     "ogImageAlt": "Alexandre Gossard",
@@ -25,9 +25,9 @@
     "greeting": "~ Καλώς ήρθες <wave>👋</wave>",
     "intro": "<tagline>Ψηφιακός νομάδας</tagline> · <job>Μηχανικός λογισμικού</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Υπέρμαχος του open source",
-      "calisthenics": "Λάτρης της καλισθενικής",
-      "stack": "React · Next.js"
+      "rate": "600 €/ημέρα",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "Έναρξη",
@@ -505,7 +505,7 @@
   "CV": {
     "documentTitleSuffix": "Βιογραφικό",
     "subject": "Βιογραφικό",
-    "summary": "Μηχανικός λογισμικού με πάνω από 4 χρόνια εμπειρίας στην ανάπτυξη web και mobile εφαρμογών για πελάτες και ομάδες. Ηγούμαι frontend έργων χρησιμοποιώντας React, Next.js, React Native και Expo, με έμφαση σε καθαρό UI, ομαλό UX, responsive design, προσβασιμότητα και φιλικά προς τον χρήστη προϊόντα. Μου αρέσει επίσης να συνεισφέρω σε open-source έργα και να εργάζομαι εξ αποστάσεως ως ψηφιακός νομάς, συνεργαζόμενος με ομάδες και πελάτες από οποιοδήποτε σημείο του κόσμου.",
+    "summary": "Μηχανικός λογισμικού με πάνω από {years} χρόνια εμπειρίας στην ανάπτυξη web και mobile εφαρμογών για πελάτες και ομάδες. Ηγούμαι frontend έργων χρησιμοποιώντας React, Next.js, React Native και Expo, με έμφαση σε καθαρό UI, ομαλό UX, responsive design, προσβασιμότητα και φιλικά προς τον χρήστη προϊόντα. Μου αρέσει επίσης να συνεισφέρω σε open-source έργα και να εργάζομαι εξ αποστάσεως ως ψηφιακός νομάς, συνεργαζόμενος με ομάδες και πελάτες από οποιοδήποτε σημείο του κόσμου.",
     "location": "Εξ αποστάσεως · Παγκόσμια",
     "sections": {
       "summary": "Επαγγελματικό προφίλ",
@@ -516,12 +516,14 @@
       "languages": "Γλώσσες",
       "links": "Σύνδεσμοι"
     },
+    "period": {
+      "since": "{date} - σήμερα"
+    },
     "experiences": {
       "kabila": {
         "name": "Μηχανικός λογισμικού",
         "company": "Kabila",
         "location": "Μαδρίτη, Ισπανία",
-        "period": "Από τον Ιούλιο 2022",
         "descriptions": [
           "Ηγούμαι ομάδας frontend που χτίζει εφαρμογές παραγωγής με React και Next.js",
           "Έχω την ευθύνη του τεχνικού roadmap, του προγραμματισμού sprint και των αρχιτεκτονικών αποφάσεων",
@@ -534,7 +536,6 @@
         "name": "Freelance",
         "company": "Alexandre GOSSARD",
         "location": "Châlons-en-Champagne, Γαλλία",
-        "period": "Από τον Ιούλιο 2022",
         "descriptions": [
           "Χτίζω full-stack web εφαρμογές με React και Next.js για άμεσους πελάτες",
           "Παραδίδω cross-platform mobile εφαρμογές στο App Store και στο Google Play",
@@ -547,7 +548,6 @@
         "name": "Μαθητευόμενος DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Γαλλία",
-        "period": "Σεπτέμβριος 2022 - Αύγουστος 2023",
         "descriptions": [
           "Έχτισα GitLab CI/CD pipelines για αυτοματοποιημένες δοκιμές και deployment",
           "Δοχειροποίησα εσωτερικές εφαρμογές και υπηρεσίες με Docker",
@@ -559,7 +559,6 @@
         "name": "Πρακτικάριος Διαχειριστής Συστημάτων",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Γαλλία",
-        "period": "Μάρτιος 2022 - Ιούνιος 2022",
         "descriptions": [
           "Διαχείριση Windows servers και υποστήριξη καθημερινών IT λειτουργιών",
           "Σχεδιασμός και συντήρηση στρατηγικών backup για κρίσιμα εταιρικά δεδομένα",
@@ -572,19 +571,16 @@
       "iutSecurity": {
         "name": "Πτυχίο, Διαχείριση Συστημάτων και Ασφάλεια",
         "location": "IUT Châlons · Châlons-en-Champagne, Γαλλία",
-        "period": "2022-2023",
         "descriptions": ["Πρωτεύσας"]
       },
       "iutNetworks": {
         "name": "Δίπλωμα Τεχνολόγου, Δίκτυα και Τηλεπικοινωνίες",
         "location": "IUT Châlons · Châlons-en-Champagne, Γαλλία",
-        "period": "2020-2022",
         "descriptions": ["Δεύτερος του έτους"]
       },
       "lyceeBac": {
         "name": "Απολυτήριο Λυκείου, Επιστημονική Κατεύθυνση",
         "location": "Lycée Jean Talon · Châlons-en-Champagne, Γαλλία",
-        "period": "2019-2020",
         "descriptions": [
           "Ειδίκευση ISN (Πληροφορική και ψηφιακές επιστήμες)",
           "Με διάκριση"

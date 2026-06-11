@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Dijital göçebe ve yazılım mühendisi",
-    "description": "Dijital göçebe ve serbest çalışan yazılım mühendisi. Open source tutkunuyum, React ve Next.js ile yüksek performanslı web deneyimleri tasarlıyorum.",
+    "description": "Dijital göçebe ve {years}+ yıl deneyime sahip serbest çalışan yazılım mühendisi. Open source tutkunuyum, React ve Next.js ile yüksek performanslı web deneyimleri tasarlıyorum.",
     "jobTitle": "Yazılım mühendisi",
     "location": "Châlons-en-Champagne, Fransa",
     "ogImageAlt": "Alexandre Gossard",
@@ -25,9 +25,9 @@
     "greeting": "~ Hoş geldin <wave>👋</wave>",
     "intro": "<tagline>Dijital göçebe</tagline> · <job>Yazılım mühendisi</job> · <freelance>Serbest çalışan</freelance>",
     "tags": {
-      "openSource": "Open source savunucusu",
-      "calisthenics": "Kalistenik tutkunu",
-      "stack": "React · Next.js"
+      "rate": "600 €/gün",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "Başla",
@@ -505,7 +505,7 @@
   "CV": {
     "documentTitleSuffix": "Özgeçmiş",
     "subject": "Özgeçmiş",
-    "summary": "Müşteriler ve ekipler için web ve mobil uygulamalar geliştirme konusunda 4+ yıl deneyime sahip bir yazılım mühendisi. React, Next.js, React Native ve Expo kullanarak frontend projelerine liderlik ediyor; temiz bir UI, akıcı bir UX, duyarlı tasarım, erişilebilirlik ve kullanıcı dostu ürünlere odaklanıyorum. Ayrıca açık kaynak projelere katkıda bulunmayı ve dijital göçebe olarak uzaktan çalışmayı seviyor, dünyanın her yerinden ekipler ve müşterilerle iş birliği yapıyorum.",
+    "summary": "Müşteriler ve ekipler için web ve mobil uygulamalar geliştirme konusunda {years}+ yıl deneyime sahip bir yazılım mühendisi. React, Next.js, React Native ve Expo kullanarak frontend projelerine liderlik ediyor; temiz bir UI, akıcı bir UX, duyarlı tasarım, erişilebilirlik ve kullanıcı dostu ürünlere odaklanıyorum. Ayrıca açık kaynak projelere katkıda bulunmayı ve dijital göçebe olarak uzaktan çalışmayı seviyor, dünyanın her yerinden ekipler ve müşterilerle iş birliği yapıyorum.",
     "location": "Uzaktan · Dünya çapında",
     "sections": {
       "summary": "Mesleki profil",
@@ -516,12 +516,14 @@
       "languages": "Diller",
       "links": "Bağlantılar"
     },
+    "period": {
+      "since": "{date} - halen"
+    },
     "experiences": {
       "kabila": {
         "name": "Yazılım Mühendisi",
         "company": "Kabila",
         "location": "Madrid, İspanya",
-        "period": "Temmuz 2022'den itibaren",
         "descriptions": [
           "React ve Next.js ile üretim web uygulamaları geliştiren bir frontend ekibine liderlik ediyorum",
           "Teknik yol haritası, sprint planlaması ve mimari kararlardan sorumluyum",
@@ -534,7 +536,6 @@
         "name": "Serbest Çalışan",
         "company": "Alexandre GOSSARD",
         "location": "Châlons-en-Champagne, Fransa",
-        "period": "Temmuz 2022'den itibaren",
         "descriptions": [
           "Doğrudan müşteriler için React ve Next.js ile full-stack web uygulamaları geliştiriyorum",
           "App Store ve Google Play'e çapraz platform mobil uygulamalar yayınlıyorum",
@@ -547,7 +548,6 @@
         "name": "Çıraklık",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Fransa",
-        "period": "Eylül 2022 - Ağustos 2023",
         "descriptions": [
           "Otomatik test ve dağıtım için GitLab CI/CD pipeline'ları oluşturdum",
           "İç uygulamaları ve servisleri Docker ile konteynerize ettim",
@@ -559,7 +559,6 @@
         "name": "Sistem Yöneticisi Stajyeri",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Fransa",
-        "period": "Mart 2022 - Haziran 2022",
         "descriptions": [
           "Windows sunucularının yönetimi ve günlük BT operasyonlarının desteklenmesi",
           "Kritik iş verileri için yedekleme stratejilerinin uygulanması ve sürdürülmesi",
@@ -572,19 +571,16 @@
       "iutSecurity": {
         "name": "Sistem Yönetimi ve Güvenlik (mesleki lisans)",
         "location": "IUT Châlons (Châlons-en-Champagne, Fransa)",
-        "period": "2022-2023",
         "descriptions": ["Sınıf birincisi"]
       },
       "iutNetworks": {
         "name": "DUT Ağlar ve Telekomünikasyon (teknik diploma)",
         "location": "IUT Châlons (Châlons-en-Champagne, Fransa)",
-        "period": "2020-2022",
         "descriptions": ["Mezuniyet ikincisi"]
       },
       "lyceeBac": {
         "name": "Bilim Bakaloryası (A-level eşdeğeri)",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Fransa)",
-        "period": "2019-2020",
         "descriptions": [
           "ISN uzmanlığı (Bilgisayar ve dijital bilimler)",
           "Üstün başarıyla"
