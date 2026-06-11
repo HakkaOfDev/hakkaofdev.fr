@@ -29,7 +29,6 @@ function WelcomeHero({
           src="/avatar.jpg"
           alt="Alexandre Gossard"
           className="aspect-square shrink-0 rounded-lg object-cover object-top shadow-sm ring-1 ring-border/60 dark:ring-overlay-medium"
-          quality={100}
           width={88}
           height={88}
           sizes="176px"
