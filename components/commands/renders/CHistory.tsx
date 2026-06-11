@@ -3,7 +3,7 @@
 import { Info } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useMemo } from "react";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, RevealGroup } from "@/components/AnimatedComponents";
 import { useCommands } from "@/components/providers/CommandsProvider";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { Shortcut } from "@/components/ui/Shortcut";
@@ -65,7 +65,7 @@ function CHistory() {
         </p>
       </div>
 
-      <div className="grid grid-cols-[auto_max-content_1fr] items-center gap-x-3 gap-y-1.5">
+      <RevealGroup className="grid grid-cols-[auto_max-content_1fr] items-center gap-x-3 gap-y-1.5">
         {rows.map((row) => (
           <div
             key={row.id}
@@ -84,7 +84,7 @@ function CHistory() {
             />
           </div>
         ))}
-      </div>
+      </RevealGroup>
     </AnimatedSpan>
   );
 }

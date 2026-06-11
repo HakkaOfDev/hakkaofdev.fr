@@ -55,14 +55,12 @@ describe("CommandItem", () => {
     });
   });
 
-  it("resolves a known command renderer and stops showing the loading dots", async () => {
-    const { container } = renderItem("clear");
+  it("resolves a known command renderer and stops showing the resolving placeholder", async () => {
+    renderItem("clear");
+    // While the dynamic import is pending, the resolving placeholder shows;
+    // once it resolves it must disappear (no artificial delay gate anymore).
     await waitFor(() => {
-      // After the dynamic import resolves, the loading dots should disappear
-      // and "Resolving command…" should not be shown.
-      expect(
-        container.querySelector('[class*="animate-pulse"]'),
-      ).not.toBeNull();
+      expect(screen.queryByText(/Resolving command/)).toBeNull();
     });
   });
 

@@ -3,7 +3,7 @@
 import { Info, Trash2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useState } from "react";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, RevealGroup } from "@/components/AnimatedComponents";
 import { ALIAS_COMMANDS } from "@/components/commands/registries/alias.registry";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { Shortcut } from "@/components/ui/Shortcut";
@@ -169,7 +169,7 @@ function CAlias({ input }: { input: string }) {
           {grep ? t("noMatches", { pattern: grepRaw }) : t("empty")}
         </p>
       ) : (
-        <div className="grid gap-1.5">
+        <RevealGroup className="gap-1.5">
           {entries.map(([name, value]) => (
             <div
               key={name}
@@ -189,7 +189,7 @@ function CAlias({ input }: { input: string }) {
               </button>
             </div>
           ))}
-        </div>
+        </RevealGroup>
       )}
 
       <p className="text-muted-foreground/60 text-xs italic">

@@ -1,7 +1,7 @@
 "use client";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { domAnimation, LazyMotion } from "motion/react";
+import { domAnimation, LazyMotion, MotionConfig } from "motion/react";
 import { DeferredFontLoader } from "@/components/DeferredFontLoader";
 import { ThemeEngineProvider } from "@/components/providers/ThemeProvider";
 import { CommandsProvider } from "./CommandsProvider";
@@ -20,7 +20,7 @@ function Providers({ children }: { children: React.ReactNode }) {
         <ThemeEngineProvider>
           <DeferredFontLoader />
           <LazyMotion features={domAnimation} strict>
-            {children}
+            <MotionConfig reducedMotion="user">{children}</MotionConfig>
           </LazyMotion>
         </ThemeEngineProvider>
       </CommandsProvider>

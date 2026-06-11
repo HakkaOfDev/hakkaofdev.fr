@@ -3,7 +3,7 @@
 import { Briefcase, Download, Play, Quote } from "lucide-react";
 import Link from "next/link";
 import { useFormatter, useTranslations } from "next-intl";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, RevealGroup } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { EXPERIENCES, RECOMMENDATIONS } from "@/lib/constants";
 import { matchesGrep } from "@/lib/utils/grep.utils";
@@ -46,7 +46,7 @@ function CRecommendations() {
   }
 
   return (
-    <AnimatedSpan className="gap-4">
+    <RevealGroup className="gap-4">
       {visible.map((rec) => {
         const experience = EXPERIENCE_BY_SLUG.get(rec.experienceSlug);
         const company = tExp(`${rec.experienceSlug}.company` as never);
@@ -141,7 +141,7 @@ function CRecommendations() {
           </div>
         );
       })}
-    </AnimatedSpan>
+    </RevealGroup>
   );
 }
 

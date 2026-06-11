@@ -1,8 +1,9 @@
 "use client";
 
 import { type QueryKey, useQuery } from "@tanstack/react-query";
-import { Loader } from "lucide-react";
 import type { ReactNode } from "react";
+import { RevealSwap } from "@/components/AnimatedComponents";
+import { CommandLoader } from "@/components/commands/CommandLoader";
 import SpotifyUnavailable from "./SpotifyUnavailable";
 
 export default function SpotifyQuery<T>({
@@ -23,8 +24,11 @@ export default function SpotifyQuery<T>({
     retry: false,
   });
 
-  if (isLoading) return <Loader size={16} className="animate-spin" />;
-  if (!data) return <SpotifyUnavailable />;
-
-  return children(data);
+  // Reuse the command's own pulsing-dots loader so the loading state stays
+  // identical from the artificial beat through to the real data.
+  return (
+    <RevealSwap loading={isLoading} skeleton={<CommandLoader />}>
+      {!data ? <SpotifyUnavailable /> : children(data)}
+    </RevealSwap>
+  );
 }

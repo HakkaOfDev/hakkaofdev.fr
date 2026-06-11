@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, RevealGroup } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { PROJECTS } from "@/lib/constants";
 import { matchesGrep } from "@/lib/utils/grep.utils";
@@ -35,7 +35,7 @@ function CProjects() {
   }
 
   return (
-    <AnimatedSpan className="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <RevealGroup className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {visibleProjects.map((project) => {
         const name = tProjects(`${project.slug}.name` as never);
         const description = tProjects(`${project.slug}.description` as never);
@@ -50,6 +50,7 @@ function CProjects() {
                     ? "object-cover transition-all duration-300 group-hover:scale-105"
                     : "object-cover"
                 }
+                sizes="(max-width: 768px) 100vw, 50vw"
                 fill
               />
             </div>
@@ -93,7 +94,7 @@ function CProjects() {
           </Link>
         );
       })}
-    </AnimatedSpan>
+    </RevealGroup>
   );
 }
 

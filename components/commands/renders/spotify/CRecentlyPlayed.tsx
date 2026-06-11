@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { getRecentlyPlayed } from "@/app/actions";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, TypeLines } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { dateLocaleMap } from "@/i18n/date-locales";
 import type { Locale } from "@/i18n/routing";
@@ -37,8 +37,9 @@ function CRecentlyPlayed() {
         }
 
         return (
-          <AnimatedSpan className="gap-2">
-            {items.map((item) => (
+          <TypeLines
+            className="gap-2"
+            lines={items.map((item) => (
               <Link
                 key={item.played_at}
                 href={item.track.external_urls.spotify}
@@ -77,7 +78,7 @@ function CRecentlyPlayed() {
                 </div>
               </Link>
             ))}
-          </AnimatedSpan>
+          />
         );
       }}
     </SpotifyQuery>
