@@ -11,7 +11,11 @@ import {
 } from "lucide-react";
 import { useFormatter, useTranslations } from "next-intl";
 import { getStats } from "@/app/actions";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import {
+  AnimatedSpan,
+  RevealGroup,
+  RevealSwap,
+} from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { cn } from "@/lib/utils";
 import { filterByGrep } from "@/lib/utils/grep.utils";
@@ -171,11 +175,11 @@ function StatsContent({
   return (
     <AnimatedSpan className="gap-2">
       <RangeIndicator range={range} unknown={unknown} />
-      <div className="grid max-w-md grid-cols-2 gap-2">
+      <RevealGroup className="grid max-w-md grid-cols-2 gap-2">
         {visible.map((stat) => (
           <StatCard key={stat.label} {...stat} />
         ))}
-      </div>
+      </RevealGroup>
     </AnimatedSpan>
   );
 }
@@ -195,13 +199,15 @@ export function CStatsOverview({
     retry: false,
   });
 
-  if (isLoading) return <StatsSkeleton />;
-  if (!data)
-    return (
-      <AnimatedSpan className="gap-1">
-        <p className="text-destructive">{t("failed")}</p>
-      </AnimatedSpan>
-    );
-
-  return <StatsContent data={data} range={range} unknown={unknown} />;
+  return (
+    <RevealSwap loading={isLoading} skeleton={<StatsSkeleton />}>
+      {!data ? (
+        <AnimatedSpan className="gap-1">
+          <p className="text-destructive">{t("failed")}</p>
+        </AnimatedSpan>
+      ) : (
+        <StatsContent data={data} range={range} unknown={unknown} />
+      )}
+    </RevealSwap>
+  );
 }

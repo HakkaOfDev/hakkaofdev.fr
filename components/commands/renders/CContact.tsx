@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, TypeLines } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { SITE, SOCIALS } from "@/lib/constants";
 import { filterByGrep, matchesGrep } from "@/lib/utils/grep.utils";
@@ -43,55 +43,70 @@ function CContact() {
     );
   }
 
-  return (
-    <AnimatedSpan className="gap-2">
-      {showIntro && <p className="text-muted-foreground">{t("intro")}</p>}
+  const lines: React.ReactNode[] = [];
 
-      {showEmail && (
-        <p className="text-muted-foreground">
-          {t("primaryEmail")}{" "}
-          <Link
-            href={`mailto:${SITE.email}`}
-            dir="ltr"
-            className="font-semibold text-primary transition-colors duration-200 hover:text-primary/80"
-          >
-            {SITE.email}
-          </Link>
-        </p>
-      )}
-      {showLocation && (
-        <p className="text-muted-foreground">
-          {t("location")}{" "}
-          <span className="font-semibold text-foreground">
-            {tMeta("location")}
-          </span>
-        </p>
-      )}
+  if (showIntro) {
+    lines.push(
+      <p key="intro" className="text-muted-foreground">
+        {t("intro")}
+      </p>,
+    );
+  }
 
-      {showSocialsHeader && visibleSocials.length > 0 && (
-        <>
-          <p className="text-muted-foreground">{t("socialProfiles")}</p>
-          <ul className="grid list-disc gap-1 ps-4">
-            {visibleSocials.map((social) => (
-              <li key={social.name}>
-                <Link
-                  href={social.url}
-                  target="_blank"
-                  className="font-semibold text-secondary transition-colors duration-200 hover:text-secondary/80"
-                >
-                  {social.name}
-                </Link>
-                <span className="text-muted-foreground" dir="ltr">
-                  {" "}
-                  · {getDisplayLink(social.url)}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-    </AnimatedSpan>
-  );
+  if (showEmail) {
+    lines.push(
+      <p key="email" className="text-muted-foreground">
+        {t("primaryEmail")}{" "}
+        <Link
+          href={`mailto:${SITE.email}`}
+          dir="ltr"
+          className="font-semibold text-primary transition-colors duration-200 hover:text-primary/80"
+        >
+          {SITE.email}
+        </Link>
+      </p>,
+    );
+  }
+
+  if (showLocation) {
+    lines.push(
+      <p key="location" className="text-muted-foreground">
+        {t("location")}{" "}
+        <span className="font-semibold text-foreground">
+          {tMeta("location")}
+        </span>
+      </p>,
+    );
+  }
+
+  if (showSocialsHeader && visibleSocials.length > 0) {
+    lines.push(
+      <p key="socials-header" className="text-muted-foreground">
+        {t("socialProfiles")}
+      </p>,
+    );
+    lines.push(
+      <ul key="socials-list" className="grid list-disc gap-1 ps-4">
+        {visibleSocials.map((social) => (
+          <li key={social.name}>
+            <Link
+              href={social.url}
+              target="_blank"
+              className="font-semibold text-secondary transition-colors duration-200 hover:text-secondary/80"
+            >
+              {social.name}
+            </Link>
+            <span className="text-muted-foreground" dir="ltr">
+              {" "}
+              · {getDisplayLink(social.url)}
+            </span>
+          </li>
+        ))}
+      </ul>,
+    );
+  }
+
+  return <TypeLines className="gap-2" lines={lines} />;
 }
 
 export default CContact;

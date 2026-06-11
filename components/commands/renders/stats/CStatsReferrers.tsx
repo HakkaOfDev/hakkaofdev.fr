@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import { useMemo } from "react";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 import { getReferrerBreakdown } from "@/app/actions";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, RevealSwap } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import {
   type ChartConfig,
@@ -71,92 +71,96 @@ export function CStatsReferrers({
     [t],
   );
 
-  if (isLoading) return <ReferrersSkeleton />;
-
   if (!data) {
     return (
-      <AnimatedSpan className="gap-2">
-        <p className="text-destructive">{t("failed")}</p>
-      </AnimatedSpan>
+      <RevealSwap loading={isLoading} skeleton={<ReferrersSkeleton />}>
+        <AnimatedSpan className="gap-2">
+          <p className="text-destructive">{t("failed")}</p>
+        </AnimatedSpan>
+      </RevealSwap>
     );
   }
 
   if (visible.length === 0) {
     return (
-      <AnimatedSpan className="gap-2">
-        <RangeIndicator range={range} unknown={unknown} />
-        <div className="flex items-center gap-1.5">
-          <ExternalLink size={12} className="text-quaternary" />
-          <p className="font-semibold text-foreground text-xs">
-            {t("referrersTitle")}
+      <RevealSwap loading={isLoading} skeleton={<ReferrersSkeleton />}>
+        <AnimatedSpan className="gap-2">
+          <RangeIndicator range={range} unknown={unknown} />
+          <div className="flex items-center gap-1.5">
+            <ExternalLink size={12} className="text-quaternary" />
+            <p className="font-semibold text-foreground text-xs">
+              {t("referrersTitle")}
+            </p>
+          </div>
+          <p className="text-muted-foreground text-xs">
+            {grep
+              ? tCommands("noMatches", { pattern: grepRaw })
+              : t("emptyReferrers")}
           </p>
-        </div>
-        <p className="text-muted-foreground text-xs">
-          {grep
-            ? tCommands("noMatches", { pattern: grepRaw })
-            : t("emptyReferrers")}
-        </p>
-      </AnimatedSpan>
+        </AnimatedSpan>
+      </RevealSwap>
     );
   }
 
   return (
-    <AnimatedSpan className="gap-3">
-      <RangeIndicator range={range} unknown={unknown} />
-      <div className="flex items-center gap-1.5">
-        <ExternalLink size={12} className="text-quaternary" />
-        <p className="font-semibold text-foreground text-xs">
-          {t("referrersTitle")}{" "}
-          <span className="font-normal text-muted-foreground">
-            ({t("uniqueByReferrer", { count: visible.length })})
-          </span>
-        </p>
-      </div>
+    <RevealSwap loading={isLoading} skeleton={<ReferrersSkeleton />}>
+      <AnimatedSpan className="gap-3">
+        <RangeIndicator range={range} unknown={unknown} />
+        <div className="flex items-center gap-1.5">
+          <ExternalLink size={12} className="text-quaternary" />
+          <p className="font-semibold text-foreground text-xs">
+            {t("referrersTitle")}{" "}
+            <span className="font-normal text-muted-foreground">
+              ({t("uniqueByReferrer", { count: visible.length })})
+            </span>
+          </p>
+        </div>
 
-      <ChartContainer
-        config={chartConfig}
-        className="aspect-auto h-60 w-full max-w-xl"
-      >
-        <BarChart
-          data={chartData}
-          layout="vertical"
-          margin={{ top: 4, right: 12, left: 8, bottom: 0 }}
+        <ChartContainer
+          config={chartConfig}
+          className="aspect-auto h-60 w-full max-w-xl"
         >
-          <CartesianGrid horizontal={false} strokeDasharray="3 3" />
-          <XAxis
-            type="number"
-            tickLine={false}
-            axisLine={false}
-            tickMargin={4}
-            tick={{ fontSize: 10 }}
-          />
-          <YAxis
-            type="category"
-            dataKey="label"
-            tickLine={false}
-            axisLine={false}
-            tickMargin={4}
-            width={140}
-            tick={{ fontSize: 10 }}
-          />
-          <ChartTooltip
-            cursor={{ fill: "var(--muted)", opacity: 0.4 }}
-            content={
-              <ChartTooltipContent
-                indicator="dot"
-                labelFormatter={(_label, payload) =>
-                  payload?.[0]?.payload?.host ?? _label
-                }
-              />
-            }
-          />
-          <Bar
-            dataKey="unique_count"
-            fill="var(--color-unique_count)"
-            radius={[0, 4, 4, 0]}
-          />
-        </BarChart>
-      </ChartContainer>
-    </AnimatedSpan>
+          <BarChart
+            data={chartData}
+            layout="vertical"
+            margin={{ top: 4, right: 12, left: 8, bottom: 0 }}
+          >
+            <CartesianGrid horizontal={false} strokeDasharray="3 3" />
+            <XAxis
+              type="number"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={4}
+              tick={{ fontSize: 10 }}
+            />
+            <YAxis
+              type="category"
+              dataKey="label"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={4}
+              width={140}
+              tick={{ fontSize: 10 }}
+            />
+            <ChartTooltip
+              cursor={{ fill: "var(--muted)", opacity: 0.4 }}
+              content={
+                <ChartTooltipContent
+                  indicator="dot"
+                  labelFormatter={(_label, payload) =>
+                    payload?.[0]?.payload?.host ?? _label
+                  }
+                />
+              }
+            />
+            <Bar
+              dataKey="unique_count"
+              fill="var(--color-unique_count)"
+              radius={[0, 4, 4, 0]}
+            />
+          </BarChart>
+        </ChartContainer>
+      </AnimatedSpan>
+    </RevealSwap>
   );
 }

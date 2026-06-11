@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, TypeLines } from "@/components/AnimatedComponents";
 import { useGrep } from "@/components/providers/PipelineProvider";
 import { Shortcut } from "@/components/ui/Shortcut";
 import { MAN_PAGE_NAMES, MAN_PAGES, type ManPage } from "@/lib/constants";
@@ -92,54 +92,57 @@ function CMan({ input }: { input: string }) {
   })();
 
   return (
-    <AnimatedSpan className="gap-3">
-      <p className="font-semibold text-primary">
-        {t("title", { name: page.name.toUpperCase() })}
-      </p>
+    <TypeLines
+      className="gap-3"
+      lines={[
+        <p key="title" className="font-semibold text-primary">
+          {t("title", { name: page.name.toUpperCase() })}
+        </p>,
 
-      <Section title={t("sections.name")}>
-        <span className="font-mono text-foreground">{page.name}</span>
-        <span className="text-muted-foreground"> — {page.synopsis}</span>
-      </Section>
+        <Section key="name" title={t("sections.name")}>
+          <span className="font-mono text-foreground">{page.name}</span>
+          <span className="text-muted-foreground"> — {page.synopsis}</span>
+        </Section>,
 
-      <Section title={t("sections.synopsis")}>
-        <span className="font-mono text-foreground">{page.usage}</span>
-      </Section>
+        <Section key="synopsis" title={t("sections.synopsis")}>
+          <span className="font-mono text-foreground">{page.usage}</span>
+        </Section>,
 
-      <Section title={t("sections.description")}>
-        <span className="text-muted-foreground">{description}</span>
-      </Section>
+        <Section key="description" title={t("sections.description")}>
+          <span className="text-muted-foreground">{description}</span>
+        </Section>,
 
-      {examples.length > 0 && (
-        <Section title={t("sections.examples")}>
-          <div className="grid gap-1">
-            {examples.map((ex) => (
-              <Shortcut
-                key={ex}
-                label={ex}
-                command={ex}
-                className="justify-self-start font-mono"
-              />
-            ))}
-          </div>
-        </Section>
-      )}
+        examples.length > 0 && (
+          <Section key="examples" title={t("sections.examples")}>
+            <div className="grid gap-1">
+              {examples.map((ex) => (
+                <Shortcut
+                  key={ex}
+                  label={ex}
+                  command={ex}
+                  className="justify-self-start font-mono"
+                />
+              ))}
+            </div>
+          </Section>
+        ),
 
-      {page.seeAlso && page.seeAlso.length > 0 && (
-        <Section title={t("sections.seeAlso")}>
-          <div className="flex flex-wrap gap-1.5">
-            {page.seeAlso.map((ref) => (
-              <Shortcut
-                key={ref}
-                label={ref}
-                command={`man ${ref}`}
-                className="px-1.5 py-0 text-xs"
-              />
-            ))}
-          </div>
-        </Section>
-      )}
-    </AnimatedSpan>
+        page.seeAlso && page.seeAlso.length > 0 && (
+          <Section key="seeAlso" title={t("sections.seeAlso")}>
+            <div className="flex flex-wrap gap-1.5">
+              {page.seeAlso.map((ref) => (
+                <Shortcut
+                  key={ref}
+                  label={ref}
+                  command={`man ${ref}`}
+                  className="px-1.5 py-0 text-xs"
+                />
+              ))}
+            </div>
+          </Section>
+        ),
+      ]}
+    />
   );
 }
 
