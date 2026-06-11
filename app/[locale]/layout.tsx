@@ -15,7 +15,12 @@ import Footer from "@/components/Footer";
 import Providers from "@/components/providers/Providers";
 import { getScriptFontVariable } from "@/i18n/fonts";
 import { getDirection, type Locale, routing } from "@/i18n/routing";
-import { GITHUB_URL, SITE, SOCIALS } from "@/lib/constants";
+import {
+  GITHUB_URL,
+  getYearsOfExperience,
+  SITE,
+  SOCIALS,
+} from "@/lib/constants";
 import { getSiteUrl } from "@/lib/site-url";
 import { cn } from "@/lib/utils";
 import "../globals.css";
@@ -63,7 +68,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
   const title = t("title");
-  const description = t("description");
+  const description = t("description", { years: getYearsOfExperience() });
   const keywords = t.raw("keywords") as string[];
   const ogImageAlt = t("ogImageAlt");
   const canonicalPath = buildCanonicalPath(locale);
@@ -159,7 +164,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
     url: siteUrl,
     image: new URL("/avatar.jpg", siteUrl).toString(),
     jobTitle: t("jobTitle"),
-    description: t("description"),
+    description: t("description", { years: getYearsOfExperience() }),
     worksFor: {
       "@type": "Organization",
       name: SITE.employer.name,

@@ -1,14 +1,16 @@
-import { getTranslations } from "next-intl/server";
+import { getFormatter, getTranslations } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import {
   EDUCATION,
   EXPERIENCES,
+  getYearsOfExperience,
   LANGUAGES,
   PROJECTS,
   SITE,
   SKILLS,
   SOCIALS,
 } from "@/lib/constants";
+import { formatPeriod } from "@/lib/utils/period.utils";
 
 export const CV_FILE_NAME_BASE = "alexandre-gossard-cv";
 export const CV_PREVIEW_URL = "/api/cv";
@@ -67,7 +69,9 @@ export type CvData = {
 
 export async function getCvData(locale: Locale): Promise<CvData> {
   const tCv = await getTranslations({ locale, namespace: "CV" });
+  const tPeriod = await getTranslations({ locale, namespace: "CV.period" });
   const tMeta = await getTranslations({ locale, namespace: "Metadata" });
+  const format = await getFormatter({ locale });
 
   const projects = PROJECTS.slice(0, 5).map((p) => ({
     slug: p.slug,
@@ -81,7 +85,7 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     const descriptionsKey = `experiences.${e.slug}.descriptions` as never;
     return {
       slug: e.slug,
-      period: tCv(`experiences.${e.slug}.period` as never),
+      period: formatPeriod(e, format, tPeriod),
       title: tCv(`experiences.${e.slug}.name` as never),
       company: tCv(`experiences.${e.slug}.company` as never),
       companyUrl: e.companyUrl,
@@ -94,7 +98,7 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     const descriptionsKey = `education.${edu.slug}.descriptions` as never;
     return {
       slug: edu.slug,
-      period: tCv(`education.${edu.slug}.period` as never),
+      period: formatPeriod(edu, format, tPeriod),
       name: tCv(`education.${edu.slug}.name` as never),
       location: tCv(`education.${edu.slug}.location` as never),
       descriptions: (tCv.raw(descriptionsKey) as string[]) ?? [],
@@ -124,7 +128,7 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     website: SITE.url,
     email: SITE.email,
     location: tCv("location"),
-    summary: tCv("summary"),
+    summary: tCv("summary", { years: getYearsOfExperience() }),
     sections: {
       summary: tCv("sections.summary"),
       experience: tCv("sections.experience"),
