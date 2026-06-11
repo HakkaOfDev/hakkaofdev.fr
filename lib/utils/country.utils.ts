@@ -3,7 +3,7 @@
  * Returns a placeholder for unknown / invalid codes.
  */
 export function countryCodeToFlag(code: string | null | undefined): string {
-  if (!code || code.length !== 2) return "🏳";
+  if (code?.length !== 2) return "🏳";
 
   const upper = code.toUpperCase();
   const a = upper.charCodeAt(0);
