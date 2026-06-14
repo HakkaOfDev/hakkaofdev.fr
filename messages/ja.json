@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | デジタルノマド & ソフトウェアエンジニア",
-    "description": "デジタルノマド兼フリーランスのソフトウェアエンジニア。オープンソース愛好家として、React と Next.js でパフォーマンスの高いウェブ体験を作っています。",
+    "description": "{years}年以上の経験を持つ、デジタルノマド兼フリーランスのソフトウェアエンジニア。React、Next.js、React Native、Expo でパフォーマンスの高いウェブ・モバイルアプリを作っています。",
     "jobTitle": "ソフトウェアエンジニア",
     "location": "フランス、シャロン・アン・シャンパーニュ",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "フロントエンド開発者",
       "デジタルノマド",
-      "オープンソース",
       "モダン技術",
       "hakkaofdev",
       "kabila.app",
@@ -25,9 +24,9 @@
     "greeting": "~ ようこそ <wave>👋</wave>",
     "intro": "<tagline>デジタルノマド</tagline> · <job>ソフトウェアエンジニア</job> · <freelance>フリーランス</freelance>",
     "tags": {
-      "openSource": "オープンソース推進者",
-      "calisthenics": "自重トレーニング愛好者",
-      "stack": "React · Next.js"
+      "rate": "600€/日",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "はじめに",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "デジタルノマド",
       "nextjs": "Next.js",
-      "uiEngineering": "UI エンジニアリング",
-      "openSource": "オープンソース"
+      "uiEngineering": "UI エンジニアリング"
     },
     "footer": "ポートフォリオ"
   },
@@ -395,7 +393,7 @@
   "CV": {
     "documentTitleSuffix": "履歴書",
     "subject": "履歴書",
-    "summary": "ウェブ・モバイルアプリの開発で4年以上の経験を持つソフトウェアエンジニア。クライアントやチーム向けに、React、Next.js、React Native、Expo を用いてフロントエンドプロジェクトを率い、クリーンな UI、滑らかな UX、レスポンシブデザイン、アクセシビリティ、そして使いやすいプロダクトを重視しています。オープンソースへの貢献や、デジタルノマドとしてリモートで働くことも楽しんでおり、世界中のどこからでもチームやクライアントと協働しています。",
+    "summary": "ウェブ・モバイルアプリの開発で{years}年以上の経験を持つソフトウェアエンジニア。クライアントやチーム向けに、React、Next.js、React Native、Expo を用いてフロントエンドプロジェクトを率い、クリーンな UI、滑らかな UX、レスポンシブデザイン、アクセシビリティ、そして使いやすいプロダクトを重視しています。デジタルノマドとしてリモートで働くことも楽しんでおり、世界中のどこからでもチームやクライアントと協働しています。",
     "location": "リモート · ワールドワイド",
     "sections": {
       "summary": "プロフィール",
@@ -404,14 +402,17 @@
       "education": "学歴",
       "projects": "主なプロジェクト",
       "languages": "言語",
-      "links": "リンク"
+      "links": "リンク",
+      "hobbies": "趣味・関心"
+    },
+    "period": {
+      "since": "{date}〜"
     },
     "experiences": {
       "kabila": {
         "name": "ソフトウェアエンジニア",
         "company": "Kabila",
         "location": "スペイン マドリード",
-        "period": "2022年7月〜",
         "descriptions": [
           "React と Next.js でプロダクションウェブアプリを構築するフロントエンドチームをリード",
           "技術ロードマップ、スプリント計画、アーキテクチャ決定を担当",
@@ -424,7 +425,6 @@
         "name": "フリーランス",
         "company": "Alexandre GOSSARD",
         "location": "フランス、シャロン・アン・シャンパーニュ",
-        "period": "2022年7月〜",
         "descriptions": [
           "直接クライアント向けに React と Next.js でフルスタックウェブアプリを構築",
           "App Store と Google Play にクロスプラットフォームのモバイルアプリをリリース",
@@ -437,7 +437,6 @@
         "name": "見習い DevOps エンジニア",
         "company": "Arche MC2",
         "location": "フランス、シャロン・アン・シャンパーニュ",
-        "period": "2022年9月 - 2023年8月",
         "descriptions": [
           "自動テスト・デプロイ用の GitLab CI/CD パイプラインを構築",
           "Docker で社内アプリケーションとサービスをコンテナ化",
@@ -449,7 +448,6 @@
         "name": "システム管理者インターン",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François、フランス",
-        "period": "2022年3月 - 2022年6月",
         "descriptions": [
           "Windowsサーバーの管理および日常的なIT運用のサポート",
           "重要なビジネスデータのためのバックアップ戦略の実装と保守",
@@ -462,19 +460,16 @@
       "iutSecurity": {
         "name": "学士号, システム管理とセキュリティ",
         "location": "IUT Châlons · フランス、シャロン・アン・シャンパーニュ",
-        "period": "2022-2023",
         "descriptions": ["首席卒業"]
       },
       "iutNetworks": {
         "name": "短期大学士, ネットワークと通信",
         "location": "IUT Châlons · フランス、シャロン・アン・シャンパーニュ",
-        "period": "2020-2022",
         "descriptions": ["次席卒業"]
       },
       "lyceeBac": {
         "name": "高等学校卒業証書, 理系コース",
         "location": "Lycée Jean Talon · フランス、シャロン・アン・シャンパーニュ",
-        "period": "2019-2020",
         "descriptions": ["ISN(情報・デジタル科学)専攻", "優秀賞"]
       }
     },
@@ -501,7 +496,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "DASAN OLT/ONU 監視ツール [オープンソース]。"
+        "description": "DASAN OLT/ONU 監視ツール。"
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -553,7 +548,7 @@
     "hobbies": {
       "motorcycles": "バイク",
       "cars": "車",
-      "weightlifting": "ウェイトトレーニング",
+      "tennis": "テニス",
       "calisthenics": "自重トレーニング",
       "traveling": "旅行",
       "manga": "漫画",

@@ -89,7 +89,7 @@ export const Terminal = ({ children, className }: TerminalProps) => {
     <div
       ref={terminalRef}
       className={cn(
-        "terminal-shell terminal-shadow terminal-resize relative z-0 flex h-full w-full flex-col overflow-hidden rounded-xl border border-border/60 bg-background dark:border-overlay-medium",
+        "terminal-shell terminal-shadow terminal-resize relative z-0 flex h-full w-full flex-col overflow-hidden rounded-xl border border-border/60 bg-background/45 backdrop-blur-[2px] dark:border-overlay-medium dark:bg-background/70",
         !isMaximized && terminalWidth === null && "max-w-2xl",
         !isMinimized &&
           !isMaximized &&

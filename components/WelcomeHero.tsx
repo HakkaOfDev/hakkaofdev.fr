@@ -1,6 +1,6 @@
 "use client";
 
-import { Code2, Dumbbell, GitFork } from "lucide-react";
+import { Banknote, Code2, Smartphone } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ShortcutRow, ShortcutSection } from "@/components/ShortcutSection";
@@ -29,11 +29,9 @@ function WelcomeHero({
           src="/avatar.jpg"
           alt="Alexandre Gossard"
           className="aspect-square shrink-0 rounded-lg object-cover object-top shadow-sm ring-1 ring-border/60 dark:ring-overlay-medium"
-          quality={75}
           width={88}
           height={88}
-          fetchPriority="high"
-          sizes="88px"
+          sizes="176px"
           priority
         />
         <div className="grid gap-1.5">
@@ -48,7 +46,7 @@ function WelcomeHero({
           </p>
           <h1 className="font-bold text-xl leading-none tracking-wider md:text-2xl">
             {firstName}{" "}
-            <span className="bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-primary to-tertiary bg-clip-text text-transparent">
               {lastName.toUpperCase()}
             </span>
           </h1>
@@ -60,29 +58,33 @@ function WelcomeHero({
                 </span>
               ),
               job: (chunks) => (
-                <span className="font-semibold text-secondary">{chunks}</span>
+                <span className="font-semibold text-secondary underline decoration-secondary/50 underline-offset-4">
+                  {chunks}
+                </span>
               ),
               freelance: (chunks) => (
-                <span className="font-semibold text-tertiary">{chunks}</span>
+                <span className="font-semibold text-tertiary underline decoration-tertiary/50 underline-offset-4">
+                  {chunks}
+                </span>
               ),
             })}
           </p>
 
           <div className="mt-1.5 flex flex-wrap gap-1.5">
             <Tag
-              icon={<GitFork className="h-3 w-3" />}
-              label={t("tags.openSource")}
+              icon={<Banknote className="h-3 w-3" />}
+              label={t("tags.rate")}
               variant="purple"
             />
             <Tag
-              icon={<Dumbbell className="h-3 w-3" />}
-              label={t("tags.calisthenics")}
-              variant="orange"
+              icon={<Code2 className="h-3 w-3" />}
+              label={t("tags.web")}
+              variant="teal"
             />
             <Tag
-              icon={<Code2 className="h-3 w-3" />}
-              label={t("tags.stack")}
-              variant="teal"
+              icon={<Smartphone className="h-3 w-3" />}
+              label={t("tags.mobile")}
+              variant="orange"
             />
           </div>
         </div>

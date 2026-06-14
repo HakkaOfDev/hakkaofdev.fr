@@ -156,6 +156,7 @@ function collectCvText(data: CvData): string {
     add(s.name);
     add(s.url);
   }
+  for (const h of data.hobbies) add(h);
   for (const c of ALWAYS_INCLUDED) chars.add(c);
 
   // Section titles are rendered with CSS `textTransform: "uppercase"`, so

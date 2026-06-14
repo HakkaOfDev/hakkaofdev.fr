@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Digitální nomád a softwarový inženýr",
-    "description": "Digitální nomád a softwarový inženýr na volné noze. Nadšenec open source, tvořím výkonné webové aplikace v React a Next.js.",
+    "description": "Digitální nomád a softwarový inženýr na volné noze s více než {years} lety zkušeností. Tvořím výkonné webové a mobilní aplikace v React, Next.js, React Native a Expo.",
     "jobTitle": "Softwarový inženýr",
     "location": "Châlons-en-Champagne, Francie",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Frontend vývojář",
       "Digitální nomád",
-      "Open source",
       "Moderní technologie",
       "hakkaofdev",
       "kabila.app",
@@ -25,9 +24,9 @@
     "greeting": "~ Vítej <wave>👋</wave>",
     "intro": "<tagline>Digitální nomád</tagline> · <job>Softwarový inženýr</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Zastánce open source",
-      "calisthenics": "Příznivec kalisteniky",
-      "stack": "React · Next.js"
+      "rate": "600 €/den",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "Start",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Digitální nomád",
       "nextjs": "Next.js",
-      "uiEngineering": "UI inženýrství",
-      "openSource": "Open source"
+      "uiEngineering": "UI inženýrství"
     },
     "footer": "Portfolio"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "Životopis",
     "subject": "Životopis",
-    "summary": "Softwarový inženýr s více než 4 lety zkušeností s vývojem webových a mobilních aplikací pro klienty a týmy. Vedu frontendové projekty s využitím React, Next.js, React Native a Expo, s důrazem na čisté UI, plynulé UX, responzivní design, přístupnost a uživatelsky přívětivé produkty. Rád také přispívám do open-source projektů a pracuji vzdáleně jako digitální nomád, spolupracuji s týmy a klienty odkudkoli na světě.",
+    "summary": "Softwarový inženýr s více než {years} lety zkušeností s vývojem webových a mobilních aplikací pro klienty a týmy. Vedu frontendové projekty s využitím React, Next.js, React Native a Expo, s důrazem na čisté UI, plynulé UX, responzivní design, přístupnost a uživatelsky přívětivé produkty. Rád také pracuji vzdáleně jako digitální nomád, spolupracuji s týmy a klienty odkudkoli na světě.",
     "location": "Vzdáleně · Celosvětově",
     "sections": {
       "summary": "Profesní profil",
@@ -514,14 +512,17 @@
       "education": "Vzdělání",
       "projects": "Vybrané projekty",
       "languages": "Jazyky",
-      "links": "Odkazy"
+      "links": "Odkazy",
+      "hobbies": "Zájmy a koníčky"
+    },
+    "period": {
+      "since": "{date} - dosud"
     },
     "experiences": {
       "kabila": {
         "name": "Softwarový inženýr",
         "company": "Kabila",
         "location": "Madrid, Španělsko",
-        "period": "Od července 2022",
         "descriptions": [
           "Vedu frontendový tým, který staví produkční webové aplikace v Reactu a Next.js",
           "Zodpovídám za technický plán, plánování sprintů a architektonická rozhodnutí",
@@ -534,7 +535,6 @@
         "name": "Freelancer",
         "company": "Alexandre GOSSARD",
         "location": "Châlons-en-Champagne, Francie",
-        "period": "Od července 2022",
         "descriptions": [
           "Stavím full-stack webové aplikace v Reactu a Next.js pro přímé klienty",
           "Dodávám multiplatformní mobilní aplikace na App Store a Google Play",
@@ -547,7 +547,6 @@
         "name": "Učeň DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Francie",
-        "period": "Září 2022 - srpen 2023",
         "descriptions": [
           "Stavěl jsem GitLab CI/CD pipeline pro automatizované testování a nasazení",
           "Kontejnerizoval interní aplikace a služby pomocí Dockeru",
@@ -559,7 +558,6 @@
         "name": "Stážista Správce Systému",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Francie",
-        "period": "Březen 2022 - Červen 2022",
         "descriptions": [
           "Správa Windows serverů a podpora každodenního IT provozu",
           "Zavedení a údržba záložních strategií pro kritická firemní data",
@@ -572,19 +570,16 @@
       "iutSecurity": {
         "name": "Bakalářský titul, Správa systémů a bezpečnost",
         "location": "IUT Châlons · Châlons-en-Champagne, Francie",
-        "period": "2022-2023",
         "descriptions": ["Nejlepší absolvent"]
       },
       "iutNetworks": {
         "name": "Vyšší odborné vzdělání, Sítě a telekomunikace",
         "location": "IUT Châlons · Châlons-en-Champagne, Francie",
-        "period": "2020-2022",
         "descriptions": ["Druhé místo v ročníku"]
       },
       "lyceeBac": {
         "name": "Maturita, Vědecké zaměření",
         "location": "Lycée Jean Talon · Châlons-en-Champagne, Francie",
-        "period": "2019-2020",
         "descriptions": [
           "Specializace ISN (Informatika a digitální vědy)",
           "S vyznamenáním"
@@ -614,7 +609,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Nástroj pro dohled DASAN OLT/ONU [open-source]."
+        "description": "Nástroj pro dohled DASAN OLT/ONU."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -666,7 +661,7 @@
     "hobbies": {
       "motorcycles": "Motocykly",
       "cars": "Auta",
-      "weightlifting": "Posilování",
+      "tennis": "Tenis",
       "calisthenics": "Calisthenics",
       "traveling": "Cestování",
       "manga": "Manga",

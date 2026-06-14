@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Pengelana digital & Software Engineer",
-    "description": "Pengelana digital dan software engineer freelance. Pegiat open source, saya merancang pengalaman web berperforma tinggi dengan React dan Next.js.",
+    "description": "Pengelana digital dan software engineer freelance dengan pengalaman lebih dari {years} tahun. Saya membangun aplikasi web & mobile berperforma tinggi dengan React, Next.js, React Native & Expo.",
     "jobTitle": "Software Engineer",
     "location": "Châlons-en-Champagne, Prancis",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Frontend developer",
       "Pengelana digital",
-      "Open source",
       "Teknologi modern",
       "hakkaofdev",
       "kabila.app",
@@ -25,9 +24,9 @@
     "greeting": "~ Selamat datang <wave>👋</wave>",
     "intro": "<tagline>Pengelana digital</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Pendukung open source",
-      "calisthenics": "Penggemar calisthenics",
-      "stack": "React · Next.js"
+      "rate": "€600/hari",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "Mulai",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Pengelana digital",
       "nextjs": "Next.js",
-      "uiEngineering": "UI Engineering",
-      "openSource": "Open source"
+      "uiEngineering": "UI Engineering"
     },
     "footer": "Portfolio"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software engineer dengan pengalaman lebih dari 4 tahun membangun aplikasi web dan mobile untuk klien dan tim. Saya memimpin proyek frontend menggunakan React, Next.js, React Native, dan Expo, dengan fokus pada UI yang bersih, UX yang mulus, desain responsif, aksesibilitas, dan produk yang ramah pengguna. Saya juga senang berkontribusi pada proyek open-source dan bekerja secara remote sebagai digital nomad, berkolaborasi dengan tim dan klien dari mana pun di dunia.",
+    "summary": "Software engineer dengan pengalaman lebih dari {years} tahun membangun aplikasi web dan mobile untuk klien dan tim. Saya memimpin proyek frontend menggunakan React, Next.js, React Native, dan Expo, dengan fokus pada UI yang bersih, UX yang mulus, desain responsif, aksesibilitas, dan produk yang ramah pengguna. Saya juga senang bekerja secara remote sebagai digital nomad, berkolaborasi dengan tim dan klien dari mana pun di dunia.",
     "location": "Remote · Global",
     "sections": {
       "summary": "Ringkasan profesional",
@@ -514,14 +512,17 @@
       "education": "Pendidikan",
       "projects": "Proyek pilihan",
       "languages": "Bahasa",
-      "links": "Tautan"
+      "links": "Tautan",
+      "hobbies": "Hobi & Minat"
+    },
+    "period": {
+      "since": "Sejak {date}"
     },
     "experiences": {
       "kabila": {
         "name": "Software Engineer",
         "company": "Kabila",
         "location": "Madrid, Spanyol",
-        "period": "Sejak Juli 2022",
         "descriptions": [
           "Memimpin tim frontend yang membangun aplikasi web produksi dengan React dan Next.js",
           "Bertanggung jawab atas peta jalan teknis, perencanaan sprint, dan keputusan arsitektur",
@@ -534,7 +535,6 @@
         "name": "Freelance",
         "company": "Alexandre GOSSARD",
         "location": "Châlons-en-Champagne, Prancis",
-        "period": "Sejak Juli 2022",
         "descriptions": [
           "Membangun aplikasi web full-stack dengan React dan Next.js untuk klien langsung",
           "Merilis aplikasi mobile lintas platform ke App Store dan Google Play",
@@ -547,7 +547,6 @@
         "name": "Magang DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Prancis",
-        "period": "September 2022 - Agustus 2023",
         "descriptions": [
           "Membangun pipeline GitLab CI/CD untuk pengujian dan deployment otomatis",
           "Mengontainerkan aplikasi dan layanan internal dengan Docker",
@@ -559,7 +558,6 @@
         "name": "Magang Administrator Sistem",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Prancis",
-        "period": "Maret 2022 - Juni 2022",
         "descriptions": [
           "Mengadministrasi server Windows dan mendukung operasi TI harian",
           "Mengimplementasikan dan memelihara strategi backup untuk data bisnis kritis",
@@ -572,19 +570,16 @@
       "iutSecurity": {
         "name": "Sarjana, Administrasi Sistem dan Keamanan",
         "location": "IUT Châlons · Châlons-en-Champagne, Prancis",
-        "period": "2022-2023",
         "descriptions": ["Lulusan terbaik"]
       },
       "iutNetworks": {
         "name": "Diploma III, Jaringan dan Telekomunikasi",
         "location": "IUT Châlons · Châlons-en-Champagne, Prancis",
-        "period": "2020-2022",
         "descriptions": ["Peringkat kedua angkatan"]
       },
       "lyceeBac": {
         "name": "Ijazah SMA, Jurusan IPA",
         "location": "Lycée Jean Talon · Châlons-en-Champagne, Prancis",
-        "period": "2019-2020",
         "descriptions": [
           "Spesialisasi ISN (Ilmu Komputer dan Digital)",
           "Dengan predikat"
@@ -614,7 +609,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Alat pengawasan DASAN OLT/ONU [open source]."
+        "description": "Alat pengawasan DASAN OLT/ONU."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -666,7 +661,7 @@
     "hobbies": {
       "motorcycles": "Sepeda motor",
       "cars": "Mobil",
-      "weightlifting": "Angkat beban",
+      "tennis": "Tenis",
       "calisthenics": "Calisthenics",
       "traveling": "Bepergian",
       "manga": "Manga",

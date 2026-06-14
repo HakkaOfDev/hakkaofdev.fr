@@ -1,14 +1,17 @@
-import { getTranslations } from "next-intl/server";
+import { getFormatter, getTranslations } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import {
   EDUCATION,
   EXPERIENCES,
+  getYearsOfExperience,
+  HOBBIES,
   LANGUAGES,
   PROJECTS,
   SITE,
   SKILLS,
   SOCIALS,
 } from "@/lib/constants";
+import { formatPeriod } from "@/lib/utils/period.utils";
 
 export const CV_FILE_NAME_BASE = "alexandre-gossard-cv";
 export const CV_PREVIEW_URL = "/api/cv";
@@ -36,6 +39,7 @@ export type CvData = {
     projects: string;
     languages: string;
     links: string;
+    hobbies: string;
   };
   socials: { name: string; url: string }[];
   projects: {
@@ -53,6 +57,8 @@ export type CvData = {
     companyUrl?: string;
     location: string;
     descriptions: string[];
+    /** Localized "Freelance" qualifier for engagements under the freelance umbrella. */
+    freelanceLabel?: string;
   }[];
   education: {
     slug: string;
@@ -63,11 +69,14 @@ export type CvData = {
   }[];
   skills: { slug: string; label: string; values: string[] }[];
   languages: { code: string; flag: string; name: string; level: string }[];
+  hobbies: string[];
 };
 
 export async function getCvData(locale: Locale): Promise<CvData> {
   const tCv = await getTranslations({ locale, namespace: "CV" });
+  const tPeriod = await getTranslations({ locale, namespace: "CV.period" });
   const tMeta = await getTranslations({ locale, namespace: "Metadata" });
+  const format = await getFormatter({ locale });
 
   const projects = PROJECTS.slice(0, 5).map((p) => ({
     slug: p.slug,
@@ -77,16 +86,21 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     tags: [...p.tags],
   }));
 
+  // Reuse the freelance role's own translated name as the qualifier so the tag
+  // stays localized across every locale without a dedicated key.
+  const freelanceLabel = tCv("experiences.freelance.name" as never);
+
   const experiences = EXPERIENCES.map((e) => {
     const descriptionsKey = `experiences.${e.slug}.descriptions` as never;
     return {
       slug: e.slug,
-      period: tCv(`experiences.${e.slug}.period` as never),
+      period: formatPeriod(e, format, tPeriod),
       title: tCv(`experiences.${e.slug}.name` as never),
       company: tCv(`experiences.${e.slug}.company` as never),
       companyUrl: e.companyUrl,
       location: tCv(`experiences.${e.slug}.location` as never),
       descriptions: tCv.raw(descriptionsKey) as string[],
+      freelanceLabel: e.freelance ? freelanceLabel : undefined,
     };
   });
 
@@ -94,7 +108,7 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     const descriptionsKey = `education.${edu.slug}.descriptions` as never;
     return {
       slug: edu.slug,
-      period: tCv(`education.${edu.slug}.period` as never),
+      period: formatPeriod(edu, format, tPeriod),
       name: tCv(`education.${edu.slug}.name` as never),
       location: tCv(`education.${edu.slug}.location` as never),
       descriptions: (tCv.raw(descriptionsKey) as string[]) ?? [],
@@ -114,6 +128,8 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     level: tCv(`languageLevels.${l.levelSlug}` as never),
   }));
 
+  const hobbies = HOBBIES.map((h) => tCv(`hobbies.${h}` as never));
+
   return {
     fileName: buildCvFileName(locale),
     language: locale,
@@ -124,7 +140,7 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     website: SITE.url,
     email: SITE.email,
     location: tCv("location"),
-    summary: tCv("summary"),
+    summary: tCv("summary", { years: getYearsOfExperience() }),
     sections: {
       summary: tCv("sections.summary"),
       experience: tCv("sections.experience"),
@@ -133,6 +149,7 @@ export async function getCvData(locale: Locale): Promise<CvData> {
       projects: tCv("sections.projects"),
       languages: tCv("sections.languages"),
       links: tCv("sections.links"),
+      hobbies: tCv("sections.hobbies"),
     },
     socials: SOCIALS.map((s) => ({ name: s.name, url: s.url })),
     projects,
@@ -140,5 +157,6 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     education,
     skills,
     languages,
+    hobbies,
   };
 }

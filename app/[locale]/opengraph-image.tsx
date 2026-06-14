@@ -37,38 +37,40 @@ const SVG_ATTRS = {
 };
 
 function CodeIcon({ color }: { color: string }) {
+  // lucide `code-2` — matches the hero's React/Next.js badge.
   return (
     <svg {...SVG_ATTRS} stroke={color}>
-      <path d="M16 18l6-6-6-6" />
-      <path d="M8 6l-6 6 6 6" />
+      <path d="m18 16 4-4-4-4" />
+      <path d="m6 8-4 4 4 4" />
+      <path d="m14.5 4-5 16" />
     </svg>
   );
 }
 
-function GlobeIcon({ color }: { color: string }) {
+function BriefcaseIcon({ color }: { color: string }) {
   return (
     <svg {...SVG_ATTRS} stroke={color}>
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-      <path d="M2 12h20" />
+      <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+      <rect width="20" height="14" x="2" y="6" rx="2" />
     </svg>
   );
 }
 
-function LayoutIcon({ color }: { color: string }) {
+function BanknoteIcon({ color }: { color: string }) {
   return (
     <svg {...SVG_ATTRS} stroke={color}>
-      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-      <path d="M3 9h18" />
-      <path d="M9 21V9" />
+      <rect width="20" height="12" x="2" y="6" rx="2" />
+      <circle cx="12" cy="12" r="2" />
+      <path d="M6 12h.01M18 12h.01" />
     </svg>
   );
 }
 
-function HeartIcon({ color }: { color: string }) {
+function SmartphoneIcon({ color }: { color: string }) {
   return (
     <svg {...SVG_ATTRS} stroke={color}>
-      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+      <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+      <path d="M12 18h.01" />
     </svg>
   );
 }
@@ -133,13 +135,11 @@ function NameHeading() {
   );
 }
 
-function FooterBar({ host, label }: { host: string; label: string }) {
+function FooterBar({ host }: { host: string }) {
   return (
     <div
       style={{
         display: "flex",
-        justifyContent: "space-between",
-        alignItems: "flex-end",
         marginTop: 48,
         paddingTop: 24,
         borderTop: "1px solid rgba(255,255,255,0.10)",
@@ -148,7 +148,6 @@ function FooterBar({ host, label }: { host: string; label: string }) {
       }}
     >
       <div>{host}</div>
-      <div style={{ letterSpacing: 1 }}>{label}</div>
     </div>
   );
 }
@@ -159,9 +158,10 @@ function FooterBar({ host, label }: { host: string; label: string }) {
 
 function getHostLabel() {
   try {
-    return new URL(getSiteUrl()).hostname.replace(/^www\./, "");
+    const host = new URL(getSiteUrl()).hostname.replace(/^www\./, "");
+    return `www.${host}`;
   } catch {
-    return `${SITE.handle}.fr`;
+    return `www.${SITE.handle}.fr`;
   }
 }
 
@@ -235,33 +235,33 @@ export default async function OpenGraphImage({ params }: Props) {
     locale: resolvedLocale,
     namespace: "OpenGraph",
   });
+  const tWelcome = await getTranslations({
+    locale: resolvedLocale,
+    namespace: "Welcome",
+  });
 
-  const tags: { label: string; accent: string; icon: ReactNode }[] = [
+  const jobTitle = tMeta("jobTitle");
+  const nomad = tOg("tags.digitalNomad");
+  const subtitle = `${jobTitle} · ${nomad}`;
+  // "Freelance" is localized but only lives inside the hero's rich `intro`
+  // string — pull it from there so the badge stays in sync and translated.
+  const freelance =
+    String(tWelcome.raw("intro")).match(/<freelance>(.*?)<\/freelance>/)?.[1] ??
+    "Freelance";
+
+  // Mirror the welcome hero's badges: Freelance first, then the daily rate,
+  // then the web / mobile stack — with the same accent colours.
+  const tags: { label: string; icon: ReactNode }[] = [
+    { label: freelance, icon: <BriefcaseIcon color="#FFB000" /> },
+    { label: tWelcome("tags.rate"), icon: <BanknoteIcon color="#C084FC" /> },
+    { label: tWelcome("tags.web"), icon: <CodeIcon color="#00E5FF" /> },
     {
-      label: tOg("tags.digitalNomad"),
-      accent: "#00E5FF",
-      icon: <GlobeIcon color="#00E5FF" />,
-    },
-    {
-      label: tOg("tags.nextjs"),
-      accent: "#00E5FF",
-      icon: <CodeIcon color="#00E5FF" />,
-    },
-    {
-      label: tOg("tags.uiEngineering"),
-      accent: "#FFB000",
-      icon: <LayoutIcon color="#FFB000" />,
-    },
-    {
-      label: tOg("tags.openSource"),
-      accent: "#A78BFA",
-      icon: <HeartIcon color="#A78BFA" />,
+      label: tWelcome("tags.mobile"),
+      icon: <SmartphoneIcon color="#FF8A4C" />,
     },
   ];
 
   const host = getHostLabel();
-  const footerLabel = tOg("footer");
-  const jobTitle = tMeta("jobTitle");
 
   // Always load Inter at 400/800 for Latin glyphs — Satori (Node runtime)
   // requires at least one explicit font, and the build-time fetch is cached
@@ -269,9 +269,8 @@ export default async function OpenGraphImage({ params }: Props) {
   const [firstName, ...lastParts] = SITE.name.split(" ");
   const lastName = lastParts.join(" ");
   const latinText = [
-    jobTitle,
+    subtitle,
     ...tags.map((t) => t.label),
-    footerLabel,
     host,
     firstName,
     lastName.toUpperCase(),
@@ -296,11 +295,7 @@ export default async function OpenGraphImage({ params }: Props) {
   // Load a script-specific Noto font when the locale uses non-Latin glyphs.
   const scriptFontFamily = SCRIPT_FONT_FAMILY[resolvedLocale];
   if (scriptFontFamily) {
-    const scriptText = [
-      jobTitle,
-      ...tags.map((t) => t.label),
-      footerLabel,
-    ].join("");
+    const scriptText = [subtitle, ...tags.map((t) => t.label)].join("");
     const scriptData = await loadGoogleFont(scriptFontFamily, 400, scriptText);
     if (scriptData) {
       fontEntries.push({
@@ -344,7 +339,7 @@ export default async function OpenGraphImage({ params }: Props) {
             color: "rgba(237,239,242,0.70)",
           }}
         >
-          {jobTitle}
+          {subtitle}
         </div>
 
         <NameHeading />
@@ -364,7 +359,7 @@ export default async function OpenGraphImage({ params }: Props) {
         </div>
       </div>
 
-      <FooterBar host={host} label={footerLabel} />
+      <FooterBar host={host} />
     </div>,
     {
       ...size,

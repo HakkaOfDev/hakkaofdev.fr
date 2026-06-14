@@ -53,7 +53,7 @@ async function fetchCountries(): Promise<string[]> {
 // ─── Formatting ──────────────────────────────────────────────────────────────
 
 function countryToFlag(code: string | null) {
-  if (!code || code.length !== 2) return null;
+  if (code?.length !== 2) return null;
   const upper = code.toUpperCase();
   return String.fromCodePoint(
     ...[...upper].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65),

@@ -16,23 +16,23 @@ export const SITE = {
   email: "alexandre.gossard.pro@gmail.com",
   location: "Châlons-en-Champagne, France",
   description:
-    "Digital nomad & Software Engineer @kabila.app. Open-source enthusiast crafting performant web experiences with React and Next.js.",
+    "Digital nomad & Software Engineer building performant web & mobile apps with React, Next.js, React Native & Expo. Shipping from anywhere.",
   jobTitle: "Software Engineer",
   employer: {
-    name: "kabila.app",
-    url: "https://kabila.app",
+    name: "Alexandre Gossard",
+    url: "https://hakkaofdev.fr",
   },
   keywords: [
     "Alexandre Gossard",
-    "Frontend Developer",
     "Digital Nomad",
-    "Open-source",
-    "Modern Technologies",
-    "hakkaofdev",
-    "kabila.app",
-    "Kabila",
+    "Fullstack Developer",
     "Software Engineer",
+    "Open-source",
+    "hakkaofdev",
+    "Kabila",
     "Freelance",
+    "Hedera Hashgraph",
+    "Blockchain",
   ],
 } as const;
 

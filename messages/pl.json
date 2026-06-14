@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Cyfrowy nomada i inżynier oprogramowania",
-    "description": "Cyfrowy nomada i freelancerski inżynier oprogramowania. Pasjonat open source, tworzę wydajne aplikacje webowe w React i Next.js.",
+    "description": "Cyfrowy nomada i freelancerski inżynier oprogramowania z ponad {years}-letnim doświadczeniem. Tworzę wydajne aplikacje webowe i mobilne w React, Next.js, React Native i Expo.",
     "jobTitle": "Inżynier oprogramowania",
     "location": "Châlons-en-Champagne, Francja",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Programista frontend",
       "Cyfrowy nomada",
-      "Open source",
       "Nowoczesne technologie",
       "hakkaofdev",
       "kabila.app",
@@ -25,9 +24,9 @@
     "greeting": "~ Witaj <wave>👋</wave>",
     "intro": "<tagline>Cyfrowy nomada</tagline> · <job>Inżynier oprogramowania</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Zwolennik open source",
-      "calisthenics": "Pasjonat kalisteniki",
-      "stack": "React · Next.js"
+      "rate": "600 €/dzień",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "Start",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Cyfrowy nomada",
       "nextjs": "Next.js",
-      "uiEngineering": "Inżynieria UI",
-      "openSource": "Open source"
+      "uiEngineering": "Inżynieria UI"
     },
     "footer": "Portfolio"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Inżynier oprogramowania z ponad 4-letnim doświadczeniem w tworzeniu aplikacji webowych i mobilnych dla klientów i zespołów. Prowadzę projekty frontendowe z wykorzystaniem React, Next.js, React Native i Expo, ze szczególnym naciskiem na czyste UI, płynne UX, responsywny design, dostępność i produkty przyjazne użytkownikowi. Lubię również współtworzyć projekty open-source i pracować zdalnie jako cyfrowy nomada, współpracując z zespołami i klientami z dowolnego miejsca na świecie.",
+    "summary": "Inżynier oprogramowania z ponad {years}-letnim doświadczeniem w tworzeniu aplikacji webowych i mobilnych dla klientów i zespołów. Prowadzę projekty frontendowe z wykorzystaniem React, Next.js, React Native i Expo, ze szczególnym naciskiem na czyste UI, płynne UX, responsywny design, dostępność i produkty przyjazne użytkownikowi. Lubię również pracować zdalnie jako cyfrowy nomada, współpracując z zespołami i klientami z dowolnego miejsca na świecie.",
     "location": "Zdalnie · Globalnie",
     "sections": {
       "summary": "Profil zawodowy",
@@ -514,14 +512,17 @@
       "education": "Wykształcenie",
       "projects": "Wybrane projekty",
       "languages": "Języki",
-      "links": "Linki"
+      "links": "Linki",
+      "hobbies": "Zainteresowania i hobby"
+    },
+    "period": {
+      "since": "{date} - obecnie"
     },
     "experiences": {
       "kabila": {
         "name": "Inżynier oprogramowania",
         "company": "Kabila",
         "location": "Madryt, Hiszpania",
-        "period": "Od lipca 2022",
         "descriptions": [
           "Prowadzę zespół frontendowy budujący produkcyjne aplikacje webowe w React i Next.js",
           "Odpowiadam za roadmapę techniczną, planowanie sprintów i decyzje architektoniczne",
@@ -534,7 +535,6 @@
         "name": "Freelancer",
         "company": "Alexandre GOSSARD",
         "location": "Châlons-en-Champagne, Francja",
-        "period": "Od lipca 2022",
         "descriptions": [
           "Tworzę pełnostackowe aplikacje webowe w React i Next.js dla klientów bezpośrednich",
           "Wdrażam aplikacje mobilne wieloplatformowe do App Store i Google Play",
@@ -547,7 +547,6 @@
         "name": "Praktykant DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Francja",
-        "period": "Wrzesień 2022 - sierpień 2023",
         "descriptions": [
           "Budowałem pipeline'y GitLab CI/CD do automatycznego testowania i wdrażania",
           "Konteneryzowałem aplikacje wewnętrzne i usługi w Dockerze",
@@ -559,7 +558,6 @@
         "name": "Stażysta Administrator Systemu",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Francja",
-        "period": "Marzec 2022 - Czerwiec 2022",
         "descriptions": [
           "Administracja serwerami Windows i wsparcie codziennej działalności IT",
           "Wdrożenie i utrzymanie strategii kopii zapasowych krytycznych danych firmowych",
@@ -572,19 +570,16 @@
       "iutSecurity": {
         "name": "Licencjat, Administracja Systemami i Bezpieczeństwo",
         "location": "IUT Châlons · Châlons-en-Champagne, Francja",
-        "period": "2022-2023",
         "descriptions": ["Najlepszy absolwent"]
       },
       "iutNetworks": {
         "name": "Studium, Sieci i Telekomunikacja",
         "location": "IUT Châlons · Châlons-en-Champagne, Francja",
-        "period": "2020-2022",
         "descriptions": ["Drugie miejsce w roczniku"]
       },
       "lyceeBac": {
         "name": "Świadectwo Maturalne, Profil Naukowy",
         "location": "Lycée Jean Talon · Châlons-en-Champagne, Francja",
-        "period": "2019-2020",
         "descriptions": [
           "Specjalizacja ISN (Informatyka i nauki cyfrowe)",
           "Z wyróżnieniem"
@@ -614,7 +609,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Narzędzie do nadzoru DASAN OLT/ONU [open source]."
+        "description": "Narzędzie do nadzoru DASAN OLT/ONU."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -666,7 +661,7 @@
     "hobbies": {
       "motorcycles": "Motocykle",
       "cars": "Samochody",
-      "weightlifting": "Trening siłowy",
+      "tennis": "Tenis",
       "calisthenics": "Kalistenika",
       "traveling": "Podróże",
       "manga": "Manga",

@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Nomad digital și inginer software",
-    "description": "Nomad digital și inginer software freelance. Pasionat de open source, creez experiențe web performante cu React și Next.js.",
+    "description": "Nomad digital și inginer software freelance cu peste {years} ani de experiență, creez aplicații web și mobile performante cu React, Next.js, React Native și Expo.",
     "jobTitle": "Inginer software",
     "location": "Châlons-en-Champagne, Franța",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Dezvoltator frontend",
       "Nomad digital",
-      "Open source",
       "Tehnologii moderne",
       "hakkaofdev",
       "kabila.app",
@@ -25,9 +24,9 @@
     "greeting": "~ Bun venit <wave>👋</wave>",
     "intro": "<tagline>Nomad digital</tagline> · <job>Inginer software</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Susținător open source",
-      "calisthenics": "Pasionat de calistenie",
-      "stack": "React · Next.js"
+      "rate": "600 €/zi",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "Start",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Nomad digital",
       "nextjs": "Next.js",
-      "uiEngineering": "Inginerie UI",
-      "openSource": "Open source"
+      "uiEngineering": "Inginerie UI"
     },
     "footer": "Portofoliu"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Inginer software cu peste 4 ani de experiență în construirea de aplicații web și mobile pentru clienți și echipe. Conduc proiecte frontend folosind React, Next.js, React Native și Expo, cu accent pe o interfață curată, UX fluid, design responsive, accesibilitate și produse ușor de utilizat. De asemenea, îmi place să contribui la proiecte open-source și să lucrez de la distanță ca nomad digital, colaborând cu echipe și clienți din orice parte a lumii.",
+    "summary": "Inginer software cu peste {years} ani de experiență în construirea de aplicații web și mobile pentru clienți și echipe. Conduc proiecte frontend folosind React, Next.js, React Native și Expo, cu accent pe o interfață curată, UX fluid, design responsive, accesibilitate și produse ușor de utilizat. De asemenea, îmi place să lucrez de la distanță ca nomad digital, colaborând cu echipe și clienți din orice parte a lumii.",
     "location": "Remote · Global",
     "sections": {
       "summary": "Profil profesional",
@@ -514,14 +512,17 @@
       "education": "Educație",
       "projects": "Proiecte selectate",
       "languages": "Limbi",
-      "links": "Linkuri"
+      "links": "Linkuri",
+      "hobbies": "Pasiuni și interese"
+    },
+    "period": {
+      "since": "Din {date}"
     },
     "experiences": {
       "kabila": {
         "name": "Inginer software",
         "company": "Kabila",
         "location": "Madrid, Spania",
-        "period": "Din iulie 2022",
         "descriptions": [
           "Conduc o echipă de frontend care construiește aplicații web de producție cu React și Next.js",
           "Răspund de roadmap-ul tehnic, planificarea sprinturilor și deciziile de arhitectură",
@@ -534,7 +535,6 @@
         "name": "Freelance",
         "company": "Alexandre GOSSARD",
         "location": "Châlons-en-Champagne, Franța",
-        "period": "Din iulie 2022",
         "descriptions": [
           "Construiesc aplicații web full-stack cu React și Next.js pentru clienți direcți",
           "Livrez aplicații mobile multi-platformă în App Store și Google Play",
@@ -547,7 +547,6 @@
         "name": "Stagiu de ucenicie",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Franța",
-        "period": "Septembrie 2022 - august 2023",
         "descriptions": [
           "Am construit pipeline-uri GitLab CI/CD pentru testare și deployment automate",
           "Am containerizat aplicații și servicii interne cu Docker",
@@ -559,7 +558,6 @@
         "name": "Stagiar Administrator de Sistem",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Franța",
-        "period": "Martie 2022 - Iunie 2022",
         "descriptions": [
           "Administrare servere Windows și suport zilnic pentru operațiuni IT",
           "Implementare și mentenanță strategii de backup pentru date critice de business",
@@ -572,19 +570,16 @@
       "iutSecurity": {
         "name": "Administrare de sistem și securitate (licență profesională)",
         "location": "IUT Châlons (Châlons-en-Champagne, Franța)",
-        "period": "2022-2023",
         "descriptions": ["Șef de promoție"]
       },
       "iutNetworks": {
         "name": "DUT Rețele și telecomunicații (diplomă tehnică)",
         "location": "IUT Châlons (Châlons-en-Champagne, Franța)",
-        "period": "2020-2022",
         "descriptions": ["Locul al doilea pe promoție"]
       },
       "lyceeBac": {
         "name": "Bacalaureat științific (echivalent A-level)",
         "location": "Lycée Jean Talon (Châlons-en-Champagne, Franța)",
-        "period": "2019-2020",
         "descriptions": [
           "Specializare ISN (Informatică și științe digitale)",
           "Cu mențiune"
@@ -614,7 +609,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Instrument de supraveghere DASAN OLT/ONU [open source]."
+        "description": "Instrument de supraveghere DASAN OLT/ONU."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -666,7 +661,7 @@
     "hobbies": {
       "motorcycles": "Motociclete",
       "cars": "Mașini",
-      "weightlifting": "Haltere",
+      "tennis": "Tenis",
       "calisthenics": "Calistenie",
       "traveling": "Călătorii",
       "manga": "Manga",

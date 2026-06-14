@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, TypeLines } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { SKILLS } from "@/lib/constants";
 
@@ -37,14 +37,15 @@ function CSkills() {
   }
 
   return (
-    <AnimatedSpan className="gap-3">
-      {groups.map((group) => (
+    <TypeLines
+      className="gap-3"
+      lines={groups.map((group) => (
         <div key={group.slug}>
           <p className="font-semibold text-sm">{group.label}</p>
           <p className="text-muted-foreground">{group.values.join(", ")}</p>
         </div>
       ))}
-    </AnimatedSpan>
+    />
   );
 }
 

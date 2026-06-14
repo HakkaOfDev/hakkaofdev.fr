@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Nomade numérique & ingénieur logiciel",
-    "description": "Nomade numérique et ingénieur logiciel freelance. Passionné d'open source, je conçois des expériences web performantes avec React et Next.js.",
+    "description": "Nomade numérique et ingénieur logiciel freelance avec plus de {years} ans d'expérience, je conçois des applications web et mobiles performantes avec React, Next.js, React Native et Expo.",
     "jobTitle": "Ingénieur logiciel",
     "location": "Châlons-en-Champagne, France",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Développeur frontend",
       "Nomade numérique",
-      "Open source",
       "Technologies modernes",
       "hakkaofdev",
       "kabila.app",
@@ -25,9 +24,9 @@
     "greeting": "~ Bienvenue <wave>👋</wave>",
     "intro": "<tagline>Nomade numérique</tagline> · <job>Ingénieur logiciel</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "openSource": "Passionné d'open source",
-      "calisthenics": "Passionné de calisthénie",
-      "stack": "React · Next.js"
+      "rate": "600€ en TJM",
+      "web": "React/Next.js",
+      "mobile": "Expo/React Native"
     },
     "sections": {
       "start": "Démarrer",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Nomade numérique",
       "nextjs": "Next.js",
-      "uiEngineering": "Ingénierie d'interface",
-      "openSource": "Open source"
+      "uiEngineering": "Ingénierie d'interface"
     },
     "footer": "Portfolio"
   },
@@ -395,7 +393,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Ingénieur logiciel avec plus de 4 ans d'expérience dans la création d'applications web et mobiles pour des clients et des équipes. Je dirige des projets frontend avec React, Next.js, React Native et Expo, en portant une attention particulière à une UI soignée, une UX fluide, un design responsive, l'accessibilité et des produits agréables à utiliser. J'aime aussi contribuer à des projets open-source et travailler à distance en tant que nomade numérique, en collaborant avec des équipes et des clients partout dans le monde.",
+    "summary": "Ingénieur logiciel avec plus de {years} ans d'expérience dans la création d'applications web et mobiles pour des clients et des équipes. Je dirige des projets frontend avec React, Next.js, React Native et Expo, en portant une attention particulière à une UI soignée, une UX fluide, un design responsive, l'accessibilité et des produits agréables à utiliser. J'aime aussi travailler à distance en tant que nomade numérique, en collaborant avec des équipes et des clients partout dans le monde.",
     "location": "Télétravail · Mondial",
     "sections": {
       "summary": "Résumé professionnel",
@@ -404,14 +402,17 @@
       "education": "Formation",
       "projects": "Projets sélectionnés",
       "languages": "Langues",
-      "links": "Liens"
+      "links": "Liens",
+      "hobbies": "Loisirs et passions"
+    },
+    "period": {
+      "since": "Depuis {date}"
     },
     "experiences": {
       "kabila": {
         "name": "Ingénieur logiciel",
         "company": "Kabila",
         "location": "Madrid, Espagne",
-        "period": "Depuis juillet 2022",
         "descriptions": [
           "Encadre une équipe frontend qui développe des applications web en production avec React et Next.js",
           "Pilote la feuille de route technique, la planification des sprints et les décisions d'architecture",
@@ -424,7 +425,6 @@
         "name": "Freelance",
         "company": "Alexandre GOSSARD",
         "location": "Châlons-en-Champagne, France",
-        "period": "Depuis juillet 2022",
         "descriptions": [
           "Développe des applications web full-stack avec React et Next.js pour des clients directs",
           "Livre des applications mobiles multiplateformes sur l'App Store et Google Play",
@@ -437,7 +437,6 @@
         "name": "Alternant DevOps Engineer",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, France",
-        "period": "Septembre 2022 - Août 2023",
         "descriptions": [
           "Mise en place de pipelines GitLab CI/CD pour automatiser les tests et les déploiements",
           "Conteneurisation des applications et services internes avec Docker",
@@ -449,7 +448,6 @@
         "name": "Stagiaire Administrateur Système",
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, France",
-        "period": "Mars 2022 - Juin 2022",
         "descriptions": [
           "Administration de serveurs Windows et support quotidien des opérations IT",
           "Mise en place et maintenance de stratégies de sauvegarde des données critiques",
@@ -462,19 +460,16 @@
       "iutSecurity": {
         "name": "Licence Professionnelle, Administration et Sécurité des Systèmes",
         "location": "IUT Châlons · Châlons-en-Champagne, France",
-        "period": "2022-2023",
         "descriptions": ["Major de promotion"]
       },
       "iutNetworks": {
         "name": "DUT, Réseaux et Télécommunications",
         "location": "IUT Châlons · Châlons-en-Champagne, France",
-        "period": "2020-2022",
         "descriptions": ["Major de promotion"]
       },
       "lyceeBac": {
         "name": "Baccalauréat, Série Scientifique",
         "location": "Lycée Jean Talon · Châlons-en-Champagne, France",
-        "period": "2019-2020",
         "descriptions": [
           "Spécialité ISN (Informatique et sciences du numérique)",
           "Mention bien"
@@ -504,7 +499,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Outil de supervision pour les OLT/ONU DASAN [Open source]."
+        "description": "Outil de supervision pour les OLT/ONU DASAN."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -556,7 +551,7 @@
     "hobbies": {
       "motorcycles": "Motos",
       "cars": "Voitures",
-      "weightlifting": "Musculation",
+      "tennis": "Tennis",
       "calisthenics": "Calisthénie",
       "traveling": "Voyage",
       "manga": "Manga",
