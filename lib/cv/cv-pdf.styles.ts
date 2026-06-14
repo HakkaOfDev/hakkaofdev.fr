@@ -13,9 +13,9 @@ export const COLORS = {
 export const styles = StyleSheet.create({
   /* ── Page ───────────────────────────────────── */
   page: {
-    paddingTop: 32,
+    paddingTop: 28,
     paddingRight: 36,
-    paddingBottom: 28,
+    paddingBottom: 22,
     paddingLeft: 36,
     fontSize: 10,
     fontFamily: CV_FONT_FAMILY,
@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
     fontSize: 13,
     color: COLORS.muted,
     marginTop: 2,
-    marginBottom: 10,
+    marginBottom: 6,
   },
   contactRow: {
     flexDirection: "row",
@@ -66,7 +66,7 @@ export const styles = StyleSheet.create({
 
   /* ── Section ────────────────────────────────── */
   section: {
-    marginTop: 9,
+    marginTop: 6,
   },
   sectionHeader: {
     flexDirection: "row",
@@ -92,12 +92,12 @@ export const styles = StyleSheet.create({
   summary: {
     fontSize: 9.5,
     color: COLORS.muted,
-    lineHeight: 1.45,
+    lineHeight: 1.4,
   },
 
   /* ── Experience / Education items ───────────── */
   item: {
-    marginBottom: 7,
+    marginBottom: 4,
   },
   itemHeader: {
     flexDirection: "row",
@@ -127,19 +127,17 @@ export const styles = StyleSheet.create({
     color: COLORS.dark,
     lineHeight: 1.4,
     paddingLeft: 6,
-    marginBottom: 1,
+    marginBottom: 0,
   },
 
   /* ── Skills ─────────────────────────────────── */
   skillsGrid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
+    flexDirection: "column",
   },
   skillRow: {
     flexDirection: "row",
-    width: "50%",
-    marginBottom: 2,
-    paddingRight: 8,
+    width: "100%",
+    marginBottom: 1,
   },
   skillLabel: {
     fontFamily: CV_FONT_FAMILY,
@@ -223,5 +221,12 @@ export const styles = StyleSheet.create({
     fontSize: 9,
     color: COLORS.accent,
     textDecoration: "none",
+  },
+
+  /* ── Hobbies & Interests ────────────────────── */
+  hobbiesText: {
+    fontSize: 9.5,
+    color: COLORS.dark,
+    lineHeight: 1.4,
   },
 });
