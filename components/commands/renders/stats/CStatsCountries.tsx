@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useMemo } from "react";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 import { getVisitorCountries } from "@/app/actions";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, RevealSwap } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import {
   type ChartConfig,
@@ -76,9 +76,7 @@ export function CStatsCountries({
     [t],
   );
 
-  if (isLoading) return <CountriesSkeleton />;
-
-  if (!data) {
+  if (!data && !isLoading) {
     return (
       <AnimatedSpan className="gap-2">
         <p className="text-destructive">{t("failed")}</p>
@@ -86,7 +84,7 @@ export function CStatsCountries({
     );
   }
 
-  if (visible.length === 0) {
+  if (visible.length === 0 && !isLoading) {
     return (
       <AnimatedSpan className="gap-2">
         <RangeIndicator range={range} unknown={unknown} />
@@ -106,62 +104,64 @@ export function CStatsCountries({
   }
 
   return (
-    <AnimatedSpan className="gap-3">
-      <RangeIndicator range={range} unknown={unknown} />
-      <div className="flex items-center gap-1.5">
-        <Globe size={12} className="text-tertiary" />
-        <p className="font-semibold text-foreground text-xs">
-          {t("countriesTitle")}{" "}
-          <span className="font-normal text-muted-foreground">
-            ({t("uniqueByCountry", { count: visible.length })})
-          </span>
-        </p>
-      </div>
+    <RevealSwap loading={isLoading} skeleton={<CountriesSkeleton />}>
+      <AnimatedSpan className="gap-3">
+        <RangeIndicator range={range} unknown={unknown} />
+        <div className="flex items-center gap-1.5">
+          <Globe size={12} className="text-tertiary" />
+          <p className="font-semibold text-foreground text-xs">
+            {t("countriesTitle")}{" "}
+            <span className="font-normal text-muted-foreground">
+              ({t("uniqueByCountry", { count: visible.length })})
+            </span>
+          </p>
+        </div>
 
-      <ChartContainer
-        config={chartConfig}
-        className="aspect-auto h-60 w-full max-w-xl"
-      >
-        <BarChart
-          data={chartData}
-          layout="vertical"
-          margin={{ top: 4, right: 12, left: 8, bottom: 0 }}
+        <ChartContainer
+          config={chartConfig}
+          className="aspect-auto h-60 w-full max-w-xl"
         >
-          <CartesianGrid horizontal={false} strokeDasharray="3 3" />
-          <XAxis
-            type="number"
-            tickLine={false}
-            axisLine={false}
-            tickMargin={4}
-            tick={{ fontSize: 10 }}
-          />
-          <YAxis
-            type="category"
-            dataKey="label"
-            tickLine={false}
-            axisLine={false}
-            tickMargin={4}
-            width={64}
-            tick={{ fontSize: 10 }}
-          />
-          <ChartTooltip
-            cursor={{ fill: "var(--muted)", opacity: 0.4 }}
-            content={
-              <ChartTooltipContent
-                indicator="dot"
-                labelFormatter={(_label, payload) =>
-                  payload?.[0]?.payload?.name ?? _label
-                }
-              />
-            }
-          />
-          <Bar
-            dataKey="unique_count"
-            fill="var(--color-unique_count)"
-            radius={[0, 4, 4, 0]}
-          />
-        </BarChart>
-      </ChartContainer>
-    </AnimatedSpan>
+          <BarChart
+            data={chartData}
+            layout="vertical"
+            margin={{ top: 4, right: 12, left: 8, bottom: 0 }}
+          >
+            <CartesianGrid horizontal={false} strokeDasharray="3 3" />
+            <XAxis
+              type="number"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={4}
+              tick={{ fontSize: 10 }}
+            />
+            <YAxis
+              type="category"
+              dataKey="label"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={4}
+              width={64}
+              tick={{ fontSize: 10 }}
+            />
+            <ChartTooltip
+              cursor={{ fill: "var(--muted)", opacity: 0.4 }}
+              content={
+                <ChartTooltipContent
+                  indicator="dot"
+                  labelFormatter={(_label, payload) =>
+                    payload?.[0]?.payload?.name ?? _label
+                  }
+                />
+              }
+            />
+            <Bar
+              dataKey="unique_count"
+              fill="var(--color-unique_count)"
+              radius={[0, 4, 4, 0]}
+            />
+          </BarChart>
+        </ChartContainer>
+      </AnimatedSpan>
+    </RevealSwap>
   );
 }

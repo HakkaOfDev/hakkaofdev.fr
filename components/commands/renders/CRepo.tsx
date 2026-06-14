@@ -14,7 +14,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 import { getGitHubRepo } from "@/app/actions";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, RevealSwap } from "@/components/AnimatedComponents";
 import { GithubIcon } from "@/components/icons/brand";
 import { Tag } from "@/components/ui/Tag";
 import { SITE } from "@/lib/constants";
@@ -234,10 +234,11 @@ function CRepo() {
     retry: false,
   });
 
-  if (isLoading) return <RepoSkeleton />;
-  if (!data) return <RepoFallback />;
-
-  return <RepoCard repo={data} />;
+  return (
+    <RevealSwap loading={isLoading} skeleton={<RepoSkeleton />}>
+      {!data ? <RepoFallback /> : <RepoCard repo={data} />}
+    </RevealSwap>
+  );
 }
 
 export default CRepo;

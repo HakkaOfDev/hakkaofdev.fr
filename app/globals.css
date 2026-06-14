@@ -234,7 +234,13 @@
   }
 }
 
+/* ── Respect reduced-motion: drop decorative loops & blinking carets ── */
 @media (prefers-reduced-motion: reduce) {
+  .animate-wave,
+  .animate-ping,
+  .terminal-cursor-idle::after {
+    animation: none !important;
+  }
   .world-map-country--visited {
     animation: none;
   }

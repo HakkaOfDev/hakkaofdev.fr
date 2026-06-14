@@ -2,7 +2,7 @@
 
 import { Check, Trash2 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, RevealGroup } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
 import { BUILTIN_THEME_MAP } from "@/lib/themes/palettes";
@@ -32,7 +32,7 @@ export function CThemeList() {
           {t("list.noMatches", { pattern: grepRaw })}
         </p>
       ) : (
-        <div className="terminal-scrollbar grid max-h-60 overflow-y-auto overflow-x-hidden border-y py-2 pr-2">
+        <RevealGroup className="terminal-scrollbar grid max-h-60 overflow-y-auto overflow-x-hidden border-y py-2 pr-2">
           {visibleThemes.map((th) => {
             const isActive = th.name === theme;
             const isCustom = !BUILTIN_THEME_MAP.has(th.name);
@@ -48,7 +48,7 @@ export function CThemeList() {
               />
             );
           })}
-        </div>
+        </RevealGroup>
       )}
 
       {!grep && (

@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, RevealGroup } from "@/components/AnimatedComponents";
 import { useThemeEngine } from "@/hooks/useThemeEngine";
 import { type ContrastResult, validatePalette } from "@/lib/themes/contrast";
 
@@ -90,11 +90,11 @@ interface ValidationDetailsTableProps {
 
 function ValidationDetailsTable({ results }: ValidationDetailsTableProps) {
   return (
-    <div className="terminal-scrollbar grid max-h-48 gap-1 overflow-y-auto pr-1">
+    <RevealGroup className="terminal-scrollbar grid max-h-48 gap-1 overflow-y-auto pr-1">
       {results.map((result) => (
         <ValidationResultRow key={result.pair.slug} result={result} />
       ))}
-    </div>
+    </RevealGroup>
   );
 }
 

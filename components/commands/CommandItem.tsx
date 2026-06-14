@@ -3,8 +3,10 @@
 import { memo, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { resolveTerminalRenderer } from "@/components/commands/registries/commands.registry";
 import { PipelineProvider } from "@/components/providers/PipelineProvider";
+import { THINKING_DELAY_MS } from "@/lib/animation/motion";
 import type { Command, Pipeline } from "@/types";
 import CommandBash from "./CommandBash";
+import { CommandLoader } from "./CommandLoader";
 import CNotFound from "./renders/CNotFound";
 
 type CommandResolutionState =
@@ -29,11 +31,15 @@ function CommandWrapper({
   const [show, setShow] = useState(false);
   const commandRef = useRef<HTMLDivElement | null>(null);
 
+  // Deliberate "thinking" beat (pulsing dots) before the output appears, then
+  // the per-command reveal animation paces the rest.
   useEffect(() => {
-    const timeout = setTimeout(() => setShow(true), 500);
+    const timeout = setTimeout(() => setShow(true), THINKING_DELAY_MS);
     return () => clearTimeout(timeout);
   }, []);
 
+  // Anchor the prompt at the top when output appears; the reveal grows downward
+  // from here so the freshly-typed command stays in view.
   useLayoutEffect(() => {
     if (!show) return;
     const commandElement = commandRef.current;
@@ -52,15 +58,7 @@ function CommandWrapper({
       className="flex w-full scroll-mt-3 flex-col gap-2 pt-3 pb-4 first:pt-0"
     >
       <CommandBash input={input} timestamp={timestamp} />
-      {!show ? (
-        <div className="flex items-center gap-1.5 pl-5">
-          <div className="h-1 w-1 animate-pulse rounded-full bg-primary/60" />
-          <div className="h-1 w-1 animate-pulse rounded-full bg-primary/40 [animation-delay:150ms]" />
-          <div className="h-1 w-1 animate-pulse rounded-full bg-primary/20 [animation-delay:300ms]" />
-        </div>
-      ) : (
-        children
-      )}
+      {show ? children : <CommandLoader />}
     </div>
   );
 }

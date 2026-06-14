@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { AnimatedSpan } from "@/components/AnimatedComponents";
+import { AnimatedSpan, TypeLines } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { HOBBIES, LANGUAGES, SITE } from "@/lib/constants";
 import { matchesGrep } from "@/lib/utils/grep.utils";
@@ -59,8 +59,9 @@ function CAbout() {
   }
 
   return (
-    <AnimatedSpan className="gap-1">
-      {visible.map((row) =>
+    <TypeLines
+      className="gap-1"
+      lines={visible.map((row) =>
         row.key === "email" ? (
           <p key={row.key} className="text-muted-foreground">
             {row.title}:{" "}
@@ -75,7 +76,7 @@ function CAbout() {
           <Info key={row.key} title={row.title} value={row.value} />
         ),
       )}
-    </AnimatedSpan>
+    />
   );
 }
 
