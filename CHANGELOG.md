@@ -1,5 +1,41 @@
 # Changelog
 
+## [1.13.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.12.0...v1.13.0) (2026-06-14)
+
+
+### Features
+
+* **a11y:** honor prefers-reduced-motion ([33a2024](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/33a20244492af200b07ef3c8d1e5462deb207a46))
+* **animation:** add shared motion tokens module ([ce685e8](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/ce685e8526071cde7f162438c77c84eebf786636))
+* **background:** add ambient world-map planisphere ([e4ef773](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e4ef77383ee13f72e0da6822584f8236de8902d3))
+* **commands:** extract CommandLoader and wire thinking beat ([4e389ac](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/4e389acd28348711c6bb897de404c73d84faec19))
+* **cv:** add hobbies section and freelance role qualifier ([6ef3a42](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/6ef3a42de1a9fd3a46a04c75d83edef1bf5a3c60))
+* **layout:** mount world-map background and tune surfaces ([555cc43](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/555cc43f335729d1e14e2474baf6ee44988ae819))
+* **og:** mirror hero badges in the OpenGraph card ([5d62dc9](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/5d62dc9ad9198741e15df05431ec78c157fb8923))
+* terminal reveal animation system ([3784e45](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/3784e45a18537c14b3fbc7991110505288f4918b))
+
+
+### Performance
+
+* **hero:** use default image quality for avatar ([b5ff662](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/b5ff6621577420714a3b41062011c11d0e22fc8a))
+* use default image quality for avatar ([1f209c5](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/1f209c58870213505156661eb0c91297087c1adc))
+
+
+### Miscellaneous
+
+* add GraphQL to skills list ([865a972](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/865a9722af3b769ff07bdcc31583dc5e7642f172))
+* **deps:** add d3-geo, topojson-client and world datasets ([b684cc6](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/b684cc6329310dc1e22b3e3714209f5b2706acf2))
+* **deps:** vendor @react-pdf/textkit patch ([18863c3](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/18863c3625795b9091e1243613d7ea680b321808))
+* refresh social preview, ignore test artifacts ([e018c2f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e018c2fd0b8417a7586b8d46bf3bbbc8fb829092))
+* **skills:** add GraphQL to state & data skills ([df150a2](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/df150a217deded737fde8c3137d20d72d587a34f))
+
+
+### Code Refactoring
+
+* **animation:** split AnimatedComponents into reveal primitives ([8a4d5f9](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/8a4d5f9bc2bda46c9308638199d2019b75107678))
+* **commands:** adopt reveal primitives across renders ([09e306d](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/09e306de14aeb221eb7acbb1cd70b76ae6768cfe))
+* **content:** rebrand to independent freelance, web & mobile ([3b7dad8](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/3b7dad8bd18a0f07e7ec4f00380d731b0f00919c))
+
 ## [1.12.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.11.0...v1.12.0) (2026-06-10)
 
 
