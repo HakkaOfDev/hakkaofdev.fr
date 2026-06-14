@@ -4,6 +4,7 @@ import {
   EDUCATION,
   EXPERIENCES,
   getYearsOfExperience,
+  HOBBIES,
   LANGUAGES,
   PROJECTS,
   SITE,
@@ -38,6 +39,7 @@ export type CvData = {
     projects: string;
     languages: string;
     links: string;
+    hobbies: string;
   };
   socials: { name: string; url: string }[];
   projects: {
@@ -55,6 +57,8 @@ export type CvData = {
     companyUrl?: string;
     location: string;
     descriptions: string[];
+    /** Localized "Freelance" qualifier for engagements under the freelance umbrella. */
+    freelanceLabel?: string;
   }[];
   education: {
     slug: string;
@@ -65,6 +69,7 @@ export type CvData = {
   }[];
   skills: { slug: string; label: string; values: string[] }[];
   languages: { code: string; flag: string; name: string; level: string }[];
+  hobbies: string[];
 };
 
 export async function getCvData(locale: Locale): Promise<CvData> {
@@ -81,6 +86,10 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     tags: [...p.tags],
   }));
 
+  // Reuse the freelance role's own translated name as the qualifier so the tag
+  // stays localized across every locale without a dedicated key.
+  const freelanceLabel = tCv("experiences.freelance.name" as never);
+
   const experiences = EXPERIENCES.map((e) => {
     const descriptionsKey = `experiences.${e.slug}.descriptions` as never;
     return {
@@ -91,6 +100,7 @@ export async function getCvData(locale: Locale): Promise<CvData> {
       companyUrl: e.companyUrl,
       location: tCv(`experiences.${e.slug}.location` as never),
       descriptions: tCv.raw(descriptionsKey) as string[],
+      freelanceLabel: e.freelance ? freelanceLabel : undefined,
     };
   });
 
@@ -118,6 +128,8 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     level: tCv(`languageLevels.${l.levelSlug}` as never),
   }));
 
+  const hobbies = HOBBIES.map((h) => tCv(`hobbies.${h}` as never));
+
   return {
     fileName: buildCvFileName(locale),
     language: locale,
@@ -137,6 +149,7 @@ export async function getCvData(locale: Locale): Promise<CvData> {
       projects: tCv("sections.projects"),
       languages: tCv("sections.languages"),
       links: tCv("sections.links"),
+      hobbies: tCv("sections.hobbies"),
     },
     socials: SOCIALS.map((s) => ({ name: s.name, url: s.url })),
     projects,
@@ -144,5 +157,6 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     education,
     skills,
     languages,
+    hobbies,
   };
 }

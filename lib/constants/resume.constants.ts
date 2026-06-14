@@ -17,6 +17,13 @@ export type ExperienceEntry = {
   start: string;
   /** End month (`"YYYY-MM"`); omit while the position is ongoing. */
   end?: string;
+  /**
+   * Marks the role as a freelance engagement carried out under the `freelance`
+   * umbrella (hakkaofdev.fr). Surfaces a "Freelance" qualifier on the CV so a
+   * client mission that overlaps the freelance period reads as one activity
+   * rather than two concurrent salaried jobs.
+   */
+  freelance?: boolean;
 };
 
 export type RecommendationEntry = {
@@ -56,7 +63,8 @@ export const EXPERIENCES: ReadonlyArray<ExperienceEntry> = [
     slug: "kabila",
     companyUrl: "https://kabila.app",
     start: "2022-07",
-    end: "2026-05",
+    end: "2026-06",
+    freelance: true,
   },
   { slug: "freelance", companyUrl: SITE.url, start: "2022-07" },
   {
@@ -69,7 +77,7 @@ export const EXPERIENCES: ReadonlyArray<ExperienceEntry> = [
     slug: "efficienceInformatique",
     companyUrl: "https://www.efficience-informatique.net",
     start: "2022-03",
-    end: "2022-06",
+    end: "2022-05",
   },
 ].sort(comparePeriodsDesc);
 
@@ -119,7 +127,7 @@ export const LANGUAGES: ReadonlyArray<SpokenLanguageEntry> = [
 export const HOBBIES: ReadonlyArray<HobbySlug> = [
   "motorcycles",
   "cars",
-  "weightlifting",
+  "tennis",
   "calisthenics",
   "traveling",
   "manga",

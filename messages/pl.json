@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Cyfrowy nomada i inżynier oprogramowania",
-    "description": "Cyfrowy nomada i freelancerski inżynier oprogramowania z ponad {years}-letnim doświadczeniem. Pasjonat open source, tworzę wydajne aplikacje webowe w React i Next.js.",
+    "description": "Cyfrowy nomada i freelancerski inżynier oprogramowania z ponad {years}-letnim doświadczeniem. Tworzę wydajne aplikacje webowe i mobilne w React, Next.js, React Native i Expo.",
     "jobTitle": "Inżynier oprogramowania",
     "location": "Châlons-en-Champagne, Francja",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Programista frontend",
       "Cyfrowy nomada",
-      "Open source",
       "Nowoczesne technologie",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Cyfrowy nomada",
       "nextjs": "Next.js",
-      "uiEngineering": "Inżynieria UI",
-      "openSource": "Open source"
+      "uiEngineering": "Inżynieria UI"
     },
     "footer": "Portfolio"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Inżynier oprogramowania z ponad {years}-letnim doświadczeniem w tworzeniu aplikacji webowych i mobilnych dla klientów i zespołów. Prowadzę projekty frontendowe z wykorzystaniem React, Next.js, React Native i Expo, ze szczególnym naciskiem na czyste UI, płynne UX, responsywny design, dostępność i produkty przyjazne użytkownikowi. Lubię również współtworzyć projekty open-source i pracować zdalnie jako cyfrowy nomada, współpracując z zespołami i klientami z dowolnego miejsca na świecie.",
+    "summary": "Inżynier oprogramowania z ponad {years}-letnim doświadczeniem w tworzeniu aplikacji webowych i mobilnych dla klientów i zespołów. Prowadzę projekty frontendowe z wykorzystaniem React, Next.js, React Native i Expo, ze szczególnym naciskiem na czyste UI, płynne UX, responsywny design, dostępność i produkty przyjazne użytkownikowi. Lubię również pracować zdalnie jako cyfrowy nomada, współpracując z zespołami i klientami z dowolnego miejsca na świecie.",
     "location": "Zdalnie · Globalnie",
     "sections": {
       "summary": "Profil zawodowy",
@@ -514,7 +512,8 @@
       "education": "Wykształcenie",
       "projects": "Wybrane projekty",
       "languages": "Języki",
-      "links": "Linki"
+      "links": "Linki",
+      "hobbies": "Zainteresowania i hobby"
     },
     "period": {
       "since": "{date} - obecnie"
@@ -610,7 +609,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Narzędzie do nadzoru DASAN OLT/ONU [open source]."
+        "description": "Narzędzie do nadzoru DASAN OLT/ONU."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -662,7 +661,7 @@
     "hobbies": {
       "motorcycles": "Motocykle",
       "cars": "Samochody",
-      "weightlifting": "Trening siłowy",
+      "tennis": "Tenis",
       "calisthenics": "Kalistenika",
       "traveling": "Podróże",
       "manga": "Manga",

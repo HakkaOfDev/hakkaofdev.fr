@@ -10,7 +10,7 @@ export function Section({
 }) {
   return (
     <View style={styles.section}>
-      <View style={styles.sectionHeader}>
+      <View style={styles.sectionHeader} wrap={false}>
         <Text style={styles.sectionTitle}>{title}</Text>
         <View style={styles.sectionRule} />
       </View>

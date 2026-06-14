@@ -63,7 +63,7 @@ export function ExperienceSection({
             )}
           </View>
           <Text style={styles.itemMeta}>
-            {`${exp.company} · ${exp.location} · ${exp.period}`}
+            {`${exp.freelanceLabel ? `${exp.freelanceLabel} · ` : ""}${exp.company} · ${exp.location} · ${exp.period}`}
           </Text>
           {exp.descriptions.map((desc) => (
             <BulletItem key={desc} text={desc} />
@@ -137,7 +137,7 @@ export function ProjectsSection({
       {projects.map((project) => (
         <View key={project.slug} style={styles.projectItem}>
           <View style={styles.projectHeader}>
-            <Text style={styles.projectName}>{project.name}</Text>
+            <Text style={styles.projectName}>{`–  ${project.name}`}</Text>
             {project.url && (
               <Link src={project.url} style={styles.projectLink}>
                 {project.url.replace(/^https?:\/\/(www\.)?/, "")}
@@ -189,5 +189,21 @@ export function BottomSection({
         </Section>
       </View>
     </View>
+  );
+}
+
+/* ── Hobbies & Interests ──────────────────────── */
+
+export function HobbiesSection({
+  title,
+  hobbies,
+}: {
+  title: string;
+  hobbies: CvData["hobbies"];
+}) {
+  return (
+    <Section title={title}>
+      <Text style={styles.hobbiesText}>{hobbies.join("  ·  ")}</Text>
+    </Section>
   );
 }

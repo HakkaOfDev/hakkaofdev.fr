@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Digitální nomád a softwarový inženýr",
-    "description": "Digitální nomád a softwarový inženýr na volné noze s více než {years} lety zkušeností. Nadšenec open source, tvořím výkonné webové aplikace v React a Next.js.",
+    "description": "Digitální nomád a softwarový inženýr na volné noze s více než {years} lety zkušeností. Tvořím výkonné webové a mobilní aplikace v React, Next.js, React Native a Expo.",
     "jobTitle": "Softwarový inženýr",
     "location": "Châlons-en-Champagne, Francie",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Frontend vývojář",
       "Digitální nomád",
-      "Open source",
       "Moderní technologie",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Digitální nomád",
       "nextjs": "Next.js",
-      "uiEngineering": "UI inženýrství",
-      "openSource": "Open source"
+      "uiEngineering": "UI inženýrství"
     },
     "footer": "Portfolio"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "Životopis",
     "subject": "Životopis",
-    "summary": "Softwarový inženýr s více než {years} lety zkušeností s vývojem webových a mobilních aplikací pro klienty a týmy. Vedu frontendové projekty s využitím React, Next.js, React Native a Expo, s důrazem na čisté UI, plynulé UX, responzivní design, přístupnost a uživatelsky přívětivé produkty. Rád také přispívám do open-source projektů a pracuji vzdáleně jako digitální nomád, spolupracuji s týmy a klienty odkudkoli na světě.",
+    "summary": "Softwarový inženýr s více než {years} lety zkušeností s vývojem webových a mobilních aplikací pro klienty a týmy. Vedu frontendové projekty s využitím React, Next.js, React Native a Expo, s důrazem na čisté UI, plynulé UX, responzivní design, přístupnost a uživatelsky přívětivé produkty. Rád také pracuji vzdáleně jako digitální nomád, spolupracuji s týmy a klienty odkudkoli na světě.",
     "location": "Vzdáleně · Celosvětově",
     "sections": {
       "summary": "Profesní profil",
@@ -514,7 +512,8 @@
       "education": "Vzdělání",
       "projects": "Vybrané projekty",
       "languages": "Jazyky",
-      "links": "Odkazy"
+      "links": "Odkazy",
+      "hobbies": "Zájmy a koníčky"
     },
     "period": {
       "since": "{date} - dosud"
@@ -610,7 +609,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Nástroj pro dohled DASAN OLT/ONU [open-source]."
+        "description": "Nástroj pro dohled DASAN OLT/ONU."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -662,7 +661,7 @@
     "hobbies": {
       "motorcycles": "Motocykly",
       "cars": "Auta",
-      "weightlifting": "Posilování",
+      "tennis": "Tenis",
       "calisthenics": "Calisthenics",
       "traveling": "Cestování",
       "manga": "Manga",

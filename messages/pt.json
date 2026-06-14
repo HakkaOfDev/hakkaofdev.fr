@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Nómada digital e Engenheiro de software",
-    "description": "Nómada digital e engenheiro de software freelancer com mais de {years} anos de experiência. Entusiasta do open source, crio experiências web performantes com React e Next.js.",
+    "description": "Nómada digital e engenheiro de software freelancer com mais de {years} anos de experiência, crio aplicações web e móveis performantes com React, Next.js, React Native e Expo.",
     "jobTitle": "Engenheiro de software",
     "location": "Châlons-en-Champagne, França",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Programador frontend",
       "Nómada digital",
-      "Open source",
       "Tecnologias modernas",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Nómada digital",
       "nextjs": "Next.js",
-      "uiEngineering": "Engenharia de UI",
-      "openSource": "Open source"
+      "uiEngineering": "Engenharia de UI"
     },
     "footer": "Portfólio"
   },
@@ -395,7 +393,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Engenheiro de software com mais de {years} anos de experiência a desenvolver aplicações web e móveis para clientes e equipas. Lidero projetos frontend usando React, Next.js, React Native e Expo, com foco numa UI limpa, UX fluida, design responsivo, acessibilidade e produtos fáceis de utilizar. Também gosto de contribuir para projetos open-source e de trabalhar remotamente como nómada digital, colaborando com equipas e clientes a partir de qualquer parte do mundo.",
+    "summary": "Engenheiro de software com mais de {years} anos de experiência a desenvolver aplicações web e móveis para clientes e equipas. Lidero projetos frontend usando React, Next.js, React Native e Expo, com foco numa UI limpa, UX fluida, design responsivo, acessibilidade e produtos fáceis de utilizar. Também gosto de trabalhar remotamente como nómada digital, colaborando com equipas e clientes a partir de qualquer parte do mundo.",
     "location": "Remoto · Global",
     "sections": {
       "summary": "Resumo profissional",
@@ -404,7 +402,8 @@
       "education": "Formação",
       "projects": "Projetos selecionados",
       "languages": "Idiomas",
-      "links": "Ligações"
+      "links": "Ligações",
+      "hobbies": "Hobbies e interesses"
     },
     "period": {
       "since": "Desde {date}"
@@ -500,7 +499,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Ferramenta de supervisão para OLT/ONUs DASAN [Open source]."
+        "description": "Ferramenta de supervisão para OLT/ONUs DASAN."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -552,7 +551,7 @@
     "hobbies": {
       "motorcycles": "Motas",
       "cars": "Carros",
-      "weightlifting": "Musculação",
+      "tennis": "Ténis",
       "calisthenics": "Calistenia",
       "traveling": "Viajar",
       "manga": "Manga",

@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Dijital göçebe ve yazılım mühendisi",
-    "description": "Dijital göçebe ve {years}+ yıl deneyime sahip serbest çalışan yazılım mühendisi. Open source tutkunuyum, React ve Next.js ile yüksek performanslı web deneyimleri tasarlıyorum.",
+    "description": "Dijital göçebe ve {years}+ yıl deneyime sahip serbest çalışan yazılım mühendisi. React, Next.js, React Native ve Expo ile yüksek performanslı web ve mobil uygulamalar geliştiriyorum.",
     "jobTitle": "Yazılım mühendisi",
     "location": "Châlons-en-Champagne, Fransa",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Frontend geliştirici",
       "Dijital göçebe",
-      "Open source",
       "Modern teknolojiler",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Dijital göçebe",
       "nextjs": "Next.js",
-      "uiEngineering": "UI Mühendisliği",
-      "openSource": "Open source"
+      "uiEngineering": "UI Mühendisliği"
     },
     "footer": "Portfolyo"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "Özgeçmiş",
     "subject": "Özgeçmiş",
-    "summary": "Müşteriler ve ekipler için web ve mobil uygulamalar geliştirme konusunda {years}+ yıl deneyime sahip bir yazılım mühendisi. React, Next.js, React Native ve Expo kullanarak frontend projelerine liderlik ediyor; temiz bir UI, akıcı bir UX, duyarlı tasarım, erişilebilirlik ve kullanıcı dostu ürünlere odaklanıyorum. Ayrıca açık kaynak projelere katkıda bulunmayı ve dijital göçebe olarak uzaktan çalışmayı seviyor, dünyanın her yerinden ekipler ve müşterilerle iş birliği yapıyorum.",
+    "summary": "Müşteriler ve ekipler için web ve mobil uygulamalar geliştirme konusunda {years}+ yıl deneyime sahip bir yazılım mühendisi. React, Next.js, React Native ve Expo kullanarak frontend projelerine liderlik ediyor; temiz bir UI, akıcı bir UX, duyarlı tasarım, erişilebilirlik ve kullanıcı dostu ürünlere odaklanıyorum. Ayrıca dijital göçebe olarak uzaktan çalışmayı seviyor, dünyanın her yerinden ekipler ve müşterilerle iş birliği yapıyorum.",
     "location": "Uzaktan · Dünya çapında",
     "sections": {
       "summary": "Mesleki profil",
@@ -514,7 +512,8 @@
       "education": "Eğitim",
       "projects": "Seçilmiş projeler",
       "languages": "Diller",
-      "links": "Bağlantılar"
+      "links": "Bağlantılar",
+      "hobbies": "Hobiler ve İlgi Alanları"
     },
     "period": {
       "since": "{date} - halen"
@@ -610,7 +609,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "DASAN OLT/ONU denetim aracı [açık kaynak]."
+        "description": "DASAN OLT/ONU denetim aracı."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -662,7 +661,7 @@
     "hobbies": {
       "motorcycles": "Motosikletler",
       "cars": "Arabalar",
-      "weightlifting": "Halter",
+      "tennis": "Tenis",
       "calisthenics": "Calisthenics",
       "traveling": "Seyahat",
       "manga": "Manga",

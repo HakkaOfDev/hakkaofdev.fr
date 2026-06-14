@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Nomade numérique & ingénieur logiciel",
-    "description": "Nomade numérique et ingénieur logiciel freelance avec plus de {years} ans d'expérience. Passionné d'open source, je conçois des expériences web performantes avec React et Next.js.",
+    "description": "Nomade numérique et ingénieur logiciel freelance avec plus de {years} ans d'expérience, je conçois des applications web et mobiles performantes avec React, Next.js, React Native et Expo.",
     "jobTitle": "Ingénieur logiciel",
     "location": "Châlons-en-Champagne, France",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Développeur frontend",
       "Nomade numérique",
-      "Open source",
       "Technologies modernes",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Nomade numérique",
       "nextjs": "Next.js",
-      "uiEngineering": "Ingénierie d'interface",
-      "openSource": "Open source"
+      "uiEngineering": "Ingénierie d'interface"
     },
     "footer": "Portfolio"
   },
@@ -395,7 +393,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Ingénieur logiciel avec plus de {years} ans d'expérience dans la création d'applications web et mobiles pour des clients et des équipes. Je dirige des projets frontend avec React, Next.js, React Native et Expo, en portant une attention particulière à une UI soignée, une UX fluide, un design responsive, l'accessibilité et des produits agréables à utiliser. J'aime aussi contribuer à des projets open-source et travailler à distance en tant que nomade numérique, en collaborant avec des équipes et des clients partout dans le monde.",
+    "summary": "Ingénieur logiciel avec plus de {years} ans d'expérience dans la création d'applications web et mobiles pour des clients et des équipes. Je dirige des projets frontend avec React, Next.js, React Native et Expo, en portant une attention particulière à une UI soignée, une UX fluide, un design responsive, l'accessibilité et des produits agréables à utiliser. J'aime aussi travailler à distance en tant que nomade numérique, en collaborant avec des équipes et des clients partout dans le monde.",
     "location": "Télétravail · Mondial",
     "sections": {
       "summary": "Résumé professionnel",
@@ -404,7 +402,8 @@
       "education": "Formation",
       "projects": "Projets sélectionnés",
       "languages": "Langues",
-      "links": "Liens"
+      "links": "Liens",
+      "hobbies": "Loisirs et passions"
     },
     "period": {
       "since": "Depuis {date}"
@@ -500,7 +499,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Outil de supervision pour les OLT/ONU DASAN [Open source]."
+        "description": "Outil de supervision pour les OLT/ONU DASAN."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -552,7 +551,7 @@
     "hobbies": {
       "motorcycles": "Motos",
       "cars": "Voitures",
-      "weightlifting": "Musculation",
+      "tennis": "Tennis",
       "calisthenics": "Calisthénie",
       "traveling": "Voyage",
       "manga": "Manga",

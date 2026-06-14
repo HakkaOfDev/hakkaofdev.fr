@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Digitaler Nomade & Software-Ingenieur",
-    "description": "Digitaler Nomade & freiberuflicher Software-Ingenieur mit über {years} Jahren Erfahrung. Open-Source-Begeisterter, der performante Web-Erlebnisse mit React und Next.js gestaltet.",
+    "description": "Digitaler Nomade & freiberuflicher Software-Ingenieur mit über {years} Jahren Erfahrung. Ich gestalte performante Web- & Mobile-Apps mit React, Next.js, React Native & Expo.",
     "jobTitle": "Software-Ingenieur",
     "location": "Châlons-en-Champagne, Frankreich",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Frontend-Entwickler",
       "Digitaler Nomade",
-      "Open Source",
       "Moderne Technologien",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Digitaler Nomade",
       "nextjs": "Next.js",
-      "uiEngineering": "UI-Engineering",
-      "openSource": "Open Source"
+      "uiEngineering": "UI-Engineering"
     },
     "footer": "Portfolio"
   },
@@ -395,7 +393,7 @@
   "CV": {
     "documentTitleSuffix": "Lebenslauf",
     "subject": "Lebenslauf",
-    "summary": "Software-Ingenieur mit über {years} Jahren Erfahrung in der Entwicklung von Web- und Mobile-Apps für Kunden und Teams. Ich leite Frontend-Projekte mit React, Next.js, React Native und Expo, mit Fokus auf eine saubere UI, eine flüssige UX, responsives Design, Barrierefreiheit und benutzerfreundliche Produkte. Außerdem trage ich gerne zu Open-Source-Projekten bei und arbeite remote als digitaler Nomade, in Zusammenarbeit mit Teams und Kunden von überall auf der Welt.",
+    "summary": "Software-Ingenieur mit über {years} Jahren Erfahrung in der Entwicklung von Web- und Mobile-Apps für Kunden und Teams. Ich leite Frontend-Projekte mit React, Next.js, React Native und Expo, mit Fokus auf eine saubere UI, eine flüssige UX, responsives Design, Barrierefreiheit und benutzerfreundliche Produkte. Außerdem arbeite ich gerne remote als digitaler Nomade, in Zusammenarbeit mit Teams und Kunden von überall auf der Welt.",
     "location": "Remote · Weltweit",
     "sections": {
       "summary": "Kurzprofil",
@@ -404,7 +402,8 @@
       "education": "Ausbildung",
       "projects": "Ausgewählte Projekte",
       "languages": "Sprachen",
-      "links": "Links"
+      "links": "Links",
+      "hobbies": "Hobbys & Interessen"
     },
     "period": {
       "since": "Seit {date}"
@@ -500,7 +499,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Supervisions-Tool für DASAN OLT/ONUs [Open Source]."
+        "description": "Supervisions-Tool für DASAN OLT/ONUs."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -552,7 +551,7 @@
     "hobbies": {
       "motorcycles": "Motorräder",
       "cars": "Autos",
-      "weightlifting": "Krafttraining",
+      "tennis": "Tennis",
       "calisthenics": "Calisthenics",
       "traveling": "Reisen",
       "manga": "Manga",

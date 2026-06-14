@@ -6,6 +6,7 @@ import {
   EducationSection,
   ExperienceSection,
   Header,
+  HobbiesSection,
   ProjectsSection,
   SkillsSection,
   SummarySection,
@@ -43,6 +44,7 @@ export function CVDocument({ data }: { data: CvData }) {
           languages={data.languages}
           socials={data.socials}
         />
+        <HobbiesSection title={data.sections.hobbies} hobbies={data.hobbies} />
       </Page>
     </Document>
   );

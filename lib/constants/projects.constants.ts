@@ -27,9 +27,9 @@ export const PROJECTS: ReadonlyArray<ProjectEntry> = [
   },
   {
     slug: "kabilaWallet",
-    url: "https://kabila.app/docs/kabila-wallet",
+    url: "https://wallet.kabila.app",
     imageUrl: "/projects/kabila-wallet.webp",
-    tags: ["Next.js", "Tailwind", "Javascript", "Blockchain"],
+    tags: ["Vite", "React", "Tailwind", "Javascript", "Blockchain"],
   },
   {
     slug: "ferreiraBorges",

@@ -88,5 +88,8 @@
     "edge >= 111",
     "firefox >= 128",
     "safari >= 16.4"
-  ]
+  ],
+  "patchedDependencies": {
+    "@react-pdf/textkit@6.3.0": "patches/@react-pdf%2Ftextkit@6.3.0.patch"
+  }
 }

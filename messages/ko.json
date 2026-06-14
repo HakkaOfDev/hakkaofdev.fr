@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | 디지털 노마드 & 소프트웨어 엔지니어",
-    "description": "{years}년 이상의 경력을 가진 디지털 노마드이자 프리랜서 소프트웨어 엔지니어. 오픈소스 애호가로서 React와 Next.js로 고성능 웹 경험을 만들고 있습니다.",
+    "description": "{years}년 이상의 경력을 가진 디지털 노마드이자 프리랜서 소프트웨어 엔지니어. React, Next.js, React Native, Expo로 고성능 웹 및 모바일 앱을 만들고 있습니다.",
     "jobTitle": "소프트웨어 엔지니어",
     "location": "프랑스 샬롱앙샹파뉴",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "프론트엔드 개발자",
       "디지털 노마드",
-      "오픈소스",
       "최신 기술",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "디지털 노마드",
       "nextjs": "Next.js",
-      "uiEngineering": "UI 엔지니어링",
-      "openSource": "오픈소스"
+      "uiEngineering": "UI 엔지니어링"
     },
     "footer": "포트폴리오"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "이력서",
     "subject": "이력서",
-    "summary": "{years}년 이상의 경력을 가진 소프트웨어 엔지니어로, 클라이언트와 팀을 위해 웹·모바일 앱을 개발합니다. React, Next.js, React Native, Expo를 사용해 프런트엔드 프로젝트를 이끌며, 깔끔한 UI, 매끄러운 UX, 반응형 디자인, 접근성, 그리고 사용자 친화적인 제품에 중점을 둡니다. 오픈소스 프로젝트에 기여하고, 디지털 노마드로 원격 근무하며 세계 어디에서든 팀 및 클라이언트와 협업하는 것을 즐깁니다.",
+    "summary": "{years}년 이상의 경력을 가진 소프트웨어 엔지니어로, 클라이언트와 팀을 위해 웹·모바일 앱을 개발합니다. React, Next.js, React Native, Expo를 사용해 프런트엔드 프로젝트를 이끌며, 깔끔한 UI, 매끄러운 UX, 반응형 디자인, 접근성, 그리고 사용자 친화적인 제품에 중점을 둡니다. 디지털 노마드로 원격 근무하며 세계 어디에서든 팀 및 클라이언트와 협업하는 것을 즐깁니다.",
     "location": "원격 · 글로벌",
     "sections": {
       "summary": "직무 소개",
@@ -514,7 +512,8 @@
       "education": "학력",
       "projects": "주요 프로젝트",
       "languages": "언어",
-      "links": "링크"
+      "links": "링크",
+      "hobbies": "취미 및 관심사"
     },
     "period": {
       "since": "{date}부터"
@@ -607,7 +606,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "DASAN OLT/ONU 감독 도구 [오픈소스]."
+        "description": "DASAN OLT/ONU 감독 도구."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -659,7 +658,7 @@
     "hobbies": {
       "motorcycles": "오토바이",
       "cars": "자동차",
-      "weightlifting": "웨이트 트레이닝",
+      "tennis": "테니스",
       "calisthenics": "맨몸 운동",
       "traveling": "여행",
       "manga": "만화",

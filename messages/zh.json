@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | 数字游民 & 软件工程师",
-    "description": "拥有 {years} 年以上经验的数字游民和自由职业软件工程师。作为开源爱好者，我使用 React 和 Next.js 打造高性能 Web 体验。",
+    "description": "拥有 {years} 年以上经验的数字游民和自由职业软件工程师。我使用 React、Next.js、React Native 和 Expo 打造高性能 Web 和移动应用。",
     "jobTitle": "软件工程师",
     "location": "法国沙隆昂香槟",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "前端开发者",
       "数字游民",
-      "开源",
       "现代技术",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "数字游民",
       "nextjs": "Next.js",
-      "uiEngineering": "UI 工程",
-      "openSource": "开源"
+      "uiEngineering": "UI 工程"
     },
     "footer": "作品集"
   },
@@ -395,7 +393,7 @@
   "CV": {
     "documentTitleSuffix": "简历",
     "subject": "简历",
-    "summary": "拥有 {years} 年以上经验的软件工程师,为客户和团队构建网页和移动应用。我使用 React、Next.js、React Native 和 Expo 主导前端项目,专注于简洁的 UI、流畅的 UX、响应式设计、无障碍体验以及对用户友好的产品。我也喜欢为开源项目做贡献,作为数字游民远程办公,与世界各地的团队和客户协作。",
+    "summary": "拥有 {years} 年以上经验的软件工程师,为客户和团队构建网页和移动应用。我使用 React、Next.js、React Native 和 Expo 主导前端项目,专注于简洁的 UI、流畅的 UX、响应式设计、无障碍体验以及对用户友好的产品。我也喜欢作为数字游民远程办公,与世界各地的团队和客户协作。",
     "location": "远程 · 全球",
     "sections": {
       "summary": "职业概要",
@@ -404,7 +402,8 @@
       "education": "教育背景",
       "projects": "精选项目",
       "languages": "语言",
-      "links": "链接"
+      "links": "链接",
+      "hobbies": "兴趣爱好"
     },
     "period": {
       "since": "{date}至今"
@@ -497,7 +496,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "DASAN OLT/ONU 监控工具 [开源]。"
+        "description": "DASAN OLT/ONU 监控工具。"
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -549,7 +548,7 @@
     "hobbies": {
       "motorcycles": "摩托车",
       "cars": "汽车",
-      "weightlifting": "举重",
+      "tennis": "网球",
       "calisthenics": "徒手健身",
       "traveling": "旅行",
       "manga": "漫画",

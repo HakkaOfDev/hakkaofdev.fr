@@ -1,0 +1,16 @@
+diff --git a/lib/textkit.js b/lib/textkit.js
+index 0b8b6fa636c48ef0ac9cecb27040d2bac9303ce8..003bf9f894f9df183104e1cdbe48eee2e07ebc55 100644
+--- a/lib/textkit.js
++++ b/lib/textkit.js
+@@ -1030,6 +1030,11 @@ const reorderLine = (line) => {
+         for (let i = 0; i < selectedIndices.length; i += 1) {
+             const index = selectedIndices[i];
+             const glyph = getItemAtIndex(line.runs, 'glyphs', index);
++            // Bidi reordering of Arabic lines that embed Latin/digits can map a
++            // reordered string index to no glyph; skip it instead of throwing on
++            // `undefined.id`, which crashed CV PDF generation for the `ar` locale.
++            if (!glyph)
++                continue;
+             if (addedGlyphs.has(glyph.id))
+                 continue;
+             updatedGlyphs.push(glyph);

@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Du mục số & Kỹ sư phần mềm",
-    "description": "Du mục số và kỹ sư phần mềm freelance với hơn {years} năm kinh nghiệm. Đam mê mã nguồn mở, tôi tạo trải nghiệm web hiệu năng cao với React và Next.js.",
+    "description": "Du mục số và kỹ sư phần mềm freelance với hơn {years} năm kinh nghiệm. Tôi xây dựng ứng dụng web & di động hiệu năng cao với React, Next.js, React Native & Expo.",
     "jobTitle": "Kỹ sư phần mềm",
     "location": "Châlons-en-Champagne, Pháp",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Lập trình viên frontend",
       "Du mục số",
-      "Mã nguồn mở",
       "Công nghệ hiện đại",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Du mục số",
       "nextjs": "Next.js",
-      "uiEngineering": "Kỹ thuật UI",
-      "openSource": "Mã nguồn mở"
+      "uiEngineering": "Kỹ thuật UI"
     },
     "footer": "Portfolio"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Kỹ sư phần mềm với hơn {years} năm kinh nghiệm xây dựng các ứng dụng web và di động cho khách hàng và đội nhóm. Tôi dẫn dắt các dự án frontend với React, Next.js, React Native và Expo, tập trung vào UI gọn gàng, UX mượt mà, thiết kế responsive, khả năng tiếp cận và sản phẩm thân thiện với người dùng. Tôi cũng thích đóng góp cho các dự án open-source và làm việc từ xa như một digital nomad, hợp tác với các đội nhóm và khách hàng từ bất cứ đâu trên thế giới.",
+    "summary": "Kỹ sư phần mềm với hơn {years} năm kinh nghiệm xây dựng các ứng dụng web và di động cho khách hàng và đội nhóm. Tôi dẫn dắt các dự án frontend với React, Next.js, React Native và Expo, tập trung vào UI gọn gàng, UX mượt mà, thiết kế responsive, khả năng tiếp cận và sản phẩm thân thiện với người dùng. Tôi cũng thích làm việc từ xa như một digital nomad, hợp tác với các đội nhóm và khách hàng từ bất cứ đâu trên thế giới.",
     "location": "Từ xa · Toàn cầu",
     "sections": {
       "summary": "Hồ sơ chuyên môn",
@@ -514,7 +512,8 @@
       "education": "Học vấn",
       "projects": "Dự án tiêu biểu",
       "languages": "Ngôn ngữ",
-      "links": "Liên kết"
+      "links": "Liên kết",
+      "hobbies": "Sở thích & mối quan tâm"
     },
     "period": {
       "since": "Từ {date}"
@@ -610,7 +609,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Công cụ giám sát DASAN OLT/ONU [mã nguồn mở]."
+        "description": "Công cụ giám sát DASAN OLT/ONU."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -662,7 +661,7 @@
     "hobbies": {
       "motorcycles": "Mô tô",
       "cars": "Ô tô",
-      "weightlifting": "Cử tạ",
+      "tennis": "Quần vợt",
       "calisthenics": "Calisthenics",
       "traveling": "Du lịch",
       "manga": "Manga",
