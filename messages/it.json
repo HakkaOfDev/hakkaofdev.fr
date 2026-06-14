@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Nomade digitale & ingegnere software",
-    "description": "Nomade digitale e ingegnere software freelance con oltre {years} anni di esperienza. Appassionato di open source, creo esperienze web performanti con React e Next.js.",
+    "description": "Nomade digitale e ingegnere software freelance con oltre {years} anni di esperienza, creo app web e mobile performanti con React, Next.js, React Native ed Expo.",
     "jobTitle": "Ingegnere software",
     "location": "Châlons-en-Champagne, Francia",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Sviluppatore frontend",
       "Nomade digitale",
-      "Open source",
       "Tecnologie moderne",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Nomade digitale",
       "nextjs": "Next.js",
-      "uiEngineering": "UI Engineering",
-      "openSource": "Open source"
+      "uiEngineering": "UI Engineering"
     },
     "footer": "Portfolio"
   },
@@ -395,7 +393,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software engineer con oltre {years} anni di esperienza nello sviluppo di applicazioni web e mobile per clienti e team. Guido progetti frontend con React, Next.js, React Native ed Expo, con attenzione a UI pulite, UX fluide, design responsive, accessibilità e prodotti facili da usare. Mi piace anche contribuire a progetti open-source e lavorare da remoto come nomade digitale, collaborando con team e clienti da ogni parte del mondo.",
+    "summary": "Software engineer con oltre {years} anni di esperienza nello sviluppo di applicazioni web e mobile per clienti e team. Guido progetti frontend con React, Next.js, React Native ed Expo, con attenzione a UI pulite, UX fluide, design responsive, accessibilità e prodotti facili da usare. Mi piace anche lavorare da remoto come nomade digitale, collaborando con team e clienti da ogni parte del mondo.",
     "location": "Remoto · In tutto il mondo",
     "sections": {
       "summary": "Riepilogo professionale",
@@ -404,7 +402,8 @@
       "education": "Formazione",
       "projects": "Progetti selezionati",
       "languages": "Lingue",
-      "links": "Link"
+      "links": "Link",
+      "hobbies": "Hobby e interessi"
     },
     "period": {
       "since": "Da {date}"
@@ -500,7 +499,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Strumento di supervisione per OLT/ONU DASAN [Open source]."
+        "description": "Strumento di supervisione per OLT/ONU DASAN."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -552,7 +551,7 @@
     "hobbies": {
       "motorcycles": "Moto",
       "cars": "Auto",
-      "weightlifting": "Sollevamento pesi",
+      "tennis": "Tennis",
       "calisthenics": "Calisthenics",
       "traveling": "Viaggi",
       "manga": "Manga",

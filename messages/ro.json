@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Nomad digital și inginer software",
-    "description": "Nomad digital și inginer software freelance cu peste {years} ani de experiență. Pasionat de open source, creez experiențe web performante cu React și Next.js.",
+    "description": "Nomad digital și inginer software freelance cu peste {years} ani de experiență, creez aplicații web și mobile performante cu React, Next.js, React Native și Expo.",
     "jobTitle": "Inginer software",
     "location": "Châlons-en-Champagne, Franța",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Dezvoltator frontend",
       "Nomad digital",
-      "Open source",
       "Tehnologii moderne",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Nomad digital",
       "nextjs": "Next.js",
-      "uiEngineering": "Inginerie UI",
-      "openSource": "Open source"
+      "uiEngineering": "Inginerie UI"
     },
     "footer": "Portofoliu"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Inginer software cu peste {years} ani de experiență în construirea de aplicații web și mobile pentru clienți și echipe. Conduc proiecte frontend folosind React, Next.js, React Native și Expo, cu accent pe o interfață curată, UX fluid, design responsive, accesibilitate și produse ușor de utilizat. De asemenea, îmi place să contribui la proiecte open-source și să lucrez de la distanță ca nomad digital, colaborând cu echipe și clienți din orice parte a lumii.",
+    "summary": "Inginer software cu peste {years} ani de experiență în construirea de aplicații web și mobile pentru clienți și echipe. Conduc proiecte frontend folosind React, Next.js, React Native și Expo, cu accent pe o interfață curată, UX fluid, design responsive, accesibilitate și produse ușor de utilizat. De asemenea, îmi place să lucrez de la distanță ca nomad digital, colaborând cu echipe și clienți din orice parte a lumii.",
     "location": "Remote · Global",
     "sections": {
       "summary": "Profil profesional",
@@ -514,7 +512,8 @@
       "education": "Educație",
       "projects": "Proiecte selectate",
       "languages": "Limbi",
-      "links": "Linkuri"
+      "links": "Linkuri",
+      "hobbies": "Pasiuni și interese"
     },
     "period": {
       "since": "Din {date}"
@@ -610,7 +609,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Instrument de supraveghere DASAN OLT/ONU [open source]."
+        "description": "Instrument de supraveghere DASAN OLT/ONU."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -662,7 +661,7 @@
     "hobbies": {
       "motorcycles": "Motociclete",
       "cars": "Mașini",
-      "weightlifting": "Haltere",
+      "tennis": "Tenis",
       "calisthenics": "Calistenie",
       "traveling": "Călătorii",
       "manga": "Manga",

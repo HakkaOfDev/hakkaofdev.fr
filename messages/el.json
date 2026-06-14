@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Ψηφιακός νομάδας & μηχανικός λογισμικού",
-    "description": "Ψηφιακός νομάδας και freelance μηχανικός λογισμικού με πάνω από {years} χρόνια εμπειρίας. Λάτρης του open source, δημιουργώ γρήγορες εμπειρίες ιστού με React και Next.js.",
+    "description": "Ψηφιακός νομάδας και freelance μηχανικός λογισμικού με πάνω από {years} χρόνια εμπειρίας. Δημιουργώ γρήγορες εφαρμογές web και mobile με React, Next.js, React Native και Expo.",
     "jobTitle": "Μηχανικός λογισμικού",
     "location": "Châlons-en-Champagne, Γαλλία",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Frontend developer",
       "Ψηφιακός νομάδας",
-      "Open source",
       "Σύγχρονες τεχνολογίες",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Ψηφιακός νομάδας",
       "nextjs": "Next.js",
-      "uiEngineering": "UI Engineering",
-      "openSource": "Open source"
+      "uiEngineering": "UI Engineering"
     },
     "footer": "Portfolio"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "Βιογραφικό",
     "subject": "Βιογραφικό",
-    "summary": "Μηχανικός λογισμικού με πάνω από {years} χρόνια εμπειρίας στην ανάπτυξη web και mobile εφαρμογών για πελάτες και ομάδες. Ηγούμαι frontend έργων χρησιμοποιώντας React, Next.js, React Native και Expo, με έμφαση σε καθαρό UI, ομαλό UX, responsive design, προσβασιμότητα και φιλικά προς τον χρήστη προϊόντα. Μου αρέσει επίσης να συνεισφέρω σε open-source έργα και να εργάζομαι εξ αποστάσεως ως ψηφιακός νομάς, συνεργαζόμενος με ομάδες και πελάτες από οποιοδήποτε σημείο του κόσμου.",
+    "summary": "Μηχανικός λογισμικού με πάνω από {years} χρόνια εμπειρίας στην ανάπτυξη web και mobile εφαρμογών για πελάτες και ομάδες. Ηγούμαι frontend έργων χρησιμοποιώντας React, Next.js, React Native και Expo, με έμφαση σε καθαρό UI, ομαλό UX, responsive design, προσβασιμότητα και φιλικά προς τον χρήστη προϊόντα. Μου αρέσει επίσης να εργάζομαι εξ αποστάσεως ως ψηφιακός νομάς, συνεργαζόμενος με ομάδες και πελάτες από οποιοδήποτε σημείο του κόσμου.",
     "location": "Εξ αποστάσεως · Παγκόσμια",
     "sections": {
       "summary": "Επαγγελματικό προφίλ",
@@ -514,7 +512,8 @@
       "education": "Εκπαίδευση",
       "projects": "Επιλεγμένα έργα",
       "languages": "Γλώσσες",
-      "links": "Σύνδεσμοι"
+      "links": "Σύνδεσμοι",
+      "hobbies": "Χόμπι & Ενδιαφέροντα"
     },
     "period": {
       "since": "{date} - σήμερα"
@@ -610,7 +609,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Εργαλείο εποπτείας DASAN OLT/ONU [open source]."
+        "description": "Εργαλείο εποπτείας DASAN OLT/ONU."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -662,7 +661,7 @@
     "hobbies": {
       "motorcycles": "Μοτοσικλέτες",
       "cars": "Αυτοκίνητα",
-      "weightlifting": "Άρση βαρών",
+      "tennis": "Τένις",
       "calisthenics": "Calisthenics",
       "traveling": "Ταξίδια",
       "manga": "Manga",

@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Digital Nomad & Software Engineer",
-    "description": "Digital nomad & Freelance Software Engineer with {years}+ years of experience. Open-source enthusiast crafting performant web experiences with React and Next.js.",
+    "description": "Digital nomad & Freelance Software Engineer with {years}+ years of experience, building performant web & mobile apps with React, Next.js, React Native & Expo.",
     "jobTitle": "Software Engineer",
     "location": "Châlons-en-Champagne, France",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Frontend Developer",
       "Digital Nomad",
-      "Open-source",
       "Modern Technologies",
       "hakkaofdev",
       "kabila.app",
@@ -352,8 +351,7 @@
     "tags": {
       "digitalNomad": "Digital Nomad",
       "nextjs": "Next.js",
-      "uiEngineering": "UI Engineering",
-      "openSource": "Open-source"
+      "uiEngineering": "UI Engineering"
     },
     "footer": "Portfolio"
   },
@@ -436,7 +434,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software Engineer with {years}+ years of experience building web and mobile apps for clients and teams. I lead frontend projects using React, Next.js, React Native, and Expo, with a focus on clean UI, smooth UX, responsive design, accessibility, and user-friendly products. I also enjoy contributing to open-source projects and working remotely as a digital nomad, collaborating with teams and clients from anywhere in the world.",
+    "summary": "Software Engineer with {years}+ years of experience building web and mobile apps for clients and teams. I lead frontend projects using React, Next.js, React Native, and Expo, with a focus on clean UI, smooth UX, responsive design, accessibility, and user-friendly products. I also enjoy working remotely as a digital nomad, collaborating with teams and clients from anywhere in the world.",
     "location": "Remote · Worldwide",
     "sections": {
       "summary": "Professional Summary",
@@ -445,7 +443,8 @@
       "education": "Education",
       "projects": "Selected Projects",
       "languages": "Languages",
-      "links": "Links"
+      "links": "Links",
+      "hobbies": "Hobbies & Interests"
     },
     "period": {
       "since": "Since {date}"
@@ -541,7 +540,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "DASAN OLT/ONUs Supervision tool [Opensource]."
+        "description": "DASAN OLT/ONUs Supervision tool."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -593,7 +592,7 @@
     "hobbies": {
       "motorcycles": "Motorcycles",
       "cars": "Cars",
-      "weightlifting": "Weightlifting",
+      "tennis": "Tennis",
       "calisthenics": "Calisthenics",
       "traveling": "Traveling",
       "manga": "Manga",

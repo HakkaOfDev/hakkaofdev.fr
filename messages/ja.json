@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | デジタルノマド & ソフトウェアエンジニア",
-    "description": "{years}年以上の経験を持つ、デジタルノマド兼フリーランスのソフトウェアエンジニア。オープンソース愛好家として、React と Next.js でパフォーマンスの高いウェブ体験を作っています。",
+    "description": "{years}年以上の経験を持つ、デジタルノマド兼フリーランスのソフトウェアエンジニア。React、Next.js、React Native、Expo でパフォーマンスの高いウェブ・モバイルアプリを作っています。",
     "jobTitle": "ソフトウェアエンジニア",
     "location": "フランス、シャロン・アン・シャンパーニュ",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "フロントエンド開発者",
       "デジタルノマド",
-      "オープンソース",
       "モダン技術",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "デジタルノマド",
       "nextjs": "Next.js",
-      "uiEngineering": "UI エンジニアリング",
-      "openSource": "オープンソース"
+      "uiEngineering": "UI エンジニアリング"
     },
     "footer": "ポートフォリオ"
   },
@@ -395,7 +393,7 @@
   "CV": {
     "documentTitleSuffix": "履歴書",
     "subject": "履歴書",
-    "summary": "ウェブ・モバイルアプリの開発で{years}年以上の経験を持つソフトウェアエンジニア。クライアントやチーム向けに、React、Next.js、React Native、Expo を用いてフロントエンドプロジェクトを率い、クリーンな UI、滑らかな UX、レスポンシブデザイン、アクセシビリティ、そして使いやすいプロダクトを重視しています。オープンソースへの貢献や、デジタルノマドとしてリモートで働くことも楽しんでおり、世界中のどこからでもチームやクライアントと協働しています。",
+    "summary": "ウェブ・モバイルアプリの開発で{years}年以上の経験を持つソフトウェアエンジニア。クライアントやチーム向けに、React、Next.js、React Native、Expo を用いてフロントエンドプロジェクトを率い、クリーンな UI、滑らかな UX、レスポンシブデザイン、アクセシビリティ、そして使いやすいプロダクトを重視しています。デジタルノマドとしてリモートで働くことも楽しんでおり、世界中のどこからでもチームやクライアントと協働しています。",
     "location": "リモート · ワールドワイド",
     "sections": {
       "summary": "プロフィール",
@@ -404,7 +402,8 @@
       "education": "学歴",
       "projects": "主なプロジェクト",
       "languages": "言語",
-      "links": "リンク"
+      "links": "リンク",
+      "hobbies": "趣味・関心"
     },
     "period": {
       "since": "{date}〜"
@@ -497,7 +496,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "DASAN OLT/ONU 監視ツール [オープンソース]。"
+        "description": "DASAN OLT/ONU 監視ツール。"
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -549,7 +548,7 @@
     "hobbies": {
       "motorcycles": "バイク",
       "cars": "車",
-      "weightlifting": "ウェイトトレーニング",
+      "tennis": "テニス",
       "calisthenics": "自重トレーニング",
       "traveling": "旅行",
       "manga": "漫画",

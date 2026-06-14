@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Alexandre Gossard | Digitale nomade & software-engineer",
-    "description": "Digitale nomade en freelance software-engineer met meer dan {years} jaar ervaring. Als opensource-enthousiast bouw ik snelle webervaringen met React en Next.js.",
+    "description": "Digitale nomade en freelance software-engineer met meer dan {years} jaar ervaring. Ik bouw snelle web- en mobiele apps met React, Next.js, React Native en Expo.",
     "jobTitle": "Software-engineer",
     "location": "Châlons-en-Champagne, Frankrijk",
     "ogImageAlt": "Alexandre Gossard",
@@ -9,7 +9,6 @@
       "Alexandre Gossard",
       "Frontendontwikkelaar",
       "Digitale nomade",
-      "Open source",
       "Moderne technologieën",
       "hakkaofdev",
       "kabila.app",
@@ -311,8 +310,7 @@
     "tags": {
       "digitalNomad": "Digitale nomade",
       "nextjs": "Next.js",
-      "uiEngineering": "UI-engineering",
-      "openSource": "Open source"
+      "uiEngineering": "UI-engineering"
     },
     "footer": "Portfolio"
   },
@@ -505,7 +503,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software-engineer met meer dan {years} jaar ervaring in het bouwen van web- en mobiele apps voor klanten en teams. Ik leid frontend-projecten met React, Next.js, React Native en Expo, met focus op een strakke UI, soepele UX, responsive design, toegankelijkheid en gebruiksvriendelijke producten. Ik draag ook graag bij aan open-source projecten en werk op afstand als digitale nomade, in samenwerking met teams en klanten waar ook ter wereld.",
+    "summary": "Software-engineer met meer dan {years} jaar ervaring in het bouwen van web- en mobiele apps voor klanten en teams. Ik leid frontend-projecten met React, Next.js, React Native en Expo, met focus op een strakke UI, soepele UX, responsive design, toegankelijkheid en gebruiksvriendelijke producten. Ik werk ook graag op afstand als digitale nomade, in samenwerking met teams en klanten waar ook ter wereld.",
     "location": "Op afstand · Wereldwijd",
     "sections": {
       "summary": "Professioneel profiel",
@@ -514,7 +512,8 @@
       "education": "Opleiding",
       "projects": "Geselecteerde projecten",
       "languages": "Talen",
-      "links": "Links"
+      "links": "Links",
+      "hobbies": "Hobby's & interesses"
     },
     "period": {
       "since": "Sinds {date}"
@@ -610,7 +609,7 @@
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Toezichtstool voor DASAN OLT/ONU's [open source]."
+        "description": "Toezichtstool voor DASAN OLT/ONU's."
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
@@ -662,7 +661,7 @@
     "hobbies": {
       "motorcycles": "Motoren",
       "cars": "Auto's",
-      "weightlifting": "Krachttraining",
+      "tennis": "Tennis",
       "calisthenics": "Calisthenics",
       "traveling": "Reizen",
       "manga": "Manga",
