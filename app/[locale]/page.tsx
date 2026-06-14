@@ -19,11 +19,10 @@ export default async function Home({ params }: Props) {
       <Image
         src="/logo.png"
         alt="Alexandre Gossard Logo"
-        quality={75}
         width={44}
         height={44}
-        sizes="44px"
-        className="rounded-full shadow-sm ring-1 ring-border/40 dark:ring-overlay-medium"
+        sizes="88px"
+        className="rounded-full bg-background/70 shadow-sm ring-1 ring-border backdrop-blur-xs dark:ring-overlay-medium"
         priority
       />
       <MainScreen />

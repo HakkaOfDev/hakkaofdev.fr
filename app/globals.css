@@ -200,11 +200,48 @@
   transition: none !important;
 }
 
+/* ── World-map ambient background ── */
+.world-map-country {
+  fill: color-mix(in oklch, var(--foreground) 6%, transparent);
+  stroke: color-mix(in oklch, var(--foreground) 32%, transparent);
+  stroke-width: 0.5;
+  fill-rule: evenodd;
+  vector-effect: non-scaling-stroke;
+}
+.dark .world-map-country {
+  fill: color-mix(in oklch, var(--foreground) 3%, transparent);
+  stroke: color-mix(in oklch, var(--foreground) 14%, transparent);
+}
+.world-map-country--visited {
+  fill: color-mix(in oklch, var(--primary) 32%, transparent);
+  stroke: color-mix(in oklch, var(--primary) 80%, transparent);
+  stroke-width: 0.7;
+  /* The only motion: visited countries gently glow/breathe. */
+  animation: world-map-pulse 4s ease-in-out infinite;
+}
+.dark .world-map-country--visited {
+  fill: color-mix(in oklch, var(--primary) 22%, transparent);
+  stroke: color-mix(in oklch, var(--primary) 65%, transparent);
+}
+
+@keyframes world-map-pulse {
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 /* ── Respect reduced-motion: drop decorative loops & blinking carets ── */
 @media (prefers-reduced-motion: reduce) {
   .animate-wave,
   .animate-ping,
   .terminal-cursor-idle::after {
     animation: none !important;
+  }
+  .world-map-country--visited {
+    animation: none;
   }
 }

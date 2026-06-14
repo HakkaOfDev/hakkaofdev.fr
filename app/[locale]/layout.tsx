@@ -11,6 +11,7 @@ import {
   setRequestLocale,
 } from "next-intl/server";
 import { useId } from "react";
+import { WorldMapBackground } from "@/components/background/WorldMapBackground";
 import Footer from "@/components/Footer";
 import Providers from "@/components/providers/Providers";
 import { getScriptFontVariable } from "@/i18n/fonts";
@@ -183,10 +184,11 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         className={cn(
           jetbrainsMono.variable,
           scriptFontVariable,
-          "flex h-[100dvh] flex-col overflow-hidden antialiased",
+          "flex h-dvh flex-col overflow-hidden antialiased",
         )}
       >
         <PersonJsonLd data={personJsonLd} />
+        <WorldMapBackground />
         <NextIntlClientProvider messages={messages}>
           <Providers>
             {children}
