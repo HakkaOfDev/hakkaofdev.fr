@@ -504,7 +504,7 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Software engineer dengan pengalaman lebih dari {years} tahun membangun aplikasi web dan mobile untuk klien dan tim. Saya memimpin proyek frontend menggunakan React, Next.js, React Native, dan Expo, dengan fokus pada UI yang bersih, UX yang mulus, desain responsif, aksesibilitas, dan produk yang ramah pengguna. Saya juga senang bekerja secara remote sebagai digital nomad, berkolaborasi dengan tim dan klien dari mana pun di dunia.",
-    "location": "Remote · Global",
+    "location": "Remote",
     "sections": {
       "summary": "Ringkasan profesional",
       "experience": "Pengalaman",
