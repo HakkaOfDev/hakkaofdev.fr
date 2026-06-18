@@ -11,7 +11,7 @@ export const PROJECTS: ReadonlyArray<ProjectEntry> = [
     slug: "bravalta",
     url: "https://bravalta.com",
     imageUrl: "/projects/bravalta.png",
-    tags: ["Astro", "React", "Tailwind", "Typescript"],
+    tags: ["Astro", "Tailwind", "Typescript"],
   },
   {
     slug: "kabilaApp",

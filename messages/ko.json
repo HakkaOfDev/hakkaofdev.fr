@@ -504,7 +504,7 @@
     "documentTitleSuffix": "이력서",
     "subject": "이력서",
     "summary": "{years}년 이상의 경력을 가진 소프트웨어 엔지니어로, 클라이언트와 팀을 위해 웹·모바일 앱을 개발합니다. React, Next.js, React Native, Expo를 사용해 프런트엔드 프로젝트를 이끌며, 깔끔한 UI, 매끄러운 UX, 반응형 디자인, 접근성, 그리고 사용자 친화적인 제품에 중점을 둡니다. 디지털 노마드로 원격 근무하며 세계 어디에서든 팀 및 클라이언트와 협업하는 것을 즐깁니다.",
-    "location": "원격 · 글로벌",
+    "location": "원격",
     "sections": {
       "summary": "직무 소개",
       "experience": "경력",

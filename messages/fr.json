@@ -394,7 +394,7 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Ingénieur logiciel avec plus de {years} ans d'expérience dans la création d'applications web et mobiles pour des clients et des équipes. Je dirige des projets frontend avec React, Next.js, React Native et Expo, en portant une attention particulière à une UI soignée, une UX fluide, un design responsive, l'accessibilité et des produits agréables à utiliser. J'aime aussi travailler à distance en tant que nomade numérique, en collaborant avec des équipes et des clients partout dans le monde.",
-    "location": "Télétravail · Mondial",
+    "location": "Télétravail",
     "sections": {
       "summary": "Résumé professionnel",
       "experience": "Expérience",
@@ -434,7 +434,7 @@
         ]
       },
       "archeMC2": {
-        "name": "Alternant DevOps Engineer",
+        "name": "Alternant DevOps",
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, France",
         "descriptions": [
@@ -479,7 +479,7 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "Un cabinet de conseil pour entreprises spécialisé en architecture DLT et IA, livrant l'intégration blockchain et IA avec la conformité réglementaire intégrée — de la stratégie à la production."
+        "description": "Un cabinet de conseil pour entreprises spécialisé en architecture DLT et IA, livrant l'intégration blockchain et IA avec la conformité réglementaire intégrée, de la stratégie à la production."
       },
       "kabilaApp": {
         "name": "Kabila App",

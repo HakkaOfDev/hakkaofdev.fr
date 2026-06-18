@@ -504,7 +504,7 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Kỹ sư phần mềm với hơn {years} năm kinh nghiệm xây dựng các ứng dụng web và di động cho khách hàng và đội nhóm. Tôi dẫn dắt các dự án frontend với React, Next.js, React Native và Expo, tập trung vào UI gọn gàng, UX mượt mà, thiết kế responsive, khả năng tiếp cận và sản phẩm thân thiện với người dùng. Tôi cũng thích làm việc từ xa như một digital nomad, hợp tác với các đội nhóm và khách hàng từ bất cứ đâu trên thế giới.",
-    "location": "Từ xa · Toàn cầu",
+    "location": "Từ xa",
     "sections": {
       "summary": "Hồ sơ chuyên môn",
       "experience": "Kinh nghiệm",
@@ -589,7 +589,7 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "Một công ty tư vấn doanh nghiệp chuyên về kiến trúc DLT và AI, cung cấp tích hợp blockchain và AI với tuân thủ quy định tích hợp sẵn — từ chiến lược đến sản xuất."
+        "description": "Một công ty tư vấn doanh nghiệp chuyên về kiến trúc DLT và AI, cung cấp tích hợp blockchain và AI với tuân thủ quy định tích hợp sẵn, từ chiến lược đến sản xuất."
       },
       "kabilaApp": {
         "name": "Kabila App",
