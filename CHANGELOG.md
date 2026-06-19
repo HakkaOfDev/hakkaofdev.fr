@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.13.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.13.0...v1.13.1) (2026-06-19)
+
+
+### Miscellaneous
+
+* **deps:** bump dependencies to latest minor and patch ([e020b5f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e020b5fcb7756b75fd296d9c57c2c0c9a90586a0))
+
+
+### Code Refactoring
+
+* **content:** remove React from Bravalta tech tags ([cf550d0](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/cf550d0a4ce3e9114853260dc94672e6c9d457d0))
+* **i18n:** drop worldwide suffix from CV location heading ([920b247](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/920b2475c3822488df3e2d66d1bd897c530f7504))
+* **i18n:** remove em-dash from Bravalta project descriptions ([f9824fb](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/f9824fb8422eb0a0acc02ef028b1b73f17523204))
+* **i18n:** shorten Arche MC2 role to DevOps ([9c44d7f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/9c44d7f219d2f029a1a22a9c04e14a698c6d667e))
+
 ## [1.13.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.12.0...v1.13.0) (2026-06-14)
 
 
