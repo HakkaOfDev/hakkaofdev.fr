@@ -394,7 +394,7 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Software engineer con oltre {years} anni di esperienza nello sviluppo di applicazioni web e mobile per clienti e team. Guido progetti frontend con React, Next.js, React Native ed Expo, con attenzione a UI pulite, UX fluide, design responsive, accessibilità e prodotti facili da usare. Mi piace anche lavorare da remoto come nomade digitale, collaborando con team e clienti da ogni parte del mondo.",
-    "location": "Remoto · In tutto il mondo",
+    "location": "Remoto",
     "sections": {
       "summary": "Riepilogo professionale",
       "experience": "Esperienza",
@@ -479,7 +479,7 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "Una società di consulenza enterprise specializzata in architettura DLT e IA, che offre integrazione blockchain e IA con compliance normativa integrata — dalla strategia alla produzione."
+        "description": "Una società di consulenza enterprise specializzata in architettura DLT e IA, che offre integrazione blockchain e IA con compliance normativa integrata, dalla strategia alla produzione."
       },
       "kabilaApp": {
         "name": "Kabila App",

@@ -394,7 +394,7 @@
     "documentTitleSuffix": "Lebenslauf",
     "subject": "Lebenslauf",
     "summary": "Software-Ingenieur mit über {years} Jahren Erfahrung in der Entwicklung von Web- und Mobile-Apps für Kunden und Teams. Ich leite Frontend-Projekte mit React, Next.js, React Native und Expo, mit Fokus auf eine saubere UI, eine flüssige UX, responsives Design, Barrierefreiheit und benutzerfreundliche Produkte. Außerdem arbeite ich gerne remote als digitaler Nomade, in Zusammenarbeit mit Teams und Kunden von überall auf der Welt.",
-    "location": "Remote · Weltweit",
+    "location": "Remote",
     "sections": {
       "summary": "Kurzprofil",
       "experience": "Erfahrung",
@@ -479,7 +479,7 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "Eine Beratungsfirma für Unternehmen, spezialisiert auf DLT- und KI-Architektur, mit Blockchain- und KI-Integration sowie eingebauter regulatorischer Compliance — von der Strategie bis zur Produktion."
+        "description": "Eine Beratungsfirma für Unternehmen, spezialisiert auf DLT- und KI-Architektur, mit Blockchain- und KI-Integration sowie eingebauter regulatorischer Compliance, von der Strategie bis zur Produktion."
       },
       "kabilaApp": {
         "name": "Kabila App",

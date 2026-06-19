@@ -435,7 +435,7 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Software Engineer with {years}+ years of experience building web and mobile apps for clients and teams. I lead frontend projects using React, Next.js, React Native, and Expo, with a focus on clean UI, smooth UX, responsive design, accessibility, and user-friendly products. I also enjoy working remotely as a digital nomad, collaborating with teams and clients from anywhere in the world.",
-    "location": "Remote · Worldwide",
+    "location": "Remote",
     "sections": {
       "summary": "Professional Summary",
       "experience": "Experience",
@@ -520,7 +520,7 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "An enterprise consultancy for DLT and AI architecture, delivering blockchain and AI integration with regulatory compliance built in — from strategy to production."
+        "description": "An enterprise consultancy for DLT and AI architecture, delivering blockchain and AI integration with regulatory compliance built in, from strategy to production."
       },
       "kabilaApp": {
         "name": "Kabila App",

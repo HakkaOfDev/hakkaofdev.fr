@@ -504,7 +504,7 @@
     "documentTitleSuffix": "CV",
     "subject": "CV",
     "summary": "Inżynier oprogramowania z ponad {years}-letnim doświadczeniem w tworzeniu aplikacji webowych i mobilnych dla klientów i zespołów. Prowadzę projekty frontendowe z wykorzystaniem React, Next.js, React Native i Expo, ze szczególnym naciskiem na czyste UI, płynne UX, responsywny design, dostępność i produkty przyjazne użytkownikowi. Lubię również pracować zdalnie jako cyfrowy nomada, współpracując z zespołami i klientami z dowolnego miejsca na świecie.",
-    "location": "Zdalnie · Globalnie",
+    "location": "Zdalnie",
     "sections": {
       "summary": "Profil zawodowy",
       "experience": "Doświadczenie",
@@ -589,7 +589,7 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "Firma konsultingowa dla przedsiębiorstw specjalizująca się w architekturze DLT i AI, dostarczająca integrację blockchain i AI z wbudowaną zgodnością regulacyjną — od strategii po produkcję."
+        "description": "Firma konsultingowa dla przedsiębiorstw specjalizująca się w architekturze DLT i AI, dostarczająca integrację blockchain i AI z wbudowaną zgodnością regulacyjną, od strategii po produkcję."
       },
       "kabilaApp": {
         "name": "Kabila App",
