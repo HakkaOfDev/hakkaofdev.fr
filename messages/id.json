@@ -595,12 +595,16 @@
         "name": "Kabila App",
         "description": "Platform sosial Web3 dan ekosistem NFT yang dibangun di Hedera, dengan marketplace NFT, ruang komunitas, launchpad, dan alat untuk kreator."
       },
+      "kabilaWalletNative": {
+        "name": "Kabila Wallet (Native)",
+        "description": "Wallet seluler native untuk jaringan Hedera, dibangun dengan React Native dan Expo. Kelola akun, token, dan NFT Anda serta terhubung dengan DApp di mana saja sambil mempertahankan kontrol penuh atas aset Anda."
+      },
       "kabilaTools": {
         "name": "Kabila Tools",
         "description": "Toolkit NFT all-in-one untuk creator dan komunitas di Hedera. Platform yang kuat dan mudah digunakan untuk membuat, meluncurkan, dan mengelola koleksi NFT dengan kontrol penuh."
       },
       "kabilaWallet": {
-        "name": "Kabila Wallet",
+        "name": "Kabila Wallet (Extension)",
         "description": "Wallet non-kustodial yang sederhana dan aman untuk jaringan Hedera. Kelola akun, token, NFT, dan terhubung dengan DApp sambil mempertahankan kontrol penuh atas aset Anda."
       },
       "ferreiraBorges": {
