@@ -36,7 +36,7 @@ export const SKILLS: ReadonlyArray<SkillGroup> = [
   },
   { slug: "uiStyling", values: ["Tailwind", "shadcn/ui", "Motion", "Figma"] },
   { slug: "tooling", values: ["Biome", "Bun"] },
-  { slug: "testing", values: ["Vitest", "Playwright"] },
+  { slug: "testing", values: ["Vitest", "Playwright", "Jest"] },
   { slug: "databases", values: ["PostgreSQL", "Supabase", "MongoDB", "Redis"] },
   { slug: "cloud", values: ["Vercel", "AWS"] },
   { slug: "vcs", values: ["Git", "Gitlab"] },
