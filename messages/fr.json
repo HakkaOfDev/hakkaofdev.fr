@@ -24,7 +24,7 @@
     "greeting": "~ Bienvenue <wave>👋</wave>",
     "intro": "<tagline>Nomade numérique</tagline> · <job>Ingénieur logiciel</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "rate": "600€ en TJM",
+      "rate": "550€ en TJM",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },

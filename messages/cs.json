@@ -24,7 +24,7 @@
     "greeting": "~ Vítej <wave>👋</wave>",
     "intro": "<tagline>Digitální nomád</tagline> · <job>Softwarový inženýr</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "rate": "600 €/den",
+      "rate": "600 $/den",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },

@@ -24,7 +24,7 @@
     "greeting": "~ Ласкаво просимо <wave>👋</wave>",
     "intro": "<tagline>Цифровий номад</tagline> · <job>Інженер-програміст</job> · <freelance>Фріланс</freelance>",
     "tags": {
-      "rate": "600 €/день",
+      "rate": "600 $/день",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },

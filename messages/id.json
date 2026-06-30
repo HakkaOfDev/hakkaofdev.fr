@@ -24,7 +24,7 @@
     "greeting": "~ Selamat datang <wave>👋</wave>",
     "intro": "<tagline>Pengelana digital</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "rate": "€600/hari",
+      "rate": "$600/hari",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },

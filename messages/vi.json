@@ -24,7 +24,7 @@
     "greeting": "~ Chào mừng <wave>👋</wave>",
     "intro": "<tagline>Du mục số</tagline> · <job>Kỹ sư phần mềm</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "rate": "600 €/ngày",
+      "rate": "600 $/ngày",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },

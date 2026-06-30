@@ -24,7 +24,7 @@
     "greeting": "~ स्वागत है <wave>👋</wave>",
     "intro": "<tagline>डिजिटल खानाबदोश</tagline> · <job>सॉफ्टवेयर इंजीनियर</job> · <freelance>फ्रीलांस</freelance>",
     "tags": {
-      "rate": "€600/दिन",
+      "rate": "$600/दिन",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },
