@@ -595,12 +595,16 @@
         "name": "Kabila App",
         "description": "Hedera पर निर्मित Web3 सोशल प्लेटफ़ॉर्म और NFT इकोसिस्टम, जिसमें NFT मार्केटप्लेस, सामुदायिक प्लाज़ा, लॉन्चपैड और क्रिएटर टूल्स शामिल हैं."
       },
+      "kabilaWalletNative": {
+        "name": "Kabila Wallet (Native)",
+        "description": "Hedera नेटवर्क के लिए नेटिव मोबाइल वॉलेट, जिसे React Native और Expo से बनाया गया है. अपने खातों, टोकन्स और NFT का प्रबंधन करें और अपनी संपत्तियों पर पूर्ण नियंत्रण रखते हुए कहीं से भी DApps से जुड़ें."
+      },
       "kabilaTools": {
         "name": "Kabila Tools",
         "description": "Hedera पर क्रिएटर्स और समुदायों के लिए ऑल-इन-वन NFT टूलकिट. NFT कलेक्शन को पूर्ण नियंत्रण के साथ बनाने, लॉन्च करने और प्रबंधित करने के लिए शक्तिशाली और उपयोग में आसान प्लेटफ़ॉर्म."
       },
       "kabilaWallet": {
-        "name": "Kabila Wallet",
+        "name": "Kabila Wallet (Extension)",
         "description": "Hedera नेटवर्क के लिए नॉन-कस्टोडियल, सरल और सुरक्षित वॉलेट. खातों, टोकन्स, NFT का प्रबंधन करें और अपनी संपत्तियों पर पूर्ण नियंत्रण रखते हुए DApps से जुड़ें."
       },
       "ferreiraBorges": {
