@@ -24,7 +24,7 @@
     "greeting": "~ 欢迎 <wave>👋</wave>",
     "intro": "<tagline>数字游民</tagline> · <job>软件工程师</job> · <freelance>自由职业</freelance>",
     "tags": {
-      "rate": "600€/天",
+      "rate": "600$/天",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },

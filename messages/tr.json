@@ -24,7 +24,7 @@
     "greeting": "~ Hoş geldin <wave>👋</wave>",
     "intro": "<tagline>Dijital göçebe</tagline> · <job>Yazılım mühendisi</job> · <freelance>Serbest çalışan</freelance>",
     "tags": {
-      "rate": "600 €/gün",
+      "rate": "600 $/gün",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },

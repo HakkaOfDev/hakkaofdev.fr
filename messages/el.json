@@ -24,7 +24,7 @@
     "greeting": "~ Καλώς ήρθες <wave>👋</wave>",
     "intro": "<tagline>Ψηφιακός νομάδας</tagline> · <job>Μηχανικός λογισμικού</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "rate": "600 €/ημέρα",
+      "rate": "600 $/ημέρα",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },

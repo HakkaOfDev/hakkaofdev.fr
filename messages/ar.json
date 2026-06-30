@@ -24,7 +24,7 @@
     "greeting": "~ مرحبًا <wave>👋</wave>",
     "intro": "<tagline>رحالة رقمي</tagline> · <job>مهندس برمجيات</job> · <freelance>مستقل</freelance>",
     "tags": {
-      "rate": "600 يورو/يوم",
+      "rate": "600 دولار/يوم",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },

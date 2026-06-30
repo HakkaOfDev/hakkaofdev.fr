@@ -24,7 +24,7 @@
     "greeting": "~ ברוך הבא <wave>👋</wave>",
     "intro": "<tagline>נווד דיגיטלי</tagline> · <job>מהנדס תוכנה</job> · <freelance>פרילנס</freelance>",
     "tags": {
-      "rate": "600 €/יום",
+      "rate": "600 $/יום",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },

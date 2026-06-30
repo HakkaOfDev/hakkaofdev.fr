@@ -24,7 +24,7 @@
     "greeting": "~ Welcome <wave>👋</wave>",
     "intro": "<tagline>Digital Nomad</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "rate": "€600/day",
+      "rate": "$600/day",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },
