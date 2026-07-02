@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.14.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.13.1...v1.14.0) (2026-07-02)
+
+
+### Features
+
+* **projects:** add Kabila Wallet (Native) and refine wallet entries ([e07611f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e07611f14883c888d6a783b3caa19e46c961ae33))
+* **projects:** add Kabila Wallet (Native) project with image positioning ([58966d0](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/58966d0a1be061edfa5733c20ac9eb8ea931cfbe))
+
+
+### Miscellaneous
+
+* **commitlint:** allow i18n commit type ([c93522b](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c93522b6466f1e016e765bb23f78fa1f9fc19a2d))
+* **content:** update freelance day rate ([4f0b866](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/4f0b8662d57ce036bf8e77d0315a9ce3ec34ddd4))
+* **content:** update freelance day rate across locales ([7cb352a](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/7cb352a565bfa660e4b251fa5a21f07e79052e99))
+* **deps:** bump dependencies to latest ([b47e138](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/b47e1383dc98628739fc3bc6e1b490d89411657a))
+* **deps:** bump dependencies to latest ([9afd144](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/9afd144c1b7869f47c1deae7cacc1a5f24949b26))
+* **skills:** add Jest to testing skills ([a0e82ff](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/a0e82ff02a3f7022eea1e85e4703376dc5f2e11b))
+* **skills:** add Jest to testing skills ([35cc159](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/35cc15926dbb9908c31c778250338896bc3ad129))
+
 ## [1.13.1](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.13.0...v1.13.1) (2026-06-19)
 
 
