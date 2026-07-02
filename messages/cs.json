@@ -24,7 +24,7 @@
     "greeting": "~ Vítej <wave>👋</wave>",
     "intro": "<tagline>Digitální nomád</tagline> · <job>Softwarový inženýr</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "rate": "600 €/den",
+      "rate": "600 $/den",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },
@@ -595,12 +595,16 @@
         "name": "Kabila App",
         "description": "Web3 sociální platforma a NFT ekosystém na Hederě, s NFT marketplace, komunitními prostory, launchpady a nástroji pro tvůrce."
       },
+      "kabilaWalletNative": {
+        "name": "Kabila Wallet (Native)",
+        "description": "Nativní mobilní peněženka pro síť Hedera, vytvořená pomocí React Native a Expo. Spravujte účty, tokeny a NFT a propojujte se s DApp aplikacemi odkudkoli při zachování plné kontroly nad svými aktivy."
+      },
       "kabilaTools": {
         "name": "Kabila Tools",
         "description": "All-in-one NFT toolkit pro tvůrce a komunity na Hederě. Výkonná a snadno použitelná platforma pro vytváření, spouštění a správu NFT kolekcí s plnou kontrolou."
       },
       "kabilaWallet": {
-        "name": "Kabila Wallet",
+        "name": "Kabila Wallet (Extension)",
         "description": "Non-custodial, jednoduchá a bezpečná peněženka pro síť Hedera. Spravujte účty, tokeny, NFT a propojujte se s DApp aplikacemi při zachování plné kontroly nad svými aktivy."
       },
       "ferreiraBorges": {

@@ -24,7 +24,7 @@
     "greeting": "~ Welcome <wave>👋</wave>",
     "intro": "<tagline>Digital Nomad</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "rate": "€600/day",
+      "rate": "$600/day",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },
@@ -526,12 +526,16 @@
         "name": "Kabila App",
         "description": "A Web3 social platform and NFT ecosystem built on Hedera, featuring an NFT marketplace, community plazas, launchpads and creator tools."
       },
+      "kabilaWalletNative": {
+        "name": "Kabila Wallet (Native)",
+        "description": "The native mobile wallet for the Hedera network, built with React Native and Expo. Manage your accounts, tokens and NFTs and connect to DApps on the go while keeping full control of your assets."
+      },
       "kabilaTools": {
         "name": "Kabila Tools",
         "description": "An all-in-one NFT toolkit for creators and communities on Hedera. A powerful and easy-to-use platform to create, launch, and manage your NFT collections while being in total control."
       },
       "kabilaWallet": {
-        "name": "Kabila Wallet",
+        "name": "Kabila Wallet (Extension)",
         "description": "A non-custodial, simple, and secure wallet for the Hedera network. Manage your accounts, tokens, NFTs, and connect with DApps while maintaining full control of your assets."
       },
       "ferreiraBorges": {

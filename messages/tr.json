@@ -24,7 +24,7 @@
     "greeting": "~ Hoş geldin <wave>👋</wave>",
     "intro": "<tagline>Dijital göçebe</tagline> · <job>Yazılım mühendisi</job> · <freelance>Serbest çalışan</freelance>",
     "tags": {
-      "rate": "600 €/gün",
+      "rate": "600 $/gün",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },
@@ -595,12 +595,16 @@
         "name": "Kabila App",
         "description": "Hedera üzerinde inşa edilmiş bir Web3 sosyal platformu ve NFT ekosistemi; NFT pazaryeri, topluluk alanları, launchpad'ler ve içerik üretici araçları içerir."
       },
+      "kabilaWalletNative": {
+        "name": "Kabila Wallet (Native)",
+        "description": "Hedera ağı için React Native ve Expo ile geliştirilmiş yerel mobil cüzdan. Hesaplarınızı, tokenlarınızı ve NFT'lerinizi yönetin ve varlıklarınız üzerinde tam kontrolü korurken hareket halindeyken DApp'lerle bağlantı kurun."
+      },
       "kabilaTools": {
         "name": "Kabila Tools",
         "description": "Hedera üzerindeki içerik üreticiler ve topluluklar için hepsi bir arada NFT araç seti. NFT koleksiyonlarınızı tam kontrol sahibi olarak oluşturmak, yayınlamak ve yönetmek için güçlü ve kullanımı kolay bir platform."
       },
       "kabilaWallet": {
-        "name": "Kabila Wallet",
+        "name": "Kabila Wallet (Extension)",
         "description": "Hedera ağı için saklamasız, basit ve güvenli bir cüzdan. Hesaplarınızı, tokenlarınızı, NFT'lerinizi yönetin ve varlıklarınız üzerinde tam kontrolü korurken DApp'lerle bağlantı kurun."
       },
       "ferreiraBorges": {

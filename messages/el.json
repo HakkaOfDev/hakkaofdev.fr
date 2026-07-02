@@ -24,7 +24,7 @@
     "greeting": "~ Καλώς ήρθες <wave>👋</wave>",
     "intro": "<tagline>Ψηφιακός νομάδας</tagline> · <job>Μηχανικός λογισμικού</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "rate": "600 €/ημέρα",
+      "rate": "600 $/ημέρα",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },
@@ -595,12 +595,16 @@
         "name": "Kabila App",
         "description": "Μια κοινωνική πλατφόρμα Web3 και οικοσύστημα NFT στο Hedera, με NFT marketplace, πλαζ κοινοτήτων, launchpads και εργαλεία για δημιουργούς."
       },
+      "kabilaWalletNative": {
+        "name": "Kabila Wallet (Native)",
+        "description": "Το εγγενές πορτοφόλι για κινητά για το δίκτυο Hedera, φτιαγμένο με React Native και Expo. Διαχειριστείτε λογαριασμούς, tokens και NFT και συνδεθείτε με DApps από οπουδήποτε διατηρώντας πλήρη έλεγχο των περιουσιακών σας στοιχείων."
+      },
       "kabilaTools": {
         "name": "Kabila Tools",
         "description": "Ένα πλήρες NFT toolkit για δημιουργούς και κοινότητες στο Hedera. Μια ισχυρή και εύχρηστη πλατφόρμα για δημιουργία, εκκίνηση και διαχείριση συλλογών NFT με πλήρη έλεγχο."
       },
       "kabilaWallet": {
-        "name": "Kabila Wallet",
+        "name": "Kabila Wallet (Extension)",
         "description": "Ένα απλό και ασφαλές πορτοφόλι χωρίς θεματοφυλακή για το δίκτυο Hedera. Διαχειριστείτε λογαριασμούς, tokens, NFT και συνδεθείτε με DApps διατηρώντας πλήρη έλεγχο των περιουσιακών σας στοιχείων."
       },
       "ferreiraBorges": {

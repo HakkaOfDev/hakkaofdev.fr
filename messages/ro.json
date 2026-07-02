@@ -24,7 +24,7 @@
     "greeting": "~ Bun venit <wave>👋</wave>",
     "intro": "<tagline>Nomad digital</tagline> · <job>Inginer software</job> · <freelance>Freelance</freelance>",
     "tags": {
-      "rate": "600 €/zi",
+      "rate": "600 $/zi",
       "web": "React/Next.js",
       "mobile": "Expo/React Native"
     },
@@ -595,12 +595,16 @@
         "name": "Kabila App",
         "description": "O platformă socială Web3 și ecosistem NFT construite pe Hedera, cu marketplace NFT, plaze comunitare, launchpad-uri și instrumente pentru creatori."
       },
+      "kabilaWalletNative": {
+        "name": "Kabila Wallet (Native)",
+        "description": "Portofelul mobil nativ pentru rețeaua Hedera, construit cu React Native și Expo. Gestionează conturi, tokenuri și NFT-uri și conectează-te la DApp-uri de oriunde, menținând controlul total asupra activelor tale."
+      },
       "kabilaTools": {
         "name": "Kabila Tools",
         "description": "Un toolkit NFT all-in-one pentru creatori și comunități pe Hedera. O platformă puternică și ușor de folosit pentru a crea, lansa și gestiona colecții NFT, păstrând controlul total."
       },
       "kabilaWallet": {
-        "name": "Kabila Wallet",
+        "name": "Kabila Wallet (Extension)",
         "description": "Un portofel fără custodie, simplu și sigur pentru rețeaua Hedera. Gestionează conturi, tokenuri, NFT-uri și conectează-te la DApp-uri menținând controlul total asupra activelor tale."
       },
       "ferreiraBorges": {

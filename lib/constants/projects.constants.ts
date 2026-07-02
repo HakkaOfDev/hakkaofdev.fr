@@ -3,6 +3,8 @@ export type ProjectEntry = {
   slug: string;
   url?: string;
   imageUrl: string;
+  /** Tailwind `object-position` class for the card image (defaults to center). */
+  imagePosition?: string;
   tags: string[];
 };
 
@@ -20,6 +22,12 @@ export const PROJECTS: ReadonlyArray<ProjectEntry> = [
     tags: ["Next.js", "Tailwind", "Typescript", "Blockchain", "Marketplace"],
   },
   {
+    slug: "kabilaWalletNative",
+    imageUrl: "/projects/kabila-wallet-native.png",
+    imagePosition: "object-bottom",
+    tags: ["Expo", "React Native", "Typescript", "Blockchain", "Tailwind"],
+  },
+  {
     slug: "kabilaTools",
     url: "https://tools.kabila.app",
     imageUrl: "/projects/kabila-tools.png",
@@ -29,7 +37,15 @@ export const PROJECTS: ReadonlyArray<ProjectEntry> = [
     slug: "kabilaWallet",
     url: "https://wallet.kabila.app",
     imageUrl: "/projects/kabila-wallet.webp",
-    tags: ["Vite", "React", "Tailwind", "Javascript", "Blockchain"],
+    imagePosition: "object-bottom",
+    tags: [
+      "Vite",
+      "React",
+      "Capacitor",
+      "Tailwind",
+      "Javascript",
+      "Blockchain",
+    ],
   },
   {
     slug: "ferreiraBorges",

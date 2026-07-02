@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { AnimatedSpan, RevealGroup } from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { PROJECTS } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import { matchesGrep } from "@/lib/utils/grep.utils";
 
 function CProjects() {
@@ -45,11 +46,12 @@ function CProjects() {
               <Image
                 src={project.imageUrl}
                 alt={name}
-                className={
-                  project.url
-                    ? "object-cover transition-all duration-300 group-hover:scale-105"
-                    : "object-cover"
-                }
+                className={cn(
+                  "object-cover",
+                  project.imagePosition,
+                  project.url &&
+                    "transition-all duration-300 group-hover:scale-105",
+                )}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 fill
               />
