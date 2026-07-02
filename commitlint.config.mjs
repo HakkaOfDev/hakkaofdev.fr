@@ -18,6 +18,7 @@ const config = {
         "chore",
         "revert",
         "deps",
+        "i18n",
       ],
     ],
     "subject-case": [2, "never", ["start-case", "pascal-case", "upper-case"]],
