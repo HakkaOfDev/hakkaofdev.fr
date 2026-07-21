@@ -10,9 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ? siteUrl
       : new URL(`/${locale}`, siteUrl).toString();
 
-  const languages = Object.fromEntries(
-    routing.locales.map((locale) => [locale, buildLocaleUrl(locale)]),
-  );
+  const languages: Record<string, string> = {
+    ...Object.fromEntries(
+      routing.locales.map((locale) => [locale, buildLocaleUrl(locale)]),
+    ),
+    "x-default": buildLocaleUrl(routing.defaultLocale),
+  };
 
   return [
     {
