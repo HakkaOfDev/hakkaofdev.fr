@@ -95,4 +95,33 @@ describe("/api/cv GET", () => {
     );
     expect(res.headers.get("Content-Language")).toBe("fr");
   });
+
+  it("passes the default selection when no category params are present", async () => {
+    const { GET } = await loadRoute();
+    await GET(new Request("https://example.com/api/cv?lang=en"));
+    const { getCvData } = await import("@/lib/cv/cv-pdf.data");
+    const selection = vi.mocked(getCvData).mock.calls[0]?.[1];
+    expect(selection?.experiences).toHaveLength(3);
+    expect(selection?.projects).toHaveLength(5);
+  });
+
+  it("forwards a parsed selection to getCvData", async () => {
+    const { GET } = await loadRoute();
+    await GET(
+      new Request("https://example.com/api/cv?lang=en&projects=bravalta"),
+    );
+    const { getCvData } = await import("@/lib/cv/cv-pdf.data");
+    expect(getCvData).toHaveBeenCalledWith(
+      "en",
+      expect.objectContaining({ projects: ["bravalta"] }),
+    );
+  });
+
+  it("drops a category when its param is present but empty", async () => {
+    const { GET } = await loadRoute();
+    await GET(new Request("https://example.com/api/cv?lang=en&projects="));
+    const { getCvData } = await import("@/lib/cv/cv-pdf.data");
+    const selection = vi.mocked(getCvData).mock.calls[0]?.[1];
+    expect(selection?.projects).toEqual([]);
+  });
 });
