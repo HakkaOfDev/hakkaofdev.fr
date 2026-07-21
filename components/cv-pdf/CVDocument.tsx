@@ -30,13 +30,13 @@ export function CVDocument({ data }: { data: CvData }) {
           experiences={data.experiences}
         />
         <SkillsSection title={data.sections.skills} skills={data.skills} />
-        <EducationSection
-          title={data.sections.education}
-          education={data.education}
-        />
         <ProjectsSection
           title={data.sections.projects}
           projects={data.projects}
+        />
+        <EducationSection
+          title={data.sections.education}
+          education={data.education}
         />
         <BottomSection
           languagesTitle={data.sections.languages}

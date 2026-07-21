@@ -50,6 +50,8 @@ export function ExperienceSection({
   title: string;
   experiences: CvData["experiences"];
 }) {
+  if (experiences.length === 0) return null;
+
   return (
     <Section title={title}>
       {experiences.map((exp) => (
@@ -63,7 +65,7 @@ export function ExperienceSection({
             )}
           </View>
           <Text style={styles.itemMeta}>
-            {`${exp.freelanceLabel ? `${exp.freelanceLabel} · ` : ""}${exp.company} · ${exp.location} · ${exp.period}`}
+            {`${exp.company} · ${exp.location} · ${exp.period}`}
           </Text>
           {exp.descriptions.map((desc) => (
             <BulletItem key={desc} text={desc} />
@@ -83,6 +85,8 @@ export function SkillsSection({
   title: string;
   skills: CvData["skills"];
 }) {
+  if (skills.length === 0) return null;
+
   return (
     <Section title={title}>
       <View style={styles.skillsGrid}>
@@ -107,7 +111,7 @@ export function EducationSection({
   education: CvData["education"];
 }) {
   return (
-    <Section title={title}>
+    <Section title={title} keepTogether>
       {education.map((edu) => (
         <View key={edu.slug} style={styles.item}>
           <Text style={styles.itemTitle}>{edu.name}</Text>
@@ -132,6 +136,8 @@ export function ProjectsSection({
   title: string;
   projects: CvData["projects"];
 }) {
+  if (projects.length === 0) return null;
+
   return (
     <Section title={title}>
       {projects.map((project) => (
@@ -181,8 +187,11 @@ export function BottomSection({
           {socials.map((social) => (
             <View key={social.name} style={styles.socialLine}>
               <Text style={styles.socialLabel}>{social.name}:</Text>
+              {/* Render the full URL (with scheme) as visible text, not just
+                  a link annotation: text-based ATS parsers extract the text
+                  layer and need an https:// URL to detect a social profile. */}
               <Link src={social.url} style={styles.socialLink}>
-                {social.url.replace(/^https?:\/\/(www\.)?/, "")}
+                {social.url}
               </Link>
             </View>
           ))}

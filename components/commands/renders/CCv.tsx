@@ -2,11 +2,22 @@
 
 import { Download, Play } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
 import { Select } from "@/components/ui/Select";
 import { type Locale, routing } from "@/i18n/routing";
-import { CV_PREVIEW_URL } from "@/lib/cv/cv-pdf.data";
+import { PROJECTS } from "@/lib/constants/projects.constants";
+import { EXPERIENCES } from "@/lib/constants/resume.constants";
+import { SKILLS } from "@/lib/constants/skills.constants";
+import {
+  ALL_EXPERIENCE_SLUGS,
+  ALL_PROJECT_SLUGS,
+  ALL_SKILL_VALUES,
+  buildCvUrl,
+  type CvSelection,
+  DEFAULT_SELECTION,
+} from "@/lib/cv/cv-selection";
+import { Chip, CvParamSection } from "./CvParamChips";
 
 const LOCALE_NATIVE_NAMES: Record<Locale, string> = {
   en: "English",
@@ -33,21 +44,45 @@ const LOCALE_NATIVE_NAMES: Record<Locale, string> = {
   he: "עברית",
 };
 
-function buildUrl(lang: Locale, download: boolean): string {
-  const params = new URLSearchParams();
-  params.set("lang", lang);
-  if (download) params.set("download", "1");
-  return `${CV_PREVIEW_URL}?${params.toString()}`;
+function toggle(set: Set<string>, value: string): Set<string> {
+  const next = new Set(set);
+  if (next.has(value)) next.delete(value);
+  else next.add(value);
+  return next;
 }
 
 function CCv() {
   const t = useTranslations("Commands.cv");
+  const tCv = useTranslations("CV");
   const currentLocale = useLocale() as Locale;
+
   const [lang, setLang] = useState<Locale>(currentLocale);
   const [download, setDownload] = useState(false);
+  const [experiences, setExperiences] = useState(
+    () => new Set(DEFAULT_SELECTION.experiences),
+  );
+  const [projects, setProjects] = useState(
+    () => new Set(DEFAULT_SELECTION.projects),
+  );
+  const [skills, setSkills] = useState(() => new Set(DEFAULT_SELECTION.skills));
 
-  const url = buildUrl(lang, download);
-  const downloadUrl = buildUrl(lang, true);
+  const selection = useMemo<CvSelection>(
+    () => ({
+      experiences: [...experiences],
+      projects: [...projects],
+      skills: [...skills],
+    }),
+    [experiences, projects, skills],
+  );
+
+  const url = buildCvUrl({ lang, download, selection });
+  const downloadUrl = buildCvUrl({ lang, download: true, selection });
+
+  const controls = {
+    all: t("selectAll"),
+    none: t("selectNone"),
+    reset: t("reset"),
+  };
 
   return (
     <AnimatedSpan className="gap-2">
@@ -62,7 +97,7 @@ function CCv() {
           </span>
         </div>
 
-        <div className="space-y-2 px-2.5 py-2">
+        <div className="space-y-3 px-2.5 py-2">
           <div className="font-semibold text-[10px] text-muted-foreground uppercase tracking-wider">
             Parameters
           </div>
@@ -109,6 +144,81 @@ function CCv() {
               </span>
             </label>
           </div>
+
+          <CvParamSection
+            paramName="experiences"
+            label={t("experiences")}
+            selectedCount={experiences.size}
+            total={ALL_EXPERIENCE_SLUGS.length}
+            controls={controls}
+            onAll={() => setExperiences(new Set(ALL_EXPERIENCE_SLUGS))}
+            onNone={() => setExperiences(new Set())}
+            onReset={() =>
+              setExperiences(new Set(DEFAULT_SELECTION.experiences))
+            }
+          >
+            {EXPERIENCES.map((e) => (
+              <Chip
+                key={e.slug}
+                label={tCv(`experiences.${e.slug}.name` as never)}
+                active={experiences.has(e.slug)}
+                onToggle={() => setExperiences((prev) => toggle(prev, e.slug))}
+              />
+            ))}
+          </CvParamSection>
+
+          <CvParamSection
+            paramName="projects"
+            label={t("projects")}
+            selectedCount={projects.size}
+            total={ALL_PROJECT_SLUGS.length}
+            controls={controls}
+            onAll={() => setProjects(new Set(ALL_PROJECT_SLUGS))}
+            onNone={() => setProjects(new Set())}
+            onReset={() => setProjects(new Set(DEFAULT_SELECTION.projects))}
+          >
+            {PROJECTS.map((p) => (
+              <Chip
+                key={p.slug}
+                label={tCv(`projects.${p.slug}.name` as never)}
+                active={projects.has(p.slug)}
+                onToggle={() => setProjects((prev) => toggle(prev, p.slug))}
+              />
+            ))}
+          </CvParamSection>
+
+          <CvParamSection
+            paramName="skills"
+            label={t("skills")}
+            selectedCount={skills.size}
+            total={ALL_SKILL_VALUES.length}
+            controls={controls}
+            onAll={() => setSkills(new Set(ALL_SKILL_VALUES))}
+            onNone={() => setSkills(new Set())}
+            onReset={() => setSkills(new Set(DEFAULT_SELECTION.skills))}
+          >
+            <div className="flex w-full flex-col gap-2">
+              {SKILLS.map((group) => (
+                <div key={group.slug} className="flex flex-col gap-1">
+                  <span className="font-mono text-[10px] text-muted-foreground/70 uppercase tracking-wider">
+                    {tCv(`skillGroups.${group.slug}` as never)}
+                  </span>
+                  <div className="flex flex-wrap gap-1">
+                    {group.values.map((value) => (
+                      <Chip
+                        key={value}
+                        label={value}
+                        active={skills.has(value)}
+                        onToggle={() =>
+                          setSkills((prev) => toggle(prev, value))
+                        }
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </CvParamSection>
         </div>
 
         <div className="border-emerald-500/20 border-t bg-overlay-subtle/40 px-2.5 py-2 dark:bg-overlay-subtle/60">

@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Du mục số & Kỹ sư phần mềm",
-    "description": "Du mục số và kỹ sư phần mềm freelance với hơn {years} năm kinh nghiệm. Tôi xây dựng ứng dụng web & di động hiệu năng cao với React, Next.js, React Native & Expo.",
-    "jobTitle": "Kỹ sư phần mềm",
+    "title": "Alexandre Gossard | Kỹ sư sản phẩm & Du mục số",
+    "description": "Kỹ sư sản phẩm và du mục số với hơn {years} năm kinh nghiệm làm chủ các sản phẩm web & di động từ đầu đến cuối với React, Next.js & React Native.",
+    "jobTitle": "Kỹ sư sản phẩm",
     "location": "Châlons-en-Champagne, Pháp",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
-      "Lập trình viên frontend",
+      "Kỹ sư sản phẩm",
       "Du mục số",
-      "Công nghệ hiện đại",
+      "React",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Web3",
       "hakkaofdev",
-      "kabila.app",
-      "Kabila",
-      "Kỹ sư phần mềm",
-      "Freelance"
+      "Kabila"
     ]
   },
   "Footer": {
@@ -247,7 +248,13 @@
     "cv": {
       "description": "CV của tôi dạng PDF",
       "openPreview": "Thử ngay",
-      "downloadPdf": "Tải xuống"
+      "downloadPdf": "Tải xuống",
+      "experiences": "kinh nghiệm",
+      "projects": "dự án",
+      "skills": "kỹ năng",
+      "selectAll": "tất cả",
+      "selectNone": "không có",
+      "reset": "đặt lại"
     },
     "recommendations": {
       "recommendedBy": "Được giới thiệu bởi",
@@ -503,7 +510,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Kỹ sư phần mềm với hơn {years} năm kinh nghiệm xây dựng các ứng dụng web và di động cho khách hàng và đội nhóm. Tôi dẫn dắt các dự án frontend với React, Next.js, React Native và Expo, tập trung vào UI gọn gàng, UX mượt mà, thiết kế responsive, khả năng tiếp cận và sản phẩm thân thiện với người dùng. Tôi cũng thích làm việc từ xa như một digital nomad, hợp tác với các đội nhóm và khách hàng từ bất cứ đâu trên thế giới.",
+    "summary": "Kỹ sư phần mềm với tư duy sản phẩm, hơn {years} năm kinh nghiệm xây dựng và làm chủ một sản phẩm duy nhất từ đầu đến cuối. Tôi dẫn dắt frontend tại Kabila, một startup Web3 ở Madrid, phát hành một nền tảng web, các công cụ cho creator, cùng ví native và ví trình duyệt, từ kiến trúc và lộ trình cho đến những chi tiết mà người dùng cảm nhận được. Hồ sơ chữ T: chuyên sâu về React, Next.js và React Native, đồng thời thoải mái với DevOps, hạ tầng và các quyết định sản phẩm. Tôi tối ưu cho tác động thực sự tới người dùng và tinh thần làm chủ dài hạn, không chỉ cho code sạch.",
     "location": "Từ xa",
     "sections": {
       "summary": "Hồ sơ chuyên môn",
@@ -520,27 +527,16 @@
     },
     "experiences": {
       "kabila": {
-        "name": "Kỹ sư phần mềm",
+        "name": "Kỹ sư sản phẩm",
         "company": "Kabila",
         "location": "Madrid, Tây Ban Nha",
         "descriptions": [
-          "Dẫn dắt một đội frontend xây dựng ứng dụng web sản phẩm với React và Next.js",
-          "Sở hữu lộ trình kỹ thuật, lập kế hoạch sprint và các quyết định kiến trúc",
-          "Hướng dẫn các lập trình viên junior và chủ trì code review",
-          "Xây dựng và duy trì thư viện component dùng chung và hệ thống thiết kế nội bộ",
-          "Phát hành các ứng dụng di động đi kèm với React Native và Expo"
-        ]
-      },
-      "freelance": {
-        "name": "Freelance",
-        "company": "Alexandre GOSSARD",
-        "location": "Châlons-en-Champagne, Pháp",
-        "descriptions": [
-          "Xây dựng các ứng dụng web full-stack với React và Next.js cho khách hàng trực tiếp",
-          "Phát hành các ứng dụng di động đa nền tảng lên App Store và Google Play",
-          "Thiết lập pipeline CI/CD và quy trình triển khai tự động",
-          "Tư vấn về kiến trúc, lựa chọn công nghệ và phạm vi dự án",
-          "Xử lý giao tiếp với khách hàng và các mốc thời gian giao hàng trên mỗi dự án"
+          "Làm chủ frontend của sản phẩm Web3 Kabila trong bốn năm: một nền tảng xã hội, chợ NFT, công cụ cho creator, cùng ví native và ví tiện ích trình duyệt trên Hedera",
+          "Định hướng kiến trúc, lộ trình kỹ thuật và lập kế hoạch sprint, biến những mục tiêu sản phẩm mơ hồ thành các tính năng được phát hành từ 0 đến 1",
+          "Xây dựng và duy trì thư viện component dùng chung và hệ thống thiết kế, hợp nhất mọi sản phẩm và đẩy nhanh tốc độ bàn giao",
+          "Phát hành các ví di động native với React Native và Expo lên App Store và Google Play",
+          "Hợp tác với đội ngũ sản phẩm và thiết kế về phạm vi và các đánh đổi, định hình những gì cần xây dựng chứ không chỉ cách thức xây dựng",
+          "Hướng dẫn các kỹ sư, chủ trì code review và thiết lập các tiêu chuẩn frontend khi đội ngũ ngày càng lớn mạnh"
         ]
       },
       "archeMC2": {

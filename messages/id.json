@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Pengelana digital & Software Engineer",
-    "description": "Pengelana digital dan software engineer freelance dengan pengalaman lebih dari {years} tahun. Saya membangun aplikasi web & mobile berperforma tinggi dengan React, Next.js, React Native & Expo.",
-    "jobTitle": "Software Engineer",
+    "title": "Alexandre Gossard | Insinyur Produk & Pengelana digital",
+    "description": "Insinyur Produk & pengelana digital dengan pengalaman lebih dari {years} tahun membangun dan mengelola produk web & mobile dari hulu ke hilir dengan React, Next.js & React Native.",
+    "jobTitle": "Insinyur Produk",
     "location": "Châlons-en-Champagne, Prancis",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
-      "Frontend developer",
+      "Insinyur Produk",
       "Pengelana digital",
-      "Teknologi modern",
+      "React",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Web3",
       "hakkaofdev",
-      "kabila.app",
-      "Kabila",
-      "Software Engineer",
-      "Freelance"
+      "Kabila"
     ]
   },
   "Footer": {
@@ -247,7 +248,13 @@
     "cv": {
       "description": "CV saya sebagai PDF",
       "openPreview": "Coba",
-      "downloadPdf": "Unduh"
+      "downloadPdf": "Unduh",
+      "experiences": "pengalaman",
+      "projects": "proyek",
+      "skills": "keterampilan",
+      "selectAll": "semua",
+      "selectNone": "tidak ada",
+      "reset": "atur ulang"
     },
     "recommendations": {
       "recommendedBy": "Direkomendasikan oleh",
@@ -503,7 +510,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software engineer dengan pengalaman lebih dari {years} tahun membangun aplikasi web dan mobile untuk klien dan tim. Saya memimpin proyek frontend menggunakan React, Next.js, React Native, dan Expo, dengan fokus pada UI yang bersih, UX yang mulus, desain responsif, aksesibilitas, dan produk yang ramah pengguna. Saya juga senang bekerja secara remote sebagai digital nomad, berkolaborasi dengan tim dan klien dari mana pun di dunia.",
+    "summary": "Software Engineer yang berorientasi produk dengan pengalaman lebih dari {years} tahun membangun dan bertanggung jawab penuh atas satu produk dari hulu ke hilir. Saya memimpin frontend di Kabila, sebuah startup Web3 di Madrid, merilis platform web, alat untuk kreator, serta wallet native dan browser, mulai dari arsitektur dan peta jalan hingga detail yang dirasakan pengguna. Profil T: mendalam di React, Next.js, dan React Native, serta nyaman bergerak di ranah DevOps, infrastruktur, dan keputusan produk. Saya berfokus pada dampak nyata bagi pengguna dan kepemilikan jangka panjang, bukan sekadar kode yang bersih.",
     "location": "Remote",
     "sections": {
       "summary": "Ringkasan profesional",
@@ -520,27 +527,16 @@
     },
     "experiences": {
       "kabila": {
-        "name": "Software Engineer",
+        "name": "Insinyur Produk",
         "company": "Kabila",
         "location": "Madrid, Spanyol",
         "descriptions": [
-          "Memimpin tim frontend yang membangun aplikasi web produksi dengan React dan Next.js",
-          "Bertanggung jawab atas peta jalan teknis, perencanaan sprint, dan keputusan arsitektur",
-          "Membimbing developer junior dan menjalankan code review",
-          "Membangun dan memelihara library komponen bersama serta sistem desain internal",
-          "Merilis aplikasi mobile pendamping dengan React Native dan Expo"
-        ]
-      },
-      "freelance": {
-        "name": "Freelance",
-        "company": "Alexandre GOSSARD",
-        "location": "Châlons-en-Champagne, Prancis",
-        "descriptions": [
-          "Membangun aplikasi web full-stack dengan React dan Next.js untuk klien langsung",
-          "Merilis aplikasi mobile lintas platform ke App Store dan Google Play",
-          "Menyiapkan pipeline CI/CD dan alur deployment otomatis",
-          "Memberi konsultasi tentang arsitektur, pilihan teknologi, dan ruang lingkup proyek",
-          "Menangani komunikasi klien dan tenggat pengiriman di setiap proyek"
+          "Bertanggung jawab penuh atas frontend produk Web3 Kabila selama empat tahun: platform sosial, marketplace NFT, alat untuk kreator, serta wallet native dan ekstensi browser di Hedera",
+          "Mengarahkan arsitektur, peta jalan teknis, dan perencanaan sprint, mengubah tujuan produk yang masih samar menjadi fitur yang dirilis dari 0 ke 1",
+          "Membangun dan memelihara library komponen bersama serta sistem desain yang menyatukan setiap produk dan mempercepat pengiriman",
+          "Merilis wallet mobile native dengan React Native dan Expo ke App Store dan Google Play",
+          "Bermitra dengan tim produk dan desain terkait ruang lingkup dan trade-off, ikut menentukan apa yang dibangun, bukan sekadar bagaimana membangunnya",
+          "Membimbing engineer, menjalankan code review, dan menetapkan standar frontend seiring pertumbuhan tim"
         ]
       },
       "archeMC2": {

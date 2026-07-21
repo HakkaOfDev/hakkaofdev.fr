@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Digitální nomád a softwarový inženýr",
-    "description": "Digitální nomád a softwarový inženýr na volné noze s více než {years} lety zkušeností. Tvořím výkonné webové a mobilní aplikace v React, Next.js, React Native a Expo.",
-    "jobTitle": "Softwarový inženýr",
+    "title": "Alexandre Gossard | Produktový inženýr & Digitální nomád",
+    "description": "Produktový inženýr a digitální nomád s více než {years} lety zkušeností s vývojem webových i mobilních produktů od začátku do konce v React, Next.js a React Native.",
+    "jobTitle": "Produktový inženýr",
     "location": "Châlons-en-Champagne, Francie",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
-      "Frontend vývojář",
+      "Produktový inženýr",
       "Digitální nomád",
-      "Moderní technologie",
+      "React",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Web3",
       "hakkaofdev",
-      "kabila.app",
-      "Kabila",
-      "Softwarový inženýr",
-      "Freelance"
+      "Kabila"
     ]
   },
   "Footer": {
@@ -247,7 +248,13 @@
     "cv": {
       "description": "Moje CV v PDF",
       "openPreview": "Vyzkoušet",
-      "downloadPdf": "Stáhnout"
+      "downloadPdf": "Stáhnout",
+      "experiences": "zkušenosti",
+      "projects": "projekty",
+      "skills": "dovednosti",
+      "selectAll": "vše",
+      "selectNone": "žádné",
+      "reset": "resetovat"
     },
     "recommendations": {
       "recommendedBy": "Doporučil",
@@ -503,7 +510,7 @@
   "CV": {
     "documentTitleSuffix": "Životopis",
     "subject": "Životopis",
-    "summary": "Softwarový inženýr s více než {years} lety zkušeností s vývojem webových a mobilních aplikací pro klienty a týmy. Vedu frontendové projekty s využitím React, Next.js, React Native a Expo, s důrazem na čisté UI, plynulé UX, responzivní design, přístupnost a uživatelsky přívětivé produkty. Rád také pracuji vzdáleně jako digitální nomád, spolupracuji s týmy a klienty odkudkoli na světě.",
+    "summary": "Produktově zaměřený softwarový inženýr s více než {years} lety zkušeností s budováním jediného produktu a plnou zodpovědností za něj od začátku do konce. Vedl jsem frontend v Kabile, Web3 startupu v Madridu, a dodával webovou platformu, nástroje pro tvůrce i nativní a prohlížečové peněženky – od architektury a roadmapy až po detaily, které uživatelé vnímají. Profil ve tvaru T: hluboko v Reactu, Next.js a React Native a s přehledem napříč DevOps, infrastrukturou a produktovými rozhodnutími. Optimalizuji na skutečný dopad na uživatele a dlouhodobou zodpovědnost, ne jen na čistý kód.",
     "location": "Vzdáleně",
     "sections": {
       "summary": "Profesní profil",
@@ -520,27 +527,16 @@
     },
     "experiences": {
       "kabila": {
-        "name": "Softwarový inženýr",
+        "name": "Produktový inženýr",
         "company": "Kabila",
         "location": "Madrid, Španělsko",
         "descriptions": [
-          "Vedu frontendový tým, který staví produkční webové aplikace v Reactu a Next.js",
-          "Zodpovídám za technický plán, plánování sprintů a architektonická rozhodnutí",
-          "Mentoruji juniorní vývojáře a vedu code review",
-          "Stavím a udržuji sdílenou knihovnu komponent a interní design systém",
-          "Dodávám doprovodné mobilní aplikace v React Native a Expo"
-        ]
-      },
-      "freelance": {
-        "name": "Freelancer",
-        "company": "Alexandre GOSSARD",
-        "location": "Châlons-en-Champagne, Francie",
-        "descriptions": [
-          "Stavím full-stack webové aplikace v Reactu a Next.js pro přímé klienty",
-          "Dodávám multiplatformní mobilní aplikace na App Store a Google Play",
-          "Nastavuji CI/CD pipeline a automatizované deployment workflow",
-          "Radím s architekturou, výběrem technologií a rozsahem projektu",
-          "Řeším komunikaci s klienty a termíny dodání u každého projektu"
+          "Čtyři roky jsem zodpovídal za frontend Web3 produktu Kabila: sociální platformu, NFT marketplace, nástroje pro tvůrce a nativní peněženku i peněženku jako prohlížečové rozšíření na Hederě",
+          "Řídil jsem architekturu, technický plán a plánování sprintů a proměňoval nejasné produktové cíle ve funkce dodané od nuly do jedničky",
+          "Vytvořil a udržoval jsem sdílenou knihovnu komponent a design systém, které sjednotily všechny produkty a zrychlily dodávání",
+          "Dodal jsem nativní mobilní peněženky vytvořené v React Native a Expo na App Store a Google Play",
+          "Spolupracoval jsem s produktovým a designovým týmem na rozsahu a kompromisech a spoluutvářel, co stavět, ne jen jak",
+          "Mentoroval jsem vývojáře, vedl code review a s růstem týmu určoval frontendové standardy"
         ]
       },
       "archeMC2": {

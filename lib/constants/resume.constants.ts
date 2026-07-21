@@ -1,5 +1,4 @@
 import { comparePeriodsDesc, completedYearsSince } from "../utils/period.utils";
-import { SITE } from "./site.constants";
 
 export type EducationEntry = {
   /** Key under `CV.education.{slug}` for translated fields. */
@@ -17,13 +16,6 @@ export type ExperienceEntry = {
   start: string;
   /** End month (`"YYYY-MM"`); omit while the position is ongoing. */
   end?: string;
-  /**
-   * Marks the role as a freelance engagement carried out under the `freelance`
-   * umbrella (hakkaofdev.fr). Surfaces a "Freelance" qualifier on the CV so a
-   * client mission that overlaps the freelance period reads as one activity
-   * rather than two concurrent salaried jobs.
-   */
-  freelance?: boolean;
 };
 
 export type RecommendationEntry = {
@@ -64,9 +56,7 @@ export const EXPERIENCES: ReadonlyArray<ExperienceEntry> = [
     companyUrl: "https://kabila.app",
     start: "2022-07",
     end: "2026-06",
-    freelance: true,
   },
-  { slug: "freelance", companyUrl: SITE.url, start: "2022-07" },
   {
     slug: "archeMC2",
     companyUrl: "https://arche-mc2.fr",
