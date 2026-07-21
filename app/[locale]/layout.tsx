@@ -19,7 +19,9 @@ import { getDirection, type Locale, routing } from "@/i18n/routing";
 import {
   GITHUB_URL,
   getYearsOfExperience,
+  LANGUAGES,
   SITE,
+  SKILLS,
   SOCIALS,
 } from "@/lib/constants";
 import { getSiteUrl } from "@/lib/site-url";
@@ -75,9 +77,14 @@ export async function generateMetadata({
   const canonicalPath = buildCanonicalPath(locale);
   const ogImagePath = buildOpenGraphImagePath(locale);
 
-  const languageAlternates = Object.fromEntries(
-    routing.locales.map((l) => [l, buildCanonicalPath(l)]),
-  );
+  const languageAlternates: Record<string, string> = {
+    ...Object.fromEntries(
+      routing.locales.map((l) => [l, buildCanonicalPath(l)]),
+    ),
+    // x-default tells search engines which URL to serve for unmatched
+    // languages — required for a correct multi-locale hreflang cluster.
+    "x-default": buildCanonicalPath(routing.defaultLocale),
+  };
 
   return {
     title,
@@ -92,7 +99,7 @@ export async function generateMetadata({
       description,
       url: new URL(canonicalPath, siteUrl).toString(),
       type: "website",
-      siteName: title,
+      siteName: SITE.name,
       locale,
       images: [
         {
@@ -119,6 +126,11 @@ export async function generateMetadata({
       },
     ],
     metadataBase: new URL(siteUrl),
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/logo.png",
+    },
     robots: {
       index: true,
       follow: true,
@@ -133,6 +145,10 @@ export async function generateMetadata({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#030405" },
+  ],
 };
 
 export function generateStaticParams() {
@@ -158,19 +174,35 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
     getTranslations({ locale, namespace: "Metadata" }),
   ]);
 
+  const [givenName, ...familyParts] = SITE.name.split(" ");
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `${siteUrl}/#person`,
     name: SITE.name,
+    givenName,
+    familyName: familyParts.join(" "),
     url: siteUrl,
     image: new URL("/avatar.jpg", siteUrl).toString(),
     jobTitle: t("jobTitle"),
     description: t("description", { years: getYearsOfExperience() }),
+    email: `mailto:${SITE.email}`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Châlons-en-Champagne",
+      addressCountry: "FR",
+    },
     worksFor: {
       "@type": "Organization",
       name: SITE.employer.name,
       url: SITE.employer.url,
     },
+    knowsAbout: SKILLS.flatMap((group) => group.values),
+    knowsLanguage: LANGUAGES.map((language) => language.code),
+    alumniOf: [
+      { "@type": "CollegeOrUniversity", name: "IUT de Châlons-en-Champagne" },
+      { "@type": "HighSchool", name: "Lycée Jean Talon" },
+    ],
     sameAs: SOCIALS.map((social) => social.url),
   };
 
