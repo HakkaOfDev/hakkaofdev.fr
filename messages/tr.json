@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Dijital göçebe ve yazılım mühendisi",
-    "description": "Dijital göçebe ve {years}+ yıl deneyime sahip serbest çalışan yazılım mühendisi. React, Next.js, React Native ve Expo ile yüksek performanslı web ve mobil uygulamalar geliştiriyorum.",
-    "jobTitle": "Yazılım mühendisi",
+    "title": "Alexandre Gossard | Ürün mühendisi & Dijital göçebe",
+    "description": "Ürün mühendisi ve dijital göçebe; {years}+ yıl deneyimle React, Next.js ve React Native kullanarak web ve mobil ürünleri baştan sona sahipleniyorum.",
+    "jobTitle": "Ürün Mühendisi",
     "location": "Châlons-en-Champagne, Fransa",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
-      "Frontend geliştirici",
+      "Ürün mühendisi",
       "Dijital göçebe",
-      "Modern teknolojiler",
+      "React",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Web3",
       "hakkaofdev",
-      "kabila.app",
-      "Kabila",
-      "Yazılım mühendisi",
-      "Freelance"
+      "Kabila"
     ]
   },
   "Footer": {
@@ -247,7 +248,13 @@
     "cv": {
       "description": "CV'm PDF olarak",
       "openPreview": "Dene",
-      "downloadPdf": "İndir"
+      "downloadPdf": "İndir",
+      "experiences": "deneyimler",
+      "projects": "projeler",
+      "skills": "yetenekler",
+      "selectAll": "tümü",
+      "selectNone": "hiçbiri",
+      "reset": "sıfırla"
     },
     "recommendations": {
       "recommendedBy": "Tavsiye eden",
@@ -503,7 +510,7 @@
   "CV": {
     "documentTitleSuffix": "Özgeçmiş",
     "subject": "Özgeçmiş",
-    "summary": "Müşteriler ve ekipler için web ve mobil uygulamalar geliştirme konusunda {years}+ yıl deneyime sahip bir yazılım mühendisi. React, Next.js, React Native ve Expo kullanarak frontend projelerine liderlik ediyor; temiz bir UI, akıcı bir UX, duyarlı tasarım, erişilebilirlik ve kullanıcı dostu ürünlere odaklanıyorum. Ayrıca dijital göçebe olarak uzaktan çalışmayı seviyor, dünyanın her yerinden ekipler ve müşterilerle iş birliği yapıyorum.",
+    "summary": "Tek bir ürünü baştan sona geliştirme ve sahiplenme konusunda {years}+ yıl deneyime sahip, ürün odaklı bir yazılım mühendisiyim. Madrid merkezli Web3 girişimi Kabila'da frontend'e liderlik ettim; mimari ve yol haritasından kullanıcıların hissettiği ayrıntılara kadar bir web platformu, içerik üretici araçları ile yerel ve tarayıcı cüzdanları yayınladım. T tipi bir profilim var: React, Next.js ve React Native'de derinlemesine uzman, DevOps, altyapı ve ürün kararlarında da rahatım. Yalnızca temiz kod için değil, gerçek kullanıcı etkisi ve uzun vadeli sahiplenme için optimize ediyorum.",
     "location": "Uzaktan",
     "sections": {
       "summary": "Mesleki profil",
@@ -520,27 +527,16 @@
     },
     "experiences": {
       "kabila": {
-        "name": "Yazılım Mühendisi",
+        "name": "Ürün Mühendisi",
         "company": "Kabila",
         "location": "Madrid, İspanya",
         "descriptions": [
-          "React ve Next.js ile üretim web uygulamaları geliştiren bir frontend ekibine liderlik ediyorum",
-          "Teknik yol haritası, sprint planlaması ve mimari kararlardan sorumluyum",
-          "Junior geliştiricilere mentorluk yapıyor ve kod incelemelerini yönetiyorum",
-          "Paylaşılan bileşen kütüphanesini ve dahili tasarım sistemini geliştirip sürdürüyorum",
-          "React Native ve Expo ile eşlik eden mobil uygulamalar yayınlıyorum"
-        ]
-      },
-      "freelance": {
-        "name": "Serbest Çalışan",
-        "company": "Alexandre GOSSARD",
-        "location": "Châlons-en-Champagne, Fransa",
-        "descriptions": [
-          "Doğrudan müşteriler için React ve Next.js ile full-stack web uygulamaları geliştiriyorum",
-          "App Store ve Google Play'e çapraz platform mobil uygulamalar yayınlıyorum",
-          "CI/CD pipeline'ları ve otomatik dağıtım iş akışları kuruyorum",
-          "Mimari, teknoloji seçimi ve proje kapsamı konularında danışmanlık veriyorum",
-          "Her projede müşteri iletişimini ve teslim sürelerini yönetiyorum"
+          "Kabila'nın Web3 ürününün frontend'ini dört yıl boyunca sahiplendim: Hedera üzerinde bir sosyal platform, NFT pazaryeri, içerik üretici araçları ile yerel ve tarayıcı uzantısı cüzdanları",
+          "Mimariyi, teknik yol haritasını ve sprint planlamasını yönlendirdim; belirsiz ürün hedeflerini 0'dan 1'e yayınlanan özelliklere dönüştürdüm",
+          "Her ürünü birleştiren ve teslimatı hızlandıran paylaşılan bileşen kütüphanesini ve tasarım sistemini geliştirdim ve sürdürdüm",
+          "React Native ve Expo ile geliştirdiğim yerel mobil cüzdanları App Store ve Google Play'e yayınladım",
+          "Kapsam ve ödünleşimler konusunda ürün ve tasarım ekipleriyle iş birliği yaptım; yalnızca nasıl değil, ne inşa edileceğini de şekillendirdim",
+          "Ekip büyüdükçe geliştiricilere mentorluk yaptım, kod incelemelerini yönettim ve frontend standartlarını belirledim"
         ]
       },
       "archeMC2": {

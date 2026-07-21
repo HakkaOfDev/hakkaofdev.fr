@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Nomad digital și inginer software",
-    "description": "Nomad digital și inginer software freelance cu peste {years} ani de experiență, creez aplicații web și mobile performante cu React, Next.js, React Native și Expo.",
-    "jobTitle": "Inginer software",
+    "title": "Alexandre Gossard | Inginer de produs & Nomad digital",
+    "description": "Inginer de produs și nomad digital cu peste {years} ani de experiență, construiesc și gestionez produse web și mobile de la un capăt la altul cu React, Next.js și React Native.",
+    "jobTitle": "Inginer de produs",
     "location": "Châlons-en-Champagne, Franța",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
-      "Dezvoltator frontend",
+      "Inginer de produs",
       "Nomad digital",
-      "Tehnologii moderne",
+      "React",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Web3",
       "hakkaofdev",
-      "kabila.app",
-      "Kabila",
-      "Inginer software",
-      "Freelance"
+      "Kabila"
     ]
   },
   "Footer": {
@@ -247,7 +248,13 @@
     "cv": {
       "description": "CV-ul meu în PDF",
       "openPreview": "Încearcă",
-      "downloadPdf": "Descarcă"
+      "downloadPdf": "Descarcă",
+      "experiences": "experiențe",
+      "projects": "proiecte",
+      "skills": "competențe",
+      "selectAll": "toate",
+      "selectNone": "niciunul",
+      "reset": "resetează"
     },
     "recommendations": {
       "recommendedBy": "Recomandat de",
@@ -503,7 +510,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Inginer software cu peste {years} ani de experiență în construirea de aplicații web și mobile pentru clienți și echipe. Conduc proiecte frontend folosind React, Next.js, React Native și Expo, cu accent pe o interfață curată, UX fluid, design responsive, accesibilitate și produse ușor de utilizat. De asemenea, îmi place să lucrez de la distanță ca nomad digital, colaborând cu echipe și clienți din orice parte a lumii.",
+    "summary": "Inginer software orientat spre produs, cu peste {years} ani de experiență în construirea și asumarea unui singur produs de la un capăt la altul. Am condus echipa de frontend la Kabila, un startup Web3 din Madrid, livrând o platformă web, instrumente pentru creatori și portofele native și pentru browser, de la arhitectură și roadmap până la detaliile pe care utilizatorii le simt. Profil în T: solid în React, Next.js și React Native și în largul meu cu DevOps, infrastructură și decizii de produs. Optimizez pentru impact real asupra utilizatorilor și pentru asumare pe termen lung, nu doar pentru cod curat.",
     "location": "Remote",
     "sections": {
       "summary": "Profil profesional",
@@ -520,27 +527,16 @@
     },
     "experiences": {
       "kabila": {
-        "name": "Inginer software",
+        "name": "Inginer de produs",
         "company": "Kabila",
         "location": "Madrid, Spania",
         "descriptions": [
-          "Conduc o echipă de frontend care construiește aplicații web de producție cu React și Next.js",
-          "Răspund de roadmap-ul tehnic, planificarea sprinturilor și deciziile de arhitectură",
-          "Mentorez dezvoltatori juniori și conduc code review-uri",
-          "Construiesc și întrețin biblioteca de componente partajate și sistemul de design intern",
-          "Livrez aplicații mobile însoțitoare cu React Native și Expo"
-        ]
-      },
-      "freelance": {
-        "name": "Freelance",
-        "company": "Alexandre GOSSARD",
-        "location": "Châlons-en-Champagne, Franța",
-        "descriptions": [
-          "Construiesc aplicații web full-stack cu React și Next.js pentru clienți direcți",
-          "Livrez aplicații mobile multi-platformă în App Store și Google Play",
-          "Configurez pipeline-uri CI/CD și fluxuri de deployment automate",
-          "Consiliez asupra arhitecturii, alegerii tehnologiilor și domeniului de aplicare al proiectului",
-          "Gestionez comunicarea cu clientul și termenele de livrare la fiecare proiect"
+          "Am fost responsabil de frontend-ul produsului Web3 al Kabila timp de patru ani: o platformă socială, marketplace NFT, instrumente pentru creatori și portofele native și de tip extensie de browser pe Hedera",
+          "Am condus arhitectura, roadmap-ul tehnic și planificarea sprinturilor, transformând obiective de produs ambigue în funcționalități livrate de la 0 la 1",
+          "Am construit și întreținut biblioteca de componente partajate și sistemul de design care au unificat fiecare produs și au accelerat livrarea",
+          "Am livrat portofele mobile native cu React Native și Expo în App Store și Google Play",
+          "Am colaborat cu echipele de produs și design pe domeniul de aplicare și compromisuri, modelând ce se construiește, nu doar cum",
+          "Am mentorat ingineri, am condus code review-uri și am stabilit standardele de frontend pe măsură ce echipa creștea"
         ]
       },
       "archeMC2": {

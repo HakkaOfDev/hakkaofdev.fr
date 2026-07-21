@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | 디지털 노마드 & 소프트웨어 엔지니어",
-    "description": "{years}년 이상의 경력을 가진 디지털 노마드이자 프리랜서 소프트웨어 엔지니어. React, Next.js, React Native, Expo로 고성능 웹 및 모바일 앱을 만들고 있습니다.",
-    "jobTitle": "소프트웨어 엔지니어",
+    "title": "Alexandre Gossard | 프로덕트 엔지니어 & 디지털 노마드",
+    "description": "{years}년 이상의 경력을 가진 프로덕트 엔지니어이자 디지털 노마드. React, Next.js, React Native로 웹 및 모바일 제품을 처음부터 끝까지 책임지고 만듭니다.",
+    "jobTitle": "프로덕트 엔지니어",
     "location": "프랑스 샬롱앙샹파뉴",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
-      "프론트엔드 개발자",
+      "프로덕트 엔지니어",
       "디지털 노마드",
-      "최신 기술",
+      "React",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Web3",
       "hakkaofdev",
-      "kabila.app",
-      "Kabila",
-      "소프트웨어 엔지니어",
-      "프리랜서"
+      "Kabila"
     ]
   },
   "Footer": {
@@ -247,7 +248,13 @@
     "cv": {
       "description": "내 이력서 PDF",
       "openPreview": "확인해 보기",
-      "downloadPdf": "다운로드"
+      "downloadPdf": "다운로드",
+      "experiences": "경력",
+      "projects": "프로젝트",
+      "skills": "기술",
+      "selectAll": "전체",
+      "selectNone": "없음",
+      "reset": "초기화"
     },
     "recommendations": {
       "recommendedBy": "추천인",
@@ -503,7 +510,7 @@
   "CV": {
     "documentTitleSuffix": "이력서",
     "subject": "이력서",
-    "summary": "{years}년 이상의 경력을 가진 소프트웨어 엔지니어로, 클라이언트와 팀을 위해 웹·모바일 앱을 개발합니다. React, Next.js, React Native, Expo를 사용해 프런트엔드 프로젝트를 이끌며, 깔끔한 UI, 매끄러운 UX, 반응형 디자인, 접근성, 그리고 사용자 친화적인 제품에 중점을 둡니다. 디지털 노마드로 원격 근무하며 세계 어디에서든 팀 및 클라이언트와 협업하는 것을 즐깁니다.",
+    "summary": "제품 중심의 소프트웨어 엔지니어로, {years}년 이상 단일 제품을 처음부터 끝까지 만들고 책임져 왔습니다. 마드리드의 Web3 스타트업 Kabila에서 프론트엔드를 이끌며, 아키텍처와 로드맵부터 사용자가 체감하는 디테일까지 웹 플랫폼, 크리에이터 도구, 네이티브 및 브라우저 지갑을 출시했습니다. T자형 인재로 React, Next.js, React Native에 깊이가 있으면서 DevOps, 인프라, 제품 의사결정 전반에도 능숙합니다. 깔끔한 코드만이 아니라 실제 사용자에게 미치는 영향과 장기적인 오너십을 위해 최적화합니다.",
     "location": "원격",
     "sections": {
       "summary": "직무 소개",
@@ -520,27 +527,16 @@
     },
     "experiences": {
       "kabila": {
-        "name": "소프트웨어 엔지니어",
+        "name": "프로덕트 엔지니어",
         "company": "Kabila",
         "location": "마드리드, 스페인",
         "descriptions": [
-          "React와 Next.js로 프로덕션 웹 앱을 구축하는 프론트엔드 팀을 이끌고 있습니다",
-          "기술 로드맵, 스프린트 계획, 아키텍처 결정을 책임집니다",
-          "주니어 개발자 멘토링과 코드 리뷰를 진행합니다",
-          "공유 컴포넌트 라이브러리와 사내 디자인 시스템을 구축·유지합니다",
-          "React Native와 Expo로 모바일 앱을 출시합니다"
-        ]
-      },
-      "freelance": {
-        "name": "프리랜서",
-        "company": "Alexandre GOSSARD",
-        "location": "샬롱앙샹파뉴, 프랑스",
-        "descriptions": [
-          "직접 클라이언트를 위해 React와 Next.js로 풀스택 웹 앱을 구축합니다",
-          "App Store와 Google Play에 크로스 플랫폼 모바일 앱을 출시합니다",
-          "CI/CD 파이프라인과 자동화된 배포 워크플로를 설정합니다",
-          "아키텍처, 기술 선택, 프로젝트 범위 산정에 대해 자문합니다",
-          "각 프로젝트에서 클라이언트 커뮤니케이션과 일정 관리를 담당합니다"
+          "소셜 플랫폼, NFT 마켓플레이스, 크리에이터 도구, 네이티브 및 브라우저 확장 지갑을 아우르는 Hedera 기반 Kabila Web3 제품의 프론트엔드를 4년간 책임졌습니다",
+          "아키텍처, 기술 로드맵, 스프린트 계획을 주도하며 모호한 제품 목표를 0에서 1로 출시하는 기능으로 구현했습니다",
+          "제품 전반을 통일하고 딜리버리를 가속한 공유 컴포넌트 라이브러리와 디자인 시스템을 구축·유지했습니다",
+          "React Native와 Expo로 네이티브 모바일 지갑을 App Store와 Google Play에 출시했습니다",
+          "제품 및 디자인 팀과 협업해 범위와 트레이드오프를 조율하며, 어떻게 만들지뿐 아니라 무엇을 만들지를 함께 결정했습니다",
+          "엔지니어를 멘토링하고 코드 리뷰를 진행하며, 팀이 성장하는 동안 프론트엔드 표준을 정립했습니다"
         ]
       },
       "archeMC2": {

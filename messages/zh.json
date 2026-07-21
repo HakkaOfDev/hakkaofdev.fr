@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | 数字游民 & 软件工程师",
-    "description": "拥有 {years} 年以上经验的数字游民和自由职业软件工程师。我使用 React、Next.js、React Native 和 Expo 打造高性能 Web 和移动应用。",
-    "jobTitle": "软件工程师",
+    "title": "Alexandre Gossard | 产品工程师 & 数字游民",
+    "description": "拥有 {years} 年以上经验的产品工程师和数字游民,使用 React、Next.js 和 React Native 端到端地打造 Web 和移动产品。",
+    "jobTitle": "产品工程师",
     "location": "法国沙隆昂香槟",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
-      "前端开发者",
+      "产品工程师",
       "数字游民",
-      "现代技术",
+      "React",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Web3",
       "hakkaofdev",
-      "kabila.app",
-      "Kabila",
-      "软件工程师",
-      "自由职业"
+      "Kabila"
     ]
   },
   "Footer": {
@@ -247,7 +248,13 @@
     "cv": {
       "description": "我的简历 PDF",
       "openPreview": "试一试",
-      "downloadPdf": "下载"
+      "downloadPdf": "下载",
+      "experiences": "经历",
+      "projects": "项目",
+      "skills": "技能",
+      "selectAll": "全部",
+      "selectNone": "无",
+      "reset": "重置"
     },
     "recommendations": {
       "recommendedBy": "推荐人",
@@ -393,7 +400,7 @@
   "CV": {
     "documentTitleSuffix": "简历",
     "subject": "简历",
-    "summary": "拥有 {years} 年以上经验的软件工程师,为客户和团队构建网页和移动应用。我使用 React、Next.js、React Native 和 Expo 主导前端项目,专注于简洁的 UI、流畅的 UX、响应式设计、无障碍体验以及对用户友好的产品。我也喜欢作为数字游民远程办公,与世界各地的团队和客户协作。",
+    "summary": "拥有 {years} 年以上经验的产品导向型软件工程师,擅长端到端地构建并全权负责单一产品。我在马德里的 Web3 初创公司 Kabila 主导前端工作,从架构、路线图一直到用户能切身感受到的细节,交付了 Web 平台、创作者工具以及原生和浏览器钱包。T 型人才:精通 React、Next.js 和 React Native,在 DevOps、基础设施和产品决策方面也同样得心应手。我以真实的用户影响和长期主人翁意识为目标,而不只是追求整洁的代码。",
     "location": "远程",
     "sections": {
       "summary": "职业概要",
@@ -410,27 +417,16 @@
     },
     "experiences": {
       "kabila": {
-        "name": "软件工程师",
+        "name": "产品工程师",
         "company": "Kabila",
         "location": "西班牙 马德里",
         "descriptions": [
-          "带领前端团队使用 React 和 Next.js 构建生产级网页应用",
-          "负责技术路线图、Sprint 规划和架构决策",
-          "辅导初级开发者并主持代码评审",
-          "构建和维护共享组件库及内部设计系统",
-          "使用 React Native 和 Expo 发布配套移动应用"
-        ]
-      },
-      "freelance": {
-        "name": "自由职业",
-        "company": "Alexandre GOSSARD",
-        "location": "法国沙隆昂香槟",
-        "descriptions": [
-          "为直接客户使用 React 和 Next.js 构建全栈网页应用",
-          "向 App Store 和 Google Play 发布跨平台移动应用",
-          "搭建 CI/CD 流水线和自动化部署工作流",
-          "在架构、技术选型和项目范围方面提供咨询",
-          "处理每个项目的客户沟通和交付时间"
+          "四年间全权负责 Kabila Web3 产品的前端:基于 Hedera 的社交平台、NFT 市场、创作者工具,以及原生和浏览器扩展钱包",
+          "主导架构、技术路线图和 Sprint 规划,将模糊的产品目标转化为从 0 到 1 交付的功能",
+          "构建并维护统一所有产品并加快交付的共享组件库和设计系统",
+          "使用 React Native 和 Expo 将原生移动钱包发布到 App Store 和 Google Play",
+          "与产品和设计团队就范围和取舍紧密协作,不仅决定如何构建,更参与决定构建什么",
+          "随着团队壮大,辅导工程师、主持代码评审并制定前端规范"
         ]
       },
       "archeMC2": {
