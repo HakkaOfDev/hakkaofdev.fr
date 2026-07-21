@@ -5,6 +5,7 @@ import type { Locale } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import { buildCvFileName, getCvData } from "@/lib/cv/cv-pdf.data";
 import { renderWithCvFonts } from "@/lib/cv/cv-pdf.fonts";
+import { parseSelection } from "@/lib/cv/cv-selection";
 
 export const runtime = "nodejs";
 
@@ -26,8 +27,9 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const shouldDownload = searchParams.get("download") === "1";
   const locale = pickLocale(request);
+  const selection = parseSelection(searchParams);
 
-  const data = await getCvData(locale);
+  const data = await getCvData(locale, selection);
   const pdfBuffer = await renderWithCvFonts(locale, data, () =>
     renderToBuffer(<CVDocument data={data} />),
   );

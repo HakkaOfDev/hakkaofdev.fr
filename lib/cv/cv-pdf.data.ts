@@ -2,15 +2,19 @@ import { getFormatter, getTranslations } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import {
   EDUCATION,
-  EXPERIENCES,
   getYearsOfExperience,
   HOBBIES,
   LANGUAGES,
-  PROJECTS,
   SITE,
-  SKILLS,
   SOCIALS,
 } from "@/lib/constants";
+import {
+  type CvSelection,
+  DEFAULT_SELECTION,
+  selectExperiences,
+  selectProjects,
+  selectSkillGroups,
+} from "@/lib/cv/cv-selection";
 import { formatPeriod } from "@/lib/utils/period.utils";
 
 export const CV_FILE_NAME_BASE = "alexandre-gossard-cv";
@@ -57,8 +61,6 @@ export type CvData = {
     companyUrl?: string;
     location: string;
     descriptions: string[];
-    /** Localized "Freelance" qualifier for engagements under the freelance umbrella. */
-    freelanceLabel?: string;
   }[];
   education: {
     slug: string;
@@ -72,13 +74,16 @@ export type CvData = {
   hobbies: string[];
 };
 
-export async function getCvData(locale: Locale): Promise<CvData> {
+export async function getCvData(
+  locale: Locale,
+  selection: CvSelection = DEFAULT_SELECTION,
+): Promise<CvData> {
   const tCv = await getTranslations({ locale, namespace: "CV" });
   const tPeriod = await getTranslations({ locale, namespace: "CV.period" });
   const tMeta = await getTranslations({ locale, namespace: "Metadata" });
   const format = await getFormatter({ locale });
 
-  const projects = PROJECTS.slice(0, 5).map((p) => ({
+  const projects = selectProjects(selection).map((p) => ({
     slug: p.slug,
     name: tCv(`projects.${p.slug}.name` as never),
     description: tCv(`projects.${p.slug}.description` as never),
@@ -86,11 +91,7 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     tags: [...p.tags],
   }));
 
-  // Reuse the freelance role's own translated name as the qualifier so the tag
-  // stays localized across every locale without a dedicated key.
-  const freelanceLabel = tCv("experiences.freelance.name" as never);
-
-  const experiences = EXPERIENCES.map((e) => {
+  const experiences = selectExperiences(selection).map((e) => {
     const descriptionsKey = `experiences.${e.slug}.descriptions` as never;
     return {
       slug: e.slug,
@@ -100,7 +101,6 @@ export async function getCvData(locale: Locale): Promise<CvData> {
       companyUrl: e.companyUrl,
       location: tCv(`experiences.${e.slug}.location` as never),
       descriptions: tCv.raw(descriptionsKey) as string[],
-      freelanceLabel: e.freelance ? freelanceLabel : undefined,
     };
   });
 
@@ -115,10 +115,10 @@ export async function getCvData(locale: Locale): Promise<CvData> {
     };
   });
 
-  const skills = SKILLS.map((s) => ({
+  const skills = selectSkillGroups(selection).map((s) => ({
     slug: s.slug,
     label: tCv(`skillGroups.${s.slug}` as never),
-    values: [...s.values],
+    values: s.values,
   }));
 
   const languages = LANGUAGES.map((l) => ({
