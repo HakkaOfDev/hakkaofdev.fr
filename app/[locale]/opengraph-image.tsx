@@ -47,25 +47,6 @@ function CodeIcon({ color }: { color: string }) {
   );
 }
 
-function BriefcaseIcon({ color }: { color: string }) {
-  return (
-    <svg {...SVG_ATTRS} stroke={color}>
-      <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-      <rect width="20" height="14" x="2" y="6" rx="2" />
-    </svg>
-  );
-}
-
-function BanknoteIcon({ color }: { color: string }) {
-  return (
-    <svg {...SVG_ATTRS} stroke={color}>
-      <rect width="20" height="12" x="2" y="6" rx="2" />
-      <circle cx="12" cy="12" r="2" />
-      <path d="M6 12h.01M18 12h.01" />
-    </svg>
-  );
-}
-
 function SmartphoneIcon({ color }: { color: string }) {
   return (
     <svg {...SVG_ATTRS} stroke={color}>
@@ -243,17 +224,12 @@ export default async function OpenGraphImage({ params }: Props) {
   const jobTitle = tMeta("jobTitle");
   const nomad = tOg("tags.digitalNomad");
   const subtitle = `${jobTitle} · ${nomad}`;
-  // "Freelance" is localized but only lives inside the hero's rich `intro`
-  // string — pull it from there so the badge stays in sync and translated.
-  const freelance =
-    String(tWelcome.raw("intro")).match(/<freelance>(.*?)<\/freelance>/)?.[1] ??
-    "Freelance";
 
-  // Mirror the welcome hero's badges: Freelance first, then the daily rate,
-  // then the web / mobile stack — with the same accent colours.
+  // Product-focused badges for the share card: the web / mobile stack, with
+  // the same accent colours as the hero. The freelance / daily-rate badges
+  // are intentionally omitted here so the social preview leads with the
+  // product-engineer positioning.
   const tags: { label: string; icon: ReactNode }[] = [
-    { label: freelance, icon: <BriefcaseIcon color="#FFB000" /> },
-    { label: tWelcome("tags.rate"), icon: <BanknoteIcon color="#C084FC" /> },
     { label: tWelcome("tags.web"), icon: <CodeIcon color="#00E5FF" /> },
     {
       label: tWelcome("tags.mobile"),

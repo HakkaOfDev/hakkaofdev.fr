@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Nomade numérique & ingénieur logiciel",
-    "description": "Nomade numérique et ingénieur logiciel freelance avec plus de {years} ans d'expérience, je conçois des applications web et mobiles performantes avec React, Next.js, React Native et Expo.",
-    "jobTitle": "Ingénieur logiciel",
+    "title": "Alexandre Gossard | Ingénieur produit & nomade numérique",
+    "description": "Ingénieur produit et nomade numérique avec plus de {years} ans d'expérience, je conçois des produits web et mobiles de bout en bout avec React, Next.js et React Native.",
+    "jobTitle": "Ingénieur produit",
     "location": "Châlons-en-Champagne, France",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
-      "Développeur frontend",
+      "Ingénieur produit",
       "Nomade numérique",
-      "Technologies modernes",
+      "React",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Web3",
       "hakkaofdev",
-      "kabila.app",
-      "Kabila",
-      "Ingénieur logiciel",
-      "Freelance"
+      "Kabila"
     ]
   },
   "Footer": {
@@ -22,7 +23,7 @@
   },
   "Welcome": {
     "greeting": "~ Bienvenue <wave>👋</wave>",
-    "intro": "<tagline>Nomade numérique</tagline> · <job>Ingénieur logiciel</job> · <freelance>Freelance</freelance>",
+    "intro": "<tagline>Nomade numérique</tagline> · <job>Ingénieur produit</job> · <freelance>Freelance</freelance>",
     "tags": {
       "rate": "550€ en TJM",
       "web": "React/Next.js",
@@ -247,7 +248,13 @@
     "cv": {
       "description": "Mon CV en PDF",
       "openPreview": "Essayer",
-      "downloadPdf": "Télécharger"
+      "downloadPdf": "Télécharger",
+      "experiences": "expériences",
+      "projects": "projets",
+      "skills": "compétences",
+      "selectAll": "tout",
+      "selectNone": "aucun",
+      "reset": "réinitialiser"
     },
     "recommendations": {
       "recommendedBy": "Recommandé par",
@@ -393,7 +400,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Ingénieur logiciel avec plus de {years} ans d'expérience dans la création d'applications web et mobiles pour des clients et des équipes. Je dirige des projets frontend avec React, Next.js, React Native et Expo, en portant une attention particulière à une UI soignée, une UX fluide, un design responsive, l'accessibilité et des produits agréables à utiliser. J'aime aussi travailler à distance en tant que nomade numérique, en collaborant avec des équipes et des clients partout dans le monde.",
+    "summary": "Ingénieur produit avec plus de {years} ans d'expérience à construire et porter un seul produit de bout en bout. J'ai dirigé le frontend chez Kabila, une startup Web3 à Madrid, d'une plateforme web aux outils créateurs et aux wallets natif et navigateur, de l'architecture et la feuille de route jusqu'aux détails que les utilisateurs ressentent. Je suis pointu sur le frontend avec React, Next.js et React Native, et tout aussi à l'aise sur le DevOps, l'infrastructure et les décisions produit. J'optimise pour l'impact réel sur les utilisateurs et l'ownership sur le long terme, pas seulement pour un code propre.",
     "location": "Télétravail",
     "sections": {
       "summary": "Résumé professionnel",
@@ -410,27 +417,15 @@
     },
     "experiences": {
       "kabila": {
-        "name": "Ingénieur logiciel",
+        "name": "Ingénieur produit",
         "company": "Kabila",
         "location": "Madrid, Espagne",
         "descriptions": [
-          "Encadre une équipe frontend qui développe des applications web en production avec React et Next.js",
-          "Pilote la feuille de route technique, la planification des sprints et les décisions d'architecture",
-          "Accompagne les développeurs juniors et anime les revues de code",
-          "Construit et maintient la bibliothèque de composants et le design system interne",
-          "Livre des applications mobiles avec React Native et Expo"
-        ]
-      },
-      "freelance": {
-        "name": "Freelance",
-        "company": "Alexandre GOSSARD",
-        "location": "Châlons-en-Champagne, France",
-        "descriptions": [
-          "Développe des applications web full-stack avec React et Next.js pour des clients directs",
-          "Livre des applications mobiles multiplateformes sur l'App Store et Google Play",
-          "Met en place des pipelines CI/CD et des workflows de déploiement automatisés",
-          "Conseille sur l'architecture, les choix techniques et le cadrage de projet",
-          "Gère la communication client et les délais de livraison sur chaque projet"
+          "A porté le frontend (React et Next.js) du produit Web3 de Kabila : plateforme sociale, marketplace NFT, outils créateurs et wallets natif et navigateur sur Hedera",
+          "A piloté l'architecture, la feuille de route technique et les sprints ; livré les fonctionnalités en production",
+          "A conçu et maintenu la bibliothèque de composants et le design system utilisés sur tous les produits",
+          "A livré les wallets mobiles natifs avec React Native et Expo sur l'App Store et Google Play",
+          "A collaboré avec le produit et le design sur le périmètre et les arbitrages, en façonnant quoi construire et pas seulement comment"
         ]
       },
       "archeMC2": {

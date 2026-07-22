@@ -9,8 +9,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        // API routes return JSON/PDF, not indexable pages — keep them out of
+        // the crawl budget.
+        disallow: "/api/",
       },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
   };
 }

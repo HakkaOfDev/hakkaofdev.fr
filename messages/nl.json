@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Digitale nomade & software-engineer",
-    "description": "Digitale nomade en freelance software-engineer met meer dan {years} jaar ervaring. Ik bouw snelle web- en mobiele apps met React, Next.js, React Native en Expo.",
-    "jobTitle": "Software-engineer",
+    "title": "Alexandre Gossard | Product-engineer & Digitale nomade",
+    "description": "Product-engineer en digitale nomade met meer dan {years} jaar ervaring in het end-to-end beheren van web- en mobiele producten met React, Next.js en React Native.",
+    "jobTitle": "Product-engineer",
     "location": "Châlons-en-Champagne, Frankrijk",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
-      "Frontendontwikkelaar",
+      "Product-engineer",
       "Digitale nomade",
-      "Moderne technologieën",
+      "React",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Web3",
       "hakkaofdev",
-      "kabila.app",
-      "Kabila",
-      "Software-engineer",
-      "Freelance"
+      "Kabila"
     ]
   },
   "Footer": {
@@ -247,7 +248,13 @@
     "cv": {
       "description": "Mijn cv als pdf",
       "openPreview": "Uitproberen",
-      "downloadPdf": "Downloaden"
+      "downloadPdf": "Downloaden",
+      "experiences": "ervaring",
+      "projects": "projecten",
+      "skills": "vaardigheden",
+      "selectAll": "alle",
+      "selectNone": "geen",
+      "reset": "herstellen"
     },
     "recommendations": {
       "recommendedBy": "Aanbevolen door",
@@ -503,7 +510,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software-engineer met meer dan {years} jaar ervaring in het bouwen van web- en mobiele apps voor klanten en teams. Ik leid frontend-projecten met React, Next.js, React Native en Expo, met focus op een strakke UI, soepele UX, responsive design, toegankelijkheid en gebruiksvriendelijke producten. Ik werk ook graag op afstand als digitale nomade, in samenwerking met teams en klanten waar ook ter wereld.",
+    "summary": "Productgerichte software-engineer met meer dan {years} jaar ervaring in het bouwen en end-to-end dragen van één enkel product. Ik leidde de frontend bij Kabila, een Web3-startup in Madrid, en leverde een webplatform, tools voor makers en native en browser-wallets — van architectuur en roadmap tot de details die gebruikers voelen. T-shaped profiel: sterk in React, Next.js en React Native, en thuis in DevOps, infrastructuur en productbeslissingen. Ik optimaliseer voor echte impact op gebruikers en ownership op de lange termijn, niet alleen voor nette code.",
     "location": "Op afstand",
     "sections": {
       "summary": "Professioneel profiel",
@@ -520,27 +527,16 @@
     },
     "experiences": {
       "kabila": {
-        "name": "Software-engineer",
+        "name": "Product-engineer",
         "company": "Kabila",
         "location": "Madrid, Spanje",
         "descriptions": [
-          "Leid een frontend-team dat productie-webapps bouwt met React en Next.js",
-          "Verantwoordelijk voor technische roadmap, sprintplanning en architectuurkeuzes",
-          "Begeleid junior ontwikkelaars en voer codereviews uit",
-          "Bouw en onderhoud de gedeelde componentenbibliotheek en het interne designsysteem",
-          "Lever begeleidende mobiele apps op met React Native en Expo"
-        ]
-      },
-      "freelance": {
-        "name": "Freelance",
-        "company": "Alexandre GOSSARD",
-        "location": "Châlons-en-Champagne, Frankrijk",
-        "descriptions": [
-          "Bouw full-stack webapps met React en Next.js voor directe klanten",
-          "Lever cross-platform mobiele apps in de App Store en Google Play",
-          "Stel CI/CD-pipelines en geautomatiseerde deployment-workflows in",
-          "Adviseer over architectuur, technologische keuzes en projectomvang",
-          "Behandel klantcommunicatie en levertermijnen in elk project"
+          "Vier jaar lang verantwoordelijk voor de frontend van Kabila's Web3-product: een sociaal platform, NFT-marktplaats, tools voor makers en native en browserextensie-wallets op Hedera",
+          "Stuurde de architectuur, technische roadmap en sprintplanning aan en vertaalde vage productdoelen naar features die van 0 naar 1 werden opgeleverd",
+          "Bouwde en onderhield de gedeelde componentenbibliotheek en het designsysteem die elk product verenigden en de oplevering versnelden",
+          "Leverde native mobiele wallets op met React Native en Expo in de App Store en Google Play",
+          "Werkte samen met product en design aan scope en afwegingen, en gaf mee vorm aan wat er gebouwd werd, niet alleen hoe",
+          "Begeleidde engineers, voerde codereviews uit en stelde de frontendstandaarden op naarmate het team groeide"
         ]
       },
       "archeMC2": {

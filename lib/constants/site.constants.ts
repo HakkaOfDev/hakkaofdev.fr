@@ -10,29 +10,29 @@ export const SITE = {
   version: "1.14.0", // x-release-please-version
   url: "https://hakkaofdev.fr",
   repositoryUrl: "https://github.com/hakkaofdev/hakkaofdev.fr",
-  title: "Alexandre Gossard | Digital Nomad & Software Engineer",
+  title: "Alexandre Gossard | Product Engineer & Digital Nomad",
   name: "Alexandre Gossard",
   handle: "hakkaofdev",
   email: "alexandre.gossard.pro@gmail.com",
   location: "Châlons-en-Champagne, France",
   description:
-    "Digital nomad & Software Engineer building performant web & mobile apps with React, Next.js, React Native & Expo. Shipping from anywhere.",
-  jobTitle: "Software Engineer",
+    "Product Engineer & digital nomad building web & mobile products end-to-end with React, Next.js, React Native & Expo. Shipping from anywhere.",
+  jobTitle: "Product Engineer",
   employer: {
     name: "Alexandre Gossard",
     url: "https://hakkaofdev.fr",
   },
   keywords: [
     "Alexandre Gossard",
+    "Product Engineer",
     "Digital Nomad",
-    "Fullstack Developer",
-    "Software Engineer",
-    "Open-source",
+    "React",
+    "Next.js",
+    "React Native",
+    "TypeScript",
+    "Web3",
     "hakkaofdev",
     "Kabila",
-    "Freelance",
-    "Hedera Hashgraph",
-    "Blockchain",
   ],
 } as const;
 

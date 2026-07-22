@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Alexandre Gossard | Digital Nomad & Software Engineer",
-    "description": "Digital nomad & Freelance Software Engineer with {years}+ years of experience, building performant web & mobile apps with React, Next.js, React Native & Expo.",
-    "jobTitle": "Software Engineer",
+    "title": "Alexandre Gossard | Product Engineer & Digital Nomad",
+    "description": "Product Engineer & digital nomad with {years}+ years of experience owning web & mobile products end-to-end with React, Next.js & React Native.",
+    "jobTitle": "Product Engineer",
     "location": "Châlons-en-Champagne, France",
     "ogImageAlt": "Alexandre Gossard",
     "keywords": [
       "Alexandre Gossard",
-      "Frontend Developer",
+      "Product Engineer",
       "Digital Nomad",
-      "Modern Technologies",
+      "React",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Web3",
       "hakkaofdev",
-      "kabila.app",
-      "Kabila",
-      "Software Engineer",
-      "Freelance"
+      "Kabila"
     ]
   },
   "Footer": {
@@ -22,7 +23,7 @@
   },
   "Welcome": {
     "greeting": "~ Welcome <wave>👋</wave>",
-    "intro": "<tagline>Digital Nomad</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
+    "intro": "<tagline>Digital Nomad</tagline> · <job>Product Engineer</job> · <freelance>Freelance</freelance>",
     "tags": {
       "rate": "$600/day",
       "web": "React/Next.js",
@@ -247,7 +248,13 @@
     "cv": {
       "description": "My CV as a PDF",
       "openPreview": "Try it out",
-      "downloadPdf": "Download"
+      "downloadPdf": "Download",
+      "experiences": "experiences",
+      "projects": "projects",
+      "skills": "skills",
+      "selectAll": "all",
+      "selectNone": "none",
+      "reset": "reset"
     },
     "recommendations": {
       "recommendedBy": "Recommended by",
@@ -434,7 +441,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software Engineer with {years}+ years of experience building web and mobile apps for clients and teams. I lead frontend projects using React, Next.js, React Native, and Expo, with a focus on clean UI, smooth UX, responsive design, accessibility, and user-friendly products. I also enjoy working remotely as a digital nomad, collaborating with teams and clients from anywhere in the world.",
+    "summary": "Product Engineer with {years}+ years of experience building and owning a single product end-to-end. I led the frontend at Kabila, a Web3 startup in Madrid, shipping a web platform, creator tools, and native and browser wallets, from architecture and roadmap down to the details users feel. I go deep on the frontend with React, Next.js and React Native, and I'm just as comfortable with DevOps, infrastructure and product decisions. I optimize for real user impact and long-term ownership, not just clean code.",
     "location": "Remote",
     "sections": {
       "summary": "Professional Summary",
@@ -451,27 +458,15 @@
     },
     "experiences": {
       "kabila": {
-        "name": "Software Engineer",
+        "name": "Product Engineer",
         "company": "Kabila",
         "location": "Madrid, Spain",
         "descriptions": [
-          "Lead a frontend team building production web apps with React and Next.js",
-          "Own the technical roadmap, sprint planning, and architecture decisions",
-          "Mentor junior developers and run code reviews",
-          "Build and maintain the shared component library and internal design system",
-          "Ship companion mobile apps with React Native and Expo"
-        ]
-      },
-      "freelance": {
-        "name": "Freelance",
-        "company": "Alexandre GOSSARD",
-        "location": "Châlons-en-Champagne, France",
-        "descriptions": [
-          "Build full-stack web apps with React and Next.js for direct clients",
-          "Ship cross-platform mobile apps to the App Store and Google Play",
-          "Set up CI/CD pipelines and automated deployment workflows",
-          "Advise on architecture, tech choices, and project scoping",
-          "Handle client communication and delivery timelines on every project"
+          "Owned the frontend (React and Next.js) of Kabila's Web3 product: a social platform, NFT marketplace, creator tools, and native and browser-extension wallets on Hedera",
+          "Led architecture, technical roadmap and sprint planning; delivered features to production",
+          "Built and maintained the component library and design system used across every product",
+          "Shipped native mobile wallets with React Native and Expo to the App Store and Google Play",
+          "Partnered with product and design on scope and trade-offs, shaping what to build and not just how"
         ]
       },
       "archeMC2": {
