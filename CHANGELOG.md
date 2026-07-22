@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.15.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.14.0...v1.15.0) (2026-07-22)
+
+
+### Features
+
+* **cv:** add customizable cv command with selectable sections ([94e0a6a](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/94e0a6af290b9f8d9c82ce0efaabbcc7d21d18c7))
+* **cv:** customizable cv command + Product Engineer repositioning ([b72c373](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/b72c3737075ec236b9122febd6474f5c29906bc5))
+* **seo:** add web app manifest and enrich site metadata ([fc7a728](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/fc7a728a6417e28969a352202e6d158f27af77d8))
+* **seo:** web app manifest and enriched site metadata ([86e996a](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/86e996abde256b20969516cf895a050d1c210bee))
+
+
+### Documentation
+
+* **cv:** design spec for customizable cv command ([cd6cefc](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/cd6cefc48270126d37ae6513f75e47c8c4b8dd11))
+
+
+### Miscellaneous
+
+* **deps:** update dependencies and patch security advisories ([98a684f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/98a684fa13ebbf39bb1756d395bfae51d6b453af))
+* **deps:** update dependencies and patch security advisories ([ae832c6](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/ae832c637bb653c17eee28788700407bd1453f17))
+
+
+### Code Refactoring
+
+* **content:** reposition as Product Engineer and drop freelance role ([0c9a189](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/0c9a18952e15f0161e90aa8d1e2bdaa2df78b4f3))
+
 ## [1.14.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.13.1...v1.14.0) (2026-07-02)
 
 
