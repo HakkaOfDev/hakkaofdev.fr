@@ -418,8 +418,8 @@
     "experiences": {
       "kabila": {
         "name": "Ingegnere di prodotto",
-        "company": "Kabila",
-        "location": "Madrid, Spagna",
+        "company": "Kabila (startup Web3)",
+        "location": "Remoto · Madrid, Spagna",
         "descriptions": [
           "Ho gestito il frontend del prodotto Web3 di Kabila per quattro anni: una piattaforma social, un marketplace NFT, strumenti per i creator e wallet nativi e come estensione del browser su Hedera",
           "Ho guidato l'architettura, la roadmap tecnica e la pianificazione degli sprint, trasformando obiettivi di prodotto ambigui in funzionalità realizzate da 0 a 1",
@@ -455,21 +455,15 @@
     "education": {
       "iutSecurity": {
         "name": "Amministrazione e sicurezza dei sistemi (Licence professionnelle)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Francia)",
-        "descriptions": ["Migliore del corso"]
+        "location": "IUT Châlons (Châlons-en-Champagne, Francia)"
       },
       "iutNetworks": {
         "name": "DUT Reti e Telecomunicazioni",
-        "location": "IUT Châlons (Châlons-en-Champagne, Francia)",
-        "descriptions": ["Secondo del corso"]
+        "location": "IUT Châlons (Châlons-en-Champagne, Francia)"
       },
       "lyceeBac": {
         "name": "Maturità scientifica (equivalente)",
-        "location": "Lycée Jean Talon (Châlons-en-Champagne, Francia)",
-        "descriptions": [
-          "Specializzazione ISN (Informatica e scienze digitali)",
-          "Con lode"
-        ]
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Francia)"
       }
     },
     "projects": {

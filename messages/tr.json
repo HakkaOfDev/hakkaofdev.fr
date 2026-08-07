@@ -528,8 +528,8 @@
     "experiences": {
       "kabila": {
         "name": "Ürün Mühendisi",
-        "company": "Kabila",
-        "location": "Madrid, İspanya",
+        "company": "Kabila (Web3 girişimi)",
+        "location": "Uzaktan · Madrid, İspanya",
         "descriptions": [
           "Kabila'nın Web3 ürününün frontend'ini dört yıl boyunca sahiplendim: Hedera üzerinde bir sosyal platform, NFT pazaryeri, içerik üretici araçları ile yerel ve tarayıcı uzantısı cüzdanları",
           "Mimariyi, teknik yol haritasını ve sprint planlamasını yönlendirdim; belirsiz ürün hedeflerini 0'dan 1'e yayınlanan özelliklere dönüştürdüm",
@@ -565,21 +565,15 @@
     "education": {
       "iutSecurity": {
         "name": "Sistem Yönetimi ve Güvenlik (mesleki lisans)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Fransa)",
-        "descriptions": ["Sınıf birincisi"]
+        "location": "IUT Châlons (Châlons-en-Champagne, Fransa)"
       },
       "iutNetworks": {
         "name": "DUT Ağlar ve Telekomünikasyon (teknik diploma)",
-        "location": "IUT Châlons (Châlons-en-Champagne, Fransa)",
-        "descriptions": ["Mezuniyet ikincisi"]
+        "location": "IUT Châlons (Châlons-en-Champagne, Fransa)"
       },
       "lyceeBac": {
         "name": "Bilim Bakaloryası (A-level eşdeğeri)",
-        "location": "Lycée Jean Talon (Châlons-en-Champagne, Fransa)",
-        "descriptions": [
-          "ISN uzmanlığı (Bilgisayar ve dijital bilimler)",
-          "Üstün başarıyla"
-        ]
+        "location": "Lycée Jean Talon (Châlons-en-Champagne, Fransa)"
       }
     },
     "projects": {
