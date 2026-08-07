@@ -528,8 +528,8 @@
     "experiences": {
       "kabila": {
         "name": "Insinyur Produk",
-        "company": "Kabila",
-        "location": "Madrid, Spanyol",
+        "company": "Kabila (startup Web3)",
+        "location": "Remote · Madrid, Spanyol",
         "descriptions": [
           "Bertanggung jawab penuh atas frontend produk Web3 Kabila selama empat tahun: platform sosial, marketplace NFT, alat untuk kreator, serta wallet native dan ekstensi browser di Hedera",
           "Mengarahkan arsitektur, peta jalan teknis, dan perencanaan sprint, mengubah tujuan produk yang masih samar menjadi fitur yang dirilis dari 0 ke 1",
@@ -565,21 +565,15 @@
     "education": {
       "iutSecurity": {
         "name": "Sarjana, Administrasi Sistem dan Keamanan",
-        "location": "IUT Châlons · Châlons-en-Champagne, Prancis",
-        "descriptions": ["Lulusan terbaik"]
+        "location": "IUT Châlons · Châlons-en-Champagne, Prancis"
       },
       "iutNetworks": {
         "name": "Diploma III, Jaringan dan Telekomunikasi",
-        "location": "IUT Châlons · Châlons-en-Champagne, Prancis",
-        "descriptions": ["Peringkat kedua angkatan"]
+        "location": "IUT Châlons · Châlons-en-Champagne, Prancis"
       },
       "lyceeBac": {
         "name": "Ijazah SMA, Jurusan IPA",
-        "location": "Lycée Jean Talon · Châlons-en-Champagne, Prancis",
-        "descriptions": [
-          "Spesialisasi ISN (Ilmu Komputer dan Digital)",
-          "Dengan predikat"
-        ]
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, Prancis"
       }
     },
     "projects": {

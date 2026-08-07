@@ -23,6 +23,7 @@ export const PROJECTS: ReadonlyArray<ProjectEntry> = [
   },
   {
     slug: "kabilaWalletNative",
+    url: "https://wallet.kabila.app",
     imageUrl: "/projects/kabila-wallet-native.png",
     imagePosition: "object-bottom",
     tags: ["Expo", "React Native", "Typescript", "Blockchain", "Tailwind"],

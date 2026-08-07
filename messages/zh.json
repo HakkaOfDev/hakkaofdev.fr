@@ -418,8 +418,8 @@
     "experiences": {
       "kabila": {
         "name": "产品工程师",
-        "company": "Kabila",
-        "location": "西班牙 马德里",
+        "company": "Kabila (Web3 初创公司)",
+        "location": "远程 · 西班牙 马德里",
         "descriptions": [
           "四年间全权负责 Kabila Web3 产品的前端:基于 Hedera 的社交平台、NFT 市场、创作者工具,以及原生和浏览器扩展钱包",
           "主导架构、技术路线图和 Sprint 规划,将模糊的产品目标转化为从 0 到 1 交付的功能",
@@ -455,18 +455,15 @@
     "education": {
       "iutSecurity": {
         "name": "学士学位, 系统管理与安全",
-        "location": "IUT Châlons · 法国沙隆昂香槟",
-        "descriptions": ["毕业生第一名"]
+        "location": "IUT Châlons · 法国沙隆昂香槟"
       },
       "iutNetworks": {
         "name": "副学士学位, 网络与电信",
-        "location": "IUT Châlons · 法国沙隆昂香槟",
-        "descriptions": ["榜眼"]
+        "location": "IUT Châlons · 法国沙隆昂香槟"
       },
       "lyceeBac": {
         "name": "高中文凭, 理科方向",
-        "location": "Lycée Jean Talon · 法国沙隆昂香槟",
-        "descriptions": ["专业 ISN(信息与数字科学)", "优等"]
+        "location": "Lycée Jean Talon · 法国沙隆昂香槟"
       }
     },
     "projects": {

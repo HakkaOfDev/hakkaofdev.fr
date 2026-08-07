@@ -528,8 +528,8 @@
     "experiences": {
       "kabila": {
         "name": "Μηχανικός προϊόντος",
-        "company": "Kabila",
-        "location": "Μαδρίτη, Ισπανία",
+        "company": "Kabila (startup Web3)",
+        "location": "Εξ αποστάσεως · Μαδρίτη, Ισπανία",
         "descriptions": [
           "Είχα την ευθύνη του frontend του Web3 προϊόντος της Kabila για τέσσερα χρόνια: μια κοινωνική πλατφόρμα, NFT marketplace, εργαλεία για δημιουργούς και native πορτοφόλια και πορτοφόλια browser extension στο Hedera",
           "Οδήγησα την αρχιτεκτονική, το τεχνικό roadmap και τον προγραμματισμό sprint, μετατρέποντας ασαφείς στόχους προϊόντος σε features που παραδόθηκαν από το 0 στο 1",
@@ -565,21 +565,15 @@
     "education": {
       "iutSecurity": {
         "name": "Πτυχίο, Διαχείριση Συστημάτων και Ασφάλεια",
-        "location": "IUT Châlons · Châlons-en-Champagne, Γαλλία",
-        "descriptions": ["Πρωτεύσας"]
+        "location": "IUT Châlons · Châlons-en-Champagne, Γαλλία"
       },
       "iutNetworks": {
         "name": "Δίπλωμα Τεχνολόγου, Δίκτυα και Τηλεπικοινωνίες",
-        "location": "IUT Châlons · Châlons-en-Champagne, Γαλλία",
-        "descriptions": ["Δεύτερος του έτους"]
+        "location": "IUT Châlons · Châlons-en-Champagne, Γαλλία"
       },
       "lyceeBac": {
         "name": "Απολυτήριο Λυκείου, Επιστημονική Κατεύθυνση",
-        "location": "Lycée Jean Talon · Châlons-en-Champagne, Γαλλία",
-        "descriptions": [
-          "Ειδίκευση ISN (Πληροφορική και ψηφιακές επιστήμες)",
-          "Με διάκριση"
-        ]
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, Γαλλία"
       }
     },
     "projects": {

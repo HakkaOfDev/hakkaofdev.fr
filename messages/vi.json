@@ -528,8 +528,8 @@
     "experiences": {
       "kabila": {
         "name": "Kỹ sư sản phẩm",
-        "company": "Kabila",
-        "location": "Madrid, Tây Ban Nha",
+        "company": "Kabila (startup Web3)",
+        "location": "Từ xa · Madrid, Tây Ban Nha",
         "descriptions": [
           "Làm chủ frontend của sản phẩm Web3 Kabila trong bốn năm: một nền tảng xã hội, chợ NFT, công cụ cho creator, cùng ví native và ví tiện ích trình duyệt trên Hedera",
           "Định hướng kiến trúc, lộ trình kỹ thuật và lập kế hoạch sprint, biến những mục tiêu sản phẩm mơ hồ thành các tính năng được phát hành từ 0 đến 1",
@@ -565,21 +565,15 @@
     "education": {
       "iutSecurity": {
         "name": "Cử nhân, Quản trị Hệ thống và An ninh",
-        "location": "IUT Châlons · Châlons-en-Champagne, Pháp",
-        "descriptions": ["Thủ khoa"]
+        "location": "IUT Châlons · Châlons-en-Champagne, Pháp"
       },
       "iutNetworks": {
         "name": "Cao đẳng, Mạng và Viễn thông",
-        "location": "IUT Châlons · Châlons-en-Champagne, Pháp",
-        "descriptions": ["Á khoa khóa"]
+        "location": "IUT Châlons · Châlons-en-Champagne, Pháp"
       },
       "lyceeBac": {
         "name": "Tốt nghiệp THPT, Khối Khoa học Tự nhiên",
-        "location": "Lycée Jean Talon · Châlons-en-Champagne, Pháp",
-        "descriptions": [
-          "Chuyên ngành ISN (Tin học và Khoa học Số)",
-          "Đạt loại Giỏi"
-        ]
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, Pháp"
       }
     },
     "projects": {

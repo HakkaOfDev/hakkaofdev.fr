@@ -118,9 +118,6 @@ export function EducationSection({
           <Text style={styles.itemMeta}>
             {`${edu.location} · ${edu.period}`}
           </Text>
-          {edu.descriptions.map((desc) => (
-            <BulletItem key={desc} text={desc} />
-          ))}
         </View>
       ))}
     </Section>
@@ -132,14 +129,16 @@ export function EducationSection({
 export function ProjectsSection({
   title,
   projects,
+  break: breakBefore = false,
 }: {
   title: string;
   projects: CvData["projects"];
+  break?: boolean;
 }) {
   if (projects.length === 0) return null;
 
   return (
-    <Section title={title}>
+    <Section title={title} break={breakBefore}>
       {projects.map((project) => (
         <View key={project.slug} style={styles.projectItem}>
           <View style={styles.projectHeader}>

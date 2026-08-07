@@ -400,7 +400,7 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Ingénieur produit avec plus de {years} ans d'expérience à construire et porter un seul produit de bout en bout. J'ai dirigé le frontend chez Kabila, une startup Web3 à Madrid, d'une plateforme web aux outils créateurs et aux wallets natif et navigateur, de l'architecture et la feuille de route jusqu'aux détails que les utilisateurs ressentent. Je suis pointu sur le frontend avec React, Next.js et React Native, et tout aussi à l'aise sur le DevOps, l'infrastructure et les décisions produit. J'optimise pour l'impact réel sur les utilisateurs et l'ownership sur le long terme, pas seulement pour un code propre.",
+    "summary": "Ingénieur produit avec plus de {years} ans d'expérience à construire et développer des produits de bout en bout. J'ai dirigé la partie frontend chez Kabila, une startup Web3 à Madrid, composé principalement d'une plateforme sociale, d'un marketplace NFT, d'outils créateurs et d'un wallet (extension et mobile) sur Hedera. Allant de l'architecture et la feuille de route jusqu'aux détails que les utilisateurs ressentent. Je suis pointu sur le frontend avec React, Next.js et React Native, et tout aussi à l'aise sur le DevOps, l'infrastructure et les décisions produit. J'optimise pour l'impact réel sur les utilisateurs et l'ownership sur le long terme, pas seulement pour un code propre.",
     "location": "Télétravail",
     "sections": {
       "summary": "Résumé professionnel",
@@ -418,14 +418,14 @@
     "experiences": {
       "kabila": {
         "name": "Ingénieur produit",
-        "company": "Kabila",
-        "location": "Madrid, Espagne",
+        "company": "Kabila (startup Web3)",
+        "location": "Télétravail · Madrid, Espagne",
         "descriptions": [
-          "A porté le frontend (React et Next.js) du produit Web3 de Kabila : plateforme sociale, marketplace NFT, outils créateurs et wallets natif et navigateur sur Hedera",
-          "A piloté l'architecture, la feuille de route technique et les sprints ; livré les fonctionnalités en production",
-          "A conçu et maintenu la bibliothèque de composants et le design system utilisés sur tous les produits",
-          "A livré les wallets mobiles natifs avec React Native et Expo sur l'App Store et Google Play",
-          "A collaboré avec le produit et le design sur le périmètre et les arbitrages, en façonnant quoi construire et pas seulement comment"
+          "Prise en charge du frontend (React et Next.js) du produit Web3 de Kabila : plateforme sociale, marketplace NFT, outils créateurs et wallets natifs sur Hedera",
+          "Pilotage de l'architecture, de la feuille de route technique et des sprints ; livraison des fonctionnalités en production",
+          "Conception et maintenance de la bibliothèque de composants et du design system utilisés sur tous les produits",
+          "Livraison des wallets mobiles natifs avec React Native et Expo sur l'App Store et Google Play",
+          "Collaboration avec le produit et le design sur le périmètre et les arbitrages, en orientant le quoi et pas seulement le comment"
         ]
       },
       "archeMC2": {
@@ -454,21 +454,15 @@
     "education": {
       "iutSecurity": {
         "name": "Licence Professionnelle, Administration et Sécurité des Systèmes",
-        "location": "IUT Châlons · Châlons-en-Champagne, France",
-        "descriptions": ["Major de promotion"]
+        "location": "IUT Châlons · Châlons-en-Champagne, France"
       },
       "iutNetworks": {
         "name": "DUT, Réseaux et Télécommunications",
-        "location": "IUT Châlons · Châlons-en-Champagne, France",
-        "descriptions": ["Major de promotion"]
+        "location": "IUT Châlons · Châlons-en-Champagne, France"
       },
       "lyceeBac": {
         "name": "Baccalauréat, Série Scientifique",
-        "location": "Lycée Jean Talon · Châlons-en-Champagne, France",
-        "descriptions": [
-          "Spécialité ISN (Informatique et sciences du numérique)",
-          "Mention bien"
-        ]
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, France"
       }
     },
     "projects": {
@@ -482,7 +476,7 @@
       },
       "kabilaWalletNative": {
         "name": "Kabila Wallet (Native)",
-        "description": "Le portefeuille mobile natif pour le réseau Hedera, construit avec React Native et Expo. Gérez vos comptes, jetons et NFT et connectez-vous aux DApps où que vous soyez tout en gardant le contrôle total de vos actifs."
+        "description": "Le wallet mobile natif pour le réseau Hedera, construit avec React Native et Expo. Gérez vos comptes, tokens et NFT et connectez-vous aux DApps où que vous soyez tout en gardant le contrôle total de vos actifs."
       },
       "kabilaTools": {
         "name": "Kabila Tools",
@@ -490,7 +484,7 @@
       },
       "kabilaWallet": {
         "name": "Kabila Wallet (Extension)",
-        "description": "Un portefeuille non custodial, simple et sécurisé pour le réseau Hedera. Gérez vos comptes, jetons, NFT et connectez-vous aux DApps tout en gardant le contrôle total de vos actifs."
+        "description": "Un wallet non custodial, simple et sécurisé pour le réseau Hedera. Gérez vos comptes, tokens, NFT et connectez-vous aux DApps tout en gardant le contrôle total de vos actifs."
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",

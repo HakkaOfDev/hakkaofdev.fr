@@ -528,8 +528,8 @@
     "experiences": {
       "kabila": {
         "name": "Produktový inženýr",
-        "company": "Kabila",
-        "location": "Madrid, Španělsko",
+        "company": "Kabila (Web3 startup)",
+        "location": "Vzdáleně · Madrid, Španělsko",
         "descriptions": [
           "Čtyři roky jsem zodpovídal za frontend Web3 produktu Kabila: sociální platformu, NFT marketplace, nástroje pro tvůrce a nativní peněženku i peněženku jako prohlížečové rozšíření na Hederě",
           "Řídil jsem architekturu, technický plán a plánování sprintů a proměňoval nejasné produktové cíle ve funkce dodané od nuly do jedničky",
@@ -565,21 +565,15 @@
     "education": {
       "iutSecurity": {
         "name": "Bakalářský titul, Správa systémů a bezpečnost",
-        "location": "IUT Châlons · Châlons-en-Champagne, Francie",
-        "descriptions": ["Nejlepší absolvent"]
+        "location": "IUT Châlons · Châlons-en-Champagne, Francie"
       },
       "iutNetworks": {
         "name": "Vyšší odborné vzdělání, Sítě a telekomunikace",
-        "location": "IUT Châlons · Châlons-en-Champagne, Francie",
-        "descriptions": ["Druhé místo v ročníku"]
+        "location": "IUT Châlons · Châlons-en-Champagne, Francie"
       },
       "lyceeBac": {
         "name": "Maturita, Vědecké zaměření",
-        "location": "Lycée Jean Talon · Châlons-en-Champagne, Francie",
-        "descriptions": [
-          "Specializace ISN (Informatika a digitální vědy)",
-          "S vyznamenáním"
-        ]
+        "location": "Lycée Jean Talon · Châlons-en-Champagne, Francie"
       }
     },
     "projects": {

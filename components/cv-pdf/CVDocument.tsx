@@ -33,6 +33,7 @@ export function CVDocument({ data }: { data: CvData }) {
         <ProjectsSection
           title={data.sections.projects}
           projects={data.projects}
+          break
         />
         <EducationSection
           title={data.sections.education}
