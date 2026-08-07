@@ -5,6 +5,7 @@ export function Section({
   title,
   children,
   keepTogether = false,
+  break: breakBefore = false,
 }: {
   title: string;
   children: React.ReactNode;
@@ -12,9 +13,11 @@ export function Section({
       page rather than splitting it (and stranding the title) across a break.
       Only use for sections short enough to never exceed one page. */
   keepTogether?: boolean;
+  /** Force this section to start on a new page (inserts a page break before it). */
+  break?: boolean;
 }) {
   return (
-    <View style={styles.section} wrap={!keepTogether}>
+    <View style={styles.section} wrap={!keepTogether} break={breakBefore}>
       <View style={styles.sectionHeader} wrap={false}>
         <Text style={styles.sectionTitle}>{title}</Text>
         <View style={styles.sectionRule} />

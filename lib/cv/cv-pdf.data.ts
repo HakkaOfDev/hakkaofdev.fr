@@ -67,7 +67,6 @@ export type CvData = {
     period: string;
     name: string;
     location: string;
-    descriptions: string[];
   }[];
   skills: { slug: string; label: string; values: string[] }[];
   languages: { code: string; flag: string; name: string; level: string }[];
@@ -104,16 +103,12 @@ export async function getCvData(
     };
   });
 
-  const education = EDUCATION.map((edu) => {
-    const descriptionsKey = `education.${edu.slug}.descriptions` as never;
-    return {
-      slug: edu.slug,
-      period: formatPeriod(edu, format, tPeriod),
-      name: tCv(`education.${edu.slug}.name` as never),
-      location: tCv(`education.${edu.slug}.location` as never),
-      descriptions: (tCv.raw(descriptionsKey) as string[]) ?? [],
-    };
-  });
+  const education = EDUCATION.map((edu) => ({
+    slug: edu.slug,
+    period: formatPeriod(edu, format, tPeriod),
+    name: tCv(`education.${edu.slug}.name` as never),
+    location: tCv(`education.${edu.slug}.location` as never),
+  }));
 
   const skills = selectSkillGroups(selection).map((s) => ({
     slug: s.slug,

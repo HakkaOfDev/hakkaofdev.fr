@@ -528,8 +528,8 @@
     "experiences": {
       "kabila": {
         "name": "프로덕트 엔지니어",
-        "company": "Kabila",
-        "location": "마드리드, 스페인",
+        "company": "Kabila (Web3 스타트업)",
+        "location": "원격 · 마드리드, 스페인",
         "descriptions": [
           "소셜 플랫폼, NFT 마켓플레이스, 크리에이터 도구, 네이티브 및 브라우저 확장 지갑을 아우르는 Hedera 기반 Kabila Web3 제품의 프론트엔드를 4년간 책임졌습니다",
           "아키텍처, 기술 로드맵, 스프린트 계획을 주도하며 모호한 제품 목표를 0에서 1로 출시하는 기능으로 구현했습니다",
@@ -565,18 +565,15 @@
     "education": {
       "iutSecurity": {
         "name": "학사, 시스템 관리 및 보안",
-        "location": "IUT Châlons · 샬롱앙샹파뉴, 프랑스",
-        "descriptions": ["수석 졸업"]
+        "location": "IUT Châlons · 샬롱앙샹파뉴, 프랑스"
       },
       "iutNetworks": {
         "name": "전문학사, 네트워크와 텔레커뮤니케이션",
-        "location": "IUT Châlons · 샬롱앙샹파뉴, 프랑스",
-        "descriptions": ["차석 졸업"]
+        "location": "IUT Châlons · 샬롱앙샹파뉴, 프랑스"
       },
       "lyceeBac": {
         "name": "고등학교 졸업장, 자연계",
-        "location": "Lycée Jean Talon · 샬롱앙샹파뉴, 프랑스",
-        "descriptions": ["ISN 전공 (컴퓨터·디지털 과학)", "우수 성적"]
+        "location": "Lycée Jean Talon · 샬롱앙샹파뉴, 프랑스"
       }
     },
     "projects": {

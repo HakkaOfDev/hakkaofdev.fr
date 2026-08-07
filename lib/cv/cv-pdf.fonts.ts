@@ -140,7 +140,6 @@ function collectCvText(data: CvData): string {
     add(e.name);
     add(e.location);
     add(e.period);
-    for (const d of e.descriptions) add(d);
   }
   for (const p of data.projects) {
     add(p.name);
