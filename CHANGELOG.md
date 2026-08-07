@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.16.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.15.0...v1.16.0) (2026-08-07)
+
+
+### Features
+
+* **cv:** remove education bullets and start projects on a new page ([d3284f8](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/d3284f893b62b7b6024c6d6d2facac9907988ffb))
+* **projects:** add Kabila Wallet Native app link ([3535c7e](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/3535c7e8e5f9d69064582a4fcb3159228d39abe9))
+
+
+### Miscellaneous
+
+* **deps:** upgrade Next to 16.3 and patch security advisories ([b0de1eb](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/b0de1ebc8fb414c4d561dd87026e612b6e11689b))
+* **i18n:** drop education bullets and enrich Kabila experience ([9128794](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/912879471cb8124745d474329edb0b2b1632416f))
+
 ## [1.15.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.14.0...v1.15.0) (2026-07-22)
 
 
