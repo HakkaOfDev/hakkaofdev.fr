@@ -23,12 +23,7 @@ function CEducation() {
     const period = formatPeriod(education, format, tPeriod);
     const name = t(`${education.slug}.name` as never) as string;
     const location = t(`${education.slug}.location` as never) as string;
-    const descriptionsKey = `${education.slug}.descriptions` as never;
-    const descriptions = (t.raw(descriptionsKey) as string[]) ?? [];
-    return matchesGrep(
-      [period, name, location, ...descriptions].join("   "),
-      grep,
-    );
+    return matchesGrep([period, name, location].join("   "), grep);
   });
 
   if (grep && visible.length === 0) {
@@ -47,8 +42,6 @@ function CEducation() {
         const period = formatPeriod(education, format, tPeriod);
         const name = t(`${education.slug}.name` as never);
         const location = t(`${education.slug}.location` as never);
-        const descriptionsKey = `${education.slug}.descriptions` as never;
-        const descriptions = (t.raw(descriptionsKey) as string[]) ?? [];
         return {
           key: education.slug,
           lines: [
@@ -62,7 +55,6 @@ function CEducation() {
               {location}
             </p>,
           ],
-          bullets: descriptions,
         };
       })}
     />
