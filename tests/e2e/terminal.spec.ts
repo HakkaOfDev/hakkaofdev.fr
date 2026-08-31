@@ -114,3 +114,66 @@ test.describe("Guestbook flow", () => {
     await expect(page.getByText(/guestbook/i).first()).toBeVisible();
   });
 });
+
+test.describe("Minimize to dock", () => {
+  /** The dock tile shares its label with the window's own yellow dot, which
+   * stays in the DOM while hidden — scope to the one outside the window. */
+  const dockTile = (page: Page): Locator =>
+    page.getByRole("button", { name: /restore terminal$/i }).last();
+
+  test("collapses the window into the dock and back", async ({ page }) => {
+    await page.goto("/");
+    await page.waitForLoadState("networkidle");
+    await getReadyInput(page);
+
+    const windowStage = page.locator("main");
+    await expect(windowStage).toBeVisible();
+    await expect(dockTile(page)).toBeHidden();
+
+    await page.getByRole("button", { name: /minimize terminal/i }).click();
+
+    await expect(windowStage).toBeHidden();
+    await expect(windowStage).toHaveAttribute("aria-hidden", "true");
+    await expect(dockTile(page)).toBeVisible();
+
+    await dockTile(page).click();
+
+    await expect(windowStage).toBeVisible();
+    await expect(dockTile(page)).toBeHidden();
+  });
+
+  test("keeps a half-typed command through the round trip", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    await page.waitForLoadState("networkidle");
+    const input = await getReadyInput(page);
+    await input.fill("about");
+
+    await page.getByRole("button", { name: /minimize terminal/i }).click();
+    await expect(page.locator("main")).toBeHidden();
+    await dockTile(page).click();
+
+    await expect(input).toHaveValue("about");
+  });
+
+  test("leaves the footer layout untouched once restored", async ({ page }) => {
+    await page.goto("/");
+    await page.waitForLoadState("networkidle");
+    await getReadyInput(page);
+
+    const github = page.getByRole("link", { name: "GitHub", exact: true });
+    const before = await github.boundingBox();
+
+    await page.getByRole("button", { name: /minimize terminal/i }).click();
+    await expect(dockTile(page)).toBeVisible();
+    const during = await github.boundingBox();
+    expect(during?.x).toBeGreaterThan(before?.x ?? 0);
+
+    await dockTile(page).click();
+    await expect(dockTile(page)).toBeHidden();
+    expect(Math.round((await github.boundingBox())?.x ?? -1)).toBe(
+      Math.round(before?.x ?? -2),
+    );
+  });
+});
