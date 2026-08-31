@@ -1,6 +1,7 @@
 import { Heart } from "lucide-react";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import { DockItem } from "@/components/DockItem";
 import { GITHUB_URL, SITE, SOCIALS } from "@/lib/constants";
 
 async function Footer() {
@@ -9,6 +10,7 @@ async function Footer() {
   return (
     <div className="flex flex-col items-center justify-center gap-3 pt-6 pb-4">
       <div className="flex items-center gap-3">
+        <DockItem />
         {SOCIALS.map((social) => (
           <Link
             key={social.name}
