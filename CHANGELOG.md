@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.17.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.16.0...v1.17.0) (2026-09-01)
+
+
+### Features
+
+* **window:** collapse the window into a footer dock ([537aeb8](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/537aeb8304563547cd44a4e613c038201d8ea9e7))
+* **window:** collapse the window into a footer dock ([4de1c6d](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/4de1c6df4265ec643100fd5132af44ab7508bedf))
+
+
+### Bug Fixes
+
+* **deps:** override nanoid to ^3.3.18 for GHSA-2v37-7h3g-55p8 ([6b5e0c4](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/6b5e0c4c0c5b4f6eaeec7fc442b312ddedf21918))
+* **deps:** patch nanoid advisory in transitive postcss chain ([4461fa9](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/4461fa94a02d6971a40ae63df70e8117930b13f6))
+
+
+### Documentation
+
+* **readme:** correct stale toolchain, counts and paths ([c175c4f](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c175c4f5a019757ba5cbccc588d8ee0033e14d2f))
+* **readme:** correct stale toolchain, counts and paths ([dfd6980](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/dfd6980574f1dd24f7ae87ddac46b0da5cb5c866))
+
+
+### Code Refactoring
+
+* **terminal:** move window chrome state into the window store ([3953434](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/3953434a5632ad8c8701baf278157f50a21e2283))
+
 ## [1.16.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.15.0...v1.16.0) (2026-08-07)
 
 
