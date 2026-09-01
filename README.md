@@ -34,7 +34,7 @@
 
 ## Overview
 
-A terminal-inspired portfolio for **Alexandre Gossard** ([@hakkaofdev](https://github.com/hakkaofdev)) — Software Engineer & Digital Nomad.  
+A terminal-inspired portfolio for **Alexandre Gossard** ([@hakkaofdev](https://github.com/hakkaofdev)) — Product Engineer & Digital Nomad.  
 Type commands, explore projects, browse skills, sign the guestbook, and even check what's playing on Spotify.
 
 <br />
@@ -44,34 +44,35 @@ Type commands, explore projects, browse skills, sign the guestbook, and even che
 | | Feature | Details |
 |---|---|---|
 | **`>`** | Terminal UI | Command input, history navigation, autocomplete, fuzzy did-you-mean, pipe-style filters (`help \| grep spotify`) |
-| **`>`** | 20 base commands | `help` `projects` `skills` `experiences` `education` `about` `contact` `guestbook` `cv` `repo` `theme` `stats` `echo` `clear` `reset` `spotify` `lang` `alias` `history` `man` |
+| **`>`** | macOS window chrome | Traffic lights close, maximize, and minimize — minimizing collapses the whole window into a dock tile in the footer, with a ping indicator; click it to restore |
+| **`>`** | 21 base commands | `help` `projects` `skills` `experiences` `recommendations` `education` `about` `contact` `guestbook` `cv` `repo` `theme` `stats` `echo` `clear` `reset` `spotify` `lang` `alias` `history` `man` |
 | **`>`** | i18n (22 locales) | `next-intl` with locale-aware routing, RTL support (Arabic, Hebrew), browser detection, `lang` command |
 | **`>`** | Spotify integration | "Now Playing" header widget + `spotify now` / `spotify top` / `spotify history` |
 | **`>`** | Guestbook | Public sign & read, honeypot + per-IP rate-limiting, moderation-ready |
 | **`>`** | Dynamic CV | Server-rendered PDF via `@react-pdf/renderer` — locale-subsetted Noto fonts, preview or download |
-| **`>`** | Advanced Theming | 11 built-in terminal themes (Dracula, Nord, Solarized, Tokyo Night, Catppuccin Latte, …) + custom theme support with preview & WCAG validation |
+| **`>`** | Advanced Theming | 10 built-in terminal themes (Dracula, Nord, Solarized, Tokyo Night, Catppuccin Latte, …) + custom theme support with preview & WCAG validation |
 | **`>`** | Hardened security | Strict CSP, HSTS, `X-Frame-Options: DENY`, `Permissions-Policy`, `frame-ancestors 'none'` |
 | **`>`** | SEO | Sitemap, robots.txt, JSON-LD, build-time OG image, hreflang `alternate` links |
 | **`>`** | Analytics | Vercel Speed Insights + Supabase page-view tracking with bot-UA filter |
-| **`>`** | Tested | 240+ unit / integration tests (Vitest + RTL) + E2E suite (Playwright, Chromium + Firefox), coverage gating in CI |
+| **`>`** | Tested | 360+ unit / integration tests (Vitest + RTL) + E2E suite (Playwright, Chromium + Firefox), coverage gating in CI |
 
 <br />
 
 ## Quick Start
 
-> **Prerequisites** — Node.js 22+ &nbsp;·&nbsp; pnpm 9+
+> **Prerequisites** — Node.js 22+ &nbsp;·&nbsp; Bun 1.3+
 
 ```bash
 # clone & install
 git clone https://github.com/hakkaofdev/hakkaofdev.fr.git
 cd hakkaofdev.fr
-pnpm install
+bun install
 
 # develop
-pnpm dev          # → http://localhost:3000
+bun run dev       # → http://localhost:3000
 
 # production
-pnpm build && pnpm start
+bun run build && bun run start
 ```
 
 Copy `.env.example` to `.env.local` and fill in the values you need:
@@ -105,6 +106,7 @@ GUESTBOOK_RATE_LIMIT_MAX_PER_HOUR=3
 | `about` | Personal details, languages, hobbies |
 | `education` | Education timeline |
 | `experiences` | Experience timeline |
+| `recommendations` | Professional recommendations & references |
 | `guestbook` | List & sign guestbook entries |
 | `contact` | Contact methods & social profiles |
 | `cv` | Open CV preview / download |
@@ -136,18 +138,24 @@ GUESTBOOK_RATE_LIMIT_MAX_PER_HOUR=3
 
 ```
 app/
-├── api/            # Route handlers (cv, guestbook, spotify, views)
-├── layout.tsx      # Root layout, providers, fonts
-├── page.tsx        # Home (terminal shell)
+├── [locale]/       # Locale-scoped layout, home page, OG image
+├── api/            # Route handlers (cv, guestbook, views)
+├── actions.ts      # Server actions (Spotify, GitHub)
 ├── sitemap.ts      # Dynamic sitemap
 └── robots.ts       # Robots config
 
 components/
+├── background/     # Ambient world-map planisphere
 ├── commands/       # Command descriptors, registries, renderers
 ├── cv-pdf/         # React-PDF sections for CV generation
+├── providers/      # Terminal, commands, theme & query providers
+├── terminal/       # Terminal shell, header, tabs, body, search
 ├── ui/             # Reusable UI primitives
-├── Terminal.tsx     # Main terminal component
+├── DockItem.tsx    # Footer dock tile for the minimized window
+├── WindowStage.tsx # Window collapse / restore animation
 └── WelcomeHero.tsx # Initial greeting block
+
+hooks/              # Terminal state, resize, tabs, shortcuts, suggestions
 
 lib/
 ├── constants/      # Site, resume, skills, terminal, guestbook config
@@ -157,8 +165,10 @@ lib/
 ├── themes/         # Theme engine: palettes, provider, storage, contrast validation
 └── utils.ts        # Shared helpers
 
+stores/             # Zustand stores (window, sessions, preferences, theme, aliases)
+
 supabase/
-└── schema/         # SQL migrations (guestbook table, RLS policies)
+└── schema/         # SQL schema (guestbook + analytics tables, RLS policies)
 
 tests/
 ├── e2e/            # Playwright end-to-end specs
@@ -187,11 +197,10 @@ The default locale is detected from the browser; visitors can override it with t
 
 ## Theme System
 
-The portfolio features a fully customizable theme engine with 11 built-in terminal-inspired themes and support for custom palettes.
+The portfolio features a fully customizable theme engine with 10 built-in terminal-inspired themes and support for custom palettes.
 
 **Built-in Themes:**
 - `default` — Clean dark theme with cyan accents
-- `daylight` — Light theme with warm tones
 - `dracula` — Purple & pink dark theme
 - `nord` — Arctic-inspired cool palette
 - `solarized` — Precision colors for readability
@@ -229,7 +238,7 @@ All theme changes apply instantly with smooth color transitions.
 
 **Adding a command:**
 
-1. Add it to `COMMANDS` in `components/commands/command-descriptors.ts`
+1. Add it to `COMMANDS` in `lib/command-descriptors.ts`
 2. Create a renderer in `components/commands/renders/`
 3. Wire it in the registry under `components/commands/registries/`
 
@@ -244,7 +253,7 @@ function getOptions(): string[] {
 }
 
 // 2. Register the command pattern
-import { registerDynamicParamCommand } from "@/components/commands/registries/dynamic-param-registry";
+import { registerDynamicParamCommand } from "@/components/commands/registries/dynamic-param.registry";
 
 registerDynamicParamCommand({
   pattern: "mycommand action",
@@ -255,7 +264,7 @@ registerDynamicParamCommand({
 // 3. Import your registry in components/providers/Providers.tsx
 ```
 
-See `components/commands/registries/EXAMPLES.ts` for more patterns (localStorage, async data, context-aware, etc.)
+See the existing registries in `components/commands/registries/` (`theme`, `lang`, `man`, …) for more patterns.
 
 **State persistence (Lighthouse-friendly default):**
 
@@ -297,22 +306,22 @@ The codebase ships with a full test suite covering pure logic, hooks, components
 | Layer | Where | What's covered |
 |---|---|---|
 | Pure logic | `tests/unit/lib/**` | Utils (string / number / url / grep / request / terminal), command descriptors + registry, theme contrast & WCAG validation, zod schemas, guestbook service |
-| Stores | `tests/unit/stores/**` | `aliases.store` CRUD + `expandAlias` cycle protection |
+| Stores | `tests/unit/stores/**` | `aliases.store` CRUD + `expandAlias` cycle protection, `window.store` minimize / restore / dock anchor |
 | Hooks | `tests/unit/hooks/**` | `useSuggestions`, `useCommandHistory`, `useInputHandlers` (full key matrix), `useGlobalShortcuts` |
-| Components | `tests/unit/components/**` | `Terminal`, `TerminalInput`, `SuggestionList`, `CommandItem` |
+| Components | `tests/unit/components/**` | `Terminal`, `TerminalInput`, `SuggestionList`, `CommandItem`, minimize-to-dock round trip |
 | API routes | `tests/unit/api/**` | `/api/views`, `/api/guestbook`, `/api/guestbook/countries`, `/api/cv` |
-| E2E | `tests/e2e/**` | Typing flows, autocomplete, theme switching, Ctrl+L, guestbook navigation — Chromium + Firefox |
+| E2E | `tests/e2e/**` | Typing flows, autocomplete, theme switching, Ctrl+L, guestbook navigation, minimize to dock & restore — Chromium + Firefox |
 
 **Running tests**
 
 ```bash
-pnpm test             # Run unit & integration tests (CI mode)
-pnpm test:watch       # Watch mode for development
-pnpm test:ui          # Vitest UI dashboard
-pnpm test:coverage    # Generate coverage report (text + HTML + lcov)
+bun run test          # Run unit & integration tests (CI mode)
+bun run test:watch    # Watch mode for development
+bun run test:ui       # Vitest UI dashboard
+bun run test:coverage # Generate coverage report (text + HTML + lcov)
 
-pnpm test:e2e         # Run Playwright E2E across all browsers
-pnpm test:e2e:ui      # Playwright UI mode
+bun run test:e2e      # Run Playwright E2E across all browsers
+bun run test:e2e:ui   # Playwright UI mode
 ```
 
 Coverage is gated in CI by baseline thresholds (`vitest.config.ts`) — meant as a regression floor that ratchets up over time, not a target percentage.
@@ -323,10 +332,10 @@ Coverage is gated in CI by baseline thresholds (`vitest.config.ts`) — meant as
 
 | Workflow | Trigger | What it does |
 |---|---|---|
-| `ci.yml` → `quality` | PR / push to `main` | Lint, typecheck, build |
-| `ci.yml` → `test` | PR / push to `main` | `pnpm test:coverage` + uploads coverage report artifact |
-| `ci.yml` → `e2e` | PR / push to `main` | Installs Playwright browsers, runs `pnpm test:e2e`, uploads HTML report on failure |
-| `dependency-audit.yml` | PR / weekly | `pnpm audit --prod --audit-level=high` |
+| `ci.yml` → `quality` | PR / push to `main` | `bun run format:check` (Biome lint + format), typecheck, build |
+| `ci.yml` → `test` | PR / push to `main` | `bun run test:coverage` + uploads coverage report artifact |
+| `ci.yml` → `e2e` | PR / push to `main` | Installs Playwright browsers, runs `bun run test:e2e`, uploads HTML report on failure |
+| `dependency-audit.yml` | PR / weekly | `bun run audit` (`bun audit --audit-level=high`) |
 | `release.yml` | Push to `main` | Release-please automated versioning |
 
 Deployed on **Vercel** — push to `main` and it ships.
@@ -336,13 +345,15 @@ Deployed on **Vercel** — push to `main` and it ships.
 ## Quality Scripts
 
 ```bash
-pnpm lint              # Biome lint
-pnpm format            # Biome format
-pnpm typecheck         # tsc --noEmit
-pnpm audit             # Dependency audit
-pnpm test              # Vitest unit & integration suite
-pnpm test:coverage     # Vitest with v8 coverage
-pnpm test:e2e          # Playwright end-to-end suite
+bun run lint           # Biome lint
+bun run lint:fix       # Biome check with autofix
+bun run format         # Biome format
+bun run format:check   # Biome CI check (lint + format), as run in CI
+bun run typecheck      # tsc --noEmit
+bun run audit          # Dependency audit
+bun run test           # Vitest unit & integration suite
+bun run test:coverage  # Vitest with v8 coverage
+bun run test:e2e       # Playwright end-to-end suite
 ```
 
 <br />

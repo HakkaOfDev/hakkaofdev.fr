@@ -17,12 +17,21 @@ import {
 } from "@/lib/utils/terminal.utils";
 import { useTerminalPreferencesStore } from "@/stores/terminal-preferences.store";
 import { useTerminalSessionsStore } from "@/stores/terminal-sessions.store";
+import { useWindowStore } from "@/stores/window.store";
 
 export function useTerminalState() {
   const t = useTranslations("Terminal");
   const { addCommand, commands } = useCommands();
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isMaximized, setIsMaximized] = useState(false);
+  const { isMinimized, isMaximized, restore, handleMinimize, handleMaximize } =
+    useWindowStore(
+      useShallow((state) => ({
+        isMinimized: state.isMinimized,
+        isMaximized: state.isMaximized,
+        restore: state.restore,
+        handleMinimize: state.toggleMinimize,
+        handleMaximize: state.toggleMaximize,
+      })),
+    );
   const {
     fontScale,
     setFontScale,
@@ -63,25 +72,12 @@ export function useTerminalState() {
   );
 
   const handleClose = useCallback(() => {
-    if (isMinimized) setIsMinimized(false);
+    if (isMinimized) restore();
     const closeMessages = t.raw("closeMessages") as string[];
     const message =
       closeMessages[Math.floor(Math.random() * closeMessages.length)];
     addCommand(`echo "${message}"`);
-  }, [addCommand, isMinimized, t]);
-
-  const handleMinimize = useCallback(() => {
-    setIsMinimized((value) => {
-      const next = !value;
-      if (next) setIsMaximized(false);
-      return next;
-    });
-  }, []);
-
-  const handleMaximize = useCallback(() => {
-    if (isMinimized) setIsMinimized(false);
-    setIsMaximized((value) => !value);
-  }, [isMinimized]);
+  }, [addCommand, isMinimized, restore, t]);
 
   const increaseFontScale = useCallback(() => {
     setFontScale((value) => clampFontScale(value + FONT_SCALE_STEP));
