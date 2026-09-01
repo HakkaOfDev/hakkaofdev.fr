@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useTerminalResize } from "@/hooks/useTerminalResize";
 import { useTerminalTabs } from "@/hooks/useTerminalTabs";
 import { cn } from "@/lib/utils";
@@ -79,6 +79,8 @@ export const Terminal = ({ children, className }: TerminalProps) => {
     setTerminalLayout,
   });
 
+  const openSettings = useCallback(() => setIsSettingsOpen(true), []);
+
   useEffect(() => {
     if (!isSearchOpen) return;
     searchInputRef.current?.focus();
@@ -91,19 +93,14 @@ export const Terminal = ({ children, className }: TerminalProps) => {
       className={cn(
         "terminal-shell terminal-shadow terminal-resize relative z-0 flex h-full w-full flex-col overflow-hidden rounded-xl border border-border/60 bg-background/45 backdrop-blur-[2px] dark:border-overlay-medium dark:bg-background/70",
         !isMaximized && terminalWidth === null && "max-w-2xl",
-        !isMinimized &&
-          !isMaximized &&
+        !isMaximized &&
           terminalHeight === null &&
           "max-h-[calc(100dvh-120px)] md:max-h-[min(calc(100dvh-120px),450px)]",
-        isMinimized && "max-h-11",
         className,
       )}
       style={resize.containerStyle}
     >
-      <TerminalHeader
-        onResetTerminal={reset}
-        onOpenSettings={() => setIsSettingsOpen(true)}
-      />
+      <TerminalHeader onResetTerminal={reset} onOpenSettings={openSettings} />
 
       <TerminalTabs
         sessionTabs={sessionTabs}
@@ -130,7 +127,6 @@ export const Terminal = ({ children, className }: TerminalProps) => {
       ) : null}
 
       <TerminalBody
-        isMinimized={isMinimized}
         outputViewportRef={tabs.outputViewportRef}
         onOutputScroll={tabs.handleOutputScroll}
         spotifySlot={<SpotifyPlayer />}

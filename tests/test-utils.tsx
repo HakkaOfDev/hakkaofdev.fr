@@ -8,6 +8,13 @@ const messages = {
       submit: "Run",
     },
     closeMessages: ["bye"],
+    trafficLights: {
+      close: "Close terminal",
+      minimize: "Minimize terminal",
+      restoreMinimize: "Restore terminal",
+      expand: "Expand terminal",
+      restoreExpand: "Restore terminal size",
+    },
   },
   Suggestions: {
     navigate: "Navigate",
