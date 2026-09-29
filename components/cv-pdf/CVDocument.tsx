@@ -1,12 +1,11 @@
-import { Document, Page } from "@react-pdf/renderer";
+import { Document, Page, View } from "@react-pdf/renderer";
 import type { CvData } from "@/lib/cv/cv-pdf.data";
 import { styles } from "@/lib/cv/cv-pdf.styles";
 import {
-  BottomSection,
   EducationSection,
   ExperienceSection,
   Header,
-  HobbiesSection,
+  InfoRow,
   ProjectsSection,
   SkillsSection,
   SummarySection,
@@ -24,29 +23,38 @@ export function CVDocument({ data }: { data: CvData }) {
     >
       <Page size="A4" style={styles.page}>
         <Header data={data} />
+        <View style={styles.sectionGap} />
         <SummarySection title={data.sections.summary} summary={data.summary} />
+        <View style={styles.sectionGap} />
         <ExperienceSection
           title={data.sections.experience}
           experiences={data.experiences}
         />
+        <View style={styles.sectionGap} />
         <SkillsSection title={data.sections.skills} skills={data.skills} />
-        <ProjectsSection
-          title={data.sections.projects}
-          projects={data.projects}
-          break
-        />
+        <View style={styles.sectionGap} />
         <EducationSection
           title={data.sections.education}
           education={data.education}
         />
-        <BottomSection
+        <View style={styles.sectionGap} />
+        <InfoRow
           languagesTitle={data.sections.languages}
           linksTitle={data.sections.links}
+          hobbiesTitle={data.sections.hobbies}
           languages={data.languages}
           socials={data.socials}
+          hobbies={data.hobbies}
         />
-        <HobbiesSection title={data.sections.hobbies} hobbies={data.hobbies} />
       </Page>
+      {data.projects.length > 0 && (
+        <Page size="A4" style={styles.page}>
+          <ProjectsSection
+            title={data.sections.projects}
+            projects={data.projects}
+          />
+        </Page>
+      )}
     </Document>
   );
 }

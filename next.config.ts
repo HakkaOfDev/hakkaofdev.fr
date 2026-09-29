@@ -25,6 +25,9 @@ const cspDirectives = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  outputFileTracingIncludes: {
+    "/api/cv": ["./public/avatar.jpg"],
+  },
   experimental: {
     inlineCss: true,
     optimizePackageImports: [
