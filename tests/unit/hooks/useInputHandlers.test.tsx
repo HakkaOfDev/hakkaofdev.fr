@@ -149,13 +149,27 @@ describe("useInputHandlers", () => {
     const opts = makeOptions({
       value: "the",
       isOpen: true,
-      applyActiveSuggestion: vi.fn(() => "theme list"),
+      applyActiveSuggestion: vi.fn(() => ({ value: "theme list", run: true })),
     });
     const { result } = renderHook(() => useInputHandlers(opts));
     const e = fakeKeyEvent("Enter");
     act(() => result.current.handleKeyDown(e));
     expect(opts.applyActiveSuggestion).toHaveBeenCalled();
     expect(opts.addCommand).toHaveBeenCalledWith("theme list");
+  });
+
+  it("Enter on a flag awaiting its value fills it in without running", () => {
+    const opts = makeOptions({
+      value: "stats --l",
+      isOpen: true,
+      applyActiveSuggestion: vi.fn(() => ({
+        value: "stats --last",
+        run: false,
+      })),
+    });
+    const { result } = renderHook(() => useInputHandlers(opts));
+    act(() => result.current.handleKeyDown(fakeKeyEvent("Enter")));
+    expect(opts.addCommand).not.toHaveBeenCalled();
   });
 
   it("handleChange lowercases the input value and opens the popover", () => {

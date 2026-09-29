@@ -14,6 +14,8 @@ export type Suggestion = {
   /** Pre-resolved description (e.g. an alias target). Takes priority over `slug`. */
   description?: string;
   group: CommandGroup;
+  /** A flag awaiting its value: selecting it types `<value> ` instead of running. */
+  needsValue?: boolean;
 };
 
 /**
@@ -24,17 +26,14 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Build the pool of all available suggestions, including user-defined aliases.
   const aliases = useAliasesStore((s) => s.aliases);
   const allSuggestions = useMemo(() => buildSuggestionPool(aliases), [aliases]);
 
-  // Filter suggestions based on current input
   const suggestions = useMemo(() => {
     const query = value.toLowerCase().trimStart();
     return filterSuggestions(query, allSuggestions);
   }, [allSuggestions, value]);
 
-  // Derived state
   const isOpen = value.trim().length > 0 && suggestions.length > 0 && open;
   const safeActiveIndex = Math.max(
     0,
@@ -88,25 +87,39 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
         break;
 
       case "no_action":
-        // Do nothing
         break;
     }
   }, [value, suggestions, setValue, openPopover, closePopover]);
 
   // ── Selection ──────────────────────────────────────────────────────────
 
+  const fillSuggestion = useCallback(
+    (suggestion: Suggestion): boolean => {
+      if (suggestion.needsValue) {
+        setValue(`${suggestion.value} `);
+        openPopover();
+        return false;
+      }
+      setValue(suggestion.value);
+      closePopover();
+      return true;
+    },
+    [setValue, openPopover, closePopover],
+  );
+
   /**
    * Apply the currently highlighted suggestion.
-   * Returns the suggestion value or null if nothing to apply.
+   * Returns its value and whether it can run now, or null if nothing to apply.
    */
-  const applyActiveSuggestion = useCallback((): string | null => {
+  const applyActiveSuggestion = useCallback((): {
+    value: string;
+    run: boolean;
+  } | null => {
     const suggestion = suggestions[safeActiveIndex];
     if (!suggestion) return null;
 
-    setValue(suggestion.value);
-    closePopover();
-    return suggestion.value;
-  }, [suggestions, safeActiveIndex, setValue, closePopover]);
+    return { value: suggestion.value, run: fillSuggestion(suggestion) };
+  }, [suggestions, safeActiveIndex, fillSuggestion]);
 
   /**
    * Apply a specific suggestion by index (e.g., on click).
@@ -114,12 +127,9 @@ export function useSuggestions(value: string, setValue: (v: string) => void) {
   const applySuggestion = useCallback(
     (index: number) => {
       const suggestion = suggestions[index];
-      if (!suggestion) return;
-
-      setValue(suggestion.value);
-      closePopover();
+      if (suggestion) fillSuggestion(suggestion);
     },
-    [suggestions, setValue, closePopover],
+    [suggestions, fillSuggestion],
   );
 
   // ── Return ─────────────────────────────────────────────────────────────

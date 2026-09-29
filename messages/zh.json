@@ -139,6 +139,7 @@
       "statsBrowsers": "独立访客的浏览器分布",
       "statsReferrers": "按独立访客数排名的顶部来源主机",
       "statsTrend": "时间窗口内每日访客的迷你趋势图",
+      "statsLast": "按时间范围筛选:24h、7d、30d、90d 或 all",
       "repo": "打开此作品集的源代码仓库",
       "echo": "在终端中打印一条消息",
       "spotifyNow": "显示当前正在播放的歌曲",

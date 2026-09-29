@@ -139,6 +139,7 @@
       "statsBrowsers": "Rozdělení prohlížečů podle unikátních návštěvníků",
       "statsReferrers": "Hlavní zdroje odkazů seřazené podle unikátních návštěvníků",
       "statsTrend": "Sparkline denních návštěvníků za zvolené období",
+      "statsLast": "Filtrovat podle období: 24h, 7d, 30d, 90d nebo all",
       "repo": "Otevřít zdrojový kód tohoto portfolia",
       "echo": "Vypsat zprávu do terminálu",
       "spotifyNow": "Zobrazit aktuálně přehrávanou skladbu",

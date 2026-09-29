@@ -139,6 +139,7 @@
       "statsBrowsers": "Rozkład przeglądarek dla unikalnych odwiedzających",
       "statsReferrers": "Najczęstsze hosty odsyłające według unikalnych odwiedzających",
       "statsTrend": "Wykres sparkline dziennych odwiedzin w wybranym okresie",
+      "statsLast": "Filtruj według zakresu: 24h, 7d, 30d, 90d lub all",
       "repo": "Otwórz kod źródłowy tego portfolio",
       "echo": "Wypisz wiadomość w terminalu",
       "spotifyNow": "Pokaż obecnie odtwarzaną piosenkę",

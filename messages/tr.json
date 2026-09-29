@@ -139,6 +139,7 @@
       "statsBrowsers": "Tekil ziyaretçilere göre tarayıcı dağılımı",
       "statsReferrers": "Tekil ziyaretçilere göre en iyi yönlendirici ana bilgisayarlar",
       "statsTrend": "Belirli bir zaman aralığında günlük ziyaretçi sparkline'ı",
+      "statsLast": "Zaman aralığına göre filtrele: 24h, 7d, 30d, 90d veya all",
       "repo": "Bu portfolyonun kaynak kodunu aç",
       "echo": "Terminale bir mesaj yazdır",
       "spotifyNow": "Şu anda çalan şarkıyı göster",

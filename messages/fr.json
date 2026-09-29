@@ -139,6 +139,7 @@
       "statsBrowsers": "Répartition des navigateurs pour les visiteurs uniques",
       "statsReferrers": "Principaux hôtes référents classés par visiteurs uniques",
       "statsTrend": "Sparkline des visiteurs quotidiens sur une période donnée",
+      "statsLast": "Filtrer par période : 24h, 7d, 30d, 90d ou all",
       "repo": "Ouvrir le code source de ce portfolio",
       "echo": "Afficher un message dans le terminal",
       "spotifyNow": "Afficher le morceau en cours d'écoute",

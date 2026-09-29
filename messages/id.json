@@ -139,6 +139,7 @@
       "statsBrowsers": "Distribusi browser untuk pengunjung unik",
       "statsReferrers": "Host perujuk teratas berdasarkan pengunjung unik",
       "statsTrend": "Sparkline pengunjung harian dalam rentang waktu",
+      "statsLast": "Filter menurut rentang waktu: 24h, 7d, 30d, 90d, atau all",
       "repo": "Buka kode sumber portfolio ini",
       "echo": "Cetak pesan di terminal",
       "spotifyNow": "Tampilkan lagu yang sedang diputar",

@@ -1,6 +1,8 @@
+import { STATS_RANGE_FLAG_VALUES } from "@/types/analytics";
 import type {
   AliasCommandDescriptor,
   CommandDescriptor,
+  CommandFlagConfig,
   CommandGroup,
   CommandGroupMeta,
   GuestbookCommandDescriptor,
@@ -13,6 +15,7 @@ import type {
 export type {
   AliasCommandDescriptor,
   CommandDescriptor,
+  CommandFlagConfig,
   CommandGroup,
   CommandGroupMeta,
   GuestbookCommandDescriptor,
@@ -108,6 +111,17 @@ export const SUBCOMMAND_PREFIXES = [
   "alias",
   "stats",
 ] as const;
+
+/** `--flag <value>` options, suggested after their command or its sub-commands. */
+export const COMMAND_FLAGS: CommandFlagConfig[] = [
+  {
+    command: "stats",
+    flag: "--last",
+    values: STATS_RANGE_FLAG_VALUES,
+    slug: "statsLast",
+    group: "Profile",
+  },
+];
 
 // ─── Derived: every command including expanded sub-commands ─────────────
 
