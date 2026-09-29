@@ -197,6 +197,7 @@
     },
     "stats": {
       "totalCodingTime": "Timp total de programare",
+      "codingTimeRanged": "Timp de programare (perioadă)",
       "topLanguage": "Limbaj principal",
       "githubStars": "Stele GitHub",
       "contributions": "Contribuții ({year})",
@@ -205,6 +206,8 @@
       "visitors": "Vizitatori",
       "failed": "Statisticile nu au putut fi încărcate. Încearcă mai târziu.",
       "na": "N/A",
+      "calculating": "Se calculează… {percent}%",
+      "noActivity": "Nicio activitate",
       "visitorsRanged": "Vizitatori (perioadă)",
       "rangeLabel": "Perioadă:",
       "unknownFlag": "Flag necunoscut ignorat: {flag}",

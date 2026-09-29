@@ -197,6 +197,7 @@
     },
     "stats": {
       "totalCodingTime": "Total waktu coding",
+      "codingTimeRanged": "Waktu coding (rentang)",
       "topLanguage": "Bahasa utama",
       "githubStars": "Bintang GitHub",
       "contributions": "Kontribusi ({year})",
@@ -205,6 +206,8 @@
       "visitors": "Pengunjung",
       "failed": "Tidak dapat memuat statistik. Coba lagi nanti.",
       "na": "T/A",
+      "calculating": "Menghitung… {percent}%",
+      "noActivity": "Tidak ada aktivitas",
       "visitorsRanged": "Pengunjung (rentang)",
       "rangeLabel": "Rentang:",
       "unknownFlag": "Mengabaikan flag tidak dikenal: {flag}",

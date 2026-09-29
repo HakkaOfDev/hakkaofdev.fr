@@ -197,6 +197,7 @@
     },
     "stats": {
       "totalCodingTime": "Συνολικός χρόνος κώδικα",
+      "codingTimeRanged": "Χρόνος κώδικα (διάστημα)",
       "topLanguage": "Κύρια γλώσσα",
       "githubStars": "Αστέρια GitHub",
       "contributions": "Συνεισφορές ({year})",
@@ -205,6 +206,8 @@
       "visitors": "Επισκέπτες",
       "failed": "Δεν ήταν δυνατή η ανάκτηση των στατιστικών. Δοκιμάστε ξανά αργότερα.",
       "na": "Μ/Δ",
+      "calculating": "Υπολογισμός… {percent}%",
+      "noActivity": "Καμία δραστηριότητα",
       "visitorsRanged": "Επισκέπτες (διάστημα)",
       "rangeLabel": "Διάστημα:",
       "unknownFlag": "Αγνοήθηκε άγνωστο flag: {flag}",

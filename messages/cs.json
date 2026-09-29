@@ -197,6 +197,7 @@
     },
     "stats": {
       "totalCodingTime": "Celkový čas kódování",
+      "codingTimeRanged": "Čas kódování (období)",
       "topLanguage": "Hlavní jazyk",
       "githubStars": "Hvězdičky GitHub",
       "contributions": "Příspěvky ({year})",
@@ -205,6 +206,8 @@
       "visitors": "Návštěvníci",
       "failed": "Nepodařilo se načíst statistiky. Zkuste to později.",
       "na": "N/A",
+      "calculating": "Počítá se… {percent} %",
+      "noActivity": "Žádná aktivita",
       "visitorsRanged": "Návštěvníci (období)",
       "rangeLabel": "Období:",
       "unknownFlag": "Ignorován neznámý přepínač: {flag}",

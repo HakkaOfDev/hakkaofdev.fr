@@ -197,6 +197,7 @@
     },
     "stats": {
       "totalCodingTime": "Temps total de codage",
+      "codingTimeRanged": "Temps de codage (période)",
       "topLanguage": "Langage principal",
       "githubStars": "Étoiles GitHub",
       "contributions": "Contributions ({year})",
@@ -205,6 +206,8 @@
       "visitors": "Visiteurs",
       "failed": "Impossible de récupérer les statistiques. Réessayez plus tard.",
       "na": "N/D",
+      "calculating": "Calcul en cours… {percent} %",
+      "noActivity": "Aucune activité",
       "visitorsRanged": "Visiteurs (période)",
       "rangeLabel": "Période :",
       "unknownFlag": "Option inconnue ignorée : {flag}",

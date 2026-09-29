@@ -197,6 +197,7 @@
     },
     "stats": {
       "totalCodingTime": "कुल कोडिंग समय",
+      "codingTimeRanged": "कोडिंग समय (अवधि)",
       "topLanguage": "मुख्य भाषा",
       "githubStars": "GitHub सितारे",
       "contributions": "योगदान ({year})",
@@ -205,6 +206,8 @@
       "visitors": "विज़िटर",
       "failed": "आँकड़े लोड नहीं हो सके। बाद में पुनः प्रयास करें।",
       "na": "उपलब्ध नहीं",
+      "calculating": "गणना हो रही है… {percent}%",
+      "noActivity": "कोई गतिविधि नहीं",
       "visitorsRanged": "विज़िटर (अवधि)",
       "rangeLabel": "अवधि:",
       "unknownFlag": "अज्ञात फ़्लैग को अनदेखा किया गया: {flag}",

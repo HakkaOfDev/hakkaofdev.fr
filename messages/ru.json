@@ -197,6 +197,7 @@
     },
     "stats": {
       "totalCodingTime": "Общее время кодинга",
+      "codingTimeRanged": "Время кодинга (период)",
       "topLanguage": "Главный язык",
       "githubStars": "Звёзды GitHub",
       "contributions": "Вклады ({year})",
@@ -205,6 +206,8 @@
       "visitors": "Посетители",
       "failed": "Не удалось загрузить статистику. Попробуйте позже.",
       "na": "Н/Д",
+      "calculating": "Вычисляется… {percent}%",
+      "noActivity": "Нет активности",
       "visitorsRanged": "Посетители (период)",
       "rangeLabel": "Период:",
       "unknownFlag": "Неизвестный флаг проигнорирован: {flag}",

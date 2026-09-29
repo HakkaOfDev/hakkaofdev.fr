@@ -197,6 +197,7 @@
     },
     "stats": {
       "totalCodingTime": "総コーディング時間",
+      "codingTimeRanged": "コーディング時間(期間)",
       "topLanguage": "主要言語",
       "githubStars": "GitHubスター",
       "contributions": "コントリビューション({year})",
@@ -205,6 +206,8 @@
       "visitors": "訪問者",
       "failed": "統計を取得できませんでした。後でもう一度お試しください。",
       "na": "なし",
+      "calculating": "計算中… {percent}%",
+      "noActivity": "アクティビティなし",
       "visitorsRanged": "訪問者(期間)",
       "rangeLabel": "期間:",
       "unknownFlag": "不明なフラグを無視しました: {flag}",

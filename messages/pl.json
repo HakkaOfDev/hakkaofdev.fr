@@ -197,6 +197,7 @@
     },
     "stats": {
       "totalCodingTime": "Łączny czas programowania",
+      "codingTimeRanged": "Czas programowania (zakres)",
       "topLanguage": "Główny język",
       "githubStars": "Gwiazdki GitHub",
       "contributions": "Wkłady ({year})",
@@ -205,6 +206,8 @@
       "visitors": "Odwiedzający",
       "failed": "Nie udało się pobrać statystyk. Spróbuj później.",
       "na": "Brak",
+      "calculating": "Obliczanie… {percent}%",
+      "noActivity": "Brak aktywności",
       "visitorsRanged": "Odwiedzający (zakres)",
       "rangeLabel": "Zakres:",
       "unknownFlag": "Zignorowano nieznaną flagę: {flag}",

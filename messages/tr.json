@@ -197,6 +197,7 @@
     },
     "stats": {
       "totalCodingTime": "Toplam kodlama süresi",
+      "codingTimeRanged": "Kodlama süresi (aralık)",
       "topLanguage": "Birincil dil",
       "githubStars": "GitHub yıldızları",
       "contributions": "Katkılar ({year})",
@@ -205,6 +206,8 @@
       "visitors": "Ziyaretçiler",
       "failed": "İstatistikler getirilemedi. Daha sonra tekrar deneyin.",
       "na": "Yok",
+      "calculating": "Hesaplanıyor… %{percent}",
+      "noActivity": "Etkinlik yok",
       "visitorsRanged": "Ziyaretçiler (aralık)",
       "rangeLabel": "Aralık:",
       "unknownFlag": "Bilinmeyen bayrak yoksayıldı: {flag}",

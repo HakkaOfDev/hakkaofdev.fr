@@ -197,6 +197,7 @@
     },
     "stats": {
       "totalCodingTime": "Загальний час кодингу",
+      "codingTimeRanged": "Час кодингу (період)",
       "topLanguage": "Головна мова",
       "githubStars": "Зірки GitHub",
       "contributions": "Внески ({year})",
@@ -205,6 +206,8 @@
       "visitors": "Відвідувачі",
       "failed": "Не вдалося завантажити статистику. Спробуйте пізніше.",
       "na": "Н/Д",
+      "calculating": "Обчислюється… {percent}%",
+      "noActivity": "Немає активності",
       "visitorsRanged": "Відвідувачі (період)",
       "rangeLabel": "Період:",
       "unknownFlag": "Невідомий прапорець проігноровано: {flag}",
