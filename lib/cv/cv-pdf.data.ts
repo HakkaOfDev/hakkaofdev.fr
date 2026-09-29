@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { getFormatter, getTranslations } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import {
@@ -19,6 +21,15 @@ import { formatPeriod } from "@/lib/utils/period.utils";
 
 export const CV_FILE_NAME_BASE = "alexandre-gossard-cv";
 export const CV_PREVIEW_URL = "/api/cv";
+export const CV_PHOTO_PATH = path.join(process.cwd(), "public", "avatar.jpg");
+
+async function loadCvPhoto(): Promise<CvData["photo"]> {
+  try {
+    return { data: await readFile(CV_PHOTO_PATH), format: "jpg" };
+  } catch {
+    return undefined;
+  }
+}
 
 export function buildCvFileName(locale: Locale) {
   return `${CV_FILE_NAME_BASE}-${locale}.pdf`;
@@ -34,6 +45,7 @@ export type CvData = {
   website: string;
   email: string;
   location: string;
+  photo?: { data: Buffer; format: "jpg" };
   summary: string;
   sections: {
     summary: string;
@@ -50,6 +62,7 @@ export type CvData = {
     slug: string;
     name: string;
     description: string;
+    highlights: string[];
     url?: string;
     tags: string[];
   }[];
@@ -79,13 +92,15 @@ export async function getCvData(
 ): Promise<CvData> {
   const tCv = await getTranslations({ locale, namespace: "CV" });
   const tPeriod = await getTranslations({ locale, namespace: "CV.period" });
-  const tMeta = await getTranslations({ locale, namespace: "Metadata" });
   const format = await getFormatter({ locale });
 
   const projects = selectProjects(selection).map((p) => ({
     slug: p.slug,
     name: tCv(`projects.${p.slug}.name` as never),
     description: tCv(`projects.${p.slug}.description` as never),
+    highlights: tCv.has(`projects.${p.slug}.highlights` as never)
+      ? (tCv.raw(`projects.${p.slug}.highlights` as never) as string[])
+      : [],
     url: p.url,
     tags: [...p.tags],
   }));
@@ -131,10 +146,11 @@ export async function getCvData(
     documentTitle: `${SITE.name} - ${tCv("documentTitleSuffix")}`,
     subject: tCv("subject"),
     name: SITE.name,
-    jobTitle: tMeta("jobTitle"),
+    jobTitle: tCv("headline"),
     website: SITE.url,
     email: SITE.email,
     location: tCv("location"),
+    photo: await loadCvPhoto(),
     summary: tCv("summary", { years: getYearsOfExperience() }),
     sections: {
       summary: tCv("sections.summary"),

@@ -1,4 +1,5 @@
-import { Link, Text, View } from "@react-pdf/renderer";
+import { Image, Link, Text, View } from "@react-pdf/renderer";
+import { SOFT_SKILLS_SLUG } from "@/lib/constants/skills.constants";
 import type { CvData } from "@/lib/cv/cv-pdf.data";
 import { styles } from "@/lib/cv/cv-pdf.styles";
 import { BulletItem, Section, Sep } from "./CVPrimitives";
@@ -10,17 +11,21 @@ export function Header({ data }: { data: CvData }) {
 
   return (
     <View style={styles.header}>
-      <Text style={styles.name}>{data.name}</Text>
-      <Text style={styles.jobTitle}>{data.jobTitle}</Text>
+      {data.photo && <Image src={data.photo} style={styles.photo} />}
+      <View style={styles.headerText}>
+        <Text style={styles.name}>{data.name}</Text>
+        <Text style={styles.jobTitle}>{data.jobTitle}</Text>
 
-      <View style={styles.contactRow}>
-        <Text style={styles.contactItem}>{data.email}</Text>
-        <Sep />
-        <Text style={styles.contactItem}>{data.location}</Text>
+        <View style={styles.contactRow}>
+          <Text style={styles.contactItem}>{data.email}</Text>
+          <Sep />
+          <Text style={styles.contactItem}>{data.location}</Text>
+          <Sep />
+          <Link src={`https://${websiteText}`} style={styles.contactLink}>
+            {websiteText}
+          </Link>
+        </View>
       </View>
-      <Link src={`https://${websiteText}`} style={styles.contactLink}>
-        {websiteText}
-      </Link>
     </View>
   );
 }
@@ -87,16 +92,25 @@ export function SkillsSection({
 }) {
   if (skills.length === 0) return null;
 
+  const technical = skills.filter((group) => group.slug !== SOFT_SKILLS_SLUG);
+  const soft = skills.find((group) => group.slug === SOFT_SKILLS_SLUG);
+
   return (
     <Section title={title}>
       <View style={styles.skillsGrid}>
-        {skills.map((group) => (
-          <View key={group.slug} style={styles.skillRow}>
-            <Text style={styles.skillLabel}>{group.label}:</Text>
+        {technical.map((group) => (
+          <View key={group.slug} style={styles.skillCell} wrap={false}>
+            <Text style={styles.skillLabel}>{group.label}</Text>
             <Text style={styles.skillValues}>{group.values.join(", ")}</Text>
           </View>
         ))}
       </View>
+      {soft && (
+        <View style={styles.skillRow} wrap={false}>
+          <Text style={styles.skillLabel}>{soft.label}</Text>
+          <Text style={styles.skillValues}>{soft.values.join(", ")}</Text>
+        </View>
+      )}
     </Section>
   );
 }
@@ -129,50 +143,55 @@ export function EducationSection({
 export function ProjectsSection({
   title,
   projects,
-  break: breakBefore = false,
 }: {
   title: string;
   projects: CvData["projects"];
-  break?: boolean;
 }) {
   if (projects.length === 0) return null;
 
   return (
-    <Section title={title} break={breakBefore}>
+    <Section title={title}>
       {projects.map((project) => (
-        <View key={project.slug} style={styles.projectItem}>
-          <View style={styles.projectHeader}>
-            <Text style={styles.projectName}>{`–  ${project.name}`}</Text>
+        <View key={project.slug} style={styles.projectItem} wrap={false}>
+          <View style={styles.projectHeader} wrap={false}>
+            <Text style={styles.projectName}>{project.name}</Text>
             {project.url && (
               <Link src={project.url} style={styles.projectLink}>
                 {project.url.replace(/^https?:\/\/(www\.)?/, "")}
               </Link>
             )}
+            <Text style={styles.projectTags}>{project.tags.join("  •  ")}</Text>
           </View>
-          <Text style={styles.projectTags}>{project.tags.join("  ·  ")}</Text>
           <Text style={styles.projectDesc}>{project.description}</Text>
+          {project.highlights.map((highlight) => (
+            <BulletItem key={highlight} text={highlight} />
+          ))}
         </View>
       ))}
     </Section>
   );
 }
 
-/* ── Bottom: Languages + Links ────────────────── */
+/* ── Info row: Languages + Links + Hobbies ────── */
 
-export function BottomSection({
+export function InfoRow({
   languagesTitle,
   linksTitle,
+  hobbiesTitle,
   languages,
   socials,
+  hobbies,
 }: {
   languagesTitle: string;
   linksTitle: string;
+  hobbiesTitle: string;
   languages: CvData["languages"];
   socials: CvData["socials"];
+  hobbies: CvData["hobbies"];
 }) {
   return (
-    <View style={styles.bottomRow}>
-      <View style={styles.bottomCol}>
+    <View style={styles.infoRow} wrap={false}>
+      <View style={[styles.infoCol, styles.infoColLanguages]}>
         <Section title={languagesTitle}>
           {languages.map((lang) => (
             <Text key={lang.code} style={styles.langLine}>
@@ -181,7 +200,7 @@ export function BottomSection({
           ))}
         </Section>
       </View>
-      <View style={[styles.bottomCol, styles.bottomColRight]}>
+      <View style={[styles.infoCol, styles.infoColLinks]}>
         <Section title={linksTitle}>
           {socials.map((social) => (
             <View key={social.name} style={styles.socialLine}>
@@ -196,22 +215,11 @@ export function BottomSection({
           ))}
         </Section>
       </View>
+      <View style={[styles.infoCol, styles.infoColHobbies]}>
+        <Section title={hobbiesTitle}>
+          <Text style={styles.hobbiesText}>{hobbies.join(" · ")}</Text>
+        </Section>
+      </View>
     </View>
-  );
-}
-
-/* ── Hobbies & Interests ──────────────────────── */
-
-export function HobbiesSection({
-  title,
-  hobbies,
-}: {
-  title: string;
-  hobbies: CvData["hobbies"];
-}) {
-  return (
-    <Section title={title}>
-      <Text style={styles.hobbiesText}>{hobbies.join("  ·  ")}</Text>
-    </Section>
   );
 }

@@ -27,6 +27,7 @@
     "tags": {
       "rate": "$600/day",
       "web": "React/Next.js",
+      "webExpert": "React/Next.js Expert",
       "mobile": "Expo/React Native"
     },
     "sections": {
@@ -267,7 +268,11 @@
     },
     "projects": {
       "openLabel": "Open project: {name}",
-      "noMatches": "No projects match \"{pattern}\"."
+      "noMatches": "No projects match \"{pattern}\".",
+      "details": "View details: {name}",
+      "highlights": "Highlights",
+      "visit": "Visit website",
+      "close": "Close"
     },
     "noMatches": "No matches for \"{pattern}\"."
   },
@@ -445,8 +450,9 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Product Engineer with {years}+ years of experience building and owning a single product end-to-end. I led the frontend at Kabila, a Web3 startup in Madrid, shipping a web platform, creator tools, and native and browser wallets, from architecture and roadmap down to the details users feel. I go deep on the frontend with React, Next.js and React Native, and I'm just as comfortable with DevOps, infrastructure and product decisions. I optimize for real user impact and long-term ownership, not just clean code.",
+    "summary": "I design and build products end to end. For {years}+ years I owned the frontend of Kabila, a Web3 startup in Madrid, taking a social platform, NFT marketplace, creator tools and native and browser wallets from rough ideas to polished products. I work across design and engineering: maintaining design systems, shaping product flows and building the frontend architecture behind them. My focus is turning complex blockchain interactions into simple, intuitive experiences for users who may be new to crypto. I'm most effective in high-autonomy environments where I can move quickly, make product decisions and own outcomes.",
     "location": "Remote",
+    "headline": "Product Engineer - Next.js Expert",
     "sections": {
       "summary": "Professional Summary",
       "experience": "Experience",
@@ -455,7 +461,7 @@
       "projects": "Selected Projects",
       "languages": "Languages",
       "links": "Links",
-      "hobbies": "Hobbies & Interests"
+      "hobbies": "Hobbies"
     },
     "period": {
       "since": "Since {date}"
@@ -464,13 +470,14 @@
       "kabila": {
         "name": "Product Engineer",
         "company": "Kabila (Web3 startup)",
-        "location": "Remote · Madrid, Spain",
+        "location": "Remote",
         "descriptions": [
-          "Owned the frontend (React and Next.js) of Kabila's Web3 product: a social platform, NFT marketplace, creator tools, and native and browser-extension wallets on Hedera",
-          "Led architecture, technical roadmap and sprint planning; delivered features to production",
-          "Built and maintained the component library and design system used across every product",
-          "Shipped native mobile wallets with React Native and Expo to the App Store and Google Play",
-          "Partnered with product and design on scope and trade-offs, shaping what to build and not just how"
+          "Owned Kabila's Web3 frontend end to end across its social platform, NFT marketplace, creator tools and wallets",
+          "Designed interfaces in Figma and built the shared design system and component library used across the product suite",
+          "Designed and shipped guided flows that turn complex on-chain operations into simple steps for non-crypto users",
+          "Led frontend architecture, technical and sprint planning, taking features from idea to production in fast iterations",
+          "Built and shipped the native wallet with React Native and Expo to the App Store and Google Play",
+          "Worked directly with product and design stakeholders to define scope, make trade-offs and decide what to build"
         ]
       },
       "archeMC2": {
@@ -480,8 +487,7 @@
         "descriptions": [
           "Built GitLab CI/CD pipelines for automated testing and deployment",
           "Containerized internal applications and services with Docker",
-          "Automated routine sysadmin tasks with shell scripts",
-          "Monitored system health and improved infrastructure resilience"
+          "Automated infrastructure tasks and monitoring with shell scripts"
         ]
       },
       "efficienceInformatique": {
@@ -489,9 +495,8 @@
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, France",
         "descriptions": [
-          "Administered Windows servers and supported day-to-day IT operations",
+          "Administered Windows servers and Hyper-V virtualization across the internal infrastructure",
           "Implemented and maintained backup strategies for critical business data",
-          "Set up and managed Hyper-V virtualization across the internal infrastructure",
           "Supported ERP systems (SAP and Sage) used by finance and operations teams"
         ]
       }
@@ -513,63 +518,119 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "An enterprise consultancy for DLT and AI architecture, delivering blockchain and AI integration with regulatory compliance built in, from strategy to production."
+        "description": "Company website for Bravalta, an enterprise DLT and AI consultancy.",
+        "highlights": [
+          "Delivered fast page loads and strong SEO by choosing Astro static rendering over a client-heavy stack",
+          "Owned UI/UX from concept to production, designing and building every user flow",
+          "Created the site's motion design and animations"
+        ]
       },
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "A Web3 social platform and NFT ecosystem built on Hedera, featuring an NFT marketplace, community plazas, launchpads and creator tools."
+        "description": "Kabila's flagship Web3 platform: social network, NFT marketplace, community plazas, launchpads and token staking.",
+        "highlights": [
+          "Consolidated 3 separate apps into one flagship product, leading the migration end to end",
+          "$500K+ in trading volume across 100K+ sales on the NFT marketplace I built and maintained",
+          "Cut duplicated code across the 3 apps with a shared internal SDK for all blockchain interactions",
+          "Kept 3 products visually consistent with a design system and component library I designed and built"
+        ]
       },
       "kabilaWalletNative": {
         "name": "Kabila Wallet (Native)",
-        "description": "The native mobile wallet for the Hedera network, built with React Native and Expo. Manage your accounts, tokens and NFTs and connect to DApps on the go while keeping full control of your assets."
+        "description": "Kabila's mobile wallet for iOS and Android: accounts, tokens, NFTs and dApp connections on the go.",
+        "highlights": [
+          "Took the mobile wallet from zero to 10K+ users, built with React Native and Expo",
+          "Shipped and maintained production releases on iOS and Android: builds, store reviews and updates",
+          "Designed and implemented the wallet UI/UX, making accounts, tokens and signing clear to non-crypto users",
+          "Brought the main app's design language to native, so users get one consistent Kabila experience"
+        ]
       },
       "kabilaTools": {
         "name": "Kabila Tools",
-        "description": "An all-in-one NFT toolkit for creators and communities on Hedera. A powerful and easy-to-use platform to create, launch, and manage your NFT collections while being in total control."
+        "description": "Self-serve NFT toolkit that lets creators and communities create, launch and manage collections.",
+        "highlights": [
+          "Owned the frontend of the creator suite serving 5K+ users",
+          "Shipped 20+ creator tools on one platform, covering the full NFT collection lifecycle",
+          "Made on-chain launches self-serve: creators ship NFT collections through guided flows, no code needed",
+          "Built responsive UI/UX for complex multi-step flows that stay usable on any screen size"
+        ]
       },
       "kabilaWallet": {
         "name": "Kabila Wallet (Extension)",
-        "description": "A non-custodial, simple, and secure wallet for the Hedera network. Manage your accounts, tokens, NFTs, and connect with DApps while maintaining full control of your assets."
+        "description": "Kabila's non-custodial browser-extension wallet, with a mobile build from the same codebase.",
+        "highlights": [
+          "Shipped a non-custodial Chrome extension wallet adopted by 2K+ users",
+          "Made security the core requirement: keys stay on-device and every sensitive action needs explicit consent",
+          "Covered desktop and mobile as a single engineer by reusing one React codebase through Capacitor",
+          "Designed connection and approval flows so users always see exactly what they sign"
+        ]
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
-        "description": "A professional website for an automotive repair business, featuring services, transparent pricing and contact information."
+        "description": "Website for a local car repair business.",
+        "highlights": [
+          "Delivered a freelance site end to end, from client discovery and design to build and launch",
+          "Built a conversion-first page with transparent pricing, click-to-call and quote requests",
+          "Optimized local SEO so the garage ranks in nearby searches"
+        ]
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "DASAN OLT/ONUs Supervision tool."
+        "description": "Real-time supervision dashboard for DASAN fiber network equipment (OLTs and ONUs).",
+        "highlights": [
+          "Gave network operators live visibility into DASAN fiber equipment through a real-time dashboard",
+          "Wrote the Python API polling devices over SNMP, with a Redis cache to limit load on network gear",
+          "Containerized the stack with Docker and automated image builds in GitHub Actions"
+        ]
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
-        "description": "A custom e-commerce platform for a professional engraving studio, featuring a product catalog, online ordering and an admin dashboard for order management."
+        "description": "Custom online store and order management for a professional engraving studio.",
+        "highlights": [
+          "Gave the owner an admin dashboard to run stock, orders and daily operations without a developer",
+          "Designed and built the custom store end to end as a freelance project",
+          "Integrated Stripe for secure checkout and payments"
+        ]
       },
       "portfolioV1": {
         "name": "Portfolio V1",
-        "description": "My previous portfolio website built with Next.js and Chakra UI, featuring a dark theme and smooth animations."
+        "description": "My previous portfolio, since replaced by this interactive terminal.",
+        "highlights": [
+          "Built every animation from scratch with Framer Motion for a smooth, polished feel",
+          "Surfaced my curated bookmarks on the site through the Raindrop.io API",
+          "Added an MDX blog to publish technical writing alongside the portfolio"
+        ]
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "Discover a starter kit which includes Next.js, Chakra-UI, Framer-Motion in Typescript. You have few components, Internationalization, SEO and more in this template."
+        "description": "Open-source Next.js starter kit with Chakra UI, Framer Motion and TypeScript.",
+        "highlights": [
+          "Open-source starter that takes a Next.js site from zero to production-ready",
+          "Ships theming, reusable animated components, i18n, SEO and sitemap generation out of the box",
+          "Documented setup, structure and conventions so other developers can adopt it quickly"
+        ]
       },
       "rtransport": {
         "name": "RT'ransport",
-        "description": "A Percel Platform created for the project of my first year in DUT Networks & Telecoms (two-year university degree)."
+        "description": "A parcel delivery platform built for my first-year project in DUT Networks & Telecoms (two-year university degree).",
+        "highlights": [
+          "Architected two Flask services: a versioned REST API and a server-rendered Tailwind client on top",
+          "Modeled the parcel logistics domain in SQLAlchemy on PostgreSQL: parcels, relay points and hubs",
+          "Built hop-by-hop parcel tracking, with dedicated views for customers, suppliers and operators"
+        ]
       }
     },
     "skillGroups": {
       "languages": "Languages",
       "frameworks": "Frameworks",
+      "stateData": "State & Data",
       "uiStyling": "UI / Styling",
       "tooling": "Tooling",
       "testing": "Testing",
       "databases": "Databases",
       "cloud": "Cloud",
-      "vcs": "VCS",
-      "orm": "ORM",
       "devops": "DevOps",
       "automation": "Automation",
-      "ai": "AI",
-      "stateData": "State & Data",
       "softSkills": "Soft Skills"
     },
     "spokenLanguages": {
