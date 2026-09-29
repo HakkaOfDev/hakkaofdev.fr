@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "Project openen: {name}",
-      "noMatches": "Geen projecten komen overeen met “{pattern}”."
+      "noMatches": "Geen projecten komen overeen met “{pattern}”.",
+      "details": "Details bekijken: {name}",
+      "highlights": "Hoogtepunten",
+      "visit": "Website bezoeken",
+      "close": "Sluiten"
     },
     "noMatches": "Geen treffers voor “{pattern}”."
   },

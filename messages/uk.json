@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "Відкрити проєкт: {name}",
-      "noMatches": "Немає проєктів, що відповідають «{pattern}»."
+      "noMatches": "Немає проєктів, що відповідають «{pattern}».",
+      "details": "Детальніше: {name}",
+      "highlights": "Ключові моменти",
+      "visit": "Відкрити сайт",
+      "close": "Закрити"
     },
     "noMatches": "Немає збігів для «{pattern}»."
   },

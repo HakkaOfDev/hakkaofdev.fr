@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "प्रोजेक्ट खोलें: {name}",
-      "noMatches": "कोई प्रोजेक्ट \"{pattern}\" से मेल नहीं खाता।"
+      "noMatches": "कोई प्रोजेक्ट \"{pattern}\" से मेल नहीं खाता।",
+      "details": "विवरण देखें: {name}",
+      "highlights": "मुख्य बातें",
+      "visit": "वेबसाइट देखें",
+      "close": "बंद करें"
     },
     "noMatches": "\"{pattern}\" के लिए कोई मेल नहीं।"
   },

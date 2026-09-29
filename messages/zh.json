@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "打开项目：{name}",
-      "noMatches": "没有项目匹配 “{pattern}”。"
+      "noMatches": "没有项目匹配 “{pattern}”。",
+      "details": "查看详情：{name}",
+      "highlights": "亮点",
+      "visit": "访问网站",
+      "close": "关闭"
     },
     "noMatches": "没有匹配 “{pattern}” 的结果。"
   },

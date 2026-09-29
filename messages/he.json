@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "פתח פרויקט: {name}",
-      "noMatches": "אין פרויקטים התואמים ל-\"{pattern}\"."
+      "noMatches": "אין פרויקטים התואמים ל-\"{pattern}\".",
+      "details": "הצגת פרטים: {name}",
+      "highlights": "עיקרי הדברים",
+      "visit": "לביקור באתר",
+      "close": "סגירה"
     },
     "noMatches": "אין התאמות עבור \"{pattern}\"."
   },

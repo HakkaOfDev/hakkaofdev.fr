@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "Otevřít projekt: {name}",
-      "noMatches": "Žádné projekty neodpovídají „{pattern}“."
+      "noMatches": "Žádné projekty neodpovídají „{pattern}“.",
+      "details": "Zobrazit detaily: {name}",
+      "highlights": "Hlavní body",
+      "visit": "Navštívit web",
+      "close": "Zavřít"
     },
     "noMatches": "Žádné shody pro „{pattern}“."
   },

@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "プロジェクトを開く: {name}",
-      "noMatches": "「{pattern}」に一致するプロジェクトはありません。"
+      "noMatches": "「{pattern}」に一致するプロジェクトはありません。",
+      "details": "詳細を見る：{name}",
+      "highlights": "ハイライト",
+      "visit": "サイトを開く",
+      "close": "閉じる"
     },
     "noMatches": "「{pattern}」に一致する項目はありません。"
   },

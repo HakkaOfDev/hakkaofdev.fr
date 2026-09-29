@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "Open project: {name}",
-      "noMatches": "No projects match \"{pattern}\"."
+      "noMatches": "No projects match \"{pattern}\".",
+      "details": "View details: {name}",
+      "highlights": "Highlights",
+      "visit": "Visit website",
+      "close": "Close"
     },
     "noMatches": "No matches for \"{pattern}\"."
   },

@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "Открыть проект: {name}",
-      "noMatches": "Нет проектов, соответствующих «{pattern}»."
+      "noMatches": "Нет проектов, соответствующих «{pattern}».",
+      "details": "Подробнее: {name}",
+      "highlights": "Ключевые моменты",
+      "visit": "Открыть сайт",
+      "close": "Закрыть"
     },
     "noMatches": "Нет совпадений для «{pattern}»."
   },

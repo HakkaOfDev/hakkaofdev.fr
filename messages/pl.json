@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "Otwórz projekt: {name}",
-      "noMatches": "Żaden projekt nie pasuje do „{pattern}”."
+      "noMatches": "Żaden projekt nie pasuje do „{pattern}”.",
+      "details": "Zobacz szczegóły: {name}",
+      "highlights": "Najważniejsze",
+      "visit": "Odwiedź stronę",
+      "close": "Zamknij"
     },
     "noMatches": "Brak dopasowań dla „{pattern}”."
   },

@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "프로젝트 열기: {name}",
-      "noMatches": "“{pattern}”과 일치하는 프로젝트가 없습니다."
+      "noMatches": "“{pattern}”과 일치하는 프로젝트가 없습니다.",
+      "details": "자세히 보기: {name}",
+      "highlights": "하이라이트",
+      "visit": "웹사이트 방문",
+      "close": "닫기"
     },
     "noMatches": "“{pattern}”에 대한 결과가 없습니다."
   },

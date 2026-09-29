@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "Deschide proiectul: {name}",
-      "noMatches": "Niciun proiect nu corespunde „{pattern}”."
+      "noMatches": "Niciun proiect nu corespunde „{pattern}”.",
+      "details": "Vezi detalii: {name}",
+      "highlights": "Repere",
+      "visit": "Vizitează site-ul",
+      "close": "Închide"
     },
     "noMatches": "Nicio potrivire pentru „{pattern}”."
   },

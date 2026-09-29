@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "Buka proyek: {name}",
-      "noMatches": "Tidak ada proyek yang cocok dengan \"{pattern}\"."
+      "noMatches": "Tidak ada proyek yang cocok dengan \"{pattern}\".",
+      "details": "Lihat detail: {name}",
+      "highlights": "Sorotan",
+      "visit": "Kunjungi situs",
+      "close": "Tutup"
     },
     "noMatches": "Tidak ada hasil untuk \"{pattern}\"."
   },

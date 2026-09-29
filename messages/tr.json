@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "Projeyi aç: {name}",
-      "noMatches": "“{pattern}” ile eşleşen proje yok."
+      "noMatches": "“{pattern}” ile eşleşen proje yok.",
+      "details": "Ayrıntıları gör: {name}",
+      "highlights": "Öne çıkanlar",
+      "visit": "Web sitesini ziyaret et",
+      "close": "Kapat"
     },
     "noMatches": "“{pattern}” için eşleşme yok."
   },

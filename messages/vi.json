@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "Mở dự án: {name}",
-      "noMatches": "Không có dự án nào khớp với “{pattern}”."
+      "noMatches": "Không có dự án nào khớp với “{pattern}”.",
+      "details": "Xem chi tiết: {name}",
+      "highlights": "Điểm nổi bật",
+      "visit": "Truy cập website",
+      "close": "Đóng"
     },
     "noMatches": "Không có kết quả khớp với “{pattern}”."
   },

@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "Abrir projeto: {name}",
-      "noMatches": "Nenhum projeto corresponde a «{pattern}»."
+      "noMatches": "Nenhum projeto corresponde a «{pattern}».",
+      "details": "Ver detalhes: {name}",
+      "highlights": "Destaques",
+      "visit": "Visitar o site",
+      "close": "Fechar"
     },
     "noMatches": "Sem correspondências para «{pattern}»."
   },

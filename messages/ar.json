@@ -264,7 +264,11 @@
     },
     "projects": {
       "openLabel": "فتح المشروع: {name}",
-      "noMatches": "لا توجد مشاريع تطابق «{pattern}»."
+      "noMatches": "لا توجد مشاريع تطابق «{pattern}».",
+      "details": "عرض التفاصيل: {name}",
+      "highlights": "أبرز النقاط",
+      "visit": "زيارة الموقع",
+      "close": "إغلاق"
     },
     "noMatches": "لا توجد نتائج لـ «{pattern}»."
   },
