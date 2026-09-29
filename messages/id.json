@@ -23,10 +23,11 @@
   },
   "Welcome": {
     "greeting": "~ Selamat datang <wave>👋</wave>",
-    "intro": "<tagline>Pengelana digital</tagline> · <job>Software Engineer</job> · <freelance>Freelance</freelance>",
+    "intro": "<tagline>Pengelana digital</tagline> · <job>Insinyur Produk</job> · <freelance>Freelance</freelance>",
     "tags": {
       "rate": "$600/hari",
       "web": "React/Next.js",
+      "webExpert": "Pakar React/Next.js",
       "mobile": "Expo/React Native"
     },
     "sections": {
@@ -510,8 +511,9 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Software Engineer yang berorientasi produk dengan pengalaman lebih dari {years} tahun membangun dan bertanggung jawab penuh atas satu produk dari hulu ke hilir. Saya memimpin frontend di Kabila, sebuah startup Web3 di Madrid, merilis platform web, alat untuk kreator, serta wallet native dan browser, mulai dari arsitektur dan peta jalan hingga detail yang dirasakan pengguna. Profil T: mendalam di React, Next.js, dan React Native, serta nyaman bergerak di ranah DevOps, infrastruktur, dan keputusan produk. Saya berfokus pada dampak nyata bagi pengguna dan kepemilikan jangka panjang, bukan sekadar kode yang bersih.",
+    "summary": "Saya merancang dan membangun produk secara end-to-end. Selama {years}+ tahun, saya memegang frontend Kabila, startup Web3 di Madrid, membawa platform sosial, marketplace NFT, alat kreator, serta wallet native dan browser dari ide kasar hingga produk matang. Saya bekerja lintas desain dan engineering: memelihara sistem desain, membentuk alur produk, dan membangun arsitektur frontend di baliknya. Saya berfokus mengubah interaksi blockchain kompleks menjadi pengalaman sederhana dan intuitif bagi pengguna yang mungkin awam kripto. Saya paling efektif di lingkungan berotonomi tinggi, tempat saya bisa bergerak cepat, mengambil keputusan produk, dan bertanggung jawab atas hasil.",
     "location": "Remote",
+    "headline": "Insinyur Produk - Pakar Next.js",
     "sections": {
       "summary": "Ringkasan profesional",
       "experience": "Pengalaman",
@@ -520,7 +522,7 @@
       "projects": "Proyek pilihan",
       "languages": "Bahasa",
       "links": "Tautan",
-      "hobbies": "Hobi & Minat"
+      "hobbies": "Hobi"
     },
     "period": {
       "since": "Sejak {date}"
@@ -529,14 +531,14 @@
       "kabila": {
         "name": "Insinyur Produk",
         "company": "Kabila (startup Web3)",
-        "location": "Remote · Madrid, Spanyol",
+        "location": "Remote",
         "descriptions": [
-          "Bertanggung jawab penuh atas frontend produk Web3 Kabila selama empat tahun: platform sosial, marketplace NFT, alat untuk kreator, serta wallet native dan ekstensi browser di Hedera",
-          "Mengarahkan arsitektur, peta jalan teknis, dan perencanaan sprint, mengubah tujuan produk yang masih samar menjadi fitur yang dirilis dari 0 ke 1",
-          "Membangun dan memelihara library komponen bersama serta sistem desain yang menyatukan setiap produk dan mempercepat pengiriman",
-          "Merilis wallet mobile native dengan React Native dan Expo ke App Store dan Google Play",
-          "Bermitra dengan tim produk dan desain terkait ruang lingkup dan trade-off, ikut menentukan apa yang dibangun, bukan sekadar bagaimana membangunnya",
-          "Membimbing engineer, menjalankan code review, dan menetapkan standar frontend seiring pertumbuhan tim"
+          "Memegang frontend Web3 Kabila secara end-to-end: platform sosial, marketplace NFT, alat kreator, dan wallet",
+          "Merancang antarmuka di Figma dan membangun sistem desain serta library komponen bersama untuk semua produk",
+          "Merancang dan merilis alur terpandu: operasi on-chain rumit menjadi langkah mudah bagi pengguna non-kripto",
+          "Memimpin arsitektur frontend serta perencanaan teknis dan sprint, dari ide ke produksi lewat iterasi cepat",
+          "Membangun dan merilis wallet native dengan React Native dan Expo ke App Store dan Google Play",
+          "Bekerja langsung dengan stakeholder produk dan desain untuk menetapkan scope, trade-off, dan apa yang dibangun"
         ]
       },
       "archeMC2": {
@@ -546,8 +548,7 @@
         "descriptions": [
           "Membangun pipeline GitLab CI/CD untuk pengujian dan deployment otomatis",
           "Mengontainerkan aplikasi dan layanan internal dengan Docker",
-          "Mengotomatiskan tugas sysadmin rutin dengan shell script",
-          "Memantau kesehatan sistem dan meningkatkan ketahanan infrastruktur"
+          "Mengotomatiskan tugas infrastruktur dan monitoring dengan shell script"
         ]
       },
       "efficienceInformatique": {
@@ -555,10 +556,9 @@
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Prancis",
         "descriptions": [
-          "Mengadministrasi server Windows dan mendukung operasi TI harian",
+          "Mengelola server Windows dan virtualisasi Hyper-V di seluruh infrastruktur internal",
           "Mengimplementasikan dan memelihara strategi backup untuk data bisnis kritis",
-          "Menyiapkan dan mengelola virtualisasi Hyper-V di infrastruktur internal",
-          "Mendukung sistem ERP (SAP dan Sage) yang digunakan tim finance dan operations"
+          "Mendukung sistem ERP (SAP dan Sage) yang digunakan tim keuangan dan operasional"
         ]
       }
     },
@@ -579,63 +579,119 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "Konsultan enterprise yang berfokus pada arsitektur DLT dan AI, menghadirkan integrasi blockchain dan AI dengan kepatuhan regulasi bawaan, dari strategi hingga produksi."
+        "description": "Situs web korporat Bravalta, firma konsultan DLT dan AI untuk perusahaan.",
+        "highlights": [
+          "Menghadirkan halaman cepat dan SEO kuat dengan memilih rendering statis Astro, bukan stack berat di sisi klien",
+          "Memegang UI/UX dari konsep hingga produksi, merancang dan membangun setiap alur pengguna",
+          "Membuat motion design dan animasi situs"
+        ]
       },
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Platform sosial Web3 dan ekosistem NFT yang dibangun di Hedera, dengan marketplace NFT, ruang komunitas, launchpad, dan alat untuk kreator."
+        "description": "Platform Web3 unggulan Kabila: jejaring sosial, marketplace NFT, community plaza, launchpad, dan staking token.",
+        "highlights": [
+          "Menggabungkan 3 aplikasi terpisah menjadi satu produk unggulan dan memimpin migrasinya secara end-to-end",
+          "Volume perdagangan $500K+ dari 100K+ penjualan di marketplace NFT yang saya bangun dan pelihara",
+          "Mengurangi duplikasi kode di 3 aplikasi dengan SDK internal bersama untuk semua interaksi blockchain",
+          "Menjaga konsistensi visual 3 produk lewat sistem desain dan library komponen yang saya rancang dan bangun"
+        ]
       },
       "kabilaWalletNative": {
         "name": "Kabila Wallet (Native)",
-        "description": "Wallet seluler native untuk jaringan Hedera, dibangun dengan React Native dan Expo. Kelola akun, token, dan NFT Anda serta terhubung dengan DApp di mana saja sambil mempertahankan kontrol penuh atas aset Anda."
+        "description": "Wallet mobile Kabila untuk iOS dan Android: akun, token, NFT, dan koneksi dApp di mana saja.",
+        "highlights": [
+          "Membawa wallet mobile dari nol hingga 10K+ pengguna, dibangun dengan React Native dan Expo",
+          "Merilis dan memelihara versi produksi di iOS dan Android: build, review store, dan pembaruan",
+          "Merancang dan mengimplementasikan UI/UX wallet agar akun, token, dan signing jelas bagi pengguna non-kripto",
+          "Membawa bahasa desain aplikasi utama ke native agar pengguna mendapat satu pengalaman Kabila yang konsisten"
+        ]
       },
       "kabilaTools": {
         "name": "Kabila Tools",
-        "description": "Toolkit NFT all-in-one untuk creator dan komunitas di Hedera. Platform yang kuat dan mudah digunakan untuk membuat, meluncurkan, dan mengelola koleksi NFT dengan kontrol penuh."
+        "description": "Toolkit NFT swalayan bagi kreator dan komunitas untuk membuat, meluncurkan, dan mengelola koleksi.",
+        "highlights": [
+          "Memegang frontend suite kreator yang melayani 5K+ pengguna",
+          "Merilis 20+ alat kreator dalam satu platform, mencakup seluruh siklus hidup koleksi NFT",
+          "Menjadikan peluncuran on-chain swalayan: kreator merilis koleksi NFT lewat alur terpandu, tanpa kode",
+          "Membangun UI/UX responsif untuk alur multi-langkah yang kompleks dan tetap nyaman di layar apa pun"
+        ]
       },
       "kabilaWallet": {
         "name": "Kabila Wallet (Extension)",
-        "description": "Wallet non-kustodial yang sederhana dan aman untuk jaringan Hedera. Kelola akun, token, NFT, dan terhubung dengan DApp sambil mempertahankan kontrol penuh atas aset Anda."
+        "description": "Wallet ekstensi browser non-kustodial Kabila, dengan versi mobile dari codebase yang sama.",
+        "highlights": [
+          "Merilis wallet ekstensi Chrome non-kustodial yang diadopsi oleh 2K+ pengguna",
+          "Menjadikan keamanan syarat utama: kunci tetap di perangkat, setiap aksi sensitif butuh persetujuan eksplisit",
+          "Mencakup desktop dan mobile sebagai engineer tunggal dengan memakai ulang satu codebase React lewat Capacitor",
+          "Merancang alur koneksi dan persetujuan agar pengguna selalu tahu persis apa yang mereka tanda tangani"
+        ]
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
-        "description": "Website profesional untuk bisnis perbaikan otomotif, dengan layanan, harga transparan, dan informasi kontak."
+        "description": "Situs web untuk bengkel mobil lokal.",
+        "highlights": [
+          "Menangani situs freelance secara end-to-end, dari discovery klien dan desain hingga build dan peluncuran",
+          "Membangun halaman berfokus konversi dengan harga transparan, click-to-call, dan permintaan penawaran",
+          "Mengoptimalkan SEO lokal agar bengkel muncul di hasil pencarian sekitar"
+        ]
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Alat pengawasan DASAN OLT/ONU."
+        "description": "Dasbor pemantauan real-time untuk perangkat jaringan fiber DASAN (OLT dan ONU).",
+        "highlights": [
+          "Memberi operator jaringan visibilitas langsung atas perangkat fiber DASAN melalui dasbor real-time",
+          "Menulis API Python untuk polling perangkat via SNMP, dengan cache Redis untuk menekan beban perangkat jaringan",
+          "Mengontainerkan stack dengan Docker dan mengotomatiskan build image di GitHub Actions"
+        ]
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
-        "description": "Platform e-commerce kustom untuk studio ukir profesional, dengan katalog produk, pemesanan online, dan dashboard admin untuk manajemen pesanan."
+        "description": "Toko online kustom dan manajemen pesanan untuk studio grafir profesional.",
+        "highlights": [
+          "Memberi pemilik dasbor admin untuk mengelola stok, pesanan, dan operasional harian tanpa developer",
+          "Merancang dan membangun toko kustom secara end-to-end sebagai proyek freelance",
+          "Mengintegrasikan Stripe untuk checkout dan pembayaran yang aman"
+        ]
       },
       "portfolioV1": {
         "name": "Portfolio V1",
-        "description": "Website portfolio saya sebelumnya yang dibangun dengan Next.js dan Chakra UI, dengan tema gelap dan animasi halus."
+        "description": "Portofolio saya sebelumnya, kini digantikan oleh terminal interaktif ini.",
+        "highlights": [
+          "Membangun setiap animasi dari nol dengan Framer Motion untuk nuansa yang mulus dan rapi",
+          "Menampilkan bookmark pilihan saya di situs melalui API Raindrop.io",
+          "Menambahkan blog MDX untuk menerbitkan tulisan teknis bersama portofolio"
+        ]
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "Starter kit dengan Next.js, Chakra-UI, Framer-Motion dalam TypeScript. Berisi beberapa komponen, internasionalisasi, SEO, dan lainnya."
+        "description": "Starter kit Next.js open-source dengan Chakra UI, Framer Motion, dan TypeScript.",
+        "highlights": [
+          "Starter open-source yang membawa situs Next.js dari nol hingga siap produksi",
+          "Menyediakan theming, komponen animasi reusable, i18n, SEO, dan pembuatan sitemap siap pakai",
+          "Mendokumentasikan setup, struktur, dan konvensi agar developer lain dapat mengadopsinya dengan cepat"
+        ]
       },
       "rtransport": {
         "name": "RT'ransport",
-        "description": "Platform paket yang dibuat untuk proyek tahun pertama DUT Jaringan dan Telekomunikasi."
+        "description": "Platform pengiriman paket untuk proyek tahun pertama saya di DUT Networks & Telecoms (diploma universitas 2 tahun).",
+        "highlights": [
+          "Merancang arsitektur dua layanan Flask: REST API berversi dan, di atasnya, klien Tailwind yang dirender server",
+          "Memodelkan domain logistik paket di SQLAlchemy dengan PostgreSQL: paket, titik relay, dan hub",
+          "Membangun pelacakan paket hop demi hop, dengan tampilan khusus untuk pelanggan, pemasok, dan operator"
+        ]
       }
     },
     "skillGroups": {
       "languages": "Bahasa",
       "frameworks": "Framework",
+      "stateData": "Status & Data",
       "uiStyling": "UI / Styling",
       "tooling": "Tooling",
       "testing": "Pengujian",
       "databases": "Database",
       "cloud": "Cloud",
-      "vcs": "VCS",
-      "orm": "ORM",
       "devops": "DevOps",
       "automation": "Otomasi",
-      "ai": "AI",
-      "stateData": "Status & Data",
       "softSkills": "Soft Skills"
     },
     "spokenLanguages": {

@@ -23,10 +23,11 @@
   },
   "Welcome": {
     "greeting": "~ Bun venit <wave>👋</wave>",
-    "intro": "<tagline>Nomad digital</tagline> · <job>Inginer software</job> · <freelance>Freelance</freelance>",
+    "intro": "<tagline>Nomad digital</tagline> · <job>Inginer de produs</job> · <freelance>Freelance</freelance>",
     "tags": {
       "rate": "600 $/zi",
       "web": "React/Next.js",
+      "webExpert": "Expert React/Next.js",
       "mobile": "Expo/React Native"
     },
     "sections": {
@@ -510,8 +511,9 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Inginer software orientat spre produs, cu peste {years} ani de experiență în construirea și asumarea unui singur produs de la un capăt la altul. Am condus echipa de frontend la Kabila, un startup Web3 din Madrid, livrând o platformă web, instrumente pentru creatori și portofele native și pentru browser, de la arhitectură și roadmap până la detaliile pe care utilizatorii le simt. Profil în T: solid în React, Next.js și React Native și în largul meu cu DevOps, infrastructură și decizii de produs. Optimizez pentru impact real asupra utilizatorilor și pentru asumare pe termen lung, nu doar pentru cod curat.",
+    "summary": "Proiectez și construiesc produse cap-coadă. Timp de peste {years} ani am condus frontend-ul Kabila, un startup Web3 din Madrid, ducând o platformă socială, un marketplace NFT, unelte pentru creatori și portofele native și de browser de la idei brute la produse finisate. Lucrez între design și inginerie: întrețin design system-uri, modelez fluxurile de produs și construiesc arhitectura frontend din spatele lor. Mă concentrez pe a transforma interacțiuni blockchain complexe în experiențe simple și intuitive, inclusiv pentru cei noi în crypto. Sunt cel mai eficient în medii cu autonomie mare, unde pot avansa rapid, pot lua decizii de produs și îmi asum rezultatele.",
     "location": "Remote",
+    "headline": "Inginer de produs - Expert Next.js",
     "sections": {
       "summary": "Profil profesional",
       "experience": "Experiență",
@@ -520,7 +522,7 @@
       "projects": "Proiecte selectate",
       "languages": "Limbi",
       "links": "Linkuri",
-      "hobbies": "Pasiuni și interese"
+      "hobbies": "Pasiuni"
     },
     "period": {
       "since": "Din {date}"
@@ -529,14 +531,14 @@
       "kabila": {
         "name": "Inginer de produs",
         "company": "Kabila (startup Web3)",
-        "location": "Remote · Madrid, Spania",
+        "location": "Remote",
         "descriptions": [
-          "Am fost responsabil de frontend-ul produsului Web3 al Kabila timp de patru ani: o platformă socială, marketplace NFT, instrumente pentru creatori și portofele native și de tip extensie de browser pe Hedera",
-          "Am condus arhitectura, roadmap-ul tehnic și planificarea sprinturilor, transformând obiective de produs ambigue în funcționalități livrate de la 0 la 1",
-          "Am construit și întreținut biblioteca de componente partajate și sistemul de design care au unificat fiecare produs și au accelerat livrarea",
-          "Am livrat portofele mobile native cu React Native și Expo în App Store și Google Play",
-          "Am colaborat cu echipele de produs și design pe domeniul de aplicare și compromisuri, modelând ce se construiește, nu doar cum",
-          "Am mentorat ingineri, am condus code review-uri și am stabilit standardele de frontend pe măsură ce echipa creștea"
+          "Am condus integral frontend-ul Web3 Kabila: rețea socială, marketplace NFT, unelte pentru creatori și portofele",
+          "Am proiectat interfețe în Figma și am creat design system-ul și biblioteca de componente comune suitei",
+          "Am proiectat și livrat fluxuri ghidate ce reduc operațiuni on-chain complexe la pași simpli pentru neinițiați",
+          "Am condus arhitectura frontend, planificarea tehnică și sprinturile, de la idee la producție în iterații rapide",
+          "Am construit și publicat portofelul nativ cu React Native și Expo în App Store și Google Play",
+          "Am lucrat direct cu produsul și designul pentru a defini scopul, a face compromisuri și a decide ce construim"
         ]
       },
       "archeMC2": {
@@ -546,8 +548,7 @@
         "descriptions": [
           "Am construit pipeline-uri GitLab CI/CD pentru testare și deployment automate",
           "Am containerizat aplicații și servicii interne cu Docker",
-          "Am automatizat sarcini de rutină de sysadmin cu scripturi shell",
-          "Am monitorizat starea sistemelor și am îmbunătățit reziliența infrastructurii"
+          "Am automatizat sarcini de infrastructură și monitorizarea cu scripturi shell"
         ]
       },
       "efficienceInformatique": {
@@ -555,10 +556,9 @@
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Franța",
         "descriptions": [
-          "Administrare servere Windows și suport zilnic pentru operațiuni IT",
-          "Implementare și mentenanță strategii de backup pentru date critice de business",
-          "Configurare și gestionare virtualizare Hyper-V în infrastructura internă",
-          "Suport pentru sisteme ERP (SAP și Sage) utilizate de echipele de finanțe și operațiuni"
+          "Am administrat servere Windows și virtualizarea Hyper-V din infrastructura internă",
+          "Am implementat și întreținut strategii de backup pentru datele critice de business",
+          "Am oferit suport pentru ERP-urile (SAP și Sage) folosite de echipele de finanțe și operațiuni"
         ]
       }
     },
@@ -579,63 +579,119 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "O firmă de consultanță enterprise specializată în arhitectură DLT și AI, oferind integrare blockchain și AI cu conformitate de reglementare integrată, de la strategie până la producție."
+        "description": "Site de prezentare pentru Bravalta, firmă de consultanță enterprise în DLT și AI.",
+        "highlights": [
+          "Am obținut încărcare rapidă și SEO solid alegând randarea statică Astro în locul unui stack greu pe client",
+          "Am preluat UI/UX de la concept la producție, proiectând și construind fiecare flux de utilizare",
+          "Am creat motion design-ul și animațiile site-ului"
+        ]
       },
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "O platformă socială Web3 și ecosistem NFT construite pe Hedera, cu marketplace NFT, plaze comunitare, launchpad-uri și instrumente pentru creatori."
+        "description": "Platforma Web3 principală Kabila: rețea socială, marketplace NFT, spații comunitare, launchpad-uri, staking de tokenuri.",
+        "highlights": [
+          "Am consolidat 3 aplicații separate într-un singur produs principal, conducând migrarea cap-coadă",
+          "$500K+ volum de tranzacționare din 100K+ vânzări pe marketplace-ul NFT construit și întreținut de mine",
+          "Am redus codul duplicat din cele 3 aplicații cu un SDK intern comun pentru toate interacțiunile blockchain",
+          "Am menținut 3 produse coerente vizual cu un design system și o bibliotecă de componente create de mine"
+        ]
       },
       "kabilaWalletNative": {
         "name": "Kabila Wallet (Native)",
-        "description": "Portofelul mobil nativ pentru rețeaua Hedera, construit cu React Native și Expo. Gestionează conturi, tokenuri și NFT-uri și conectează-te la DApp-uri de oriunde, menținând controlul total asupra activelor tale."
+        "description": "Portofelul mobil Kabila pentru iOS și Android: conturi, tokenuri, NFT-uri și conexiuni la dApp-uri, oriunde.",
+        "highlights": [
+          "Am dus portofelul mobil de la zero la 10K+ utilizatori, construit cu React Native și Expo",
+          "Am livrat și întreținut versiuni iOS și Android în producție: build-uri, review-uri în store, actualizări",
+          "Am proiectat și implementat UI/UX-ul portofelului: conturi, tokenuri și semnare clare pentru neinițiați",
+          "Am adus limbajul vizual al aplicației principale în nativ, pentru o experiență Kabila unitară"
+        ]
       },
       "kabilaTools": {
         "name": "Kabila Tools",
-        "description": "Un toolkit NFT all-in-one pentru creatori și comunități pe Hedera. O platformă puternică și ușor de folosit pentru a crea, lansa și gestiona colecții NFT, păstrând controlul total."
+        "description": "Toolkit NFT self-service prin care creatorii și comunitățile creează, lansează și gestionează colecții.",
+        "highlights": [
+          "Am condus frontend-ul suitei pentru creatori, folosită de 5K+ utilizatori",
+          "Am livrat 20+ unelte pentru creatori pe o singură platformă, acoperind tot ciclul de viață al colecțiilor NFT",
+          "Am făcut lansările on-chain self-service: creatorii lansează colecții NFT prin fluxuri ghidate, fără cod",
+          "Am construit UI/UX responsive pentru fluxuri complexe în mai mulți pași, utilizabile pe orice ecran"
+        ]
       },
       "kabilaWallet": {
         "name": "Kabila Wallet (Extension)",
-        "description": "Un portofel fără custodie, simplu și sigur pentru rețeaua Hedera. Gestionează conturi, tokenuri, NFT-uri și conectează-te la DApp-uri menținând controlul total asupra activelor tale."
+        "description": "Portofelul non-custodial Kabila ca extensie de browser, cu o versiune mobilă din aceeași bază de cod.",
+        "highlights": [
+          "Am lansat un portofel non-custodial ca extensie Chrome, adoptat de 2K+ utilizatori",
+          "Am pus securitatea pe primul loc: cheile rămân pe dispozitiv, orice acțiune sensibilă cere acord explicit",
+          "Am acoperit desktop și mobil ca unic inginer, reutilizând o singură bază de cod React prin Capacitor",
+          "Am proiectat fluxurile de conectare și aprobare astfel încât utilizatorii să vadă mereu exact ce semnează"
+        ]
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
-        "description": "Un site profesional pentru o afacere de reparații auto, cu servicii, prețuri transparente și informații de contact."
+        "description": "Site pentru un service auto local.",
+        "highlights": [
+          "Am livrat cap-coadă un site freelance: analiza nevoilor clientului, design, dezvoltare și lansare",
+          "Am creat o pagină orientată spre conversie: prețuri transparente, apel dintr-un clic, cereri de ofertă",
+          "Am optimizat SEO-ul local pentru ca service-ul să apară în căutările din zonă"
+        ]
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Instrument de supraveghere DASAN OLT/ONU."
+        "description": "Dashboard de supervizare în timp real pentru echipamentele de rețea pe fibră DASAN (OLT-uri și ONU-uri).",
+        "highlights": [
+          "Am dat operatorilor de rețea vizibilitate live asupra echipamentelor DASAN pe fibră, printr-un dashboard",
+          "Am scris API-ul Python care interoghează echipamentele prin SNMP, cu cache Redis ca să nu încarce rețeaua",
+          "Am containerizat stack-ul cu Docker și am automatizat build-ul imaginilor în GitHub Actions"
+        ]
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
-        "description": "O platformă e-commerce personalizată pentru un studio profesional de gravare, cu catalog de produse, comenzi online și panou de administrare al comenzilor."
+        "description": "Magazin online personalizat și gestiune a comenzilor pentru un atelier profesional de gravură.",
+        "highlights": [
+          "I-am dat proprietarului un panou de admin pentru stoc, comenzi și activitatea zilnică, fără dezvoltator",
+          "Am proiectat și construit magazinul personalizat cap-coadă, ca proiect freelance",
+          "Am integrat Stripe pentru checkout și plăți securizate"
+        ]
       },
       "portfolioV1": {
         "name": "Portfolio V1",
-        "description": "Portofoliul meu anterior construit cu Next.js și Chakra UI, cu temă întunecată și animații fluide."
+        "description": "Portofoliul meu anterior, înlocuit între timp de acest terminal interactiv.",
+        "highlights": [
+          "Am creat fiecare animație de la zero cu Framer Motion, pentru o experiență fluidă și rafinată",
+          "Am afișat pe site marcajele mele selectate prin API-ul Raindrop.io",
+          "Am adăugat un blog MDX pentru a publica articole tehnice alături de portofoliu"
+        ]
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "Un starter kit cu Next.js, Chakra-UI, Framer-Motion în TypeScript. Conține câteva componente, internaționalizare, SEO și mai mult."
+        "description": "Starter kit open-source pentru Next.js cu Chakra UI, Framer Motion și TypeScript.",
+        "highlights": [
+          "Starter open-source care duce un site Next.js de la zero la gata de producție",
+          "Include din start theming, componente animate reutilizabile, i18n, SEO și generare de sitemap",
+          "Am documentat instalarea, structura și convențiile pentru ca alți dezvoltatori să-l poată adopta rapid"
+        ]
       },
       "rtransport": {
         "name": "RT'ransport",
-        "description": "O platformă de colete creată pentru proiectul primului an din DUT Rețele și Telecomunicații."
+        "description": "Platformă de livrare de colete, proiect de anul I la DUT Rețele și Telecomunicații (diplomă universitară de 2 ani).",
+        "highlights": [
+          "Am proiectat două servicii Flask: un API REST versionat și, peste el, un client Tailwind randat pe server",
+          "Am modelat logistica coletelor în SQLAlchemy pe PostgreSQL: colete, puncte de ridicare și hub-uri",
+          "Am construit urmărirea coletelor etapă cu etapă, cu vizualizări pentru clienți, furnizori și operatori"
+        ]
       }
     },
     "skillGroups": {
       "languages": "Limbaje",
       "frameworks": "Framework-uri",
+      "stateData": "Stare și Date",
       "uiStyling": "UI / Stilizare",
       "tooling": "Unelte",
       "testing": "Testare",
       "databases": "Baze de date",
       "cloud": "Cloud",
-      "vcs": "VCS",
-      "orm": "ORM",
       "devops": "DevOps",
       "automation": "Automatizare",
-      "ai": "IA",
-      "stateData": "Stare și Date",
       "softSkills": "Soft skills"
     },
     "spokenLanguages": {

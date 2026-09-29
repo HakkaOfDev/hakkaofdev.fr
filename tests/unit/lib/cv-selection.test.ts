@@ -108,15 +108,15 @@ describe("parseSelection", () => {
   });
 
   it("keeps only known skill values, in canonical order", () => {
-    const parsed = parseSelection(params("skills=React,made-up,Next.js"));
-    expect(parsed.skills).toEqual(["Next.js", "React"]);
+    const parsed = parseSelection(params("skills=Next.js,made-up,React"));
+    expect(parsed.skills).toEqual(["React", "Next.js"]);
   });
 
   it("round-trips a custom selection through buildCvUrl", () => {
     const selection: CvSelection = {
       experiences: [ALL_EXPERIENCE_SLUGS[0]],
       projects: ALL_PROJECT_SLUGS.slice(0, 3),
-      skills: ["Next.js", "React", "shadcn/ui"],
+      skills: ["React", "Next.js", "shadcn/ui"],
     };
     const url = buildCvUrl({ lang: "en", selection });
     const query = url.slice(url.indexOf("?") + 1);
@@ -178,7 +178,7 @@ describe("selectSkillGroups", () => {
     };
     const groups = selectSkillGroups(selection);
     expect(groups).toHaveLength(1);
-    expect(groups[0].values).toEqual(["Next.js", "React"]);
+    expect(groups[0].values).toEqual(["React", "Next.js"]);
   });
 
   it("returns nothing when skills are cleared", () => {

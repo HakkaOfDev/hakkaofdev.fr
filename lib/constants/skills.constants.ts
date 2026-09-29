@@ -4,9 +4,46 @@ export type SkillGroup = {
   values: string[];
 };
 
+export const SOFT_SKILLS_SLUG = "softSkills";
+
 export const SKILLS: ReadonlyArray<SkillGroup> = [
   {
-    slug: "softSkills",
+    slug: "frameworks",
+    values: [
+      "React",
+      "Next.js",
+      "React Native",
+      "Expo",
+      "Vue.js",
+      "Astro",
+      "Django",
+      "Flask",
+      "FastAPI",
+    ],
+  },
+  {
+    slug: "stateData",
+    values: ["TanStack Query", "GraphQL", "Zustand", "Redux", "Zod"],
+  },
+  {
+    slug: "languages",
+    values: ["TypeScript", "JavaScript", "Python", "HTML/CSS"],
+  },
+  { slug: "uiStyling", values: ["Tailwind", "shadcn/ui", "Motion", "Figma"] },
+  { slug: "tooling", values: ["Biome", "Bun"] },
+  { slug: "testing", values: ["Vitest", "Playwright", "Cypress", "Jest"] },
+  {
+    slug: "databases",
+    values: ["PostgreSQL", "Supabase", "Convex", "MongoDB", "Redis", "Prisma"],
+  },
+  {
+    slug: "devops",
+    values: ["Docker", "Kubernetes", "RabbitMQ", "CI/CD", "Git", "GitLab"],
+  },
+  { slug: "cloud", values: ["Vercel", "AWS"] },
+  { slug: "automation", values: ["n8n", "OpenClaw", "Claude", "Codex"] },
+  {
+    slug: SOFT_SKILLS_SLUG,
     values: [
       "Technical Leadership",
       "Mentoring",
@@ -16,32 +53,4 @@ export const SKILLS: ReadonlyArray<SkillGroup> = [
       "Critical Thinking",
     ],
   },
-  { slug: "languages", values: ["Javascript", "Typescript", "Python"] },
-  {
-    slug: "frameworks",
-    values: [
-      "Next.js",
-      "Vue.js",
-      "React",
-      "React Native",
-      "Expo",
-      "Astro",
-      "Flask",
-      "Django",
-    ],
-  },
-  {
-    slug: "stateData",
-    values: ["TanStack Query", "GraphQL", "Zustand", "Redux", "Zod"],
-  },
-  { slug: "uiStyling", values: ["Tailwind", "shadcn/ui", "Motion", "Figma"] },
-  { slug: "tooling", values: ["Biome", "Bun"] },
-  { slug: "testing", values: ["Vitest", "Playwright", "Jest"] },
-  { slug: "databases", values: ["PostgreSQL", "Supabase", "MongoDB", "Redis"] },
-  { slug: "cloud", values: ["Vercel", "AWS"] },
-  { slug: "vcs", values: ["Git", "Gitlab"] },
-  { slug: "orm", values: ["Prisma"] },
-  { slug: "devops", values: ["Docker", "k8s"] },
-  { slug: "automation", values: ["n8n", "openclaw"] },
-  { slug: "ai", values: ["Codex", "Claude"] },
 ];
