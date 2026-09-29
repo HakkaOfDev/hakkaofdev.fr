@@ -77,6 +77,12 @@
     font-family: var(--font-montserrat);
     @apply bg-background text-foreground;
   }
+  .dark select {
+    color-scheme: dark;
+  }
+  select option {
+    @apply bg-background text-foreground;
+  }
 }
 
 /* ── Terminal resize animation ── */

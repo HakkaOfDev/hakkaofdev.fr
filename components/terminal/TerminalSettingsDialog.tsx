@@ -97,7 +97,7 @@ function TerminalSettingsDialog({
           </button>
         </>
       }
-      className="w-full max-w-md rounded-xl border-quinary/40 bg-background p-4 shadow-quinary/5 shadow-xl sm:p-5"
+      className="w-full max-w-md rounded-xl border-primary/40 bg-background p-4 shadow-primary/5 shadow-xl sm:p-5"
       style={
         {
           "--terminal-font-family": fontFamilyStack,
