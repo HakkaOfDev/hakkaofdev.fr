@@ -56,6 +56,7 @@ describe("CCv customizable command", () => {
   it("narrows the URL when a project is removed", async () => {
     const user = userEvent.setup();
     renderCard();
+    await user.click(screen.getByRole("button", { name: /^projects:/ }));
     // "bravalta" is the first default project; toggle it off.
     await user.click(screen.getByRole("button", { name: "bravalta" }));
     const href = previewHref();
@@ -73,5 +74,47 @@ describe("CCv customizable command", () => {
       within(experiencesGroup).getByRole("button", { name: "none" }),
     );
     expect(previewHref()).toMatch(/[?&]experiences=(&|$)/);
+  });
+
+  it("collapses param sections by default, showing only the selected count", async () => {
+    const user = userEvent.setup();
+    renderCard();
+    const trigger = screen.getByRole("button", { name: /^projects:/ });
+    expect(trigger).toHaveAttribute("aria-expanded", "false");
+    expect(trigger).toHaveTextContent(/\d+ \/ \d+/);
+    await user.click(trigger);
+    expect(trigger).toHaveAttribute("aria-expanded", "true");
+  });
+
+  it("collapses all params from the endpoint header but keeps the URL and actions", async () => {
+    const user = userEvent.setup();
+    renderCard();
+    const header = screen.getByRole("button", { name: /\/api\/cv/ });
+    expect(header).toHaveAttribute("aria-expanded", "true");
+    await user.click(header);
+    expect(header).toHaveAttribute("aria-expanded", "false");
+    const content = document.getElementById(
+      header.getAttribute("aria-controls") ?? "",
+    );
+    expect(content).toHaveAttribute("inert");
+    for (const el of [
+      screen.getByRole("link", { name: "Try it out" }),
+      screen.getByRole("link", { name: "Download" }),
+      screen.getByText("Request URL"),
+    ]) {
+      expect(content).not.toContainElement(el);
+    }
+  });
+
+  it("toggles download via the switch", async () => {
+    const user = userEvent.setup();
+    renderCard();
+    const sw = screen.getByRole("switch", { name: "download" });
+    expect(sw).toHaveAttribute("aria-checked", "false");
+    await user.click(sw);
+    expect(sw).toHaveAttribute("aria-checked", "true");
+    expect(previewHref()).toContain("download=");
+    await user.click(screen.getByText("true"));
+    expect(sw).toHaveAttribute("aria-checked", "false");
   });
 });

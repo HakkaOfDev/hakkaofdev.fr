@@ -1,6 +1,11 @@
 "use client";
 
 import type { ReactNode } from "react";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/Collapsible";
 
 /** A single toggle pill. `aria-pressed` exposes its on/off state to a11y + tests. */
 export function Chip({
@@ -51,6 +56,7 @@ function ParamControl({
  * A selectable CV parameter: the query-param label, a live `selected / total`
  * count, `all · none · reset` controls, and a wrap of chips (passed as children,
  * so skills can render their grouped layout while experiences/projects stay flat).
+ * The chips start collapsed; the count doubles as the toggle.
  */
 export function CvParamSection({
   paramName,
@@ -84,11 +90,16 @@ export function CvParamSection({
           query · string[]
         </span>
       </div>
-      <div className="min-w-0 space-y-1.5">
+      <Collapsible className="min-w-0">
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-          <span className="rounded bg-overlay-subtle px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground tabular-nums">
-            {selectedCount} / {total}
-          </span>
+          <CollapsibleTrigger
+            aria-label={`${label}: ${selectedCount} / ${total}`}
+            className="rounded px-1 py-0.5 transition-colors hover:bg-overlay-subtle"
+          >
+            <span className="rounded bg-overlay-subtle px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground tabular-nums">
+              {selectedCount} / {total}
+            </span>
+          </CollapsibleTrigger>
           <div className="ml-auto flex items-center gap-1.5">
             <ParamControl label={controls.all} onClick={onAll} />
             <span className="text-muted-foreground/30">·</span>
@@ -97,8 +108,10 @@ export function CvParamSection({
             <ParamControl label={controls.reset} onClick={onReset} />
           </div>
         </div>
-        <div className="flex flex-wrap gap-1">{children}</div>
-      </div>
+        <CollapsibleContent>
+          <div className="flex flex-wrap gap-1 pt-1.5">{children}</div>
+        </CollapsibleContent>
+      </Collapsible>
     </fieldset>
   );
 }
