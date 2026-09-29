@@ -1,7 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import {
+  bareHost,
   extractCountry,
   extractIpAddress,
+  extractReferrer,
   hashIpAddress,
   isBotUserAgent,
 } from "@/lib/utils/request.utils";
@@ -111,5 +113,61 @@ describe("isBotUserAgent", () => {
     const firefox =
       "Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0";
     expect(isBotUserAgent(firefox)).toBe(false);
+  });
+});
+
+describe("bareHost", () => {
+  it("lowercases and strips a leading www.", () => {
+    expect(bareHost("WWW.HakkaOfDev.fr")).toBe("hakkaofdev.fr");
+    expect(bareHost("hakkaofdev.fr")).toBe("hakkaofdev.fr");
+  });
+
+  it("keeps other subdomains", () => {
+    expect(bareHost("blog.hakkaofdev.fr")).toBe("blog.hakkaofdev.fr");
+  });
+});
+
+describe("extractReferrer", () => {
+  it("returns null for direct visits", () => {
+    expect(extractReferrer(makeRequest({ host: "www.hakkaofdev.fr" }))).toBe(
+      null,
+    );
+  });
+
+  it("returns the referrer host for external sites", () => {
+    expect(
+      extractReferrer(
+        makeRequest({
+          host: "www.hakkaofdev.fr",
+          referer: "https://www.google.com/search?q=x",
+        }),
+      ),
+    ).toBe("www.google.com");
+  });
+
+  it.each([
+    ["www.hakkaofdev.fr", "https://www.hakkaofdev.fr/fr"],
+    ["www.hakkaofdev.fr", "https://hakkaofdev.fr/"],
+    ["hakkaofdev.fr", "https://www.hakkaofdev.fr/"],
+    ["www.hakkaofdev.fr", "hakkaofdev.fr"],
+    ["www.hakkaofdev.fr", "www.hakkaofdev.fr:443"],
+  ])("drops self-referrals (host %s, referer %s)", (host, referer) => {
+    expect(extractReferrer(makeRequest({ host, referer }))).toBe(null);
+  });
+
+  it("normalizes bare external hosts", () => {
+    expect(
+      extractReferrer(
+        makeRequest({ host: "www.hakkaofdev.fr", referer: "Google.com:443" }),
+      ),
+    ).toBe("google.com");
+  });
+
+  it("keeps unparseable referrers as-is", () => {
+    expect(
+      extractReferrer(
+        makeRequest({ host: "www.hakkaofdev.fr", referer: "not a url" }),
+      ),
+    ).toBe("not a url");
   });
 });

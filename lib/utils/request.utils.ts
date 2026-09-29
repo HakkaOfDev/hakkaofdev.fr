@@ -27,25 +27,41 @@ export function extractCountry(request: Request): string | null {
   );
 }
 
+/** Lowercase host without a leading `www.`, so apex and www compare equal. */
+export function bareHost(host: string): string {
+  return host.toLowerCase().replace(/^www\./, "");
+}
+
 /**
  * Returns the lowercase host of the Referer header, dropping self-referrals
- * (same host as the current request). Returns null for direct visits or
- * unparseable referrers. Useful for analytics breakdowns.
+ * (same site as the current request, apex or www). Returns null for direct
+ * visits or unparseable referrers. Useful for analytics breakdowns.
  */
 export function extractReferrer(request: Request): string | null {
   const raw = request.headers.get("referer") ?? request.headers.get("referrer");
   if (!raw) return null;
 
-  try {
-    const refUrl = new URL(raw);
-    const currentHost = request.headers.get("host")?.toLowerCase();
-    const refHost = refUrl.host.toLowerCase();
+  const refHost = parseReferrerHost(raw);
+  if (!refHost) return raw.slice(0, 255).toLowerCase();
 
-    if (currentHost && refHost === currentHost.toLowerCase()) return null;
-    return refHost.slice(0, 255) || null;
-  } catch {
-    return raw.slice(0, 255).toLowerCase();
+  const currentHost = request.headers.get("host");
+  if (currentHost && bareHost(refHost) === bareHost(currentHost)) return null;
+  return refHost.slice(0, 255);
+}
+
+/**
+ * Host of a Referer value. Scanners often send a bare host
+ * ("example.com", "example.com:443"), so retry with a scheme to still get a
+ * normalized host (default port dropped) that self-referral checks can match.
+ */
+function parseReferrerHost(raw: string): string | null {
+  for (const candidate of [raw, `https://${raw}`]) {
+    try {
+      const host = new URL(candidate).host.toLowerCase();
+      if (host) return host;
+    } catch {}
   }
+  return null;
 }
 
 const BOT_USER_AGENT_PATTERN =

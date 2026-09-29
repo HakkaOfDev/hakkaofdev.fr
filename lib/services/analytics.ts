@@ -2,6 +2,8 @@ import {
   HOME_SLUG,
   VISITOR_COUNTRIES_LIMIT,
 } from "@/lib/constants/analytics.constants";
+import { SITE } from "@/lib/constants/site.constants";
+import { bareHost } from "@/lib/utils/request.utils";
 import type {
   StatsRange,
   TopPage,
@@ -12,6 +14,10 @@ import type {
   VisitorTrendPoint,
 } from "@/types/analytics";
 import { rangeToDays } from "@/types/analytics";
+
+// ─── Constants ───────────────────────────────────────────────────────────────
+
+const SITE_HOST = bareHost(new URL(SITE.url).host);
 
 // ─── Public API ──────────────────────────────────────────────────────────────
 
@@ -141,11 +147,13 @@ async function getReferrerBreakdown(
     const { data, error } = await supabase.rpc("get_visitor_referrers_range", {
       p_slug: null,
       p_days: rangeToDays(range),
-      p_limit: limit,
+      p_limit: limit + 2,
     });
 
     if (error) return null;
-    return (data as VisitorReferrer[] | null) ?? [];
+    return ((data as VisitorReferrer[] | null) ?? [])
+      .filter((row) => !row.host || bareHost(row.host) !== SITE_HOST)
+      .slice(0, limit);
   } catch {
     return null;
   }
