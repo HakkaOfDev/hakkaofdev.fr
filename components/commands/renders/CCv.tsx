@@ -2,9 +2,15 @@
 
 import { Download, Play } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { useMemo, useState } from "react";
+import { useId, useMemo, useState } from "react";
 import { AnimatedSpan } from "@/components/AnimatedComponents";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/Collapsible";
 import { Select } from "@/components/ui/Select";
+import { Switch } from "@/components/ui/Switch";
 import { type Locale, routing } from "@/i18n/routing";
 import { PROJECTS } from "@/lib/constants/projects.constants";
 import { EXPERIENCES } from "@/lib/constants/resume.constants";
@@ -58,6 +64,7 @@ function CCv() {
 
   const [lang, setLang] = useState<Locale>(currentLocale);
   const [download, setDownload] = useState(false);
+  const downloadId = useId();
   const [experiences, setExperiences] = useState(
     () => new Set(DEFAULT_SELECTION.experiences),
   );
@@ -86,8 +93,11 @@ function CCv() {
 
   return (
     <AnimatedSpan className="gap-2">
-      <div className="overflow-hidden rounded-md border border-emerald-500/30 bg-emerald-500/[0.04]">
-        <div className="flex flex-wrap items-center gap-2 border-emerald-500/20 border-b bg-emerald-500/[0.07] px-2.5 py-1.5">
+      <Collapsible
+        defaultOpen
+        className="overflow-hidden rounded-md border border-emerald-500/30 bg-emerald-500/[0.04]"
+      >
+        <CollapsibleTrigger className="flex w-full flex-wrap items-center gap-2 bg-emerald-500/[0.07] px-2.5 py-1.5 transition-colors hover:bg-emerald-500/[0.1]">
           <span className="rounded bg-emerald-600 px-1.5 py-0.5 font-bold font-mono text-[10px] text-white uppercase tracking-wider dark:bg-emerald-500/90">
             GET
           </span>
@@ -95,9 +105,9 @@ function CCv() {
           <span className="ml-auto text-[10px] text-muted-foreground/80">
             {t("description")}
           </span>
-        </div>
+        </CollapsibleTrigger>
 
-        <div className="space-y-3 px-2.5 py-2">
+        <CollapsibleContent className="space-y-3 border-emerald-500/20 border-t px-2.5 py-2">
           <div className="font-semibold text-[10px] text-muted-foreground uppercase tracking-wider">
             Parameters
           </div>
@@ -132,17 +142,22 @@ function CCv() {
                 query · boolean
               </span>
             </div>
-            <label className="inline-flex w-fit cursor-pointer items-center gap-2 rounded-md border border-border/60 bg-background/70 px-2 py-1 dark:border-overlay-medium dark:bg-overlay-subtle">
-              <input
-                type="checkbox"
+            <div className="inline-flex w-fit items-center gap-2">
+              <Switch
+                id={downloadId}
                 checked={download}
-                onChange={(e) => setDownload(e.target.checked)}
-                className="h-3.5 w-3.5 cursor-pointer accent-primary"
+                onCheckedChange={setDownload}
+                aria-label="download"
               />
-              <span className="font-mono text-[11px] text-foreground">
+              <label
+                htmlFor={downloadId}
+                className={`cursor-pointer select-none font-mono text-[11px] transition-colors ${
+                  download ? "text-primary" : "text-muted-foreground"
+                }`}
+              >
                 {download ? "true" : "false"}
-              </span>
-            </label>
+              </label>
+            </div>
           </div>
 
           <CvParamSection
@@ -219,7 +234,7 @@ function CCv() {
               ))}
             </div>
           </CvParamSection>
-        </div>
+        </CollapsibleContent>
 
         <div className="border-emerald-500/20 border-t bg-overlay-subtle/40 px-2.5 py-2 dark:bg-overlay-subtle/60">
           <div className="mb-1 font-semibold text-[10px] text-muted-foreground uppercase tracking-wider">
@@ -250,7 +265,7 @@ function CCv() {
             {t("downloadPdf")}
           </a>
         </div>
-      </div>
+      </Collapsible>
     </AnimatedSpan>
   );
 }

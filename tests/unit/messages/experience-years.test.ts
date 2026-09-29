@@ -19,9 +19,7 @@ describe("experience-years interpolation", () => {
       messages: enMessages,
       namespace: "Metadata",
     });
-    expect(tCv("summary", { years: YEARS })).toContain(
-      "7+ years of experience",
-    );
+    expect(tCv("summary", { years: YEARS })).toContain("For 7+ years");
     expect(tMeta("description", { years: YEARS })).toContain(
       "7+ years of experience",
     );
@@ -35,10 +33,7 @@ describe("experience-years interpolation", () => {
       messages,
       namespace: "Metadata",
     });
-    // Also guards ICU parsing of the apostrophe in "d'expérience" next to {years}.
-    expect(tCv("summary", { years: YEARS })).toContain(
-      "plus de 7 ans d'expérience",
-    );
+    expect(tCv("summary", { years: YEARS })).toContain("plus de 7 ans, j'ai");
     expect(tMeta("description", { years: YEARS })).toContain(
       "plus de 7 ans d'expérience",
     );

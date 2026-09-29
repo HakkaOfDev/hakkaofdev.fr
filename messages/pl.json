@@ -23,10 +23,11 @@
   },
   "Welcome": {
     "greeting": "~ Witaj <wave>👋</wave>",
-    "intro": "<tagline>Cyfrowy nomada</tagline> · <job>Inżynier oprogramowania</job> · <freelance>Freelance</freelance>",
+    "intro": "<tagline>Cyfrowy nomada</tagline> · <job>Inżynier produktu</job> · <freelance>Freelance</freelance>",
     "tags": {
       "rate": "600 $/dzień",
       "web": "React/Next.js",
+      "webExpert": "Ekspert React/Next.js",
       "mobile": "Expo/React Native"
     },
     "sections": {
@@ -139,6 +140,7 @@
       "statsBrowsers": "Rozkład przeglądarek dla unikalnych odwiedzających",
       "statsReferrers": "Najczęstsze hosty odsyłające według unikalnych odwiedzających",
       "statsTrend": "Wykres sparkline dziennych odwiedzin w wybranym okresie",
+      "statsLast": "Filtruj według zakresu: 24h, 7d, 30d, 90d lub all",
       "repo": "Otwórz kod źródłowy tego portfolio",
       "echo": "Wypisz wiadomość w terminalu",
       "spotifyNow": "Pokaż obecnie odtwarzaną piosenkę",
@@ -197,6 +199,7 @@
     },
     "stats": {
       "totalCodingTime": "Łączny czas programowania",
+      "codingTimeRanged": "Czas programowania (zakres)",
       "topLanguage": "Główny język",
       "githubStars": "Gwiazdki GitHub",
       "contributions": "Wkłady ({year})",
@@ -205,6 +208,8 @@
       "visitors": "Odwiedzający",
       "failed": "Nie udało się pobrać statystyk. Spróbuj później.",
       "na": "Brak",
+      "calculating": "Obliczanie… {percent}%",
+      "noActivity": "Brak aktywności",
       "visitorsRanged": "Odwiedzający (zakres)",
       "rangeLabel": "Zakres:",
       "unknownFlag": "Zignorowano nieznaną flagę: {flag}",
@@ -263,7 +268,11 @@
     },
     "projects": {
       "openLabel": "Otwórz projekt: {name}",
-      "noMatches": "Żaden projekt nie pasuje do „{pattern}”."
+      "noMatches": "Żaden projekt nie pasuje do „{pattern}”.",
+      "details": "Zobacz szczegóły: {name}",
+      "highlights": "Najważniejsze",
+      "visit": "Odwiedź stronę",
+      "close": "Zamknij"
     },
     "noMatches": "Brak dopasowań dla „{pattern}”."
   },
@@ -510,8 +519,9 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Zorientowany na produkt inżynier oprogramowania z ponad {years}-letnim doświadczeniem w budowaniu i prowadzeniu jednego produktu od początku do końca. Kierowałem frontendem w Kabila, startupie Web3 w Madrycie, wdrażając platformę webową, narzędzia dla twórców oraz portfele natywne i przeglądarkowe — od architektury i roadmapy aż po detale, które użytkownicy naprawdę czują. Profil w kształcie litery T: głęboka znajomość React, Next.js i React Native oraz swoboda w DevOps, infrastrukturze i decyzjach produktowych. Optymalizuję pod kątem realnego wpływu na użytkowników i długofalowej odpowiedzialności za produkt, a nie tylko czystego kodu.",
+    "summary": "Projektuję i buduję produkty od początku do końca. Przez ponad {years, plural, one {# rok} few {# lata} many {# lat} other {# roku}} odpowiadałem za frontend Kabili, startupu Web3 z Madrytu, prowadząc platformę społecznościową, marketplace NFT, narzędzia twórców i portfele natywne oraz przeglądarkowe od surowych pomysłów po dopracowane produkty. Łączę design i inżynierię: utrzymuję design systemy, kształtuję ścieżki produktowe i buduję stojącą za nimi architekturę frontendu. Skupiam się na zamienianiu złożonych interakcji z blockchainem w proste, intuicyjne doświadczenia dla osób nowych w krypto. Najlepiej sprawdzam się przy dużej autonomii, gdzie mogę działać szybko, podejmować decyzje produktowe i odpowiadać za wyniki.",
     "location": "Zdalnie",
+    "headline": "Inżynier produktu - Ekspert Next.js",
     "sections": {
       "summary": "Profil zawodowy",
       "experience": "Doświadczenie",
@@ -520,7 +530,7 @@
       "projects": "Wybrane projekty",
       "languages": "Języki",
       "links": "Linki",
-      "hobbies": "Zainteresowania i hobby"
+      "hobbies": "Hobby"
     },
     "period": {
       "since": "{date} - obecnie"
@@ -529,14 +539,14 @@
       "kabila": {
         "name": "Inżynier produktu",
         "company": "Kabila (startup Web3)",
-        "location": "Zdalnie · Madryt, Hiszpania",
+        "location": "Zdalnie",
         "descriptions": [
-          "Przez cztery lata odpowiadałem za frontend produktu Web3 Kabili: platformę społecznościową, marketplace NFT, narzędzia dla twórców oraz portfele natywne i w formie rozszerzenia przeglądarki na Hederze",
-          "Kierowałem architekturą, roadmapą techniczną i planowaniem sprintów, przekładając niejasne cele produktowe na funkcje wdrożone od 0 do 1",
-          "Zbudowałem i utrzymywałem wspólną bibliotekę komponentów oraz design system, które ujednoliciły wszystkie produkty i przyspieszyły dostarczanie",
-          "Wdrażałem natywne portfele mobilne w React Native i Expo do App Store i Google Play",
-          "Współpracowałem z zespołami produktu i designu nad zakresem i kompromisami, współtworząc to, co budujemy, a nie tylko jak",
-          "Mentorowałem inżynierów, prowadziłem code review i wyznaczałem standardy frontendu w miarę rozrastania się zespołu"
+          "Prowadziłem cały frontend Web3 Kabili: platformę społecznościową, marketplace NFT, narzędzia twórców i portfele",
+          "Projektowałem UI w Figmie i zbudowałem wspólny design system i bibliotekę komponentów dla wszystkich produktów",
+          "Zaprojektowałem i wydałem kreatory zamieniające złożone operacje on-chain w proste kroki dla osób spoza krypto",
+          "Prowadziłem architekturę frontendu, planowanie techniczne i sprinty, szybko iterując od pomysłu do produkcji",
+          "Zbudowałem natywny portfel w React Native i Expo i wydałem go w App Store i Google Play",
+          "Pracowałem bezpośrednio z interesariuszami produktu i designu, ustalając zakres, kompromisy i to, co budować"
         ]
       },
       "archeMC2": {
@@ -544,10 +554,9 @@
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Francja",
         "descriptions": [
-          "Budowałem pipeline'y GitLab CI/CD do automatycznego testowania i wdrażania",
-          "Konteneryzowałem aplikacje wewnętrzne i usługi w Dockerze",
-          "Automatyzowałem rutynowe zadania administracyjne skryptami shellowymi",
-          "Monitorowałem stan systemów i poprawiałem odporność infrastruktury"
+          "Zbudowałem pipeline'y GitLab CI/CD do automatycznego testowania i wdrażania",
+          "Skonteneryzowałem wewnętrzne aplikacje i usługi w Dockerze",
+          "Zautomatyzowałem zadania infrastrukturalne i monitoring skryptami shellowymi"
         ]
       },
       "efficienceInformatique": {
@@ -555,10 +564,9 @@
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Francja",
         "descriptions": [
-          "Administracja serwerami Windows i wsparcie codziennej działalności IT",
-          "Wdrożenie i utrzymanie strategii kopii zapasowych krytycznych danych firmowych",
-          "Konfiguracja i zarządzanie wirtualizacją Hyper-V w infrastrukturze wewnętrznej",
-          "Wsparcie systemów ERP (SAP i Sage) używanych przez działy finansów i operacji"
+          "Administrowałem serwerami Windows i wirtualizacją Hyper-V w wewnętrznej infrastrukturze",
+          "Wdrożyłem i utrzymywałem strategie kopii zapasowych krytycznych danych firmy",
+          "Wspierałem systemy ERP (SAP i Sage) używane przez działy finansów i operacji"
         ]
       }
     },
@@ -579,64 +587,120 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "Firma konsultingowa dla przedsiębiorstw specjalizująca się w architekturze DLT i AI, dostarczająca integrację blockchain i AI z wbudowaną zgodnością regulacyjną, od strategii po produkcję."
+        "description": "Strona internetowa firmy Bravalta, doradzającej przedsiębiorstwom w obszarze DLT i AI.",
+        "highlights": [
+          "Zapewniłem szybkie ładowanie i mocne SEO, wybierając statyczne Astro zamiast ciężkiego stosu klienckiego",
+          "Odpowiadałem za UI/UX od koncepcji po produkcję, projektując i budując każdą ścieżkę użytkownika",
+          "Stworzyłem motion design i animacje strony"
+        ]
       },
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Społecznościowa platforma Web3 i ekosystem NFT zbudowane na Hederze, z marketplace NFT, przestrzeniami społecznościowymi, launchpadami i narzędziami dla twórców."
+        "description": "Flagowa platforma Web3 Kabili: sieć społecznościowa, marketplace NFT, huby społeczności, launchpady i staking tokenów.",
+        "highlights": [
+          "Połączyłem 3 osobne aplikacje w jeden flagowy produkt, prowadząc migrację od początku do końca",
+          "$500K+ wolumenu obrotu ze 100K+ sprzedaży na marketplace NFT, który zbudowałem i utrzymywałem",
+          "Ograniczyłem powielanie kodu w 3 aplikacjach wspólnym wewnętrznym SDK do całej komunikacji z blockchainem",
+          "Ujednoliciłem wygląd 3 produktów, projektując i budując design system oraz bibliotekę komponentów"
+        ]
       },
       "kabilaWalletNative": {
         "name": "Kabila Wallet (Native)",
-        "description": "Natywny portfel mobilny dla sieci Hedera, zbudowany przy użyciu React Native i Expo. Zarządzaj kontami, tokenami i NFT oraz łącz się z DAppami z dowolnego miejsca, zachowując pełną kontrolę nad swoimi aktywami."
+        "description": "Mobilny portfel Kabili (iOS i Android): konta, tokeny, NFT i połączenia z dAppami zawsze pod ręką.",
+        "highlights": [
+          "Rozwinąłem portfel mobilny od zera do 10K+ użytkowników, budując go w React Native i Expo",
+          "Wydawałem i utrzymywałem wersje produkcyjne na iOS i Android: buildy, review w sklepach i aktualizacje",
+          "Zaprojektowałem i wdrożyłem UI/UX portfela, by konta, tokeny i podpisy były jasne dla osób spoza krypto",
+          "Przeniosłem język wizualny głównej aplikacji do wersji natywnej, zapewniając spójne doświadczenie Kabili"
+        ]
       },
       "kabilaTools": {
         "name": "Kabila Tools",
-        "description": "Kompleksowy zestaw narzędzi NFT dla twórców i społeczności na Hederze. Wydajna i prosta w obsłudze platforma do tworzenia, uruchamiania i zarządzania kolekcjami NFT z pełną kontrolą."
+        "description": "Samoobsługowy zestaw narzędzi NFT, w którym twórcy i społeczności tworzą, uruchamiają kolekcje i nimi zarządzają.",
+        "highlights": [
+          "Odpowiadałem za frontend pakietu dla twórców obsługującego 5K+ użytkowników",
+          "Dostarczyłem 20+ narzędzi dla twórców na jednej platformie, obejmujących cały cykl życia kolekcji NFT",
+          "Umożliwiłem samodzielne launche on-chain: twórcy wydają kolekcje NFT w prowadzonych krokach, bez kodu",
+          "Zbudowałem responsywne UI/UX złożonych, wieloetapowych ścieżek, wygodnych na ekranie każdej wielkości"
+        ]
       },
       "kabilaWallet": {
         "name": "Kabila Wallet (Extension)",
-        "description": "Non-custodialny, prosty i bezpieczny portfel dla sieci Hedera. Zarządzaj kontami, tokenami, NFT i łącz się z DAppami przy zachowaniu pełnej kontroli nad swoimi aktywami."
+        "description": "Niekustodialny portfel Kabili w formie rozszerzenia przeglądarki, z wersją mobilną z tej samej bazy kodu.",
+        "highlights": [
+          "Wydałem niekustodialny portfel jako rozszerzenie Chrome, z którego korzysta 2K+ użytkowników",
+          "Uczyniłem bezpieczeństwo priorytetem: klucze zostają na urządzeniu, każda wrażliwa akcja wymaga wyraźnej zgody",
+          "Jako jedyny inżynier objąłem desktop i mobile jedną bazą kodu React, współdzieloną dzięki Capacitor",
+          "Zaprojektowałem ścieżki połączeń i zatwierdzeń, by użytkownik zawsze widział dokładnie, co podpisuje"
+        ]
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
-        "description": "Profesjonalna strona warsztatu samochodowego z usługami, przejrzystym cennikiem i informacjami kontaktowymi."
+        "description": "Strona internetowa lokalnego warsztatu samochodowego.",
+        "highlights": [
+          "Zrealizowałem stronę jako freelancer od A do Z: od potrzeb klienta i projektu po budowę i uruchomienie",
+          "Zbudowałem stronę pod konwersję: przejrzyste ceny, połączenie jednym kliknięciem i zapytania o wycenę",
+          "Zoptymalizowałem lokalne SEO, by warsztat pojawiał się w wynikach wyszukiwania w okolicy"
+        ]
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Narzędzie do nadzoru DASAN OLT/ONU."
+        "description": "Panel nadzoru w czasie rzeczywistym dla urządzeń światłowodowych DASAN (OLT i ONU).",
+        "highlights": [
+          "Dałem operatorom sieci podgląd na żywo urządzeń światłowodowych DASAN w panelu czasu rzeczywistego",
+          "Napisałem API w Pythonie odpytujące urządzenia przez SNMP, z cache Redis odciążającym sprzęt sieciowy",
+          "Skonteneryzowałem stos w Dockerze i zautomatyzowałem budowanie obrazów w GitHub Actions"
+        ]
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
-        "description": "Niestandardowa platforma e-commerce dla profesjonalnego studia grawerskiego, z katalogiem produktów, zamówieniami online i panelem administracyjnym do zarządzania zamówieniami."
+        "description": "Dedykowany sklep internetowy i obsługa zamówień dla profesjonalnej pracowni grawerskiej.",
+        "highlights": [
+          "Dałem właścicielowi panel admina do zarządzania magazynem, zamówieniami i codzienną pracą bez programisty",
+          "Zaprojektowałem i zbudowałem dedykowany sklep od A do Z jako projekt freelance",
+          "Zintegrowałem Stripe, zapewniając bezpieczny checkout i płatności"
+        ]
       },
       "portfolioV1": {
         "name": "Portfolio V1",
-        "description": "Moje poprzednie portfolio zbudowane w Next.js i Chakra UI, z ciemnym motywem i płynnymi animacjami."
+        "description": "Moje poprzednie portfolio, zastąpione obecnie tym interaktywnym terminalem.",
+        "highlights": [
+          "Zbudowałem wszystkie animacje od zera w Framer Motion, by uzyskać płynny i dopracowany efekt",
+          "Pokazałem na stronie moje wyselekcjonowane zakładki przez API Raindrop.io",
+          "Dodałem blog w MDX do publikowania tekstów technicznych obok portfolio"
+        ]
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "Starter kit z Next.js, Chakra-UI, Framer-Motion w TypeScript. Zawiera komponenty, internacjonalizację, SEO i więcej."
+        "description": "Otwartoźródłowy starter kit Next.js z Chakra UI, Framer Motion i TypeScript.",
+        "highlights": [
+          "Otwartoźródłowy starter, który przeprowadza stronę Next.js od zera do gotowości produkcyjnej",
+          "Od razu zapewnia theming, animowane komponenty wielokrotnego użytku, i18n, SEO i generowanie sitemap",
+          "Udokumentowałem konfigurację, strukturę i konwencje, by inni deweloperzy mogli szybko z niego korzystać"
+        ]
       },
       "rtransport": {
         "name": "RT'ransport",
-        "description": "Platforma kurierska stworzona na potrzeby projektu pierwszego roku DUT Sieci i Telekomunikacji."
+        "description": "Platforma dostaw paczek, projekt z 1. roku DUT Sieci i Telekomunikacja (dwuletni dyplom uczelniany).",
+        "highlights": [
+          "Zaprojektowałem dwie usługi Flask: wersjonowane REST API i nad nim klienta Tailwind renderowanego serwerowo",
+          "Zamodelowałem domenę logistyki paczek w SQLAlchemy na PostgreSQL: paczki, punkty przekazania i huby",
+          "Zbudowałem śledzenie paczek etap po etapie z osobnymi widokami dla klientów, dostawców i operatorów"
+        ]
       }
     },
     "skillGroups": {
       "languages": "Języki",
       "frameworks": "Frameworki",
+      "stateData": "Stan i Dane",
       "uiStyling": "UI / Stylizacja",
       "tooling": "Narzędzia",
       "testing": "Testowanie",
       "databases": "Bazy danych",
       "cloud": "Chmura",
-      "vcs": "VCS",
-      "orm": "ORM",
       "devops": "DevOps",
       "automation": "Automatyzacja",
-      "ai": "AI",
-      "stateData": "Stan i Dane",
-      "softSkills": "Umiejętności miękkie"
+      "softSkills": "Soft skills"
     },
     "spokenLanguages": {
       "fr": "Francuski",

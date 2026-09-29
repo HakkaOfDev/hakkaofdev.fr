@@ -23,10 +23,11 @@
   },
   "Welcome": {
     "greeting": "~ Chào mừng <wave>👋</wave>",
-    "intro": "<tagline>Du mục số</tagline> · <job>Kỹ sư phần mềm</job> · <freelance>Freelance</freelance>",
+    "intro": "<tagline>Du mục số</tagline> · <job>Kỹ sư sản phẩm</job> · <freelance>Freelance</freelance>",
     "tags": {
       "rate": "600 $/ngày",
       "web": "React/Next.js",
+      "webExpert": "Chuyên gia React/Next.js",
       "mobile": "Expo/React Native"
     },
     "sections": {
@@ -139,6 +140,7 @@
       "statsBrowsers": "Phân bổ trình duyệt theo khách truy cập duy nhất",
       "statsReferrers": "Các host giới thiệu hàng đầu theo khách truy cập duy nhất",
       "statsTrend": "Sparkline khách truy cập hằng ngày trong khoảng thời gian",
+      "statsLast": "Lọc theo khoảng thời gian: 24h, 7d, 30d, 90d hoặc all",
       "repo": "Mở mã nguồn portfolio này",
       "echo": "In thông báo trong terminal",
       "spotifyNow": "Hiển thị bài hát đang phát",
@@ -197,6 +199,7 @@
     },
     "stats": {
       "totalCodingTime": "Tổng thời gian lập trình",
+      "codingTimeRanged": "Thời gian lập trình (khoảng)",
       "topLanguage": "Ngôn ngữ chính",
       "githubStars": "Sao GitHub",
       "contributions": "Đóng góp ({year})",
@@ -205,6 +208,8 @@
       "visitors": "Khách truy cập",
       "failed": "Không thể tải số liệu thống kê. Hãy thử lại sau.",
       "na": "Không có",
+      "calculating": "Đang tính… {percent}%",
+      "noActivity": "Không có hoạt động",
       "visitorsRanged": "Khách truy cập (khoảng)",
       "rangeLabel": "Khoảng:",
       "unknownFlag": "Đã bỏ qua cờ không xác định: {flag}",
@@ -263,7 +268,11 @@
     },
     "projects": {
       "openLabel": "Mở dự án: {name}",
-      "noMatches": "Không có dự án nào khớp với “{pattern}”."
+      "noMatches": "Không có dự án nào khớp với “{pattern}”.",
+      "details": "Xem chi tiết: {name}",
+      "highlights": "Điểm nổi bật",
+      "visit": "Truy cập website",
+      "close": "Đóng"
     },
     "noMatches": "Không có kết quả khớp với “{pattern}”."
   },
@@ -510,8 +519,9 @@
   "CV": {
     "documentTitleSuffix": "CV",
     "subject": "CV",
-    "summary": "Kỹ sư phần mềm với tư duy sản phẩm, hơn {years} năm kinh nghiệm xây dựng và làm chủ một sản phẩm duy nhất từ đầu đến cuối. Tôi dẫn dắt frontend tại Kabila, một startup Web3 ở Madrid, phát hành một nền tảng web, các công cụ cho creator, cùng ví native và ví trình duyệt, từ kiến trúc và lộ trình cho đến những chi tiết mà người dùng cảm nhận được. Hồ sơ chữ T: chuyên sâu về React, Next.js và React Native, đồng thời thoải mái với DevOps, hạ tầng và các quyết định sản phẩm. Tôi tối ưu cho tác động thực sự tới người dùng và tinh thần làm chủ dài hạn, không chỉ cho code sạch.",
+    "summary": "Tôi thiết kế và xây dựng sản phẩm từ đầu đến cuối. Trong hơn {years} năm, tôi làm chủ frontend của Kabila, một startup Web3 tại Madrid, đưa nền tảng xã hội, chợ NFT, công cụ cho creator cùng ví native và ví trình duyệt từ những ý tưởng thô thành sản phẩm hoàn thiện. Tôi làm việc ở cả thiết kế lẫn kỹ thuật: duy trì hệ thống thiết kế, định hình luồng sản phẩm và xây dựng kiến trúc frontend phía sau. Trọng tâm của tôi là biến những tương tác blockchain phức tạp thành trải nghiệm đơn giản, trực quan cho người dùng có thể mới làm quen với crypto. Tôi hiệu quả nhất trong môi trường tự chủ cao, nơi tôi có thể tiến nhanh, đưa ra quyết định sản phẩm và chịu trách nhiệm về kết quả.",
     "location": "Từ xa",
+    "headline": "Kỹ sư sản phẩm - Chuyên gia Next.js",
     "sections": {
       "summary": "Hồ sơ chuyên môn",
       "experience": "Kinh nghiệm",
@@ -520,7 +530,7 @@
       "projects": "Dự án tiêu biểu",
       "languages": "Ngôn ngữ",
       "links": "Liên kết",
-      "hobbies": "Sở thích & mối quan tâm"
+      "hobbies": "Sở thích"
     },
     "period": {
       "since": "Từ {date}"
@@ -529,14 +539,14 @@
       "kabila": {
         "name": "Kỹ sư sản phẩm",
         "company": "Kabila (startup Web3)",
-        "location": "Từ xa · Madrid, Tây Ban Nha",
+        "location": "Từ xa",
         "descriptions": [
-          "Làm chủ frontend của sản phẩm Web3 Kabila trong bốn năm: một nền tảng xã hội, chợ NFT, công cụ cho creator, cùng ví native và ví tiện ích trình duyệt trên Hedera",
-          "Định hướng kiến trúc, lộ trình kỹ thuật và lập kế hoạch sprint, biến những mục tiêu sản phẩm mơ hồ thành các tính năng được phát hành từ 0 đến 1",
-          "Xây dựng và duy trì thư viện component dùng chung và hệ thống thiết kế, hợp nhất mọi sản phẩm và đẩy nhanh tốc độ bàn giao",
-          "Phát hành các ví di động native với React Native và Expo lên App Store và Google Play",
-          "Hợp tác với đội ngũ sản phẩm và thiết kế về phạm vi và các đánh đổi, định hình những gì cần xây dựng chứ không chỉ cách thức xây dựng",
-          "Hướng dẫn các kỹ sư, chủ trì code review và thiết lập các tiêu chuẩn frontend khi đội ngũ ngày càng lớn mạnh"
+          "Làm chủ toàn bộ frontend Web3 của Kabila: nền tảng xã hội, chợ NFT, công cụ cho creator và các ví",
+          "Thiết kế giao diện trên Figma, xây dựng hệ thống thiết kế và thư viện component dùng chung cho mọi sản phẩm",
+          "Thiết kế và ra mắt luồng hướng dẫn, biến thao tác on-chain phức tạp thành bước đơn giản cho người ngoài crypto",
+          "Dẫn dắt kiến trúc frontend, kế hoạch kỹ thuật và sprint, lặp nhanh để đưa tính năng từ ý tưởng lên production",
+          "Xây dựng và phát hành ví native bằng React Native và Expo lên App Store và Google Play",
+          "Làm việc trực tiếp với stakeholder sản phẩm và thiết kế để chốt phạm vi, cân nhắc đánh đổi và quyết định làm gì"
         ]
       },
       "archeMC2": {
@@ -546,8 +556,7 @@
         "descriptions": [
           "Xây dựng pipeline GitLab CI/CD cho kiểm thử và triển khai tự động",
           "Đóng gói container các ứng dụng và dịch vụ nội bộ với Docker",
-          "Tự động hóa các tác vụ sysadmin định kỳ bằng shell script",
-          "Giám sát tình trạng hệ thống và cải thiện khả năng phục hồi hạ tầng"
+          "Tự động hóa các tác vụ hạ tầng và giám sát bằng shell script"
         ]
       },
       "efficienceInformatique": {
@@ -555,10 +564,9 @@
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Pháp",
         "descriptions": [
-          "Quản trị máy chủ Windows và hỗ trợ vận hành CNTT hàng ngày",
-          "Triển khai và duy trì các chiến lược sao lưu dữ liệu kinh doanh quan trọng",
-          "Cài đặt và quản lý ảo hóa Hyper-V trên hạ tầng nội bộ",
-          "Hỗ trợ các hệ thống ERP (SAP và Sage) được nhóm tài chính và vận hành sử dụng"
+          "Quản trị máy chủ Windows và ảo hóa Hyper-V trên toàn bộ hạ tầng nội bộ",
+          "Triển khai và duy trì các chiến lược sao lưu cho dữ liệu kinh doanh quan trọng",
+          "Hỗ trợ các hệ thống ERP (SAP và Sage) cho nhóm tài chính và vận hành"
         ]
       }
     },
@@ -579,63 +587,119 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "Một công ty tư vấn doanh nghiệp chuyên về kiến trúc DLT và AI, cung cấp tích hợp blockchain và AI với tuân thủ quy định tích hợp sẵn, từ chiến lược đến sản xuất."
+        "description": "Website công ty Bravalta, đơn vị tư vấn DLT và AI cho doanh nghiệp.",
+        "highlights": [
+          "Đạt tốc độ tải trang nhanh và SEO tốt nhờ chọn render tĩnh với Astro thay vì stack nặng phía client",
+          "Làm chủ UI/UX từ ý tưởng đến production, thiết kế và xây dựng mọi luồng người dùng",
+          "Thực hiện motion design và animation cho website"
+        ]
       },
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Một nền tảng xã hội Web3 và hệ sinh thái NFT được xây dựng trên Hedera, bao gồm chợ NFT, quảng trường cộng đồng, launchpad và công cụ cho creator."
+        "description": "Nền tảng Web3 chủ lực của Kabila: mạng xã hội, chợ NFT, không gian cộng đồng, launchpad và staking token.",
+        "highlights": [
+          "Hợp nhất 3 ứng dụng riêng lẻ thành một sản phẩm chủ lực, dẫn dắt toàn bộ quá trình chuyển đổi",
+          "$500K+ khối lượng giao dịch qua 100K+ lượt bán trên chợ NFT do tôi xây dựng và duy trì",
+          "Giảm code trùng lặp giữa 3 ứng dụng bằng một SDK nội bộ dùng chung cho mọi tương tác blockchain",
+          "Thống nhất giao diện 3 sản phẩm bằng hệ thống thiết kế và thư viện component do tôi thiết kế và xây dựng"
+        ]
       },
       "kabilaWalletNative": {
         "name": "Kabila Wallet (Native)",
-        "description": "Ví di động gốc cho mạng Hedera, được xây dựng bằng React Native và Expo. Quản lý tài khoản, token và NFT của bạn và kết nối với các DApp ở mọi nơi trong khi vẫn giữ toàn quyền kiểm soát tài sản của bạn."
+        "description": "Ví di động của Kabila cho iOS và Android: tài khoản, token, NFT và kết nối dApp mọi lúc mọi nơi.",
+        "highlights": [
+          "Đưa ví di động từ con số 0 lên 10K+ người dùng, xây dựng bằng React Native và Expo",
+          "Phát hành và duy trì các bản production trên iOS và Android: build, duyệt store và cập nhật",
+          "Thiết kế và triển khai UI/UX của ví, giúp tài khoản, token và việc ký dễ hiểu với người ngoài giới crypto",
+          "Đưa ngôn ngữ thiết kế của ứng dụng chính sang native, cho người dùng một trải nghiệm Kabila nhất quán"
+        ]
       },
       "kabilaTools": {
         "name": "Kabila Tools",
-        "description": "Bộ công cụ NFT toàn diện cho creator và cộng đồng trên Hedera. Một nền tảng mạnh mẽ và dễ dùng để tạo, ra mắt và quản lý các bộ sưu tập NFT trong khi vẫn giữ toàn quyền kiểm soát."
+        "description": "Bộ công cụ NFT tự phục vụ giúp creator và cộng đồng tạo, ra mắt và quản lý bộ sưu tập.",
+        "highlights": [
+          "Làm chủ frontend của bộ công cụ creator phục vụ 5K+ người dùng",
+          "Ra mắt 20+ công cụ cho creator trên một nền tảng, bao trọn vòng đời của một bộ sưu tập NFT",
+          "Cho phép creator tự ra mắt on-chain: phát hành bộ sưu tập NFT qua luồng hướng dẫn, không cần code",
+          "Xây dựng UI/UX responsive cho các luồng nhiều bước phức tạp, dễ dùng trên mọi kích thước màn hình"
+        ]
       },
       "kabilaWallet": {
         "name": "Kabila Wallet (Extension)",
-        "description": "Một ví không lưu ký, đơn giản và an toàn cho mạng Hedera. Quản lý tài khoản, token, NFT và kết nối với các DApp trong khi vẫn giữ toàn quyền kiểm soát tài sản của bạn."
+        "description": "Ví non-custodial dạng tiện ích trình duyệt của Kabila, kèm bản di động từ cùng một codebase.",
+        "highlights": [
+          "Phát hành ví non-custodial dạng tiện ích Chrome, được 2K+ người dùng sử dụng",
+          "Đặt bảo mật làm yêu cầu cốt lõi: khóa nằm trên thiết bị, mọi thao tác nhạy cảm đều cần xác nhận rõ ràng",
+          "Một mình phủ cả desktop và mobile bằng cách tái sử dụng một codebase React qua Capacitor",
+          "Thiết kế luồng kết nối và phê duyệt để người dùng luôn thấy chính xác những gì họ ký"
+        ]
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
-        "description": "Một website chuyên nghiệp cho doanh nghiệp sửa chữa ô tô, có dịch vụ, bảng giá minh bạch và thông tin liên hệ."
+        "description": "Website cho một tiệm sửa xe ô tô địa phương.",
+        "highlights": [
+          "Hoàn thành trọn gói một dự án freelance, từ tìm hiểu nhu cầu khách hàng, thiết kế đến xây dựng và ra mắt",
+          "Xây dựng trang tối ưu chuyển đổi với bảng giá minh bạch, gọi điện một chạm và yêu cầu báo giá",
+          "Tối ưu SEO địa phương để gara xếp hạng tốt trong các tìm kiếm lân cận"
+        ]
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Công cụ giám sát DASAN OLT/ONU."
+        "description": "Dashboard giám sát thời gian thực cho thiết bị mạng cáp quang DASAN (OLT và ONU).",
+        "highlights": [
+          "Giúp đội vận hành mạng theo dõi trực tiếp thiết bị cáp quang DASAN qua dashboard thời gian thực",
+          "Viết API Python truy vấn thiết bị qua SNMP, dùng cache Redis để giảm tải cho thiết bị mạng",
+          "Đóng gói container toàn bộ stack với Docker và tự động hóa build image bằng GitHub Actions"
+        ]
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
-        "description": "Một nền tảng thương mại điện tử tùy chỉnh cho một xưởng khắc chuyên nghiệp, có catalog sản phẩm, đặt hàng trực tuyến và bảng quản trị quản lý đơn hàng."
+        "description": "Cửa hàng trực tuyến riêng và hệ thống quản lý đơn hàng cho một xưởng khắc chuyên nghiệp.",
+        "highlights": [
+          "Trao cho chủ xưởng trang quản trị để quản lý kho, đơn hàng và công việc hằng ngày mà không cần developer",
+          "Thiết kế và xây dựng trọn gói cửa hàng riêng dưới dạng dự án freelance",
+          "Tích hợp Stripe để checkout và thanh toán an toàn"
+        ]
       },
       "portfolioV1": {
         "name": "Portfolio V1",
-        "description": "Trang portfolio trước đây của tôi được xây dựng với Next.js và Chakra UI, có giao diện tối và hiệu ứng mượt mà."
+        "description": "Portfolio trước đây của tôi, nay đã được thay bằng terminal tương tác này.",
+        "highlights": [
+          "Tự xây dựng mọi animation từ đầu với Framer Motion cho cảm giác mượt mà, chỉn chu",
+          "Hiển thị các bookmark tuyển chọn của tôi trên site qua API Raindrop.io",
+          "Thêm blog MDX để đăng bài viết kỹ thuật song song với portfolio"
+        ]
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "Bộ khởi đầu gồm Next.js, Chakra-UI, Framer-Motion bằng TypeScript. Có một vài component, đa ngôn ngữ, SEO và nhiều hơn nữa."
+        "description": "Starter kit Next.js mã nguồn mở với Chakra UI, Framer Motion và TypeScript.",
+        "highlights": [
+          "Starter mã nguồn mở đưa một site Next.js từ con số 0 đến sẵn sàng production",
+          "Tích hợp sẵn theming, component animation tái sử dụng, i18n, SEO và tạo sitemap",
+          "Viết tài liệu về cài đặt, cấu trúc và quy ước để các developer khác nhanh chóng áp dụng"
+        ]
       },
       "rtransport": {
         "name": "RT'ransport",
-        "description": "Nền tảng giao bưu kiện được tạo cho dự án năm thứ nhất của DUT Mạng và Viễn thông."
+        "description": "Nền tảng giao nhận bưu kiện, đồ án năm nhất DUT Mạng & Viễn thông (bằng đại học hệ hai năm).",
+        "highlights": [
+          "Thiết kế hai service Flask: REST API có versioning và bên trên là client Tailwind render phía server",
+          "Mô hình hóa logistics bưu kiện bằng SQLAlchemy trên PostgreSQL: bưu kiện, điểm trung chuyển và hub",
+          "Xây dựng theo dõi bưu kiện qua từng chặng, với giao diện riêng cho khách hàng, nhà cung cấp và nhà vận hành"
+        ]
       }
     },
     "skillGroups": {
       "languages": "Ngôn ngữ",
       "frameworks": "Framework",
+      "stateData": "Trạng thái & Dữ liệu",
       "uiStyling": "UI / Tạo kiểu",
       "tooling": "Công cụ",
       "testing": "Kiểm thử",
       "databases": "Cơ sở dữ liệu",
       "cloud": "Cloud",
-      "vcs": "VCS",
-      "orm": "ORM",
       "devops": "DevOps",
       "automation": "Tự động hóa",
-      "ai": "AI",
-      "stateData": "Trạng thái & Dữ liệu",
       "softSkills": "Kỹ năng mềm"
     },
     "spokenLanguages": {

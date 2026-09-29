@@ -78,7 +78,7 @@ function WelcomeHero({
             />
             <Tag
               icon={<Code2 className="h-3 w-3" />}
-              label={t("tags.web")}
+              label={t("tags.webExpert")}
               variant="teal"
             />
             <Tag

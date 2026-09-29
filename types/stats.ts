@@ -2,6 +2,7 @@ export type WakaTimeStats = {
   codingTime: string | null;
   dailyAverage: string | null;
   topLanguage: string | null;
+  calculatingPercent: number | null;
 };
 
 export type StatsData = {

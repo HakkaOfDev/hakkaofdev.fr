@@ -29,7 +29,7 @@ export type VisitorReferrer = {
 };
 
 export type VisitorTrendPoint = {
-  bucket: string; // ISO date (YYYY-MM-DD)
+  bucket: string;
   unique_count: number;
   total_hits: number;
 };
@@ -42,6 +42,15 @@ export type StatsRange = "today" | "7d" | "30d" | "90d" | "all";
 
 export const STATS_RANGES: ReadonlyArray<StatsRange> = [
   "today",
+  "7d",
+  "30d",
+  "90d",
+  "all",
+] as const;
+
+/** Values offered for `stats --last`, in the spelling the man page documents. */
+export const STATS_RANGE_FLAG_VALUES = [
+  "24h",
   "7d",
   "30d",
   "90d",

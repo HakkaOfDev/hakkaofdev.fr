@@ -33,7 +33,7 @@ const FAMILIES_WITH_ITALIC = new Set(["Noto Sans"]);
 
 // Glyphs that are not in the visible CV strings but show up at render time
 // (separators, bullets, list dashes). Always include them.
-const ALWAYS_INCLUDED = " 0123456789-—–:;,.?!()[]{}|/\\@#&*+=<>'\"•";
+const ALWAYS_INCLUDED = " 0123456789-—–:;,.?!()[]{}|/\\@#&*+=<>'\"•·";
 
 const bufferCache = new Map<string, Promise<Buffer | null>>();
 
@@ -79,7 +79,26 @@ async function fetchTtf(
   return promise;
 }
 
-Font.registerHyphenationCallback((word) => [word]);
+const CJK_CHAR =
+  /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef]/;
+const NO_BREAK_BEFORE =
+  /[、。，．・：；！？）」』】〉》ーぁぃぅぇぉっゃゅょァィゥェォッャュョ]/;
+
+function splitCjk(word: string): string[] {
+  const segments: string[] = [];
+  for (const char of word) {
+    if (segments.length > 0 && NO_BREAK_BEFORE.test(char)) {
+      segments[segments.length - 1] += char;
+    } else {
+      segments.push(char);
+    }
+  }
+  return segments.flatMap((segment) => [segment, ""]);
+}
+
+Font.registerHyphenationCallback((word) =>
+  CJK_CHAR.test(word) ? splitCjk(word) : [word],
+);
 
 let lock: Promise<unknown> = Promise.resolve();
 
@@ -145,6 +164,7 @@ function collectCvText(data: CvData): string {
     add(p.name);
     add(p.description);
     add(p.url);
+    for (const h of p.highlights) add(h);
     for (const t of p.tags) add(t);
   }
   for (const l of data.languages) {

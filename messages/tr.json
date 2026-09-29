@@ -23,10 +23,11 @@
   },
   "Welcome": {
     "greeting": "~ Hoş geldin <wave>👋</wave>",
-    "intro": "<tagline>Dijital göçebe</tagline> · <job>Yazılım mühendisi</job> · <freelance>Serbest çalışan</freelance>",
+    "intro": "<tagline>Dijital göçebe</tagline> · <job>Ürün Mühendisi</job> · <freelance>Serbest çalışan</freelance>",
     "tags": {
       "rate": "600 $/gün",
       "web": "React/Next.js",
+      "webExpert": "React/Next.js Uzmanı",
       "mobile": "Expo/React Native"
     },
     "sections": {
@@ -139,6 +140,7 @@
       "statsBrowsers": "Tekil ziyaretçilere göre tarayıcı dağılımı",
       "statsReferrers": "Tekil ziyaretçilere göre en iyi yönlendirici ana bilgisayarlar",
       "statsTrend": "Belirli bir zaman aralığında günlük ziyaretçi sparkline'ı",
+      "statsLast": "Zaman aralığına göre filtrele: 24h, 7d, 30d, 90d veya all",
       "repo": "Bu portfolyonun kaynak kodunu aç",
       "echo": "Terminale bir mesaj yazdır",
       "spotifyNow": "Şu anda çalan şarkıyı göster",
@@ -197,6 +199,7 @@
     },
     "stats": {
       "totalCodingTime": "Toplam kodlama süresi",
+      "codingTimeRanged": "Kodlama süresi (aralık)",
       "topLanguage": "Birincil dil",
       "githubStars": "GitHub yıldızları",
       "contributions": "Katkılar ({year})",
@@ -205,6 +208,8 @@
       "visitors": "Ziyaretçiler",
       "failed": "İstatistikler getirilemedi. Daha sonra tekrar deneyin.",
       "na": "Yok",
+      "calculating": "Hesaplanıyor… %{percent}",
+      "noActivity": "Etkinlik yok",
       "visitorsRanged": "Ziyaretçiler (aralık)",
       "rangeLabel": "Aralık:",
       "unknownFlag": "Bilinmeyen bayrak yoksayıldı: {flag}",
@@ -263,7 +268,11 @@
     },
     "projects": {
       "openLabel": "Projeyi aç: {name}",
-      "noMatches": "“{pattern}” ile eşleşen proje yok."
+      "noMatches": "“{pattern}” ile eşleşen proje yok.",
+      "details": "Ayrıntıları gör: {name}",
+      "highlights": "Öne çıkanlar",
+      "visit": "Web sitesini ziyaret et",
+      "close": "Kapat"
     },
     "noMatches": "“{pattern}” için eşleşme yok."
   },
@@ -510,8 +519,9 @@
   "CV": {
     "documentTitleSuffix": "Özgeçmiş",
     "subject": "Özgeçmiş",
-    "summary": "Tek bir ürünü baştan sona geliştirme ve sahiplenme konusunda {years}+ yıl deneyime sahip, ürün odaklı bir yazılım mühendisiyim. Madrid merkezli Web3 girişimi Kabila'da frontend'e liderlik ettim; mimari ve yol haritasından kullanıcıların hissettiği ayrıntılara kadar bir web platformu, içerik üretici araçları ile yerel ve tarayıcı cüzdanları yayınladım. T tipi bir profilim var: React, Next.js ve React Native'de derinlemesine uzman, DevOps, altyapı ve ürün kararlarında da rahatım. Yalnızca temiz kod için değil, gerçek kullanıcı etkisi ve uzun vadeli sahiplenme için optimize ediyorum.",
+    "summary": "Ürünleri uçtan uca tasarlayıp geliştiriyorum. {years}+ yıl boyunca Madrid'deki Web3 girişimi Kabila'nın frontend'inden sorumlu oldum; sosyal platformu, NFT pazaryerini, üretici araçlarını, native ve tarayıcı cüzdanlarını ham fikirlerden özenli ürünlere dönüştürdüm. Tasarım ve mühendislik arasında çalışıyorum: tasarım sistemlerini sürdürüyor, ürün akışlarını şekillendiriyor ve arkalarındaki frontend mimarisini kuruyorum. Odak noktam, karmaşık blokzincir etkileşimlerini kriptoya yeni olabilecek kullanıcılar için basit ve sezgisel deneyimlere dönüştürmek. En verimli olduğum yer, hızlı ilerleyip ürün kararları alabildiğim ve sonuçları sahiplendiğim yüksek özerklikli ortamlar.",
     "location": "Uzaktan",
+    "headline": "Ürün Mühendisi - Next.js Uzmanı",
     "sections": {
       "summary": "Mesleki profil",
       "experience": "Deneyim",
@@ -520,7 +530,7 @@
       "projects": "Seçilmiş projeler",
       "languages": "Diller",
       "links": "Bağlantılar",
-      "hobbies": "Hobiler ve İlgi Alanları"
+      "hobbies": "Hobiler"
     },
     "period": {
       "since": "{date} - halen"
@@ -529,14 +539,14 @@
       "kabila": {
         "name": "Ürün Mühendisi",
         "company": "Kabila (Web3 girişimi)",
-        "location": "Uzaktan · Madrid, İspanya",
+        "location": "Uzaktan",
         "descriptions": [
-          "Kabila'nın Web3 ürününün frontend'ini dört yıl boyunca sahiplendim: Hedera üzerinde bir sosyal platform, NFT pazaryeri, içerik üretici araçları ile yerel ve tarayıcı uzantısı cüzdanları",
-          "Mimariyi, teknik yol haritasını ve sprint planlamasını yönlendirdim; belirsiz ürün hedeflerini 0'dan 1'e yayınlanan özelliklere dönüştürdüm",
-          "Her ürünü birleştiren ve teslimatı hızlandıran paylaşılan bileşen kütüphanesini ve tasarım sistemini geliştirdim ve sürdürdüm",
-          "React Native ve Expo ile geliştirdiğim yerel mobil cüzdanları App Store ve Google Play'e yayınladım",
-          "Kapsam ve ödünleşimler konusunda ürün ve tasarım ekipleriyle iş birliği yaptım; yalnızca nasıl değil, ne inşa edileceğini de şekillendirdim",
-          "Ekip büyüdükçe geliştiricilere mentorluk yaptım, kod incelemelerini yönettim ve frontend standartlarını belirledim"
+          "Kabila'nın Web3 frontend'ini uçtan uca üstlendim: sosyal platform, NFT pazaryeri, üretici araçları ve cüzdanlar",
+          "Arayüzleri Figma'da tasarladım; tüm ürünlerde kullanılan ortak tasarım sistemi ve bileşen kütüphanesini kurdum",
+          "Kripto bilmeyenler için karmaşık on-chain işlemleri basit adımlara indiren rehberli akışlar tasarlayıp sundum",
+          "Frontend mimarisini, teknik/sprint planlamayı yönettim; özellikleri hızlı döngülerle fikirden canlıya taşıdım",
+          "Native cüzdanı React Native ve Expo ile geliştirip App Store ve Google Play'de yayınladım",
+          "Ürün ve tasarım paydaşlarıyla doğrudan çalışıp kapsamı, ödünleşimleri ve neyin geliştirileceğini belirledim"
         ]
       },
       "archeMC2": {
@@ -544,10 +554,9 @@
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Fransa",
         "descriptions": [
-          "Otomatik test ve dağıtım için GitLab CI/CD pipeline'ları oluşturdum",
+          "Otomatik test ve dağıtım için GitLab CI/CD pipeline'ları kurdum",
           "İç uygulamaları ve servisleri Docker ile konteynerize ettim",
-          "Rutin sysadmin görevlerini shell scriptleri ile otomatikleştirdim",
-          "Sistem sağlığını izledim ve altyapı dayanıklılığını iyileştirdim"
+          "Altyapı görevlerini ve izlemeyi shell script'leriyle otomatikleştirdim"
         ]
       },
       "efficienceInformatique": {
@@ -555,10 +564,9 @@
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Fransa",
         "descriptions": [
-          "Windows sunucularının yönetimi ve günlük BT operasyonlarının desteklenmesi",
-          "Kritik iş verileri için yedekleme stratejilerinin uygulanması ve sürdürülmesi",
-          "Dahili altyapıda Hyper-V sanallaştırmasının kurulumu ve yönetimi",
-          "Finans ve operasyon ekiplerinin kullandığı ERP sistemlerine (SAP ve Sage) destek"
+          "Dahili altyapıdaki Windows sunucularını ve Hyper-V sanallaştırmasını yönettim",
+          "Kritik iş verileri için yedekleme stratejileri uyguladım ve sürdürdüm",
+          "Finans ve operasyon ekiplerinin kullandığı ERP sistemlerine (SAP ve Sage) destek verdim"
         ]
       }
     },
@@ -579,63 +587,119 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "DLT ve AI mimarisinde uzmanlaşmış bir kurumsal danışmanlık şirketi; blockchain ve AI entegrasyonunu yerleşik düzenleyici uyumlulukla sunar, stratejiden üretime."
+        "description": "Kurumsal DLT ve yapay zekâ danışmanlığı yapan Bravalta'nın şirket web sitesi.",
+        "highlights": [
+          "İstemci ağırlıklı bir yığın yerine Astro ile statik render'ı seçerek hızlı yükleme ve güçlü SEO sağladım",
+          "Konseptten canlıya UI/UX'in sahibi oldum; tüm kullanıcı akışlarını tasarlayıp geliştirdim",
+          "Sitenin motion tasarımını ve animasyonlarını hazırladım"
+        ]
       },
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Hedera üzerinde inşa edilmiş bir Web3 sosyal platformu ve NFT ekosistemi; NFT pazaryeri, topluluk alanları, launchpad'ler ve içerik üretici araçları içerir."
+        "description": "Kabila'nın amiral gemisi Web3 platformu: sosyal ağ, NFT pazaryeri, topluluk alanları, launchpad'ler ve token staking.",
+        "highlights": [
+          "Geçişi uçtan uca yöneterek 3 ayrı uygulamayı tek bir amiral gemisi üründe birleştirdim",
+          "Geliştirip sürdürdüğüm NFT pazaryerinde 100K+ satışta $500K+ işlem hacmi",
+          "Tüm blokzincir etkileşimleri için ortak bir dahili SDK ile 3 uygulamadaki kod tekrarını azalttım",
+          "Tasarlayıp geliştirdiğim tasarım sistemi ve bileşen kütüphanesiyle 3 ürünü görsel olarak tutarlı tuttum"
+        ]
       },
       "kabilaWalletNative": {
         "name": "Kabila Wallet (Native)",
-        "description": "Hedera ağı için React Native ve Expo ile geliştirilmiş yerel mobil cüzdan. Hesaplarınızı, tokenlarınızı ve NFT'lerinizi yönetin ve varlıklarınız üzerinde tam kontrolü korurken hareket halindeyken DApp'lerle bağlantı kurun."
+        "description": "Kabila'nın iOS ve Android mobil cüzdanı: hareket halindeyken hesaplar, tokenlar, NFT'ler ve dApp bağlantıları.",
+        "highlights": [
+          "React Native ve Expo ile geliştirdiğim mobil cüzdanı sıfırdan 10K+ kullanıcıya taşıdım",
+          "iOS ve Android production sürümlerini yayınlayıp sürdürdüm: build, mağaza incelemesi ve güncellemeler",
+          "Cüzdan UI/UX'ini tasarlayıp uyguladım; hesap, token ve imzalamayı kripto bilmeyenler için netleştirdim",
+          "Ana uygulamanın tasarım dilini native'e taşıyarak kullanıcılara tek ve tutarlı bir Kabila deneyimi sundum"
+        ]
       },
       "kabilaTools": {
         "name": "Kabila Tools",
-        "description": "Hedera üzerindeki içerik üreticiler ve topluluklar için hepsi bir arada NFT araç seti. NFT koleksiyonlarınızı tam kontrol sahibi olarak oluşturmak, yayınlamak ve yönetmek için güçlü ve kullanımı kolay bir platform."
+        "description": "Üreticilerin ve toplulukların koleksiyon oluşturup yayınlamasını ve yönetmesini sağlayan self-servis NFT araç seti.",
+        "highlights": [
+          "5K+ kullanıcıya hizmet veren üretici paketinin frontend'ini sahiplendim",
+          "Tek platformda, NFT koleksiyonunun tüm yaşam döngüsünü kapsayan 20+ üretici aracı sundum",
+          "On-chain lansmanları self-servis yaptım: üreticiler rehberli akışlarla kodsuz NFT koleksiyonu çıkarıyor",
+          "Her ekran boyutunda kullanılabilir kalan karmaşık, çok adımlı akışlar için responsive UI/UX geliştirdim"
+        ]
       },
       "kabilaWallet": {
         "name": "Kabila Wallet (Extension)",
-        "description": "Hedera ağı için saklamasız, basit ve güvenli bir cüzdan. Hesaplarınızı, tokenlarınızı, NFT'lerinizi yönetin ve varlıklarınız üzerinde tam kontrolü korurken DApp'lerle bağlantı kurun."
+        "description": "Kabila'nın non-custodial tarayıcı uzantısı cüzdanı ve aynı kod tabanından üretilen mobil sürümü.",
+        "highlights": [
+          "2K+ kullanıcının benimsediği non-custodial bir Chrome uzantısı cüzdanı yayınladım",
+          "Güvenliği temel gereksinim yaptım: anahtarlar cihazda kalıyor, her hassas işlem açık onay gerektiriyor",
+          "Tek mühendis olarak, Capacitor ile tek bir React kod tabanından masaüstü ve mobili kapsadım",
+          "Bağlantı ve onay akışlarını, kullanıcılar ne imzaladıklarını her zaman tam olarak görsün diye tasarladım"
+        ]
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
-        "description": "Bir oto tamir işletmesi için profesyonel bir web sitesi; hizmetler, şeffaf fiyatlandırma ve iletişim bilgileri sunar."
+        "description": "Yerel bir oto tamir işletmesi için web sitesi.",
+        "highlights": [
+          "Müşteri keşfinden tasarıma, geliştirmeden yayına kadar bir freelance siteyi uçtan uca teslim ettim",
+          "Şeffaf fiyatlandırma, tıkla-ara ve teklif talebiyle dönüşüm odaklı bir sayfa geliştirdim",
+          "Garajın yakındaki aramalarda üst sıralarda çıkması için yerel SEO'yu optimize ettim"
+        ]
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "DASAN OLT/ONU denetim aracı."
+        "description": "DASAN fiber ağ ekipmanları (OLT'ler ve ONU'lar) için gerçek zamanlı izleme paneli.",
+        "highlights": [
+          "Gerçek zamanlı bir panelle ağ operatörlerine DASAN fiber ekipmanları üzerinde canlı görünürlük sağladım",
+          "Cihazları SNMP ile sorgulayan Python API'yi yazdım; ağ cihazlarındaki yükü Redis önbelleğiyle sınırladım",
+          "Yığını Docker ile konteynerize ettim ve imaj derlemelerini GitHub Actions ile otomatikleştirdim"
+        ]
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
-        "description": "Profesyonel bir gravür stüdyosu için özel bir e-ticaret platformu; ürün kataloğu, çevrimiçi sipariş ve sipariş yönetimi için yönetici paneli içerir."
+        "description": "Profesyonel bir gravür atölyesi için özel online mağaza ve sipariş yönetimi.",
+        "highlights": [
+          "Sahibine stok, sipariş ve günlük işleri geliştiricisiz yönetebileceği bir admin paneli sundum",
+          "Özel mağazayı freelance proje olarak uçtan uca tasarlayıp geliştirdim",
+          "Güvenli checkout ve ödemeler için Stripe'ı entegre ettim"
+        ]
       },
       "portfolioV1": {
         "name": "Portfolio V1",
-        "description": "Önceki portfolyo web sitem; Next.js ve Chakra UI ile inşa edilmiş, koyu tema ve akıcı animasyonlar içeriyor."
+        "description": "Önceki portfolyom; artık yerini bu interaktif terminal aldı.",
+        "highlights": [
+          "Akıcı ve özenli bir his için tüm animasyonları Framer Motion ile sıfırdan geliştirdim",
+          "Raindrop.io API'si ile seçtiğim yer imlerini sitede gösterdim",
+          "Portfolyonun yanında teknik yazılar yayınlamak için bir MDX blog ekledim"
+        ]
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "TypeScript'te Next.js, Chakra-UI ve Framer-Motion içeren bir başlangıç kiti. Birkaç bileşen, uluslararasılaştırma, SEO ve daha fazlası."
+        "description": "Chakra UI, Framer Motion ve TypeScript içeren açık kaynak Next.js başlangıç kiti.",
+        "highlights": [
+          "Bir Next.js sitesini sıfırdan production'a hazır hâle getiren açık kaynak başlangıç kiti",
+          "Tema desteği, yeniden kullanılabilir animasyonlu bileşenler, i18n, SEO ve sitemap üretimi hazır geliyor",
+          "Diğer geliştiriciler hızla benimseyebilsin diye kurulumu, yapıyı ve kuralları belgeledim"
+        ]
       },
       "rtransport": {
         "name": "RT'ransport",
-        "description": "DUT Ağlar ve Telekom ilk yıl projem için oluşturulmuş bir paket platformu."
+        "description": "DUT Ağlar ve Telekom (iki yıllık üniversite diploması) 1. yıl projesi olarak geliştirilen kargo teslimat platformu.",
+        "highlights": [
+          "İki Flask servisi tasarladım: sürümlü REST API ve üzerinde sunucuda render edilen bir Tailwind istemcisi",
+          "Kargo lojistiği alanını SQLAlchemy ve PostgreSQL ile modelledim: kargolar, aktarma noktaları ve hub'lar",
+          "Müşteri, tedarikçi ve operatörlere özel görünümlerle durak durak kargo takibi geliştirdim"
+        ]
       }
     },
     "skillGroups": {
       "languages": "Diller",
       "frameworks": "Çatılar",
+      "stateData": "Durum ve Veri",
       "uiStyling": "UI / Stil",
       "tooling": "Araçlar",
       "testing": "Test",
       "databases": "Veritabanları",
       "cloud": "Bulut",
-      "vcs": "VCS",
-      "orm": "ORM",
       "devops": "DevOps",
       "automation": "Otomasyon",
-      "ai": "Yapay Zeka",
-      "stateData": "Durum ve Veri",
       "softSkills": "Kişisel Beceriler"
     },
     "spokenLanguages": {

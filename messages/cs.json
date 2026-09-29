@@ -23,10 +23,11 @@
   },
   "Welcome": {
     "greeting": "~ Vítej <wave>👋</wave>",
-    "intro": "<tagline>Digitální nomád</tagline> · <job>Softwarový inženýr</job> · <freelance>Freelance</freelance>",
+    "intro": "<tagline>Digitální nomád</tagline> · <job>Produktový inženýr</job> · <freelance>Freelance</freelance>",
     "tags": {
       "rate": "600 $/den",
       "web": "React/Next.js",
+      "webExpert": "Expert na React/Next.js",
       "mobile": "Expo/React Native"
     },
     "sections": {
@@ -139,6 +140,7 @@
       "statsBrowsers": "Rozdělení prohlížečů podle unikátních návštěvníků",
       "statsReferrers": "Hlavní zdroje odkazů seřazené podle unikátních návštěvníků",
       "statsTrend": "Sparkline denních návštěvníků za zvolené období",
+      "statsLast": "Filtrovat podle období: 24h, 7d, 30d, 90d nebo all",
       "repo": "Otevřít zdrojový kód tohoto portfolia",
       "echo": "Vypsat zprávu do terminálu",
       "spotifyNow": "Zobrazit aktuálně přehrávanou skladbu",
@@ -197,6 +199,7 @@
     },
     "stats": {
       "totalCodingTime": "Celkový čas kódování",
+      "codingTimeRanged": "Čas kódování (období)",
       "topLanguage": "Hlavní jazyk",
       "githubStars": "Hvězdičky GitHub",
       "contributions": "Příspěvky ({year})",
@@ -205,6 +208,8 @@
       "visitors": "Návštěvníci",
       "failed": "Nepodařilo se načíst statistiky. Zkuste to později.",
       "na": "N/A",
+      "calculating": "Počítá se… {percent} %",
+      "noActivity": "Žádná aktivita",
       "visitorsRanged": "Návštěvníci (období)",
       "rangeLabel": "Období:",
       "unknownFlag": "Ignorován neznámý přepínač: {flag}",
@@ -263,7 +268,11 @@
     },
     "projects": {
       "openLabel": "Otevřít projekt: {name}",
-      "noMatches": "Žádné projekty neodpovídají „{pattern}“."
+      "noMatches": "Žádné projekty neodpovídají „{pattern}“.",
+      "details": "Zobrazit detaily: {name}",
+      "highlights": "Hlavní body",
+      "visit": "Navštívit web",
+      "close": "Zavřít"
     },
     "noMatches": "Žádné shody pro „{pattern}“."
   },
@@ -510,8 +519,9 @@
   "CV": {
     "documentTitleSuffix": "Životopis",
     "subject": "Životopis",
-    "summary": "Produktově zaměřený softwarový inženýr s více než {years} lety zkušeností s budováním jediného produktu a plnou zodpovědností za něj od začátku do konce. Vedl jsem frontend v Kabile, Web3 startupu v Madridu, a dodával webovou platformu, nástroje pro tvůrce i nativní a prohlížečové peněženky – od architektury a roadmapy až po detaily, které uživatelé vnímají. Profil ve tvaru T: hluboko v Reactu, Next.js a React Native a s přehledem napříč DevOps, infrastrukturou a produktovými rozhodnutími. Optimalizuji na skutečný dopad na uživatele a dlouhodobou zodpovědnost, ne jen na čistý kód.",
+    "summary": "Navrhuji a stavím produkty od začátku do konce. Více než {years, plural, one {# rok} few {# roky} many {# roku} other {# let}} jsem vedl frontend v Kabile, Web3 startupu v Madridu, a dovedl sociální platformu, NFT marketplace, nástroje pro tvůrce i nativní a prohlížečové peněženky od hrubých nápadů k vyladěným produktům. Pracuji na pomezí designu a vývoje: udržuji design systémy, utvářím produktové toky a stavím frontendovou architekturu, která za nimi stojí. Zaměřuji se na proměnu složitých blockchainových interakcí v jednoduché, intuitivní zážitky pro uživatele, kteří mohou být v kryptu noví. Nejlépe funguji v prostředí s vysokou autonomií, kde mohu postupovat rychle, dělat produktová rozhodnutí a nést odpovědnost za výsledky.",
     "location": "Vzdáleně",
+    "headline": "Produktový inženýr - Expert na Next.js",
     "sections": {
       "summary": "Profesní profil",
       "experience": "Praxe",
@@ -520,7 +530,7 @@
       "projects": "Vybrané projekty",
       "languages": "Jazyky",
       "links": "Odkazy",
-      "hobbies": "Zájmy a koníčky"
+      "hobbies": "Koníčky"
     },
     "period": {
       "since": "{date} - dosud"
@@ -529,14 +539,14 @@
       "kabila": {
         "name": "Produktový inženýr",
         "company": "Kabila (Web3 startup)",
-        "location": "Vzdáleně · Madrid, Španělsko",
+        "location": "Vzdáleně",
         "descriptions": [
-          "Čtyři roky jsem zodpovídal za frontend Web3 produktu Kabila: sociální platformu, NFT marketplace, nástroje pro tvůrce a nativní peněženku i peněženku jako prohlížečové rozšíření na Hederě",
-          "Řídil jsem architekturu, technický plán a plánování sprintů a proměňoval nejasné produktové cíle ve funkce dodané od nuly do jedničky",
-          "Vytvořil a udržoval jsem sdílenou knihovnu komponent a design systém, které sjednotily všechny produkty a zrychlily dodávání",
-          "Dodal jsem nativní mobilní peněženky vytvořené v React Native a Expo na App Store a Google Play",
-          "Spolupracoval jsem s produktovým a designovým týmem na rozsahu a kompromisech a spoluutvářel, co stavět, ne jen jak",
-          "Mentoroval jsem vývojáře, vedl code review a s růstem týmu určoval frontendové standardy"
+          "Vedl jsem celý Web3 frontend Kabily: sociální platformu, NFT marketplace, nástroje pro tvůrce a peněženky",
+          "Navrhoval jsem rozhraní ve Figmě a vybudoval sdílený design systém a knihovnu komponent pro všechny produkty",
+          "Navrhl a dodal jsem řízené toky, které mění složité on-chain operace v jednoduché kroky pro lidi mimo krypto",
+          "Řídil jsem architekturu frontendu i technické a sprintové plánování a rychle iteroval od nápadu po produkci",
+          "Postavil jsem nativní peněženku v React Native a Expo a vydal ji na App Store a Google Play",
+          "Přímo jsem spolupracoval s produktovými a designovými stakeholdery na rozsahu, kompromisech a tom, co stavět"
         ]
       },
       "archeMC2": {
@@ -544,10 +554,9 @@
         "company": "Arche MC2",
         "location": "Châlons-en-Champagne, Francie",
         "descriptions": [
-          "Stavěl jsem GitLab CI/CD pipeline pro automatizované testování a nasazení",
-          "Kontejnerizoval interní aplikace a služby pomocí Dockeru",
-          "Automatizoval rutinní sysadmin úkoly pomocí shell skriptů",
-          "Sledoval stav systémů a zlepšoval odolnost infrastruktury"
+          "Vytvořil jsem GitLab CI/CD pipeline pro automatizované testování a nasazení",
+          "Kontejnerizoval jsem interní aplikace a služby pomocí Dockeru",
+          "Automatizoval jsem infrastrukturní úlohy a monitoring pomocí shell skriptů"
         ]
       },
       "efficienceInformatique": {
@@ -555,10 +564,9 @@
         "company": "Efficience Informatique",
         "location": "Vitry-le-François, Francie",
         "descriptions": [
-          "Správa Windows serverů a podpora každodenního IT provozu",
-          "Zavedení a údržba záložních strategií pro kritická firemní data",
-          "Nastavení a správa Hyper-V virtualizace v interní infrastruktuře",
-          "Podpora ERP systémů (SAP a Sage) využívaných finančním a provozním týmem"
+          "Spravoval jsem Windows servery a virtualizaci Hyper-V v celé interní infrastruktuře",
+          "Zavedl a udržoval jsem strategie zálohování kritických firemních dat",
+          "Podporoval jsem ERP systémy (SAP a Sage) používané finančním a provozním týmem"
         ]
       }
     },
@@ -579,63 +587,119 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "Podniková poradenská společnost specializovaná na architekturu DLT a AI, dodávající integraci blockchainu a AI s vestavěnou regulační shodou, od strategie po produkci."
+        "description": "Firemní web společnosti Bravalta, která poskytuje podnikům poradenství v oblasti DLT a AI.",
+        "highlights": [
+          "Zajistil jsem rychlé načítání a silné SEO statickým renderováním v Astro místo těžkého klientského stacku",
+          "Měl jsem na starosti UI/UX od konceptu po produkci a navrhl i postavil každý uživatelský tok",
+          "Vytvořil jsem motion design a animace webu"
+        ]
       },
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "Web3 sociální platforma a NFT ekosystém na Hederě, s NFT marketplace, komunitními prostory, launchpady a nástroji pro tvůrce."
+        "description": "Vlajková Web3 platforma Kabila: sociální síť, NFT marketplace, komunitní prostory, launchpady a staking tokenů.",
+        "highlights": [
+          "Sloučil jsem 3 samostatné aplikace do jednoho vlajkového produktu a vedl migraci od začátku do konce",
+          "$500K+ objemu obchodů ze 100K+ prodejů na NFT marketplace, který jsem postavil a udržoval",
+          "Omezil jsem duplicitní kód ve 3 aplikacích sdíleným interním SDK pro veškerou komunikaci s blockchainem",
+          "Sjednotil jsem vzhled 3 produktů design systémem a knihovnou komponent, které jsem navrhl a postavil"
+        ]
       },
       "kabilaWalletNative": {
         "name": "Kabila Wallet (Native)",
-        "description": "Nativní mobilní peněženka pro síť Hedera, vytvořená pomocí React Native a Expo. Spravujte účty, tokeny a NFT a propojujte se s DApp aplikacemi odkudkoli při zachování plné kontroly nad svými aktivy."
+        "description": "Mobilní peněženka Kabila pro iOS a Android: účty, tokeny, NFT a propojení s dApps na cestách.",
+        "highlights": [
+          "Dovedl jsem mobilní peněženku postavenou v React Native a Expo od nuly k 10K+ uživatelům",
+          "Vydával a udržoval jsem produkční verze pro iOS a Android: buildy, schvalování v obchodech a aktualizace",
+          "Navrhl a implementoval jsem UI/UX peněženky, aby účty, tokeny a podepisování chápali i lidé mimo krypto",
+          "Přenesl jsem designový jazyk hlavní aplikace do nativní verze, aby uživatelé měli jednotný zážitek z Kabily"
+        ]
       },
       "kabilaTools": {
         "name": "Kabila Tools",
-        "description": "All-in-one NFT toolkit pro tvůrce a komunity na Hederě. Výkonná a snadno použitelná platforma pro vytváření, spouštění a správu NFT kolekcí s plnou kontrolou."
+        "description": "Samoobslužná sada NFT nástrojů, s níž tvůrci a komunity vytvářejí, spouštějí a spravují kolekce.",
+        "highlights": [
+          "Měl jsem na starosti frontend sady pro tvůrce, kterou používá 5K+ uživatelů",
+          "Dodal jsem 20+ nástrojů pro tvůrce na jedné platformě, pokrývajících celý životní cyklus NFT kolekce",
+          "Umožnil jsem samoobslužné on-chain launche: tvůrci vydávají NFT kolekce v řízených tocích bez kódu",
+          "Postavil jsem responzivní UI/UX pro složité vícekrokové toky, použitelné na obrazovce jakékoli velikosti"
+        ]
       },
       "kabilaWallet": {
         "name": "Kabila Wallet (Extension)",
-        "description": "Non-custodial, jednoduchá a bezpečná peněženka pro síť Hedera. Spravujte účty, tokeny, NFT a propojujte se s DApp aplikacemi při zachování plné kontroly nad svými aktivy."
+        "description": "Nekustodiální peněženka Kabila jako rozšíření prohlížeče, s mobilní verzí ze stejného kódu.",
+        "highlights": [
+          "Vydal jsem nekustodiální peněženku jako rozšíření pro Chrome, kterou používá 2K+ uživatelů",
+          "Z bezpečnosti jsem udělal základ: klíče zůstávají v zařízení, každá citlivá akce vyžaduje výslovný souhlas",
+          "Jako jediný inženýr jsem pokryl desktop i mobil jednou React kódovou základnou díky Capacitoru",
+          "Navrhl jsem toky připojení a schvalování, aby uživatelé vždy přesně viděli, co podepisují"
+        ]
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
-        "description": "Profesionální web pro autoservis se službami, transparentními cenami a kontaktními údaji."
+        "description": "Web pro místní autoservis.",
+        "highlights": [
+          "Dodal jsem web jako freelancer od A do Z, od zjištění potřeb klienta a designu po vývoj a spuštění",
+          "Postavil jsem stránku zaměřenou na konverze: transparentní ceník, volání jedním klikem a poptávky",
+          "Optimalizoval jsem lokální SEO, aby se autoservis zobrazoval ve vyhledávání v okolí"
+        ]
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "Nástroj pro dohled DASAN OLT/ONU."
+        "description": "Dashboard pro dohled v reálném čase nad optickými zařízeními DASAN (OLT a ONU).",
+        "highlights": [
+          "Dal jsem operátorům sítě živý přehled o optických zařízeních DASAN díky dashboardu v reálném čase",
+          "Napsal jsem Python API dotazující zařízení přes SNMP, s cache v Redis pro omezení zátěže síťových prvků",
+          "Kontejnerizoval jsem stack pomocí Dockeru a automatizoval sestavování image v GitHub Actions"
+        ]
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
-        "description": "Custom e-commerce platforma pro profesionální gravírovací studio s katalogem produktů, online objednávkami a admin dashboardem pro správu zakázek."
+        "description": "Zakázkový e-shop a správa objednávek pro profesionální gravírovací dílnu.",
+        "highlights": [
+          "Dal jsem majiteli administraci pro řízení skladu, objednávek a každodenního provozu bez vývojáře",
+          "Navrhl a postavil jsem zakázkový e-shop od A do Z jako freelance projekt",
+          "Integroval jsem Stripe pro bezpečnou pokladnu a platby"
+        ]
       },
       "portfolioV1": {
         "name": "Portfolio V1",
-        "description": "Mé předchozí portfolio postavené na Next.js a Chakra UI s tmavým motivem a plynulými animacemi."
+        "description": "Moje předchozí portfolio, dnes nahrazené tímto interaktivním terminálem.",
+        "highlights": [
+          "Vytvořil jsem všechny animace od nuly ve Framer Motion pro plynulý a vyladěný dojem",
+          "Zobrazil jsem na webu své vybrané záložky přes API Raindrop.io",
+          "Přidal jsem MDX blog pro publikování technických článků vedle portfolia"
+        ]
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "Starter kit s Next.js, Chakra-UI, Framer-Motion v TypeScriptu. Obsahuje pár komponent, internacionalizaci, SEO a další."
+        "description": "Open-source starter kit pro Next.js s Chakra UI, Framer Motion a TypeScript.",
+        "highlights": [
+          "Open-source starter, který dovede web v Next.js od nuly k připravenosti na produkci",
+          "Rovnou obsahuje theming, znovupoužitelné animované komponenty, i18n, SEO a generování sitemap",
+          "Zdokumentoval jsem nastavení, strukturu a konvence, aby jej ostatní vývojáři mohli rychle převzít"
+        ]
       },
       "rtransport": {
         "name": "RT'ransport",
-        "description": "Platforma pro doručování zásilek vytvořená pro projekt prvního ročníku DUT Sítě a telekomunikace."
+        "description": "Platforma pro doručování balíků, projekt z 1. ročníku DUT Sítě a telekomunikace (dvouleté VŠ studium).",
+        "highlights": [
+          "Navrhl jsem dvě Flask služby: verzované REST API a nad ním serverově renderovaného klienta s Tailwind",
+          "Namodeloval jsem doménu logistiky balíků v SQLAlchemy nad PostgreSQL: balíky, výdejní místa a huby",
+          "Postavil jsem sledování balíků po etapách se samostatnými pohledy pro zákazníky, dodavatele a operátory"
+        ]
       }
     },
     "skillGroups": {
       "languages": "Jazyky",
       "frameworks": "Frameworky",
+      "stateData": "Stav a Data",
       "uiStyling": "UI / Stylování",
       "tooling": "Nástroje",
       "testing": "Testování",
       "databases": "Databáze",
       "cloud": "Cloud",
-      "vcs": "VCS",
-      "orm": "ORM",
       "devops": "DevOps",
       "automation": "Automatizace",
-      "ai": "AI",
-      "stateData": "Stav a Data",
       "softSkills": "Měkké dovednosti"
     },
     "spokenLanguages": {

@@ -3,6 +3,7 @@
 import { RotateCcw } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useId } from "react";
+import { Switch } from "@/components/ui/Switch";
 import type { ThemeColors } from "@/types/theme";
 import { THEME_COLOR_KEYS } from "@/types/theme";
 
@@ -84,22 +85,13 @@ export function ThemeCreateVisualForm({
             {isDark ? t("darkTheme") : t("lightTheme")}
           </p>
         </div>
-        <button
-          type="button"
-          role="switch"
-          aria-checked={isDark}
-          aria-labelledby={isDarkCheckboxId}
-          onClick={() => onIsDarkChange(!isDark)}
-          className={`relative inline-flex h-7 w-14 shrink-0 cursor-pointer rounded-full transition-colors duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 ${
-            isDark ? "bg-primary" : "bg-muted-foreground/30"
-          }`}
-        >
-          <span
-            className={`pointer-events-none m-0.5 inline-flex h-6 w-6 transform items-center justify-center rounded-full bg-background shadow-lg ring-0 transition duration-200 ease-in-out ${
-              isDark ? "translate-x-7" : "translate-x-0"
-            }`}
-          >
-            {isDark ? (
+        <Switch
+          id={isDarkCheckboxId}
+          size="md"
+          checked={isDark}
+          onCheckedChange={onIsDarkChange}
+          thumb={
+            isDark ? (
               <svg
                 className="h-3.5 w-3.5 text-primary"
                 fill="currentColor"
@@ -121,9 +113,9 @@ export function ThemeCreateVisualForm({
                   clipRule="evenodd"
                 />
               </svg>
-            )}
-          </span>
-        </button>
+            )
+          }
+        />
       </div>
 
       <div className="border-border border-t pt-2">

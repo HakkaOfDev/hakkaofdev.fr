@@ -4,10 +4,8 @@ interface UseInputHandlersOptions {
   value: string;
   setValue: (v: string) => void;
   addCommand: (input: string) => void;
-  // History
   navigateHistory: (delta: number) => void;
   resetHistory: () => void;
-  // Suggestions
   isOpen: boolean;
   activeIndex: number;
   suggestionsCount: number;
@@ -15,7 +13,7 @@ interface UseInputHandlersOptions {
   closePopover: () => void;
   moveActiveIndex: (delta: number) => void;
   applyTabCompletion: () => void;
-  applyActiveSuggestion: () => string | null;
+  applyActiveSuggestion: () => { value: string; run: boolean } | null;
   hasSuggestions: boolean;
 }
 
@@ -64,21 +62,18 @@ export function useInputHandlers({
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLInputElement>) => {
-      // Ctrl/Cmd + P/N → history navigation
       if ((e.ctrlKey || e.metaKey) && (e.key === "p" || e.key === "n")) {
         e.preventDefault();
         navigateHistory(e.key === "p" ? 1 : -1);
         return;
       }
 
-      // Tab → autocomplete
       if (e.key === "Tab") {
         e.preventDefault();
         applyTabCompletion();
         return;
       }
 
-      // Arrow Up
       if (e.key === "ArrowUp") {
         e.preventDefault();
         if (isOpen && activeIndex > 0) {
@@ -90,7 +85,6 @@ export function useInputHandlers({
         return;
       }
 
-      // Arrow Down
       if (e.key === "ArrowDown") {
         e.preventDefault();
         if (isOpen && activeIndex < suggestionsCount - 1) {
@@ -102,7 +96,6 @@ export function useInputHandlers({
         return;
       }
 
-      // Escape → close popover
       if (e.key === "Escape") {
         if (!isOpen) return;
         e.preventDefault();
@@ -110,11 +103,11 @@ export function useInputHandlers({
         return;
       }
 
-      // Enter → run the highlighted suggestion (or current input) immediately
       if (e.key === "Enter") {
         e.preventDefault();
-        const resolved = isOpen ? applyActiveSuggestion() : null;
-        submit(resolved ?? undefined);
+        const applied = isOpen ? applyActiveSuggestion() : null;
+        if (applied && !applied.run) return;
+        submit(applied?.value);
       }
     },
     [

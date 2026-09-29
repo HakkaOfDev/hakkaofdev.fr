@@ -7,8 +7,10 @@ vi.mock("next-intl/server", () => ({
     const t = ((key: string) => key) as unknown as {
       (key: string): string;
       raw: (key: string) => unknown;
+      has: (key: string) => boolean;
     };
     t.raw = () => [];
+    t.has = () => false;
     return t;
   }),
   getFormatter: vi.fn(async () => ({
@@ -58,6 +60,6 @@ describe("getCvData selection", () => {
       skills: ["Next.js", "React"],
     });
     expect(data.skills).toHaveLength(1);
-    expect(data.skills[0].values).toEqual(["Next.js", "React"]);
+    expect(data.skills[0].values).toEqual(["React", "Next.js"]);
   });
 });

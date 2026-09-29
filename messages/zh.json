@@ -23,10 +23,11 @@
   },
   "Welcome": {
     "greeting": "~ 欢迎 <wave>👋</wave>",
-    "intro": "<tagline>数字游民</tagline> · <job>软件工程师</job> · <freelance>自由职业</freelance>",
+    "intro": "<tagline>数字游民</tagline> · <job>产品工程师</job> · <freelance>自由职业</freelance>",
     "tags": {
       "rate": "600$/天",
       "web": "React/Next.js",
+      "webExpert": "React/Next.js 专家",
       "mobile": "Expo/React Native"
     },
     "sections": {
@@ -139,6 +140,7 @@
       "statsBrowsers": "独立访客的浏览器分布",
       "statsReferrers": "按独立访客数排名的顶部来源主机",
       "statsTrend": "时间窗口内每日访客的迷你趋势图",
+      "statsLast": "按时间范围筛选:24h、7d、30d、90d 或 all",
       "repo": "打开此作品集的源代码仓库",
       "echo": "在终端中打印一条消息",
       "spotifyNow": "显示当前正在播放的歌曲",
@@ -197,6 +199,7 @@
     },
     "stats": {
       "totalCodingTime": "总编程时间",
+      "codingTimeRanged": "编程时间(区间)",
       "topLanguage": "主要语言",
       "githubStars": "GitHub 星标",
       "contributions": "贡献({year})",
@@ -205,6 +208,8 @@
       "visitors": "访客",
       "failed": "无法获取统计数据。请稍后再试。",
       "na": "无",
+      "calculating": "计算中… {percent}%",
+      "noActivity": "无活动",
       "visitorsRanged": "访客(区间)",
       "rangeLabel": "区间:",
       "unknownFlag": "已忽略未知参数: {flag}",
@@ -263,7 +268,11 @@
     },
     "projects": {
       "openLabel": "打开项目：{name}",
-      "noMatches": "没有项目匹配 “{pattern}”。"
+      "noMatches": "没有项目匹配 “{pattern}”。",
+      "details": "查看详情：{name}",
+      "highlights": "亮点",
+      "visit": "访问网站",
+      "close": "关闭"
     },
     "noMatches": "没有匹配 “{pattern}” 的结果。"
   },
@@ -400,8 +409,9 @@
   "CV": {
     "documentTitleSuffix": "简历",
     "subject": "简历",
-    "summary": "拥有 {years} 年以上经验的产品导向型软件工程师,擅长端到端地构建并全权负责单一产品。我在马德里的 Web3 初创公司 Kabila 主导前端工作,从架构、路线图一直到用户能切身感受到的细节,交付了 Web 平台、创作者工具以及原生和浏览器钱包。T 型人才:精通 React、Next.js 和 React Native,在 DevOps、基础设施和产品决策方面也同样得心应手。我以真实的用户影响和长期主人翁意识为目标,而不只是追求整洁的代码。",
+    "summary": "我端到端地设计并构建产品。我曾在马德里 Web3 初创公司 Kabila 全权负责前端 {years} 年以上，将社交平台、NFT 市场、创作者工具以及原生和浏览器钱包从粗略构想打磨为成熟产品。我的工作横跨设计与工程：维护设计系统、梳理产品流程，并构建支撑它们的前端架构。我专注于将复杂的区块链交互转化为简单直观的体验，服务可能初次接触加密货币的用户。在高度自主的环境中我最能发挥作用：快速推进、做出产品决策并对结果负责。",
     "location": "远程",
+    "headline": "产品工程师 - Next.js 专家",
     "sections": {
       "summary": "职业概要",
       "experience": "工作经历",
@@ -419,14 +429,14 @@
       "kabila": {
         "name": "产品工程师",
         "company": "Kabila (Web3 初创公司)",
-        "location": "远程 · 西班牙 马德里",
+        "location": "远程",
         "descriptions": [
-          "四年间全权负责 Kabila Web3 产品的前端:基于 Hedera 的社交平台、NFT 市场、创作者工具,以及原生和浏览器扩展钱包",
-          "主导架构、技术路线图和 Sprint 规划,将模糊的产品目标转化为从 0 到 1 交付的功能",
-          "构建并维护统一所有产品并加快交付的共享组件库和设计系统",
-          "使用 React Native 和 Expo 将原生移动钱包发布到 App Store 和 Google Play",
-          "与产品和设计团队就范围和取舍紧密协作,不仅决定如何构建,更参与决定构建什么",
-          "随着团队壮大,辅导工程师、主持代码评审并制定前端规范"
+          "端到端负责 Kabila 的 Web3 前端，涵盖社交平台、NFT 市场、创作者工具和钱包",
+          "在 Figma 中设计界面，并构建全线产品共用的设计系统与组件库",
+          "设计并上线引导式流程，将复杂的链上操作拆解为非加密用户也能完成的简单步骤",
+          "主导前端架构、技术规划与 Sprint 规划，以快速迭代将功能从构想推向生产环境",
+          "使用 React Native 和 Expo 构建原生钱包，并发布至 App Store 和 Google Play",
+          "与产品和设计相关方直接协作，界定范围、权衡取舍并决定要做什么"
         ]
       },
       "archeMC2": {
@@ -434,10 +444,9 @@
         "company": "Arche MC2",
         "location": "法国沙隆昂香槟",
         "descriptions": [
-          "构建 GitLab CI/CD 流水线用于自动化测试和部署",
-          "使用 Docker 容器化内部应用和服务",
-          "通过 Shell 脚本自动化日常系统管理任务",
-          "监控系统健康并改进基础设施韧性"
+          "构建 GitLab CI/CD 流水线，实现自动化测试与部署",
+          "使用 Docker 将内部应用和服务容器化",
+          "通过 Shell 脚本实现基础设施任务与监控的自动化"
         ]
       },
       "efficienceInformatique": {
@@ -445,9 +454,8 @@
         "company": "Efficience Informatique",
         "location": "Vitry-le-François，法国",
         "descriptions": [
-          "管理 Windows 服务器并支持日常 IT 运营",
-          "为关键业务数据实施和维护备份策略",
-          "在内部基础架构中设置和管理 Hyper-V 虚拟化",
+          "管理内部基础设施中的 Windows 服务器与 Hyper-V 虚拟化",
+          "实施并维护关键业务数据的备份策略",
           "为财务和运营团队使用的 ERP 系统（SAP 和 Sage）提供支持"
         ]
       }
@@ -469,63 +477,119 @@
     "projects": {
       "bravalta": {
         "name": "Bravalta",
-        "description": "专注于 DLT 与 AI 架构的企业咨询公司,提供内置监管合规的区块链与 AI 集成，从战略到生产。"
+        "description": "面向企业的 DLT 与 AI 咨询公司 Bravalta 的官网。",
+        "highlights": [
+          "实现快速页面加载与出色的 SEO：选用 Astro 静态渲染，而非重客户端技术栈",
+          "从概念到上线全面负责 UI/UX，设计并构建所有用户流程",
+          "制作网站的动效设计与动画"
+        ]
       },
       "kabilaApp": {
         "name": "Kabila App",
-        "description": "基于 Hedera 构建的 Web3 社交平台和 NFT 生态系统,具备 NFT 市场、社区广场、发射台和创作者工具。"
+        "description": "Kabila 旗舰 Web3 平台：社交网络、NFT 市场、社区广场、Launchpad 与代币质押。",
+        "highlights": [
+          "将 3 个独立应用整合为一个旗舰产品，端到端主导整个迁移",
+          "由我构建并维护的 NFT 市场累计交易额 $500K+，成交 100K+ 笔",
+          "通过覆盖所有区块链交互的内部共享 SDK，减少 3 个应用间的重复代码",
+          "借助我设计并构建的设计系统和组件库，保持 3 个产品的视觉一致"
+        ]
       },
       "kabilaWalletNative": {
         "name": "Kabila Wallet (Native)",
-        "description": "为 Hedera 网络打造的原生移动钱包，使用 React Native 和 Expo 构建。随时随地管理账户、代币、NFT 并连接 DApp，完全掌控自己的资产。"
+        "description": "Kabila 的 iOS 与 Android 移动钱包：随时随地管理账户、代币、NFT 和dApp 连接。",
+        "highlights": [
+          "将移动钱包从零做到 10K+ 用户，基于 React Native 与 Expo 构建",
+          "在 iOS 与 Android 上发布并维护生产版本：构建、应用商店审核与更新",
+          "设计并实现钱包 UI/UX，让非加密用户也能清楚理解账户、代币和签名",
+          "将主应用的设计语言延伸到原生端，为用户提供一致的 Kabila 体验"
+        ]
       },
       "kabilaTools": {
         "name": "Kabila Tools",
-        "description": "面向 Hedera 创作者和社区的全能 NFT 工具包。强大且易用的平台,可创建、发行和管理 NFT 系列,完全自主可控。"
+        "description": "自助式 NFT 工具套件，帮助创作者和社区创建、发布并管理 NFT 系列。",
+        "highlights": [
+          "负责服务 5K+ 用户的创作者套件前端",
+          "在同一平台上交付 20+ 款创作者工具，覆盖 NFT 系列的完整生命周期",
+          "实现链上发布自助化：创作者无需编写代码，即可通过引导式流程发布 NFT 系列",
+          "为复杂的多步骤流程构建响应式 UI/UX，在任意屏幕尺寸下均保持易用"
+        ]
       },
       "kabilaWallet": {
         "name": "Kabila Wallet (Extension)",
-        "description": "面向 Hedera 网络的非托管、简洁、安全的钱包。管理账户、代币、NFT 并连接 DApp,完全掌控自己的资产。"
+        "description": "Kabila 的非托管浏览器扩展钱包，并基于同一代码库构建移动版。",
+        "highlights": [
+          "发布非托管 Chrome 扩展钱包，获得 2K+ 用户采用",
+          "将安全作为核心要求：密钥始终保存在设备上，所有敏感操作均需用户明确授权",
+          "作为唯一工程师，借助 Capacitor 复用同一套 React 代码库，覆盖桌面端和移动端",
+          "设计连接与授权流程，确保用户始终清楚自己签署的内容"
+        ]
       },
       "ferreiraBorges": {
         "name": "Ferreira Borges Thomas",
-        "description": "汽车维修业务的专业网站,展示服务、透明的价格和联系方式。"
+        "description": "为本地汽车维修店打造的网站。",
+        "highlights": [
+          "端到端交付自由职业项目，从客户需求调研、设计到开发与上线",
+          "构建以转化为核心的页面，提供透明价格、一键拨号和在线询价",
+          "优化本地 SEO，让修车厂出现在周边搜索结果中"
+        ]
       },
       "acVision": {
         "name": "AC-Vision",
-        "description": "DASAN OLT/ONU 监控工具。"
+        "description": "DASAN 光纤网络设备（OLT 与 ONU）实时监控仪表盘。",
+        "highlights": [
+          "通过实时仪表盘，让网络运维人员随时掌握 DASAN 光纤设备状态",
+          "编写通过 SNMP 轮询设备的 Python API，并以 Redis 缓存降低网络设备负载",
+          "使用 Docker 容器化整套技术栈，并通过 GitHub Actions 自动构建镜像"
+        ]
       },
       "brianGravure": {
         "name": "Brian Grav&Style",
-        "description": "为专业雕刻工作室定制的电商平台,包含产品目录、在线下单和订单管理后台。"
+        "description": "为专业雕刻工作室定制的在线商店与订单管理系统。",
+        "highlights": [
+          "为店主提供管理后台，无需开发者即可管理库存、订单和日常运营",
+          "作为自由职业项目，端到端设计并开发定制商店",
+          "集成 Stripe，实现安全的结账与支付"
+        ]
       },
       "portfolioV1": {
         "name": "Portfolio V1",
-        "description": "我之前的作品集网站,使用 Next.js 和 Chakra UI,具备深色主题和流畅动画。"
+        "description": "我之前的作品集网站，现已由这个交互式终端取代。",
+        "highlights": [
+          "使用 Framer Motion 从零打造所有动画，带来流畅、精致的体验",
+          "通过 Raindrop.io API 在网站上展示我精选的书签",
+          "添加 MDX 博客，与作品集一同发布技术文章"
+        ]
       },
       "tsNextKit": {
         "name": "ts-next-chakra-motion-kit",
-        "description": "包含 Next.js、Chakra-UI、Framer-Motion 的 TypeScript 启动套件。提供少量组件、国际化、SEO 等。"
+        "description": "开源 Next.js 入门套件，集成 Chakra UI、Framer Motion 与 TypeScript。",
+        "highlights": [
+          "开源入门套件，帮助 Next.js 网站从零走到可投入生产",
+          "开箱即用：主题、可复用动画组件、i18n、SEO 与站点地图生成",
+          "编写安装、结构与约定文档，便于其他开发者快速上手"
+        ]
       },
       "rtransport": {
         "name": "RT'ransport",
-        "description": "为我 DUT 网络与电信第一年的项目创建的快递平台。"
+        "description": "包裹配送平台，为 DUT Networks & Telecoms（两年制大学文凭）一年级项目而开发。",
+        "highlights": [
+          "设计两个 Flask 服务的架构：版本化 REST API，以及其上的服务端渲染 Tailwind 客户端",
+          "在 PostgreSQL 上用 SQLAlchemy 建模包裹物流领域：包裹、中转点和枢纽",
+          "实现逐跳包裹追踪，并为客户、供应商和运营人员提供专属视图"
+        ]
       }
     },
     "skillGroups": {
       "languages": "语言",
       "frameworks": "框架",
+      "stateData": "状态与数据",
       "uiStyling": "UI / 样式",
       "tooling": "工具",
       "testing": "测试",
       "databases": "数据库",
       "cloud": "云",
-      "vcs": "版本控制",
-      "orm": "ORM",
       "devops": "DevOps",
       "automation": "自动化",
-      "ai": "AI",
-      "stateData": "状态与数据",
       "softSkills": "软技能"
     },
     "spokenLanguages": {

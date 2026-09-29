@@ -99,13 +99,44 @@ describe("useSuggestions", () => {
       helper.result.current.openPopover();
     });
 
-    let returned: string | null = null;
+    let returned: { value: string; run: boolean } | null = null;
     act(() => {
       returned = helper.result.current.applyActiveSuggestion();
     });
-    expect(returned).toBeTruthy();
+    expect(returned).toEqual({ value: helper.getValue(), run: true });
     expect(helper.result.current.isOpen).toBe(false);
-    expect(helper.getValue()).toBe(returned);
+  });
+
+  it("applyActiveSuggestion on a flag types it with a space and keeps the popover open", () => {
+    const helper = setup("stats --l");
+    act(() => {
+      helper.result.current.openPopover();
+    });
+
+    let returned: { value: string; run: boolean } | null = null;
+    act(() => {
+      returned = helper.result.current.applyActiveSuggestion();
+    });
+    expect(returned).toEqual({ value: "stats --last", run: false });
+    expect(helper.getValue()).toBe("stats --last ");
+
+    helper.rerender();
+    expect(helper.result.current.isOpen).toBe(true);
+    expect(helper.result.current.suggestions.map((s) => s.value)).toEqual([
+      "stats --last 24h",
+      "stats --last 7d",
+      "stats --last 30d",
+      "stats --last 90d",
+      "stats --last all",
+    ]);
+  });
+
+  it("Tab on a flag adds a space instead of completing and closing", () => {
+    const helper = setup("stats --la");
+    act(() => {
+      helper.result.current.applyTabCompletion();
+    });
+    expect(helper.getValue()).toBe("stats --last ");
   });
 
   it("includes user-defined aliases in the suggestion pool", () => {
