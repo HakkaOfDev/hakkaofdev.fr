@@ -198,6 +198,7 @@
     },
     "stats": {
       "totalCodingTime": "总编程时间",
+      "codingTimeRanged": "编程时间(区间)",
       "topLanguage": "主要语言",
       "githubStars": "GitHub 星标",
       "contributions": "贡献({year})",
@@ -206,6 +207,8 @@
       "visitors": "访客",
       "failed": "无法获取统计数据。请稍后再试。",
       "na": "无",
+      "calculating": "计算中… {percent}%",
+      "noActivity": "无活动",
       "visitorsRanged": "访客(区间)",
       "rangeLabel": "区间:",
       "unknownFlag": "已忽略未知参数: {flag}",

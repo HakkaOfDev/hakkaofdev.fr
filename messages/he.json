@@ -198,6 +198,7 @@
     },
     "stats": {
       "totalCodingTime": "סה\"כ זמן תכנות",
+      "codingTimeRanged": "זמן תכנות (טווח)",
       "topLanguage": "שפה ראשית",
       "githubStars": "כוכבי GitHub",
       "contributions": "תרומות ({year})",
@@ -206,6 +207,8 @@
       "visitors": "מבקרים",
       "failed": "לא ניתן לטעון את הנתונים. נסה שוב מאוחר יותר.",
       "na": "לא זמין",
+      "calculating": "מחשב… {percent}%",
+      "noActivity": "אין פעילות",
       "visitorsRanged": "מבקרים (טווח)",
       "rangeLabel": "טווח:",
       "unknownFlag": "דגל לא ידוע התעלמו ממנו: {flag}",

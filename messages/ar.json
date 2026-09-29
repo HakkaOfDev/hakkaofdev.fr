@@ -198,6 +198,7 @@
     },
     "stats": {
       "totalCodingTime": "إجمالي وقت البرمجة",
+      "codingTimeRanged": "وقت البرمجة (نطاق)",
       "topLanguage": "اللغة الرئيسية",
       "githubStars": "نجوم GitHub",
       "contributions": "المساهمات ({year})",
@@ -206,6 +207,8 @@
       "visitors": "الزوار",
       "failed": "تعذر تحميل الإحصائيات. حاول لاحقًا.",
       "na": "غير متوفر",
+      "calculating": "جارٍ الحساب… {percent}%",
+      "noActivity": "لا يوجد نشاط",
       "visitorsRanged": "الزوار (نطاق)",
       "rangeLabel": "النطاق:",
       "unknownFlag": "تم تجاهل علامة غير معروفة: {flag}",

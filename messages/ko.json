@@ -198,6 +198,7 @@
     },
     "stats": {
       "totalCodingTime": "총 코딩 시간",
+      "codingTimeRanged": "코딩 시간 (기간)",
       "topLanguage": "주요 언어",
       "githubStars": "GitHub 스타",
       "contributions": "기여 ({year})",
@@ -206,6 +207,8 @@
       "visitors": "방문자",
       "failed": "통계를 가져올 수 없습니다. 나중에 다시 시도하세요.",
       "na": "없음",
+      "calculating": "계산 중… {percent}%",
+      "noActivity": "활동 없음",
       "visitorsRanged": "방문자 (기간)",
       "rangeLabel": "기간:",
       "unknownFlag": "알 수 없는 플래그를 무시했습니다: {flag}",

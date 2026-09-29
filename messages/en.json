@@ -198,6 +198,7 @@
     },
     "stats": {
       "totalCodingTime": "Total Coding Time",
+      "codingTimeRanged": "Coding Time (range)",
       "topLanguage": "Top Language",
       "githubStars": "GitHub Stars",
       "contributions": "Contributions ({year})",
@@ -207,6 +208,8 @@
       "visitorsRanged": "Visitors (range)",
       "failed": "Failed to fetch stats. Try again later.",
       "na": "N/A",
+      "calculating": "Calculating… {percent}%",
+      "noActivity": "No activity",
       "rangeLabel": "Range:",
       "unknownFlag": "Ignored unknown flag: {flag}",
       "unknownSub": "Unknown sub-command: {sub}. Use one of: {options}.",

@@ -198,6 +198,7 @@
     },
     "stats": {
       "totalCodingTime": "Totale programmeertijd",
+      "codingTimeRanged": "Programmeertijd (periode)",
       "topLanguage": "Hoofdtaal",
       "githubStars": "GitHub-sterren",
       "contributions": "Bijdragen ({year})",
@@ -206,6 +207,8 @@
       "visitors": "Bezoekers",
       "failed": "Statistieken konden niet worden opgehaald. Probeer het later opnieuw.",
       "na": "N.v.t.",
+      "calculating": "Bezig met berekenen… {percent}%",
+      "noActivity": "Geen activiteit",
       "visitorsRanged": "Bezoekers (periode)",
       "rangeLabel": "Periode:",
       "unknownFlag": "Onbekende vlag genegeerd: {flag}",

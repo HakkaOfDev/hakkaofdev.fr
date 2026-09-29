@@ -198,6 +198,7 @@
     },
     "stats": {
       "totalCodingTime": "Tổng thời gian lập trình",
+      "codingTimeRanged": "Thời gian lập trình (khoảng)",
       "topLanguage": "Ngôn ngữ chính",
       "githubStars": "Sao GitHub",
       "contributions": "Đóng góp ({year})",
@@ -206,6 +207,8 @@
       "visitors": "Khách truy cập",
       "failed": "Không thể tải số liệu thống kê. Hãy thử lại sau.",
       "na": "Không có",
+      "calculating": "Đang tính… {percent}%",
+      "noActivity": "Không có hoạt động",
       "visitorsRanged": "Khách truy cập (khoảng)",
       "rangeLabel": "Khoảng:",
       "unknownFlag": "Đã bỏ qua cờ không xác định: {flag}",

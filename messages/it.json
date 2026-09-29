@@ -198,6 +198,7 @@
     },
     "stats": {
       "totalCodingTime": "Tempo totale di sviluppo",
+      "codingTimeRanged": "Tempo di sviluppo (intervallo)",
       "topLanguage": "Linguaggio principale",
       "githubStars": "Stelle GitHub",
       "contributions": "Contributi ({year})",
@@ -206,6 +207,8 @@
       "visitors": "Visitatori",
       "failed": "Impossibile recuperare le statistiche. Riprova più tardi.",
       "na": "N/D",
+      "calculating": "Calcolo in corso… {percent}%",
+      "noActivity": "Nessuna attività",
       "visitorsRanged": "Visitatori (intervallo)",
       "rangeLabel": "Intervallo:",
       "unknownFlag": "Flag sconosciuto ignorato: {flag}",
