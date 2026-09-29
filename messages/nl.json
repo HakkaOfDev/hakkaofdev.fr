@@ -139,6 +139,7 @@
       "statsBrowsers": "Browserverdeling voor unieke bezoekers",
       "statsReferrers": "Top verwijzende hosts gerangschikt op unieke bezoekers",
       "statsTrend": "Sparkline van dagelijkse bezoekers binnen een periode",
+      "statsLast": "Filteren op periode: 24h, 7d, 30d, 90d of all",
       "repo": "Open de broncode van dit portfolio",
       "echo": "Print een bericht in de terminal",
       "spotifyNow": "Toon het nu spelende nummer",

@@ -139,6 +139,7 @@
       "statsBrowsers": "Browser breakdown for unique visitors",
       "statsReferrers": "Top referrer hosts ranked by unique visitors",
       "statsTrend": "Daily visitor sparkline over a time window",
+      "statsLast": "Filter by time range: 24h, 7d, 30d, 90d or all",
       "repo": "Open the source code of this portfolio repository",
       "echo": "Print a message to the terminal",
       "spotifyNow": "Display the currently playing song",

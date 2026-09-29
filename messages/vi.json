@@ -139,6 +139,7 @@
       "statsBrowsers": "Phân bổ trình duyệt theo khách truy cập duy nhất",
       "statsReferrers": "Các host giới thiệu hàng đầu theo khách truy cập duy nhất",
       "statsTrend": "Sparkline khách truy cập hằng ngày trong khoảng thời gian",
+      "statsLast": "Lọc theo khoảng thời gian: 24h, 7d, 30d, 90d hoặc all",
       "repo": "Mở mã nguồn portfolio này",
       "echo": "In thông báo trong terminal",
       "spotifyNow": "Hiển thị bài hát đang phát",

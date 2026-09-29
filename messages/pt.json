@@ -139,6 +139,7 @@
       "statsBrowsers": "Distribuição de navegadores por visitantes únicos",
       "statsReferrers": "Principais hosts referenciadores por visitantes únicos",
       "statsTrend": "Sparkline de visitantes diários ao longo de um período",
+      "statsLast": "Filtrar por período: 24h, 7d, 30d, 90d ou all",
       "repo": "Abrir o código-fonte deste portfólio",
       "echo": "Imprimir uma mensagem no terminal",
       "spotifyNow": "Mostrar a música em reprodução",

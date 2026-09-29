@@ -139,6 +139,7 @@
       "statsBrowsers": "Distribuția browserelor pe vizitatori unici",
       "statsReferrers": "Cele mai importante gazde referente după vizitatori unici",
       "statsTrend": "Sparkline cu vizitatori zilnici pe o perioadă selectată",
+      "statsLast": "Filtrează după perioadă: 24h, 7d, 30d, 90d sau all",
       "repo": "Deschide codul sursă al acestui portofoliu",
       "echo": "Afișează un mesaj în terminal",
       "spotifyNow": "Afișează melodia care se redă acum",

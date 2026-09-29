@@ -139,6 +139,7 @@
       "statsBrowsers": "Browser-Aufschlüsselung für eindeutige Besucher",
       "statsReferrers": "Top-Referrer-Hosts sortiert nach eindeutigen Besuchern",
       "statsTrend": "Sparkline der täglichen Besucher über einen Zeitraum",
+      "statsLast": "Nach Zeitraum filtern: 24h, 7d, 30d, 90d oder all",
       "repo": "Quellcode dieses Portfolios öffnen",
       "echo": "Eine Nachricht im Terminal ausgeben",
       "spotifyNow": "Aktuell laufenden Song anzeigen",

@@ -139,6 +139,7 @@
       "statsBrowsers": "고유 방문자의 브라우저 분포",
       "statsReferrers": "고유 방문자 수 기준 상위 리퍼러 호스트",
       "statsTrend": "기간 내 일별 방문자 스파크라인",
+      "statsLast": "기간으로 필터링: 24h, 7d, 30d, 90d 또는 all",
       "repo": "이 포트폴리오의 소스 코드 열기",
       "echo": "터미널에 메시지 출력",
       "spotifyNow": "현재 재생 중인 곡 표시",
