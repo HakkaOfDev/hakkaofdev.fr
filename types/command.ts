@@ -85,3 +85,16 @@ export type DynamicParamConfig = {
   /** Group this command belongs to */
   group: CommandGroup;
 };
+
+/** A `--flag <value>` a command accepts, used for autocomplete. */
+export type CommandFlagConfig = {
+  /** Base command the flag applies to, including its sub-commands (e.g. "stats"). */
+  command: string;
+  /** Flag token, e.g. "--last". */
+  flag: string;
+  /** Values suggested after the flag. */
+  values: readonly string[];
+  /** Key under `Commands.descriptions.*` describing the flag. */
+  slug: string;
+  group: CommandGroup;
+};

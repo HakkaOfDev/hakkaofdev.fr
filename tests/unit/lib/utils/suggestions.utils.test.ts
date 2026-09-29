@@ -1,13 +1,16 @@
 import { describe, expect, it } from "vitest";
 import { ALL_COMMANDS } from "@/lib/command-descriptors";
+import { parseStatsArgs } from "@/lib/utils/stats-args.utils";
 import {
   buildSuggestionPool,
   calculateTabCompletion,
   filterSuggestions,
   getDefaultSuggestions,
+  getFlagSuggestions,
   getSubcommandSuggestions,
   longestCommonPrefix,
 } from "@/lib/utils/suggestions.utils";
+import { STATS_RANGE_FLAG_VALUES } from "@/types/analytics";
 
 describe("longestCommonPrefix", () => {
   it("returns empty for empty list", () => {
@@ -122,5 +125,77 @@ describe("calculateTabCompletion", () => {
   it("returns no_action when nothing to complete", () => {
     const result = calculateTabCompletion("zzzzzz", []);
     expect(result.type).toBe("no_action");
+  });
+});
+
+describe("getFlagSuggestions", () => {
+  const pool = buildSuggestionPool();
+  const values = (query: string) =>
+    getFlagSuggestions(query, pool)?.map((s) => s.value) ?? null;
+
+  it("ignores commands without flags", () => {
+    expect(values("theme ")).toBeNull();
+  });
+
+  it("lists sub-commands and flags after `stats `", () => {
+    expect(values("stats ")).toEqual([
+      "stats browsers",
+      "stats countries",
+      "stats referrers",
+      "stats trend",
+      "stats --last",
+    ]);
+  });
+
+  it("marks value-taking flags so selecting them waits for a value", () => {
+    const [flag] = getFlagSuggestions("stats -", pool) ?? [];
+    expect(flag).toMatchObject({
+      value: "stats --last",
+      slug: "statsLast",
+      needsValue: true,
+    });
+  });
+
+  it("suggests flags after a sub-command", () => {
+    expect(values("stats trend ")).toEqual(["stats trend --last"]);
+    expect(values("stats trend --l")).toEqual(["stats trend --last"]);
+  });
+
+  it("suggests and filters flag values", () => {
+    expect(values("stats trend --last ")).toEqual([
+      "stats trend --last 24h",
+      "stats trend --last 7d",
+      "stats trend --last 30d",
+      "stats trend --last 90d",
+      "stats trend --last all",
+    ]);
+    expect(values("stats --last 9")).toEqual(["stats --last 90d"]);
+  });
+
+  it("offers sub-commands after a flag, but not a used flag", () => {
+    expect(values("stats --last 7d ")).toEqual([
+      "stats --last 7d browsers",
+      "stats --last 7d countries",
+      "stats --last 7d referrers",
+      "stats --last 7d trend",
+    ]);
+    expect(values("stats --last 7d co")).toEqual(["stats --last 7d countries"]);
+    expect(values("stats trend --last 7d ")).toEqual([]);
+  });
+
+  it("defers plain sub-command typing and pipelines to other matchers", () => {
+    expect(values("stats co")).toBeNull();
+    expect(values("stats | grep ")).toBeNull();
+  });
+});
+
+describe("flag values", () => {
+  it("every suggested --last value is accepted by the stats parser", () => {
+    for (const v of STATS_RANGE_FLAG_VALUES) {
+      expect(parseStatsArgs(`stats --last ${v}`)).toMatchObject({
+        range: expect.any(String),
+        unknown: [],
+      });
+    }
   });
 });
