@@ -25,6 +25,7 @@ const cspDirectives = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  allowedDevOrigins: process.env.ALLOWED_DEV_ORIGINS?.split(",") ?? [],
   outputFileTracingIncludes: {
     "/api/cv": ["./public/avatar.jpg"],
   },
