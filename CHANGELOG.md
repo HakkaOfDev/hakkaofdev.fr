@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.18.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.17.0...v1.18.0) (2026-09-29)
+
+
+### Features
+
+* **content:** rewrite CV copy and add project highlights ([493facf](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/493facf802224ef3c5a0da1d84275efcedbc6f15))
+* **cv-pdf:** redesign PDF with photo, highlights and projects page ([d1e8c93](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/d1e8c93db6353650ea99a37eb820754c0b44f11a))
+* **cv:** collapse CV params and use a switch for download ([457c393](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/457c393978cb88a2d1a05adab9c8eece3b5a8ffd))
+* **i18n:** add ranged coding time and calculating labels ([7700a59](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/7700a59a2e399f6b5f79f4cde7d8ba667885bb6f))
+* **i18n:** describe the stats --last flag ([14c64c1](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/14c64c118b32a217762ec2f45c8582d3faa25cc0))
+* **projects:** show project details in a dialog ([e1523c7](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e1523c7338993877c88f54c9f6d82c77de9ef4b7))
+* **stats:** fetch wakatime stats for the selected range ([bee0722](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/bee0722d530b1da7fbed78220c3ce46f56ea2537))
+* **terminal:** suggest --last flag and range values for stats ([09528f4](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/09528f4ba6af98da52c4ddae1defed8691ce37db))
+* **ui:** add Switch and Collapsible components ([c327b5c](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/c327b5c98cdb9d9a3936b19232765a53fcf86c75))
+
+
+### Bug Fixes
+
+* **analytics:** drop apex and www self-referrals from referrers ([b240429](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/b240429acbab398b9ac4db467eddd69a4b2c0f11))
+
+
+### Styles
+
+* **ui:** theme native selects in dark mode and use primary dialog border ([933a056](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/933a05687f438356fda49398501a45f2f4ad20ff))
+
+
+### Miscellaneous
+
+* **config:** read allowed dev origins from ALLOWED_DEV_ORIGINS ([cb807a4](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/cb807a459399dabf311ed4c050d12fe23ad83be3))
+
+
+### Code Refactoring
+
+* **theme:** use Switch in the theme creator ([e4d039d](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e4d039d5e54b3a1f374efbf9e3673ff08d4925e0))
+
 ## [1.17.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.16.0...v1.17.0) (2026-09-01)
 
 
