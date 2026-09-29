@@ -8,7 +8,7 @@ import { WakaTimeService } from "./wakatime";
 async function getStats(range: StatsRange = "all"): Promise<StatsData> {
   const [wakatime, totalStars, contributions, codingSince, uniqueVisitors] =
     await Promise.all([
-      WakaTimeService.getStats(),
+      WakaTimeService.getStats(range),
       GitHubService.getTotalStars(),
       GitHubService.getContributions(),
       GitHubService.getCodingSince(),

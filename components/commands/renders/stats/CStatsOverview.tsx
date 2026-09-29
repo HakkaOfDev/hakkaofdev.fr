@@ -119,18 +119,28 @@ function StatsContent({
       })
     : null;
   const visitorsLabel = range === "all" ? t("visitors") : t("visitorsRanged");
+  const codingTimeLabel =
+    range === "all" ? t("totalCodingTime") : t("codingTimeRanged");
+
+  const { wakatime } = data;
+  const calculating =
+    wakatime.calculatingPercent !== null
+      ? t("calculating", { percent: wakatime.calculatingPercent })
+      : null;
+  const noActivity =
+    range !== "all" && wakatime.codingTime !== null ? t("noActivity") : null;
 
   const stats: StatCardProps[] = [
     {
       icon: <Clock size={16} />,
-      label: t("totalCodingTime"),
-      value: data.wakatime.codingTime,
+      label: codingTimeLabel,
+      value: calculating ?? wakatime.codingTime,
       color: "teal",
     },
     {
       icon: <Code size={16} />,
       label: t("topLanguage"),
-      value: data.wakatime.topLanguage,
+      value: calculating ?? wakatime.topLanguage ?? noActivity,
       color: "purple",
     },
     {
