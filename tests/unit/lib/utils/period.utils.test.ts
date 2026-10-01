@@ -4,6 +4,7 @@ import {
   comparePeriodsDesc,
   completedYearsSince,
   formatPeriod,
+  formatPeriodParts,
 } from "@/lib/utils/period.utils";
 import enMessages from "@/messages/en.json";
 import frMessages from "@/messages/fr.json";
@@ -60,6 +61,22 @@ describe("formatPeriod", () => {
     expect(
       formatPeriod({ start: "2022-09", end: "2023-08" }, fr.format, fr.t),
     ).toBe("septembre 2022 - août 2023 (1\u00a0an)");
+  });
+});
+
+describe("formatPeriodParts", () => {
+  const { format, t } = makeHelpers("en", enMessages);
+
+  it("splits the date range from the duration", () => {
+    expect(
+      formatPeriodParts({ start: "2022-09", end: "2023-08" }, format, t),
+    ).toEqual({ range: "September 2022 - August 2023", duration: "1 yr" });
+  });
+
+  it("has no duration without month precision", () => {
+    expect(
+      formatPeriodParts({ start: "2020", end: "2022" }, format, t),
+    ).toEqual({ range: "2020 - 2022", duration: null });
   });
 });
 

@@ -103,17 +103,33 @@ function formatDuration(months: number, format: IntlFormatter): string {
   return parts.join(" ");
 }
 
+/**
+ * The two halves of a rendered period: the localized date `range` and the
+ * elapsed `duration` (`null` when either bound lacks month precision), for
+ * layouts that style them separately.
+ */
+export function formatPeriodParts(
+  period: Period,
+  format: IntlFormatter,
+  t: PeriodTranslator,
+  now: Date = new Date(),
+): { range: string; duration: string | null } {
+  const start = formatPeriodDate(period.start, format);
+  const range = period.end
+    ? `${start} - ${formatPeriodDate(period.end, format)}`
+    : t("since", { date: start });
+  const months = countMonths(period, now);
+  const duration =
+    months === null || months < 1 ? null : formatDuration(months, format);
+  return { range, duration };
+}
+
 export function formatPeriod(
   period: Period,
   format: IntlFormatter,
   t: PeriodTranslator,
   now: Date = new Date(),
 ): string {
-  const start = formatPeriodDate(period.start, format);
-  const base = period.end
-    ? `${start} - ${formatPeriodDate(period.end, format)}`
-    : t("since", { date: start });
-  const months = countMonths(period, now);
-  if (months === null || months < 1) return base;
-  return `${base} (${formatDuration(months, format)})`;
+  const { range, duration } = formatPeriodParts(period, format, t, now);
+  return duration ? `${range} (${duration})` : range;
 }

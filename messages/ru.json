@@ -182,20 +182,16 @@
       "subcommand": "подкоманда"
     },
     "about": {
-      "firstName": "Имя",
-      "lastName": "Фамилия",
-      "age": "Возраст",
       "yearsOld": "{years, plural, one {# год} few {# года} other {# лет}}",
-      "location": "Местоположение",
       "email": "Email",
       "languages": "Языки",
       "hobbies": "Увлечения"
     },
     "contact": {
       "intro": "Для предложений, фриланса или техсотрудничества предпочитаю email.",
-      "primaryEmail": "Основной email:",
-      "location": "Местоположение:",
-      "socialProfiles": "Соцсети:"
+      "primaryEmail": "Основной email",
+      "location": "Местоположение",
+      "socialProfiles": "Соцсети"
     },
     "stats": {
       "totalCodingTime": "Общее время кодинга",
@@ -242,13 +238,15 @@
       "starsLabel": "Звёзды",
       "forksLabel": "Форки",
       "licenseLabel": "Лицензия",
-      "copyAria": "Скопировать в буфер обмена",
+      "fallback": "Исходный код этого портфолио доступен здесь:"
+    },
+    "clipboard": {
       "copy": "Копировать",
+      "copyAria": "Скопировать в буфер обмена",
       "copiedAria": "Скопировано",
       "copiedNotice": "Скопировано!",
       "copyFailedAria": "Ошибка копирования",
-      "copyFailedNotice": "Повторить",
-      "fallback": "Исходный код этого портфолио доступен здесь:"
+      "copyFailedNotice": "Повторить"
     },
     "cv": {
       "description": "Моё резюме в PDF",
@@ -271,6 +269,15 @@
       "noMatches": "Нет проектов, соответствующих «{pattern}».",
       "details": "Подробнее: {name}",
       "highlights": "Ключевые моменты",
+      "visit": "Открыть сайт",
+      "close": "Закрыть"
+    },
+    "experiences": {
+      "details": "Подробнее: {name}",
+      "highlights": "Ключевые моменты",
+      "projects": "Проекты",
+      "skills": "Навыки",
+      "recommendations": "Рекомендации",
       "visit": "Открыть сайт",
       "close": "Закрыть"
     },
@@ -694,11 +701,11 @@
       "frameworks": "Фреймворки",
       "stateData": "Состояние и данные",
       "uiStyling": "UI / Стилизация",
+      "blockchain": "Блокчейн",
       "tooling": "Инструменты",
       "testing": "Тестирование",
       "databases": "Базы данных",
-      "cloud": "Облако",
-      "devops": "DevOps",
+      "devops": "DevOps и облако",
       "automation": "Автоматизация",
       "softSkills": "Гибкие навыки"
     },

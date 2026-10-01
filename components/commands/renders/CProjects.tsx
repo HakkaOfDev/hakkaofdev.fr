@@ -1,22 +1,20 @@
 "use client";
 
-import { ArrowUpRight, X } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { AnimatedSpan, RevealGroup } from "@/components/AnimatedComponents";
+import {
+  DetailBullets,
+  DetailDialog,
+  DetailSection,
+} from "@/components/commands/renders/DetailDialog";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
-import { useTerminal } from "@/components/providers/TerminalProvider";
-import { Dialog } from "@/components/ui/Dialog";
 import { Tag } from "@/components/ui/Tag";
 import { PROJECTS } from "@/lib/constants";
 import type { ProjectEntry } from "@/lib/constants/projects.constants";
 import { cn } from "@/lib/utils";
 import { matchesGrep } from "@/lib/utils/grep.utils";
-
-const ICON_BUTTON_CLASS =
-  "inline-flex h-7 w-7 cursor-pointer items-center justify-center rounded-md border border-border/60 bg-background/45 text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground dark:border-overlay-medium dark:hover:bg-overlay-medium";
 
 function ProjectImage({
   project,
@@ -56,7 +54,6 @@ function ProjectDialog({
 }) {
   const tProjects = useTranslations("CV.projects");
   const tCommands = useTranslations("Commands.projects");
-  const { fontFamilyStack, fontScale } = useTerminal();
 
   const slug = project?.slug;
   const name = slug ? tProjects(`${slug}.name` as never) : "";
@@ -68,43 +65,21 @@ function ProjectDialog({
   const host = project?.url?.replace(/^https?:\/\/(www\.)?/, "");
 
   return (
-    <Dialog
+    <DetailDialog
       open={open && project !== null}
-      onOpenChange={(open) => !open && onClose()}
+      onClose={onClose}
       title={name}
       description={host}
-      headerActions={
-        <>
-          {project?.url ? (
-            <Link
-              href={project.url}
-              target="_blank"
-              className={ICON_BUTTON_CLASS}
-              title={tCommands("visit")}
-              aria-label={tCommands("openLabel", { name })}
-            >
-              <ArrowUpRight size={12} />
-            </Link>
-          ) : null}
-          <button
-            type="button"
-            onClick={onClose}
-            className={ICON_BUTTON_CLASS}
-            title={tCommands("close")}
-            aria-label={tCommands("close")}
-          >
-            <X size={12} />
-          </button>
-        </>
+      link={
+        project?.url
+          ? {
+              href: project.url,
+              title: tCommands("visit"),
+              label: tCommands("openLabel", { name }),
+            }
+          : undefined
       }
-      className="w-full max-w-lg rounded-xl border-primary/40 bg-background p-4 shadow-primary/5 shadow-xl sm:p-5"
-      style={
-        {
-          "--terminal-font-family": fontFamilyStack,
-          "--terminal-zoom": String(fontScale / 100),
-          fontFamily: fontFamilyStack,
-        } as React.CSSProperties
-      }
+      closeLabel={tCommands("close")}
     >
       {project && slug ? (
         <div className="space-y-4">
@@ -123,25 +98,13 @@ function ProjectDialog({
             ))}
           </div>
           {highlights.length > 0 && (
-            <div className="space-y-2 rounded-xl border border-border/50 bg-background/30 p-3 dark:border-overlay-medium">
-              <p className="font-medium text-muted-foreground text-xs">
-                {tCommands("highlights")}
-              </p>
-              <ul className="space-y-1.5 text-xs">
-                {highlights.map((highlight) => (
-                  <li key={highlight} className="flex gap-2">
-                    <span aria-hidden className="text-primary">
-                      ›
-                    </span>
-                    <span>{highlight}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <DetailSection title={tCommands("highlights")}>
+              <DetailBullets items={highlights} />
+            </DetailSection>
           )}
         </div>
       ) : null}
-    </Dialog>
+    </DetailDialog>
   );
 }
 

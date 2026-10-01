@@ -1,20 +1,12 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import {
-  Check,
-  Circle,
-  Copy,
-  ExternalLink,
-  GitFork,
-  Scale,
-  Star,
-} from "lucide-react";
+import { Circle, ExternalLink, GitFork, Scale, Star } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useCallback, useState } from "react";
 import { getGitHubRepo } from "@/app/actions";
 import { AnimatedSpan, RevealSwap } from "@/components/AnimatedComponents";
+import { CopyButton } from "@/components/commands/renders/CopyButton";
 import { GithubIcon } from "@/components/icons/brand";
 import { Tag } from "@/components/ui/Tag";
 import { SITE } from "@/lib/constants";
@@ -24,42 +16,6 @@ import type { GitHubRepo } from "@/types/github";
 function formatCount(count: number): string {
   if (count >= 1000) return `${(count / 1000).toFixed(1)}k`;
   return count.toString();
-}
-
-function CopyButton({ text }: { text: string }) {
-  const t = useTranslations("Commands.repo");
-  const [status, setStatus] = useState<"idle" | "copied" | "failed">("idle");
-
-  const handleCopy = useCallback(async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setStatus("copied");
-    } catch {
-      setStatus("failed");
-    }
-
-    setTimeout(() => setStatus("idle"), 2000);
-  }, [text]);
-
-  return (
-    <button
-      type="button"
-      onClick={handleCopy}
-      className="inline-flex cursor-pointer items-center gap-1 rounded-md bg-primary/10 px-2 py-1 font-medium text-primary text-xs ring-1 ring-primary/20 ring-inset transition-colors duration-200 hover:bg-primary/20"
-      aria-label={
-        status === "copied"
-          ? t("copiedAria")
-          : status === "failed"
-            ? t("copyFailedAria")
-            : t("copyAria")
-      }
-    >
-      {status === "copied" ? <Check size={12} /> : <Copy size={12} />}
-      {status === "copied" && t("copiedNotice")}
-      {status === "failed" && t("copyFailedNotice")}
-      {status === "idle" && t("copy")}
-    </button>
-  );
 }
 
 function Stat({

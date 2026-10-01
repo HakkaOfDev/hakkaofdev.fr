@@ -1,9 +1,78 @@
 "use client";
 
+import { m, useReducedMotion } from "motion/react";
 import { useTranslations } from "next-intl";
-import { AnimatedSpan, TypeLines } from "@/components/AnimatedComponents";
+import {
+  AnimatedSpan,
+  type TypedProgress,
+  TypeStep,
+  typedStep,
+  useTypedGroups,
+} from "@/components/AnimatedComponents";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
+import { Tag } from "@/components/ui/Tag";
+import { revealItemVariants } from "@/lib/animation/motion";
 import { SKILLS } from "@/lib/constants";
+import { SOFT_SKILLS_SLUG } from "@/lib/constants/skills.constants";
+import { cn } from "@/lib/utils";
+
+type VisibleSkillGroup = {
+  slug: string;
+  label: string;
+  values: string[];
+};
+
+const LABEL_STEPS = 1;
+
+function SkillGroupCard({
+  group,
+  grep,
+  progress,
+}: {
+  group: VisibleSkillGroup;
+  grep: string;
+  progress: TypedProgress;
+}) {
+  const prefersReduced = useReducedMotion();
+  if (progress.typed === 0) return null;
+
+  return (
+    <m.section
+      className={cn(
+        "flex flex-col gap-2 rounded-lg border border-border/60 @md:p-3 p-2.5 dark:border-overlay-medium",
+        group.slug === SOFT_SKILLS_SLUG && "@md:col-span-2",
+      )}
+      variants={revealItemVariants}
+      initial={prefersReduced ? false : "hidden"}
+      animate="visible"
+    >
+      <TypeStep
+        as="p"
+        className="font-semibold text-foreground"
+        {...typedStep(progress, 0)}
+      >
+        {group.label}
+      </TypeStep>
+      <div className="flex flex-wrap gap-1">
+        {group.values.map((value, index) => (
+          <TypeStep
+            key={value}
+            as="span"
+            className="inline-flex items-center"
+            {...typedStep(progress, LABEL_STEPS + index)}
+          >
+            <Tag
+              label={value}
+              variant={
+                grep && value.toLowerCase().includes(grep) ? "teal" : "default"
+              }
+            />
+          </TypeStep>
+        ))}
+      </div>
+    </m.section>
+  );
+}
 
 function CSkills() {
   const t = useTranslations("CV.skillGroups");
@@ -11,20 +80,22 @@ function CSkills() {
   const grep = useGrep();
   const grepRaw = useGrepRaw();
 
-  const groups = SKILLS.map((group) => {
-    const groupLabel = t(group.slug as never) as string;
-    const values = grep
-      ? group.values.filter((v) => v.toLowerCase().includes(grep))
-      : group.values;
-    const groupMatches = grep ? groupLabel.toLowerCase().includes(grep) : false;
-    // Show the group if either its label matches (then keep all values) or any of its values match.
+  const groups: VisibleSkillGroup[] = SKILLS.map((group) => {
+    const label = t(group.slug as never) as string;
+    const matchingValues = group.values.filter((value) =>
+      value.toLowerCase().includes(grep),
+    );
+    const labelMatches = grep !== "" && label.toLowerCase().includes(grep);
     return {
       slug: group.slug,
-      label: groupLabel,
-      values: groupMatches ? group.values : values,
-      visible: !grep || groupMatches || values.length > 0,
+      label,
+      values: labelMatches ? group.values : matchingValues,
     };
-  }).filter((g) => g.visible);
+  }).filter((group) => group.values.length > 0);
+
+  const progress = useTypedGroups(
+    groups.map((group) => LABEL_STEPS + group.values.length),
+  );
 
   if (grep && groups.length === 0) {
     return (
@@ -37,15 +108,18 @@ function CSkills() {
   }
 
   return (
-    <TypeLines
-      className="gap-3"
-      lines={groups.map((group) => (
-        <div key={group.slug}>
-          <p className="font-semibold text-sm">{group.label}</p>
-          <p className="text-muted-foreground">{group.values.join(", ")}</p>
-        </div>
-      ))}
-    />
+    <AnimatedSpan className="@container">
+      <div className="grid @md:grid-cols-2 gap-2">
+        {groups.map((group, index) => (
+          <SkillGroupCard
+            key={group.slug}
+            group={group}
+            grep={grep}
+            progress={progress[index]}
+          />
+        ))}
+      </div>
+    </AnimatedSpan>
   );
 }
 

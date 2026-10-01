@@ -182,20 +182,16 @@
       "subcommand": "하위 명령"
     },
     "about": {
-      "firstName": "이름",
-      "lastName": "성",
-      "age": "나이",
       "yearsOld": "{years}세",
-      "location": "위치",
       "email": "이메일",
       "languages": "언어",
       "hobbies": "취미"
     },
     "contact": {
       "intro": "기회, 프리랜서 의뢰, 기술 협업은 이메일을 선호합니다.",
-      "primaryEmail": "주 이메일:",
-      "location": "위치:",
-      "socialProfiles": "SNS 프로필:"
+      "primaryEmail": "주 이메일",
+      "location": "위치",
+      "socialProfiles": "SNS 프로필"
     },
     "stats": {
       "totalCodingTime": "총 코딩 시간",
@@ -242,13 +238,15 @@
       "starsLabel": "스타",
       "forksLabel": "포크",
       "licenseLabel": "라이선스",
-      "copyAria": "클립보드에 복사",
+      "fallback": "이 포트폴리오의 소스 코드는 여기에 있습니다:"
+    },
+    "clipboard": {
       "copy": "복사",
+      "copyAria": "클립보드에 복사",
       "copiedAria": "복사됨",
       "copiedNotice": "복사됨!",
       "copyFailedAria": "복사 실패",
-      "copyFailedNotice": "다시 시도",
-      "fallback": "이 포트폴리오의 소스 코드는 여기에 있습니다:"
+      "copyFailedNotice": "다시 시도"
     },
     "cv": {
       "description": "내 이력서 PDF",
@@ -271,6 +269,15 @@
       "noMatches": "“{pattern}”과 일치하는 프로젝트가 없습니다.",
       "details": "자세히 보기: {name}",
       "highlights": "하이라이트",
+      "visit": "웹사이트 방문",
+      "close": "닫기"
+    },
+    "experiences": {
+      "details": "자세히 보기: {name}",
+      "highlights": "하이라이트",
+      "projects": "프로젝트",
+      "skills": "역량",
+      "recommendations": "추천서",
       "visit": "웹사이트 방문",
       "close": "닫기"
     },
@@ -694,11 +701,11 @@
       "frameworks": "프레임워크",
       "stateData": "상태 및 데이터",
       "uiStyling": "UI / 스타일",
+      "blockchain": "블록체인",
       "tooling": "도구",
       "testing": "테스팅",
       "databases": "데이터베이스",
-      "cloud": "클라우드",
-      "devops": "DevOps",
+      "devops": "DevOps 및 클라우드",
       "automation": "자동화",
       "softSkills": "소프트 스킬"
     },

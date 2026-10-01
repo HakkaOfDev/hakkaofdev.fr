@@ -182,20 +182,16 @@
       "subcommand": "υποεντολή"
     },
     "about": {
-      "firstName": "Όνομα",
-      "lastName": "Επώνυμο",
-      "age": "Ηλικία",
       "yearsOld": "{years, plural, one {# χρόνος} other {# χρόνια}}",
-      "location": "Τοποθεσία",
       "email": "Email",
       "languages": "Γλώσσες",
       "hobbies": "Χόμπι"
     },
     "contact": {
       "intro": "Προτιμώ το email για ευκαιρίες, αιτήματα freelance ή τεχνική συνεργασία.",
-      "primaryEmail": "Κύριο email:",
-      "location": "Τοποθεσία:",
-      "socialProfiles": "Κοινωνικά προφίλ:"
+      "primaryEmail": "Κύριο email",
+      "location": "Τοποθεσία",
+      "socialProfiles": "Κοινωνικά προφίλ"
     },
     "stats": {
       "totalCodingTime": "Συνολικός χρόνος κώδικα",
@@ -242,13 +238,15 @@
       "starsLabel": "Αστέρια",
       "forksLabel": "Forks",
       "licenseLabel": "Άδεια",
-      "copyAria": "Αντιγραφή στο πρόχειρο",
+      "fallback": "Ο πηγαίος κώδικας αυτού του portfolio είναι διαθέσιμος εδώ:"
+    },
+    "clipboard": {
       "copy": "Αντιγραφή",
+      "copyAria": "Αντιγραφή στο πρόχειρο",
       "copiedAria": "Αντιγράφηκε",
       "copiedNotice": "Αντιγράφηκε!",
       "copyFailedAria": "Αποτυχία αντιγραφής",
-      "copyFailedNotice": "Επανάληψη",
-      "fallback": "Ο πηγαίος κώδικας αυτού του portfolio είναι διαθέσιμος εδώ:"
+      "copyFailedNotice": "Επανάληψη"
     },
     "cv": {
       "description": "Το βιογραφικό μου σε PDF",
@@ -271,6 +269,15 @@
       "noMatches": "Κανένα έργο δεν ταιριάζει με «{pattern}».",
       "details": "Προβολή λεπτομερειών: {name}",
       "highlights": "Κύρια σημεία",
+      "visit": "Επισκεφθείτε τον ιστότοπο",
+      "close": "Κλείσιμο"
+    },
+    "experiences": {
+      "details": "Προβολή λεπτομερειών: {name}",
+      "highlights": "Κύρια σημεία",
+      "projects": "Έργα",
+      "skills": "Δεξιότητες",
+      "recommendations": "Συστάσεις",
       "visit": "Επισκεφθείτε τον ιστότοπο",
       "close": "Κλείσιμο"
     },
@@ -694,11 +701,11 @@
       "frameworks": "Frameworks",
       "stateData": "Κατάσταση & Δεδομένα",
       "uiStyling": "UI / Στυλ",
+      "blockchain": "Blockchain",
       "tooling": "Εργαλεία",
       "testing": "Δοκιμές",
       "databases": "Databases",
-      "cloud": "Cloud",
-      "devops": "DevOps",
+      "devops": "DevOps & Cloud",
       "automation": "Αυτοματισμός",
       "softSkills": "Soft Skills"
     },

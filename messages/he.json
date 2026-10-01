@@ -182,20 +182,16 @@
       "subcommand": "פקודת משנה"
     },
     "about": {
-      "firstName": "שם פרטי",
-      "lastName": "שם משפחה",
-      "age": "גיל",
       "yearsOld": "{years} שנים",
-      "location": "מיקום",
       "email": "אימייל",
       "languages": "שפות",
       "hobbies": "תחביבים"
     },
     "contact": {
       "intro": "אני מעדיף אימייל להזדמנויות, בקשות פרילנס או שיתוף פעולה טכני.",
-      "primaryEmail": "אימייל ראשי:",
-      "location": "מיקום:",
-      "socialProfiles": "פרופילים חברתיים:"
+      "primaryEmail": "אימייל ראשי",
+      "location": "מיקום",
+      "socialProfiles": "פרופילים חברתיים"
     },
     "stats": {
       "totalCodingTime": "סה\"כ זמן תכנות",
@@ -242,13 +238,15 @@
       "starsLabel": "כוכבים",
       "forksLabel": "Forks",
       "licenseLabel": "רישיון",
-      "copyAria": "העתק ללוח",
+      "fallback": "קוד המקור של תיק העבודות זמין כאן:"
+    },
+    "clipboard": {
       "copy": "העתק",
+      "copyAria": "העתק ללוח",
       "copiedAria": "הועתק",
       "copiedNotice": "הועתק!",
       "copyFailedAria": "העתקה נכשלה",
-      "copyFailedNotice": "נסה שוב",
-      "fallback": "קוד המקור של תיק העבודות זמין כאן:"
+      "copyFailedNotice": "נסה שוב"
     },
     "cv": {
       "description": "קורות החיים שלי כ-PDF",
@@ -271,6 +269,15 @@
       "noMatches": "אין פרויקטים התואמים ל-\"{pattern}\".",
       "details": "הצגת פרטים: {name}",
       "highlights": "עיקרי הדברים",
+      "visit": "לביקור באתר",
+      "close": "סגירה"
+    },
+    "experiences": {
+      "details": "הצגת פרטים: {name}",
+      "highlights": "עיקרי הדברים",
+      "projects": "פרויקטים",
+      "skills": "כישורים",
+      "recommendations": "המלצות",
       "visit": "לביקור באתר",
       "close": "סגירה"
     },
@@ -694,11 +701,11 @@
       "frameworks": "פריימוורקים",
       "stateData": "מצב ונתונים",
       "uiStyling": "UI / עיצוב",
+      "blockchain": "בלוקצ'יין",
       "tooling": "כלים",
       "testing": "בדיקות",
       "databases": "מסדי נתונים",
-      "cloud": "ענן",
-      "devops": "DevOps",
+      "devops": "DevOps וענן",
       "automation": "אוטומציה",
       "softSkills": "כישורים רכים"
     },

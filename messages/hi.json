@@ -182,20 +182,16 @@
       "subcommand": "सब-कमांड"
     },
     "about": {
-      "firstName": "पहला नाम",
-      "lastName": "अंतिम नाम",
-      "age": "उम्र",
       "yearsOld": "{years} वर्ष",
-      "location": "स्थान",
       "email": "ईमेल",
       "languages": "भाषाएं",
       "hobbies": "शौक"
     },
     "contact": {
       "intro": "अवसरों, फ्रीलांस अनुरोधों या तकनीकी सहयोग के लिए ईमेल पसंद करता हूँ।",
-      "primaryEmail": "मुख्य ईमेल:",
-      "location": "स्थान:",
-      "socialProfiles": "सोशल प्रोफ़ाइल:"
+      "primaryEmail": "मुख्य ईमेल",
+      "location": "स्थान",
+      "socialProfiles": "सोशल प्रोफ़ाइल"
     },
     "stats": {
       "totalCodingTime": "कुल कोडिंग समय",
@@ -242,13 +238,15 @@
       "starsLabel": "सितारे",
       "forksLabel": "फोर्क्स",
       "licenseLabel": "लाइसेंस",
-      "copyAria": "क्लिपबोर्ड पर कॉपी करें",
+      "fallback": "इस पोर्टफोलियो का सोर्स कोड यहाँ उपलब्ध है:"
+    },
+    "clipboard": {
       "copy": "कॉपी",
+      "copyAria": "क्लिपबोर्ड पर कॉपी करें",
       "copiedAria": "कॉपी किया गया",
       "copiedNotice": "कॉपी हो गया!",
       "copyFailedAria": "कॉपी विफल",
-      "copyFailedNotice": "पुनः प्रयास",
-      "fallback": "इस पोर्टफोलियो का सोर्स कोड यहाँ उपलब्ध है:"
+      "copyFailedNotice": "पुनः प्रयास"
     },
     "cv": {
       "description": "मेरा CV PDF में",
@@ -271,6 +269,15 @@
       "noMatches": "कोई प्रोजेक्ट \"{pattern}\" से मेल नहीं खाता।",
       "details": "विवरण देखें: {name}",
       "highlights": "मुख्य बातें",
+      "visit": "वेबसाइट देखें",
+      "close": "बंद करें"
+    },
+    "experiences": {
+      "details": "विवरण देखें: {name}",
+      "highlights": "मुख्य बातें",
+      "projects": "प्रोजेक्ट",
+      "skills": "कौशल",
+      "recommendations": "अनुशंसाएँ",
       "visit": "वेबसाइट देखें",
       "close": "बंद करें"
     },
@@ -694,11 +701,11 @@
       "frameworks": "फ्रेमवर्क",
       "stateData": "स्टेट और डेटा",
       "uiStyling": "UI / स्टाइलिंग",
+      "blockchain": "ब्लॉकचेन",
       "tooling": "टूलिंग",
       "testing": "टेस्टिंग",
       "databases": "डेटाबेस",
-      "cloud": "क्लाउड",
-      "devops": "DevOps",
+      "devops": "DevOps और क्लाउड",
       "automation": "स्वचालन",
       "softSkills": "सॉफ्ट स्किल्स"
     },

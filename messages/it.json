@@ -182,20 +182,16 @@
       "subcommand": "sotto-comando"
     },
     "about": {
-      "firstName": "Nome",
-      "lastName": "Cognome",
-      "age": "Età",
       "yearsOld": "{years, plural, one {# anno} other {# anni}}",
-      "location": "Luogo",
       "email": "Email",
       "languages": "Lingue",
       "hobbies": "Hobby"
     },
     "contact": {
       "intro": "Preferisco l'email per opportunità, richieste freelance o collaborazioni tecniche.",
-      "primaryEmail": "Email principale:",
-      "location": "Luogo:",
-      "socialProfiles": "Profili social:"
+      "primaryEmail": "Email principale",
+      "location": "Luogo",
+      "socialProfiles": "Profili social"
     },
     "stats": {
       "totalCodingTime": "Tempo totale di sviluppo",
@@ -242,13 +238,15 @@
       "starsLabel": "Stelle",
       "forksLabel": "Fork",
       "licenseLabel": "Licenza",
-      "copyAria": "Copia negli appunti",
+      "fallback": "Il codice sorgente di questo portfolio è disponibile qui:"
+    },
+    "clipboard": {
       "copy": "Copia",
+      "copyAria": "Copia negli appunti",
       "copiedAria": "Copiato",
       "copiedNotice": "Copiato!",
       "copyFailedAria": "Copia fallita",
-      "copyFailedNotice": "Riprova",
-      "fallback": "Il codice sorgente di questo portfolio è disponibile qui:"
+      "copyFailedNotice": "Riprova"
     },
     "cv": {
       "description": "Il mio CV in PDF",
@@ -271,6 +269,15 @@
       "noMatches": "Nessun progetto corrisponde a «{pattern}».",
       "details": "Vedi dettagli: {name}",
       "highlights": "Punti salienti",
+      "visit": "Visita il sito",
+      "close": "Chiudi"
+    },
+    "experiences": {
+      "details": "Vedi dettagli: {name}",
+      "highlights": "Punti salienti",
+      "projects": "Progetti",
+      "skills": "Competenze",
+      "recommendations": "Raccomandazioni",
       "visit": "Visita il sito",
       "close": "Chiudi"
     },
@@ -584,11 +591,11 @@
       "frameworks": "Framework",
       "stateData": "Stato e Dati",
       "uiStyling": "UI / Stili",
+      "blockchain": "Blockchain",
       "tooling": "Strumenti",
       "testing": "Test",
       "databases": "Database",
-      "cloud": "Cloud",
-      "devops": "DevOps",
+      "devops": "DevOps e Cloud",
       "automation": "Automazione",
       "softSkills": "Soft skill"
     },

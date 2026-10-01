@@ -182,20 +182,16 @@
       "subcommand": "підкоманда"
     },
     "about": {
-      "firstName": "Ім'я",
-      "lastName": "Прізвище",
-      "age": "Вік",
       "yearsOld": "{years, plural, one {# рік} few {# роки} other {# років}}",
-      "location": "Місцезнаходження",
       "email": "Email",
       "languages": "Мови",
       "hobbies": "Захоплення"
     },
     "contact": {
       "intro": "Для пропозицій, фрилансу чи техспівпраці я надаю перевагу email.",
-      "primaryEmail": "Основний email:",
-      "location": "Місцезнаходження:",
-      "socialProfiles": "Соцмережі:"
+      "primaryEmail": "Основний email",
+      "location": "Місцезнаходження",
+      "socialProfiles": "Соцмережі"
     },
     "stats": {
       "totalCodingTime": "Загальний час кодингу",
@@ -242,13 +238,15 @@
       "starsLabel": "Зірки",
       "forksLabel": "Форки",
       "licenseLabel": "Ліцензія",
-      "copyAria": "Скопіювати у буфер обміну",
+      "fallback": "Вихідний код цього портфоліо доступний тут:"
+    },
+    "clipboard": {
       "copy": "Копіювати",
+      "copyAria": "Скопіювати у буфер обміну",
       "copiedAria": "Скопійовано",
       "copiedNotice": "Скопійовано!",
       "copyFailedAria": "Помилка копіювання",
-      "copyFailedNotice": "Повторити",
-      "fallback": "Вихідний код цього портфоліо доступний тут:"
+      "copyFailedNotice": "Повторити"
     },
     "cv": {
       "description": "Моє резюме в PDF",
@@ -271,6 +269,15 @@
       "noMatches": "Немає проєктів, що відповідають «{pattern}».",
       "details": "Детальніше: {name}",
       "highlights": "Ключові моменти",
+      "visit": "Відкрити сайт",
+      "close": "Закрити"
+    },
+    "experiences": {
+      "details": "Детальніше: {name}",
+      "highlights": "Ключові моменти",
+      "projects": "Проєкти",
+      "skills": "Навички",
+      "recommendations": "Рекомендації",
       "visit": "Відкрити сайт",
       "close": "Закрити"
     },
@@ -694,11 +701,11 @@
       "frameworks": "Фреймворки",
       "stateData": "Стан і дані",
       "uiStyling": "UI / Стилізація",
+      "blockchain": "Блокчейн",
       "tooling": "Інструменти",
       "testing": "Тестування",
       "databases": "Бази даних",
-      "cloud": "Хмара",
-      "devops": "DevOps",
+      "devops": "DevOps і хмара",
       "automation": "Автоматизація",
       "softSkills": "Гнучкі навички"
     },

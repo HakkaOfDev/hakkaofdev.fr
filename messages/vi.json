@@ -182,20 +182,16 @@
       "subcommand": "lệnh con"
     },
     "about": {
-      "firstName": "Tên",
-      "lastName": "Họ",
-      "age": "Tuổi",
       "yearsOld": "{years} tuổi",
-      "location": "Vị trí",
       "email": "Email",
       "languages": "Ngôn ngữ",
       "hobbies": "Sở thích"
     },
     "contact": {
       "intro": "Tôi ưu tiên email cho cơ hội, yêu cầu freelance hoặc hợp tác kỹ thuật.",
-      "primaryEmail": "Email chính:",
-      "location": "Vị trí:",
-      "socialProfiles": "Mạng xã hội:"
+      "primaryEmail": "Email chính",
+      "location": "Vị trí",
+      "socialProfiles": "Mạng xã hội"
     },
     "stats": {
       "totalCodingTime": "Tổng thời gian lập trình",
@@ -242,13 +238,15 @@
       "starsLabel": "Sao",
       "forksLabel": "Forks",
       "licenseLabel": "Giấy phép",
-      "copyAria": "Sao chép vào clipboard",
+      "fallback": "Mã nguồn portfolio này có sẵn tại đây:"
+    },
+    "clipboard": {
       "copy": "Sao chép",
+      "copyAria": "Sao chép vào clipboard",
       "copiedAria": "Đã sao chép",
       "copiedNotice": "Đã sao chép!",
       "copyFailedAria": "Sao chép thất bại",
-      "copyFailedNotice": "Thử lại",
-      "fallback": "Mã nguồn portfolio này có sẵn tại đây:"
+      "copyFailedNotice": "Thử lại"
     },
     "cv": {
       "description": "CV của tôi dạng PDF",
@@ -271,6 +269,15 @@
       "noMatches": "Không có dự án nào khớp với “{pattern}”.",
       "details": "Xem chi tiết: {name}",
       "highlights": "Điểm nổi bật",
+      "visit": "Truy cập website",
+      "close": "Đóng"
+    },
+    "experiences": {
+      "details": "Xem chi tiết: {name}",
+      "highlights": "Điểm nổi bật",
+      "projects": "Dự án",
+      "skills": "Kỹ năng",
+      "recommendations": "Thư giới thiệu",
       "visit": "Truy cập website",
       "close": "Đóng"
     },
@@ -694,11 +701,11 @@
       "frameworks": "Framework",
       "stateData": "Trạng thái & Dữ liệu",
       "uiStyling": "UI / Tạo kiểu",
+      "blockchain": "Blockchain",
       "tooling": "Công cụ",
       "testing": "Kiểm thử",
       "databases": "Cơ sở dữ liệu",
-      "cloud": "Cloud",
-      "devops": "DevOps",
+      "devops": "DevOps & Cloud",
       "automation": "Tự động hóa",
       "softSkills": "Kỹ năng mềm"
     },

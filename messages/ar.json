@@ -182,20 +182,16 @@
       "subcommand": "أمر فرعي"
     },
     "about": {
-      "firstName": "الاسم الأول",
-      "lastName": "اسم العائلة",
-      "age": "العمر",
       "yearsOld": "{years} سنة",
-      "location": "الموقع",
       "email": "البريد الإلكتروني",
       "languages": "اللغات",
       "hobbies": "الهوايات"
     },
     "contact": {
       "intro": "أفضّل البريد الإلكتروني للفرص أو طلبات العمل الحر أو التعاون التقني.",
-      "primaryEmail": "البريد الرئيسي:",
-      "location": "الموقع:",
-      "socialProfiles": "الملفات الاجتماعية:"
+      "primaryEmail": "البريد الرئيسي",
+      "location": "الموقع",
+      "socialProfiles": "الملفات الاجتماعية"
     },
     "stats": {
       "totalCodingTime": "إجمالي وقت البرمجة",
@@ -242,13 +238,15 @@
       "starsLabel": "النجوم",
       "forksLabel": "التفرعات",
       "licenseLabel": "الترخيص",
-      "copyAria": "نسخ إلى الحافظة",
+      "fallback": "الكود المصدري لمعرض الأعمال هذا متاح هنا:"
+    },
+    "clipboard": {
       "copy": "نسخ",
+      "copyAria": "نسخ إلى الحافظة",
       "copiedAria": "تم النسخ",
       "copiedNotice": "تم النسخ!",
       "copyFailedAria": "فشل النسخ",
-      "copyFailedNotice": "حاول مجددًا",
-      "fallback": "الكود المصدري لمعرض الأعمال هذا متاح هنا:"
+      "copyFailedNotice": "حاول مجددًا"
     },
     "cv": {
       "description": "سيرتي الذاتية بصيغة PDF",
@@ -271,6 +269,15 @@
       "noMatches": "لا توجد مشاريع تطابق «{pattern}».",
       "details": "عرض التفاصيل: {name}",
       "highlights": "أبرز النقاط",
+      "visit": "زيارة الموقع",
+      "close": "إغلاق"
+    },
+    "experiences": {
+      "details": "عرض التفاصيل: {name}",
+      "highlights": "أبرز النقاط",
+      "projects": "المشاريع",
+      "skills": "المهارات",
+      "recommendations": "التوصيات",
       "visit": "زيارة الموقع",
       "close": "إغلاق"
     },
@@ -694,11 +701,11 @@
       "frameworks": "أُطر العمل",
       "stateData": "الحالة والبيانات",
       "uiStyling": "واجهة / تصميم",
+      "blockchain": "البلوك تشين",
       "tooling": "الأدوات",
       "testing": "الاختبار",
       "databases": "قواعد البيانات",
-      "cloud": "السحابة",
-      "devops": "DevOps",
+      "devops": "DevOps والسحابة",
       "automation": "الأتمتة",
       "softSkills": "المهارات الشخصية"
     },
