@@ -182,20 +182,16 @@
       "subcommand": "sub-command"
     },
     "about": {
-      "firstName": "First Name",
-      "lastName": "Last Name",
-      "age": "Age",
       "yearsOld": "{years, plural, one {# year} other {# years}}",
-      "location": "Location",
       "email": "Email",
       "languages": "Languages",
       "hobbies": "Hobbies"
     },
     "contact": {
       "intro": "Prefer email for opportunities, freelance requests, or technical collaboration.",
-      "primaryEmail": "Primary email:",
-      "location": "Location:",
-      "socialProfiles": "Social profiles:"
+      "primaryEmail": "Primary email",
+      "location": "Location",
+      "socialProfiles": "Social profiles"
     },
     "stats": {
       "totalCodingTime": "Total Coding Time",
@@ -242,13 +238,15 @@
       "starsLabel": "Stars",
       "forksLabel": "Forks",
       "licenseLabel": "License",
-      "copyAria": "Copy to clipboard",
+      "fallback": "Source code for this portfolio is available here:"
+    },
+    "clipboard": {
       "copy": "Copy",
+      "copyAria": "Copy to clipboard",
       "copiedAria": "Copied",
       "copiedNotice": "Copied!",
       "copyFailedAria": "Copy failed",
-      "copyFailedNotice": "Try again",
-      "fallback": "Source code for this portfolio is available here:"
+      "copyFailedNotice": "Try again"
     },
     "cv": {
       "description": "My CV as a PDF",
@@ -271,6 +269,15 @@
       "noMatches": "No projects match \"{pattern}\".",
       "details": "View details: {name}",
       "highlights": "Highlights",
+      "visit": "Visit website",
+      "close": "Close"
+    },
+    "experiences": {
+      "details": "View details: {name}",
+      "highlights": "Highlights",
+      "projects": "Projects",
+      "skills": "Skills",
+      "recommendations": "Recommendations",
       "visit": "Visit website",
       "close": "Close"
     },
@@ -625,11 +632,11 @@
       "frameworks": "Frameworks",
       "stateData": "State & Data",
       "uiStyling": "UI / Styling",
+      "blockchain": "Blockchain",
       "tooling": "Tooling",
       "testing": "Testing",
       "databases": "Databases",
-      "cloud": "Cloud",
-      "devops": "DevOps",
+      "devops": "DevOps & Cloud",
       "automation": "Automation",
       "softSkills": "Soft Skills"
     },

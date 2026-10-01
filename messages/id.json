@@ -182,20 +182,16 @@
       "subcommand": "subperintah"
     },
     "about": {
-      "firstName": "Nama Depan",
-      "lastName": "Nama Belakang",
-      "age": "Usia",
       "yearsOld": "{years} tahun",
-      "location": "Lokasi",
       "email": "Email",
       "languages": "Bahasa",
       "hobbies": "Hobi"
     },
     "contact": {
       "intro": "Saya lebih suka email untuk peluang, permintaan freelance, atau kolaborasi teknis.",
-      "primaryEmail": "Email utama:",
-      "location": "Lokasi:",
-      "socialProfiles": "Profil sosial:"
+      "primaryEmail": "Email utama",
+      "location": "Lokasi",
+      "socialProfiles": "Profil sosial"
     },
     "stats": {
       "totalCodingTime": "Total waktu coding",
@@ -242,13 +238,15 @@
       "starsLabel": "Bintang",
       "forksLabel": "Forks",
       "licenseLabel": "Lisensi",
-      "copyAria": "Salin ke clipboard",
+      "fallback": "Kode sumber portfolio ini tersedia di sini:"
+    },
+    "clipboard": {
       "copy": "Salin",
+      "copyAria": "Salin ke clipboard",
       "copiedAria": "Disalin",
       "copiedNotice": "Disalin!",
       "copyFailedAria": "Gagal menyalin",
-      "copyFailedNotice": "Coba lagi",
-      "fallback": "Kode sumber portfolio ini tersedia di sini:"
+      "copyFailedNotice": "Coba lagi"
     },
     "cv": {
       "description": "CV saya sebagai PDF",
@@ -271,6 +269,15 @@
       "noMatches": "Tidak ada proyek yang cocok dengan \"{pattern}\".",
       "details": "Lihat detail: {name}",
       "highlights": "Sorotan",
+      "visit": "Kunjungi situs",
+      "close": "Tutup"
+    },
+    "experiences": {
+      "details": "Lihat detail: {name}",
+      "highlights": "Sorotan",
+      "projects": "Proyek",
+      "skills": "Keterampilan",
+      "recommendations": "Rekomendasi",
       "visit": "Kunjungi situs",
       "close": "Tutup"
     },
@@ -694,11 +701,11 @@
       "frameworks": "Framework",
       "stateData": "Status & Data",
       "uiStyling": "UI / Styling",
+      "blockchain": "Blockchain",
       "tooling": "Tooling",
       "testing": "Pengujian",
       "databases": "Database",
-      "cloud": "Cloud",
-      "devops": "DevOps",
+      "devops": "DevOps & Cloud",
       "automation": "Otomasi",
       "softSkills": "Soft Skills"
     },

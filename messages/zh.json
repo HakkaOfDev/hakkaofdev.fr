@@ -182,20 +182,16 @@
       "subcommand": "子命令"
     },
     "about": {
-      "firstName": "名",
-      "lastName": "姓",
-      "age": "年龄",
       "yearsOld": "{years} 岁",
-      "location": "所在地",
       "email": "邮箱",
       "languages": "语言",
       "hobbies": "爱好"
     },
     "contact": {
       "intro": "如有工作机会、自由职业委托或技术合作，我更喜欢通过邮件联系。",
-      "primaryEmail": "主邮箱:",
-      "location": "位置:",
-      "socialProfiles": "社交资料:"
+      "primaryEmail": "主邮箱",
+      "location": "位置",
+      "socialProfiles": "社交资料"
     },
     "stats": {
       "totalCodingTime": "总编程时间",
@@ -242,13 +238,15 @@
       "starsLabel": "星标",
       "forksLabel": "Forks",
       "licenseLabel": "许可证",
-      "copyAria": "复制到剪贴板",
+      "fallback": "此作品集的源代码可在此查看："
+    },
+    "clipboard": {
       "copy": "复制",
+      "copyAria": "复制到剪贴板",
       "copiedAria": "已复制",
       "copiedNotice": "已复制!",
       "copyFailedAria": "复制失败",
-      "copyFailedNotice": "重试",
-      "fallback": "此作品集的源代码可在此查看："
+      "copyFailedNotice": "重试"
     },
     "cv": {
       "description": "我的简历 PDF",
@@ -271,6 +269,15 @@
       "noMatches": "没有项目匹配 “{pattern}”。",
       "details": "查看详情：{name}",
       "highlights": "亮点",
+      "visit": "访问网站",
+      "close": "关闭"
+    },
+    "experiences": {
+      "details": "查看详情：{name}",
+      "highlights": "亮点",
+      "projects": "项目",
+      "skills": "技能",
+      "recommendations": "推荐信",
       "visit": "访问网站",
       "close": "关闭"
     },
@@ -584,11 +591,11 @@
       "frameworks": "框架",
       "stateData": "状态与数据",
       "uiStyling": "UI / 样式",
+      "blockchain": "区块链",
       "tooling": "工具",
       "testing": "测试",
       "databases": "数据库",
-      "cloud": "云",
-      "devops": "DevOps",
+      "devops": "DevOps与云",
       "automation": "自动化",
       "softSkills": "软技能"
     },

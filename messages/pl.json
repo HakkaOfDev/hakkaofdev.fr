@@ -182,20 +182,16 @@
       "subcommand": "podkomenda"
     },
     "about": {
-      "firstName": "Imię",
-      "lastName": "Nazwisko",
-      "age": "Wiek",
       "yearsOld": "{years, plural, one {# rok} few {# lata} other {# lat}}",
-      "location": "Lokalizacja",
       "email": "Email",
       "languages": "Języki",
       "hobbies": "Hobby"
     },
     "contact": {
       "intro": "Email preferowany przy ofertach, zleceniach freelance lub współpracy technicznej.",
-      "primaryEmail": "Główny email:",
-      "location": "Lokalizacja:",
-      "socialProfiles": "Profile społecznościowe:"
+      "primaryEmail": "Główny email",
+      "location": "Lokalizacja",
+      "socialProfiles": "Profile społecznościowe"
     },
     "stats": {
       "totalCodingTime": "Łączny czas programowania",
@@ -242,13 +238,15 @@
       "starsLabel": "Gwiazdki",
       "forksLabel": "Forki",
       "licenseLabel": "Licencja",
-      "copyAria": "Skopiuj do schowka",
+      "fallback": "Kod źródłowy tego portfolio jest dostępny tutaj:"
+    },
+    "clipboard": {
       "copy": "Kopiuj",
+      "copyAria": "Skopiuj do schowka",
       "copiedAria": "Skopiowano",
       "copiedNotice": "Skopiowano!",
       "copyFailedAria": "Błąd kopiowania",
-      "copyFailedNotice": "Spróbuj ponownie",
-      "fallback": "Kod źródłowy tego portfolio jest dostępny tutaj:"
+      "copyFailedNotice": "Spróbuj ponownie"
     },
     "cv": {
       "description": "Moje CV w PDF",
@@ -271,6 +269,15 @@
       "noMatches": "Żaden projekt nie pasuje do „{pattern}”.",
       "details": "Zobacz szczegóły: {name}",
       "highlights": "Najważniejsze",
+      "visit": "Odwiedź stronę",
+      "close": "Zamknij"
+    },
+    "experiences": {
+      "details": "Zobacz szczegóły: {name}",
+      "highlights": "Najważniejsze",
+      "projects": "Projekty",
+      "skills": "Umiejętności",
+      "recommendations": "Rekomendacje",
       "visit": "Odwiedź stronę",
       "close": "Zamknij"
     },
@@ -694,11 +701,11 @@
       "frameworks": "Frameworki",
       "stateData": "Stan i Dane",
       "uiStyling": "UI / Stylizacja",
+      "blockchain": "Blockchain",
       "tooling": "Narzędzia",
       "testing": "Testowanie",
       "databases": "Bazy danych",
-      "cloud": "Chmura",
-      "devops": "DevOps",
+      "devops": "DevOps i Chmura",
       "automation": "Automatyzacja",
       "softSkills": "Soft skills"
     },

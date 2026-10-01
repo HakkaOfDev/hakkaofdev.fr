@@ -182,20 +182,16 @@
       "subcommand": "subcommando"
     },
     "about": {
-      "firstName": "Voornaam",
-      "lastName": "Achternaam",
-      "age": "Leeftijd",
       "yearsOld": "{years, plural, one {# jaar} other {# jaar}}",
-      "location": "Locatie",
       "email": "E-mail",
       "languages": "Talen",
       "hobbies": "Hobby's"
     },
     "contact": {
       "intro": "Ik geef de voorkeur aan e-mail voor kansen, freelance-aanvragen of technische samenwerking.",
-      "primaryEmail": "Primaire e-mail:",
-      "location": "Locatie:",
-      "socialProfiles": "Sociale profielen:"
+      "primaryEmail": "Primaire e-mail",
+      "location": "Locatie",
+      "socialProfiles": "Sociale profielen"
     },
     "stats": {
       "totalCodingTime": "Totale programmeertijd",
@@ -242,13 +238,15 @@
       "starsLabel": "Sterren",
       "forksLabel": "Forks",
       "licenseLabel": "Licentie",
-      "copyAria": "Naar klembord kopiëren",
+      "fallback": "De broncode van dit portfolio is hier beschikbaar:"
+    },
+    "clipboard": {
       "copy": "Kopiëren",
+      "copyAria": "Naar klembord kopiëren",
       "copiedAria": "Gekopieerd",
       "copiedNotice": "Gekopieerd!",
       "copyFailedAria": "Kopiëren mislukt",
-      "copyFailedNotice": "Opnieuw proberen",
-      "fallback": "De broncode van dit portfolio is hier beschikbaar:"
+      "copyFailedNotice": "Opnieuw proberen"
     },
     "cv": {
       "description": "Mijn cv als pdf",
@@ -271,6 +269,15 @@
       "noMatches": "Geen projecten komen overeen met “{pattern}”.",
       "details": "Details bekijken: {name}",
       "highlights": "Hoogtepunten",
+      "visit": "Website bezoeken",
+      "close": "Sluiten"
+    },
+    "experiences": {
+      "details": "Details bekijken: {name}",
+      "highlights": "Hoogtepunten",
+      "projects": "Projecten",
+      "skills": "Vaardigheden",
+      "recommendations": "Aanbevelingen",
       "visit": "Website bezoeken",
       "close": "Sluiten"
     },
@@ -694,11 +701,11 @@
       "frameworks": "Frameworks",
       "stateData": "Status & Data",
       "uiStyling": "UI / Styling",
+      "blockchain": "Blockchain",
       "tooling": "Tooling",
       "testing": "Testen",
       "databases": "Databases",
-      "cloud": "Cloud",
-      "devops": "DevOps",
+      "devops": "DevOps & Cloud",
       "automation": "Automatisering",
       "softSkills": "Soft skills"
     },
