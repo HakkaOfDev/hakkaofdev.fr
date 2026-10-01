@@ -29,8 +29,11 @@ export const SKILLS: ReadonlyArray<SkillGroup> = [
     slug: "languages",
     values: ["TypeScript", "JavaScript", "Python", "HTML/CSS"],
   },
+  {
+    slug: "blockchain",
+    values: ["Smart Contracts", "WalletConnect", "wagmi", "ethers.js"],
+  },
   { slug: "uiStyling", values: ["Tailwind", "shadcn/ui", "Motion", "Figma"] },
-  { slug: "tooling", values: ["Biome", "Bun"] },
   { slug: "testing", values: ["Vitest", "Playwright", "Cypress", "Jest"] },
   {
     slug: "databases",
@@ -38,9 +41,17 @@ export const SKILLS: ReadonlyArray<SkillGroup> = [
   },
   {
     slug: "devops",
-    values: ["Docker", "Kubernetes", "RabbitMQ", "CI/CD", "Git", "GitLab"],
+    values: [
+      "Docker",
+      "Kubernetes",
+      "RabbitMQ",
+      "CI/CD",
+      "GitLab",
+      "Vercel",
+      "AWS",
+    ],
   },
-  { slug: "cloud", values: ["Vercel", "AWS"] },
+  { slug: "tooling", values: ["Biome", "Bun"] },
   { slug: "automation", values: ["n8n", "OpenClaw", "Claude", "Codex"] },
   {
     slug: SOFT_SKILLS_SLUG,

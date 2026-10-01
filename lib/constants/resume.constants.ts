@@ -16,6 +16,8 @@ export type ExperienceEntry = {
   start: string;
   /** End month (`"YYYY-MM"`); omit while the position is ongoing. */
   end?: string;
+  /** Technologies and tools used in the role (proper nouns; not localized). */
+  skills: string[];
 };
 
 export type RecommendationEntry = {
@@ -56,18 +58,44 @@ export const EXPERIENCES: ReadonlyArray<ExperienceEntry> = [
     companyUrl: "https://kabila.app",
     start: "2022-07",
     end: "2026-06",
+    skills: [
+      "TypeScript",
+      "Next.js",
+      "React Native",
+      "Frontend Architecture",
+      "Design Systems",
+      "SDK Design",
+      "Smart Contracts",
+      "Technical Leadership",
+    ],
   },
   {
     slug: "archeMC2",
     companyUrl: "https://arche-mc2.fr",
     start: "2022-09",
     end: "2023-08",
+    skills: [
+      "CI/CD Pipelines",
+      "GitLab CI",
+      "Docker",
+      "Infrastructure Automation",
+      "Monitoring",
+      "Shell Scripting",
+    ],
   },
   {
     slug: "efficienceInformatique",
     companyUrl: "https://www.efficience-informatique.net",
     start: "2022-03",
     end: "2022-05",
+    skills: [
+      "Windows Server",
+      "Hyper-V",
+      "Virtualization",
+      "Backup & Recovery",
+      "SAP",
+      "Sage",
+    ],
   },
 ].sort(comparePeriodsDesc);
 

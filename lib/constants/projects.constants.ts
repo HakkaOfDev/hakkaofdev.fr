@@ -6,6 +6,8 @@ export type ProjectEntry = {
   /** Tailwind `object-position` class for the card image (defaults to center). */
   imagePosition?: string;
   tags: string[];
+  /** Experience slug this project was built during (must exist in EXPERIENCES). */
+  experienceSlug?: string;
 };
 
 export const PROJECTS: ReadonlyArray<ProjectEntry> = [
@@ -17,12 +19,14 @@ export const PROJECTS: ReadonlyArray<ProjectEntry> = [
   },
   {
     slug: "kabilaApp",
+    experienceSlug: "kabila",
     url: "https://kabila.app",
     imageUrl: "/projects/kabila-app.png",
     tags: ["Next.js", "Tailwind", "TypeScript", "Blockchain", "Marketplace"],
   },
   {
     slug: "kabilaWalletNative",
+    experienceSlug: "kabila",
     url: "https://wallet.kabila.app",
     imageUrl: "/projects/kabila-wallet-native.png",
     imagePosition: "object-bottom",
@@ -30,12 +34,14 @@ export const PROJECTS: ReadonlyArray<ProjectEntry> = [
   },
   {
     slug: "kabilaTools",
+    experienceSlug: "kabila",
     url: "https://tools.kabila.app",
     imageUrl: "/projects/kabila-tools.png",
     tags: ["Next.js", "Tailwind", "TypeScript", "Blockchain"],
   },
   {
     slug: "kabilaWallet",
+    experienceSlug: "kabila",
     url: "https://wallet.kabila.app",
     imageUrl: "/projects/kabila-wallet.webp",
     imagePosition: "object-bottom",
