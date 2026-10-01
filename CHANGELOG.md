@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.19.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.18.0...v1.19.0) (2026-10-01)
+
+
+### Features
+
+* **animation:** type grouped steps without layout reflow ([afb0b9a](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/afb0b9a03914e46aee24464f7541d41d51ef0b37))
+* **content:** link projects to experiences and list role skills ([775fafc](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/775fafccfcdcc45ad66995941d1cd422eccdc96a))
+* **cv:** render about, contact, skills and education as cards ([af13577](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/af13577f5973a7f57847ad7f9b00dc3cccef03fc))
+* **experiences:** open experience details in a tabbed dialog ([e5252de](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/e5252dec6b1f83bf429cf9ca5606adfd26701788))
+* **i18n:** add experience dialog, clipboard and card labels ([1b6e07e](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/1b6e07e05b755c845e4b7d3cd5bfe58d1e8303d2))
+* **period:** split the date range from the duration ([9c5b21d](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/9c5b21d78eb808115a6b65bd786984c69f52f2dc))
+* **ui:** add tabs, copy button, detail dialog and timeline card ([acf1272](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/acf1272e01efd97a366e421791912e9237888247))
+
+
+### Bug Fixes
+
+* **theme:** default world map to dark styles until hydration ([bde2776](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/bde2776abaa8e55e830dbf75338c837d54ade407))
+
+
+### Code Refactoring
+
+* **commands:** reuse DetailDialog and CopyButton in projects and repo ([8c0d4df](https://github.com/HakkaOfDev/hakkaofdev.fr/commit/8c0d4df6f4562b6fd8f29f1b05fe28af87959ee0))
+
 ## [1.18.0](https://github.com/HakkaOfDev/hakkaofdev.fr/compare/v1.17.0...v1.18.0) (2026-09-29)
 
 
