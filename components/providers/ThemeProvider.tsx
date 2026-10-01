@@ -52,11 +52,8 @@ function applyPalette(palette: ThemePalette) {
     }
 
     // Toggle dark class
-    if (palette.isDark) {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
+    root.classList.toggle("dark", palette.isDark);
+    root.classList.toggle("light", !palette.isDark);
 
     // Re-enable transitions after a brief delay
     requestAnimationFrame(() => {
