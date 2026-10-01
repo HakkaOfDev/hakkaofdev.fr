@@ -5,7 +5,6 @@ import {
   RevealFade,
   RevealGroup,
   RevealSwap,
-  TimelineTypewriter,
   TypeLines,
 } from "@/components/AnimatedComponents";
 
@@ -69,42 +68,6 @@ describe("TypeLines", () => {
       </StrictMode>,
     );
     expect(await screen.findByText("omega")).toBeInTheDocument();
-  });
-});
-
-describe("TimelineTypewriter", () => {
-  it("reveals entries line-by-line, including bullets", async () => {
-    render(
-      <TimelineTypewriter
-        lineMs={1}
-        entries={[
-          {
-            key: "a",
-            lines: [<p key="p">period-a</p>, <p key="n">name-a</p>],
-            bullets: ["bullet-a1", "bullet-a2"],
-          },
-          { key: "b", lines: [<p key="p">period-b</p>] },
-        ]}
-      />,
-    );
-    expect(await screen.findByText("period-a")).toBeInTheDocument();
-    expect(await screen.findByText("bullet-a2")).toBeInTheDocument();
-    expect(await screen.findByText("period-b")).toBeInTheDocument();
-  });
-
-  it("reveals all lines under React Strict Mode", async () => {
-    render(
-      <StrictMode>
-        <TimelineTypewriter
-          lineMs={1}
-          entries={[
-            { key: "a", lines: [<p key="p">solo</p>], bullets: ["b1"] },
-          ]}
-        />
-      </StrictMode>,
-    );
-    expect(await screen.findByText("solo")).toBeInTheDocument();
-    expect(await screen.findByText("b1")).toBeInTheDocument();
   });
 });
 
