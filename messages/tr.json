@@ -182,20 +182,16 @@
       "subcommand": "alt komut"
     },
     "about": {
-      "firstName": "Ad",
-      "lastName": "Soyad",
-      "age": "Yaş",
       "yearsOld": "{years} yaşında",
-      "location": "Konum",
       "email": "E-posta",
       "languages": "Diller",
       "hobbies": "Hobiler"
     },
     "contact": {
       "intro": "Fırsatlar, freelance işler veya teknik iş birliği için e-postayı tercih ediyorum.",
-      "primaryEmail": "Birincil e-posta:",
-      "location": "Konum:",
-      "socialProfiles": "Sosyal profiller:"
+      "primaryEmail": "Birincil e-posta",
+      "location": "Konum",
+      "socialProfiles": "Sosyal profiller"
     },
     "stats": {
       "totalCodingTime": "Toplam kodlama süresi",
@@ -242,13 +238,15 @@
       "starsLabel": "Yıldızlar",
       "forksLabel": "Forklar",
       "licenseLabel": "Lisans",
-      "copyAria": "Panoya kopyala",
+      "fallback": "Bu portfolyonun kaynak kodu burada mevcut:"
+    },
+    "clipboard": {
       "copy": "Kopyala",
+      "copyAria": "Panoya kopyala",
       "copiedAria": "Kopyalandı",
       "copiedNotice": "Kopyalandı!",
       "copyFailedAria": "Kopyalama başarısız",
-      "copyFailedNotice": "Tekrar dene",
-      "fallback": "Bu portfolyonun kaynak kodu burada mevcut:"
+      "copyFailedNotice": "Tekrar dene"
     },
     "cv": {
       "description": "CV'm PDF olarak",
@@ -271,6 +269,15 @@
       "noMatches": "“{pattern}” ile eşleşen proje yok.",
       "details": "Ayrıntıları gör: {name}",
       "highlights": "Öne çıkanlar",
+      "visit": "Web sitesini ziyaret et",
+      "close": "Kapat"
+    },
+    "experiences": {
+      "details": "Ayrıntıları gör: {name}",
+      "highlights": "Öne çıkanlar",
+      "projects": "Projeler",
+      "skills": "Yetkinlikler",
+      "recommendations": "Tavsiyeler",
       "visit": "Web sitesini ziyaret et",
       "close": "Kapat"
     },
@@ -694,11 +701,11 @@
       "frameworks": "Çatılar",
       "stateData": "Durum ve Veri",
       "uiStyling": "UI / Stil",
+      "blockchain": "Blockchain",
       "tooling": "Araçlar",
       "testing": "Test",
       "databases": "Veritabanları",
-      "cloud": "Bulut",
-      "devops": "DevOps",
+      "devops": "DevOps ve Bulut",
       "automation": "Otomasyon",
       "softSkills": "Kişisel Beceriler"
     },

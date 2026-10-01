@@ -207,27 +207,29 @@
 }
 
 /* ── World-map ambient background ── */
+/* Dark styles are the default so the map paints correctly before the theme
+   engine hydrates; `.light` is only set once a light palette is applied. */
 .world-map-country {
-  fill: color-mix(in oklch, var(--foreground) 6%, transparent);
-  stroke: color-mix(in oklch, var(--foreground) 32%, transparent);
+  fill: color-mix(in oklch, var(--foreground) 3%, transparent);
+  stroke: color-mix(in oklch, var(--foreground) 14%, transparent);
   stroke-width: 0.5;
   fill-rule: evenodd;
   vector-effect: non-scaling-stroke;
 }
-.dark .world-map-country {
-  fill: color-mix(in oklch, var(--foreground) 3%, transparent);
-  stroke: color-mix(in oklch, var(--foreground) 14%, transparent);
+.light .world-map-country {
+  fill: color-mix(in oklch, var(--foreground) 6%, transparent);
+  stroke: color-mix(in oklch, var(--foreground) 32%, transparent);
 }
 .world-map-country--visited {
-  fill: color-mix(in oklch, var(--primary) 32%, transparent);
-  stroke: color-mix(in oklch, var(--primary) 80%, transparent);
+  fill: color-mix(in oklch, var(--primary) 22%, transparent);
+  stroke: color-mix(in oklch, var(--primary) 65%, transparent);
   stroke-width: 0.7;
   /* The only motion: visited countries gently glow/breathe. */
   animation: world-map-pulse 4s ease-in-out infinite;
 }
-.dark .world-map-country--visited {
-  fill: color-mix(in oklch, var(--primary) 22%, transparent);
-  stroke: color-mix(in oklch, var(--primary) 65%, transparent);
+.light .world-map-country--visited {
+  fill: color-mix(in oklch, var(--primary) 32%, transparent);
+  stroke: color-mix(in oklch, var(--primary) 80%, transparent);
 }
 
 @keyframes world-map-pulse {

@@ -182,20 +182,16 @@
       "subcommand": "podpříkaz"
     },
     "about": {
-      "firstName": "Jméno",
-      "lastName": "Příjmení",
-      "age": "Věk",
       "yearsOld": "{years, plural, one {# rok} few {# roky} other {# let}}",
-      "location": "Lokace",
       "email": "E-mail",
       "languages": "Jazyky",
       "hobbies": "Koníčky"
     },
     "contact": {
       "intro": "Pro pracovní příležitosti, freelance zakázky nebo technickou spolupráci preferuji e-mail.",
-      "primaryEmail": "Hlavní e-mail:",
-      "location": "Lokace:",
-      "socialProfiles": "Sociální profily:"
+      "primaryEmail": "Hlavní e-mail",
+      "location": "Lokace",
+      "socialProfiles": "Sociální profily"
     },
     "stats": {
       "totalCodingTime": "Celkový čas kódování",
@@ -242,13 +238,15 @@
       "starsLabel": "Hvězdičky",
       "forksLabel": "Forky",
       "licenseLabel": "Licence",
-      "copyAria": "Kopírovat do schránky",
+      "fallback": "Zdrojový kód tohoto portfolia je k dispozici zde:"
+    },
+    "clipboard": {
       "copy": "Kopírovat",
+      "copyAria": "Kopírovat do schránky",
       "copiedAria": "Zkopírováno",
       "copiedNotice": "Zkopírováno!",
       "copyFailedAria": "Kopírování selhalo",
-      "copyFailedNotice": "Zkusit znovu",
-      "fallback": "Zdrojový kód tohoto portfolia je k dispozici zde:"
+      "copyFailedNotice": "Zkusit znovu"
     },
     "cv": {
       "description": "Moje CV v PDF",
@@ -271,6 +269,15 @@
       "noMatches": "Žádné projekty neodpovídají „{pattern}“.",
       "details": "Zobrazit detaily: {name}",
       "highlights": "Hlavní body",
+      "visit": "Navštívit web",
+      "close": "Zavřít"
+    },
+    "experiences": {
+      "details": "Zobrazit detaily: {name}",
+      "highlights": "Hlavní body",
+      "projects": "Projekty",
+      "skills": "Dovednosti",
+      "recommendations": "Doporučení",
       "visit": "Navštívit web",
       "close": "Zavřít"
     },
@@ -694,11 +701,11 @@
       "frameworks": "Frameworky",
       "stateData": "Stav a Data",
       "uiStyling": "UI / Stylování",
+      "blockchain": "Blockchain",
       "tooling": "Nástroje",
       "testing": "Testování",
       "databases": "Databáze",
-      "cloud": "Cloud",
-      "devops": "DevOps",
+      "devops": "DevOps a Cloud",
       "automation": "Automatizace",
       "softSkills": "Měkké dovednosti"
     },

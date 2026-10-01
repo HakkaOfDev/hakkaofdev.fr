@@ -10,6 +10,8 @@ import {
 import { cn } from "@/lib/utils";
 import { BASE } from "./base";
 
+const TYPE_TRANSITION = { duration: 0.12, ease: EASE_OUT };
+
 function TypeCaret() {
   return (
     <span
@@ -50,9 +52,41 @@ export function useTypewriter(
   return count;
 }
 
+export type TypedProgress = { typed: number; typing: boolean };
+
+export type TypedStepState = { shown: boolean; caret: boolean };
+
 /**
- * A single typed line: fades in, optionally trailed by the caret. Shared by
- * `TypeLines` and `TimelineTypewriter`.
+ * Types several groups in sequence, one step at a time across all of them
+ * (e.g. cards whose lines and tags appear in order). Returns, per group, how
+ * many of its `stepCounts[i]` steps are revealed and whether the caret is in it.
+ */
+export function useTypedGroups(stepCounts: number[]): TypedProgress[] {
+  const total = stepCounts.reduce((sum, steps) => sum + steps, 0);
+  const typedSteps = useTypewriter(total, computeTypeLineMs(total));
+
+  let stepsBefore = 0;
+  return stepCounts.map((steps) => {
+    const typed = typedSteps - stepsBefore;
+    stepsBefore += steps;
+    return {
+      typed: Math.max(0, Math.min(typed, steps)),
+      typing: typedSteps < total && typed > 0 && typed <= steps,
+    };
+  });
+}
+
+/** Visibility and caret for step `index` of a group typed by `useTypedGroups`. */
+export function typedStep(
+  { typed, typing }: TypedProgress,
+  index: number,
+): TypedStepState {
+  return { shown: index < typed, caret: typing && index === typed - 1 };
+}
+
+/**
+ * A single typed line: fades in, optionally trailed by the caret. Used by
+ * `TypeLines`.
  */
 export function TypeLine({
   children,
@@ -70,11 +104,46 @@ export function TypeLine({
     <Line
       initial={reduced ? false : { opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.12, ease: EASE_OUT }}
+      transition={TYPE_TRANSITION}
     >
       {children}
       {caret ? <TypeCaret /> : null}
     </Line>
+  );
+}
+
+const TYPE_STEP_ELEMENTS = { div: m.div, p: m.p, span: m.span } as const;
+
+/**
+ * A typed step that keeps its layout slot: mounted from the start but
+ * transparent until `shown`, so a surrounding frame (a card) never reflows
+ * while its content types in. Drive `shown` and `caret` with `useTypewriter`.
+ */
+export function TypeStep({
+  children,
+  shown,
+  caret,
+  as = "div",
+  className,
+}: {
+  children: ReactNode;
+  shown: boolean;
+  caret: boolean;
+  as?: keyof typeof TYPE_STEP_ELEMENTS;
+  className?: string;
+}) {
+  const prefersReduced = useReducedMotion();
+  const Step = TYPE_STEP_ELEMENTS[as];
+  return (
+    <Step
+      className={className}
+      initial={prefersReduced ? false : { opacity: 0 }}
+      animate={{ opacity: shown ? 1 : 0 }}
+      transition={TYPE_TRANSITION}
+    >
+      {children}
+      {caret ? <TypeCaret /> : null}
+    </Step>
   );
 }
 

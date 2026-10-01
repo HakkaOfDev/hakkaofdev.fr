@@ -182,20 +182,16 @@
       "subcommand": "subcomando"
     },
     "about": {
-      "firstName": "Nombre",
-      "lastName": "Apellido",
-      "age": "Edad",
       "yearsOld": "{years, plural, one {# año} other {# años}}",
-      "location": "Ubicación",
       "email": "Correo",
       "languages": "Idiomas",
       "hobbies": "Aficiones"
     },
     "contact": {
       "intro": "Prefiero el correo para oportunidades, encargos freelance o colaboraciones técnicas.",
-      "primaryEmail": "Correo principal:",
-      "location": "Ubicación:",
-      "socialProfiles": "Perfiles sociales:"
+      "primaryEmail": "Correo principal",
+      "location": "Ubicación",
+      "socialProfiles": "Perfiles sociales"
     },
     "stats": {
       "totalCodingTime": "Tiempo total programando",
@@ -242,13 +238,15 @@
       "starsLabel": "Estrellas",
       "forksLabel": "Forks",
       "licenseLabel": "Licencia",
-      "copyAria": "Copiar al portapapeles",
+      "fallback": "El código fuente de este portfolio está disponible aquí:"
+    },
+    "clipboard": {
       "copy": "Copiar",
+      "copyAria": "Copiar al portapapeles",
       "copiedAria": "Copiado",
       "copiedNotice": "¡Copiado!",
       "copyFailedAria": "Error al copiar",
-      "copyFailedNotice": "Reintentar",
-      "fallback": "El código fuente de este portfolio está disponible aquí:"
+      "copyFailedNotice": "Reintentar"
     },
     "cv": {
       "description": "Mi CV en PDF",
@@ -271,6 +269,15 @@
       "noMatches": "Ningún proyecto coincide con «{pattern}».",
       "details": "Ver detalles: {name}",
       "highlights": "Aspectos destacados",
+      "visit": "Visitar el sitio",
+      "close": "Cerrar"
+    },
+    "experiences": {
+      "details": "Ver detalles: {name}",
+      "highlights": "Aspectos destacados",
+      "projects": "Proyectos",
+      "skills": "Habilidades",
+      "recommendations": "Recomendaciones",
       "visit": "Visitar el sitio",
       "close": "Cerrar"
     },
@@ -584,11 +591,11 @@
       "frameworks": "Frameworks",
       "stateData": "Estado y Datos",
       "uiStyling": "UI / Estilos",
+      "blockchain": "Blockchain",
       "tooling": "Herramientas",
       "testing": "Pruebas",
       "databases": "Bases de datos",
-      "cloud": "Cloud",
-      "devops": "DevOps",
+      "devops": "DevOps y Cloud",
       "automation": "Automatización",
       "softSkills": "Habilidades blandas"
     },

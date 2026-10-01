@@ -182,20 +182,16 @@
       "subcommand": "subcomandă"
     },
     "about": {
-      "firstName": "Prenume",
-      "lastName": "Nume",
-      "age": "Vârstă",
       "yearsOld": "{years, plural, one {# an} other {# ani}}",
-      "location": "Locație",
       "email": "Email",
       "languages": "Limbi",
       "hobbies": "Hobby-uri"
     },
     "contact": {
       "intro": "Prefer email-ul pentru oportunități, cereri freelance sau colaborări tehnice.",
-      "primaryEmail": "Email principal:",
-      "location": "Locație:",
-      "socialProfiles": "Profile sociale:"
+      "primaryEmail": "Email principal",
+      "location": "Locație",
+      "socialProfiles": "Profile sociale"
     },
     "stats": {
       "totalCodingTime": "Timp total de programare",
@@ -242,13 +238,15 @@
       "starsLabel": "Stele",
       "forksLabel": "Forks",
       "licenseLabel": "Licență",
-      "copyAria": "Copiază în clipboard",
+      "fallback": "Codul sursă al acestui portofoliu este disponibil aici:"
+    },
+    "clipboard": {
       "copy": "Copiază",
+      "copyAria": "Copiază în clipboard",
       "copiedAria": "Copiat",
       "copiedNotice": "Copiat!",
       "copyFailedAria": "Eroare la copiere",
-      "copyFailedNotice": "Reîncearcă",
-      "fallback": "Codul sursă al acestui portofoliu este disponibil aici:"
+      "copyFailedNotice": "Reîncearcă"
     },
     "cv": {
       "description": "CV-ul meu în PDF",
@@ -271,6 +269,15 @@
       "noMatches": "Niciun proiect nu corespunde „{pattern}”.",
       "details": "Vezi detalii: {name}",
       "highlights": "Repere",
+      "visit": "Vizitează site-ul",
+      "close": "Închide"
+    },
+    "experiences": {
+      "details": "Vezi detalii: {name}",
+      "highlights": "Repere",
+      "projects": "Proiecte",
+      "skills": "Competențe",
+      "recommendations": "Recomandări",
       "visit": "Vizitează site-ul",
       "close": "Închide"
     },
@@ -694,11 +701,11 @@
       "frameworks": "Framework-uri",
       "stateData": "Stare și Date",
       "uiStyling": "UI / Stilizare",
+      "blockchain": "Blockchain",
       "tooling": "Unelte",
       "testing": "Testare",
       "databases": "Baze de date",
-      "cloud": "Cloud",
-      "devops": "DevOps",
+      "devops": "DevOps și Cloud",
       "automation": "Automatizare",
       "softSkills": "Soft skills"
     },

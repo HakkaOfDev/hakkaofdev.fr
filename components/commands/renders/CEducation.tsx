@@ -1,14 +1,17 @@
 "use client";
 
 import { useFormatter, useTranslations } from "next-intl";
+import { AnimatedSpan, TypeStep } from "@/components/AnimatedComponents";
 import {
-  AnimatedSpan,
-  TimelineTypewriter,
-} from "@/components/AnimatedComponents";
+  TimelineCard,
+  useTimelineCardsTyping,
+} from "@/components/commands/renders/TimelineCard";
 import { useGrep, useGrepRaw } from "@/components/providers/PipelineProvider";
 import { EDUCATION } from "@/lib/constants";
-import { matchesGrep } from "@/lib/utils/grep.utils";
-import { formatPeriod } from "@/lib/utils/period.utils";
+import { filterByGrep } from "@/lib/utils/grep.utils";
+import { formatPeriod, formatPeriodParts } from "@/lib/utils/period.utils";
+
+const EDUCATION_BODY_STEPS = 2;
 
 function CEducation() {
   const t = useTranslations("CV.education");
@@ -18,13 +21,21 @@ function CEducation() {
   const grep = useGrep();
   const grepRaw = useGrepRaw();
 
-  const visible = EDUCATION.filter((education) => {
-    if (!grep) return true;
-    const period = formatPeriod(education, format, tPeriod);
-    const name = t(`${education.slug}.name` as never) as string;
-    const location = t(`${education.slug}.location` as never) as string;
-    return matchesGrep([period, name, location].join("   "), grep);
-  });
+  const entries = EDUCATION.map((education) => ({
+    education,
+    period: formatPeriod(education, format, tPeriod),
+    ...formatPeriodParts(education, format, tPeriod),
+    name: t(`${education.slug}.name` as never) as string,
+    location: t(`${education.slug}.location` as never) as string,
+  }));
+  const visible = filterByGrep(entries, grep, (entry) => [
+    entry.period,
+    entry.name,
+    entry.location,
+  ]);
+  const typing = useTimelineCardsTyping(
+    visible.map(() => EDUCATION_BODY_STEPS),
+  );
 
   if (grep && visible.length === 0) {
     return (
@@ -37,27 +48,29 @@ function CEducation() {
   }
 
   return (
-    <TimelineTypewriter
-      entries={visible.map((education) => {
-        const period = formatPeriod(education, format, tPeriod);
-        const name = t(`${education.slug}.name` as never);
-        const location = t(`${education.slug}.location` as never);
-        return {
-          key: education.slug,
-          lines: [
-            <p key="period" className="text-muted-foreground">
-              {period}
-            </p>,
-            <p key="name" className="font-semibold text-sm">
-              {name}
-            </p>,
-            <p key="location" className="text-muted-foreground">
-              {location}
-            </p>,
-          ],
-        };
-      })}
-    />
+    <AnimatedSpan>
+      {visible.map((entry, index) => (
+        <TimelineCard
+          key={entry.education.slug}
+          range={entry.range}
+          duration={entry.duration}
+          ongoing={!entry.education.end}
+          isLast={index === visible.length - 1}
+          typing={typing[index]}
+        >
+          {(step) => (
+            <>
+              <TypeStep as="p" className="font-semibold text-sm" {...step(0)}>
+                {entry.name}
+              </TypeStep>
+              <TypeStep as="p" className="text-muted-foreground" {...step(1)}>
+                {entry.location}
+              </TypeStep>
+            </>
+          )}
+        </TimelineCard>
+      ))}
+    </AnimatedSpan>
   );
 }
 

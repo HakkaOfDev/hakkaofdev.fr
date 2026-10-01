@@ -182,20 +182,16 @@
       "subcommand": "サブコマンド"
     },
     "about": {
-      "firstName": "名",
-      "lastName": "姓",
-      "age": "年齢",
       "yearsOld": "{years} 歳",
-      "location": "所在地",
       "email": "メール",
       "languages": "言語",
       "hobbies": "趣味"
     },
     "contact": {
       "intro": "仕事の機会、フリーランス案件、技術コラボレーションはメールでのご連絡をお勧めします。",
-      "primaryEmail": "メインメール:",
-      "location": "所在地:",
-      "socialProfiles": "ソーシャルプロフィール:"
+      "primaryEmail": "メインメール",
+      "location": "所在地",
+      "socialProfiles": "ソーシャルプロフィール"
     },
     "stats": {
       "totalCodingTime": "総コーディング時間",
@@ -242,13 +238,15 @@
       "starsLabel": "スター",
       "forksLabel": "フォーク",
       "licenseLabel": "ライセンス",
-      "copyAria": "クリップボードにコピー",
+      "fallback": "このポートフォリオのソースコードはこちら:"
+    },
+    "clipboard": {
       "copy": "コピー",
+      "copyAria": "クリップボードにコピー",
       "copiedAria": "コピー済み",
       "copiedNotice": "コピーしました!",
       "copyFailedAria": "コピー失敗",
-      "copyFailedNotice": "再試行",
-      "fallback": "このポートフォリオのソースコードはこちら:"
+      "copyFailedNotice": "再試行"
     },
     "cv": {
       "description": "私のCV（PDF）",
@@ -271,6 +269,15 @@
       "noMatches": "「{pattern}」に一致するプロジェクトはありません。",
       "details": "詳細を見る：{name}",
       "highlights": "ハイライト",
+      "visit": "サイトを開く",
+      "close": "閉じる"
+    },
+    "experiences": {
+      "details": "詳細を見る：{name}",
+      "highlights": "ハイライト",
+      "projects": "プロジェクト",
+      "skills": "スキル",
+      "recommendations": "推薦状",
       "visit": "サイトを開く",
       "close": "閉じる"
     },
@@ -584,11 +591,11 @@
       "frameworks": "フレームワーク",
       "stateData": "状態とデータ",
       "uiStyling": "UI / スタイリング",
+      "blockchain": "ブロックチェーン",
       "tooling": "ツール",
       "testing": "テスト",
       "databases": "データベース",
-      "cloud": "クラウド",
-      "devops": "DevOps",
+      "devops": "DevOpsとクラウド",
       "automation": "自動化",
       "softSkills": "ソフトスキル"
     },
